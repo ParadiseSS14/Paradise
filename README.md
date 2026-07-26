@@ -1,36 +1,78 @@
-<div class="header" align="center">  
-<img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg">  
+<div class="header" align="center">
+<a href="#"><img src=".github/assets/paradise.png" alt="Paradise Station"></a>
+
+## <p align="center">Welcome to the main repository for the Paradise Station version of [Space Station 14](https://github.com/space-wizards/space-station-14).</p>
 </div>
 
-Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), our homegrown engine written in C#.
+Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), a homegrown engine written in C#.
 
-This is the primary repo for Space Station 14. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
+### Any work done in a non-base namespace may contain incorrect attributions due to rewrites and recommitting.
 
-If you want to host or create content for SS14, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+<p align="center">
+	<a href="https://xkcd.com/371/"><img src=".github/assets/compiles-sometimes.svg" alt="Compiles sometimes"></a>
+	<a href="https://xkcd.com/1811/"><img src=".github/assets/made-with-crayons.svg" alt="Made with crayons"></a>
+</p>
 
-## Links
+<p align="center">
+	<a href="https://discord.gg/YJDsXFE">
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset=".github/assets/discord-light.png">
+			<source media="(prefers-color-scheme: light)" srcset=".github/assets/discord-dark.png">
+			<img width="15%" alt="Discord" hspace="3%" src=".github/assets/discord-dark.png">
+		</picture>
+	</a>
+	<a href="https://devdocs.paradisestation.org">
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset=".github/assets/book-light.png">
+			<source media="(prefers-color-scheme: light)" srcset=".github/assets/book-dark.png">
+			<img alt="Code docs" width="15%" hspace="3%" src=".github/assets/book-dark.png">
+		</picture>
+	</a>
+	<a href="https://www.paradisestation.org/">
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset=".github/assets/web-light.png">
+			<source media="(prefers-color-scheme: light)" srcset=".github/assets/web-dark.png">
+			<img width="15%" alt="Website" hspace="3%" src=".github/assets/web-dark.png">
+		</picture>
+	</a>
+	<a href="https://paradisestation.org/wiki">
+		<picture>
+			<source media="(prefers-color-scheme: dark)" srcset=".github/assets/wiki-light.png">
+			<source media="(prefers-color-scheme: light)" srcset=".github/assets/wiki-dark.png">
+			<img width="15%" alt="Game Wiki" hspace="3%" src=".github/assets/wiki-dark.png">
+		</picture>
+	</a>
+</p>
 
-<div class="header" align="center">  
+#### Space Station 14
+<div class="header" align="center">
 
-[Website](https://spacestation14.com/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.com/) | [Mastodon](https://mastodon.gamedev.place/@spacestation14) | [Patreon](https://www.patreon.com/spacestation14) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.com/about/nightlies/)  
+[Website](https://spacestation14.io/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.io/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.io/about/nightlies/)
 
 </div>
+
+# Useful Documents and Links
 
 ## Documentation/Wiki
 
-Our [docs site](https://docs.spacestation14.com/) has documentation on SS14's content, engine, game design, and more.  
-Additionally, see these resources for license and attribution information:  
-- [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html)  
+The [docs site](https://docs.spacestation14.io/) has documentation on SS14s content, engine, game design and more.
+Additionally, see these resources for license and attribution information:
+- [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html)
 - [Robust Station Image](https://docs.spacestation14.com/en/specifications/robust-station-image.html)
 
-We also have lots of resources for new contributors to the project.
+> [!TIP]
+> Want to contribute for the first time but unsure where to start?<br>
+> Join our Discord and check out the [#coding_chat](https://discord.com/channels/145533722026967040/145700319819464704) channel for helpful links and advice!<br>
 
-## Contributing
+- ### [Code of Conduct](https://devdocs.paradisestation.org/code_of_conduct/)
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of issues](https://github.com/space-wizards/space-station-14-content/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!  
-Just make sure your changes and pull requests are in accordance with the [contribution guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
+All contributors are expected to read our Code of Conduct before they take part in our community.
 
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language, consider creating a fork or contributing to a fork.
+- ### [Contribution Guide](https://devdocs.paradisestation.org/contributing/)
+
+Not sure how to take part and contribute? This guide gives an overview of how to make comments, pull requests, and open issues.
+
+This guide also sets out our code standards that we expect all submitted code to adhere to.
 
 ## AI-generated contributions disclaimer
 This project does not accept low-effort or wholesale AI-generated contributions. Examples include, but are not limited to:
@@ -39,20 +81,18 @@ This project does not accept low-effort or wholesale AI-generated contributions.
 - AI-created artwork, sound files, or other assets.
 - Auto-generated documentation, issue reports or pull request descriptions.
 
-Exceptions to this are simple tools like Rider's single-line completion feature.
-
 ## Building
 
 1. Clone this repo:
 ```shell
-git clone https://github.com/space-wizards/space-station-14.git
+git clone https://github.com/ParadiseSS14/Paradise14.git
 ```
 2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
 ```shell
-cd space-station-14
+cd Paradise14
 python RUN_THIS.py
 ```
-3. Compile the solution:  
+3. Compile the solution:
 
 Build the server using `dotnet build`.
 
@@ -60,9 +100,11 @@ Build the server using `dotnet build`.
 
 ## License
 
-All code for the content repository is licensed under the [MIT license](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT).  
+Read [LEGAL.md](/LEGAL.md) for legal information regarding the code licensing.
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).  
+Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/ParadiseSS14/Paradise14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+
+Code taken from [Project Starlight](https://github.com/ss14Starlight/space-station-14) was taken in accordance with the [Starlight License](./LICENSE-Starlight.txt).
 
 > [!NOTE]
 > Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.

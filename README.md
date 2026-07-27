@@ -85,11 +85,11 @@ This project does not accept low-effort or wholesale AI-generated contributions.
 
 1. Clone this repo:
 ```shell
-git clone https://github.com/ParadiseSS14/Paradise14.git
+git clone https://github.com/ParadiseSS14/Paradise.git
 ```
 2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
 ```shell
-cd Paradise14
+cd Paradise
 python RUN_THIS.py
 ```
 3. Compile the solution:

@@ -46,17 +46,6 @@ namespace Content.Client.UserInterface.Systems.Chat;
 
 public sealed partial class ChatUIController : UIController
 {
-    [Dependency] private IClientAdminManager _admin = default!;
-    [Dependency] private IChatManager _manager = default!;
-    [Dependency] private IConfigurationManager _config = default!;
-    [Dependency] private IEyeManager _eye = default!;
-    [Dependency] private IEntityManager _ent = default!;
-    [Dependency] private IInputManager _input = default!;
-    [Dependency] private IClientNetManager _net = default!;
-    [Dependency] private IPlayerManager _player = default!;
-    [Dependency] private IPrototypeManager _prototypeManager = default!;
-    [Dependency] private IStateManager _state = default!;
-    [Dependency] private IGameTiming _timing = default!;
     [Dependency] private readonly IClientAdminManager _admin = default!;
     [Dependency] private readonly IChatManager _manager = default!;
     [Dependency] private readonly IConfigurationManager _config = default!;

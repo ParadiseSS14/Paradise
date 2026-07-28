@@ -1,7 +1,6 @@
+using System.Linq;
 using Content.Shared.Store;
 using JetBrains.Annotations;
-using System.Linq;
-using Content.Shared.Store.Components;
 using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 
@@ -34,10 +33,6 @@ public sealed class StoreBoundUserInterface : BoundUserInterface
         _menu = this.CreateWindow<StoreMenu>();
         if (_storeSystem.TryGetStore(Owner, out var store))
             _menu.Title = Loc.GetString(store.Value.Comp.Name);
-        _menu.ApplyStylesheetFrom(Owner);
-
-        if (EntMan.TryGetComponent<StoreComponent>(Owner, out var store))
-            _menu.Title = Loc.GetString(store.Name);
 
         _menu.OnListingButtonPressed += (_, listing) =>
         {

@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Numerics;
-using Content.Client._DV.UserInterfaces;
 using Content.Client.Resources;
 using Content.Client.Stylesheets;
 using Robust.Client.Graphics;

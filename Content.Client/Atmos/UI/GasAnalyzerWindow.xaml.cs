@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Client.UserInterface.Controls;
 using Content.Shared.Atmos;
+using Content.Shared.Atmos.Components;
 using Content.Shared.Temperature;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;

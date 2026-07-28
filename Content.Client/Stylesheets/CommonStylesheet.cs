@@ -6,7 +6,7 @@ namespace Content.Client.Stylesheets;
 
 public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWindowConfig, IIconConfig, ITabContainerConfig,
     ISliderConfig, IRadialMenuConfig, IPlaceholderConfig, ITooltipConfig, IPanelConfig, INanoHeadingConfig,
-    ILineEditConfig, IStripebackConfig, ICheckboxConfig
+    ILineEditConfig, IStripebackConfig, ICheckboxConfig, ISwitchButtonConfig
 {
     /// <remarks>
     ///     This constructor will not access any virtual or abstract properties, so you can set them from your config.

@@ -211,28 +211,15 @@ namespace Content.Client.PDA
 
             foreach (var (uid, component) in programs)
             {
-                var item = new PdaProgramItem()
+                var item = new PdaProgramItem((uid, component))
                 {
                     StyleClasses = { "PDAHoverButton" }
                 };
 
-                item.OnPressed += _ => OnProgramItemPressed?.Invoke(uid);
+                item.OnProgramItemPressed += uid => OnProgramItemPressed?.Invoke(uid);
+                item.OnUninstallButtonPressed += uid => OnUninstallButtonPressed?.Invoke(uid);
+                item.OnInstallButtonPressed += uid => OnInstallButtonPressed?.Invoke(uid);
 
-                switch (component.InstallationStatus)
-                {
-                    case InstallationStatus.Cartridge:
-                        item.InstallButton.Visible = true;
-                        item.InstallButton.Text = Loc.GetString("cartridge-bound-user-interface-install-button");
-                        item.InstallButton.OnPressed += _ => OnInstallButtonPressed?.Invoke(uid);
-                        break;
-                    case InstallationStatus.Installed:
-                        item.InstallButton.Visible = true;
-                        item.InstallButton.Text = Loc.GetString("cartridge-bound-user-interface-uninstall-button");
-                        item.InstallButton.OnPressed += _ => OnUninstallButtonPressed?.Invoke(uid);
-                        break;
-                }
-
-                item.ProgramName.Text = Loc.GetString(component.ProgramName);
                 ProgramList.AddChild(item);
 
                 itemCount++;
@@ -259,10 +246,8 @@ namespace Content.Client.PDA
         /// </summary>
         public void HideProgramHeader()
         {
-            ProgramTitle.IsCurrent = false;
             ProgramTitle.Visible = false;
             ProgramCloseButton.Visible = false;
-            ProgramListButton.Visible = true;
             SettingsButton.Visible = true;
         }
 
@@ -271,11 +256,6 @@ namespace Content.Client.PDA
         /// </summary>
         public void ToProgramView(string title)
         {
-            // HomeButton.IsCurrent = false;
-            // ProgramListButton.IsCurrent = false;
-            // SettingsButton.IsCurrent = false;
-            // ProgramTitle.IsCurrent = false;
-            // ProgramTitle.IsCurrent = true;
             ProgramTitle.Visible = true;
             ProgramCloseButton.Visible = true;
             SettingsButton.Visible = false;

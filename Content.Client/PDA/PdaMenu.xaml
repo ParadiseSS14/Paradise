@@ -1,7 +1,6 @@
 <pda:PdaWindow xmlns="https://spacestation14.io"
                xmlns:pda="clr-namespace:Content.Client.PDA"
                xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-               xmlns:userInterfaces="clr-namespace:Content.Client._DV.UserInterfaces"
                xmlns:xe="clr-namespace:Content.Client.UserInterface.XamlExtensions"
                MinSize="450 450"
                SetSize="450 600">

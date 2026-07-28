@@ -1,4 +1,6 @@
+using System.Linq;
 using System.Numerics;
+using Content.Client.Decals.UI;
 using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Controls.ColorPicker;
 using Content.Shared.Decals;

@@ -11,14 +11,15 @@ public sealed class ChatGameScreenSheetlet : Sheetlet<PalettedStylesheet>
 {
     public override StyleRule[] GetRules(PalettedStylesheet sheet, object config)
     {
+        // Tojo - I'm not a fan of palettes. They encourage poor design in my opinion.
         return
         [
             E()
                 .Class(SeparatedChatGameScreen.StyleClassChatContainer)
-                .Panel(new StyleBoxFlat(sheet.SecondaryPalette.Background)),
+                .Panel(new StyleBoxSDFBox(sheet.PanelPalette.PanelPrimary)),
             E<OutputPanel>()
                 .Class(SeparatedChatGameScreen.StyleClassChatOutput)
-                .Panel(new StyleBoxFlat(sheet.SecondaryPalette.BackgroundDark)),
+                .Panel(new StyleBoxSDFBox(sheet.PanelPalette.PanelPrimary)),
         ];
     }
 }

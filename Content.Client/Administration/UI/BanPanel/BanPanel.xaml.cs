@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Numerics;
 using Content.Client.Administration.UI.CustomControls;
+using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
@@ -22,7 +23,7 @@ using Robust.Shared.Utility;
 namespace Content.Client.Administration.UI.BanPanel;
 
 [GenerateTypedNameReferences]
-public sealed partial class BanPanel : DefaultWindow
+public sealed partial class BanPanel : FancyWindow
 {
     public event Action<Ban>? BanSubmitted;
     public event Action<string>? PlayerChanged;
@@ -40,11 +41,11 @@ public sealed partial class BanPanel : DefaultWindow
     private readonly Dictionary<string, List<(Button, IPrototype)>> _roleCheckboxes = new();
     private readonly ISawmill _banPanelSawmill;
 
-    [Dependency] private IGameTiming _gameTiming = default!;
-    [Dependency] private IConfigurationManager _cfg = default!;
-    [Dependency] private ILogManager _logManager = default!;
-    [Dependency] private IEntityManager _entMan = default!;
-    [Dependency] private IPrototypeManager _protoMan = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private readonly IEntityManager _entMan = default!;
+    [Dependency] private readonly IPrototypeManager _protoMan = default!;
 
     private const string ExpandedArrow = "▼";
     private const string ContractedArrow = "▶";

@@ -13,7 +13,7 @@ public partial class NanotrasenStylesheet : CommonStylesheet
 {
     public override string StylesheetName => "Nanotrasen";
 
-    public override NotoFontFamilyStack BaseFont { get; } // TODO: NotoFontFamilyStack is temporary
+    public override FontFamilyStack BaseFont { get; } // TODO: NotoFontFamilyStack is temporary
 
 
     public static readonly ResPath TextureRoot = new("/Textures/Interface/Nano");
@@ -37,7 +37,7 @@ public partial class NanotrasenStylesheet : CommonStylesheet
 
     public NanotrasenStylesheet(object config, StylesheetManager man) : base(config)
     {
-        BaseFont = new NotoFontFamilyStack(ResCache);
+        BaseFont = new FontFamilyStack(ResCache);
         var rules = new[]
         {
             // Set up important rules that need to go first.

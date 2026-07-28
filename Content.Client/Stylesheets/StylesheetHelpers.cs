@@ -143,6 +143,13 @@ public static class StylesheetHelpers
         return selector.Prop(ContainerButton.StylePropertyStyleBox, box);
     }
 
+    // headache due to rt, needed to modify it.
+    public static MutableSelector ForkedBox(this MutableSelector selector, StyleBox box)
+    {
+        return selector.Prop(ContainerButton.StylePropertyStyleBox, box);
+    }
+
+
     public static MutableSelector Font(this MutableSelector selector, Font font)
     {
         return selector.Prop(Label.StylePropertyFont, font);

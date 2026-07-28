@@ -1,4 +1,6 @@
-﻿using Content.Client.Stylesheets.SheetletConfigs;
+﻿using System.Numerics;
+using Content.Client.Stylesheets.Colorspace;
+using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
@@ -14,14 +16,22 @@ public sealed class LineEditSheetlet<T> : Sheetlet<T> where T : PalettedStyleshe
     {
         ILineEditConfig lineEditCfg = sheet;
 
-        var lineEditStylebox = sheet.GetTextureOr(lineEditCfg.LineEditPath, NanotrasenStylesheet.TextureRoot)
-            .IntoPatch(StyleBox.Margin.All, 3);
-        lineEditStylebox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 5);
-
+        var lineEditStylebox = new StyleBoxSDFBox()
+        {
+            BackgroundColor = sheet.PanelPalette.PanelSunken,
+            ContentMarginTopOverride = 3,
+            ContentMarginBottomOverride = 2,
+            ContentMarginLeftOverride = 4,
+            ContentMarginRightOverride = 4,
+            CornerRadius = new Vector4(2f),
+            BorderThickness = 0.75f,
+            BorderColor = sheet.SecondaryPalette.Element,
+        };
         return
         [
             E<LineEdit>()
-                .Prop(LineEdit.StylePropertyStyleBox, lineEditStylebox),
+                .Prop(LineEdit.StylePropertyStyleBox, lineEditStylebox)
+                .Prop("font-color", sheet.SecondaryPalette.Element),
             // TODO: Hardcoded colors bad, kill.
             E<LineEdit>()
                 .Class(LineEdit.StyleClassLineEditNotEditable)

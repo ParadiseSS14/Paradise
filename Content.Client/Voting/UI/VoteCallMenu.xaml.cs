@@ -2,6 +2,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Client.Gameplay;
 using Content.Client.Stylesheets;
+using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Ghost;
@@ -23,14 +24,14 @@ namespace Content.Client.Voting.UI
     [GenerateTypedNameReferences]
     public sealed partial class VoteCallMenu : BaseWindow
     {
-        [Dependency] private IClientConsoleHost _consoleHost = default!;
-        [Dependency] private IVoteManager _voteManager = default!;
-        [Dependency] private IGameTiming _gameTiming = default!;
-        [Dependency] private IClientNetManager _netManager = default!;
-        [Dependency] private IEntityManager _entityManager = default!;
-        [Dependency] private IEntityNetworkManager _entNetManager = default!;
-        [Dependency] private IConfigurationManager _cfg = default!;
-        [Dependency] private IStateManager _state = default!;
+        [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
+        [Dependency] private readonly IVoteManager _voteManager = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly IClientNetManager _netManager = default!;
+        [Dependency] private readonly IEntityManager _entityManager = default!;
+        [Dependency] private readonly IEntityNetworkManager _entNetManager = default!;
+        [Dependency] private readonly IConfigurationManager _cfg = default!;
+        [Dependency] private readonly IStateManager _state = default!;
 
         private VotingSystem _votingSystem;
 
@@ -215,7 +216,7 @@ namespace Content.Client.Voting.UI
             _entNetManager.SendSystemNetworkMessage(msg);
         }
 
-        private void VoteTypeSelected(OptionButton.ItemSelectedEventArgs obj)
+        private void VoteTypeSelected(TguiOptionButton.ItemSelectedEventArgs obj)
         {
             VoteTypeButton.SelectId(obj.Id);
 

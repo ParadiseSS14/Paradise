@@ -1,4 +1,5 @@
-﻿using Content.Client.Stylesheets.SheetletConfigs;
+﻿using System.Numerics;
+using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
@@ -8,19 +9,38 @@ using static Content.Client.Stylesheets.StylesheetHelpers;
 namespace Content.Client.Stylesheets.Sheetlets;
 
 [CommonSheetlet]
-public sealed class TabContainerSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet, ITabContainerConfig
+public sealed class TabContainerSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet, ITabContainerConfig
 {
     public override StyleRule[] GetRules(T sheet, object config)
     {
         ITabContainerConfig tabCfg = sheet;
 
-        var tabContainerPanel = sheet.GetTextureOr(tabCfg.TabContainerPanelPath, NanotrasenStylesheet.TextureRoot)
-            .IntoPatch(StyleBox.Margin.All, 2);
+        var roundedconfig = new Vector4(sheet.PanelPalette.PanelCornerRadius * 3,
+            0,
+            sheet.PanelPalette.PanelCornerRadius * 3,
+            0);
 
-        var tabContainerBoxActive = new StyleBoxFlat(sheet.SecondaryPalette.Element);
-        tabContainerBoxActive.SetContentMarginOverride(StyleBox.Margin.Horizontal, 5);
-        var tabContainerBoxInactive = new StyleBoxFlat(sheet.SecondaryPalette.Background);
-        tabContainerBoxInactive.SetContentMarginOverride(StyleBox.Margin.Horizontal, 5);
+        var tabContainerPanel = new StyleBoxSDFBox(sheet.PanelPalette.PanelPrimary)
+        {
+            ContentMarginTopOverride = 8,
+            ContentMarginBottomOverride = 8,
+            ContentMarginLeftOverride = 8,
+            ContentMarginRightOverride = 8,
+            CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius),
+        };
+
+        var tabContainerBoxActive = new StyleBoxSDFBox(sheet.PanelPalette.PanelPrimary)
+        {
+            CornerRadius = roundedconfig,
+
+        };
+        tabContainerBoxActive.SetContentMarginOverride(StyleBox.Margin.All, 8);
+        var tabContainerBoxInactive = new StyleBoxSDFBox(sheet.PanelPalette.PanelPrimary)
+        {
+            CornerRadius =
+                roundedconfig,
+        };
+        tabContainerBoxInactive.SetContentMarginOverride(StyleBox.Margin.All, 8);
 
         return
         [

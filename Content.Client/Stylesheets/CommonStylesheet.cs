@@ -6,7 +6,7 @@ namespace Content.Client.Stylesheets;
 
 public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWindowConfig, IIconConfig, ITabContainerConfig,
     ISliderConfig, IRadialMenuConfig, IPlaceholderConfig, ITooltipConfig, IPanelConfig, INanoHeadingConfig,
-    ILineEditConfig, IStripebackConfig, ICheckboxConfig, ISwitchButtonConfig
+    ILineEditConfig, IStripebackConfig, ICheckboxConfig
 {
     /// <remarks>
     ///     This constructor will not access any virtual or abstract properties, so you can set them from your config.
@@ -49,7 +49,7 @@ public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWin
     ResPath IIconConfig.HelpIconPath => new("help.png");
     ResPath IIconConfig.CrossIconPath => new("cross.svg.png");
     ResPath IIconConfig.RefreshIconPath => new("circular_arrow.svg.96dpi.png");
-    ResPath IIconConfig.InvertedTriangleIconPath => new("inverted_triangle.svg.png");
+    ResPath IIconConfig.InvertedTriangleIconPath => new("chevron-down.png");
 
     ResPath IWindowConfig.WindowHeaderTexturePath => new("window_header.png");
     ResPath IWindowConfig.WindowHeaderAlertTexturePath => new("window_header_alert.png");

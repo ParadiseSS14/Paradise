@@ -1,15 +1,16 @@
 ﻿using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Communications;
+using Content.Shared._DV.Communications; // DeltaV - Exfiltration shuttle
 using Robust.Client.UserInterface;
 using Robust.Shared.Configuration;
 using Robust.Shared.Timing;
 
 namespace Content.Client.Communications.UI
 {
-    public sealed partial class CommunicationsConsoleBoundUserInterface : BoundUserInterface
+    public sealed class CommunicationsConsoleBoundUserInterface : BoundUserInterface
     {
-        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private readonly IConfigurationManager _cfg = default!;
 
         [ViewVariables]
         private CommunicationsConsoleMenu? _menu;
@@ -23,10 +24,12 @@ namespace Content.Client.Communications.UI
             base.Open();
 
             _menu = this.CreateWindow<CommunicationsConsoleMenu>();
+            _menu.ApplyStylesheetFrom(Owner);
             _menu.OnAnnounce += AnnounceButtonPressed;
             _menu.OnBroadcast += BroadcastButtonPressed;
             _menu.OnAlertLevel += AlertLevelSelected;
             _menu.OnEmergencyLevel += EmergencyShuttleButtonPressed;
+            _menu.OnExfiltrationLevel += ExfiltrationShuttleButtonPressed; // DeltaV - Exfiltration shuttle
         }
 
         public void AlertLevelSelected(string level)
@@ -45,6 +48,13 @@ namespace Content.Client.Communications.UI
             else
                 CallShuttle();
         }
+
+        // Begin DeltaV - Exfiltration Shuttle
+        public void ExfiltrationShuttleButtonPressed()
+        {
+            SendMessage(new CommunicationsConsoleExfiltrationShuttleMessage(!_menu!.CountdownStarted));
+        }
+        // End DeltaV - Exfiltration Shuttle
 
         public void AnnounceButtonPressed(string message)
         {
@@ -84,6 +94,13 @@ namespace Content.Client.Communications.UI
                 _menu.AlertLevelSelectable = commsState.AlertLevels != null && !float.IsNaN(commsState.CurrentAlertDelay) && commsState.CurrentAlertDelay <= 0;
                 _menu.CurrentLevel = commsState.CurrentAlert;
                 _menu.CountdownEnd = commsState.ExpectedCountdownEnd;
+
+
+                // Begin DeltaV - Exfiltration Shuttle
+                _menu.CanExfiltrate = commsState.CanCall;
+                _menu.ExfiltrationCountdownEnd = commsState.ExpectedExfiltrationCountdownEnd;
+                _menu.ExfiltrationShuttleButton.Disabled = !_menu.CanExfiltrate;
+                // End DeltaV - Exfiltration Shuttle
 
                 _menu.UpdateCountdown();
                 _menu.UpdateAlertLevels(commsState.AlertLevels, _menu.CurrentLevel);

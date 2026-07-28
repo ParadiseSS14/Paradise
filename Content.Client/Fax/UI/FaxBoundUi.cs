@@ -8,9 +8,9 @@ using Robust.Client.UserInterface;
 namespace Content.Client.Fax.UI;
 
 [UsedImplicitly]
-public sealed partial class FaxBoundUi : BoundUserInterface
+public sealed class FaxBoundUi : BoundUserInterface
 {
-    [Dependency] private IFileDialogManager _fileDialogManager = default!;
+    [Dependency] private readonly IFileDialogManager _fileDialogManager = default!;
 
     [ViewVariables]
     private FaxWindow? _window;
@@ -26,6 +26,7 @@ public sealed partial class FaxBoundUi : BoundUserInterface
         base.Open();
 
         _window = this.CreateWindow<FaxWindow>();
+        _window.ApplyStylesheetFrom(Owner);
         _window.FileButtonPressed += OnFileButtonPressed;
         _window.CopyButtonPressed += OnCopyButtonPressed;
         _window.SendButtonPressed += OnSendButtonPressed;

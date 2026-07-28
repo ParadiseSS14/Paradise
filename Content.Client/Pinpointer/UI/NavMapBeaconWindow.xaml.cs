@@ -1,4 +1,5 @@
 using Content.Client.UserInterface.Controls;
+using Content.Client.UserInterface.Controls.ColorPicker;
 using Content.Shared.CCVar;
 using Content.Shared.Pinpointer;
 using Content.Shared.Preferences;
@@ -12,10 +13,12 @@ namespace Content.Client.Pinpointer.UI;
 [GenerateTypedNameReferences]
 public sealed partial class NavMapBeaconWindow : FancyWindow
 {
-    [Dependency] private IConfigurationManager _cfgManager = default!;
+    [Dependency] private readonly IConfigurationManager _cfgManager = default!;
     private string? _defaultLabel;
     private bool _defaultEnabled;
     private Color _defaultColor;
+    private Color _currentColor;
+    private ColorPicker? _picker;
 
     // CCVar.
     private int _maxNameLength;
@@ -31,10 +34,29 @@ public sealed partial class NavMapBeaconWindow : FancyWindow
 
         VisibleButton.OnPressed += args => UpdateVisibleButton(args.Button.Pressed);
         LabelLineEdit.OnTextChanged += OnTextChanged;
-        ColorSelector.OnColorChanged += _ => TryEnableApplyButton();
+        PickerOpen.OnPressed += _ =>
+        {
+            if (_picker != null)
+                return;
+            _picker = new ColorPicker(_currentColor);
+            _picker.OpenCentered();
+            _picker.OnSaveColors += OnColorSelected;
+
+            _picker.OnClose += () =>
+            {
+                _picker?.Dispose();
+                _picker = null;
+            };
+        };
 
         TryEnableApplyButton();
         ApplyButton.OnPressed += OnApplyPressed;
+    }
+
+    private void OnColorSelected(Color obj)
+    {
+        _currentColor = obj;
+        TryEnableApplyButton();
     }
 
     public void SetEntity(EntityUid uid, NavMapBeaconComponent navMap)
@@ -43,9 +65,9 @@ public sealed partial class NavMapBeaconWindow : FancyWindow
         _defaultEnabled = navMap.Enabled;
         _defaultColor = navMap.Color;
 
+        _currentColor = _defaultColor;
         UpdateVisibleButton(navMap.Enabled);
         LabelLineEdit.Text = navMap.Text ?? string.Empty;
-        ColorSelector.Color = navMap.Color;
     }
 
     private void UpdateVisibleButton(bool value)
@@ -66,19 +88,15 @@ public sealed partial class NavMapBeaconWindow : FancyWindow
         TryEnableApplyButton();
     }
 
-    private void TryEnableApplyButton()
-    {
+    private void TryEnableApplyButton() =>
         ApplyButton.Disabled = LabelLineEdit.Text == (_defaultLabel ?? string.Empty) &&
-                               VisibleButton.Pressed == _defaultEnabled &&
-                               ColorSelector.Color == _defaultColor;
-    }
+                               VisibleButton.Pressed == _defaultEnabled && _currentColor == _defaultColor;
 
     private void OnApplyPressed(BaseButton.ButtonEventArgs obj)
     {
         _defaultLabel = LabelLineEdit.Text == string.Empty ? null : LabelLineEdit.Text;
         _defaultEnabled = VisibleButton.Pressed;
-        _defaultColor = ColorSelector.Color;
-        OnApplyButtonPressed?.Invoke(_defaultLabel, _defaultEnabled, _defaultColor);
+        OnApplyButtonPressed?.Invoke(_defaultLabel, _defaultEnabled, _currentColor);
         TryEnableApplyButton();
     }
 }

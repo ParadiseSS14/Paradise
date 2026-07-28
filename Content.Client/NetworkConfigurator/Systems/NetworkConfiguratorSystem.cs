@@ -16,12 +16,12 @@ using Robust.Shared.Timing;
 
 namespace Content.Client.NetworkConfigurator.Systems;
 
-public sealed partial class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
+public sealed class NetworkConfiguratorSystem : SharedNetworkConfiguratorSystem
 {
-    [Dependency] private IPlayerManager _playerManager = default!;
-    [Dependency] private IOverlayManager _overlay = default!;
-    [Dependency] private ActionsSystem _actions = default!;
-    [Dependency] private IInputManager _inputManager = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly IOverlayManager _overlay = default!;
+    [Dependency] private readonly ActionsSystem _actions = default!;
+    [Dependency] private readonly IInputManager _inputManager = default!;
 
     private static readonly EntProtoId Action = "ActionClearNetworkLinkOverlays";
 
@@ -113,6 +113,7 @@ public sealed partial class NetworkConfiguratorSystem : SharedNetworkConfigurato
             _configurator = configurator;
             _keyBindingName = keyBindingName;
             _label = new RichTextLabel { StyleClasses = { StyleClass.ItemStatus } };
+            _label.LineHeightScale = 0.8f;
             AddChild(_label);
         }
 
@@ -136,9 +137,9 @@ public sealed partial class NetworkConfiguratorSystem : SharedNetworkConfigurato
     }
 }
 
-public sealed partial class ClearAllNetworkLinkOverlays : LocalizedEntityCommands
+public sealed class ClearAllNetworkLinkOverlays : LocalizedEntityCommands
 {
-    [Dependency] private NetworkConfiguratorSystem _network = default!;
+    [Dependency] private readonly NetworkConfiguratorSystem _network = default!;
 
     public override string Command => "clearnetworklinkoverlays";
 

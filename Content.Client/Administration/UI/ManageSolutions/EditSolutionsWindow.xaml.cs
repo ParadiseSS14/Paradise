@@ -1,4 +1,5 @@
 using Content.Client.Administration.Managers;
+using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Reagent;
@@ -16,12 +17,12 @@ namespace Content.Client.Administration.UI.ManageSolutions
     ///     A simple window that displays solutions and their contained reagents. Allows you to edit the reagent quantities and add new reagents.
     /// </summary>
     [GenerateTypedNameReferences]
-    public sealed partial class EditSolutionsWindow : DefaultWindow
+    public sealed partial class EditSolutionsWindow : FancyWindow
     {
-        [Dependency] private IClientConsoleHost _consoleHost = default!;
-        [Dependency] private IEntityManager _entityManager = default!;
-        [Dependency] private IClientGameTiming _timing = default!;
-        [Dependency] private IClientAdminManager _admin = default!;
+        [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
+        [Dependency] private readonly IEntityManager _entityManager = default!;
+        [Dependency] private readonly IClientGameTiming _timing = default!;
+        [Dependency] private readonly IClientAdminManager _admin = default!;
 
         private NetEntity _target = NetEntity.Invalid;
         private string? _selectedSolution;
@@ -307,7 +308,7 @@ namespace Content.Client.Administration.UI.ManageSolutions
         /// <summary>
         ///     When a new solution is selected, set _selectedSolution and update the reagent list.
         /// </summary>
-        private void SolutionSelected(OptionButton.ItemSelectedEventArgs args)
+        private void SolutionSelected(TguiOptionButton.ItemSelectedEventArgs args)
         {
             SolutionOption.SelectId(args.Id);
             _selectedSolution = (string?) SolutionOption.SelectedMetadata;

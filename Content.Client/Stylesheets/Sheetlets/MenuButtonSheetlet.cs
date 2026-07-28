@@ -22,60 +22,28 @@ public sealed class MenuButtonSheetlet<T> : Sheetlet<T> where T : PalettedStyles
     {
         IButtonConfig cfg = sheet;
 
-        var buttonTex = sheet.GetTextureOr(cfg.BaseButtonPath, NanotrasenStylesheet.TextureRoot);
-        var topButtonBase = new StyleBoxTexture
-        {
-            Texture = buttonTex,
-        };
-        topButtonBase.SetPatchMargin(StyleBox.Margin.All, 10);
-        topButtonBase.SetPadding(StyleBox.Margin.All, 0);
-        topButtonBase.SetContentMarginOverride(StyleBox.Margin.All, 0);
 
-        var topButtonOpenRight = new StyleBoxTexture(topButtonBase)
+        var topButtonTransparent = new StyleBoxSDFBox()
         {
-            Texture = new AtlasTexture(buttonTex, UIBox2.FromDimensions(new Vector2(0, 0), new Vector2(14, 24))),
+            BackgroundColor = Color.FromHex("#FFFFFF00"),
+            CornerRadius = new Vector4(5f),
         };
-        topButtonOpenRight.SetPatchMargin(StyleBox.Margin.Right, 0);
-
-        var topButtonOpenLeft = new StyleBoxTexture(topButtonBase)
+        var topButtonTransparentHovered = new StyleBoxSDFBox()
         {
-            Texture = new AtlasTexture(buttonTex, UIBox2.FromDimensions(new Vector2(10, 0), new Vector2(14, 24))),
+            BackgroundColor = Color.FromHex("#FFFFFF33"),
+            CornerRadius = new Vector4(5f),
         };
-        topButtonOpenLeft.SetPatchMargin(StyleBox.Margin.Left, 0);
-
-        var topButtonSquare = new StyleBoxTexture(topButtonBase)
-        {
-            Texture = new AtlasTexture(buttonTex, UIBox2.FromDimensions(new Vector2(10, 0), new Vector2(3, 24))),
-        };
-        topButtonSquare.SetPatchMargin(StyleBox.Margin.Horizontal, 0);
 
         var rules = new List<StyleRule>
         {
-            CButton().Class(StyleClass.ButtonSquare).Box(topButtonSquare),
-            CButton().Class(StyleClass.ButtonOpenLeft).Box(topButtonOpenLeft),
-            CButton().Class(StyleClass.ButtonOpenRight).Box(topButtonOpenRight),
-            CButton().Box(StyleBoxHelpers.BaseStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonOpenLeft)
-                .Prop(ContainerButton.StylePropertyStyleBox, StyleBoxHelpers.OpenLeftStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonOpenRight)
-                .Prop(ContainerButton.StylePropertyStyleBox, StyleBoxHelpers.OpenRightStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonOpenBoth)
-                .Prop(ContainerButton.StylePropertyStyleBox, StyleBoxHelpers.SquareStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonSquare)
-                .Prop(ContainerButton.StylePropertyStyleBox, StyleBoxHelpers.SquareStyleBox(sheet)),
+            CButton().Box(topButtonTransparent).Prop("ColorNormal", sheet.PrimaryPalette.Base),
+            CButton().PseudoHovered().Box(topButtonTransparentHovered),
             E<Label>()
                 .Class(MenuButton.StyleClassLabelTopButton)
                 .Prop(Label.StylePropertyFont, sheet.BaseFont.GetFont(14, FontKind.Bold)),
-            // new StyleProperty(Label.StylePropertyFont, notoSansDisplayBold14),
         };
 
         ButtonSheetlet<T>.MakeButtonRules<MenuButton>(rules, cfg.ButtonPalette, null);
-        ButtonSheetlet<T>.MakeButtonRules<MenuButton>(rules, cfg.PositiveButtonPalette, StyleClass.Positive);
-        ButtonSheetlet<T>.MakeButtonRules<MenuButton>(rules, cfg.NegativeButtonPalette, StyleClass.Negative);
 
         return rules.ToArray();
     }

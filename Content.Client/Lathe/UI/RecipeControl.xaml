@@ -1,9 +1,9 @@
-<Control xmlns="https://spacestation14.io">
+<Control xmlns="https://spacestation14.io" StyleClasses="RecipeControl">
     <Button
         Name="Button"
         HorizontalExpand="True"
         Margin="0"
-        StyleClasses="ButtonSquare">
+        StyleClasses="transparentButton">
         <BoxContainer Orientation="Horizontal">
             <BoxContainer
                 Name="RecipeDisplayContainer"

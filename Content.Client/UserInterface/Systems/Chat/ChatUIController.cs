@@ -57,7 +57,18 @@ public sealed partial class ChatUIController : UIController
     [Dependency] private IPrototypeManager _prototypeManager = default!;
     [Dependency] private IStateManager _state = default!;
     [Dependency] private IGameTiming _timing = default!;
-    [Dependency] private IReplayRecordingManager _replayRecording = default!;
+    [Dependency] private readonly IClientAdminManager _admin = default!;
+    [Dependency] private readonly IChatManager _manager = default!;
+    [Dependency] private readonly IConfigurationManager _config = default!;
+    [Dependency] private readonly IEyeManager _eye = default!;
+    [Dependency] private readonly IEntityManager _ent = default!;
+    [Dependency] private readonly IInputManager _input = default!;
+    [Dependency] private readonly IClientNetManager _net = default!;
+    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IStateManager _state = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly IReplayRecordingManager _replayRecording = default!;
 
     [UISystemDependency] private readonly ExamineSystem? _examine = default;
     [UISystemDependency] private readonly GhostSystem? _ghost = default;
@@ -265,25 +276,29 @@ public sealed partial class ChatUIController : UIController
 
     private void SetChatWindowOpacity(float opacity)
     {
-        var chatBox = UIManager.ActiveScreen?.GetWidget<ChatBox>() ?? UIManager.ActiveScreen?.GetWidget<ResizableChatBox>();
+        // TODO: Refactor this later. It was commented out due to a bug during UI restyling. I have zero intention of adding
+        // Chat Opacity at this moment and have no use for it.
 
-        var panel = chatBox?.ChatWindowPanel;
-        if (panel is null)
-            return;
 
-        Color color;
-        if (panel.PanelOverride is StyleBoxFlat styleBoxFlat)
-            color = styleBoxFlat.BackgroundColor;
-        else if (panel.TryGetStyleProperty<StyleBox>(PanelContainer.StylePropertyPanel, out var style)
-                 && style is StyleBoxFlat propStyleBoxFlat)
-            color = propStyleBoxFlat.BackgroundColor;
-        else
-            color = Color.FromHex("#25252ADD");
-
-        panel.PanelOverride = new StyleBoxFlat
-        {
-            BackgroundColor = color.WithAlpha(opacity)
-        };
+        // var chatBox = UIManager.ActiveScreen?.GetWidget<ChatBox>() ?? UIManager.ActiveScreen?.GetWidget<ResizableChatBox>();
+        //
+        // var panel = chatBox?.ChatWindowPanel;
+        // if (panel is null)
+        //     return;
+        //
+        // Color color;
+        // if (panel.PanelOverride is StyleBoxFlat styleBoxFlat)
+        //     color = styleBoxFlat.BackgroundColor;
+        // else if (panel.TryGetStyleProperty<StyleBox>(PanelContainer.StylePropertyPanel, out var style)
+        //          && style is StyleBoxFlat propStyleBoxFlat)
+        //     color = propStyleBoxFlat.BackgroundColor;
+        // else
+        //     color = Color.FromHex("#25252ADD");
+        //
+        // panel.PanelOverride = new StyleBoxFlat
+        // {
+        //     BackgroundColor = color.WithAlpha(opacity)
+        // };
     }
 
     public void SetMainChat(bool setting)

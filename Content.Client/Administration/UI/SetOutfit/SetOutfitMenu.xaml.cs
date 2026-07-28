@@ -13,10 +13,10 @@ using Robust.Shared.Prototypes;
 namespace Content.Client.Administration.UI.SetOutfit
 {
     [GenerateTypedNameReferences]
-    public sealed partial class SetOutfitMenu : DefaultWindow
+    public sealed partial class SetOutfitMenu : FancyWindow
     {
-        [Dependency] private IPrototypeManager _prototypeManager = default!;
-        [Dependency] private IClientConsoleHost _consoleHost = default!;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        [Dependency] private readonly IClientConsoleHost _consoleHost = default!;
 
         public NetEntity? TargetEntityId { get; set; }
         private StartingGearPrototype? _selectedOutfit;

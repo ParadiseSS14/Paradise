@@ -27,7 +27,6 @@ namespace Content.Client.Atmos.UI
 
             _window = this.CreateWindow<GasCanisterWindow>();
 
-            _window.ReleaseValveCloseButtonPressed += OnReleaseValveClosePressed;
             _window.ReleaseValveOpenButtonPressed += OnReleaseValveOpenPressed;
             _window.ReleasePressureSet += OnReleasePressureSet;
             _window.TankEjectButtonPressed += OnTankEjectPressed;
@@ -43,16 +42,10 @@ namespace Content.Client.Atmos.UI
             SendPredictedMessage(new GasCanisterChangeReleasePressureMessage(value));
         }
 
-        private void OnReleaseValveOpenPressed()
+        private void OnReleaseValveOpenPressed(bool b)
         {
-            SendPredictedMessage(new GasCanisterChangeReleaseValveMessage(true));
+            SendPredictedMessage(new GasCanisterChangeReleaseValveMessage(b));
         }
-
-        private void OnReleaseValveClosePressed()
-        {
-            SendPredictedMessage(new GasCanisterChangeReleaseValveMessage(false));
-        }
-
         /// <summary>
         /// Update the UI state based on server-sent info
         /// </summary>
@@ -74,7 +67,7 @@ namespace Content.Client.Atmos.UI
             _window.SetTankPressure(cast.TankPressure);
             _window.SetReleasePressureRange(component.MinReleasePressure, component.MaxReleasePressure);
             _window.SetReleasePressure(component.ReleasePressure);
-            _window.SetReleaseValve(component.ReleaseValveOpen);
+            _window.SetReleaseValve(component.ReleaseValve);
         }
 
         protected override void Dispose(bool disposing)

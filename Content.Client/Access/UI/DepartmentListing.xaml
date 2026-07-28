@@ -1,0 +1,5 @@
+<PanelContainer xmlns="https://spacestation14.io">
+    <ScrollContainer>
+        <BoxContainer Orientation="Vertical" Name="DepartmentListingEntryHolder" Access="Public" SeparationOverride="4" Margin="4"/>
+    </ScrollContainer>
+</PanelContainer>

@@ -2,10 +2,7 @@
     <BoxContainer Name="MainContainer"
                   Orientation="Horizontal"
                   HorizontalExpand="True">
-        <PanelContainer Name="ColorPanel"
-                        VerticalExpand="True"
-                        SetWidth="7"
-                        Margin="0 1 0 0" />
+
         <Button Name="MainButton"
                 HorizontalExpand="True"
                 VerticalExpand="True"
@@ -15,22 +12,28 @@
                 <BoxContainer Orientation="Vertical"
                               VerticalExpand="True"
                               HorizontalExpand="True"
-                              Margin="-5 0 0 0">
+                              Margin="5 0 0 0">
                     <Label Name="ReagentNameLabel" />
                     <Label Name="FillLabel"
                            StyleClasses="LabelSubText"
-                           Margin="0 -5 0 0" />
+                           Margin="0 -2 0 0" />
                 </BoxContainer>
+
+                <TextureRect Name="ColorPanel"
+                                SetSize="20 20"
+                                Margin="0 0 4 0"
+                                TexturePath="/Textures/Interface/droplet.png"
+                                Stretch="KeepAspectCentered"/>
+
             </BoxContainer>
         </Button>
         <Button Name="EjectButton"
                 StyleClasses="OpenLeft"
                 VerticalExpand="True"
-                SetWidth="20">
-            <Label Name="EjectButtonIcon"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   Margin="-7 -4 0 0" />
+                SetWidth="30">
+            <TextureRect Stretch="KeepAspectCentered"
+                         TexturePath="/Textures/Interface/eject.png"
+                         SetSize="16 16"/>
         </Button>
     </BoxContainer>
 </Control>

@@ -169,7 +169,7 @@
   - type: Sprite
     sprite: _Paradise/Structures/Decoration/cyberiad_statue.rsi
     state: cyberiad_statue
-    drawDepth:
+    drawdepth: Mobs
   - type: Fixtures
     fixtures:
       fix1:

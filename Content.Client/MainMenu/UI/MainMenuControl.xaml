@@ -17,7 +17,7 @@
                   SeparationOverride="24">
         <TextureRect Name="Logo"
                      Stretch="KeepCentered" />
-        <PanelContainer StyleClasses="BackgroundPanel">
+        <PanelContainer StyleClasses="SurfacePrimary">
             <BoxContainer Orientation="Vertical"
                           HorizontalAlignment="Center"
                           VerticalAlignment="Center"
@@ -25,7 +25,7 @@
                           VerticalExpand="True"
                           StyleIdentifier="mainMenuVBox"
                           MinWidth="320"
-                          Margin="0 4 0 12">
+                          Margin="8">
                 <GridContainer Columns="2" Margin="0 4">
                     <Label Text="{Loc 'main-menu-username-label'}" />
                     <LineEdit Name="UsernameBox"
@@ -39,6 +39,7 @@
                               PlaceHolder="server address:port"
                               HorizontalExpand="True" />
                 </GridContainer>
+                <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" SeparationOverride="8">
                 <Button Name="DirectConnectButton"
                         Access="Public"
                         Text="{Loc 'main-menu-direct-connect-button'}"
@@ -66,6 +67,7 @@
                         <system:String>OpenRight</system:String>
                     </Control.StyleClasses>
                 </Button>
+                </BoxContainer>
             </BoxContainer>
         </PanelContainer>
     </BoxContainer>

@@ -10,7 +10,7 @@
         </ScrollContainer>
 
         <BoxContainer Orientation="Vertical">
-                    <Button Name="ColorPalette" Text="Palette" />
+            <Button Name="ColorPalette" Text="Palette" />
             <Button Name="ColorSelectorButton" Text="{Loc 'color-picker-window-title'}"/>
             <CheckBox Name="UseCustomColorCheckBox" Text="{Loc 'spray-painter-use-custom-color'}" />
             <CheckBox Name="SnapToTileCheckBox" Text="{Loc 'spray-painter-use-snap-to-tile'}" />

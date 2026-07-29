@@ -1,4 +1,4 @@
-﻿<pda:PdaProgramItem HorizontalExpand="True"
+﻿<ContainerButton HorizontalExpand="True"
                     xmlns:pda="clr-namespace:Content.Client.PDA"
                     xmlns="https://spacestation14.io" >
 
@@ -7,4 +7,4 @@
             <Button Name="InstallButton" Access="Public" Visible="False" SetWidth="90" HorizontalAlignment="Right" VerticalExpand="True"></Button>
         </BoxContainer>
 
-</pda:PdaProgramItem>
+</ContainerButton>

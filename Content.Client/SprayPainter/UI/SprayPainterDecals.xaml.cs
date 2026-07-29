@@ -201,7 +201,6 @@ public sealed partial class SprayPainterDecals : Control
             _palette.PaletteList.OnItemSelected += args =>
             {
                 var color = (args.ItemList.GetSelected().First().Metadata as Color?)!.Value;
-                ColorSelector.Color = color;
                 OnColorSelected(color);
             };
             return;
@@ -219,6 +218,6 @@ public sealed partial class SprayPainterDecals : Control
 
     public void SetColorPicker(bool enabled)
     {
-        ColorPicker.Pressed = enabled;
+        ColorSelectorButton.Pressed = enabled;
     }
 }

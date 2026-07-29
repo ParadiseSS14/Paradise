@@ -12,9 +12,9 @@ namespace Content.Client.Wires.UI
     [GenerateTypedNameReferences]
     public sealed partial class WiresMenuUI : FancyWindow
     {
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IResourceCache _resourceCache = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
+        [Dependency] private IResourceCache _resourceCache = default!;
 
         public event Action<int, WiresAction>? OnAction;
 

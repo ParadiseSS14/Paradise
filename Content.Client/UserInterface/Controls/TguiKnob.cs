@@ -18,8 +18,8 @@ namespace Content.Client.UserInterface.Controls
     [Virtual]
     public class TguiKnob : Control
     {
-        [Dependency] private readonly IPrototypeManager _prototype = default!;
-        [Dependency] private readonly IResourceCache _resourceCache = default!;
+        [Dependency] private IPrototypeManager _prototype = default!;
+        [Dependency] private IResourceCache _resourceCache = default!;
 
         public const string StylePropertyFgColor = "foregroundColor";
         public const string StylePropertyBgColor = "backgroundColor";

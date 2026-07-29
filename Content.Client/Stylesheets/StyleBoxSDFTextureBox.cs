@@ -9,8 +9,8 @@ namespace Content.Client.Stylesheets;
 // ReSharper disable once InconsistentNaming
 public sealed class StyleBoxSDFTextureBox : StyleBox
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IResourceCache _cache = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IResourceCache _cache = default!;
 
     public Texture? Texture { get; set; }
     public Color Modulate { get; set; } = Color.White;

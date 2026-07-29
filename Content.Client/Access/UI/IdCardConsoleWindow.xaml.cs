@@ -22,10 +22,10 @@ namespace Content.Client.Access.UI
     [GenerateTypedNameReferences]
     public sealed partial class IdCardConsoleWindow : FancyWindow
     {
-        [Dependency] private readonly IConfigurationManager _cfgManager = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly ILogManager _logManager = default!;
-        [Dependency] private readonly IEntityManager _entity = default!;
+        [Dependency] private IConfigurationManager _cfgManager = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private ILogManager _logManager = default!;
+        [Dependency] private IEntityManager _entity = default!;
 
         private readonly ISawmill _logMill = default!;
 

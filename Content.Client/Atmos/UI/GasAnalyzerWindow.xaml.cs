@@ -26,7 +26,7 @@ namespace Content.Client.Atmos.UI
     public sealed partial class GasAnalyzerWindow : FancyWindow
     {
         private readonly TweenManager? _tweenManager;
-        [Dependency] private readonly IEntityManager _entity = default!;
+        [Dependency] private IEntityManager _entity = default!;
         private readonly SharedAtmosphereSystem _atmosphere;
         private NetEntity _currentEntity = NetEntity.Invalid;
 

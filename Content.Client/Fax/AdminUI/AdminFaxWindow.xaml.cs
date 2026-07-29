@@ -18,7 +18,7 @@ public sealed partial class AdminFaxWindow : FancyWindow
     public Action<(NetEntity entity, string title, string stampedBy, string message, string stampSprite, Color stampColor, bool locked)>? OnMessageSend;
     public Action<NetEntity>? OnFollowFax;
 
-    [Dependency] private readonly IResourceCache _resCache = default!;
+    [Dependency] private IResourceCache _resCache = default!;
 
     public AdminFaxWindow()
     {

@@ -14,7 +14,7 @@ namespace Content.Client.UserInterface.Controls.ColorPicker;
 [GenerateTypedNameReferences]
 public sealed partial class ColorPicker : FancyWindow
 {
-    [Dependency] private readonly IInputManager _inputManager = default!;
+    [Dependency] private IInputManager _inputManager = default!;
 
     public event Action<Color>? OnSaveColors;
     public Color oldColor;

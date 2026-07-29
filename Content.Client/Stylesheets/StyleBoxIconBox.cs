@@ -8,10 +8,10 @@ using Robust.Shared.Prototypes;
 namespace Content.Client.Stylesheets;
 
 // ReSharper disable once InconsistentNaming
-public sealed class StyleBoxIconBox : StyleBox
+public sealed partial class StyleBoxIconBox : StyleBox
 {
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IResourceCache _cache = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IResourceCache _cache = default!;
 
     public Color HighlightColor { get; set; }
     public Color UnhighlitColor { get; set; }

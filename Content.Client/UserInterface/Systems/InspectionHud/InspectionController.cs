@@ -12,9 +12,9 @@ namespace Content.Client.UserInterface.Systems.InspectionHud;
 
 public sealed class InspectionController : UIController
 {
-    [Dependency] private readonly IEntityManager _entMan = default!;
+    [Dependency] private IEntityManager _entMan = default!;
     [Dependency] private IEntitySystemManager _sysMan = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
 
     private InteractionOutlineSystem _system = default!;
     private InspectionUI? inspectionUI => UIManager.GetActiveUIWidgetOrNull<InspectionUI>();

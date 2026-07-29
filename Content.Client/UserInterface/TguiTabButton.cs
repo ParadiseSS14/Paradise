@@ -18,7 +18,7 @@ namespace Content.Client.UserInterface
         public const string StyleClassCheckedColor = "checked-color";
         public const string StyleClassUncheckedColor = "unchecked-color";
 
-        [Dependency] private readonly IEntityManager _entityManager = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
 
         private Action<bool>? OnScaleTweenDone;
 

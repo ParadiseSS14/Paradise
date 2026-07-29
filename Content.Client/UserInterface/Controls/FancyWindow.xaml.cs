@@ -18,9 +18,9 @@ namespace Content.Client.UserInterface.Controls
     [Virtual]
     public partial class FancyWindow : BaseWindow
     {
-        [Dependency] private readonly IEntitySystemManager _sysMan = default!;
-        [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IStylesheetManager _styleMan = default!;
+        [Dependency] private IEntitySystemManager _sysMan = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
+        [Dependency] private IStylesheetManager _styleMan = default!;
         private GuidebookSystem? _guidebookSystem;
         private const int DRAG_MARGIN_SIZE = 7;
 

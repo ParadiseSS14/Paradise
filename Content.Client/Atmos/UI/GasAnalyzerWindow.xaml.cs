@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Tweens;
 using Content.Client.UserInterface.Tweens.Builders;
@@ -120,10 +121,17 @@ namespace Content.Client.Atmos.UI
 
             private void GenerateGasDisplay(GasMixEntry gasMix, Control parent)
             {
+
                 var dataContainer = new BoxContainer
                 {
                     Orientation = BoxContainer.LayoutOrientation.Vertical, VerticalExpand = true,
                     Margin = new Thickness(4)
+                };
+
+                var panelContainer = new PanelContainer()
+                {
+                    StyleClasses = { StyleClass.SurfaceSecondary },
+
                 };
 
                 parent.AddChild(dataContainer);
@@ -133,7 +141,8 @@ namespace Content.Client.Atmos.UI
 
                 volBox.AddChild(new Label
                 {
-                    Text = Loc.GetString("gas-analyzer-window-volume-text")
+                    Text = Loc.GetString("gas-analyzer-window-volume-text"),
+                    StyleClasses = { StyleClass.LabelSubText },
                 });
                 volBox.AddChild(new Control
                 {
@@ -144,7 +153,7 @@ namespace Content.Client.Atmos.UI
                 {
                     Text = Loc.GetString("gas-analyzer-window-volume-val-text", ("volume", $"{gasMix.Volume:0.##}")),
                     Align = Label.AlignMode.Right,
-                    HorizontalExpand = true
+                    HorizontalExpand = true,
                 });
                 dataContainer.AddChild(volBox);
 
@@ -153,7 +162,8 @@ namespace Content.Client.Atmos.UI
 
                 presBox.AddChild(new Label
                 {
-                    Text = Loc.GetString("gas-analyzer-window-pressure-text")
+                    Text = Loc.GetString("gas-analyzer-window-pressure-text"),
+                    StyleClasses = { StyleClass.LabelSubText },
                 });
                 presBox.AddChild(new Control
                 {
@@ -177,7 +187,8 @@ namespace Content.Client.Atmos.UI
 
                     tempBox.AddChild(new Label
                     {
-                        Text = Loc.GetString("gas-analyzer-window-temperature-text")
+                        Text = Loc.GetString("gas-analyzer-window-temperature-text"),
+                        StyleClasses = { StyleClass.LabelSubText },
                     });
                     tempBox.AddChild(new Control
                     {
@@ -219,6 +230,9 @@ namespace Content.Client.Atmos.UI
                     MinSize = new Vector2(0, 10)
                 });
 
+
+
+
                 // Add a table with all the gases
                 var tableKey = new BoxContainer
                 {
@@ -237,22 +251,34 @@ namespace Content.Client.Atmos.UI
                     HorizontalExpand = true,
                     SizeFlagsStretchRatio = 0.20f,
                 };
-                dataContainer.AddChild(new BoxContainer
+                var panelContainerTable = new PanelContainer
                 {
-                    Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                    StyleClasses = { StyleClass.SurfaceSecondary },
+                    Margin = new Thickness(2),
                     Children =
                     {
-                        tableKey,
-                        tableVal,
-                        tablePercent,
-                    }
-                });
+                        new BoxContainer
+                        {
+                            Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                            Children =
+                            {
+                                tableKey,
+                                tableVal,
+                                tablePercent,
+                            },
+                            Margin = new Thickness(8),
+                        },
+                    },
+
+                };
+                dataContainer.AddChild(panelContainerTable);
                 // This is the gas bar thingy
                 var height = 30;
                 var gasBar = new SplitBar
                 {
                     MinHeight = height,
-                    MinBarSize = new Vector2(12, 0)
+                    MinBarSize = new Vector2(12, 0),
+                    Margin =  new Thickness(0, 8),
                 };
                 // Separator
                 dataContainer.AddChild(new Control
@@ -314,6 +340,7 @@ namespace Content.Client.Atmos.UI
                 }
 
                 dataContainer.AddChild(gasBar);
+                gasBar.SetPositionFirst();
             }
 
             private TweenInstance Fade(Color from, Color to)

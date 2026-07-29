@@ -194,7 +194,7 @@ namespace Content.Client.PDA
 
         public void UpdateAvailablePrograms(List<(EntityUid, CartridgeComponent)> programs)
         {
-
+            ProgramList.RemoveAllChildren();
             if (programs.Count == 0)
             {
                 ProgramList.AddChild(new Label()

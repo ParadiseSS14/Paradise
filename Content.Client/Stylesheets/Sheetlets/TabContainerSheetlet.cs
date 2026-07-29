@@ -48,6 +48,7 @@ public sealed class TabContainerSheetlet<T> : Sheetlet<T> where T : PalettedStyl
                 .Prop(TabContainer.StylePropertyPanelStyleBox, tabContainerPanel)
                 .Prop(TabContainer.StylePropertyTabStyleBox, tabContainerBoxActive)
                 .Prop(TabContainer.StylePropertyTabStyleBoxInactive, tabContainerBoxInactive),
+            E<TabContainer>().Class("TGUITabContainer").Prop(TabContainer.stylePropertyTabFontColor, sheet.PanelPalette.Text),
         ];
     }
 }

@@ -37,7 +37,7 @@ namespace Content.Client.UserInterface.Controls
                 MouseFilter = MouseFilterMode.Stop,
                 StyleClasses = {  SplitBarEntry },
                 MinSize = MinBarSize,
-                Modulate = color.NudgeLightness(-0.05f),
+                Modulate = color.NudgeChroma(-0.05f),
             });
         }
     }

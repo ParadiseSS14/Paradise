@@ -5,7 +5,7 @@
     <BoxContainer Orientation="Vertical" Margin="5 5 5 5">
         <BoxContainer Name="CTopBox" Orientation="Horizontal"/>
         <!-- Gas Mix Data, Populated by function -->
-        <TabContainer Name="CTabContainer" VerticalExpand="True" Margin="1 1 1 2">
+        <TabContainer Name="CTabContainer" VerticalExpand="True" Margin="1 1 1 2" StyleClasses="TGUITabContainer">
             <!-- Scanned device mix data -->
             <ScrollContainer VerticalExpand="True">
                 <BoxContainer HorizontalExpand="True" VerticalExpand="True" Orientation="Vertical">

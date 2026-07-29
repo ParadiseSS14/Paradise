@@ -167,7 +167,7 @@
   description: A giant model of the Cyberiad science station. Judging by the differences in design, the station has been rebuilt several times.
   components:
   - type: Sprite
-    sprite: _Paradise/Structures/Decoration/cyberiad_statue.rsi
+    sprite: Structures/Decoration/_Paradise/cyberiad_statue.rsi
     state: cyberiad_statue
     drawdepth: Mobs
   - type: Fixtures

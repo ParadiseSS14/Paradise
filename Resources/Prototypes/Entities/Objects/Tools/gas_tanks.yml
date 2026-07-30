@@ -309,7 +309,7 @@
   - type: Item
     sprite: Objects/Tanks/plasma_belt.rsi
     storedSprite:
-      state: storage
+      state: icon
       sprite: Objects/Tanks/plasma_belt.rsi
   - type: Clothing
     sprite: Objects/Tanks/plasma_belt.rsi
@@ -325,7 +325,7 @@
   - type: Item
     sprite: Objects/Tanks/plasmaman.rsi
     storedSprite:
-      state: storage
+      state: icon
       sprite: Objects/Tanks/plasmaman.rsi
   - type: Clothing
     sprite: Objects/Tanks/plasmaman.rsi

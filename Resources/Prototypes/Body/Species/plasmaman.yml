@@ -1,0 +1,218 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Plasmaman
+  limits:
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+      weight: 1
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Special:
+      limit: 0
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearancePlasmaman
+  categories: [ HideSpawnMenu ]
+  name: plasmaman appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganPlasmamanTorso
+      Head: OrganPlasmamanHead
+      ArmLeft: OrganPlasmamanArmLeft
+      ArmRight: OrganPlasmamanArmRight
+      HandRight: OrganPlasmamanHandRight
+      HandLeft: OrganPlasmamanHandLeft
+      LegLeft: OrganPlasmamanLegLeft
+      LegRight: OrganPlasmamanLegRight
+      FootLeft: OrganPlasmamanFootLeft
+      FootRight: OrganPlasmamanFootRight
+      Brain: OrganPlasmamanBrain
+      Eyes: OrganPlasmamanEyes
+      Tongue: OrganPlasmamanTongue
+      Appendix: OrganPlasmamanAppendix
+      Ears: OrganPlasmamanEars
+      Lungs: OrganPlasmamanLungs
+      Heart: OrganPlasmamanHeart
+      Stomach: OrganPlasmamanStomach
+      Liver: OrganPlasmamanLiver
+      Kidneys: OrganPlasmamanKidneys
+  - type: HumanoidProfile
+    species: Plasmaman
+
+- type: entity
+  parent:
+  - AppearancePlasmaman
+  - BaseSpeciesMobOrganic
+  id: MobPlasmaman
+  name: Urist McPlasma
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganPlasmaman
+  abstract: true
+  suffix: plasmaman
+
+- type: entity
+  id: OrganPlasmamanMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Plasmaman ]
+
+- type: entity
+  parent: OrganPlasmaman
+  id: OrganPlasmamanInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Plasmaman/organs.rsi
+
+- type: entity
+  parent: OrganPlasmaman
+  id: OrganPlasmamanExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Plasmaman/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Plasmaman/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Plasmaman
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganPlasmamanExternal ]
+  id: OrganPlasmamanTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganPlasmamanExternal ]
+  id: OrganPlasmamanHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.FacialHair
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganPlasmamanExternal ]
+  id: OrganPlasmamanArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganPlasmamanExternal ]
+  id: OrganPlasmamanArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganPlasmamanExternal ]
+  id: OrganPlasmamanHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganPlasmamanExternal ]
+  id: OrganPlasmamanHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganPlasmamanExternal ]
+  id: OrganPlasmamanLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganPlasmamanExternal ]
+  id: OrganPlasmamanLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganPlasmamanExternal ]
+  id: OrganPlasmamanFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganPlasmamanExternal ]
+  id: OrganPlasmamanFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganPlasmamanInternal ]
+  id: OrganPlasmamanBrain
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganPlasmamanInternal, OrganPlasmamanExternal ]
+  id: OrganPlasmamanEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganPlasmamanInternal ]
+  id: OrganPlasmamanTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganPlasmamanInternal ]
+  id: OrganPlasmamanAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganPlasmamanInternal ]
+  id: OrganPlasmamanEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]
+  id: OrganPlasmamanLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]
+  id: OrganPlasmamanHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]
+  id: OrganPlasmamanStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]
+  id: OrganPlasmamanLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]
+  id: OrganPlasmamanKidneys

@@ -24,7 +24,7 @@
         - to: floorLight
           steps:
           - material: Steel
-            amount: 2
+            amount: 1
             doAfter: 2.0
 
         - to: strobeLight

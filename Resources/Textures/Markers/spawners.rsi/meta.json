@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "made by haydenredacted (github)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "ammo"
+        },
+        {
+            "name": "autorifle"
+        },
+        {
+            "name": "brutekit"
+        },
+        {
+            "name": "eshotgun"
+        },
+        {
+            "name": "grenade"
+        },
+        {
+            "name": "medkit"
+        },
+        {
+            "name": "nuke_ops_loot"
+        },
+        {
+            "name": "python_pistol"
+        },
+        {
+            "name": "food_vendor_refill"
+        },
+        {
+            "name": "drink_vendor_refill"
+        },
+        {
+            "name": "food_or_drink_refill"
+        },
+        {
+            "name": "plant"
+        }
+    ]
+}

@@ -3,44 +3,44 @@
   id: Plasmaman
   limits:
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.Hair:
-      limit: 1
+      limit: 0
       required: false
-      weight: 1
+      weight: 0
     enum.HumanoidVisualLayers.FacialHair:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 2
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.Snout:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.LArm:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.RArm:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.LHand:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.RHand:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.LLeg:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.RLeg:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.LFoot:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.RFoot:
-      limit: 1
+      limit: 0
       required: false
     enum.HumanoidVisualLayers.Tail:
       limit: 0
@@ -200,6 +200,10 @@
 - type: entity
   parent: [ OrganBaseLungs, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]
   id: OrganPlasmamanLungs
+  name: plasma lungs
+  components:
+  - type: Lung
+    alert: LowPlasma
 
 - type: entity
   parent: [ OrganBaseHeart, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]

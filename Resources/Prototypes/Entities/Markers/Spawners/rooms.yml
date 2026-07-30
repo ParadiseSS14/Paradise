@@ -14,7 +14,7 @@
     - type: Sprite
       sprite: Markers/jobs.rsi
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: autorifle
 
 - type: entity
@@ -30,5 +30,5 @@
     - type: Sprite
       sprite: Markers/jobs.rsi
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: eshotgun

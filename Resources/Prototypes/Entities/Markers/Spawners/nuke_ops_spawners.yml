@@ -144,7 +144,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: nuke_ops_loot
     - type: EntityTableSpawner
       table: !type:NestedSelector
@@ -159,7 +159,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: python_pistol
     - type: EntityTableSpawner
       offset: 0.15
@@ -175,7 +175,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: brutekit
     - type: EntityTableSpawner
       table: !type:NestedSelector
@@ -190,7 +190,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: medkit
     - type: EntityTableSpawner
       table: !type:NestedSelector
@@ -207,7 +207,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: grenade
     - type: EntityTableSpawner
       offset: 0.15
@@ -225,7 +225,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: ammo
     - type: EntityTableSpawner
       offset: 0.15

@@ -6,7 +6,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: food_or_drink_refill
     - type: ConditionalSpawner
       prototypes:
@@ -27,7 +27,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: food_vendor_refill
     - type: ConditionalSpawner
       prototypes:
@@ -46,7 +46,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: drink_vendor_refill
     - type: ConditionalSpawner
       prototypes:

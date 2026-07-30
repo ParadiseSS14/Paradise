@@ -5,7 +5,7 @@
   components:
     - type: Sprite
       layers:
-        - sprite: Textures/Markers/spawners.rsi
+        - sprite: Markers/spawners.rsi
           state: plant
     - type: EntityTableSpawner
       offset: 0

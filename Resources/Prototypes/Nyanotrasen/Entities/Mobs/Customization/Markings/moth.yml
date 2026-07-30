@@ -888,7 +888,7 @@
     state: gothic-rightarm
 
 - type: marking
-  id: MothLLegClassicGothicL
+  id: MothLLegClassicGothic
   bodyPart: LLeg
   forcedColoring: true
   groupWhitelist: [Moth]

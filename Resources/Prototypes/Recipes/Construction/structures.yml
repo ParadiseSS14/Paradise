@@ -572,11 +572,13 @@
   graph: LightFixture
   targetNode: groundLight
 
+#Paradise Content - Floor Lights
 - type: construction
   parent: BaseStructureFullTile
   id: LightFloorFixture
   graph: LightFixture
   targetNode: floorLight
+
 # endregion Lighting
 
 # region Material Doors

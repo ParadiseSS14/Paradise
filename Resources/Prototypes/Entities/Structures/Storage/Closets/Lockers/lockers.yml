@@ -617,7 +617,7 @@
   - type: AccessReader
     access: [["Command"]]
   - type: EntityStorageVisuals
-    stateBaseClosed: hop
+    stateBaseClosed: representative
     stateDoorOpen: hop_open
     stateDoorClosed: representative_door
 

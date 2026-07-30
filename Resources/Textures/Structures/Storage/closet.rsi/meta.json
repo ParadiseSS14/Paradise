@@ -521,6 +521,9 @@
             "name": "pink_door"
         },
         {
+            "name": "purple_door"
+        },
+        {
             "name": "qm"
         },
         {
@@ -653,6 +656,9 @@
         },
         {
             "name": "representative_door"
+        },
+        {
+            "name": "representative"
         },
         {
             "name": "bs"

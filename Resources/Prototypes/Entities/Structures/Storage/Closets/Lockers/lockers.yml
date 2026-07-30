@@ -620,3 +620,139 @@
     stateBaseClosed: hop
     stateDoorOpen: hop_open
     stateDoorClosed: representative_door
+
+# Blueshield
+- type: entity
+  id: LockerBlueshield
+  name: blueshield locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Command"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: bs
+    stateDoorOpen: hop_open
+    stateDoorClosed: bs_door
+
+# Magistrate
+- type: entity
+  id: LockerMagistrate
+  name: magistrate locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Command"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: magi
+    stateDoorOpen: hop_open
+    stateDoorClosed: magi_door
+
+# Explorer
+- type: entity
+  id: LockerExplorer
+  name: explorer locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Salvage"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: explorer
+    stateDoorOpen: cargo_open
+    stateDoorClosed: explorer_door
+
+# Internal Affairs Agent
+- type: entity
+  id: LockerIaa
+  name: iaa locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Security"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: iaa
+    stateDoorOpen: robotics_open
+    stateDoorClosed: iaa_door
+
+# Roboticist
+- type: entity
+  id: LockerRoboticist
+  name: roboticist locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Research"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: robotics
+    stateDoorOpen: robotics_open
+    stateDoorClosed: robotics_door
+
+# Xenobiologist
+- type: entity
+  id: LockerXenobiologist
+  name: xenobiologist locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Research"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: xenobiology
+    stateDoorOpen: ce_open
+    stateDoorClosed: xenobiology_door
+
+# Smith
+- type: entity
+  id: LockerSmith
+  name: smith locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Command"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: smith
+    stateDoorOpen: cargo_open
+    stateDoorClosed: smith_door
+
+# Chaplain
+- type: entity
+  id: LockerChaplain
+  name: chaplain locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Chapel"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: chaplain
+    stateDoorOpen: chaplain_open
+    stateDoorClosed: chaplain_door
+
+# Free Golem
+- type: entity
+  id: LockerFreegolem
+  name: freegolem locker
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: freegolem
+    stateDoorOpen: freegolem_open
+    stateDoorClosed: freegolem_door
+
+# Bonus Syndicate Locker
+- type: entity
+  id: LockerSyndicateTwo
+  name: syndicate locker 2
+  parent: LockerBase
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: syndicate1
+    stateDoorOpen: syndicate1_open
+    stateDoorClosed: syndicate1_door

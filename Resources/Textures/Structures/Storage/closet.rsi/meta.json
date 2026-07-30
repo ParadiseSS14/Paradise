@@ -653,6 +653,78 @@
         },
         {
             "name": "representative_door"
+        },
+        {
+            "name": "bs"
+        },
+        {
+            "name": "bs_door"
+        },
+        {
+            "name": "chaplain"
+        },
+        {
+            "name": "chaplain_door"
+        },
+        {
+            "name": "chaplain_open"
+        },
+        {
+            "name": "freegolem"
+        },
+        {
+            "name": "freegolem_door"
+        },
+        {
+            "name": "freegolem_open"
+        },
+        {
+            "name": "iaa"
+        },
+        {
+            "name": "iaa_door"
+        },
+        {
+            "name": "magi"
+        },
+        {
+            "name": "magi_door",
+        },
+        {
+            "name": "smith"
+        },
+        {
+            "name": "smith_door"
+        },
+        {
+            "name": "syndicate1"
+        },
+        {
+            "name": "syndicate1_door"
+        },
+        {
+            "name": "syndicate1_open"
+        },
+        {
+            "name": "xenobiology"
+        },
+        {
+            "name": "xenobiology_door"
+        },
+        {
+            "name": "robotics"
+        },
+        {
+            "name": "robotics_door"
+        },
+        {
+            "name": "robotics_open"
+        },
+        {
+            "name": "explorer"
+        },
+        {
+            "name": "explorer_door"
         }
     ]
 }

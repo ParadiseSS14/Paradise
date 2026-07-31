@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-NC-SA-3.0",
-  "copyright": "silver, plasma taken from https://github.com/vgstation-coders/vgstation13 at commit f2ef221849675915a78fd92fe622c32ab740e085, spacequartz taken from https://github.com/goonstation/goonstation at commit b51daf824df46a3a1426475f982c09479818e522 and reshaded by Alekshhh, bananium; uranium; iron; gold; coal by Alekshhh, diamond at commit https://github.com/tgstation/tgstation/pull/78524, edited by TheShuEd. Inhands by mubururu_ (github).",
+  "copyright": "Bananium, diamond, gold, iron, plasma, silver, uranium and respective inhands taken from ParadiseSS13 at commit https://github.com/ParadiseSS13/Paradise/commit/3add7ad52a2da72ab7568ec977fcfeceb6a2b86e. Coal and salt ore (not inhands) from the same. Spacequartz taken from https://github.com/goonstation/goonstation at commit b51daf824df46a3a1426475f982c09479818e522 and reshaded by Alekshhh. All other inhands by mubururu_ (github)",
   "size": {
     "x": 32,
     "y": 32

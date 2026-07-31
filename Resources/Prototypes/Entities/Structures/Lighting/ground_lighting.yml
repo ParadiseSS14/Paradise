@@ -175,7 +175,7 @@
   components:
   - type: Sprite
     sprite: Structures/Lighting/_Paradise/floorlights.rsi
-    snap_cardinals: false
+    snapCardinals: false
     drawdepth: FloorObjects
     noRot: true
     layers:

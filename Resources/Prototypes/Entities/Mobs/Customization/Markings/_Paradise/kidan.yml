@@ -84,3 +84,145 @@
         !type:SkinColoring
 
 # Antennae
+
+- type: marking
+  id: KidanAntennaeAlert
+  bodyPart: Hair # it just works
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: alert_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeCrescent
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: crescent_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeCurious
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: curious_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeLong
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: alert_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeMantieCurl
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: Mantie_Curled_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeMantieLong
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: Mantie_Long_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeMopey
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: mopey_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeMoth
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: moth_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeNormal
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: normal_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaePerky
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: perky_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanAntennaeVeryShort
+  bodyPart: Hair
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/antennae.rsi
+      state: very_short_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+# Body Markings
+
+- type: marking
+  id: KidanOutlineMarking
+  bodyPart: Chest
+  groupWhitelist: [Kidan]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Kidan/kidan_body_markings.rsi
+      state: outline_s

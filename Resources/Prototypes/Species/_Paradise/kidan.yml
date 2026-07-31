@@ -3,7 +3,7 @@
   name: species-name-kidan
   roundStart: true
   prototype: MobKidan
-  defaultSkinTone: "#385878"
+  defaultSkinTone: "#FFFFFF"
   dollPrototype: AppearanceKidan
   skinColoration: Hues
   maleFirstNames: NamesKidanFirst

@@ -4,7 +4,7 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Hair:
-      limit: 0
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
@@ -71,8 +71,6 @@
   components:
   - type: UnpoweredFlashlight
     toggleAction: ActionBioLight
-    toggleFlashlightSound:
-      path: ""
   - type: PointLight
     enabled: false
     radius: 3 # a little over double a PDA's flashlight radius, as a treat
@@ -116,7 +114,7 @@
         type: Local
         visualType: Large
         messages:
-        - "diona-hurt-by-herbicide-popup"
+        - "kidan-hurt-by-pest-spray-popup"
         probability: 0.66
     - reagents:
       - Water

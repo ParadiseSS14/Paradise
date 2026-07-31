@@ -70,8 +70,6 @@
       Brain: OrganPlasmamanBrain
       Eyes: OrganPlasmamanEyes
       Tongue: OrganPlasmamanTongue
-      Appendix: OrganPlasmamanAppendix
-      Ears: OrganPlasmamanEars
       Lungs: OrganPlasmamanLungs
       Heart: OrganPlasmamanHeart
       Stomach: OrganPlasmamanStomach
@@ -89,8 +87,29 @@
   components:
   - type: Butcherable
     spawned:
-    - id: FoodMeatHuman
+    - id: SheetPlasma1
       amount: 5
+  - type: Bloodstream
+    bloodlossDamage:
+      types:
+        Bloodloss: 0
+    bloodlossHealDamage:
+      types:
+        Bloodloss: 0
+  - type: Speech
+    speechVerb: Skeleton
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Plasma ]
+      methods: [ Touch, Ingestion, Injection ]
+      effects:
+      - !type:EvenHealthChange
+        damage:
+          Burn: -0.2
+          Brute: -0.2
 
 - type: entity
   parent: OrganBaseOrganic
@@ -134,12 +153,6 @@
 - type: entity
   parent: [ OrganBaseHead, OrganPlasmamanExternal ]
   id: OrganPlasmamanHead
-  components:
-  - type: VisualOrganMarkings
-    hideableLayers:
-    - enum.HumanoidVisualLayers.Hair
-    - enum.HumanoidVisualLayers.Snout
-    - enum.HumanoidVisualLayers.FacialHair
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganPlasmamanExternal ]
@@ -188,14 +201,6 @@
 - type: entity
   parent: [ OrganBaseTongue, OrganPlasmamanInternal ]
   id: OrganPlasmamanTongue
-
-- type: entity
-  parent: [ OrganBaseAppendix, OrganPlasmamanInternal ]
-  id: OrganPlasmamanAppendix
-
-- type: entity
-  parent: [ OrganBaseEars, OrganPlasmamanInternal ]
-  id: OrganPlasmamanEars
 
 - type: entity
   parent: [ OrganBaseLungs, OrganPlasmamanInternal, OrganPlasmamanMetabolizer ]

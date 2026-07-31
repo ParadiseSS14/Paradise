@@ -8,6 +8,7 @@
   - Dwarf
   - Human
   - Moth
+  - Plasmaman
   - Reptilian
   - SlimePerson
   - Vox
@@ -37,6 +38,11 @@
   id: Moth
   name: species-name-moth
   text: "/ServerInfo/Guidebook/Mobs/Moth.xml"
+
+- type: guideEntry
+  id: Plasmaman
+  name: species-name-plasmaman
+  text: "/ServerInfo/Guidebook/Mobs/Plasmaman.xml"
 
 - type: guideEntry
   id: Reptilian

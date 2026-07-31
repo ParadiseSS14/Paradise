@@ -81,7 +81,11 @@
 - type: entity
   parent:
   - AppearancePlasmaman
-  - BaseSpeciesMobOrganic
+  - MobRespirator
+  - MobAtmosStandard
+  - MobFlammable
+  - BaseSpeciesMob
+  - BaseMobDestructible
   id: MobPlasmaman
   name: Urist McPlasma
   components:
@@ -89,13 +93,10 @@
     spawned:
     - id: SheetPlasma1
       amount: 5
-  - type: Bloodstream
-    bloodlossDamage:
-      types:
-        Bloodloss: 0
-    bloodlossHealDamage:
-      types:
-        Bloodloss: 0
+  - type: Hunger
+    baseDecayRate: 0
+  - type: Thirst
+    baseDecayRate: 0
   - type: Speech
     speechVerb: Skeleton
   - type: Reactive

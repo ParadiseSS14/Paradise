@@ -59,8 +59,6 @@ public sealed partial class HandTeleporterSystem : EntitySystem
         if (Deleted(component.SecondPortal))
             component.SecondPortal = null;
 
-        Dirty(uid, component);
-
         if (component.FirstPortal != null && component.SecondPortal != null)
         {
             // handle removing portals immediately as opposed to a doafter
@@ -125,7 +123,6 @@ public sealed partial class HandTeleporterSystem : EntitySystem
             var timeout = EnsureComp<PortalTimeoutComponent>(user);
             timeout.EnteredPortal = null;
             component.FirstPortal = Spawn(component.FirstPortalPrototype, Transform(user).Coordinates);
-            Dirty(uid, component);
 
             if (component.AllowPortalsOnDifferentMaps && TryComp<PortalComponent>(component.FirstPortal, out var portal))
                 portal.CanTeleportToOtherMaps = true;
@@ -148,7 +145,6 @@ public sealed partial class HandTeleporterSystem : EntitySystem
             var timeout = EnsureComp<PortalTimeoutComponent>(user);
             timeout.EnteredPortal = null;
             component.SecondPortal = Spawn(component.SecondPortalPrototype, Transform(user).Coordinates);
-            Dirty(uid, component);
 
             if (component.AllowPortalsOnDifferentMaps && TryComp<PortalComponent>(component.SecondPortal, out var portal))
                 portal.CanTeleportToOtherMaps = true;
@@ -193,7 +189,6 @@ public sealed partial class HandTeleporterSystem : EntitySystem
 
         entity.Comp.FirstPortal = null;
         entity.Comp.SecondPortal = null;
-        Dirty(entity);
         _audio.PlayPvs(entity.Comp.ClearPortalsSound, entity);
 
         if (instability && user != null)

@@ -1,6 +1,6 @@
 using System.Threading;
 using Content.Server.Administration.Logs;
-using Content.Shared.AlertLevel;
+using Content.Server.AlertLevel;
 using Content.Shared.CCVar;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
@@ -145,11 +145,11 @@ namespace Content.Server.RoundEnd
             if (requester != null)
             {
                 var stationUid = _stationSystem.GetOwningStation(requester.Value);
-                if (TryComp<AlertLevelComponent>(stationUid, out var alertLevelComp))
+                if (TryComp<AlertLevelComponent>(stationUid, out var alertLevel))
                 {
                     duration = ProtoMan
-                        .Index(alertLevelComp.CurrentAlertLevel)
-                        .ShuttleTime;
+                        .Index<AlertLevelPrototype>(AlertLevelSystem.DefaultAlertLevelSet)
+                        .Levels[alertLevel.CurrentLevel].ShuttleTime;
                 }
             }
 

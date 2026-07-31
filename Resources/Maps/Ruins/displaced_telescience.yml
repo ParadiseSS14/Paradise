@@ -1,10 +1,10 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 284.0.0
+  engineVersion: 282.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/25/2026 02:47:37
+  time: 07/17/2026 15:32:24
   entityCount: 485
 maps: []
 grids:
@@ -1827,7 +1827,7 @@ entities:
       pos: -1.5,-7.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -5958.768
+      secondsUntilStateChange: -5859.55
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -4033,10 +4033,13 @@ entities:
       canCollide: False
     - type: InsideEntityStorage
       storage: 477
-- proto: IntercomScience
+- proto: IntercomAll
   entities:
   - uid: 469
     components:
+    - type: MetaData
+      name: emergency intercom
+      desc: An intercom for emergency situations. It's in pristine condition.
     - type: Transform
       parent: 1
       rot: 3.141592653589793 rad
@@ -4280,7 +4283,7 @@ entities:
     - type: Transform
       parent: 1
       rot: 3.141592653589793 rad
-      pos: 6.5,-4.5
+      pos: 6.482854,-4.201713
 - proto: PosterLegit50thAnniversaryVintageReprint
   entities:
   - uid: 350
@@ -4297,7 +4300,7 @@ entities:
     - type: Transform
       parent: 1
       rot: 3.141592653589793 rad
-      pos: 1.5,-9.5
+      pos: 1.3414617,-9.541878
 - proto: PosterLegitJustAWeekAway
   entities:
   - uid: 354
@@ -4305,7 +4308,7 @@ entities:
     - type: Transform
       parent: 1
       rot: 1.5707963267948966 rad
-      pos: 1.5,-9.5
+      pos: 1.769932,-9.483023
 - proto: PosterLegitSafetyEyeProtection
   entities:
   - uid: 352
@@ -4313,7 +4316,7 @@ entities:
     - type: Transform
       parent: 1
       rot: -1.5707963267948966 rad
-      pos: 6.5,-3.5
+      pos: 6.431637,-3.7712698
 - proto: PosterLegitSafetyInternals
   entities:
   - uid: 351
@@ -4321,7 +4324,7 @@ entities:
     - type: Transform
       parent: 1
       rot: -1.5707963267948966 rad
-      pos: 6.5,-3.5
+      pos: 6.5175743,-3.3569915
 - proto: PosterLegitScience
   entities:
   - uid: 348
@@ -4329,7 +4332,7 @@ entities:
     - type: Transform
       parent: 1
       rot: -1.5707963267948966 rad
-      pos: -4.5,-4.5
+      pos: -4.598712,-4.6862397
 - proto: PottedPlantBioluminscent
   entities:
   - uid: 356
@@ -4717,26 +4720,26 @@ entities:
     - type: Transform
       parent: 1
       rot: 3.141592653589793 rad
-      pos: -4.5,0.5
+      pos: -4.5,0.35
 - proto: SignScience
   entities:
   - uid: 467
     components:
     - type: Transform
       parent: 1
-      pos: -1.5,-9.5
+      pos: -1.5797484,-9.469645
 - proto: SignSecureSmallRed
   entities:
   - uid: 392
     components:
     - type: Transform
       parent: 1
-      pos: -1.5,-6.5
+      pos: -1.5,-6.75
   - uid: 393
     components:
     - type: Transform
       parent: 1
-      pos: 6.5,-8.5
+      pos: 6.5,-8.25
 - proto: SMESBasic
   entities:
   - uid: 394

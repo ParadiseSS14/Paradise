@@ -1,8 +1,8 @@
-using Content.Shared.AlertLevel;
-using Content.Shared.Containers.ItemSlots;
-using Robust.Shared.GameStates;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Robust.Shared.Prototypes;
+using Robust.Shared.GameStates;
+using Content.Shared.Access.Components;
+using Content.Shared.Containers.ItemSlots;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.PDA
 {
@@ -27,7 +27,6 @@ namespace Content.Shared.PDA
         [DataField("id", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
         public string? IdCard;
 
-        // TODO: Fix persistence
         [ViewVariables] public EntityUid? ContainedId;
         [ViewVariables] public bool FlashlightOn;
 
@@ -37,8 +36,7 @@ namespace Content.Shared.PDA
         // as well.
         [ViewVariables(VVAccess.ReadWrite)] public EntityUid? PdaOwner;
         [ViewVariables] public string? StationName;
-        [ViewVariables]
-        public ProtoId<AlertLevelPrototype>? StationAlertLevel;
+        [ViewVariables] public string? StationAlertLevel;
         [ViewVariables] public Color StationAlertColor = Color.White;
     }
 }

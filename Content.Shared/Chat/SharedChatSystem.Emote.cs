@@ -156,10 +156,7 @@ public abstract partial class SharedChatSystem
 
         // optional override params > general params for all sounds in set > individual sound params
         var param = audioParams ?? proto.GeneralParams ?? sound.Params;
-
-        if (_net.IsServer) // Chat is not predicted.
-            _audio.PlayPvs(sound, uid, param);
-
+        _audio.PlayPredicted(sound, uid, uid, param);
         return true;
     }
     /// <summary>

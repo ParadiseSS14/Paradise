@@ -1,25 +1,30 @@
 ﻿using Content.Server.Chat.Systems;
+using Content.Server.Speech.Muting;
 using Content.Shared.Mobs;
 using Content.Shared.Speech.Muting;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Mobs;
 
-/// <summary>
-/// A system that handles death gasps, an emote a character makes when they die.
-/// </summary>
-/// <seealso cref="DeathgaspComponent"/>
-public sealed partial class DeathgaspSystem : EntitySystem
+/// <see cref="DeathgaspComponent"/>
+public sealed partial class DeathgaspSystem: EntitySystem
 {
     [Dependency] private ChatSystem _chat = default!;
 
-    [SubscribeLocalEvent]
-    private void OnMobStateChanged(Entity<DeathgaspComponent> ent, ref MobStateChangedEvent args)
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<DeathgaspComponent, MobStateChangedEvent>(OnMobStateChanged);
+    }
+
+    private void OnMobStateChanged(EntityUid uid, DeathgaspComponent component, MobStateChangedEvent args)
     {
         // don't deathgasp if they arent going straight from crit to dead
         if (args.NewMobState != MobState.Dead || args.OldMobState != MobState.Critical)
             return;
 
-        Deathgasp(ent, ent.Comp);
+        Deathgasp(uid, component);
     }
 
     /// <summary>

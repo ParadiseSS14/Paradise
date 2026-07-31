@@ -15,7 +15,7 @@
       state: ian
   - type: Inventory
     speciesId: dog
-    templateId: Corgi
+    templateId: petAdvanced
     displacements:
       head:
         sizeMaps:
@@ -27,11 +27,6 @@
           32:
             sprite: Mobs/Pets/displacements.rsi
             state: corgi_eyes_displacement
-      mask:
-        sizeMaps:
-          32:
-            sprite: Mobs/Pets/displacements.rsi
-            state: corgi_mask_displacement
   - type: DamageStateVisuals
     states:
       Alive:
@@ -105,7 +100,7 @@
       gender: female
   - type: Inventory
     speciesId: dog
-    templateId: Corgi
+    templateId: petAdvanced
     displacements:
       head:
         sizeMaps:
@@ -117,11 +112,6 @@
           32:
             sprite: Mobs/Pets/displacements.rsi
             state: corgi_eyes_displacement
-      mask:
-        sizeMaps:
-          32:
-            sprite: Mobs/Pets/displacements.rsi
-            state: corgi_mask_displacement
 
 - type: entity
   name: real mouse

@@ -751,12 +751,11 @@
     components:
     - type: EntityTableSpawner
       deleteSpawnerAfterSpawn: false
-      autoStack: true
       table:
         id: SilverOre1
         rolls: !type:ConstantNumberSelector
           value: 6
-        prob: 0.7
+        prob: 0.3
 
 - type: entity
   parent: BaseXenoArtifactEffect
@@ -774,7 +773,6 @@
     components:
     - type: EntityTableSpawner
       deleteSpawnerAfterSpawn: false
-      autoStack: true
       table:
         id: PlasmaOre1
         rolls: !type:ConstantNumberSelector
@@ -797,7 +795,6 @@
     components:
     - type: EntityTableSpawner
       deleteSpawnerAfterSpawn: false
-      autoStack: true
       table:
         id: GoldOre1
         rolls: !type:ConstantNumberSelector
@@ -820,7 +817,6 @@
     components:
     - type: EntityTableSpawner
       deleteSpawnerAfterSpawn: false
-      autoStack: true
       table:
         id: UraniumOre1
         amount: !type:BinomialNumberSelector
@@ -1126,7 +1122,6 @@
     refreshOnReactivate: true
     components:
     - type: EntityTableSpawner
-      autoStack: true
       deleteSpawnerAfterSpawn: false
       table:
         id: SheetGlass
@@ -1141,7 +1136,6 @@
     refreshOnReactivate: true
     components:
     - type: EntityTableSpawner
-      autoStack: true
       deleteSpawnerAfterSpawn: false
       table:
         id: SheetSteel
@@ -1156,7 +1150,6 @@
     refreshOnReactivate: true
     components:
     - type: EntityTableSpawner
-      autoStack: true
       deleteSpawnerAfterSpawn: false
       table:
         id: SheetPlastic

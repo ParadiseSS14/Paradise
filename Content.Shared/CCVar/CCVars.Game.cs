@@ -350,7 +350,7 @@ public sealed partial class CCVars
 #endif
 
     /// <summary>
-    ///     Delay between station alert level changes (in seconds).
+    ///     Delay between station alert level changes.
     /// </summary>
     public static readonly CVarDef<int> GameAlertLevelChangeDelay =
         CVarDef.Create("game.alert_level_change_delay", 30, CVar.SERVERONLY);

@@ -1,109 +1,97 @@
 ﻿using Content.Shared.CCVar;
 using Content.Shared.Chat;
-using Content.Shared.AlertLevel;
 using Content.Shared.Communications;
-using Content.Shared.Station;
 using Robust.Client.UserInterface;
 using Robust.Shared.Configuration;
-using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
-namespace Content.Client.Communications.UI;
-
-public sealed partial class CommunicationsConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
+namespace Content.Client.Communications.UI
 {
-    [Dependency] private IConfigurationManager _cfg = default!;
-    [Dependency] private SharedStationSystem _station = default!;
-    [Dependency] private AlertLevelSystem _alertLevel = default!;
-
-    [ViewVariables]
-    private CommunicationsConsoleMenu? _menu;
-
-    protected override void Open()
+    public sealed partial class CommunicationsConsoleBoundUserInterface : BoundUserInterface
     {
-        base.Open();
+        [Dependency] private IConfigurationManager _cfg = default!;
 
-        _menu = this.CreateWindow<CommunicationsConsoleMenu>();
-        _menu.OnAnnounce += AnnounceButtonPressed;
-        _menu.OnBroadcast += BroadcastButtonPressed;
-        _menu.OnAlertLevel += AlertLevelSelected;
-        _menu.OnEmergencyLevel += EmergencyShuttleButtonPressed;
-    }
+        [ViewVariables]
+        private CommunicationsConsoleMenu? _menu;
 
-    public void AlertLevelSelected(ProtoId<AlertLevelPrototype> level)
-    {
-        if (_menu!.AlertLevelSelectable)
+        public CommunicationsConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
-            // TODO: This does not work until the console UI is predicted and uses component states.
-            // Also someone decided to send BUI states regularly in an update loop, so this just gets randomly bulldozed until the message reaches the server.
-            // _menu.CurrentAlertLevel = level;
-            // _menu.AlertLevelSelectable = false;
-            // _menu.AlertLevelButton.Disabled = true;
-            SendMessage(new CommunicationsConsoleSelectAlertLevelMessage(level));
         }
-    }
 
-    public void EmergencyShuttleButtonPressed()
-    {
-        if (_menu!.CountdownStarted)
-            RecallShuttle();
-        else
-            CallShuttle();
-    }
-
-    public void AnnounceButtonPressed(string message)
-    {
-        var maxLength = _cfg.GetCVar(CCVars.ChatMaxAnnouncementLength);
-        var msg = SharedChatSystem.SanitizeAnnouncement(message, maxLength);
-        SendMessage(new CommunicationsConsoleAnnounceMessage(msg));
-    }
-
-    public void BroadcastButtonPressed(string message)
-    {
-        SendMessage(new CommunicationsConsoleBroadcastMessage(message));
-    }
-
-    public void CallShuttle()
-    {
-        SendMessage(new CommunicationsConsoleCallEmergencyShuttleMessage());
-    }
-
-    public void RecallShuttle()
-    {
-        SendMessage(new CommunicationsConsoleRecallEmergencyShuttleMessage());
-    }
-
-    // TODO: Use component states and update in an AfterAutoHandleState subscription
-    protected override void UpdateState(BoundUserInterfaceState state)
-    {
-        base.UpdateState(state);
-
-        if (state is not CommunicationsConsoleInterfaceState commsState)
-            return;
-
-        var stationUid = _station.GetOwningStation(Owner);
-
-        if (!EntMan.TryGetComponent<AlertLevelComponent>(stationUid, out var alertComp))
-            return;
-
-        if (_menu != null)
+        protected override void Open()
         {
-            _menu.CanAnnounce = commsState.CanAnnounce;
-            _menu.CanBroadcast = commsState.CanBroadcast;
-            _menu.CanCall = commsState.CanCall;
-            _menu.CountdownStarted = commsState.CountdownStarted;
-            _menu.CountdownEnd = commsState.ExpectedCountdownEnd;
+            base.Open();
 
-            _menu.CurrentAlertLevel = alertComp.CurrentAlertLevel;
-            _menu.SelectableAlertLevels = _alertLevel.GetSelectableAlertLevels((stationUid.Value, alertComp));
-            _menu.AlertLevelSelectable = _alertLevel.CanChangeAlertLevel((stationUid.Value, alertComp));
+            _menu = this.CreateWindow<CommunicationsConsoleMenu>();
+            _menu.OnAnnounce += AnnounceButtonPressed;
+            _menu.OnBroadcast += BroadcastButtonPressed;
+            _menu.OnAlertLevel += AlertLevelSelected;
+            _menu.OnEmergencyLevel += EmergencyShuttleButtonPressed;
+        }
 
-            _menu.UpdateCountdown();
-            _menu.UpdateAlertLevels();
+        public void AlertLevelSelected(string level)
+        {
+            if (_menu!.AlertLevelSelectable)
+            {
+                _menu.CurrentLevel = level;
+                SendMessage(new CommunicationsConsoleSelectAlertLevelMessage(level));
+            }
+        }
 
-            _menu.AlertLevelButton.Disabled = !_menu.AlertLevelSelectable;
-            _menu.EmergencyShuttleButton.Disabled = !_menu.CanCall;
-            _menu.AnnounceButton.Disabled = !_menu.CanAnnounce;
-            _menu.BroadcastButton.Disabled = !_menu.CanBroadcast;
+        public void EmergencyShuttleButtonPressed()
+        {
+            if (_menu!.CountdownStarted)
+                RecallShuttle();
+            else
+                CallShuttle();
+        }
+
+        public void AnnounceButtonPressed(string message)
+        {
+            var maxLength = _cfg.GetCVar(CCVars.ChatMaxAnnouncementLength);
+            var msg = SharedChatSystem.SanitizeAnnouncement(message, maxLength);
+            SendMessage(new CommunicationsConsoleAnnounceMessage(msg));
+        }
+
+        public void BroadcastButtonPressed(string message)
+        {
+            SendMessage(new CommunicationsConsoleBroadcastMessage(message));
+        }
+
+        public void CallShuttle()
+        {
+            SendMessage(new CommunicationsConsoleCallEmergencyShuttleMessage());
+        }
+
+        public void RecallShuttle()
+        {
+            SendMessage(new CommunicationsConsoleRecallEmergencyShuttleMessage());
+        }
+
+        protected override void UpdateState(BoundUserInterfaceState state)
+        {
+            base.UpdateState(state);
+
+            if (state is not CommunicationsConsoleInterfaceState commsState)
+                return;
+
+            if (_menu != null)
+            {
+                _menu.CanAnnounce = commsState.CanAnnounce;
+                _menu.CanBroadcast = commsState.CanBroadcast;
+                _menu.CanCall = commsState.CanCall;
+                _menu.CountdownStarted = commsState.CountdownStarted;
+                _menu.AlertLevelSelectable = commsState.AlertLevels != null && !float.IsNaN(commsState.CurrentAlertDelay) && commsState.CurrentAlertDelay <= 0;
+                _menu.CurrentLevel = commsState.CurrentAlert;
+                _menu.CountdownEnd = commsState.ExpectedCountdownEnd;
+
+                _menu.UpdateCountdown();
+                _menu.UpdateAlertLevels(commsState.AlertLevels, _menu.CurrentLevel);
+                _menu.AlertLevelButton.Disabled = !_menu.AlertLevelSelectable;
+                _menu.EmergencyShuttleButton.Disabled = !_menu.CanCall;
+                _menu.AnnounceButton.Disabled = !_menu.CanAnnounce;
+                _menu.BroadcastButton.Disabled = !_menu.CanBroadcast;
+            }
         }
     }
 }

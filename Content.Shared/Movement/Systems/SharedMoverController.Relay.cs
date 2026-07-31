@@ -128,17 +128,17 @@ public abstract partial class SharedMoverController
         PhysicsSystem.UpdateIsPredicted(entity.Owner);
         PhysicsSystem.UpdateIsPredicted(entity.Comp.Source);
 
-        if (MoverQuery.TryComp(entity.Owner, out var inputMover))
-            SetMoveInput((entity.Owner, inputMover), MoveButtons.None);
-
         if (Timing.ApplyingState)
             return;
 
-        if (!RelayQuery.TryComp(entity.Comp.Source, out var relay) ||
-            relay.LifeStage > ComponentLifeStage.Running) return;
+        if (MoverQuery.TryComp(entity.Owner, out var inputMover))
+            SetMoveInput((entity.Owner, inputMover), MoveButtons.None);
 
-        RemComp(entity.Comp.Source, relay);
-        RaiseEffectiveMoverChanged(entity.Comp.Source, entity.Owner, entity.Comp.Source);
+        if (RelayQuery.TryComp(entity.Comp.Source, out var relay) && relay.LifeStage <= ComponentLifeStage.Running)
+        {
+            RemComp(entity.Comp.Source, relay);
+            RaiseEffectiveMoverChanged(entity.Comp.Source, entity.Owner, entity.Comp.Source);
+        }
     }
 
     protected virtual void UpdateMoverStatus(Entity<InputMoverComponent?, MovementRelayTargetComponent?> ent) { }

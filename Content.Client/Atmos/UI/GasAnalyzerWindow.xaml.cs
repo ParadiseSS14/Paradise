@@ -291,12 +291,10 @@ namespace Content.Client.Atmos.UI
             });
             // This is the gas bar thingy
             var height = 30;
-            var gasBar = new SegmentedBarChart
+            var gasBar = new SplitBar
             {
-                StyleClasses = { SegmentedBarChart.StyleClassClassicSplitBar },
                 MinHeight = height,
-                MinEntryWidth = 12,
-                Gap = 3
+                MinBarSize = new Vector2(12, 0)
             };
             // Separator
             dataContainer.AddChild(new Control
@@ -326,12 +324,10 @@ namespace Content.Client.Atmos.UI
             {
                 var gasEntry = gasMix.Gases[j];
                 var gasProto = _atmosphere.GetGas(gasEntry.Gas);
-                var localizedName = Loc.GetString(gasProto.Name);
-
                 // Add to the table
                 tableKey.AddChild(new Label
                 {
-                    Text = localizedName
+                    Text = Loc.GetString(gasProto.Name)
                 });
                 tableVal.AddChild(new Label
                 {
@@ -346,13 +342,11 @@ namespace Content.Client.Atmos.UI
                     Align = Label.AlignMode.Right
                 });
 
-                // Add to the gas bar
-                var tooltip = Loc.GetString("gas-analyzer-window-molarity-percentage-text",
-                    ("gasName", localizedName),
+                // Add to the gas bar //TODO: highlight the currently hover one
+                gasBar.AddEntry(gasEntry.Amount, gasProto.Color, tooltip: Loc.GetString("gas-analyzer-window-molarity-percentage-text",
+                    ("gasName", Loc.GetString(gasProto.Name)),
                     ("amount", $"{gasEntry.Amount:0.##}"),
-                    ("percentage", $"{(gasEntry.Amount / totalGasAmount * 100):0.#}"));
-
-                gasBar.SetEntry(gasProto.Name, gasEntry.Amount, gasProto.Color, text: localizedName, tooltip: tooltip);
+                    ("percentage", $"{(gasEntry.Amount / totalGasAmount * 100):0.#}")));
             }
 
             dataContainer.AddChild(gasBar);

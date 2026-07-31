@@ -2,11 +2,11 @@
 
 species-name-human = Human
 species-name-dwarf = Dwarf
-species-name-reptilian = Unathi
+species-name-reptilian = Reptilian
 species-name-slime = Slime Person
 species-name-diona = Diona
 species-name-arachnid = Arachnid
-species-name-moth = Nian
+species-name-moth = Moth Person
 species-name-skeleton = Skeleton
 species-name-vox = Vox
 species-name-gingerbread = delicious baked good

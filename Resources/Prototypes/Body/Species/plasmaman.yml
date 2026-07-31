@@ -97,6 +97,8 @@
     baseDecayRate: 0
   - type: Thirst
     baseDecayRate: 0
+  - type: Damageable
+    damageModifierSet: Plasmaman
   - type: Speech
     speechVerb: Skeleton
   - type: Reactive

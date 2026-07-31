@@ -37,9 +37,6 @@
   categories: [ HideSpawnMenu ]
   name: kidan appearance
   components:
-  - type: Inventory
-    templateId: kidan
-    speciesId: kidan
   - type: InitialBody
     organs:
       Torso: OrganKidanTorso
@@ -72,16 +69,23 @@
   id: MobKidan
   name: Mandibles Joe
   components:
+  - type: UnpoweredFlashlight
+    toggleAction: ActionBioLight
+    toggleFlashlightSound:
+      path: ""
+  - type: PointLight
+    enabled: false
+    radius: 3 # a little over double a PDA's flashlight radius, as a treat
   - type: Hunger
-    baseDecayRate: 1.2 # technically not +50% hunger, but we make sacrifices for playability's sake
+    baseDecayRate: 1.2
   - type: Thirst
-    baseDecayRate: 1.2 # ditto, paradise 13 lacks thirst but i gotta do something with it
+    baseDecayRate: 1.2
   - type: Damageable
     damageModifierSet: Kidan
   - type: MeleeWeapon
     animation: WeaponArcClaw
     soundHit:
-      path: /Audio/Effects/pierce.ogg
+      collection: AlienClaw
     damage:
       types:
         Slash: 5
@@ -99,8 +103,10 @@
       amount: 5
   - type: Reactive
     reactions:
-    - reagents: [PestKiller]
-      methods: [Touch]
+    - reagents:
+      - PestKiller
+      methods:
+      - Touch
       effects:
       - !type:HealthChange
         damage:
@@ -109,10 +115,14 @@
       - !type:PopupMessage
         type: Local
         visualType: Large
-        messages: [ "diona-hurt-by-herbicide-popup" ]
+        messages:
+        - "diona-hurt-by-herbicide-popup"
         probability: 0.66
-    - reagents: [Water, SpaceCleaner]
-      methods: [Touch]
+    - reagents:
+      - Water
+      - SpaceCleaner
+      methods:
+      - Touch
       effects:
       - !type:WashCreamPie
   - type: Bloodstream
@@ -130,20 +140,17 @@
   - type: Speech
     speechVerb: Arachnid
     speechSounds: Arachnid
-    allowedEmotes: ['Click', 'Chitter']
+    allowedEmotes:
+    - 'Click'
+    - 'Chitter'
   - type: Vocal
     emoteSounds: UnisexArachnid
   - type: TypingIndicator
-    proto: spider
+    proto: human
   - type: CreamPied
     sprite:
       sprite: Effects/creampie.rsi
       state: creampie_arachnid
-  - type: Tag
-    tags:
-      - Flashlight
-
-
 
 - type: entity
   parent: OrganBaseOrganic

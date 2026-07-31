@@ -72,3 +72,27 @@
     foldVerbText: fold-verb-clothing-jacket
   - type: FoldableClothing
     foldedEquippedPrefix: folded
+
+- type: entity
+  abstract: true
+  parent: UnsensoredClothingUniformBase
+  id: UnsensoredClothingUniformEnvirosuitBase
+  components:
+  - type: Clothing
+    equipDelay: 0.5
+    unequipDelay: 0.5
+  - type: GuideHelp
+    guides: [ Plasmaman ]
+
+- type: entity
+  abstract: true
+  parent: UnsensoredClothingUniformEnvirosuitBase
+  id: ClothingUniformEnvirosuitBase
+  components:
+  - type: SuitSensor
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+  - type: WirelessNetworkConnection
+    range: 1200
+  - type: StationLimitedNetwork

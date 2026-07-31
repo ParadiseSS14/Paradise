@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "Mantie_Curled_s",
+            "directions": 4
+        },
+        {
+            "name": "moth_s",
+            "directions": 4
+        },
+        {
+            "name": "Mantie_Long_s",
+            "directions": 4
+        },
+        {
+            "name": "normal_s",
+            "directions": 4
+        },
+        {
+            "name": "very_short_s",
+            "directions": 4
+        },
+        {
+            "name": "long_s",
+            "directions": 4
+        },
+        {
+            "name": "crescent_s",
+            "directions": 4
+        },
+        {
+            "name": "alert_s",
+            "directions": 4
+        },
+        {
+            "name": "curious_s",
+            "directions": 4
+        },
+        {
+            "name": "perky_s",
+            "directions": 4
+        },
+        {
+            "name": "mopey_s",
+            "directions": 4
+        }
+    ]
+}

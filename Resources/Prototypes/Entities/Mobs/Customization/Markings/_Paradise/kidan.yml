@@ -1,0 +1,86 @@
+# Horns
+- type: marking
+  id: KidanHornsBrokenBull
+  bodyPart: HeadSide
+  groupWhitelist: [Kidan]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Kidan/horns.rsi
+    state: broken_bull_horns_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanHornsBullSmall
+  bodyPart: HeadSide
+  groupWhitelist: [Kidan]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Kidan/horns.rsi
+    state: bull_horns_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanHornsCurled
+  bodyPart: HeadSide
+  groupWhitelist: [Kidan]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Kidan/horns.rsi
+    state: curled_horns_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanHornsHawk
+  bodyPart: HeadSide
+  groupWhitelist: [Kidan]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Kidan/horns.rsi
+    state: hawk_horn_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanHornsHollow
+  bodyPart: HeadSide
+  groupWhitelist: [Kidan]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Kidan/horns.rsi
+    state: hollow_horns_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanHornsTall
+  bodyPart: HeadSide
+  groupWhitelist: [Kidan]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Kidan/horns.rsi
+    state: tall_horns_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+- type: marking
+  id: KidanHornsWide
+  bodyPart: HeadSide
+  groupWhitelist: [Kidan]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Kidan/horns.rsi
+    state: wide_horns_s
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+
+# Antennae

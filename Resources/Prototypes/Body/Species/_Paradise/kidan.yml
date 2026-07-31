@@ -1,0 +1,266 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Kidan
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 0
+      required: true
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: true
+    enum.HumanoidVisualLayers.LArm:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 0
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceKidan
+  categories: [ HideSpawnMenu ]
+  name: kidan appearance
+  components:
+  - type: Inventory
+    templateId: kidan
+    speciesId: kidan
+  - type: InitialBody
+    organs:
+      Torso: OrganKidanTorso
+      Head: OrganKidanHead
+      ArmLeft: OrganKidanArmLeft
+      ArmRight: OrganKidanArmRight
+      HandRight: OrganKidanHandRight
+      HandLeft: OrganKidanHandLeft
+      LegLeft: OrganKidanLegLeft
+      LegRight: OrganKidanLegRight
+      FootLeft: OrganKidanFootLeft
+      FootRight: OrganKidanFootRight
+      Brain: OrganKidanBrain
+      Eyes: OrganKidanEyes
+##      Tongue: OrganKidanTongue
+##      Appendix: OrganKidanAppendix
+##      Ears: OrganKidanEars
+      Lungs: OrganKidanLungs
+      Heart: OrganKidanHeart
+##      Stomach: OrganKidanStomach
+      Liver: OrganKidanLiver
+      Kidneys: OrganKidanKidneys
+  - type: HumanoidProfile
+    species: Kidan
+
+- type: entity
+  parent:
+  - AppearanceKidan
+  - BaseSpeciesMobOrganic
+  id: MobKidan
+  name: Mandibles Joe
+  components:
+  - type: Hunger
+    baseDecayRate: 1.2 # technically not +50% hunger, but we make sacrifices for playability's sake
+  - type: Thirst
+    baseDecayRate: 1.2 # ditto, paradise 13 lacks thirst but i gotta do something with it
+  - type: Damageable
+    damageModifierSet: Kidan
+  - type: MeleeWeapon
+    animation: WeaponArcClaw
+    soundHit:
+      path: /Audio/Effects/pierce.ogg
+    damage:
+      types:
+        Slash: 5
+        Piercing: 2
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - SpiderCraft
+    - AnomalyHost
+  - type: Butcherable
+    spawned:
+    - id: FoodMeat
+      amount: 5
+  - type: Reactive
+    reactions:
+    - reagents: [PestKiller]
+      methods: [Touch]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.2
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "diona-hurt-by-herbicide-popup" ]
+        probability: 0.66
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashCreamPie
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Blood
+        Quantity: 600
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#162581"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  - type: Speech
+    speechVerb: Arachnid
+    speechSounds: Arachnid
+    allowedEmotes: ['Click', 'Chitter']
+  - type: Vocal
+    emoteSounds: UnisexArachnid
+  - type: TypingIndicator
+    proto: spider
+  - type: CreamPied
+    sprite:
+      sprite: Effects/creampie.rsi
+      state: creampie_arachnid
+  - type: Tag
+    tags:
+      - Flashlight
+
+
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganKidan
+  abstract: true
+  suffix: Kidan
+
+- type: entity
+  id: OrganKidanMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Arachnid ]
+
+- type: entity
+  parent: OrganKidan
+  id: OrganKidanInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/_Paradise/Kidan/organs.rsi
+
+- type: entity
+  id: OrganKidanVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/_Paradise/Kidan/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Kidan
+
+- type: entity
+  parent: [ OrganKidan, OrganKidanVisual ]
+  id: OrganKidanExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/_Paradise/Kidan/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganKidanExternal ]
+  id: OrganKidanTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganKidanExternal ]
+  id: OrganKidanHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganKidanExternal ]
+  id: OrganKidanArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganKidanExternal ]
+  id: OrganKidanArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganKidanExternal ]
+  id: OrganKidanHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganKidanExternal ]
+  id: OrganKidanHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganKidanExternal ]
+  id: OrganKidanLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganKidanExternal ]
+  id: OrganKidanLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganKidanExternal ]
+  id: OrganKidanFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganKidanExternal ]
+  id: OrganKidanFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganSpriteHumanInternal, OrganKidanInternal ]
+  id: OrganKidanBrain
+
+- type: entity
+  parent: [ OrganKidanVisual, OrganBaseEyes, OrganKidanInternal ]
+  id: OrganKidanEyes
+
+##- type: entity
+## parent: [ OrganBaseTongue, OrganKidanInternal ]
+##  id: OrganKidanTongue
+
+##- type: entity
+##  parent: [ OrganBaseAppendix, OrganSpriteHumanInternal, OrganKidanInternal ]
+##  id: OrganKidanAppendix
+
+##- type: entity
+##  parent: [ OrganBaseEars, OrganSpriteHumanInternal, OrganKidanInternal ]
+##  id: OrganKidanEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganKidanInternal, OrganKidanMetabolizer ]
+  id: OrganKidanLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganKidanInternal, OrganKidanMetabolizer ]
+  id: OrganKidanHeart
+
+##- type: entity
+##  parent: [ OrganBaseStomach, OrganKidanInternal, OrganAnimalMetabolizer ]
+##  id: OrganKidanStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganKidanInternal, OrganAnimalMetabolizer ]
+  id: OrganKidanLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganKidanInternal, OrganAnimalMetabolizer ]
+  id: OrganKidanKidneys

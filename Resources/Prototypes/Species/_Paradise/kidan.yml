@@ -1,0 +1,19 @@
+- type: species
+  id: Kidan
+  name: species-name-kidan
+  roundStart: true
+  prototype: MobKidan
+  defaultSkinTone: "#385878"
+  dollPrototype: AppearanceKidan
+  skinColoration: Hues
+  maleFirstNames: NamesKidanFirst
+  femaleFirstNames: NamesKidanFirst
+  lastNames: NamesKidanLast
+  sexes:
+  - Unsexed
+  defaultSoundsBySex:
+  - UnisexArachnid
+  - UnisexArachnid
+  - UnisexArachnid
+  voices:
+  - UnisexArachnid

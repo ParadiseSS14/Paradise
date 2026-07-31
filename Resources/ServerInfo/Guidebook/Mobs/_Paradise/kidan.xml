@@ -1,0 +1,14 @@
+<Document>
+  # Kidan
+
+  <Box>
+    <GuideEntityEmbed Entity="MobKidan" Caption=""/>
+  </Box>
+
+  Kidan receive 20% less Slashing, Piercing, and Blunt damage.
+  They receive 50% more Poison damage.
+  Their hunger and thirst degrade 20% faster than humans.
+  Their unarmed attacks deal Slashing damage instead of Blunt.
+
+
+</Document>

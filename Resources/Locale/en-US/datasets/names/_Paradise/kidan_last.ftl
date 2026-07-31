@@ -1,0 +1,11 @@
+names-kidan-last-dataset-1 = Tristan
+names-kidan-last-dataset-2 = Zarlan
+names-kidan-last-dataset-3 = Clack
+names-kidan-last-dataset-4 = Kkraz
+names-kidan-last-dataset-5 = Zramn
+names-kidan-last-dataset-6 = Orlan
+names-kidan-last-dataset-7 = Zrax
+names-kidan-last-dataset-8 = Orax
+names-kidan-last-dataset-9 = Oriz
+names-kidan-last-dataset-10 = Tariz
+names-kidan-last-dataset-11 = Kvestan

@@ -1,4 +1,5 @@
 using Robust.Shared.ContentPack;
+using Robust.Shared.Toolshed.Commands.Values;
 using Robust.Shared.Utility;
 using YamlDotNet.RepresentationModel;
 using static Robust.Client.Credits.CreditsManager;
@@ -16,8 +17,8 @@ public static class ClientCreditsManager
     /// </summary>
     public static IEnumerable<LicenseEntry> GetLicenses(IResourceManager resources)
     {
-        using var file = resources.ContentFileRead("/Credits/Libraries.yml");
-        using var reader = new System.IO.StreamReader(file);
+        var credits_res = new ResPath("/Credits/Libraries.yml").ToRootedPath();
+        using var reader = resources.ContentFileReadText(credits_res);
         var yamlStream = new YamlStream();
         yamlStream.Load(reader);
 

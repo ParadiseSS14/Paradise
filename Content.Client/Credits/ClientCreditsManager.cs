@@ -1,5 +1,4 @@
 using Robust.Shared.ContentPack;
-using Robust.Shared.Toolshed.Commands.Values;
 using Robust.Shared.Utility;
 using YamlDotNet.RepresentationModel;
 using static Robust.Client.Credits.CreditsManager;

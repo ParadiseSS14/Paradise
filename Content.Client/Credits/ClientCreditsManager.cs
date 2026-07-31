@@ -16,7 +16,7 @@ public static class ClientCreditsManager
     /// </summary>
     public static IEnumerable<LicenseEntry> GetLicenses(IResourceManager resources)
     {
-        var credits_res = new ResPath("/Credits/Libraries.yml").ToRootedPath();
+        var credits_res = new ResPath("/Credits/Libraries.yml");
         using var reader = resources.ContentFileReadText(credits_res);
         var yamlStream = new YamlStream();
         yamlStream.Load(reader);

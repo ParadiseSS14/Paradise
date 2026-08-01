@@ -182,6 +182,11 @@
   parent: ClosetMaintenance
   description: It's a storage unit... right?
   components:
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: bluespace
+      stateDoorOpen: bluespace_open
+      stateDoorClosed: bluespace_door
     - type: ArrivalsBlacklist
     - type: BluespaceLocker
       pickLinksFromSameMap: true
@@ -201,6 +206,11 @@
   parent: ClosetMaintenance
   description: It's a storage unit... right?
   components:
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: bluespace
+      stateDoorOpen: bluespace_open
+      stateDoorClosed: bluespace_door
     - type: ArrivalsBlacklist
     - type: BluespaceLocker
       pickLinksFromSameMap: true

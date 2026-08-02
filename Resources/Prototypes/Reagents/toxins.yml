@@ -187,6 +187,7 @@
               Heat: 2.5
               Caustic: 1
 
+# Paradise Change: Added metabolizer type condition
 - type: reagent
   id: FluorosulfuricAcid
   name: reagent-name-fluorosulfuric-acid
@@ -215,18 +216,31 @@
       metabolismRate: 3.00 # High damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
       effects:
         - !type:HealthChange
-          damage:
-            types:
-              Caustic: 8
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Grey ] # species blocklist
+            inverted: true 
+            damage:
+              types:
+                Caustic: 8
         - !type:PopupMessage
-          type: Local
-          visualType: Large
-          messages: ["generic-reagent-effect-burning-insides"]
-          probability: 0.33
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Grey ] # species blocklist
+            inverted: true 
+            type: Local
+            visualType: Large
+            messages: ["generic-reagent-effect-burning-insides"]
+            probability: 0.33
         - !type:Emote
-          emote: Scream
-          probability: 0.25
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Grey ] # species blocklist
+            inverted: true 
+            emote: Scream
+            probability: 0.25
 
+# Paradise Change: Added metabolizer type condition
 - type: reagent
   id: SulfuricAcid
   name: reagent-name-sulfuric-acid
@@ -264,17 +278,29 @@
       metabolismRate: 3.00 # Okay damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
       effects:
         - !type:HealthChange
-          damage:
-            types:
-              Caustic: 5
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Grey ] # species blocklist
+            inverted: true 
+              damage:
+                types:
+                  Caustic: 5
         - !type:PopupMessage
-          type: Local
-          visualType: Large
-          messages: ["generic-reagent-effect-burning-insides"]
-          probability: 0.33
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Grey ] # species blocklist
+            inverted: true 
+            type: Local
+            visualType: Large
+            messages: ["generic-reagent-effect-burning-insides"]
+            probability: 0.33
         - !type:Emote
-          emote: Scream
-          probability: 0.2
+          conditions:
+          - !type:MetabolizerTypeCondition
+            type: [ Grey ] # species blocklist
+            inverted: true 
+            emote: Scream
+            probability: 0.2
 
 - type: reagent
   id: UnstableMutagen

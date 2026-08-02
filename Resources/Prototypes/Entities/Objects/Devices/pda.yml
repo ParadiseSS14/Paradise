@@ -209,28 +209,6 @@
     state: pda-interntech
 
 - type: entity
-  parent: BaseMedicalPDA
-  id: MedicalInternPDA
-  name: medical intern PDA
-  description: Why isn't it white?
-  components:
-  - type: Pda
-    id: MedicalInternIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-internmed
-  - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#447987"
-  - type: Icon
-    state: pda-internmed
-  - type: GuideHelp
-    guides:
-    - MedicalDoctor
-
-- type: entity
   parent: BaseSecurityPDA
   id: SecurityCadetPDA
   name: security cadet PDA
@@ -248,25 +226,6 @@
     accentVColor: "#A32D26"
   - type: Icon
     state: pda-interncadet
-
-- type: entity
-  parent: BasePDA
-  id: ResearchAssistantPDA
-  name: research assistant PDA
-  description: Why isn't it purple?
-  components:
-  - type: Pda
-    id: ResearchAssistantIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-internsci
-  - type: PdaBorderColor
-    borderColor: "#717059"
-    accentVColor: "#8900c9"
-  - type: Icon
-    state: pda-internsci
 
 - type: entity
   parent: BasePDA
@@ -1285,67 +1244,6 @@
     state: pda-medical
 
 - type: entity
-  parent: BasePDA
-  id: ReporterPDA
-  name: reporter PDA
-  description: Smells like freshly printed press.
-  components:
-  - type: Pda
-    id: ReporterIDCard
-    penSlot:
-      startingItem: LuxuryPen
-      priority: -1
-      whitelist:
-        tags:
-        - Write
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-reporter
-  - type: PdaBorderColor
-    borderColor: "#3f3f74"
-  - type: Icon
-    state: pda-reporter
-
-- type: entity
-  parent: BasePDA
-  id: ZookeeperPDA
-  name: zookeeper PDA
-  description: Made with genuine synthetic leather. Crikey!
-  components:
-  - type: Pda
-    id: ZookeeperIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-zookeeper
-  - type: PdaBorderColor
-    borderColor: "#ffe685"
-  - type: Icon
-    state: pda-zookeeper
-
-- type: entity
-  parent: BasePDA
-  id: BoxerPDA
-  name: boxer PDA
-  description: Float like a butterfly, ringtone like a bee.
-  components:
-  - type: Pda
-    id: BoxerIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-boxer
-  - type: PdaBorderColor
-    borderColor: "#333333"
-    accentVColor: "#390504"
-  - type: Icon
-    state: pda-boxer
-
-- type: entity
   parent: BaseSecurityPDA
   id: DetectivePDA
   name: detective PDA
@@ -1372,36 +1270,6 @@
         - id: NewsReaderCartridge
         - id: WantedListCartridge
         - id: LogProbeCartridge
-
-- type: entity
-  parent: BaseMedicalPDA
-  id: BrigmedicPDA
-  name: brigmedic PDA
-  description: I wonder whose pulse is on the screen? I hope it doesn't stop...
-  components:
-  - type: Pda
-    id: BrigmedicIDCard
-  - type: Appearance
-    appearanceDataInit:
-     enum.PdaVisuals.PdaType:
-       !type:String
-       pda-brigmedic
-  - type: PdaBorderColor
-    borderColor: "#A32D26"
-    accentHColor: "#d7d7d0"
-    accentVColor: "#d7d7d0"
-  - type: Icon
-    state: pda-brigmedic
-  - type: EntityTableContainerFill
-    containers:
-      preinstalled-program-container: !type:AllSelector
-        children:
-        - id: CrewManifestCartridge
-        - id: NotekeeperCartridge
-        - id: NanoTaskCartridge
-        - id: NewsReaderCartridge
-        - id: WantedListCartridge
-        - id: MedTekCartridge
 
 - type: entity
   parent: ClownPDA

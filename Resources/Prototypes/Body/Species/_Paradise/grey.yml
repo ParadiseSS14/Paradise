@@ -86,6 +86,7 @@
   parent:
   - AppearanceGrey
   - BaseSpeciesMobOrganic
+  - MobNightVision
   id: MobGrey
   name: Urist McBald
   components:
@@ -93,6 +94,15 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
+  - type: NightVision
+    prioritized: false
+    lightingColor: "#FFFFFF10"
+  ## SS14 has no organ damage
+  ## So apply small burn to the mob instead
+  - type: DamagedByFlashing
+    flashDamage:
+      types:
+        Heat: 5
 
 - type: entity
   parent: OrganBaseOrganic

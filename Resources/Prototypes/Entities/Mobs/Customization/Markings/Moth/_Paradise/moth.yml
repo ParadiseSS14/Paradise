@@ -9,7 +9,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: aspen
 
 - type: marking
@@ -22,7 +22,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: brown
 
 - type: marking
@@ -35,7 +35,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: deathshead
 
 - type: marking
@@ -48,7 +48,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: feathery
 
 - type: marking
@@ -61,7 +61,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: firewatch
 
 - type: marking
@@ -74,7 +74,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: gothic
 
 - type: marking
@@ -87,7 +87,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: jungle
 
 - type: marking
@@ -100,7 +100,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: lovers
 
 - type: marking
@@ -113,7 +113,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: mint
 
 - type: marking
@@ -126,7 +126,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: moffra
 
 - type: marking
@@ -139,7 +139,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: moonfly
 
 - type: marking
@@ -152,7 +152,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: oakworm
 
 - type: marking
@@ -165,7 +165,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: plain
 
 - type: marking
@@ -178,7 +178,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: plasmafire
 
 - type: marking
@@ -191,7 +191,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: poison
 
 - type: marking
@@ -204,7 +204,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: reddish
 
 - type: marking
@@ -217,7 +217,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: regal
 
 - type: marking
@@ -230,7 +230,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: rosy
 
 - type: marking
@@ -243,7 +243,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: royal
 
 - type: marking
@@ -256,7 +256,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: snow
 
 - type: marking
@@ -269,7 +269,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: whitefly
 
 - type: marking
@@ -282,7 +282,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_antennas.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_antennas.rsi
       state: witchking
 
 # Wings
@@ -296,7 +296,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: aspen
 
 - type: marking
@@ -309,7 +309,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: atlas
 
 - type: marking
@@ -322,7 +322,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: brown
 
 - type: marking
@@ -335,7 +335,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: deathshead
 
 - type: marking
@@ -348,7 +348,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: feathery
 
 - type: marking
@@ -361,7 +361,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: firewatch
 
 - type: marking
@@ -374,7 +374,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: gothic
 
 - type: marking
@@ -387,7 +387,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: jungle
 
 - type: marking
@@ -400,7 +400,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: lovers
 
 - type: marking
@@ -413,7 +413,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: luna
 
 - type: marking
@@ -426,7 +426,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: mint
 
 - type: marking
@@ -439,7 +439,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: moffra
 
 - type: marking
@@ -452,7 +452,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: monarch
 
 - type: marking
@@ -465,7 +465,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: moonfly
 
 - type: marking
@@ -478,7 +478,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: oakworm
 
 - type: marking
@@ -491,7 +491,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: plain
 
 - type: marking
@@ -504,7 +504,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: plasmafire
 
 - type: marking
@@ -517,7 +517,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: poison
 
 - type: marking
@@ -530,7 +530,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: ragged
 
 - type: marking
@@ -543,7 +543,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: reddish
 
 - type: marking
@@ -556,7 +556,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: rosy
 
 - type: marking
@@ -569,7 +569,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: royal
 
 - type: marking
@@ -582,7 +582,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: snow
 
 - type: marking
@@ -595,7 +595,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: whitefly
 
 - type: marking
@@ -608,7 +608,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_wings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_wings.rsi
       state: witchking
 
 # Body Markings
@@ -623,7 +623,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: deathshead-head
 
 - type: marking
@@ -636,7 +636,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: deathshead-chest
 
 - type: marking
@@ -649,7 +649,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: deathshead-leftarm
 
 - type: marking
@@ -662,7 +662,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: deathshead-rightarm
 
 - type: marking
@@ -675,7 +675,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: deathshead-leftleg
 
 - type: marking
@@ -688,7 +688,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: deathshead-rightleg
 
 # Firewatch
@@ -702,7 +702,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: firewatch-head
 
 - type: marking
@@ -715,7 +715,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: firewatch-chest
 
 - type: marking
@@ -728,7 +728,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: firewatch-leftarm
 
 - type: marking
@@ -741,7 +741,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: firewatch-rightarm
 
 - type: marking
@@ -754,7 +754,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: firewatch-leftleg
 
 - type: marking
@@ -767,7 +767,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: firewatch-rightleg
 
 # Gothic
@@ -781,7 +781,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: gothic-head
 
 - type: marking
@@ -794,7 +794,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: gothic-chest
 
 - type: marking
@@ -807,7 +807,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: gothic-leftarm
 
 - type: marking
@@ -820,7 +820,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: gothic-rightarm
 
 - type: marking
@@ -833,7 +833,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: gothic-leftleg
 
 - type: marking
@@ -846,7 +846,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: gothic-rightleg
 
 # Jungle
@@ -860,7 +860,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: jungle-head
 
 - type: marking
@@ -873,7 +873,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: jungle-chest
 
 - type: marking
@@ -886,7 +886,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: jungle-leftarm
 
 - type: marking
@@ -899,7 +899,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: jungle-rightarm
 
 - type: marking
@@ -912,7 +912,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: jungle-leftleg
 
 - type: marking
@@ -925,7 +925,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: jungle-rightleg
 
 # Lovers
@@ -939,7 +939,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: lovers-head
 
 - type: marking
@@ -952,7 +952,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: lovers-chest
 
 - type: marking
@@ -965,7 +965,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: lovers-leftarm
 
 - type: marking
@@ -978,7 +978,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: lovers-rightarm
 
 - type: marking
@@ -991,7 +991,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: lovers-leftleg
 
 - type: marking
@@ -1004,7 +1004,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: lovers-rightleg
 
 # Moonfly
@@ -1018,7 +1018,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: moonfly-head
 
 - type: marking
@@ -1031,7 +1031,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: moonfly-chest
 
 - type: marking
@@ -1044,7 +1044,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: moonfly-leftarm
 
 - type: marking
@@ -1057,7 +1057,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: moonfly-rightarm
 
 - type: marking
@@ -1070,7 +1070,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: moonfly-leftleg
 
 - type: marking
@@ -1083,7 +1083,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: moonfly-rightleg
 
 # Oakworm
@@ -1097,7 +1097,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: oakworm-head
 
 - type: marking
@@ -1110,7 +1110,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: oakworm-chest
 
 - type: marking
@@ -1123,7 +1123,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: oakworm-leftarm
 
 - type: marking
@@ -1136,7 +1136,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: oakworm-rightarm
 
 - type: marking
@@ -1149,7 +1149,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: oakworm-leftleg
 
 - type: marking
@@ -1162,7 +1162,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: oakworm-rightleg
 
 # Poison
@@ -1176,7 +1176,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: poison-head
 
 - type: marking
@@ -1189,7 +1189,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: poison-chest
 
 - type: marking
@@ -1202,7 +1202,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: poison-leftarm
 
 - type: marking
@@ -1215,7 +1215,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: poison-rightarm
 
 - type: marking
@@ -1228,7 +1228,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: poison-leftleg
 
 - type: marking
@@ -1241,7 +1241,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: poison-rightleg
 
 # Ragged
@@ -1255,7 +1255,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: ragged-head
 
 - type: marking
@@ -1268,7 +1268,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: ragged-chest
 
 - type: marking
@@ -1281,7 +1281,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: ragged-leftarm
 
 - type: marking
@@ -1294,7 +1294,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: ragged-rightarm
 
 - type: marking
@@ -1307,7 +1307,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: ragged-leftleg
 
 - type: marking
@@ -1320,7 +1320,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: ragged-rightleg
 
 # Reddish
@@ -1334,7 +1334,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: reddish-head
 
 - type: marking
@@ -1347,7 +1347,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: reddish-chest
 
 - type: marking
@@ -1360,7 +1360,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: reddish-leftarm
 
 - type: marking
@@ -1373,7 +1373,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: reddish-rightarm
 
 - type: marking
@@ -1386,7 +1386,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: reddish-leftleg
 
 - type: marking
@@ -1399,7 +1399,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: reddish-rightleg
 
 # Royal
@@ -1413,7 +1413,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: royal-head
 
 - type: marking
@@ -1426,7 +1426,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: royal-chest
 
 - type: marking
@@ -1439,7 +1439,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: royal-leftarm
 
 - type: marking
@@ -1452,7 +1452,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: royal-rightarm
 
 - type: marking
@@ -1465,7 +1465,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: royal-leftleg
 
 - type: marking
@@ -1478,7 +1478,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: royal-rightleg
 
 # Whitefly
@@ -1492,7 +1492,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: whitefly-head
 
 - type: marking
@@ -1505,7 +1505,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: whitefly-chest
 
 - type: marking
@@ -1518,7 +1518,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: whitefly-leftarm
 
 - type: marking
@@ -1531,7 +1531,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: whitefly-rightarm
 
 - type: marking
@@ -1544,7 +1544,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: whitefly-leftleg
 
 - type: marking
@@ -1557,7 +1557,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: whitefly-rightleg
 
 # Witchking
@@ -1571,7 +1571,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: witchking-head
 
 - type: marking
@@ -1584,7 +1584,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: witchking-chest
 
 - type: marking
@@ -1597,7 +1597,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: witchking-leftarm
 
 - type: marking
@@ -1610,7 +1610,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: witchking-rightarm
 
 - type: marking
@@ -1623,7 +1623,7 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: witchking-leftleg
 
 - type: marking
@@ -1636,5 +1636,5 @@
       type: !type:SimpleColoring
         color: "#FFFFFF"
   sprites:
-    - sprite: Paradise/Mobs/Customization/Moth/moth_markings.rsi
+    - sprite: Mobs/Customization/Moth/_Paradise/moth_markings.rsi
       state: witchking-rightleg

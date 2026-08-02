@@ -420,6 +420,8 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
 
+# Paradise Change: Added bloodstream metabolizer type condition
+# Paradise Change: Added conditioned harmful digestion effects
 - type: reagent
   id: Water
   name: reagent-name-water
@@ -439,6 +441,27 @@
       effects:
       - !type:SatiateThirst
         factor: 4
+      - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+        damage:
+          types:
+            Caustic: 0.4 # Matches Sulfuric Acid damage without the higher Metabolism Rate
+      - !type:PopupMessage
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+        type: Local
+        visualType: Large
+        messages: [ "generic-reagent-effect-burning-insides" ]
+        probability: 0.33
+      - !type:Emote
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+        emote: Scream
+        probability: 0.25
     Respiration:
       effects:
       - !type:HealthChange

@@ -94,7 +94,7 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
-  - type: NightVision # Greys have low-level nightvision
+  - type: NightVision # Low-level nightvision
     prioritized: false
     lightingColor: "#FFFFFF05"
   - type: BlindedByFlashing
@@ -102,10 +102,22 @@
   - type: Reactive
     groups:
       Acidic: [ Ingestion ] # Skip damage on touch
-  - type: IntrinsicRadioReceiver # Grey hivemind
+    reactions:
+    - reagents: [ Water ] 
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 0.3 # Take damage on touch from water
+      - !type:Emote
+        emote: Scream
+        probability: 0.2
+  - type: IntrinsicRadioReceiver 
   - type: IntrinsicRadioTransmitter
-    channels: 
-    - Greymind
+    channels:
+    - Greymind # Grey hivemind
   - type: ActiveRadio
     channels: 
     - Greymind

@@ -114,7 +114,7 @@
   parent: OrganBaseOrganic
   id: OrganGrey
   abstract: true
-  suffix: human
+  suffix: grey
 
 - type: entity
   id: OrganGreyMetabolizer

@@ -96,13 +96,12 @@
       amount: 5
   - type: NightVision
     prioritized: false
-    lightingColor: "#FFFFFF10"
-  ## SS14 has no organ damage
-  ## So apply small burn to the mob instead
-  - type: DamagedByFlashing
-    flashDamage:
-      types:
-        Heat: 5
+    lightingColor: "#FFFFFF05"
+  - type: BlindedByFlashing
+    eyeDamage: 3 # Greys are eventually blinded by flashes
+  - type: Reactive
+    groups:
+      Acidic: [ Ingestion ] # Acid does nothing to greys
 
 - type: entity
   parent: OrganBaseOrganic

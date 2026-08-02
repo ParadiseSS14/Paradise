@@ -1,0 +1,89 @@
+﻿- type: entity
+  abstract: true
+  name: Disposal Junction Helper
+  id: MailSortingHelper
+  parent: MarkerBase
+  components:
+      - type: Sprite
+        sprite: Markers/_Paradise/mail_sorting_helper.rsi
+        state: mail_sorting
+        shader: unshaded
+      - type: MailSortingHelper
+
+# Cargo
+- type: entity
+  name: Cargo Disposal Junction Helper
+  suffix: "Mailroom"
+  id: CargoMailroomMailSortingHelper
+  parent: MailSortingHelper
+  components:
+      - type: Sprite
+        state: mail_sorting_cargo
+      - type: MailSortingHelper
+        mailtag: ["mailroom"]
+# Command
+- type: entity
+  name: Command Disposal Junction Helper
+  suffix: "Head of Personnel"
+  id: HeadOfPersonnelMailSortingHelper
+  parent: MailSortingHelper
+  components:
+      - type: Sprite
+        state: mail_sorting_command
+      - type: MailSortingHelper
+        mailtag: ["hop"]
+- type: entity
+  name: Command Disposal Junction Helper
+  suffix: "Bridge"
+  id: BridgeMailSortingHelper
+  parent: MailSortingHelper
+  components:
+      - type: Sprite
+        state: mail_sorting_command
+      - type: MailSortingHelper
+        mailtag: ["bridge"]
+# Engineering
+- type: entity
+  name: Engineering Disposal Junction Helper
+  suffix: "Engineering"
+  id: EngineeringMailSortingHelper
+  parent: MailSortingHelper
+  components:
+      - type: Sprite
+        state: mail_sorting_engineer
+      - type: MailSortingHelper
+        mailtag: ["engineering"]
+# Medical
+- type: entity
+  name: Medical Disposal Junction Helper
+  suffix: "Medical"
+  id: MedicalMailSortingHelper
+  parent: MailSortingHelper
+  components:
+      - type: Sprite
+        state: mail_sorting_medical
+      - type: MailSortingHelper
+        mailtag: ["medical"]
+# Research
+- type: entity
+  name: Science Disposal Junction Helper
+  suffix: "Science"
+  id: ScienceMailSortingHelper
+  parent: MailSortingHelper
+  components:
+      - type: Sprite
+        state: mail_sorting_science
+      - type: MailSortingHelper
+        mailtag: ["science"]
+# Security
+- type: entity
+  name: Security Disposal Junction Helper
+  suffix: "Security"
+  id: SecurityMailSortingHelper
+  parent: MailSortingHelper
+  components:
+      - type: Sprite
+        state: mail_sorting_security
+      - type: MailSortingHelper
+        mailtag: ["security"]
+# Service - Unused at the moment (probably)

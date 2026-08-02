@@ -94,14 +94,21 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
-  - type: NightVision
+  - type: NightVision # Greys have low-level nightvision
     prioritized: false
     lightingColor: "#FFFFFF05"
   - type: BlindedByFlashing
-    eyeDamage: 3 # Greys are eventually blinded by flashes
+    eyeDamage: 3 # 3 flashes will blind a grey (maxDamage is 9)
   - type: Reactive
     groups:
-      Acidic: [ Ingestion ] # Acid does nothing to greys
+      Acidic: [ Ingestion ] # Skip damage on touch
+  - type: IntrinsicRadioReceiver # Grey hivemind
+  - type: IntrinsicRadioTransmitter
+    channels: 
+    - Greymind
+  - type: ActiveRadio
+    channels: 
+    - Greymind
 
 - type: entity
   parent: OrganBaseOrganic

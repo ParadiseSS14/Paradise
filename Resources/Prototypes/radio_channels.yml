@@ -113,3 +113,13 @@
   color: "#ff2222"
   # long range since I don't wanna make a special xenoborg telecomm server
   longRange: true
+
+  # Paradise Content
+  # Grey hivemind
+- type: radioChannel
+  id: Greymind
+  name: chat-radio-greymind
+  keycode: '^'
+  frequency: 1002
+  color: "#800080"
+  longRange: true

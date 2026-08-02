@@ -9,3 +9,6 @@ metabolizer-type-plant = Plant
 metabolizer-type-dwarf = Dwarf
 metabolizer-type-moth = Moth
 metabolizer-type-arachnid = Arachnid
+
+## Paradise Content
+metabolizer-type-grey = Grey

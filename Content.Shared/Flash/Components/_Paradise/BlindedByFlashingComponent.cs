@@ -5,7 +5,7 @@ namespace Content.Shared.Flash.Components;
 
 /// <summary>
 /// This entity will take eye damage from flashes.
-/// Copied from BlindedByFlashingComponent
+/// Copied from DamagedByFlashingComponent
 /// </summary>
 [RegisterComponent, NetworkedComponent]
 [Access(typeof(BlindedByFlashingSystem))]

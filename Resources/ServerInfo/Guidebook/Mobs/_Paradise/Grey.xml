@@ -1,0 +1,22 @@
+<Document>
+  # Grey
+
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceGrey" Caption=""/>
+  </Box>
+
+	The Grey, known for their psionic abilities and unique appearance, hail from beyond the Milky Way and have an undisclosed homeworld. 
+  They rely heavily on cloning technology and are governed by a technocratic council of scientists.
+
+	Focused on technological advancement and the study of the universe, the Grey lack religious or spiritual beliefs. 
+	Their objective perspective and advanced knowledge often position them to focus on their own projects rather than the disputes of other species.
+
+  While [color=#1e90ff]immune to certain kinds of acid[/color], [color=#ffa500]water is dangerous to them[/color] and will burn them on contact.
+
+  [color=#1e90ff]The Grey can see in the dark[/color] particularly well, 
+  but this makes them [color=#ffa500]especially susceptible to eye damage[/color] from bright lights such as flashes.
+
+  All Grey share a special hivemind (key: '^') with each other which persists over long distances. 
+  As well, they can psionically communicate with individuals of other species.
+
+</Document>

@@ -13,8 +13,11 @@
       limit: 0
       onlyGroupWhitelisted: true
       required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 2
+      limit: 1
       required: false
     enum.HumanoidVisualLayers.LArm:
       limit: 1
@@ -50,13 +53,6 @@
   categories: [ HideSpawnMenu ]
   name: grey appearance
   components:
-  - type: Inventory
-    femaleDisplacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/_Paradise/Grey/displacement.rsi
-            state: jumpsuit-female
   - type: InitialBody
     organs:
       Torso: OrganGreyTorso

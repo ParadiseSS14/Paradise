@@ -12,6 +12,7 @@
     - SlimePerson
     - Vox
     - Vulpkanin
+    - Grey
 
 - type: guideEntry
   id: Arachnid
@@ -57,3 +58,9 @@
   id: Vulpkanin
   name: species-name-vulpkanin
   text: "/ServerInfo/Guidebook/Mobs/Vulpkanin.xml"
+
+# Paradise Content
+- type: guideEntry
+  id: Grey
+  name: species-name-grey
+  text: "/ServerInfo/Guidebook/Mobs/_Paradise/Grey.xml"

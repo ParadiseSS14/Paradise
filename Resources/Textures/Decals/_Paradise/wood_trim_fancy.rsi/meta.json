@@ -1,0 +1,62 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "Ported from Paradise SS13 PR #17724, sprite by Bm0n",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "box"
+        },
+        {
+            "name": "end_north"
+        },
+        {
+            "name": "end_east"
+        },
+        {
+            "name": "end_south"
+        },
+        {
+            "name": "inner_nw"
+        },
+        {
+            "name": "inner_ne"
+        },
+        {
+            "name": "inner_sw"
+        },
+        {
+            "name": "inner_se"
+        },
+        {
+            "name": "line_west"
+        },
+        {
+            "name": "line_east"
+        },
+        {
+            "name": "line_north"
+        },
+        {
+            "name": "line_south"
+        },
+        {
+            "name": "end_west"
+        },
+        {
+            "name": "corner_ne"
+        },
+        {
+            "name": "corner_sw"
+        },
+        {
+            "name": "corner_se"
+        },
+        {
+            "name": "corner_nw"
+        }
+    ]
+}

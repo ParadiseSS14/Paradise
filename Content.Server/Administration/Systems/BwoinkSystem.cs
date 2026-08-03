@@ -10,6 +10,7 @@ using Content.Server.Afk;
 using Content.Server.Database;
 using Content.Server.Discord;
 using Content.Server.GameTicking;
+using Content.Server.Investigation;
 using Content.Server.Players.RateLimiting;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -43,6 +44,7 @@ namespace Content.Server.Administration.Systems
         [Dependency] private IAfkManager _afkManager = default!;
         [Dependency] private IServerDbManager _dbManager = default!;
         [Dependency] private PlayerRateLimitManager _rateLimit = default!;
+        [Dependency] private readonly IInvestigationRecorder _investigation = default!;
 
         [GeneratedRegex(@"^https://discord\.com/api/webhooks/(\d+)/((?!.*/).*)$")]
         private static partial Regex DiscordRegex();
@@ -716,6 +718,14 @@ namespace Content.Server.Administration.Systems
                 return;
 
             _afkManager.PlayerDidAction(senderSession);
+
+            _investigation.OnAhelp(
+                senderSession.AttachedEntity,
+                message.UserId.UserId,
+                senderSession.Name,
+                message.Text,
+                senderAHelpAdmin,
+                message.AdminOnly);
 
             // If it's not an admin / admin chooses to keep the sound and message is not an admin only message, then play it.
             var playSound = (!senderAHelpAdmin || message.PlaySound) && !message.AdminOnly;

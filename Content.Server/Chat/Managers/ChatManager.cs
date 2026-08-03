@@ -3,6 +3,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
+using Content.Server.Investigation;
 using Content.Server.Administration.Systems;
 using Content.Server.Discord.DiscordLink;
 using Content.Server.Ghost;
@@ -40,6 +41,7 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private IServerNetManager _netManager = default!;
     [Dependency] private IAdminManager _adminManager = default!;
     [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private readonly IInvestigationRecorder _investigation = default!;
     [Dependency] private IServerPreferencesManager _preferencesManager = default!;
     [Dependency] private IConfigurationManager _configurationManager = default!;
     [Dependency] private INetConfigurationManager _netConfigManager = default!;
@@ -304,6 +306,7 @@ internal sealed partial class ChatManager : IChatManager
         //TODO: player.Name color, this will need to change the structure of the MsgChatMessage
         ChatMessageToAll(ChatChannel.OOC, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride, author: player.UserId);
         _discordLink.SendMessage(message, player.Name, ChatChannel.OOC);
+        _investigation.OnChat(null, "OOC", message, player.Name);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"OOC from {player:Player}: {message}");
     }
 
@@ -335,6 +338,7 @@ internal sealed partial class ChatManager : IChatManager
         }
 
         _discordLink.SendMessage(message, player.Name, ChatChannel.AdminChat);
+        _investigation.OnChat(null, "AdminChat", message, player.Name);
         _adminLogger.Add(LogType.Chat, $"Admin chat from {player:Player}: {message}");
     }
 

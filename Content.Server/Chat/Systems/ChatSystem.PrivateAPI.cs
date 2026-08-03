@@ -66,6 +66,8 @@ public sealed partial class ChatSystem
         if (!HasComp<ActorComponent>(source) || hideLog)
             return;
 
+        RecordInvestigationChat(source, "Say", originalMessage, name);
+
         if (originalMessage == message)
         {
             if (name != Name(source))
@@ -154,6 +156,10 @@ public sealed partial class ChatSystem
 
         var ev = new EntitySpokeEvent(source, message, channel, obfuscatedMessage);
         RaiseLocalEvent(source, ev, true);
+
+        if (!hideLog)
+            RecordInvestigationChat(source, "Whisper", originalMessage, name);
+
         if (!hideLog)
             if (originalMessage == message)
             {
@@ -202,6 +208,10 @@ public sealed partial class ChatSystem
             return;
 
         SendInVoiceRange(ChatChannel.Emotes, action, wrappedMessage, source, range, author);
+
+        if (!hideLog)
+            RecordInvestigationChat(source, "Emote", action, name);
+
         if (!hideLog)
             if (name != Name(source))
                 _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Emote from {source} as {name}: {action}");
@@ -229,6 +239,7 @@ public sealed partial class ChatSystem
             ("message", FormattedMessage.EscapeText(message)));
 
         SendInVoiceRange(ChatChannel.LOOC, message, wrappedMessage, source, hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal, player.UserId);
+        RecordInvestigationChat(source, "LOOC", message, player.Name);
         _adminLogger.Add(LogType.Chat, LogImpact.Low, $"LOOC from {source}: {message}");
     }
 
@@ -257,6 +268,7 @@ public sealed partial class ChatSystem
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Dead chat from {source}: {message}");
         }
 
+        RecordInvestigationChat(source, "Dead", message, player.Name);
         _chatManager.ChatMessageToMany(ChatChannel.Dead, message, wrappedMessage, source, hideChat, true, clients.ToList(), author: player.UserId);
     }
 }

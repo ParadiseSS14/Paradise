@@ -65,7 +65,7 @@
 
 - type: marking
   id: TattooGreyEnthralledRightEye
-  bodyPart: Eyes
+  bodyPart: Head
   groupWhitelist: [Grey]
   coloring:
     default:

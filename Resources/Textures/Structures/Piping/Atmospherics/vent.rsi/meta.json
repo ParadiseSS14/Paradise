@@ -1,15 +1,14 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "Taken from https://github.com/discordia-space/CEV-Eris/commit/fcc94cac7ab5a3d79c78dc7b20d380fa02173dac",
+    "copyright": "Taken from https://github.com/discordia-space/CEV-Eris/commit/fcc94cac7ab5a3d79c78dc7b20d380fa02173dac | vent_lockout made by StoneyFox29(github)",
     "size": {
         "x": 32,
         "y": 32
     },
     "states": [
         {
-            "name": "vent_passive",
-            "directions": 4
+            "name": "vent_passive"
         },
         {
             "name": "vent_off"
@@ -133,14 +132,21 @@
             ]
         },
         {
+            "name": "vent_lockout",
+            "delays": [
+                [
+                    0.17,
+                    0.17,
+                    0.17,
+                    0.17
+                ]
+            ]
+        },
+        {
             "name": "vent_welded"
         },
         {
             "name": "vent_frame"
-        },
-        {
-            "name": "vent_lockout",
-            "directions": 4
         },
         {
             "name": "vent_direction",

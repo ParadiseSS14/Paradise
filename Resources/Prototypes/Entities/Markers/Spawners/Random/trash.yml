@@ -5,26 +5,26 @@
     - !type:GroupSelector
       weight: 90
       children:
-        - id: FoodPacketBoritosTrash
-        - id: FoodPacketCheesieTrash
-        - id: FoodPacketChipsTrash
-        - id: FoodPacketChocolateTrash
-        - id: FoodPacketChowMeinTrash
-        - id: FoodPacketCnDsTrash
-        - id: FoodPacketDanDanTrash
-        - id: FoodPacketPistachioTrash
-        - id: FoodPacketEnergyTrash
-        - id: FoodPacketPopcornTrash
-        - id: FoodPacketRaisinsTrash
-        - id: FoodPacketSemkiTrash
-        - id: FoodPacketSusTrash
-        - id: FoodPacketSyndiTrash
-        - id: BrokenBottle
+      - id: FoodPacketBoritosTrash
+      - id: FoodPacketCheesieTrash
+      - id: FoodPacketChipsTrash
+      - id: FoodPacketChocolateTrash
+      - id: FoodPacketChowMeinTrash
+      - id: FoodPacketCnDsTrash
+      - id: FoodPacketDanDanTrash
+      - id: FoodPacketPistachioTrash
+      - id: FoodPacketEnergyTrash
+      - id: FoodPacketPopcornTrash
+      - id: FoodPacketRaisinsTrash
+      - id: FoodPacketSemkiTrash
+      - id: FoodPacketSusTrash
+      - id: FoodPacketSyndiTrash
+      - id: BrokenBottle
     - !type:GroupSelector
       weight: 5
       children:
-        - id: FoodPlateSmallTrash
-        - id: FoodBowlBigTrash
+      - id: FoodPlateSmallTrash
+      - id: FoodBowlBigTrash
     - !type:NestedSelector
       weight: 5
       tableId: AllBananaPeelsTable
@@ -81,9 +81,9 @@
   components:
   - type: Sprite
     layers:
-      - state: red
-      - sprite: Objects/Specific/Hydroponics/banana.rsi
-        state: peel
+    - state: red
+    - sprite: Objects/Specific/Hydroponics/banana.rsi
+      state: peel
   - type: EntityTableSpawner
     table: !type:NestedSelector
       tableId: AllBananaPeelsTable

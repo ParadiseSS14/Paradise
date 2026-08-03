@@ -8,11 +8,10 @@
     },
     "states": [
         {
-            "name": "eyes",
-            "directions": 4
+            "name": "full"
         },
         {
-            "name": "full",
+            "name": "eyes",
             "directions": 4
         },
         {

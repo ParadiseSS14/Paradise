@@ -85,10 +85,17 @@ namespace Content.Shared.Chat
         /// </summary>
         Unspecified = 1 << 14,
 
+        // Paradise Content START
+        /// <summary>
+        ///     Telepathy chat
+        /// </summary>
+        Telepathic = 1 << 15,
+        // Paradise Content END
+
         /// <summary>
         ///     Channels considered to be IC.
         /// </summary>
-        IC = Local | Whisper | Radio | Dead | Emotes | Damage | Visual | Notifications,
+        IC = Local | Whisper | Radio | Dead | Emotes | Damage | Visual | Notifications | Telepathic, // Paradise Change: Added Telepathic
 
         AdminRelated = Admin | AdminAlert | AdminChat,
     }

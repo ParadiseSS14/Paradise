@@ -1,7 +1,9 @@
 using Content.Server.DeviceLinking.Components;
-using Content.Server.DeviceNetwork;
+using Content.Server.Power.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Lock;
+using Content.Shared.Power;
+using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 
@@ -9,6 +11,7 @@ namespace Content.Server.DeviceLinking.Systems;
 
 public sealed partial class SignalSwitchSystem : EntitySystem
 {
+    [Dependency] private AppearanceSystem _appearance = default!;
     [Dependency] private DeviceLinkSystem _deviceLink = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private LockSystem _lock = default!;
@@ -19,11 +22,15 @@ public sealed partial class SignalSwitchSystem : EntitySystem
 
         SubscribeLocalEvent<SignalSwitchComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<SignalSwitchComponent, ActivateInWorldEvent>(OnActivated);
+        SubscribeLocalEvent<SignalSwitchComponent, PowerChangedEvent>(OnPowerChanged);
     }
 
     private void OnInit(EntityUid uid, SignalSwitchComponent comp, ComponentInit args)
     {
         _deviceLink.EnsureSourcePorts(uid, comp.OnPort, comp.OffPort, comp.StatusPort);
+
+        if (TryComp<ApcPowerReceiverComponent>(uid, out var receiver))
+            _appearance.SetData(uid, PowerDeviceVisuals.Powered, receiver.Powered);
     }
 
     private void OnActivated(EntityUid uid, SignalSwitchComponent comp, ActivateInWorldEvent args)
@@ -32,6 +39,9 @@ public sealed partial class SignalSwitchSystem : EntitySystem
             return;
 
         if (_lock.IsLocked(uid))
+            return;
+
+        if (TryComp<ApcPowerReceiverComponent>(uid, out var receiver) && !receiver.Powered)
             return;
 
         comp.State = !comp.State;
@@ -48,5 +58,10 @@ public sealed partial class SignalSwitchSystem : EntitySystem
         _audio.PlayPvs(comp.ClickSound, uid, audioParams);
 
         args.Handled = true;
+    }
+
+    private void OnPowerChanged(EntityUid uid, SignalSwitchComponent component, PowerChangedEvent args)
+    {
+        _appearance.SetData(uid, PowerDeviceVisuals.Powered, args.Powered);
     }
 }

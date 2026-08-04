@@ -3,6 +3,6 @@
   name: species-name-grey
   roundStart: true
   prototype: MobGrey
-  defaultSkinTone: "#ededed"
+  defaultSkinTone: "#a598ad"
   dollPrototype: AppearanceGrey
   skinColoration: Hues

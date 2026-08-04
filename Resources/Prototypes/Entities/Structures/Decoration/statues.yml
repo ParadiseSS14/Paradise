@@ -166,6 +166,7 @@
   name: NSS Cyberiad
   description: A giant model of the Cyberiad science station. Judging by the differences in design, the station has been rebuilt several times.
   components:
+  - type: SpriteFade
   - type: Sprite
     sprite: Structures/Decoration/_Paradise/cyberiad_statue.rsi
     state: cyberiad_statue

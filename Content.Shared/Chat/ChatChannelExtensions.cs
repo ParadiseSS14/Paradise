@@ -15,6 +15,9 @@ public static class ChatChannelExtensions
             ChatChannel.AdminAlert => Color.Red,
             ChatChannel.AdminChat => Color.HotPink,
             ChatChannel.Whisper => Color.DarkGray,
+            // Paradise Content START
+            ChatChannel.Telepathic => Color.DarkMagenta,
+            // Paradise Content END
             _ => Color.LightGray
         };
     }

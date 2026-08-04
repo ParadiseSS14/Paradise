@@ -1,0 +1,12 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+             xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+             Title="{Loc 'telepathic-chat-ui-window-name'}"
+             Resizable="False">
+    <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="150">
+        <ScrollContainer VerticalExpand="True">
+            <ItemList Name="TargetsList" SelectMode="Single"/>
+        </ScrollContainer>
+        <Button Name="SelectButton" Text="{Loc 'telepathic-chat-select-target'}"/>
+        <Button Name="CancelButton" Text="{Loc 'telepathic-chat-cancel'}"/>
+    </BoxContainer>
+</controls:FancyWindow>

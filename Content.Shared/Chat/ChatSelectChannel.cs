@@ -51,6 +51,10 @@
         /// </summary>
         Admin = ChatChannel.AdminChat,
 
-        Console = ChatChannel.Unspecified
+        Console = ChatChannel.Unspecified,
+
+        // Paradise Content START
+        Telepathic = ChatChannel.Telepathic
+        // Paradise Content END
     }
 }

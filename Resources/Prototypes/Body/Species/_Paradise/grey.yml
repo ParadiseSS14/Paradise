@@ -90,11 +90,11 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
-  - type: NightVision # Low-level nightvision
-    prioritized: false
-    lightingColor: "#FFFFFF05"
-  - type: BlindedByFlashing
-    eyeDamage: 3 # 3 flashes will blind a grey (maxDamage is 9)
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: ExoticBlood
+        Quantity: 600
   - type: Reactive
     groups:
       Acidic: [ Ingestion ] # Skip damage on touch
@@ -106,10 +106,15 @@
         ignoreResistances: false
         damage:
           types:
-            Caustic: 0.3 # Take damage on touch from water
+            Caustic: 0.3 # Water is acidic to Greys
       - !type:Emote
         emote: Scream
         probability: 0.2
+  - type: NightVision 
+    prioritized: false
+    lightingColor: "#FFFFFF05" # Darkened from the base color
+  - type: BlindedByFlashing
+    eyeDamage: 3 # 3 flashes will blind a Grey (maxDamage is 9)
   - type: IntrinsicRadioReceiver 
   - type: IntrinsicRadioTransmitter
     channels:

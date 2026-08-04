@@ -1,20 +1,22 @@
 using Content.Server.DeviceLinking.Components;
-using Content.Server.Power.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Lock;
-using Content.Shared.Power;
-using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
+//Paradise Content - Para13 Buttons
+using Content.Server.Power.Components;
+using Content.Shared.Power;
+using Robust.Server.GameObjects;
 
 namespace Content.Server.DeviceLinking.Systems;
 
 public sealed partial class SignalSwitchSystem : EntitySystem
 {
-    [Dependency] private AppearanceSystem _appearance = default!;
     [Dependency] private DeviceLinkSystem _deviceLink = default!;
     [Dependency] private SharedAudioSystem _audio = default!;
     [Dependency] private LockSystem _lock = default!;
+    //Paradise Content - Para13 Buttons
+    [Dependency] private AppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {
@@ -22,6 +24,7 @@ public sealed partial class SignalSwitchSystem : EntitySystem
 
         SubscribeLocalEvent<SignalSwitchComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<SignalSwitchComponent, ActivateInWorldEvent>(OnActivated);
+        //Paradise Content - Para13 Buttons
         SubscribeLocalEvent<SignalSwitchComponent, PowerChangedEvent>(OnPowerChanged);
     }
 
@@ -29,6 +32,7 @@ public sealed partial class SignalSwitchSystem : EntitySystem
     {
         _deviceLink.EnsureSourcePorts(uid, comp.OnPort, comp.OffPort, comp.StatusPort);
 
+        //Paradise Content - Para13 Buttons
         if (TryComp<ApcPowerReceiverComponent>(uid, out var receiver))
             _appearance.SetData(uid, PowerDeviceVisuals.Powered, receiver.Powered);
     }
@@ -41,6 +45,7 @@ public sealed partial class SignalSwitchSystem : EntitySystem
         if (_lock.IsLocked(uid))
             return;
 
+        //Paradise Content - Para13 Buttons
         if (TryComp<ApcPowerReceiverComponent>(uid, out var receiver) && !receiver.Powered)
             return;
 
@@ -60,6 +65,7 @@ public sealed partial class SignalSwitchSystem : EntitySystem
         args.Handled = true;
     }
 
+//Paradise Content - Para13 Buttons
     private void OnPowerChanged(EntityUid uid, SignalSwitchComponent component, PowerChangedEvent args)
     {
         _appearance.SetData(uid, PowerDeviceVisuals.Powered, args.Powered);

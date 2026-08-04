@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-NC-SA-3.0",
-    "copyright": "Ported from Paradise SS13 PR #17724, sprite by Bm0n",
+    "copyright": "Ported from Paradise SS13 commit 11b3566ed7b236a3a9e7f9574787ddc4a1598eaf, sprite by Bm0n",
     "size": {
         "x": 32,
         "y": 32

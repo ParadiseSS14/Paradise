@@ -1,33 +1,19 @@
-#TODO: Someone should probably move the ore vein prototypes into their own file, or otherwise split this up in some way. This should not be 1.5k lines long.
-
-# Anyway
-# See WallRock variants for the remappings.
-
 - type: entity
   parent: BaseWall
-  id: BaseAsteroidRock
+  id: BaseRock
   components:
   - type: Transform
     noRot: true
   - type: IconSmooth
     key: walls
-    mode: NoSprite
+    base: rock_
   - type: SmoothEdge
   - type: Icon
     sprite: Structures/Walls/rock.rsi
-    state: rock_asteroid
+    state: rock
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
+    color: "#434343"
   - type: MiningScannerViewable
   - type: Damageable
     damageModifierSet: Rock
@@ -44,14 +30,6 @@
         layer:
         - WallLayer
         density: 2000
-
-#Asteroid rock
-- type: entity
-  parent: BaseAsteroidRock
-  id: AsteroidRock
-  name: asteroid rock
-  description: A rocky asteroid.
-  components:
   - type: Destructible
     thresholds:
     - trigger:
@@ -65,6 +43,13 @@
           path: /Audio/Effects/break_stone.ogg
           params:
             volume: -6
+
+#Asteroid rock
+- type: entity
+  parent: BaseRock
+  id: AsteroidRock
+  name: asteroid rock
+  description: A rocky asteroid.
 
 - type: entity
   abstract: true
@@ -131,15 +116,6 @@
     currentOre: OreCoal
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -162,15 +138,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -193,15 +160,6 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -215,15 +173,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -238,15 +187,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -269,15 +209,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -301,15 +232,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -332,15 +254,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -363,15 +276,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -394,15 +298,6 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -417,33 +312,15 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 - type: entity
-  parent: [ BaseRockGibtonite, AsteroidRock ]
+  parent: [BaseRockGibtonite, AsteroidRock]
   id: AsteroidRockGibtonite
   components:
   - type: Sprite
     layers:
-    - state: rock_asteroid
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_asteroid_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_asteroid_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_asteroid_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_asteroid_west
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
@@ -461,30 +338,18 @@
 
 - type: entity
   id: IronRock
-  parent: AsteroidRock
+  parent: BaseRock
   name: ironrock
   suffix: Low Ore Yield
   description: A rocky asteroid.
   components:
-  - type: IconSmooth
-    key: walls
-    mode: NoSprite
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: ironrock
   - type: SmoothEdge
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
+    color: "#bf8c7e"
 
 - type: entity
   id: IronRockMining
@@ -499,7 +364,7 @@
 
 - type: entity
   id: IronSandstone
-  parent: AsteroidRock
+  parent: BaseRock
   name: ironsandstone
   suffix: no ore yield
   components:
@@ -507,16 +372,6 @@
     state: ironsandstone
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: ironsandstone
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironsandstone_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironsandstone_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironsandstone_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironsandstone_west
 
 - type: entity
   id: IronSandstoneMining
@@ -540,15 +395,6 @@
     currentOre: OreCoal
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -563,15 +409,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -586,15 +423,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -609,15 +437,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -632,15 +451,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -655,15 +465,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -678,15 +479,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -701,15 +493,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -724,15 +507,6 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -747,15 +521,6 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -765,15 +530,6 @@
   components:
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
@@ -789,22 +545,13 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: ironrock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: ironrock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: ironrock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: ironrock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: ironrock_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
 # Rocks and ore veins
 - type: entity
   id: WallRock
-  parent: BaseWall
+  parent: BaseRock
   name: rock
   suffix: planetmap
   components:
@@ -827,26 +574,11 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: IconSmooth
-    key: walls
-    mode: NoSprite
   - type: Icon
     sprite: Structures/Walls/rock.rsi
-    state: rock
+    state: rock_
   - type: MiningScannerViewable
   - type: SmoothEdge
-  - type: Sprite
-    sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
 
 # Ore veins
 - type: entity
@@ -867,15 +599,6 @@
     currentOre: OreCoal
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -897,15 +620,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -920,15 +634,6 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -950,15 +655,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -980,15 +676,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1010,15 +697,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1041,15 +719,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1071,15 +740,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1102,15 +762,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1132,15 +783,6 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1162,15 +804,6 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: rock
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1178,23 +811,14 @@
 - type: entity
   id: WallRockBasalt
   name: basalt
-  parent: WallRock
+  parent: BaseRock
   components:
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_wall
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
+    color: "#242424"
 
 - type: entity
   id: WallRockBasaltCoal
@@ -1207,15 +831,6 @@
     currentOre: OreCoal
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1230,15 +845,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1253,15 +859,6 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1276,15 +873,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1299,15 +887,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1322,15 +901,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1345,15 +915,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1368,15 +929,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1392,15 +944,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1415,15 +958,6 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1438,15 +972,6 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: rock_wall
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_wall_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_wall_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_wall_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_wall_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1454,23 +979,14 @@
 - type: entity
   id: WallRockSnow
   name: snowdrift
-  parent: WallRock
+  parent: BaseRock
   components:
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_snow
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
+    color: "#b6ccdb"
 
 - type: entity
   id: WallRockSnowCoal
@@ -1483,15 +999,6 @@
     currentOre: OreCoal
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1506,15 +1013,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1529,15 +1027,6 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1552,15 +1041,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1575,15 +1055,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1598,15 +1069,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1621,15 +1083,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1644,15 +1097,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1668,15 +1112,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1691,15 +1126,6 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1714,15 +1140,6 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: rock_snow
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_snow_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_snow_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_snow_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_snow_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1730,23 +1147,14 @@
 - type: entity
   id: WallRockSand
   name: sandstone
-  parent: WallRock
+  parent: BaseRock
   components:
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_sand
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
+    color: "#d4a079"
 
 - type: entity
   id: WallRockSandCoal
@@ -1759,15 +1167,6 @@
     currentOre: OreCoal
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1782,15 +1181,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1805,15 +1195,6 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1828,15 +1209,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1851,15 +1223,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1874,15 +1237,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1897,15 +1251,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1920,15 +1265,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1943,15 +1279,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1966,15 +1293,6 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -1989,15 +1307,6 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: rock_sand
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_sand_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_sand_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_sand_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_sand_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2005,23 +1314,14 @@
 - type: entity
   id: WallRockChromite
   name: chromite
-  parent: WallRock
+  parent: BaseRock
   components:
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_chromite
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
+    color: "#7c828f"
 
 - type: entity
   id: WallRockChromiteCoal
@@ -2034,15 +1334,6 @@
     currentOre: OreCoal
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2057,15 +1348,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2080,15 +1362,6 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2103,15 +1376,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2126,15 +1390,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2149,15 +1404,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2172,15 +1418,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2195,15 +1432,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2219,15 +1447,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2242,15 +1461,6 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2265,15 +1475,6 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: rock_chromite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_chromite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_chromite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_chromite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_chromite_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2281,23 +1482,14 @@
 - type: entity
   id: WallRockAndesite
   name: andesite
-  parent: WallRock
+  parent: BaseRock
   components:
   - type: Icon
     sprite: Structures/Walls/rock.rsi
     state: rock_andesite
   - type: Sprite
     sprite: Structures/Walls/rock.rsi
-    layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
+    color: "#575757"
 
 - type: entity
   id: WallRockAndesiteCoal
@@ -2309,16 +1501,8 @@
     oreChance: 1.0
     currentOre: OreCoal
   - type: Sprite
+    sprite: Structures/Walls/rock.rsi
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2333,15 +1517,6 @@
     currentOre: OreGold
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_gold
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2356,15 +1531,6 @@
     currentOre: OreDiamond
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_diamond
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2379,15 +1545,6 @@
     currentOre: OrePlasma
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_phoron
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2402,15 +1559,6 @@
     currentOre: OreSpaceQuartz
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_quartz
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2425,15 +1573,6 @@
     currentOre: OreSilver
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_silver
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2448,15 +1587,6 @@
     currentOre: OreSteel
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_tin
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2471,15 +1601,6 @@
     currentOre: OreUranium
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_uranium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2495,15 +1616,6 @@
     currentOre: OreBananium
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_bananium
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2518,15 +1630,6 @@
     currentOre: OreArtifactFragment
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_artifact_fragment
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
 
@@ -2541,14 +1644,5 @@
     currentOre: OreSalt
   - type: Sprite
     layers:
-    - state: rock_andesite
-    - map: [ "enum.EdgeLayer.South" ]
-      state: rock_andesite_south
-    - map: [ "enum.EdgeLayer.East" ]
-      state: rock_andesite_east
-    - map: [ "enum.EdgeLayer.North" ]
-      state: rock_andesite_north
-    - map: [ "enum.EdgeLayer.West" ]
-      state: rock_andesite_west
     - state: rock_salt
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]

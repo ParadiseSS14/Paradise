@@ -105,7 +105,7 @@
         - !type:NeedToRackBoltPrecondition
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:RackBoltOperator # Wield gun
+          operator: !type:RackBoltOperator  # Wield gun
 
     - preconditions:
         - !type:ActiveHandComponentPrecondition
@@ -115,7 +115,7 @@
           wielded: false
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:WieldOperator # Move to target and shoot them if ammo
+          operator: !type:WieldOperator  # Move to target and shoot them if ammo
 
     - preconditions:
         - !type:GunAmmoPrecondition
@@ -174,5 +174,5 @@
         - !type:HTNPrimitiveTask
           preconditions:
             - !type:ActiveHandEntityPrecondition
-          operator: !type:DropOperator # TODO: Reload a nearby gun
+          operator: !type:DropOperator  # TODO: Reload a nearby gun
 

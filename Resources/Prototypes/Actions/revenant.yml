@@ -32,7 +32,8 @@
       layers:
         - texture: Interface/Actions/overloadlight.png
     - type: InstantAction
-      event: !type:RevenantOverloadLightsActionEvent
+      event:
+        !type:RevenantOverloadLightsActionEvent
         #- type: entity
         #  parent: BaseAction
         #  id: ActionRevenantBlight
@@ -44,7 +45,6 @@
         #    useDelay: 20
         #  - type: InstantAction
         #    event: !type:RevenantBlightActionEvent
-
 
 - type: entity
   parent: BaseAction

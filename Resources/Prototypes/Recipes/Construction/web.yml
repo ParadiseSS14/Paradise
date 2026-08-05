@@ -55,5 +55,5 @@
   targetNode: door
   category: construction-category-structures
   conditions:
-    - !type:TileNotBlocked # endregion Web
+    - !type:TileNotBlocked  # endregion Web
 

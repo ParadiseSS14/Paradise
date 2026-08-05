@@ -159,7 +159,8 @@
           component: IgnoreSlowOnDamage
           time: 3
         # Side effects
-        - !type:Jitter # OD
+        - !type:Jitter  # OD
+
 
         - !type:HealthChange
           conditions:

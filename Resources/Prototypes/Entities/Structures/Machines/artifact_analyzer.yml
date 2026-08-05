@@ -171,7 +171,7 @@
         machine_board: !type:Container
         machine_parts: !type:Container
         entity_storage: !type:Container
-        output_container: !type:Container # just a resprite
+        output_container: !type:Container  # just a resprite
 
 - type: entity
   parent: MachineArtifactCrusher

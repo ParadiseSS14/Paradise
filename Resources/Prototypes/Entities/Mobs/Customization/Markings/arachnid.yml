@@ -19,7 +19,7 @@
       state: inwards
   coloring:
     default:
-      type: !type:SkinColoring # Appendages
+      type: !type:SkinColoring  # Appendages
 
 - type: marking
   id: ArachnidAppendagesDefault
@@ -253,7 +253,7 @@
       state: target
   coloring:
     default:
-      type: !type:EyeColoring # Arms
+      type: !type:EyeColoring  # Arms
 
 - type: marking
   id: ArachnidRArmStripes
@@ -275,7 +275,7 @@
       state: stripes_left
   coloring:
     default:
-      type: !type:EyeColoring # Legs
+      type: !type:EyeColoring  # Legs
 
 - type: marking
   id: ArachnidRLegStripes
@@ -297,7 +297,7 @@
       state: stripes_left
   coloring:
     default:
-      type: !type:EyeColoring # Overlay
+      type: !type:EyeColoring  # Overlay
 
 - type: marking
   id: ArachnidOverlayFuzzy

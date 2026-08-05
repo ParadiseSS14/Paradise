@@ -70,7 +70,7 @@
       useDelay: 5
       priority: -9
     - type: InstantAction
-      event: !type:ToggleActionEvent # katana
+      event: !type:ToggleActionEvent  # katana
 
 - type: entity
   parent: BaseAction

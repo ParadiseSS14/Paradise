@@ -67,8 +67,7 @@
   id: BaseToggleAction
   components:
     - type: InstantAction
-      event: !type:ToggleActionEvent # actions
-
+      event: !type:ToggleActionEvent  # actions
 
 - type: entity
   parent: BaseAction

@@ -2576,7 +2576,8 @@
         - trigger: !type:DamageTrigger
             damage: 50
           behaviors:
-            - !type:ExplodeBehavior # I have included a snake_hiss.ogg sound file so if you want to use that be my guest
+            - !type:ExplodeBehavior  # I have included a snake_hiss.ogg sound file so if you want to use that be my guest
+
 
 - type: entity
   name: snake

@@ -246,7 +246,8 @@
     Extinguish:
       methods: [Touch]
       effects:
-        - !type:Extinguish # cold
+        - !type:Extinguish  # cold
+
 
   metabolisms:
     Bloodstream:

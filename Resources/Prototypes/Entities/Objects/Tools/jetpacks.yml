@@ -80,7 +80,7 @@
           map: ["enum.ActionVisuals.IconToggled"]
           visible: false
     - type: InstantAction
-      event: !type:ToggleJetpackEvent #Empty blue
+      event: !type:ToggleJetpackEvent  #Empty blue
 
 - type: entity
   id: JetpackBlue

@@ -584,7 +584,7 @@
       useDelay: 1
       itemIconStyle: BigItem
     - type: InstantAction
-      event: !type:ToggleActionEvent #card helmet
+      event: !type:ToggleActionEvent  #card helmet
 
 - type: entity
   parent: ClothingHeadHelmetBase

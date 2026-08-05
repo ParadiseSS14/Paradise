@@ -46,7 +46,7 @@
     - type: ItemSlots
     - type: ContainerContainer
       containers:
-        item: !type:ContainerSlot # a piece of clothing that has explosion resistance *for its contents*, not the wearer
+        item: !type:ContainerSlot  # a piece of clothing that has explosion resistance *for its contents*, not the wearer
 
 - type: entity
   abstract: true

@@ -177,7 +177,7 @@
                   max: 1
             - !type:DoActsBehavior
               acts: ["Destruction"]
-            - !type:DumpCanisterBehavior # Filled canisters, contain 1871.71051 moles each
+            - !type:DumpCanisterBehavior  # Filled canisters, contain 1871.71051 moles each
 
 
 - type: entity

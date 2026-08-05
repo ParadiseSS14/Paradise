@@ -138,7 +138,7 @@
     - !type:TargetAccessibleCon
       curve: !type:BoolCurve
     - !type:TargetInLOSOrCurrentCon
-      curve: !type:BoolCurve # they gotta be what we ordered
+      curve: !type:BoolCurve  # they gotta be what we ordered
 
     - !type:OrderedTargetCon
       curve: !type:BoolCurve
@@ -249,7 +249,8 @@
     - !type:TargetAccessibleCon
       curve: !type:BoolCurve
     - !type:TargetInLOSOrCurrentCon
-      curve: !type:BoolCurve
+      curve:
+        !type:BoolCurve
         #- type: utilityQuery
         #  id: NearbyShoes
         #  query:

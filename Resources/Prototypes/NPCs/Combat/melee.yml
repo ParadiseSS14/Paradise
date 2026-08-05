@@ -62,7 +62,7 @@
           wielded: false
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:WieldOperator # Activate toggleable weapons
+          operator: !type:WieldOperator  # Activate toggleable weapons
 
     - preconditions:
         - !type:ActiveHandComponentPrecondition
@@ -75,7 +75,7 @@
           activated: false
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:UseItemInHandOperator # Melee combat (unarmed or otherwise)
+          operator: !type:UseItemInHandOperator  # Melee combat (unarmed or otherwise)
 
     - tasks:
         - !type:HTNCompoundTask

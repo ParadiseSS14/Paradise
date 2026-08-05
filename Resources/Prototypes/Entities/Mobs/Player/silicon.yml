@@ -402,7 +402,7 @@
     - type: ContainerContainer
       containers:
         board: !type:Container
-        station_ai_brain_slot: !type:Container # The actual brain inside the core
+        station_ai_brain_slot: !type:Container  # The actual brain inside the core
 
 - type: entity
   id: StationAiBrain

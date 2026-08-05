@@ -149,7 +149,8 @@
             damageType: Radiation
             damage: 40
           behaviors:
-            - !type:VomitBehavior # Used for mobs that can enter combat mode and can attack.
+            - !type:VomitBehavior  # Used for mobs that can enter combat mode and can attack.
+
 
 - type: entity
   save: false

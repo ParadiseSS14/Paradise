@@ -234,7 +234,7 @@
       containers:
         board: !type:Container
         manipulator: !type:Container
-        powercell: !type:Container # Construction Frame
+        powercell: !type:Container  # Construction Frame
 
 - type: entity
   id: BaseSubstationWallFrame

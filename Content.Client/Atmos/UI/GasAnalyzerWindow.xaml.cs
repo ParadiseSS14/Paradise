@@ -19,9 +19,6 @@ using Direction = Robust.Shared.Maths.Direction;
 
 namespace Content.Client.Atmos.UI
 {
-    // Tojo - Hey did anyone else notice this sucks ass?
-
-
     [GenerateTypedNameReferences]
     public sealed partial class GasAnalyzerWindow : FancyWindow
     {
@@ -62,7 +59,7 @@ namespace Content.Client.Atmos.UI
                 return;
             }
 
-            Vector2 minSize = Vector2.Zero;
+            Vector2 minSize;
 
             // Environment Tab
             var envMix = msg.NodeGasMixes[0];
@@ -108,259 +105,248 @@ namespace Content.Client.Atmos.UI
         }
 
         private void AddGasEntry(EntityUid entity, GasMixEntry gasMix)
+        {
+            var title = Loc.GetString(
+                "gas-analyzer-window-tab-title-capitalized",
+                ("title", gasMix.Name));
+
+            var entry = new GasAnalyzerEntry(entity, title);
+
+            CDeviceStack.AddChild(entry);
+            GenerateGasDisplay(gasMix, entry.Content);
+        }
+
+        private void GenerateGasDisplay(GasMixEntry gasMix, Control parent)
+        {
+            var dataContainer = new BoxContainer
             {
-                var title = Loc.GetString(
-                    "gas-analyzer-window-tab-title-capitalized",
-                    ("title", gasMix.Name));
+                Orientation = BoxContainer.LayoutOrientation.Vertical, VerticalExpand = true,
+                Margin = new Thickness(4)
+            };
 
-                var entry = new GasAnalyzerEntry(entity, title);
+            parent.AddChild(dataContainer);
 
-                CDeviceStack.AddChild(entry);
-                GenerateGasDisplay(gasMix, entry.Content);
+            // Volume label
+            var volBox = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Horizontal };
+
+            volBox.AddChild(new Label
+            {
+                Text = Loc.GetString("gas-analyzer-window-volume-text"),
+                StyleClasses = { StyleClass.LabelSubText },
+            });
+            volBox.AddChild(new Control
+            {
+                MinSize = new Vector2(10, 0),
+                HorizontalExpand = true
+            });
+            volBox.AddChild(new Label
+            {
+                Text = Loc.GetString("gas-analyzer-window-volume-val-text", ("volume", $"{gasMix.Volume:0.##}")),
+                Align = Label.AlignMode.Right,
+                HorizontalExpand = true,
+            });
+            dataContainer.AddChild(volBox);
+
+            // Pressure label
+            var presBox = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Horizontal };
+
+            presBox.AddChild(new Label
+            {
+                Text = Loc.GetString("gas-analyzer-window-pressure-text"),
+                StyleClasses = { StyleClass.LabelSubText },
+            });
+            presBox.AddChild(new Control
+            {
+                MinSize = new Vector2(10, 0),
+                HorizontalExpand = true
+            });
+            presBox.AddChild(new Label
+            {
+                Text = Loc.GetString("gas-analyzer-window-pressure-val-text",
+                    ("pressure", $"{gasMix.Pressure:0.00}")),
+                Align = Label.AlignMode.Right,
+                HorizontalExpand = true
+            });
+            dataContainer.AddChild(presBox);
+
+            // If there is no gas, it doesn't really have a temperature, so skip displaying it
+            if (gasMix.Pressure > Atmospherics.GasMinMoles)
+            {
+                // Temperature label
+                var tempBox = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Horizontal };
+
+                tempBox.AddChild(new Label
+                {
+                    Text = Loc.GetString("gas-analyzer-window-temperature-text"),
+                    StyleClasses = { StyleClass.LabelSubText },
+                });
+                tempBox.AddChild(new Control
+                {
+                    MinSize = new Vector2(10, 0),
+                    HorizontalExpand = true
+                });
+                tempBox.AddChild(new Label
+                {
+                    Text = Loc.GetString("gas-analyzer-window-temperature-val-text",
+                        ("tempK", $"{gasMix.Temperature:0.0}"),
+                        ("tempC", $"{TemperatureHelpers.KelvinToCelsius(gasMix.Temperature):0.0}")),
+                    Align = Label.AlignMode.Right,
+                    HorizontalExpand = true
+                });
+                dataContainer.AddChild(tempBox);
             }
 
-            private void GenerateGasDisplay(GasMixEntry gasMix, Control parent)
+            if (gasMix.Gases == null || gasMix.Gases?.Length == 0)
             {
-
-                var dataContainer = new BoxContainer
-                {
-                    Orientation = BoxContainer.LayoutOrientation.Vertical, VerticalExpand = true,
-                    Margin = new Thickness(4)
-                };
-
-                var panelContainer = new PanelContainer()
-                {
-                    StyleClasses = { StyleClass.SurfaceSecondary },
-
-                };
-
-                parent.AddChild(dataContainer);
-
-                // Volume label
-                var volBox = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Horizontal };
-
-                volBox.AddChild(new Label
-                {
-                    Text = Loc.GetString("gas-analyzer-window-volume-text"),
-                    StyleClasses = { StyleClass.LabelSubText },
-                });
-                volBox.AddChild(new Control
-                {
-                    MinSize = new Vector2(10, 0),
-                    HorizontalExpand = true
-                });
-                volBox.AddChild(new Label
-                {
-                    Text = Loc.GetString("gas-analyzer-window-volume-val-text", ("volume", $"{gasMix.Volume:0.##}")),
-                    Align = Label.AlignMode.Right,
-                    HorizontalExpand = true,
-                });
-                dataContainer.AddChild(volBox);
-
-                // Pressure label
-                var presBox = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Horizontal };
-
-                presBox.AddChild(new Label
-                {
-                    Text = Loc.GetString("gas-analyzer-window-pressure-text"),
-                    StyleClasses = { StyleClass.LabelSubText },
-                });
-                presBox.AddChild(new Control
-                {
-                    MinSize = new Vector2(10, 0),
-                    HorizontalExpand = true
-                });
-                presBox.AddChild(new Label
-                {
-                    Text = Loc.GetString("gas-analyzer-window-pressure-val-text",
-                        ("pressure", $"{gasMix.Pressure:0.00}")),
-                    Align = Label.AlignMode.Right,
-                    HorizontalExpand = true
-                });
-                dataContainer.AddChild(presBox);
-
-                // If there is no gas, it doesn't really have a temperature, so skip displaying it
-                if (gasMix.Pressure > Atmospherics.GasMinMoles)
-                {
-                    // Temperature label
-                    var tempBox = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Horizontal };
-
-                    tempBox.AddChild(new Label
-                    {
-                        Text = Loc.GetString("gas-analyzer-window-temperature-text"),
-                        StyleClasses = { StyleClass.LabelSubText },
-                    });
-                    tempBox.AddChild(new Control
-                    {
-                        MinSize = new Vector2(10, 0),
-                        HorizontalExpand = true
-                    });
-                    tempBox.AddChild(new Label
-                    {
-                        Text = Loc.GetString("gas-analyzer-window-temperature-val-text",
-                            ("tempK", $"{gasMix.Temperature:0.0}"),
-                            ("tempC", $"{TemperatureHelpers.KelvinToCelsius(gasMix.Temperature):0.0}")),
-                        Align = Label.AlignMode.Right,
-                        HorizontalExpand = true
-                    });
-                    dataContainer.AddChild(tempBox);
-                }
-
-                if (gasMix.Gases == null || gasMix.Gases?.Length == 0)
-                {
-                    // Separator
-                    dataContainer.AddChild(new Control
-                    {
-                        MinSize = new Vector2(0, 10)
-                    });
-
-                    // Add a label that there are no gases so it's less confusing
-                    dataContainer.AddChild(new Label
-                    {
-                        Text = Loc.GetString("gas-analyzer-window-no-gas-text"),
-                        FontColorOverride = Color.Gray
-                    });
-                    // return, everything below is for the fancy gas display stuff
-                    return;
-                }
-
                 // Separator
                 dataContainer.AddChild(new Control
                 {
                     MinSize = new Vector2(0, 10)
                 });
 
-
-
-
-                // Add a table with all the gases
-                var tableKey = new BoxContainer
+                // Add a label that there are no gases so it's less confusing
+                dataContainer.AddChild(new Label
                 {
-                    Orientation = BoxContainer.LayoutOrientation.Vertical,
-                    HorizontalExpand = true,
-                };
-                var tableVal = new BoxContainer
-                {
-                    Orientation = BoxContainer.LayoutOrientation.Vertical,
-                    HorizontalExpand = true,
-                    SizeFlagsStretchRatio = 0.35f,
-                };
-                var tablePercent = new BoxContainer
-                {
-                    Orientation = BoxContainer.LayoutOrientation.Vertical,
-                    HorizontalExpand = true,
-                    SizeFlagsStretchRatio = 0.20f,
-                };
-                var panelContainerTable = new PanelContainer
-                {
-                    StyleClasses = { StyleClass.SurfaceSecondary },
-                    Margin = new Thickness(2),
-                    Children =
-                    {
-                        new BoxContainer
-                        {
-                            Orientation = BoxContainer.LayoutOrientation.Horizontal,
-                            Children =
-                            {
-                                tableKey,
-                                tableVal,
-                                tablePercent,
-                            },
-                            Margin = new Thickness(8),
-                        },
-                    },
-
-                };
-                dataContainer.AddChild(panelContainerTable);
-                // This is the gas bar thingy
-                var height = 30;
-                var gasBar = new SplitBar
-                {
-                    MinHeight = height,
-                    MinBarSize = new Vector2(12, 0),
-                    Margin =  new Thickness(0, 8),
-                };
-                // Separator
-                dataContainer.AddChild(new Control
-                {
-                    MinSize = new Vector2(0, 10),
-                    VerticalExpand = true
+                    Text = Loc.GetString("gas-analyzer-window-no-gas-text"),
+                    FontColorOverride = Color.Gray
                 });
+                // return, everything below is for the fancy gas display stuff
+                return;
+            }
 
-                var totalGasAmount = 0f;
-                foreach (var gas in gasMix.Gases!)
+            // Separator
+            dataContainer.AddChild(new Control
+            {
+                MinSize = new Vector2(0, 10)
+            });
+
+            // Add a table with all the gases
+            var tableKey = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical
+            };
+            var tableVal = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical
+            };
+            var tablePercent = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical
+            };
+            dataContainer.AddChild(new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Horizontal,
+                Children =
                 {
-                    totalGasAmount += gas.Amount;
+                    tableKey,
+                    new Control
+                    {
+                        MinSize = new Vector2(10, 0),
+                        HorizontalExpand = true
+                    },
+                    tableVal,
+                    new Control
+                    {
+                        MinSize = new Vector2(10, 0),
+                        HorizontalExpand = true
+                    },
+                    tablePercent
                 }
+            });
+            // This is the gas bar thingy
+            var height = 30;
+            var gasBar = new SegmentedBarChart
+            {
+                StyleClasses = { SegmentedBarChart.StyleClassClassicSplitBar },
+                MinHeight = height,
+                MinEntryWidth = 12,
+                Gap = 3
+            };
+            // Separator
+            dataContainer.AddChild(new Control
+            {
+                MinSize = new Vector2(0, 10),
+                VerticalExpand = true
+            });
+
+            var totalGasAmount = 0f;
+            foreach (var gas in gasMix.Gases!)
+            {
+                totalGasAmount += gas.Amount;
+            }
+
+            tableKey.AddChild(new Label
+                { Text = Loc.GetString("gas-analyzer-window-gas-column-name"), Align = Label.AlignMode.Center });
+            tableVal.AddChild(new Label
+            {
+                Text = Loc.GetString("gas-analyzer-window-molarity-column-name"), Align = Label.AlignMode.Center
+            });
+            tablePercent.AddChild(new Label
+            {
+                Text = Loc.GetString("gas-analyzer-window-percentage-column-name"), Align = Label.AlignMode.Center
+            });
+
+            tableKey.AddChild(new StripeBack());
+            tableVal.AddChild(new StripeBack());
+            tablePercent.AddChild(new StripeBack());
+
+            for (var j = 0; j < gasMix.Gases.Length; j++)
+            {
+                var gasEntry = gasMix.Gases[j];
+                var gasProto = _atmosphere.GetGas(gasEntry.Gas);
+                var localizedName = Loc.GetString(gasProto.Name);
+
+
+                // Add to the table
 
                 tableKey.AddChild(new Label
-                    { Text = Loc.GetString("gas-analyzer-window-gas-column-name"), Align = Label.AlignMode.Center });
+                {
+                    Text = localizedName
+                });
                 tableVal.AddChild(new Label
                 {
-                    Text = Loc.GetString("gas-analyzer-window-molarity-column-name"), Align = Label.AlignMode.Center
+                    Text = Loc.GetString("gas-analyzer-window-molarity-text",
+                        ("mol", $"{gasEntry.Amount:0.00}")),
+                    Align = Label.AlignMode.Right,
                 });
                 tablePercent.AddChild(new Label
                 {
-                    Text = Loc.GetString("gas-analyzer-window-percentage-column-name"), Align = Label.AlignMode.Center
+                    Text = Loc.GetString("gas-analyzer-window-percentage-text",
+                        ("percentage", $"{(gasEntry.Amount / totalGasAmount * 100):0.0}")),
+                    Align = Label.AlignMode.Right
                 });
 
-                tableKey.AddChild(new StripeBack());
-                tableVal.AddChild(new StripeBack());
-                tablePercent.AddChild(new StripeBack());
+                // Add to the gas bar
+                var tooltip = Loc.GetString("gas-analyzer-window-molarity-percentage-text",
+                    ("gasName", localizedName),
+                    ("amount", $"{gasEntry.Amount:0.##}"),
+                    ("percentage", $"{(gasEntry.Amount / totalGasAmount * 100):0.#}"));
 
-                for (var j = 0; j < gasMix.Gases.Length; j++)
-                {
-                    var gasEntry = gasMix.Gases[j];
-                    var gasProto = _atmosphere.GetGas(gasEntry.Gas);
-                    // Add to the table
-                    tableKey.AddChild(new Label
-                    {
-                        Text = Loc.GetString(gasProto.Name)
-                    });
-                    tableVal.AddChild(new Label
-                    {
-                        Text = Loc.GetString("gas-analyzer-window-molarity-text",
-                            ("mol", $"{gasEntry.Amount:0.00}")),
-                        Align = Label.AlignMode.Right,
-                    });
-                    tablePercent.AddChild(new Label
-                    {
-                        Text = Loc.GetString("gas-analyzer-window-percentage-text",
-                            ("percentage", $"{(gasEntry.Amount / totalGasAmount * 100):0.0}")),
-                        Align = Label.AlignMode.Right
-                    });
-
-                    // Add to the gas bar //TODO: highlight the currently hover one
-                    gasBar.AddEntry(gasEntry.Amount,
-                        gasProto.Color,
-                        tooltip: Loc.GetString("gas-analyzer-window-molarity-percentage-text",
-                            ("gasName", Loc.GetString(gasProto.Name)),
-                            ("amount", $"{gasEntry.Amount:0.##}"),
-                            ("percentage", $"{(gasEntry.Amount / totalGasAmount * 100):0.#}")));
-                }
-
-                dataContainer.AddChild(gasBar);
-                gasBar.SetPositionFirst();
+                gasBar.SetEntry(gasProto.Name, gasEntry.Amount, gasProto.Color, text: localizedName, tooltip: tooltip);
             }
 
-            private TweenInstance Fade(Color from, Color to)
-            {
-                return TweenExtensions.Tween(
-                        from,
-                        to,
-                        v => CTabContainer.Modulate = v,
-                        0.25f)
-                    .SetEasing(Easing.OutQuint);
-            }
+            dataContainer.AddChild(gasBar);
+            gasBar.SetPositionFirst();
+        }
 
-            private void BootupGasInfo()
-            {
-                _tweenManager?.Play(
-                    SequentialTweenInstanceBuilder.New()
-                        .Append(Fade(Color.White, Color.Transparent))
-                        .Append(Fade(Color.Transparent, Color.White))
-                        .Build()
-                );
-            }
+        private TweenInstance Fade(Color from, Color to)
+        {
+            return TweenExtensions.Tween(
+                    from,
+                    to,
+                    v => CTabContainer.Modulate = v,
+                    0.25f)
+                .SetEasing(Easing.OutQuint);
+        }
+
+        private void BootupGasInfo()
+        {
+            _tweenManager?.Play(
+                SequentialTweenInstanceBuilder.New()
+                    .Append(Fade(Color.White, Color.Transparent))
+                    .Append(Fade(Color.Transparent, Color.White))
+                    .Build()
+            );
         }
     }
+}

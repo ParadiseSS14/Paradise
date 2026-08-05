@@ -255,17 +255,31 @@ public sealed partial class CreditsWindow : DefaultWindow
     {
         licensesContainer.RemoveAllChildren();
 
-        foreach (var entry in CreditsManager.GetLicenses(_resourceManager).OrderBy(p => p.Name))
+        // Honestly, this should be iterating over a list of credits managers if only I could actually make them have the same interface.
+        // Also there should be a shared server credits manager that would sync some data that needs to be displayerd here.
+        // It is possible to implement because doesnt need an engine change, but we arent going to have any AGPL-like sever code at least for now.
+        // Also this can be cached but wont have any meaningful perfomance benefit.
+        var licenses = CreditsManager.GetLicenses(_resourceManager).Concat(ClientCreditsManager.GetLicenses(_resourceManager));
+        foreach (var entry in licenses.OrderBy(p => p.Name))
         {
-            licensesContainer.AddChild(new Label
-                { StyleClasses = { StyleClass.LabelHeading }, Text = entry.Name });
+            InsertLicenseEntry(licensesContainer, entry);
+        }
+    }
 
-            // We split these line by line because otherwise
-            // the LGPL causes Clyde to go out of bounds in the rendering code.
-            foreach (var line in entry.License.Split("\n"))
-            {
-                licensesContainer.AddChild(new Label { Text = line, FontColorOverride = new Color(200, 200, 200) });
-            }
+    private static void InsertLicenseEntry(BoxContainer licensesContainer, CreditsManager.LicenseEntry entry)
+    {
+        licensesContainer.AddChild(new Label
+        {
+            StyleClasses = { StyleClass.LabelHeading },
+            Text = entry.Name
+        });
+
+        // We split these line by line because otherwise
+        // the LGPL causes Clyde to go out of bounds in the rendering code.
+        foreach (var line in entry.License.Split("\n"))
+        {
+            var grayish_color = new Color(200, 200, 200);
+            licensesContainer.AddChild(new Label { Text = line, FontColorOverride = grayish_color });
         }
     }
 

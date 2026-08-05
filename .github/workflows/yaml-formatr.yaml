@@ -33,6 +33,10 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: 24
+          cache: npm
+      - name: Install formatting tools
+        run: npm ci
 
       - name: Check formatting
-        run: npx --yes prettier@3.6.2 --check "Resources/Prototypes/**/*.{yml,yaml}"
+        run: npm run prettier:check -- Resources/Prototypes
+

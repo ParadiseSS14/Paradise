@@ -5,16 +5,24 @@ set -euo pipefail
 gitroot=$(git rev-parse --show-toplevel)
 cd "$gitroot"
 
-files=()
+mapfile -t files < <(
+    git diff --cached --name-only --diff-filter=AM -- Resources/Prototypes |
+    grep -E '\.ya?ml$'
+)
 
-while IFS= read -r file; do
-  case "$file" in 
-    *.yml|*.yaml)
-      files+=("$file")
-      ;;
-  esac
-done < <(git diff --cached --name-only --diff-filter=ACMR -- Resources/Prototypes)
+if (( ${#files[@]} != 0 )); then
 
-[[ ${#files[@]} -eq 0 ]] && exit 0
+    if ! command -v npm >/dev/null 2>&1; then
+        echo "Node.js/npm is required to check YAML formatting."
+        echo "Install Node.js, then run: npm ci"
+        exit 1
+    fi
 
-npx --yes prettier@3.6.2 --check "${files[@]}"
+    if [[ ! -x node_modules/.bin/prettier && ! -f node_modules/.bin/prettier.cmd ]]; then
+        echo "Prettier is not installed."
+        echo "Run: npm ci"
+        exit 1
+    fi
+fi
+
+npm exec -- prettier:check "${files[@]}"

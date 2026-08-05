@@ -2,28 +2,26 @@
 - type: loadoutEffectGroup
   id: GreyTider
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobPassenger
-      time: 10h # silly reward for people who play passenger a lot
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobPassenger
+        time: 10h # silly reward for people who play passenger a lot
 
 # Head of Greytide (for grey mantle)
 - type: loadoutEffectGroup
   id: MasterGrey
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobPassenger
-      time: 20h # fun mantle for the most experienced greytiders
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobPassenger
+        time: 20h # fun mantle for the most experienced greytiders
 
 # Face
 - type: loadout
   id: PassengerFace
   effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
+    - !type:GroupLoadoutEffect
+      proto: GreyTider
   equipment:
     mask: ClothingMaskGas
 
@@ -43,8 +41,8 @@
 - type: loadout
   id: RainbowJumpsuit
   effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
+    - !type:GroupLoadoutEffect
+      proto: GreyTider
   equipment:
     jumpsuit: ClothingUniformColorRainbow
 
@@ -52,8 +50,8 @@
 - type: loadout
   id: RainbowJumpskirt
   effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
+    - !type:GroupLoadoutEffect
+      proto: GreyTider
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorRainbow
 
@@ -61,8 +59,8 @@
 - type: loadout
   id: AncientJumpsuit
   effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
+    - !type:GroupLoadoutEffect
+      proto: GreyTider
   equipment:
     jumpsuit: ClothingUniformJumpsuitAncient
 
@@ -72,8 +70,8 @@
   equipment:
     neck: ClothingNeckMantle
   effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterGrey
+    - !type:GroupLoadoutEffect
+      proto: MasterGrey
 
 - type: startingGear
   id: Mantle
@@ -100,8 +98,8 @@
 - type: loadout
   id: PassengerGloves
   effects:
-  - !type:GroupLoadoutEffect
-    proto: GreyTider
+    - !type:GroupLoadoutEffect
+      proto: GreyTider
   equipment:
     gloves: ClothingHandsGlovesFingerlessInsulated
 

@@ -6,12 +6,11 @@
       edges:
         - to: frame1
           completed:
-            - !type:SnapToGrid { }
+            - !type:SnapToGrid {}
           steps:
             - material: Steel
               amount: 3
               doAfter: 1
-
 
     - node: frame1
       entity: ShuttersFrame
@@ -136,7 +135,6 @@
           steps:
             - tool: Screwing
               doAfter: 1
-
 
     - node: ShuttersWindow
       entity: ShuttersWindowOpen

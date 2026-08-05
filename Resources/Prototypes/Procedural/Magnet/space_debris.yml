@@ -7,33 +7,33 @@
       capStd: 32
       iterations: 7
       layers:
-      - tile: FloorSteel
-        threshold: 0.50
-        noise:
-          frequency: 0.05
-          noiseType: OpenSimplex2
-          fractalType: FBm
-          octaves: 3
-          lacunarity: 3
-          gain: 0.5
-      - tile: Plating
-        threshold: 0.35
-        noise:
-          frequency: 0.05
-          noiseType: OpenSimplex2
-          fractalType: FBm
-          octaves: 3
-          lacunarity: 3
-          gain: 0.3
-      - tile: Lattice
-        threshold: 0.25
-        noise:
-          frequency: 0.05
-          noiseType: OpenSimplex2
-          fractalType: FBm
-          octaves: 3
-          lacunarity: 3
-          gain: 0.5
+        - tile: FloorSteel
+          threshold: 0.50
+          noise:
+            frequency: 0.05
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 3
+            lacunarity: 3
+            gain: 0.5
+        - tile: Plating
+          threshold: 0.35
+          noise:
+            frequency: 0.05
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 3
+            lacunarity: 3
+            gain: 0.3
+        - tile: Lattice
+          threshold: 0.25
+          noise:
+            frequency: 0.05
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 3
+            lacunarity: 3
+            gain: 0.5
 
     # Generate biome
     - !type:BiomeDunGen
@@ -43,39 +43,39 @@
   id: ChunkDebrisSmall
   # Floor generation
   layers:
-  - !type:NoiseDunGen
-    tileCap: 150
-    capStd: 32
-    iterations: 3
-    layers:
-    - tile: FloorSteel
-      threshold: 0.50
-      noise:
-        frequency: 0.05
-        noiseType: OpenSimplex2
-        fractalType: FBm
-        octaves: 3
-        lacunarity: 3
-        gain: 0.5
-    - tile: Plating
-      threshold: 0.35
-      noise:
-        frequency: 0.05
-        noiseType: OpenSimplex2
-        fractalType: FBm
-        octaves: 3
-        lacunarity: 3
-        gain: 0.3
-    - tile: Lattice
-      threshold: 0.25
-      noise:
-        frequency: 0.05
-        noiseType: OpenSimplex2
-        fractalType: FBm
-        octaves: 3
-        lacunarity: 3
-        gain: 0.5
+    - !type:NoiseDunGen
+      tileCap: 150
+      capStd: 32
+      iterations: 3
+      layers:
+        - tile: FloorSteel
+          threshold: 0.50
+          noise:
+            frequency: 0.05
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 3
+            lacunarity: 3
+            gain: 0.5
+        - tile: Plating
+          threshold: 0.35
+          noise:
+            frequency: 0.05
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 3
+            lacunarity: 3
+            gain: 0.3
+        - tile: Lattice
+          threshold: 0.25
+          noise:
+            frequency: 0.05
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 3
+            lacunarity: 3
+            gain: 0.5
 
-  # Generate biome
-  - !type:BiomeDunGen
-    biomeTemplate: SpaceDebris
+    # Generate biome
+    - !type:BiomeDunGen
+      biomeTemplate: SpaceDebris

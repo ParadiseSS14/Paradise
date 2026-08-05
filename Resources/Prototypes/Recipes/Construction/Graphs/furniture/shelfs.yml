@@ -6,7 +6,7 @@
       actions:
         - !type:DeleteEntity {}
       edges:
-# Normal
+        # Normal
         - to: ShelfWood
           completed:
             - !type:SnapToGrid {}
@@ -28,7 +28,7 @@
             - material: Glass
               amount: 4
               doAfter: 2
-# Reinforced
+        # Reinforced
         - to: ShelfRWood
           completed:
             - !type:SnapToGrid {}
@@ -65,7 +65,7 @@
             - material: Cable
               amount: 2
               doAfter: 1
-# Departmental
+        # Departmental
         - to: ShelfBar
           completed:
             - !type:SnapToGrid {}
@@ -102,7 +102,7 @@
               amount: 2
               doAfter: 1
 
-# Normal deconstructs
+    # Normal deconstructs
     - node: ShelfWood
       entity: ShelfWood
       edges:
@@ -110,8 +110,8 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: MaterialWoodPlank1
-                amount: 4
+              prototype: MaterialWoodPlank1
+              amount: 4
           steps:
             - tool: Prying
               doAfter: 2
@@ -123,8 +123,8 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: SheetSteel1
-                amount: 5
+              prototype: SheetSteel1
+              amount: 5
           steps:
             - tool: Screwing
               doAfter: 5
@@ -136,12 +136,12 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: SheetGlass1
-                amount: 4
+              prototype: SheetGlass1
+              amount: 4
           steps:
             - tool: Screwing
               doAfter: 2
-# Reinforced deconstructs
+    # Reinforced deconstructs
     - node: ShelfRWood
       entity: ShelfRWood
       edges:
@@ -149,11 +149,11 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: MaterialWoodPlank1
-                amount: 8
+              prototype: MaterialWoodPlank1
+              amount: 8
             - !type:GivePrototype
-                prototype: CableApcStack1
-                amount: 2
+              prototype: CableApcStack1
+              amount: 2
           steps:
             - tool: Screwing
               doAfter: 5
@@ -167,14 +167,14 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: SheetPlasteel1
-                amount: 5
+              prototype: SheetPlasteel1
+              amount: 5
             - !type:GivePrototype
-                prototype: SheetRGlass1
-                amount: 5
+              prototype: SheetRGlass1
+              amount: 5
             - !type:GivePrototype
-                prototype: CableApcStack1
-                amount: 3
+              prototype: CableApcStack1
+              amount: 3
           steps:
             - tool: Screwing
               doAfter: 2
@@ -188,21 +188,21 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: SheetPlastic1
-                amount: 5
+              prototype: SheetPlastic1
+              amount: 5
             - !type:GivePrototype
-                prototype: SheetRGlass1
-                amount: 5
+              prototype: SheetRGlass1
+              amount: 5
             - !type:GivePrototype
-                prototype: CableApcStack1
-                amount: 2
+              prototype: CableApcStack1
+              amount: 2
           steps:
             - tool: Welding
               doAfter: 2
             - tool: Screwing
               doAfter: 4
 
-# Departmental deconstructs
+    # Departmental deconstructs
     - node: ShelfBar
       entity: ShelfBar
       edges:
@@ -210,8 +210,8 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: MaterialWoodPlank1
-                amount: 6
+              prototype: MaterialWoodPlank1
+              amount: 6
           steps:
             - tool: Prying
               doAfter: 3
@@ -223,14 +223,14 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: PartRodMetal
-                amount: 2
+              prototype: PartRodMetal
+              amount: 2
             - !type:GivePrototype
-                prototype: SheetSteel1
-                amount: 5
+              prototype: SheetSteel1
+              amount: 5
             - !type:GivePrototype
-                prototype: MaterialWoodPlank1
-                amount: 3
+              prototype: MaterialWoodPlank1
+              amount: 3
           steps:
             - tool: Screwing
               doAfter: 2
@@ -246,17 +246,17 @@
           completed:
             - !type:EmptyAllContainers
             - !type:GivePrototype
-                prototype: SheetPlasteel1
-                amount: 2
+              prototype: SheetPlasteel1
+              amount: 2
             - !type:GivePrototype
-                prototype: SheetPlastic1
-                amount: 5
+              prototype: SheetPlastic1
+              amount: 5
             - !type:GivePrototype
-                prototype: SheetRGlass1
-                amount: 5
+              prototype: SheetRGlass1
+              amount: 5
             - !type:GivePrototype
-                prototype: CableApcStack1
-                amount: 2
+              prototype: CableApcStack1
+              amount: 2
           steps:
             - tool: Welding
               doAfter: 2

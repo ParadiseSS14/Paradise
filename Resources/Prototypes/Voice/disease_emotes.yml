@@ -4,21 +4,21 @@
   category: Vocal
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-sneeze"]
   chatTriggers:
-  - sneeze
-  - sneezes
-  - sneezed
-  - sneeze.
-  - sneezes.
-  - sneezed.
-  - sneeze!
-  - sneezes!
-  - sneezed!
+    - sneeze
+    - sneezes
+    - sneezed
+    - sneeze.
+    - sneezes.
+    - sneezed.
+    - sneeze!
+    - sneezes!
+    - sneezed!
 
 - type: emote
   id: Cough
@@ -27,10 +27,10 @@
   category: Vocal
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-cough"]
   chatTriggers:
     - cough
@@ -74,10 +74,10 @@
   category: Vocal
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-yawn"]
   chatTriggers:
     - yawn

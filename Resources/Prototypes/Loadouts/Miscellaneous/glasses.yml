@@ -2,20 +2,18 @@
 - type: loadoutEffectGroup
   id: JamjarTimer
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobLibrarian
-      time: 1h # for being the biggest nerd on the station
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobLibrarian
+        time: 1h # for being the biggest nerd on the station
 
 - type: loadoutEffectGroup
   id: JensenTimer
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Cargo
-      time: 10h # 10 hours of being a space trucker
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:DepartmentTimeRequirement
+        department: Cargo
+        time: 10h # 10 hours of being a space trucker
 
 # Basic options
 # Glasses
@@ -29,8 +27,8 @@
 - type: loadout
   id: GlassesJamjar
   effects:
-  - !type:GroupLoadoutEffect
-    proto: JamjarTimer
+    - !type:GroupLoadoutEffect
+      proto: JamjarTimer
   equipment:
     eyes: ClothingEyesGlassesJamjar
 
@@ -38,7 +36,7 @@
 - type: loadout
   id: GlassesJensen
   effects:
-  - !type:GroupLoadoutEffect
-    proto: JensenTimer
+    - !type:GroupLoadoutEffect
+      proto: JensenTimer
   equipment:
     eyes: ClothingEyesGlassesJensen

@@ -4,22 +4,22 @@
   description: job-description-detective
   playTimeTracker: JobDetective
   requirements:
-  - !type:RoleTimeRequirement
-    role: JobSecurityOfficer
-    time: 5h
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 5h
   startingGear: DetectiveGear
   icon: "JobIconDetective"
   supervisors: job-supervisors-hos
   access:
-  - Security
-  - Brig
-  - Maintenance
-  - Detective
-  - Cryogenics
-  - External
+    - Security
+    - Brig
+    - Maintenance
+    - Detective
+    - Cryogenics
+    - External
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
 
 - type: startingGear
   id: DetectiveGear
@@ -30,9 +30,9 @@
     belt: ClothingBeltHolsterFilled
   storage:
     back:
-    - Flash
-    - ForensicPad
-    - ForensicScanner
+      - Flash
+      - ForensicPad
+      - ForensicScanner
 
 - type: chameleonOutfit
   id: DetectiveChameleonOutfit

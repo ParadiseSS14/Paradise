@@ -92,7 +92,6 @@
         - !type:HTNCompoundTask
           task: GunCombatCompound
 
-
 - type: htnCompound
   id: RangedCombatCompound
   branches:
@@ -106,9 +105,8 @@
         - !type:NeedToRackBoltPrecondition
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:RackBoltOperator
+          operator: !type:RackBoltOperator # Wield gun
 
-    # Wield gun
     - preconditions:
         - !type:ActiveHandComponentPrecondition
           components:
@@ -117,9 +115,8 @@
           wielded: false
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:WieldOperator
+          operator: !type:WieldOperator # Move to target and shoot them if ammo
 
-    # Move to target and shoot them if ammo
     - preconditions:
         - !type:GunAmmoPrecondition
           minPercent: 0.001
@@ -152,19 +149,19 @@
     #  tasks:
     #    - !type:HTNCompoundTask
     #      task: ClearActiveHandCompound
-#
-#        - !type:HTNCompoundTask
-#          task: PickupAmmoCompound
+    #
+    #        - !type:HTNCompoundTask
+    #          task: PickupAmmoCompound
 
     # Pickup gun with ammo if we have no ammo
-    -  preconditions:
-         - !type:ActiveHandComponentPrecondition
-           components:
-             - type: Gun
-           invert: true
-       tasks:
-         - !type:HTNCompoundTask
-           task: PickupGunCompound
+    - preconditions:
+        - !type:ActiveHandComponentPrecondition
+          components:
+            - type: Gun
+          invert: true
+      tasks:
+        - !type:HTNCompoundTask
+          task: PickupGunCompound
 
     # Discard gun if no ammo
     - preconditions:
@@ -177,6 +174,5 @@
         - !type:HTNPrimitiveTask
           preconditions:
             - !type:ActiveHandEntityPrecondition
-          operator: !type:DropOperator
+          operator: !type:DropOperator # TODO: Reload a nearby gun
 
-# TODO: Reload a nearby gun

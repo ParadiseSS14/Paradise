@@ -18,20 +18,20 @@
   icon: "JobIconChiefEngineer"
   supervisors: job-supervisors-captain
   access:
-  - Maintenance
-  - Engineering
-  - Command
-  - External
-  - ChiefEngineer
-  - Atmospherics
-  - Brig
-  - Cryogenics
+    - Maintenance
+    - Engineering
+    - Command
+    - External
+    - ChiefEngineer
+    - Atmospherics
+    - Brig
+    - Cryogenics
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
+    - !type:AddComponentSpecial
+      components:
+        - type: CommandStaff
 
 - type: startingGear
   id: ChiefEngineerGear
@@ -42,7 +42,7 @@
     belt: ClothingBeltUtilityEngineering
   storage:
     back:
-    - Flash
+      - Flash
 
 - type: chameleonOutfit
   id: ChiefEngineerChameleonOutfit

@@ -1,9 +1,9 @@
 - type: soundCollection
   id: EyeOpen
   files:
-  - /Audio/Effects/eye_open.ogg
+    - /Audio/Effects/eye_open.ogg
 
 - type: soundCollection
   id: EyeClose
   files:
-  - /Audio/Effects/eye_close.ogg
+    - /Audio/Effects/eye_close.ogg

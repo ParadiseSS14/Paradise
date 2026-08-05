@@ -4,14 +4,14 @@
   id: MonkeyCubeBox
   description: Drymate brand monkey cubes. Just add water!
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase:
-        id: MonkeyCubeWrapped
-        amount: 8
-  - type: Sprite
-    sprite: Objects/Misc/monkeycube.rsi
-    state: box
+    - type: EntityTableContainerFill
+      containers:
+        storagebase:
+          id: MonkeyCubeWrapped
+          amount: 8
+    - type: Sprite
+      sprite: Objects/Misc/monkeycube.rsi
+      state: box
 
 - type: entity
   parent: BaseItem
@@ -19,13 +19,13 @@
   suffix: Wrapped
   id: BaseWrappedCube
   components:
-  - type: Item
-    size: Tiny
-  - type: SpawnItemsOnUse
-    sound:
-      path: /Audio/Effects/unwrap.ogg
-  - type: Sprite
-    sprite: Objects/Misc/monkeycube.rsi
+    - type: Item
+      size: Tiny
+    - type: SpawnItemsOnUse
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+    - type: Sprite
+      sprite: Objects/Misc/monkeycube.rsi
 
 - type: entity
   parent: BaseWrappedCube
@@ -33,14 +33,14 @@
   id: MonkeyCubeWrapped
   description: Unwrap this to get a monkey cube.
   components:
-  - type: SpawnItemsOnUse
-    items:
-    - id: MonkeyCube
-  - type: Sprite
-    state: wrapper
-  - type: Tag
-    tags:
-    - MonkeyCube
+    - type: SpawnItemsOnUse
+      items:
+        - id: MonkeyCube
+    - type: Sprite
+      state: wrapper
+    - type: Tag
+      tags:
+        - MonkeyCube
 
 - type: entity
   parent: MonkeyCubeBox
@@ -48,14 +48,14 @@
   id: KoboldCubeBox
   description: Condensed kobolds in a cube. Just add water!
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase:
-        id: KoboldCubeWrapped
-        amount: 8
-  - type: Sprite
-    sprite: Objects/Misc/monkeycube.rsi
-    state: box_kobold
+    - type: EntityTableContainerFill
+      containers:
+        storagebase:
+          id: KoboldCubeWrapped
+          amount: 8
+    - type: Sprite
+      sprite: Objects/Misc/monkeycube.rsi
+      state: box_kobold
 
 - type: entity
   parent: MonkeyCubeBox
@@ -63,17 +63,17 @@
   id: VariantCubeBox
   description: Both kobold cubes and monkey cubes. Just add water!
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: KoboldCubeWrapped
-          amount: 4
-        - id: MonkeyCubeWrapped
-          amount: 4
-  - type: Sprite
-    sprite: Objects/Misc/monkeycube.rsi
-    state: box_variant
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: KoboldCubeWrapped
+              amount: 4
+            - id: MonkeyCubeWrapped
+              amount: 4
+    - type: Sprite
+      sprite: Objects/Misc/monkeycube.rsi
+      state: box_variant
 
 - type: entity
   parent: BaseWrappedCube
@@ -81,11 +81,11 @@
   id: KoboldCubeWrapped
   description: Unwrap this to get a kobold cube.
   components:
-  - type: SpawnItemsOnUse
-    items:
-      - id: KoboldCube
-  - type: Sprite
-    state: wrapper_kobold
+    - type: SpawnItemsOnUse
+      items:
+        - id: KoboldCube
+    - type: Sprite
+      state: wrapper_kobold
 
 - type: entity
   parent: MonkeyCubeBox
@@ -94,14 +94,14 @@
   id: SyndicateSpongeBox
   description: Drymate brand monkey cubes. Just add water!
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase:
-        id: SyndicateSpongeWrapped
-        amount: 6
-  - type: Sprite
-    sprite: Objects/Misc/monkeycube.rsi
-    state: box
+    - type: EntityTableContainerFill
+      containers:
+        storagebase:
+          id: SyndicateSpongeWrapped
+          amount: 6
+    - type: Sprite
+      sprite: Objects/Misc/monkeycube.rsi
+      state: box
 
 - type: entity
   parent: MonkeyCubeWrapped
@@ -109,6 +109,6 @@
   suffix: Wrapped, Syndicate
   id: SyndicateSpongeWrapped
   components:
-  - type: SpawnItemsOnUse
-    items:
-      - id: SyndicateSponge
+    - type: SpawnItemsOnUse
+      items:
+        - id: SyndicateSponge

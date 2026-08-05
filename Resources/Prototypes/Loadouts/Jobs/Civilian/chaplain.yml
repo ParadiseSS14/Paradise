@@ -2,31 +2,28 @@
 - type: loadoutEffectGroup
   id: NanoTrasenBibleRequirement
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobCaptain
-      time: 7200 #2 hrs
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobCaptain
+        time: 7200 #2 hrs
 
 # Playtime requirement for Druid Bible, Druidic Tablet
 - type: loadoutEffectGroup
   id: DruidBibleRequirement
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobBotanist
-      time: 18000 #5 hrs
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobBotanist
+        time: 18000 #5 hrs
 
 # Playtime requirement for Clown Bible, Mirth of the Honkmother
 - type: loadoutEffectGroup
   id: ClownBibleRequirement
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobClown
-      time: 18000 #5 hrs
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobClown
+        time: 18000 #5 hrs
 
 # Head
 - type: loadout
@@ -113,43 +110,43 @@
   id: Bible
   storage:
     back:
-    - Bible
+      - Bible
 
 - type: loadout
   id: BibleDruid
   effects:
-  - !type:GroupLoadoutEffect
-    proto: DruidBibleRequirement
+    - !type:GroupLoadoutEffect
+      proto: DruidBibleRequirement
   storage:
     back:
-    - BibleDruid
+      - BibleDruid
 
 - type: loadout
   id: BibleNanoTrasen
   effects:
-  - !type:GroupLoadoutEffect
-    proto: NanoTrasenBibleRequirement
+    - !type:GroupLoadoutEffect
+      proto: NanoTrasenBibleRequirement
   storage:
     back:
-    - BibleNanoTrasen
-    
+      - BibleNanoTrasen
+
 - type: loadout
   id: BibleNarsie
   storage:
     back:
-    - BibleNarsie
+      - BibleNarsie
 
 - type: loadout
   id: BibleHonk
   effects:
-  - !type:GroupLoadoutEffect
-    proto: ClownBibleRequirement
+    - !type:GroupLoadoutEffect
+      proto: ClownBibleRequirement
   storage:
     back:
-    - BibleHonk
+      - BibleHonk
 
 - type: loadout
   id: BibleRatvar
   storage:
     back:
-    - BibleRatvar
+      - BibleRatvar

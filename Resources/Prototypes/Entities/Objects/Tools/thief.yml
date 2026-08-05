@@ -14,8 +14,7 @@
     - type: Fixtures
       fixtures:
         fix1:
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.25,-0.4,0.25,0.1"
           density: 20
           mask:
@@ -37,33 +36,33 @@
       noRot: true
       layers:
         - state: extraction_point
-          map: [ "foldedLayer" ]
+          map: ["foldedLayer"]
 
 - type: entity
   id: ToolboxThief
   name: undetermined thieving toolbox
   description: This is where your favorite thief's supplies lie. Try to remember which ones.
-  parent: [ BaseItem, BaseMinorContraband ]
+  parent: [BaseItem, BaseMinorContraband]
   components:
-  - type: Sprite
-    sprite: Objects/Tools/Toolboxes/toolbox_thief.rsi
-    state: icon
-  - type: ThiefUndeterminedBackpack
-    possibleSets:
-    # TODO Thief pinpointer needed
-    - ChemistrySet
-    - ToolsSet
-    - ChameleonSet # TODO Chameleon stump PR needed
-    - SyndieSet
-    - SleeperSet
-    - CommunicatorSet
-    - SmugglerSet
-  - type: ActivatableUI
-    key: enum.ThiefBackpackUIKey.Key
-  - type: UserInterface
-    interfaces:
-      enum.ThiefBackpackUIKey.Key:
-        type: ThiefBackpackBoundUserInterface
+    - type: Sprite
+      sprite: Objects/Tools/Toolboxes/toolbox_thief.rsi
+      state: icon
+    - type: ThiefUndeterminedBackpack
+      possibleSets:
+        # TODO Thief pinpointer needed
+        - ChemistrySet
+        - ToolsSet
+        - ChameleonSet # TODO Chameleon stump PR needed
+        - SyndieSet
+        - SleeperSet
+        - CommunicatorSet
+        - SmugglerSet
+    - type: ActivatableUI
+      key: enum.ThiefBackpackUIKey.Key
+    - type: UserInterface
+      interfaces:
+        enum.ThiefBackpackUIKey.Key:
+          type: ThiefBackpackBoundUserInterface
 
 - type: entity
   id: SatchelThief
@@ -71,10 +70,10 @@
   description: This is where your favorite thief's supplies lie. Folded for your convenience.
   parent: ToolboxThief
   components:
-  - type: Sprite
-    sprite: Clothing/Back/Satchels/smuggler.rsi
-    state: folded
-  - type: Item
-    storedRotation: 90
-  - type: ThiefUndeterminedBackpack
-    spawnedStoragePrototype: ClothingBackpackSatchelSmugglerUnanchored
+    - type: Sprite
+      sprite: Clothing/Back/Satchels/smuggler.rsi
+      state: folded
+    - type: Item
+      storedRotation: 90
+    - type: ThiefUndeterminedBackpack
+      spawnedStoragePrototype: ClothingBackpackSatchelSmugglerUnanchored

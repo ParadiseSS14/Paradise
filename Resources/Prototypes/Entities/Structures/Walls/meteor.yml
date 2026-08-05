@@ -5,19 +5,18 @@
   name: meteorite rock
   description: What remains of a meteorite.
   components:
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 12 #This change makes meteorite walls easier to destroy for cleanup
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Effects/break_stone.ogg
-          params:
-            volume: -6
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 12 #This change makes meteorite walls easier to destroy for cleanup
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Effects/break_stone.ogg
+                params:
+                  volume: -6
 
 # Ore veins
 - type: entity
@@ -32,13 +31,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_coal
 
@@ -54,13 +53,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_gold
 
@@ -76,13 +75,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_diamond
 
@@ -98,13 +97,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_phoron
 
@@ -120,13 +119,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_quartz
 
@@ -142,13 +141,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_silver
 # Tin name is a holdover from the asteroid.yml prototype.
@@ -164,13 +163,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_tin
 
@@ -186,13 +185,13 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_uranium
 
@@ -208,12 +207,12 @@
     - type: Sprite
       layers:
         - state: rock_asteroid
-        - map: [ "enum.EdgeLayer.South" ]
+        - map: ["enum.EdgeLayer.South"]
           state: rock_asteroid_south
-        - map: [ "enum.EdgeLayer.East" ]
+        - map: ["enum.EdgeLayer.East"]
           state: rock_asteroid_east
-        - map: [ "enum.EdgeLayer.North" ]
+        - map: ["enum.EdgeLayer.North"]
           state: rock_asteroid_north
-        - map: [ "enum.EdgeLayer.West" ]
+        - map: ["enum.EdgeLayer.West"]
           state: rock_asteroid_west
         - state: rock_bananium

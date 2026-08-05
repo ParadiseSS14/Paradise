@@ -5,7 +5,7 @@
     - node: start
       entity: ParticleAcceleratorControlBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: wired
           conditions:
@@ -17,7 +17,7 @@
     - node: wired
       entity: ParticleAcceleratorControlBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: completed
           conditions:
@@ -42,11 +42,10 @@
       edges:
         - to: wired
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Prying
               doAfter: 0.5
-
 
 - type: constructionGraph
   id: ParticleAcceleratorPowerBox
@@ -55,7 +54,7 @@
     - node: start
       entity: ParticleAcceleratorPowerBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: wired
           conditions:
@@ -67,7 +66,7 @@
     - node: wired
       entity: ParticleAcceleratorPowerBoxUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: completed
           conditions:
@@ -92,11 +91,10 @@
       edges:
         - to: wired
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Screwing
               doAfter: 0.5
-
 
 - type: constructionGraph
   id: ParticleAcceleratorFuelChamber
@@ -105,7 +103,7 @@
     - node: start
       entity: ParticleAcceleratorFuelChamberUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: wired
           conditions:
@@ -117,7 +115,7 @@
     - node: wired
       entity: ParticleAcceleratorFuelChamberUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: completed
           conditions:
@@ -142,7 +140,7 @@
       edges:
         - to: wired
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Screwing
               doAfter: 0.5
@@ -154,7 +152,7 @@
     - node: start
       entity: ParticleAcceleratorEndCapUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: wired
           conditions:
@@ -166,7 +164,7 @@
     - node: wired
       entity: ParticleAcceleratorEndCapUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: completed
           conditions:
@@ -191,7 +189,7 @@
       edges:
         - to: wired
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Screwing
               doAfter: 0.5
@@ -203,7 +201,7 @@
     - node: start
       entity: ParticleAcceleratorEmitterPortUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: wired
           conditions:
@@ -215,7 +213,7 @@
     - node: wired
       entity: ParticleAcceleratorEmitterPortUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: completed
           conditions:
@@ -240,7 +238,7 @@
       edges:
         - to: wired
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Screwing
               doAfter: 0.5
@@ -252,7 +250,7 @@
     - node: start
       entity: ParticleAcceleratorEmitterForeUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: wired
           conditions:
@@ -264,7 +262,7 @@
     - node: wired
       entity: ParticleAcceleratorEmitterForeUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: completed
           conditions:
@@ -289,7 +287,7 @@
       edges:
         - to: wired
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Screwing
               doAfter: 0.5
@@ -301,7 +299,7 @@
     - node: start
       entity: ParticleAcceleratorEmitterStarboardUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: wired
           conditions:
@@ -313,7 +311,7 @@
     - node: wired
       entity: ParticleAcceleratorEmitterStarboardUnfinished
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: completed
           conditions:
@@ -338,7 +336,7 @@
       edges:
         - to: wired
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Screwing
               doAfter: 0.5

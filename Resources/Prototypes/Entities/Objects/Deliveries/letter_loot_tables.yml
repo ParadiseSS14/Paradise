@@ -13,23 +13,23 @@
   id: UncommonLetterBundleTable
   table: !type:GroupSelector
     children:
-    - !type:NestedSelector
-      tableId: LetterBundleDarts
-    - !type:NestedSelector
-      tableId: LetterBundleLetter
+      - !type:NestedSelector
+        tableId: LetterBundleDarts
+      - !type:NestedSelector
+        tableId: LetterBundleLetter
 
 - type: entityTable
   id: LetterBundleDarts
   table: !type:AllSelector
     children:
-    - id: Dart
-    - id: DartBlue
-    - id: DartPurple
-    - id: DartYellow
+      - id: Dart
+      - id: DartBlue
+      - id: DartPurple
+      - id: DartYellow
 
 - type: entityTable
   id: LetterBundleLetter
   table: !type:AllSelector
     children:
-    - id: Paper
-    - id: Pen
+      - id: Paper
+      - id: Pen

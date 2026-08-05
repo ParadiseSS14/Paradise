@@ -4,24 +4,24 @@
   name: station-ai-customization-core
   category: CoreIconography
   protoIds:
-  - StationAiIconAi
-  - StationAiIconAngel
-  - StationAiIconBliss
-  - StationAiIconClown
-  - StationAiIconDorf
-  - StationAiIconHeartline
-  - StationAiIconSmiley
+    - StationAiIconAi
+    - StationAiIconAngel
+    - StationAiIconBliss
+    - StationAiIconClown
+    - StationAiIconDorf
+    - StationAiIconHeartline
+    - StationAiIconSmiley
 
 - type: stationAiCustomizationGroup
   id: StationAiHolograms
   name: station-ai-customization-hologram
   category: Hologram
   protoIds:
-  - StationAiHologramFemale
-  - StationAiHologramMale
-  - StationAiHologramFace
-  - StationAiHologramCat
-  - StationAiHologramDog
+    - StationAiHologramFemale
+    - StationAiHologramMale
+    - StationAiHologramFace
+    - StationAiHologramCat
+    - StationAiHologramDog
 
 # Iconography
 - type: stationAiCustomization

@@ -11,10 +11,10 @@
   lastNames: NamesDionaLast
   naming: TheFirstofLast
   sexes:
-  - Unsexed
+    - Unsexed
   defaultSoundsBySex:
-  - UnisexDiona
-  - UnisexDiona
-  - UnisexDiona
+    - UnisexDiona
+    - UnisexDiona
+    - UnisexDiona
   voices:
-  - UnisexDiona
+    - UnisexDiona

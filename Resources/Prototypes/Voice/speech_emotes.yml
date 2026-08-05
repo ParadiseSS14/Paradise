@@ -6,7 +6,7 @@
   icon: Interface/Emotes/scream.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   chatMessages: ["chat-emote-msg-scream"]
   chatTriggers:
     - scream
@@ -33,10 +33,10 @@
   icon: Interface/Emotes/laugh.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-laugh"]
   chatTriggers:
     - laugh
@@ -63,9 +63,9 @@
   whitelist:
     requireAll: true
     components:
-    - Vocal
+      - Vocal
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-honk"]
   chatTriggers:
     - honk
@@ -80,10 +80,10 @@
   icon: Interface/Emotes/sigh.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-sigh"]
   chatTriggers:
     - sigh
@@ -97,10 +97,10 @@
   icon: Interface/Emotes/whistle.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-whistle"]
   chatTriggers:
     - whistle
@@ -114,10 +114,10 @@
   icon: Interface/Emotes/cry.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-crying"]
   chatTriggers:
     - cry
@@ -135,10 +135,10 @@
   icon: Interface/Emotes/squish.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-squish"]
   chatTriggers:
     - squish
@@ -153,15 +153,15 @@
   icon: Interface/Emotes/chitter.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-chitter"]
   chatTriggers:
-   - chitter
-   - chitters
-   - chittered
+    - chitter
+    - chitters
+    - chittered
 
 - type: emote
   id: Squeak
@@ -174,12 +174,12 @@
       - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-squeak"]
   chatTriggers:
-   - squeak
-   - squeaks
-   - squeaked
+    - squeak
+    - squeaks
+    - squeaked
 
 - type: emote
   id: Click
@@ -189,14 +189,14 @@
   icon: Interface/Emotes/click.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-click"]
   chatTriggers:
-   - click
-   - clicks
+    - click
+    - clicks
 
 # Vulpkanin
 - type: emote
@@ -206,16 +206,16 @@
   available: false
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-bark"]
   chatTriggers:
-  - bark
-  - barks
-  - barked
-  - barking
+    - bark
+    - barks
+    - barked
+    - barking
 
 - type: emote
   id: Snarl
@@ -224,16 +224,16 @@
   available: false
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-snarl"]
   chatTriggers:
-  - snarl
-  - snarls
-  - snarled
-  - snarling
+    - snarl
+    - snarls
+    - snarled
+    - snarling
 
 - type: emote
   id: Whine
@@ -242,16 +242,16 @@
   available: false
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-whine"]
   chatTriggers:
-  - whine
-  - whines
-  - whined
-  - whining
+    - whine
+    - whines
+    - whined
+    - whining
 
 - type: emote
   id: Howl
@@ -260,16 +260,16 @@
   available: false
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-howl"]
   chatTriggers:
-  - howl
-  - howls
-  - howling
-  - howled
+    - howl
+    - howls
+    - howling
+    - howled
 
 - type: emote
   id: Growl
@@ -278,16 +278,16 @@
   available: false
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-growl"]
   chatTriggers:
-  - growl
-  - growls
-  - growled
-  - growling
+    - growl
+    - growls
+    - growled
+    - growling
 
 # hand emotes
 - type: emote
@@ -297,10 +297,10 @@
   icon: Interface/Emotes/clap.png
   whitelist:
     components:
-    - Hands
+      - Hands
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-clap"]
   chatTriggers:
     - claps
@@ -314,11 +314,11 @@
   icon: Interface/Emotes/clap.png #TODO: Needs a sprite that distinguishes it better from clap
   whitelist:
     components:
-    - Hands
+      - Hands
   blacklist:
     tags:
-    - SiliconEmotes
-  chatMessages: [ "chat-emote-msg-clap-single" ]
+      - SiliconEmotes
+  chatMessages: ["chat-emote-msg-clap-single"]
   chatTriggers:
     - clap
     - claps their hands together
@@ -333,10 +333,10 @@
   icon: Interface/Emotes/snap.png
   whitelist:
     components:
-    - Hands
+      - Hands
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-snap"]
   chatTriggers:
     - snap
@@ -360,10 +360,10 @@
   icon: Interface/Emotes/tailslap.png
   whitelist:
     components:
-    - Hands
+      - Hands
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-thump"]
   chatTriggers:
     - thump
@@ -384,10 +384,10 @@
   icon: Interface/Emotes/salute.png
   whitelist:
     components:
-    - Hands
+      - Hands
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-salute"]
   chatTriggers:
     - salute
@@ -398,12 +398,12 @@
   name: chat-emote-name-gasp
   whitelist:
     components:
-    - Respirator
+      - Respirator
   chatMessages: ["chat-emote-msg-gasp"]
   chatTriggers:
-   - gasp
-   - gasps
-   - gasped
+    - gasp
+    - gasps
+    - gasped
 
 - type: emote
   id: DefaultDeathgasp
@@ -411,10 +411,10 @@
   icon: Interface/Emotes/deathgasp.png
   whitelist:
     components:
-    - MobState
+      - MobState
   chatMessages: ["chat-emote-msg-deathgasp"]
   chatTriggers:
-  - deathgasp
+    - deathgasp
 
 - type: emote
   id: MonkeyDeathgasp
@@ -436,9 +436,9 @@
   whitelist:
     requireAll: true
     components:
-    - Vocal
+      - Vocal
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-buzz"]
   chatTriggers:
     - buzzing
@@ -468,11 +468,11 @@
   icon: Interface/Emotes/chirp.png
   whitelist:
     components:
-    - Nymph
-    - Vocal
+      - Nymph
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-chirp"]
   chatTriggers:
     - chirp
@@ -488,32 +488,32 @@
   icon: Interface/Emotes/flap.png
   whitelist:
     components:
-    - Hands
+      - Hands
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-flap"]
   chatTriggers:
-   - flap
-   - flaps
-   - flapped
-   - flapping
-   - flutter
-   - flutters
-   - fluttering
-   - fluttered
-   - flap wings
-   - flaps wings
-   - flutter wings
-   - flutters wings
-   - flaps his wings
-   - flaps her wings
-   - flaps their wings
-   - flaps its wings
-   - flutters his wings
-   - flutters her wings
-   - flutters their wings
-   - flutters its wings
+    - flap
+    - flaps
+    - flapped
+    - flapping
+    - flutter
+    - flutters
+    - fluttering
+    - fluttered
+    - flap wings
+    - flaps wings
+    - flutter wings
+    - flutters wings
+    - flaps his wings
+    - flaps her wings
+    - flaps their wings
+    - flaps its wings
+    - flutters his wings
+    - flutters her wings
+    - flutters their wings
+    - flutters its wings
 
 # Machine Emotes
 - type: emote
@@ -524,9 +524,9 @@
   whitelist:
     requireAll: true
     components:
-    - Vocal
+      - Vocal
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-beep"]
   chatTriggers:
     - beep
@@ -542,9 +542,9 @@
   whitelist:
     requireAll: true
     components:
-    - Vocal
+      - Vocal
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-chime"]
   chatTriggers:
     - chime
@@ -560,9 +560,9 @@
   whitelist:
     requireAll: true
     components:
-    - Vocal
+      - Vocal
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-buzzestwo"]
   chatTriggers:
     - buzztwice
@@ -584,9 +584,9 @@
   whitelist:
     requireAll: true
     components:
-    - Vocal
+      - Vocal
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-ping"]
   chatTriggers:
     - ping

@@ -65,19 +65,19 @@
   sprite: /Textures/Tiles/Planet/Snow/snow.png
   variants: 13
   placementVariants:
-  - 0.8
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0116
-  - 0.0116
+    - 0.8
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0116
+    - 0.0116
   edgeSpritePriority: 2
   edgeSprites:
     South: /Textures/Tiles/Planet/Snow/snow_double_edge_south.png
@@ -113,5 +113,4 @@
     West: /Textures/Tiles/Planet/Snow/snow_dug_double_edge_west.png
   footstepSounds:
     collection: FootstepSnow
-
 # Wasteland

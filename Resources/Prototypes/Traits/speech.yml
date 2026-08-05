@@ -9,12 +9,12 @@
   category: SpeechTraits
   cost: 2
   components:
-  - type: Accentless
-    removes:
-    - type: LizardAccent
-    - type: MothAccent
-    - type: ReplacementAccent
-      accent: scottish
+    - type: Accentless
+      removes:
+        - type: LizardAccent
+        - type: MothAccent
+        - type: ReplacementAccent
+          accent: scottish
 
 # 1 Cost
 
@@ -25,7 +25,7 @@
   category: SpeechTraits
   cost: 1
   components:
-  - type: SouthernAccent
+    - type: SouthernAccent
 
 - type: trait
   id: GermanAccent
@@ -34,7 +34,7 @@
   category: SpeechTraits
   cost: 1
   components:
-  - type: GermanAccent
+    - type: GermanAccent
 
 - type: trait
   id: FrenchAccent
@@ -43,7 +43,7 @@
   category: SpeechTraits
   cost: 1
   components:
-  - type: FrenchAccent
+    - type: FrenchAccent
 
 - type: trait
   id: SpanishAccent
@@ -52,7 +52,7 @@
   category: SpeechTraits
   cost: 1
   components:
-  - type: SpanishAccent
+    - type: SpanishAccent
 
 - type: trait
   id: Liar
@@ -61,8 +61,8 @@
   category: SpeechTraits
   cost: 1
   components:
-  - type: ReplacementAccent
-    accent: liar
+    - type: ReplacementAccent
+      accent: liar
 
 - type: trait
   id: ScottishAccent
@@ -71,8 +71,8 @@
   category: SpeechTraits
   cost: 1
   components:
-  - type: ReplacementAccent
-    accent: scottish
+    - type: ReplacementAccent
+      accent: scottish
 
 # 2 Cost
 
@@ -83,11 +83,11 @@
   category: SpeechTraits
   cost: 2
   components:
-  - type: StutteringAccent
-    matchRandomProb: 0.1
-    fourRandomProb: 0
-    threeRandomProb: 0
-    cutRandomProb: 0
+    - type: StutteringAccent
+      matchRandomProb: 0.1
+      fourRandomProb: 0
+      threeRandomProb: 0
+      cutRandomProb: 0
 
 - type: trait
   id: FrontalLisp
@@ -96,4 +96,4 @@
   category: SpeechTraits
   cost: 2
   components:
-  - type: FrontalLisp
+    - type: FrontalLisp

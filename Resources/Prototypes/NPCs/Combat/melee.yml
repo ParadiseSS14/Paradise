@@ -39,13 +39,13 @@
     # Pickup weapon if we don't have one.
     - preconditions:
         - !type:ActiveHandComponentPrecondition
-            components:
-              # Just serializer things
-              - type: MeleeWeapon
-                damage:
-                  types:
-                    Blunt: 0
-            invert: true
+          components:
+            # Just serializer things
+            - type: MeleeWeapon
+              damage:
+                types:
+                  Blunt: 0
+          invert: true
       tasks:
         - !type:HTNCompoundTask
           task: PickupMeleeCompound
@@ -62,9 +62,8 @@
           wielded: false
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:WieldOperator
+          operator: !type:WieldOperator # Activate toggleable weapons
 
-    # Activate toggleable weapons
     - preconditions:
         - !type:ActiveHandComponentPrecondition
           components:
@@ -76,9 +75,8 @@
           activated: false
       tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:UseItemInHandOperator
+          operator: !type:UseItemInHandOperator # Melee combat (unarmed or otherwise)
 
-    # Melee combat (unarmed or otherwise)
     - tasks:
         - !type:HTNCompoundTask
           task: MeleeAttackTargetCompound
@@ -130,8 +128,8 @@
   id: MeleeAttackTargetCompound
   branches:
     - preconditions:
-      - !type:KeyExistsPrecondition
-        key: Target
+        - !type:KeyExistsPrecondition
+          key: Target
       tasks:
         - !type:HTNPrimitiveTask
           operator: !type:MoveToOperator
@@ -162,24 +160,24 @@
 - type: htnCompound
   id: EscapeCompound
   branches:
-  - tasks:
-    - !type:HTNPrimitiveTask
-      operator: !type:ContainerOperator
-        targetKey: Target
-        shutdownState: TaskFinished
-    - !type:HTNPrimitiveTask
-      operator: !type:EscapeOperator
-        targetKey: Target
-      preconditions:
-      - !type:InContainerPrecondition
-        isInContainer: true
+    - tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:ContainerOperator
+            targetKey: Target
+            shutdownState: TaskFinished
+        - !type:HTNPrimitiveTask
+          operator: !type:EscapeOperator
+            targetKey: Target
+          preconditions:
+            - !type:InContainerPrecondition
+              isInContainer: true
 
 - type: htnCompound
   id: MeleeAttackOrderedTargetCompound
   branches:
     - preconditions:
-      - !type:KeyExistsPrecondition
-        key: Target
+        - !type:KeyExistsPrecondition
+          key: Target
       tasks:
         - !type:HTNPrimitiveTask
           operator: !type:MoveToOperator
@@ -210,9 +208,9 @@
 - type: htnCompound
   id: DoNotEscapeCompound
   branches:
-  - preconditions:
-    - !type:InFriendlyContainerPrecondition
-      isInFriendlyContainer: true
-    tasks:
-    - !type:HTNPrimitiveTask
-      operator: !type:NoOperator
+    - preconditions:
+        - !type:InFriendlyContainerPrecondition
+          isInFriendlyContainer: true
+      tasks:
+        - !type:HTNPrimitiveTask
+          operator: !type:NoOperator

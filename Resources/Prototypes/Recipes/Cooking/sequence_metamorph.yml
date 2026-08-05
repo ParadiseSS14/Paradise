@@ -7,119 +7,119 @@
   key: Burger
   result: FoodBurgerCheese
   rules:
-  - !type:SequenceLength
-    range:
-      min: 3
-      max: 4
-  - !type:IngredientsWithTags # 1 meat cutlet
-    tags:
-    - Cooked
-    - Cutlet
-    - Meat
-    count:
-      min: 1
-      max: 2
-  - !type:IngredientsWithTags # 1 cheese
-    tags:
-    - Cheese
-    count:
-      min: 1
-      max: 2
-  - !type:LastElementHasTags # last bun
-    tags:
-    - Bun
+    - !type:SequenceLength
+      range:
+        min: 3
+        max: 4
+    - !type:IngredientsWithTags # 1 meat cutlet
+      tags:
+        - Cooked
+        - Cutlet
+        - Meat
+      count:
+        min: 1
+        max: 2
+    - !type:IngredientsWithTags # 1 cheese
+      tags:
+        - Cheese
+      count:
+        min: 1
+        max: 2
+    - !type:LastElementHasTags # last bun
+      tags:
+        - Bun
 
 - type: metamorphRecipe
   id: FoodBurgerChicken
   key: Burger
   result: FoodBurgerChicken
   rules:
-  - !type:SequenceLength
-    range:
-      min: 2
-      max: 3
-  - !type:IngredientsWithTags # 1 chicken meat
-    tags:
-    - Cooked
-    - Cutlet
-    - Meat
-    - Chicken
-    count:
-      min: 1
-      max: 2
-  - !type:FoodHasReagent # 5 +- 2 mayo
-    reagent: Mayo
-    count:
-     min: 3
-     max: 7
-  - !type:LastElementHasTags # last bun
-    tags:
-    - Bun
+    - !type:SequenceLength
+      range:
+        min: 2
+        max: 3
+    - !type:IngredientsWithTags # 1 chicken meat
+      tags:
+        - Cooked
+        - Cutlet
+        - Meat
+        - Chicken
+      count:
+        min: 1
+        max: 2
+    - !type:FoodHasReagent # 5 +- 2 mayo
+      reagent: Mayo
+      count:
+        min: 3
+        max: 7
+    - !type:LastElementHasTags # last bun
+      tags:
+        - Bun
 
 - type: metamorphRecipe
   id: FoodBurgerCrab
   key: Burger
   result: FoodBurgerCrab
   rules:
-  - !type:SequenceLength
-    range:
-      min: 3
-      max: 4
-  - !type:IngredientsWithTags # 2 crab meat
-    tags:
-    - Cooked
-    - Meat
-    - Crab
-    count:
-      min: 2
-      max: 3
-  - !type:LastElementHasTags # last bun
-    tags:
-    - Bun
+    - !type:SequenceLength
+      range:
+        min: 3
+        max: 4
+    - !type:IngredientsWithTags # 2 crab meat
+      tags:
+        - Cooked
+        - Meat
+        - Crab
+      count:
+        min: 2
+        max: 3
+    - !type:LastElementHasTags # last bun
+      tags:
+        - Bun
 
 - type: metamorphRecipe
   id: FoodBurgerDuck
   key: Burger
   result: FoodBurgerDuck
   rules:
-  - !type:SequenceLength
-    range:
-      min: 3
-      max: 4
-  - !type:IngredientsWithTags # 1 duck meat
-    tags:
-    - Cooked
-    - Cutlet
-    - Meat
-    - Duck
-    count:
-      min: 1
-      max: 2
-  - !type:IngredientsWithTags # 1 cheese
-    tags:
-    - Cheese
-    count:
-      min: 1
-      max: 2
-  - !type:LastElementHasTags # last bun
-    tags:
-    - Bun
+    - !type:SequenceLength
+      range:
+        min: 3
+        max: 4
+    - !type:IngredientsWithTags # 1 duck meat
+      tags:
+        - Cooked
+        - Cutlet
+        - Meat
+        - Duck
+      count:
+        min: 1
+        max: 2
+    - !type:IngredientsWithTags # 1 cheese
+      tags:
+        - Cheese
+      count:
+        min: 1
+        max: 2
+    - !type:LastElementHasTags # last bun
+      tags:
+        - Bun
 
 - type: metamorphRecipe
   id: FoodBurgerBrain
   key: Burger
   result: FoodBurgerBrain
   rules:
-  - !type:SequenceLength
-    range:
-      min: 2
-      max: 3
-  - !type:IngredientsWithTags # 1 brain
-    tags:
-    - Brain
-    count:
-      min: 1
-      max: 2
-  - !type:LastElementHasTags # last bun
-    tags:
-    - Bun
+    - !type:SequenceLength
+      range:
+        min: 2
+        max: 3
+    - !type:IngredientsWithTags # 1 brain
+      tags:
+        - Brain
+      count:
+        min: 1
+        max: 2
+    - !type:LastElementHasTags # last bun
+      tags:
+        - Bun

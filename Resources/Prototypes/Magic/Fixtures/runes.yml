@@ -10,7 +10,7 @@
       sprite: Structures/Magic/Cult/rune.rsi
       layers:
         - state: cult2
-          color: '#FF00FF'
+          color: "#FF00FF"
 
 - type: entity
   parent: BaseRune
@@ -21,8 +21,7 @@
     - type: Fixtures
       fixtures:
         rune:
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.4,-0.4,0.4,0.4"
           hard: false
           mask:
@@ -66,7 +65,7 @@
       sprite: Structures/Magic/Cult/trap.rsi
       layers:
         - state: trap
-          color: '#FF770055'
+          color: "#FF770055"
 
 - type: entity
   parent: CollideRune
@@ -85,7 +84,7 @@
       sprite: Structures/Magic/Cult/trap.rsi
       layers:
         - state: trap
-          color: '#FFFF0055'
+          color: "#FFFF0055"
 
 - type: entity
   parent: CollideRune
@@ -98,14 +97,13 @@
     - type: Fixtures
       fixtures:
         ignition:
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.4,-0.4,0.4,0.4"
           hard: false
           mask:
-          - ItemMask
+            - ItemMask
           layer:
-          - SlipLayer
+            - SlipLayer
     - type: DeleteOnTrigger
     - type: IgniteOnCollide
       fireStacks: 5
@@ -113,7 +111,7 @@
       sprite: Structures/Magic/Cult/trap.rsi
       layers:
         - state: trap
-          color: '#FF000055'
+          color: "#FF000055"
 
 - type: entity
   parent: CollideTimerRune

@@ -3,52 +3,52 @@
 - type: latheRecipePack
   id: MaterialsStatic
   recipes:
-  - SheetRGlass
-  - MaterialDurathread
+    - SheetRGlass
+    - MaterialDurathread
 
 - type: latheRecipePack
   id: PartsStatic
   recipes:
-  - Igniter
-  - ModularReceiver
-  - MicroManipulatorStockPart
-  - ConveyorBeltAssembly
+    - Igniter
+    - ModularReceiver
+    - MicroManipulatorStockPart
+    - ConveyorBeltAssembly
 
 - type: latheRecipePack
   id: LightsStatic
   recipes:
-  - LightTube
-  - LedLightTube
-  - SodiumLightTube
-  - ExteriorLightTube
-  - LightBulb
-  - LedLightBulb
-  - DimLightBulb
-  - WarmLightBulb
+    - LightTube
+    - LedLightTube
+    - SodiumLightTube
+    - ExteriorLightTube
+    - LightBulb
+    - LedLightBulb
+    - DimLightBulb
+    - WarmLightBulb
 
 - type: latheRecipePack
   id: PowerCellsStatic
   recipes:
-  - PowerCellSmall
-  - PowerCellMedium
+    - PowerCellSmall
+    - PowerCellMedium
 
 - type: latheRecipePack
   id: CablesStatic
   recipes:
-  - CableStack
-  - CableMVStack
-  - CableHVStack
+    - CableStack
+    - CableMVStack
+    - CableHVStack
 
 - type: latheRecipePack
   id: PaperworkStatic
   recipes:
-  - BoxFolderClipboardEmpty
-  - BoxFolderPlasticClipboardEmpty
+    - BoxFolderClipboardEmpty
+    - BoxFolderPlasticClipboardEmpty
 
 - type: latheRecipePack
   id: TowelsStatic # This is used for both the autolathe and the uniform printer, so "unique" towels that only HoP can print shouldn't be included!
   recipes:
-  - TowelColorWhite
+    - TowelColorWhite
 
 ## Dynamic
 
@@ -56,19 +56,19 @@
 - type: latheRecipePack
   id: Equipment
   recipes:
-  - HandHeldMassScanner
-  - ClothingMaskWeldingGas
-  - SignallerAdvanced
+    - HandHeldMassScanner
+    - ClothingMaskWeldingGas
+    - SignallerAdvanced
 
 - type: latheRecipePack
   id: SalvageSecurityBoards
   recipes:
-  - ShuttleGunKineticCircuitboard
+    - ShuttleGunKineticCircuitboard
 
 - type: latheRecipePack
   id: SalvageSecurityWeapons
   recipes:
-  - WeaponProtoKineticAccelerator
-  - PKAUpgradeDamage
-  - PKAUpgradeRange
-  - PKAUpgradeFireRate
+    - WeaponProtoKineticAccelerator
+    - PKAUpgradeDamage
+    - PKAUpgradeRange
+    - PKAUpgradeFireRate

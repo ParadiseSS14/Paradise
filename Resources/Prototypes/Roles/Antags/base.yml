@@ -2,18 +2,18 @@
   abstract: true
   id: BaseAntagSpecifier
   jobBlacklist:
-  - CentralCommandOfficial
-  - DeathSquad
-  - ERTLeader
-  - ERTChaplain
-  - ERTEngineer
-  - ERTSecurity
-  - ERTMedical
-  - ERTJanitor
-  - CBURN
+    - CentralCommandOfficial
+    - DeathSquad
+    - ERTLeader
+    - ERTChaplain
+    - ERTEngineer
+    - ERTSecurity
+    - ERTMedical
+    - ERTJanitor
+    - CBURN
   blacklist:
     components:
-    - AntagImmune
+      - AntagImmune
 
 # Command
 - type: antagSpecifier
@@ -21,13 +21,13 @@
   parent: BaseAntagSpecifier
   id: CommandBlacklistedAntag
   jobBlacklist:
-  - Captain
-  - HeadOfPersonnel
-  - HeadOfSecurity
-  - ChiefMedicalOfficer
-  - ResearchDirector
-  - ChiefEngineer
-  - Quartermaster
+    - Captain
+    - HeadOfPersonnel
+    - HeadOfSecurity
+    - ChiefMedicalOfficer
+    - ResearchDirector
+    - ChiefEngineer
+    - Quartermaster
 
 # Borgs
 - type: antagSpecifier
@@ -35,8 +35,8 @@
   parent: BaseAntagSpecifier
   id: CyborgBlacklistedAntag
   jobBlacklist:
-  - StationAi
-  - Borg
+    - StationAi
+    - Borg
 
 # Learner Roles
 - type: antagSpecifier
@@ -44,11 +44,11 @@
   parent: BaseAntagSpecifier
   id: InternBlacklistedAntag
   jobBlacklist:
-  - SecurityCadet
-  - MedicalIntern
-  - ResearchAssistant
-  - TechnicalAssistant
-  - Visitor
+    - SecurityCadet
+    - MedicalIntern
+    - ResearchAssistant
+    - TechnicalAssistant
+    - Visitor
 
 # Security
 - type: antagSpecifier
@@ -56,18 +56,18 @@
   parent: BaseAntagSpecifier
   id: SecurityBlacklistedAntag
   jobBlacklist:
-  - HeadOfSecurity
-  - Warden
-  - Detective
-  - SecurityOfficer
-  - SecurityCadet
+    - HeadOfSecurity
+    - Warden
+    - Detective
+    - SecurityOfficer
+    - SecurityCadet
 
 - type: antagSpecifier
   abstract: true
-  parent: [ CommandBlacklistedAntag, SecurityBlacklistedAntag ]
+  parent: [CommandBlacklistedAntag, SecurityBlacklistedAntag]
   id: MindshieldRestrictedAntag
 
 - type: antagSpecifier
   abstract: true
-  parent: [ MindshieldRestrictedAntag, CyborgBlacklistedAntag, InternBlacklistedAntag ]
+  parent: [MindshieldRestrictedAntag, CyborgBlacklistedAntag, InternBlacklistedAntag]
   id: RestrictedAntag

@@ -8,17 +8,17 @@
   physicalDesc: reagent-physical-desc-opaque
   contrabandSeverity: Minor
   plantMetabolism:
-  - !type:PlantAdjustToxins
-    amount: 10
-  - !type:PlantAdjustHealth
-    amount: -5
+    - !type:PlantAdjustToxins
+      amount: 10
+    - !type:PlantAdjustHealth
+      amount: -5
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 4
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 4
 
 - type: reagent
   id: CarpoToxin
@@ -29,24 +29,24 @@
   color: "#e2a38c"
   physicalDesc: reagent-physical-desc-exotic-smelling
   allowedDepartments:
-  - Medical
+    - Medical
   plantMetabolism:
-  - !type:PlantAdjustToxins
-    amount: 10
-  - !type:PlantAdjustHealth
-    amount: -5
+    - !type:PlantAdjustToxins
+      amount: 10
+    - !type:PlantAdjustHealth
+      amount: -5
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 4
-      - !type:PopupMessage
-        type: Local
-        visualType: MediumCaution
-        messages: [ "generic-reagent-effect-burning-insides" ]
-        probability: 0.33
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 4
+        - !type:PopupMessage
+          type: Local
+          visualType: MediumCaution
+          messages: ["generic-reagent-effect-burning-insides"]
+          probability: 0.33
 
 - type: reagent
   id: ChloralHydrate
@@ -57,29 +57,29 @@
   color: "#000067"
   physicalDesc: reagent-physical-desc-nondescript
   allowedDepartments:
-  - Medical
+    - Medical
   metabolisms:
     Bloodstream:
       effects:
-      - !type:Emote
-        emote: Yawn
-        showInChat: true
-        probability: 0.1
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 0.65
-        sprintSpeedModifier: 0.65
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 4
-        type: Update
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: ChloralHydrate
-          min: 20
-        damage:
-          types:
-            Poison: 1.5
+        - !type:Emote
+          emote: Yawn
+          showInChat: true
+          probability: 0.1
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 0.65
+          sprintSpeedModifier: 0.65
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 4
+          type: Update
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: ChloralHydrate
+              min: 20
+          damage:
+            types:
+              Poison: 1.5
 
 - type: reagent
   id: GastroToxin
@@ -98,9 +98,9 @@
               Poison: 2
         - !type:Vomit
           conditions:
-          - !type:ReagentCondition
-            reagent: GastroToxin
-            min: 2
+            - !type:ReagentCondition
+              reagent: GastroToxin
+              min: 2
           probability: 0.2
 
 - type: reagent
@@ -115,10 +115,10 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
 
 - type: reagent
   id: PolytrinicAcid
@@ -132,40 +132,40 @@
   boilingPoint: 78.2 # This isn't a real chemical...
   meltingPoint: -19.4
   plantMetabolism:
-  - !type:PlantAdjustToxins
-    amount: 20
-  - !type:PlantAdjustWeeds
-    amount: -4
-  - !type:PlantAdjustHealth
-    amount: -8
+    - !type:PlantAdjustToxins
+      amount: 20
+    - !type:PlantAdjustWeeds
+      amount: -4
+    - !type:PlantAdjustHealth
+      amount: -8
   reactiveEffects:
     Acidic:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:HealthChange
-        ignoreResistances: false
-        damage:
-          types:
-            Caustic: 0.5
-      - !type:Emote
-        emote: Scream
-        probability: 0.3
+        - !type:HealthChange
+          ignoreResistances: false
+          damage:
+            types:
+              Caustic: 0.5
+        - !type:Emote
+          emote: Scream
+          probability: 0.3
   metabolisms:
     Bloodstream:
-      metabolismRate : 3.00 # High damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
+      metabolismRate: 3.00 # High damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Caustic: 11.0
-      - !type:PopupMessage
-        type: Local
-        visualType: Large
-        messages: [ "generic-reagent-effect-burning-insides" ]
-        probability: 0.33
-      - !type:Emote
-        emote: Scream
-        probability: 0.3
+        - !type:HealthChange
+          damage:
+            types:
+              Caustic: 11.0
+        - !type:PopupMessage
+          type: Local
+          visualType: Large
+          messages: ["generic-reagent-effect-burning-insides"]
+          probability: 0.33
+        - !type:Emote
+          emote: Scream
+          probability: 0.3
 
 - type: reagent
   id: FerrochromicAcid
@@ -178,14 +178,14 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:SatiateThirst
-        factor: -1.5
-      - !type:HealthChange
-        ignoreResistances: true
-        damage:
-          types:
-            Heat: 2.5
-            Caustic: 1
+        - !type:SatiateThirst
+          factor: -1.5
+        - !type:HealthChange
+          ignoreResistances: true
+          damage:
+            types:
+              Heat: 2.5
+              Caustic: 1
 
 - type: reagent
   id: FluorosulfuricAcid
@@ -200,32 +200,32 @@
   meltingPoint: -87
   reactiveEffects:
     Acidic:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:HealthChange
-        ignoreResistances: false
-        damage:
-          types:
-            Caustic: 0.3
-      - !type:Emote
-        emote: Scream
-        probability: 0.2
+        - !type:HealthChange
+          ignoreResistances: false
+          damage:
+            types:
+              Caustic: 0.3
+        - !type:Emote
+          emote: Scream
+          probability: 0.2
   metabolisms:
     Bloodstream:
       metabolismRate: 3.00 # High damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Caustic: 8
-      - !type:PopupMessage
-        type: Local
-        visualType: Large
-        messages: [ "generic-reagent-effect-burning-insides" ]
-        probability: 0.33
-      - !type:Emote
-        emote: Scream
-        probability: 0.25
+        - !type:HealthChange
+          damage:
+            types:
+              Caustic: 8
+        - !type:PopupMessage
+          type: Local
+          visualType: Large
+          messages: ["generic-reagent-effect-burning-insides"]
+          probability: 0.33
+        - !type:Emote
+          emote: Scream
+          probability: 0.25
 
 - type: reagent
   id: SulfuricAcid
@@ -234,47 +234,47 @@
   desc: reagent-desc-sulfuric-acid
   physicalDesc: reagent-physical-desc-oily
   allowedJobs:
-  - Chemist
+    - Chemist
   flavor: acid
   color: "#BF8C00"
   recognizable: true
   boilingPoint: 337.0
   meltingPoint: 10.31
   plantMetabolism:
-  - !type:PlantAdjustToxins
-    amount: 10
-  - !type:PlantAdjustWeeds
-    amount: -2
-  - !type:PlantAdjustHealth
-    amount: -5
+    - !type:PlantAdjustToxins
+      amount: 10
+    - !type:PlantAdjustWeeds
+      amount: -2
+    - !type:PlantAdjustHealth
+      amount: -5
   reactiveEffects:
     Acidic:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:HealthChange
-        ignoreResistances: false
-        damage:
-          types:
-            Caustic: 0.1
-      - !type:Emote
-        emote: Scream
-        probability: 0.1
+        - !type:HealthChange
+          ignoreResistances: false
+          damage:
+            types:
+              Caustic: 0.1
+        - !type:Emote
+          emote: Scream
+          probability: 0.1
   metabolisms:
     Bloodstream:
       metabolismRate: 3.00 # Okay damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Caustic: 5
-      - !type:PopupMessage
-        type: Local
-        visualType: Large
-        messages: [ "generic-reagent-effect-burning-insides" ]
-        probability: 0.33
-      - !type:Emote
-        emote: Scream
-        probability: 0.2
+        - !type:HealthChange
+          damage:
+            types:
+              Caustic: 5
+        - !type:PopupMessage
+          type: Local
+          visualType: Large
+          messages: ["generic-reagent-effect-burning-insides"]
+          probability: 0.33
+        - !type:Emote
+          emote: Scream
+          probability: 0.2
 
 - type: reagent
   id: UnstableMutagen
@@ -283,22 +283,22 @@
   desc: reagent-desc-unstable-mutagen
   physicalDesc: reagent-physical-desc-glowing
   allowedJobs:
-  - Chemist
-  - Botanist
+    - Chemist
+    - Botanist
   flavor: bitter
   color: "#00ff5f"
   boilingPoint: 340282300 # Ethidium bromide, which doesn't boil.
   meltingPoint: 261.0
   plantMetabolism:
-  - !type:PlantAdjustMutationLevel
-    amount: 1
+    - !type:PlantAdjustMutationLevel
+      amount: 1
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Radiation: 3
+        - !type:HealthChange
+          damage:
+            types:
+              Radiation: 3
 
 - type: reagent
   id: HeartbreakerToxin
@@ -311,13 +311,13 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Asphyxiation: 5
+        - !type:HealthChange
+          damage:
+            types:
+              Asphyxiation: 5
   plantMetabolism:
-  - !type:PlantAdjustToxins
-    amount: 10
+    - !type:PlantAdjustToxins
+      amount: 10
 
 - type: reagent
   id: Lexorin
@@ -330,11 +330,11 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Asphyxiation: 5
-            Bloodloss: 5
+        - !type:HealthChange
+          damage:
+            types:
+              Asphyxiation: 5
+              Bloodloss: 5
 
 - type: reagent
   id: MindbreakerToxin
@@ -345,15 +345,15 @@
   flavor: bitter
   color: "#77b58e"
   plantMetabolism:
-  - !type:PlantAdjustToxins
-    amount: 10
+    - !type:PlantAdjustToxins
+      amount: 10
   metabolisms:
     Bloodstream:
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        type: Add
-        time: 10
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          type: Add
+          time: 10
   # TODO: PROPER hallucinations
 
 - type: reagent
@@ -366,35 +366,35 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        probability: 0.1
-        damage:
-          types:
-            Blunt: 2
-      # todo: cough, sneeze
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Histamine
-          min: 45
-        damage:
-          types:
-            Blunt: 2
-            Asphyxiation: 2
-            Poison: 2
-      - !type:PopupMessage
-        type: Local
-        messages: [ "histamine-effect-light-itchiness" ]
-        probability: 0.1
-      - !type:PopupMessage
-        conditions:
-        - !type:ReagentCondition
-          reagent: Histamine
-          min: 45
-        type: Local
-        visualType: Medium
-        messages: [ "histamine-effect-heavy-itchiness" ]
-        probability: 0.2
+        - !type:HealthChange
+          probability: 0.1
+          damage:
+            types:
+              Blunt: 2
+        # todo: cough, sneeze
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Histamine
+              min: 45
+          damage:
+            types:
+              Blunt: 2
+              Asphyxiation: 2
+              Poison: 2
+        - !type:PopupMessage
+          type: Local
+          messages: ["histamine-effect-light-itchiness"]
+          probability: 0.1
+        - !type:PopupMessage
+          conditions:
+            - !type:ReagentCondition
+              reagent: Histamine
+              min: 45
+          type: Local
+          visualType: Medium
+          messages: ["histamine-effect-heavy-itchiness"]
+          probability: 0.2
 
 - type: reagent
   id: Theobromine
@@ -409,18 +409,18 @@
     Bloodstream:
       metabolismRate: 0.05
       effects:
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Animal] # Applying damage to the mobs with lower metabolism capabilities
-        damage:
-          types:
-            Poison: 0.4
-      - !type:Vomit
-        probability: 0.04 #Scaled for time, not metabolismrate.
-        conditions:
-          - !type:MetabolizerTypeCondition
-            type: [Animal]
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Animal] # Applying damage to the mobs with lower metabolism capabilities
+          damage:
+            types:
+              Poison: 0.4
+        - !type:Vomit
+          probability: 0.04 #Scaled for time, not metabolismrate.
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Animal]
 
 - type: reagent
   id: Amatoxin
@@ -434,10 +434,10 @@
     Bloodstream:
       metabolismRate: 0.2
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 3
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 3
 
 - type: reagent
   id: VentCrud
@@ -485,48 +485,48 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:PopupMessage
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox ]
-          inverted: true
-        type: Local
-        visualType: MediumCaution
-        messages: [ "generic-reagent-effect-sick" ]
-        probability: 0.5
-      - !type:Vomit
-        probability: 0.1
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant ]
-          inverted: true
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Animal, Vox, Plant ]
-          inverted: true
-        damage:
-          types:
-            Poison: 1
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant ]
-        damage:
-          types:
-            Poison: .25
-      - !type:AdjustReagent
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Animal ]
-        reagent: Protein
-        amount: 0.5
-      - !type:AdjustReagent
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-        reagent: Protein
-        amount: 0.25
+        - !type:PopupMessage
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Animal, Vox]
+              inverted: true
+          type: Local
+          visualType: MediumCaution
+          messages: ["generic-reagent-effect-sick"]
+          probability: 0.5
+        - !type:Vomit
+          probability: 0.1
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Animal, Vox, Plant]
+              inverted: true
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Animal, Vox, Plant]
+              inverted: true
+          damage:
+            types:
+              Poison: 1
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Plant]
+          damage:
+            types:
+              Poison: .25
+        - !type:AdjustReagent
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Animal]
+          reagent: Protein
+          amount: 0.5
+        - !type:AdjustReagent
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+          reagent: Protein
+          amount: 0.25
 
 - type: reagent
   id: Allicin
@@ -540,16 +540,16 @@
     Digestion:
       metabolismRate: 0.05
       effects:
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Allicin
-          min: 1
-        - !type:MetabolizerTypeCondition
-          type: [Animal]
-        damage:
-          types:
-            Poison: 0.06
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Allicin
+              min: 1
+            - !type:MetabolizerTypeCondition
+              type: [Animal]
+          damage:
+            types:
+              Poison: 0.06
 
 - type: reagent
   id: Pax
@@ -558,16 +558,16 @@
   desc: reagent-desc-pax
   physicalDesc: reagent-physical-desc-soothing
   allowedDepartments:
-  - Security
-  - Medical
+    - Security
+    - Medical
   color: "#AAAAAA"
   metabolisms:
     Bloodstream:
       effects:
-      - !type:GenericStatusEffect
-        key: Pacified
-        component: Pacified
-        time: 4
+        - !type:GenericStatusEffect
+          key: Pacified
+          component: Pacified
+          time: 4
 
 - type: reagent
   id: Honk
@@ -581,23 +581,22 @@
     Bloodstream:
       metabolismRate: 0.05
       effects:
-      - !type:Emote
-        emote: Honk
-        showInChat: true
-        showInGuidebook: true
-        force: true
-        probability: 0.2
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Honk
-          min: 1
-        - !type:MetabolizerTypeCondition
-          type: [ Animal ]
-        damage:
-          types:
-            Poison: 0.06
-
+        - !type:Emote
+          emote: Honk
+          showInChat: true
+          showInGuidebook: true
+          force: true
+          probability: 0.2
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Honk
+              min: 1
+            - !type:MetabolizerTypeCondition
+              type: [Animal]
+          damage:
+            types:
+              Poison: 0.06
 
 - type: reagent
   id: Lead
@@ -611,10 +610,10 @@
     Bloodstream:
       metabolismRate: 0.03 # Effectively once every 30 seconds.
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 0.6 # Makes it 20 damage per unit.
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 0.6 # Makes it 20 damage per unit.
 
 - type: reagent
   id: Bungotoxin
@@ -628,10 +627,10 @@
     Bloodstream:
       metabolismRate: 0.2
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1.8
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1.8
 
 - type: reagent
   id: Vestine
@@ -643,26 +642,26 @@
   flavor: medicine
   color: "#435166"
   plantMetabolism:
-  - !type:PlantMutateChemicals
-    randomPickBotanyReagent: EvilRandomFillSolution
-  - !type:PlantAdjustToxins
-    amount: 10
+    - !type:PlantMutateChemicals
+      randomPickBotanyReagent: EvilRandomFillSolution
+    - !type:PlantAdjustToxins
+      amount: 10
   metabolisms:
     Bloodstream:
       effects:
-      - !type:Jitter
-        conditions:
-        - !type:ReagentCondition
-          reagent: Vestine
-          min: 5
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 0.8
-        sprintSpeedModifier: 0.8
-      - !type:HealthChange
-        damage:
-          types:
-            Asphyxiation: 1
-            Bloodloss: 1
+        - !type:Jitter
+          conditions:
+            - !type:ReagentCondition
+              reagent: Vestine
+              min: 5
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 0.8
+          sprintSpeedModifier: 0.8
+        - !type:HealthChange
+          damage:
+            types:
+              Asphyxiation: 1
+              Bloodloss: 1
 
 - type: reagent
   id: Tazinide
@@ -677,9 +676,9 @@
     Bloodstream:
       metabolismRate: 2.0
       effects:
-      - !type:Electrocute
-        electrocuteTime: 1
-        probability: 0.5
+        - !type:Electrocute
+          electrocuteTime: 1
+          probability: 0.5
 
 - type: reagent
   id: Lipolicide
@@ -688,21 +687,21 @@
   desc: reagent-desc-lipolicide
   physicalDesc: reagent-physical-desc-strong-smelling
   allowedDepartments:
-  - Medical
+    - Medical
   flavor: mothballs #why does weightloss juice taste like mothballs
   color: "#F0FFF0"
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        conditions:
-        - !type:HungerCondition
-          max: 50
-        damage:
-          types:
-            Poison: 2
-      - !type:SatiateHunger
-        factor: -6
+        - !type:HealthChange
+          conditions:
+            - !type:HungerCondition
+              max: 50
+          damage:
+            types:
+              Poison: 2
+        - !type:SatiateHunger
+          factor: -6
 
 # inspired by the spider neurotoxin GsMtx-4
 # poisons non-spiders and slows you down at high doses
@@ -718,34 +717,34 @@
     Bloodstream:
       metabolismRate: 0.2 # Slower metabolism so it can build up over time for slowdown
       effects:
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Arachnid]
-          inverted: true
-        damage:
-          types:
-            Poison: 1.6
-      - !type:MovementSpeedModifier
-        conditions:
-        - !type:ReagentCondition
-          reagent: Mechanotoxin
-          min: 2
-        - !type:MetabolizerTypeCondition
-          type: [Arachnid]
-          inverted: true
-        walkSpeedModifier: 0.8
-        sprintSpeedModifier: 0.8
-      - !type:MovementSpeedModifier
-        conditions:
-        - !type:ReagentCondition
-          reagent: Mechanotoxin
-          min: 4
-        - !type:MetabolizerTypeCondition
-          type: [Arachnid]
-          inverted: true
-        walkSpeedModifier: 0.4
-        sprintSpeedModifier: 0.4
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Arachnid]
+              inverted: true
+          damage:
+            types:
+              Poison: 1.6
+        - !type:MovementSpeedModifier
+          conditions:
+            - !type:ReagentCondition
+              reagent: Mechanotoxin
+              min: 2
+            - !type:MetabolizerTypeCondition
+              type: [Arachnid]
+              inverted: true
+          walkSpeedModifier: 0.8
+          sprintSpeedModifier: 0.8
+        - !type:MovementSpeedModifier
+          conditions:
+            - !type:ReagentCondition
+              reagent: Mechanotoxin
+              min: 4
+            - !type:MetabolizerTypeCondition
+              type: [Arachnid]
+              inverted: true
+          walkSpeedModifier: 0.4
+          sprintSpeedModifier: 0.4
 
 - type: reagent
   id: ToxinTrash
@@ -757,11 +756,11 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateHunger
-        factor: 1
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Vox]
+        - !type:SatiateHunger
+          factor: 1
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
 
 - type: reagent
   id: Hemorrhinol
@@ -775,9 +774,9 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectHemorrhage
-        time: 21 # 7 bleed ticks, you bleed every 3 seconds by default.
-        type: Update
-      - !type:ModifyBleed
-        amount: 0.5
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectHemorrhage
+          time: 21 # 7 bleed ticks, you bleed every 3 seconds by default.
+          type: Update
+        - !type:ModifyBleed
+          amount: 0.5

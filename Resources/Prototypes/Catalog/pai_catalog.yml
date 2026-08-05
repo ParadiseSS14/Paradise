@@ -11,10 +11,10 @@
   cost:
     SiliconMemory: 10
   categories:
-  - PAIAbilities
+    - PAIAbilities
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: PAIMIDIPlayer
@@ -24,10 +24,10 @@
   cost:
     SiliconMemory: 5
   categories:
-  - PAIAbilities
+    - PAIAbilities
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: PAIStationMap
@@ -37,7 +37,7 @@
   cost:
     SiliconMemory: 5
   categories:
-  - PAIAbilities
+    - PAIAbilities
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1

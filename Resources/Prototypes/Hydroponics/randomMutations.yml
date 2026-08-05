@@ -13,6 +13,7 @@
       appliesToProduce: false
       persists: false
       effect: !type:MakeSentient # existing effect.
+
     - name: Slippery
       description: mutation-plant-slippery
       baseOdds: 0.036

@@ -2,16 +2,14 @@
 - type: loadoutEffectGroup
   id: SeniorOfficer
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobWarden
-      time: 6h
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Security
-      time: 60h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobWarden
+        time: 6h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:DepartmentTimeRequirement
+        department: Security
+        time: 60h
 
 # Head
 - type: loadout
@@ -63,16 +61,16 @@
 - type: loadout
   id: SeniorOfficerJumpsuit
   effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+    - !type:GroupLoadoutEffect
+      proto: SeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpsuitSeniorOfficer
 
 - type: loadout
   id: SeniorOfficerJumpskirt
   effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+    - !type:GroupLoadoutEffect
+      proto: SeniorOfficer
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorOfficer
 
@@ -144,7 +142,7 @@
 - type: loadout
   id: SeniorOfficerPDA
   effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorOfficer
+    - !type:GroupLoadoutEffect
+      proto: SeniorOfficer
   equipment:
     id: SeniorOfficerPDA

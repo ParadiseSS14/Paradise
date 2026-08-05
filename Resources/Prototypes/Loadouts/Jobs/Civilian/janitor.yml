@@ -1,11 +1,10 @@
 - type: loadoutEffectGroup
   id: SeniorJanitorial
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobJanitor
-      time: 52h # 1 hour per week for 1 year
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobJanitor
+        time: 52h # 1 hour per week for 1 year
 
 # Head
 - type: loadout

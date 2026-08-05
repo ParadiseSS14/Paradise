@@ -6,7 +6,7 @@
       edges:
         - to: toilet
           completed:
-            - !type:SnapToGrid { }
+            - !type:SnapToGrid {}
           steps:
             - material: Steel
               amount: 5

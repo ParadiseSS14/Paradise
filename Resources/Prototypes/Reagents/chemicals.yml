@@ -20,11 +20,11 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Caustic: 1
-            Poison: 2 # Phenol is definitely not safe
+        - !type:HealthChange
+          damage:
+            types:
+              Caustic: 1
+              Poison: 2 # Phenol is definitely not safe
 
 - type: reagent
   id: Charcoal
@@ -37,13 +37,13 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: -1
-      - !type:CleanBloodstream
-        excluded: Charcoal
-        cleanseRate: 3
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: -1
+        - !type:CleanBloodstream
+          excluded: Charcoal
+          cleanseRate: 3
 
 - type: reagent
   id: Ash
@@ -62,10 +62,10 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Caustic: 1
+        - !type:HealthChange
+          damage:
+            types:
+              Caustic: 1
 
 - type: reagent
   id: SodiumCarbonate
@@ -81,21 +81,21 @@
   flavor: metallic
   physicalDesc: reagent-physical-desc-crystalline
   allowedDepartments:
-  - Science
+    - Science
   color: "#776291"
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Caustic: 2
+        - !type:HealthChange
+          damage:
+            types:
+              Caustic: 2
   reactiveEffects:
     Acidic:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:ArtifactUnlock
-        minScale: 5
+        - !type:ArtifactUnlock
+          minScale: 5
 
 - type: reagent
   parent: Artifexium
@@ -107,10 +107,10 @@
   color: "#827394"
   reactiveEffects:
     Acidic:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:ArtifactDurabilityRestore
-        minScale: 5
+        - !type:ArtifactDurabilityRestore
+          minScale: 5
 
 - type: reagent
   id: Benzene
@@ -118,17 +118,17 @@
   desc: reagent-desc-benzene
   physicalDesc: reagent-physical-desc-acidic
   allowedJobs:
-  - Chemist
+    - Chemist
   color: "#E7EA91"
   boilingPoint: 353.2
   meltingPoint: 278.7
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Cellular: 1 #it's a carcinogen, reckon this is fine
+        - !type:HealthChange
+          damage:
+            types:
+              Cellular: 1 #it's a carcinogen, reckon this is fine
 
 - type: reagent
   id: Hydroxide
@@ -150,16 +150,16 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Heat: 1.5
-      - !type:Vomit
-        conditions:
-        - !type:ReagentCondition
-          reagent: SodiumHydroxide
-          min: 5
-        probability: 0.1
+        - !type:HealthChange
+          damage:
+            types:
+              Heat: 1.5
+        - !type:Vomit
+          conditions:
+            - !type:ReagentCondition
+              reagent: SodiumHydroxide
+              min: 5
+          probability: 0.1
 
 - type: reagent
   id: Fersilicite
@@ -181,13 +181,13 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:SatiateThirst
-        factor: -5 # This is basically industrial dessicant
-      - !type:PopupMessage
-        visualType: MediumCaution
-        type: Local
-        messages: [ "generic-reagent-effect-parched" ]
-        probability: 0.1
+        - !type:SatiateThirst
+          factor: -5 # This is basically industrial dessicant
+        - !type:PopupMessage
+          visualType: MediumCaution
+          type: Local
+          messages: ["generic-reagent-effect-parched"]
+          probability: 0.1
 
 - type: reagent
   id: Cellulose
@@ -209,10 +209,10 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:EvenHealthChange
-        damage:
-          Brute: -4
-      - !type:GenericStatusEffect
-        key: Adrenaline
-        component: IgnoreSlowOnDamage
-        time: 120
+        - !type:EvenHealthChange
+          damage:
+            Brute: -4
+        - !type:GenericStatusEffect
+          key: Adrenaline
+          component: IgnoreSlowOnDamage
+          time: 120

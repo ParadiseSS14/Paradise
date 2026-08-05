@@ -4,14 +4,14 @@
   name: Smoke
   description: Summons smoke around the user.
   components:
-  - type: Action
-    useDelay: 10
-    itemIconStyle: BigAction
-  - type: Sprite
-    sprite: Actions/smokeaction.rsi
-    layers:
-    - state: smokeaction
-  - type: InstantAction
-    event: !type:InstantSpawnSpellEvent
-      prototype: WizardSmoke
-      posData: !type:TargetInFront
+    - type: Action
+      useDelay: 10
+      itemIconStyle: BigAction
+    - type: Sprite
+      sprite: Actions/smokeaction.rsi
+      layers:
+        - state: smokeaction
+    - type: InstantAction
+      event: !type:InstantSpawnSpellEvent
+        prototype: WizardSmoke
+        posData: !type:TargetInFront

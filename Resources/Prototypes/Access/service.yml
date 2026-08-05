@@ -33,12 +33,12 @@
 - type: accessGroup
   id: Service
   tags:
-  - HeadOfPersonnel
-  - Bar
-  - Kitchen
-  - Hydroponics
-  - Service
-  - Janitor
-  - Theatre
-  - Chapel
-  - Lawyer
+    - HeadOfPersonnel
+    - Bar
+    - Kitchen
+    - Hydroponics
+    - Service
+    - Janitor
+    - Theatre
+    - Chapel
+    - Lawyer

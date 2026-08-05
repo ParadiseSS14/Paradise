@@ -129,10 +129,10 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateHunger
-        factor: 0.5
-      - !type:SatiateThirst
-        factor: -0.5 # high salt content
+        - !type:SatiateHunger
+          factor: 0.5
+        - !type:SatiateThirst
+          factor: -0.5 # high salt content
 
 - type: reagent
   id: TableSalt
@@ -146,24 +146,24 @@
   boilingPoint: 1465.0
   meltingPoint: 800.7
   plantMetabolism:
-  - !type:PlantAdjustWater
-    amount: -3
-  - !type:PlantAdjustNutrition
-    amount: -0.3
-  - !type:PlantAdjustToxins
-    amount: 8
-  - !type:PlantAdjustWeeds
-    amount: -2
-  - !type:PlantAdjustPests
-    amount: -1
-  - !type:PlantAdjustHealth
-    amount: -2
+    - !type:PlantAdjustWater
+      amount: -3
+    - !type:PlantAdjustNutrition
+      amount: -0.3
+    - !type:PlantAdjustToxins
+      amount: 8
+    - !type:PlantAdjustWeeds
+      amount: -2
+    - !type:PlantAdjustPests
+      amount: -1
+    - !type:PlantAdjustHealth
+      amount: -2
   metabolisms:
     Digestion:
       effects:
-      # eating salt on its own kinda sucks, kids
-      - !type:SatiateThirst
-        factor: -0.5
+        # eating salt on its own kinda sucks, kids
+        - !type:SatiateThirst
+          factor: -0.5
 
 - type: reagent
   id: Syrup
@@ -181,8 +181,8 @@
     Digestion:
       # 12 diona blood for 1 unit of syrup, this stuff better be worthwhile.
       effects:
-      - !type:SatiateHunger
-        factor: 6.0 #Stronger than cookedramen
+        - !type:SatiateHunger
+          factor: 6.0 #Stronger than cookedramen
   footstepSound:
     collection: FootstepSlime
     params:

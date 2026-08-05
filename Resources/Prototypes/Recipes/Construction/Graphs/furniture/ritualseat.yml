@@ -21,20 +21,20 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-                prototype: MaterialWoodPlank1
-                amount: 2
+              prototype: MaterialWoodPlank1
+              amount: 2
           steps:
             - tool: Screwing
               doAfter: 1
 
         - to: chairCursed
           steps:
-          - tag: Head
-            icon:
-              sprite: Mobs/Species/Human/parts.rsi
-              state: "head_m"
-            name: construction-graph-tag-human-head
-            doAfter: 1
+            - tag: Head
+              icon:
+                sprite: Mobs/Species/Human/parts.rsi
+                state: "head_m"
+              name: construction-graph-tag-human-head
+              doAfter: 1
 
     - node: chairCursed
       entity: ChairCursed

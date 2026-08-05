@@ -3,6 +3,6 @@
   parent: MarkerBase
   name: pathfind point
   components:
-  - type: NPCPathfindPoint
-  - type: Sprite
-    state: pink
+    - type: NPCPathfindPoint
+    - type: Sprite
+      state: pink

@@ -12,12 +12,12 @@
   cost:
     Telecrystal: 12
   categories:
-  - UplinkAllies
+    - UplinkAllies
   conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkReinforcementRadioSyndicate
@@ -31,7 +31,7 @@
   cost:
     Telecrystal: 11
   categories:
-  - UplinkAllies
+    - UplinkAllies
   conditions:
     - !type:StoreWhitelistCondition
       blacklist:
@@ -47,7 +47,7 @@
   cost:
     Telecrystal: 30
   categories:
-  - UplinkAllies
+    - UplinkAllies
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -56,7 +56,7 @@
 
 - type: listing
   id: UplinkReinforcementRadioSyndicateCyborgAssault
-  name:  uplink-reinforcement-radio-cyborg-assault-name
+  name: uplink-reinforcement-radio-cyborg-assault-name
   description: uplink-reinforcement-radio-cyborg-assault-desc
   productEntity: ReinforcementRadioSyndicateCyborgAssault
   icon: { sprite: Objects/Devices/communication.rsi, state: old-radio-borg-assault }
@@ -82,7 +82,7 @@
   cost:
     Telecrystal: 6
   categories:
-  - UplinkAllies
+    - UplinkAllies
   conditions:
     - !type:StoreWhitelistCondition
       blacklist:
@@ -101,7 +101,7 @@
   cost:
     Telecrystal: 6
   categories:
-  - UplinkAllies
+    - UplinkAllies
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -116,12 +116,12 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkAllies
+    - UplinkAllies
   conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkMobCatMicrobomb
@@ -148,5 +148,5 @@
   categories:
     - UplinkAllies
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1

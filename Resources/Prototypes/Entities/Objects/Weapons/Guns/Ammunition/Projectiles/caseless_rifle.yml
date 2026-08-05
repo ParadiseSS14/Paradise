@@ -1,21 +1,21 @@
 - type: entity
   parent: BaseBullet
   id: BulletCaselessRifle
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   name: bullet (.25 caseless)
   components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 19
+    - type: Projectile
+      damage:
+        types:
+          Piercing: 19
 
 - type: entity
   parent: BaseBulletPractice
   id: BulletCaselessRiflePractice
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   name: bullet (.25 caseless practice)
   components:
-  - type: Projectile
-    damage:
-      types:
-        Blunt: 2
+    - type: Projectile
+      damage:
+        types:
+          Blunt: 2

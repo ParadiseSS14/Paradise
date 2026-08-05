@@ -2,13 +2,13 @@
   id: Pizza
   start: start
   graph:
-  - node: start
-    entity: FoodDough
-    edges:
-    - to: flat
-      steps:
-      - tool: Rolling
-        doAfter: 1
-  - node: flat
-    entity: FoodDoughFlat
+    - node: start
+      entity: FoodDough
+      edges:
+        - to: flat
+          steps:
+            - tool: Rolling
+              doAfter: 1
+    - node: flat
+      entity: FoodDoughFlat
   # TODO: add stuff for adding ingredients then cooking the pizza, wsci

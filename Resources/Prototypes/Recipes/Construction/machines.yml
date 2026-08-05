@@ -5,7 +5,7 @@
   category: construction-category-machines
   placementMode: SnapgridCenter
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   abstract: true
@@ -13,10 +13,11 @@
   id: BaseSwitch
   canBuildInImpassable: true
   conditions:
-  - !type:WallmountCondition
-# endregion Base
+    - !type:WallmountCondition
+      # endregion Base
 
-# region Machines
+      # region Machines
+
 - type: construction
   parent: BaseMachine
   id: Computer

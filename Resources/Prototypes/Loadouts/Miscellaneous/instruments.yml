@@ -3,172 +3,172 @@
   id: Glockenspiel
   storage:
     back:
-    - GlockenspielInstrument
+      - GlockenspielInstrument
 
 - type: loadout
   id: MusicBox
   storage:
     back:
-    - MusicBoxInstrument
+      - MusicBoxInstrument
 
 - type: loadout
   id: Xylophone
   storage:
     back:
-    - XylophoneInstrument
+      - XylophoneInstrument
 
 - type: loadout
   id: Microphone
   storage:
     back:
-    - MicrophoneInstrument
+      - MicrophoneInstrument
 
 - type: loadout
   id: Synthesizer
   storage:
     back:
-    - SynthesizerInstrument
+      - SynthesizerInstrument
 
 - type: loadout
   id: Kalimba
   storage:
     back:
-    - KalimbaInstrument
+      - KalimbaInstrument
 
 - type: loadout
   id: Woodblock
   storage:
     back:
-    - WoodblockInstrument
+      - WoodblockInstrument
 
 - type: loadout
   id: ElectricGuitar
   storage:
     back:
-    - ElectricGuitarInstrument
+      - ElectricGuitarInstrument
 
 - type: loadout
   id: BassGuitar
   storage:
     back:
-    - BassGuitarInstrument
+      - BassGuitarInstrument
 
 - type: loadout
   id: FretlessBassGuitar
   storage:
     back:
-    - FretlessBassGuitarInstrument
+      - FretlessBassGuitarInstrument
 
 - type: loadout
   id: RockGuitar
   storage:
     back:
-    - RockGuitarInstrument
+      - RockGuitarInstrument
 
 - type: loadout
   id: AcousticGuitar
   storage:
     back:
-    - AcousticGuitarInstrument
+      - AcousticGuitarInstrument
 
 - type: loadout
   id: Banjo
   storage:
     back:
-    - BanjoInstrument
+      - BanjoInstrument
 
 - type: loadout
   id: Violin
   storage:
     back:
-    - ViolinInstrument
+      - ViolinInstrument
 
 - type: loadout
   id: Viola
   storage:
     back:
-    - ViolaInstrument
+      - ViolaInstrument
 
 - type: loadout
   id: Cello
   storage:
     back:
-    - CelloInstrument
+      - CelloInstrument
 
 - type: loadout
   id: Trumpet
   storage:
     back:
-    - TrumpetInstrument
+      - TrumpetInstrument
 
 - type: loadout
   id: Trombone
   storage:
     back:
-    - TromboneInstrument
+      - TromboneInstrument
 
 - type: loadout
   id: FrenchHorn
   storage:
     back:
-    - FrenchHornInstrument
+      - FrenchHornInstrument
 
 - type: loadout
   id: Euphonium
   storage:
     back:
-    - EuphoniumInstrument
+      - EuphoniumInstrument
 
 - type: loadout
   id: Saxophone
   storage:
     back:
-    - SaxophoneInstrument
+      - SaxophoneInstrument
 
 - type: loadout
   id: Accordion
   storage:
     back:
-    - AccordionInstrument
+      - AccordionInstrument
 
 - type: loadout
   id: Harmonica
   storage:
     back:
-    - HarmonicaInstrument
+      - HarmonicaInstrument
 
 - type: loadout
   id: Clarinet
   storage:
     back:
-    - ClarinetInstrument
+      - ClarinetInstrument
 
 - type: loadout
   id: Flute
   storage:
     back:
-    - FluteInstrument
+      - FluteInstrument
 
 - type: loadout
   id: Recorder
   storage:
     back:
-    - RecorderInstrument
+      - RecorderInstrument
 
 - type: loadout
   id: PanFlute
   storage:
     back:
-    - PanFluteInstrument
+      - PanFluteInstrument
 
 - type: loadout
   id: Ocarina
   storage:
     back:
-    - OcarinaInstrument
+      - OcarinaInstrument
 
 - type: loadout
   id: Bagpipe
   storage:
     back:
-    - BagpipeInstrument
+      - BagpipeInstrument

@@ -3,10 +3,10 @@
   name: guide-entry-security
   text: "/ServerInfo/Guidebook/Security/Security.xml"
   children:
-  - Forensics
-  - Defusal
-  - CriminalRecords
-  - SpaceLaw
+    - Forensics
+    - Defusal
+    - CriminalRecords
+    - SpaceLaw
 
 - type: guideEntry
   id: Forensics
@@ -28,7 +28,7 @@
   name: guide-entry-rules-space-law
   text: "/ServerInfo/Guidebook/ServerRules/SpaceLaw/SpaceLaw.xml"
   children:
-  - SpaceLawCrimeList
+    - SpaceLawCrimeList
 
 - type: guideEntry
   id: SpaceLawCrimeList

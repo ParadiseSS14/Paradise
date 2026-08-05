@@ -4,19 +4,19 @@
   name: medical supplies crate
   description: Basic medical supplies.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: MedkitFilled
-          amount: 2
-        - id: Gauze
-          amount: 2
-        - id: Bloodpack
-          amount: 2
-        - id: BoxLatexGloves
-        - id: BoxSterileMask
-        - id: BoxMouthSwab
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: MedkitFilled
+              amount: 2
+            - id: Gauze
+              amount: 2
+            - id: Bloodpack
+              amount: 2
+            - id: BoxLatexGloves
+            - id: BoxSterileMask
+            - id: BoxMouthSwab
 
 - type: entity
   parent: CrateMedical
@@ -24,18 +24,18 @@
   name: chemistry supplies crate
   description: A crate containing assorted laboratory glassware, droppers, syringes, and pill canisters. Chemicals sold separately.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: BoxBeaker
-        - id: BoxBottle
-          amount: 2
-        - id: BoxPillCanister
-        - id: BoxSyringe
-        - id: BoxVial
-        - id: Dropper
-          amount: 2
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: BoxBeaker
+            - id: BoxBottle
+              amount: 2
+            - id: BoxPillCanister
+            - id: BoxSyringe
+            - id: BoxVial
+            - id: Dropper
+              amount: 2
 
 - type: entity
   parent: CrateMedical
@@ -43,11 +43,11 @@
   name: MindShield implant crate
   description: Crate filled with 3 MindShield implants.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MindShieldImplanter
-        amount: 3
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: MindShieldImplanter
+          amount: 3
 
 - type: entity
   parent: CrateSurgery
@@ -55,17 +55,17 @@
   name: surgical supplies crate
   description: Surgical instruments.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: Scalpel
-        - id: Retractor
-        - id: Cautery
-        - id: Drill
-        - id: Saw
-        - id: Hemostat
-        - id: ClothingMaskSterile
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: Scalpel
+            - id: Retractor
+            - id: Cautery
+            - id: Drill
+            - id: Saw
+            - id: Hemostat
+            - id: ClothingMaskSterile
 
 - type: entity
   parent: CrateMedical
@@ -73,18 +73,18 @@
   name: medical scrubs crate
   description: Medical clothings.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: UniformScrubsColorGreen
-        - id: UniformScrubsColorPurple
-        - id: UniformScrubsColorBlue
-        - id: ClothingHeadHatSurgcapBlue
-        - id: ClothingHeadHatSurgcapPurple
-        - id: ClothingHeadHatSurgcapGreen
-        - id: ClothingMaskSterile
-          amount: 3
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: UniformScrubsColorGreen
+            - id: UniformScrubsColorPurple
+            - id: UniformScrubsColorBlue
+            - id: ClothingHeadHatSurgcapBlue
+            - id: ClothingHeadHatSurgcapPurple
+            - id: ClothingHeadHatSurgcapGreen
+            - id: ClothingMaskSterile
+              amount: 3
 
 - type: entity
   parent: CrateMedical
@@ -92,10 +92,10 @@
   name: emergency burn kit
   description: Crate filled with a burn treatment kit.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MedkitBurnFilled
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: MedkitBurnFilled
 
 - type: entity
   parent: CrateMedical
@@ -103,10 +103,10 @@
   name: emergency toxin kit
   description: Crate filled with a toxin treatment kit.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MedkitToxinFilled
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: MedkitToxinFilled
 
 - type: entity
   parent: CrateMedical
@@ -114,10 +114,10 @@
   name: emergency O2 kit
   description: Crate filled with an O2 treatment kit.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MedkitOxygenFilled
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: MedkitOxygenFilled
 
 - type: entity
   parent: CrateMedical
@@ -125,10 +125,10 @@
   name: emergency brute kit
   description: Crate filled with a brute treatment kit.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MedkitBruteFilled
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: MedkitBruteFilled
 
 - type: entity
   parent: CrateMedical
@@ -136,10 +136,10 @@
   name: emergency advanced kit
   description: Crate filled with an advanced treatment kit.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MedkitAdvancedFilled
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: MedkitAdvancedFilled
 
 - type: entity
   parent: CrateMedical
@@ -147,10 +147,10 @@
   name: emergency radiation kit
   description: Crate filled with a radiation treatment kit.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: MedkitRadiationFilled
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: MedkitRadiationFilled
 
 - type: entity
   parent: CrateMedical
@@ -158,11 +158,11 @@
   name: body bags crate
   description: Contains ten body bags.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: BoxBodyBag
-        amount: 2
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: BoxBodyBag
+          amount: 2
 
 - type: entity
   parent: CrateMedicalSecure
@@ -170,12 +170,12 @@
   name: virology bio suit crate
   description: Contains 2 biohazard suits to ensure that no disease will distract you from treating the crew. Requires Medical access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: FillBiohazardGearVirology
-          rolls: 2
-        - id: ClothingMaskSterile
-          amount: 2
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - !type:NestedSelector
+              tableId: FillBiohazardGearVirology
+              rolls: 2
+            - id: ClothingMaskSterile
+              amount: 2

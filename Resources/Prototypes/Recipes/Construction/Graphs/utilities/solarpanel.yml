@@ -139,36 +139,36 @@
     - node: solarpanelplasma_broken
       entity: SolarPanelPlasmaBroken
       edges:
-      - to: solarassembly
-        completed:
-        - !type:SnapToGrid
-          southRotation: true
-        - !type:SpawnPrototype
-          prototype: ShardGlassPlasma
-          amount: 2
-        conditions:
-        - !type:EntityAnchored
-          anchored: true
-        steps:
-        - tool: Prying
-          doAfter: 0.5
+        - to: solarassembly
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+            - !type:SpawnPrototype
+              prototype: ShardGlassPlasma
+              amount: 2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Prying
+              doAfter: 0.5
 
     - node: solarpaneluranium_broken
       entity: SolarPanelUraniumBroken
       edges:
-      - to: solarassembly
-        completed:
-        - !type:SnapToGrid
-          southRotation: true
-        - !type:SpawnPrototype
-          prototype: ShardGlassUranium
-          amount: 2
-        conditions:
-        - !type:EntityAnchored
-          anchored: true
-        steps:
-        - tool: Prying
-          doAfter: 0.5
+        - to: solarassembly
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+            - !type:SpawnPrototype
+              prototype: ShardGlassUranium
+              amount: 2
+          conditions:
+            - !type:EntityAnchored
+              anchored: true
+          steps:
+            - tool: Prying
+              doAfter: 0.5
 
     - node: solartracker
       entity: SolarTracker

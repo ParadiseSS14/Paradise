@@ -3,9 +3,9 @@
   parent: MarkerBase
   name: nukies
   components:
-  - type: SpawnPoint
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Objects/Fun/Balloons/syndicate.rsi
-      state: icon
+    - type: SpawnPoint
+    - type: Sprite
+      layers:
+        - state: green
+        - sprite: Objects/Fun/Balloons/syndicate.rsi
+          state: icon

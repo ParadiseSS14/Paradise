@@ -31,12 +31,11 @@
       damageContainer: Inorganic
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 100
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
+        - trigger: !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
     - type: Construction
       graph: LeverGraph
       node: LeverNode
@@ -51,4 +50,4 @@
         - Middle
     - type: Tag
       tags:
-      - Structure
+        - Structure

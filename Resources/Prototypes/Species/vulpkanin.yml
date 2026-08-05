@@ -10,9 +10,9 @@
   femaleFirstNames: names_vulpkanin_female
   lastNames: names_vulpkanin_last
   defaultSoundsBySex:
-  - MaleVulpkanin
-  - FemaleVulpkanin
-  - MaleVulpkanin
+    - MaleVulpkanin
+    - FemaleVulpkanin
+    - MaleVulpkanin
   voices:
-  - MaleVulpkanin
-  - FemaleVulpkanin
+    - MaleVulpkanin
+    - FemaleVulpkanin

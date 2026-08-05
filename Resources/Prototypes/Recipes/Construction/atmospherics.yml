@@ -20,10 +20,10 @@
   parent: BaseAtmos
   id: BaseGasDevice
   conditions:
-  - !type:NoUnstackableInTile
+    - !type:NoUnstackableInTile
+      # we allow stacking for shit like radiators on top of atmosdevices
+      # for now (trademark patent pending)
 
-# we allow stacking for shit like radiators on top of atmosdevices
-# for now (trademark patent pending)
 - type: construction
   abstract: true
   parent: BaseAtmos
@@ -64,7 +64,7 @@
   targetNode: air_alarm
   canBuildInImpassable: true
   conditions:
-  - !type:WallmountCondition
+    - !type:WallmountCondition
 
 - type: construction
   parent: BaseAtmos
@@ -73,7 +73,7 @@
   targetNode: fire_alarm
   canBuildInImpassable: true
   conditions:
-  - !type:WallmountCondition
+    - !type:WallmountCondition
 
 - type: construction
   parent: BaseAtmos
@@ -88,9 +88,9 @@
   graph: GasPipeSensor
   targetNode: sensor
   alternativePrototypes:
-  - GasPipeSensor
-  - GasPipeSensorAlt1
-  - GasPipeSensorAlt2
+    - GasPipeSensor
+    - GasPipeSensorAlt1
+    - GasPipeSensorAlt2
 
 - type: construction
   parent: GasPipeSensor
@@ -112,9 +112,9 @@
   name: construction-recipe-gas-pipe-half
   targetNode: half
   alternativePrototypes:
-  - GasPipeHalf
-  - GasPipeHalfAlt1
-  - GasPipeHalfAlt2
+    - GasPipeHalf
+    - GasPipeHalfAlt1
+    - GasPipeHalfAlt2
 
 - type: construction
   parent: GasPipeHalf
@@ -133,9 +133,9 @@
   id: GasPipeStraight
   targetNode: straight
   alternativePrototypes:
-  - GasPipeStraight
-  - GasPipeStraightAlt1
-  - GasPipeStraightAlt2
+    - GasPipeStraight
+    - GasPipeStraightAlt1
+    - GasPipeStraightAlt2
 
 - type: construction
   parent: GasPipeStraight
@@ -155,9 +155,9 @@
   name: construction-recipe-gas-pipe-bend
   targetNode: bend
   alternativePrototypes:
-  - GasPipeBend
-  - GasPipeBendAlt1
-  - GasPipeBendAlt2
+    - GasPipeBend
+    - GasPipeBendAlt1
+    - GasPipeBendAlt2
 
 - type: construction
   parent: GasPipeBend
@@ -177,9 +177,9 @@
   name: construction-recipe-gas-pipe-t-junction
   targetNode: tjunction
   alternativePrototypes:
-  - GasPipeTJunction
-  - GasPipeTJunctionAlt1
-  - GasPipeTJunctionAlt2
+    - GasPipeTJunction
+    - GasPipeTJunctionAlt1
+    - GasPipeTJunctionAlt2
 
 - type: construction
   parent: GasPipeTJunction
@@ -199,9 +199,9 @@
   name: construction-recipe-gas-pipe-fourway
   targetNode: fourway
   alternativePrototypes:
-  - GasPipeFourway
-  - GasPipeFourwayAlt1
-  - GasPipeFourwayAlt2
+    - GasPipeFourway
+    - GasPipeFourwayAlt1
+    - GasPipeFourwayAlt2
 
 - type: construction
   parent: GasPipeFourway
@@ -250,9 +250,9 @@
   id: GasPressurePump
   targetNode: pressurepump
   alternativePrototypes:
-  - GasPressurePump
-  - GasPressurePumpAlt1
-  - GasPressurePumpAlt2
+    - GasPressurePump
+    - GasPressurePumpAlt1
+    - GasPressurePumpAlt2
 
 - type: construction
   parent: GasPressurePump
@@ -271,9 +271,9 @@
   id: GasVolumePump
   targetNode: volumepump
   alternativePrototypes:
-  - GasVolumePump
-  - GasVolumePumpAlt1
-  - GasVolumePumpAlt2
+    - GasVolumePump
+    - GasVolumePumpAlt1
+    - GasVolumePumpAlt2
 
 - type: construction
   parent: GasVolumePump
@@ -292,9 +292,9 @@
   id: GasPassiveGate
   targetNode: passivegate
   alternativePrototypes:
-  - GasPassiveGate
-  - GasPassiveGateAlt1
-  - GasPassiveGateAlt2
+    - GasPassiveGate
+    - GasPassiveGateAlt1
+    - GasPassiveGateAlt2
 
 - type: construction
   parent: GasPassiveGate
@@ -313,9 +313,9 @@
   id: GasPressureRegulator
   targetNode: pressureregulator
   alternativePrototypes:
-  - GasPressureRegulator
-  - GasPressureRegulatorAlt1
-  - GasPressureRegulatorAlt2
+    - GasPressureRegulator
+    - GasPressureRegulatorAlt1
+    - GasPressureRegulatorAlt2
 
 - type: construction
   parent: GasPressureRegulator
@@ -334,9 +334,9 @@
   id: GasValve
   targetNode: valve
   alternativePrototypes:
-  - GasValve
-  - GasValveAlt1
-  - GasValveAlt2
+    - GasValve
+    - GasValveAlt1
+    - GasValveAlt2
 
 - type: construction
   parent: GasValve
@@ -355,9 +355,9 @@
   id: SignalControlledValve
   targetNode: signalvalve
   alternativePrototypes:
-  - SignalControlledValve
-  - SignalControlledValveAlt1
-  - SignalControlledValveAlt2
+    - SignalControlledValve
+    - SignalControlledValveAlt1
+    - SignalControlledValveAlt2
 
 - type: construction
   parent: SignalControlledValve

@@ -14,8 +14,8 @@
       state: icon
     - type: Tag
       tags:
-      - ModularReceiver
-      - Metal
+        - ModularReceiver
+        - Metal
 
 - type: entity
   parent: BaseItem
@@ -34,5 +34,5 @@
       node: riflestock
     - type: Tag
       tags:
-      - RifleStock
-      - Wooden
+        - RifleStock
+        - Wooden

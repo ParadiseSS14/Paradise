@@ -1,14 +1,14 @@
 - type: soundCollection
   id: DeliveryOpenSounds
   files:
-  - /Audio/Effects/unwrap.ogg
+    - /Audio/Effects/unwrap.ogg
 
 - type: soundCollection
   id: DeliveryUnlockSounds
   files:
-  - /Audio/Effects/Cargo/ping.ogg
+    - /Audio/Effects/Cargo/ping.ogg
 
 - type: soundCollection
   id: DeliverySpawnSounds
   files:
-  - /Audio/Effects/Lightning/lightningbolt.ogg
+    - /Audio/Effects/Lightning/lightningbolt.ogg

@@ -43,20 +43,20 @@
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/CoreRules/RuleC0.xml"
   children:
-  - RuleC1
-  - RuleC2
-  - RuleC3
-  - RuleC4
-  - RuleC5
-  - RuleC6
-  - RuleC7
-  - RuleC8
-  - RuleC9
-  - RuleC10
-  - RuleC11
-  - RuleC12
-  - RuleC13
-  - RuleC14
+    - RuleC1
+    - RuleC2
+    - RuleC3
+    - RuleC4
+    - RuleC5
+    - RuleC6
+    - RuleC7
+    - RuleC8
+    - RuleC9
+    - RuleC10
+    - RuleC11
+    - RuleC12
+    - RuleC13
+    - RuleC14
 
 - type: guideEntry
   id: RuleC1
@@ -149,21 +149,21 @@
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR0.xml"
   children:
-  - RuleR1
-  - RuleR2
-  - RuleR3
-  - RuleR4
-  - RuleR5
-  - RuleR6
-  - RuleR7
-  - RuleR8
-  - RuleR9
-  - RuleR10
-  - RuleR11
-  - RuleR12
-  - RuleR13
-  - RuleR14
-  - RuleR15
+    - RuleR1
+    - RuleR2
+    - RuleR3
+    - RuleR4
+    - RuleR5
+    - RuleR6
+    - RuleR7
+    - RuleR8
+    - RuleR9
+    - RuleR10
+    - RuleR11
+    - RuleR12
+    - RuleR13
+    - RuleR14
+    - RuleR15
 
 - type: guideEntry
   id: RuleR1
@@ -231,8 +231,8 @@
   ruleEntry: true
   text: "/ServerInfo/Guidebook/ServerRules/RoleplayRules/RuleR11Escalation.xml"
   children:
-  - RuleR11-1
-  - RuleR11-2
+    - RuleR11-1
+    - RuleR11-2
 
 - type: guideEntry
   id: RuleR11-1
@@ -277,16 +277,16 @@
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/RuleS0.xml"
   children:
-  - RuleS1
-  - RuleS2
-  - RuleS3
-  - RuleS4
-  - RuleS5
-  - RuleS6
-  - RuleS7
-  - RuleS8
-  - RuleS9
-  - RuleS10
+    - RuleS1
+    - RuleS2
+    - RuleS3
+    - RuleS4
+    - RuleS5
+    - RuleS6
+    - RuleS7
+    - RuleS8
+    - RuleS9
+    - RuleS10
 
 - type: guideEntry
   id: RuleS1
@@ -348,7 +348,6 @@
   ruleEntry: true
   text: "/ServerInfo/Guidebook/ServerRules/SiliconRules/RuleS10OrderConflicts.xml"
 
-
 - type: guideEntry
   id: MRPRules
   name: guide-entry-rules-mrp-m0
@@ -356,7 +355,7 @@
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/MRPRules/RuleM0.xml"
   children:
-  - RuleM1
+    - RuleM1
 
 - type: guideEntry
   id: RuleM1

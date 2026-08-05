@@ -6,10 +6,10 @@
   cost:
     StolenEssence: 10
   categories:
-  - RevenantAbilities
+    - RevenantAbilities
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: RevenantOverloadLights
@@ -19,10 +19,10 @@
   cost:
     StolenEssence: 25
   categories:
-  - RevenantAbilities
+    - RevenantAbilities
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 #- type: listing
 #  id: RevenantBlight
@@ -45,7 +45,7 @@
   cost:
     StolenEssence: 125
   categories:
-  - RevenantAbilities
+    - RevenantAbilities
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1

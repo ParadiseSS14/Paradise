@@ -9,5 +9,5 @@
 - type: accessGroup
   id: Research
   tags:
-  - ResearchDirector
-  - Research
+    - ResearchDirector
+    - Research

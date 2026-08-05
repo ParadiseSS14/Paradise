@@ -12,12 +12,12 @@
       metabolites:
         Theobromine: 0.1
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 2
-        type: Remove
+        - !type:SatiateThirst
+          factor: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 2
+          type: Remove
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/coffeeglass.rsi
     state: icon_empty
@@ -50,8 +50,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 1
+        - !type:SatiateThirst
+          factor: 1
 
 - type: reagent
   id: CoconutWater
@@ -64,8 +64,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 4 # Coconut water is 94% water
+        - !type:SatiateThirst
+          factor: 4 # Coconut water is 94% water
 
 - type: reagent
   id: CreamOfCoconut
@@ -78,8 +78,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 2
+        - !type:SatiateThirst
+          factor: 2
 
 - type: reagent
   id: CafeLatte
@@ -98,12 +98,12 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 2
-        type: Remove
+        - !type:SatiateThirst
+          factor: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 2
+          type: Remove
 
 - type: reagent
   id: GreenTea
@@ -156,12 +156,12 @@
       metabolites:
         Theobromine: 0.1
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 2
-        type: Remove
+        - !type:SatiateThirst
+          factor: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 2
+          type: Remove
 
 - type: reagent
   id: IcedGreenTea
@@ -197,7 +197,6 @@
       metabolites:
         Theobromine: 0.1
 
-
 - type: reagent
   id: JuiceBerryPoison
   parent: BaseJuice
@@ -210,11 +209,11 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1
+        - !type:SatiateThirst
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
 
 - type: reagent
   id: Lemonade
@@ -234,8 +233,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 2
+        - !type:SatiateThirst
+          factor: 2
 
 - type: reagent
   id: Milk
@@ -254,8 +253,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 4
+        - !type:SatiateThirst
+          factor: 4
 
 - type: reagent
   id: MilkGoat
@@ -281,8 +280,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 4
+        - !type:SatiateThirst
+          factor: 4
 
 - type: reagent
   id: MilkSoy
@@ -304,8 +303,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: -2
+        - !type:SatiateThirst
+          factor: -2
 
 - type: reagent
   id: Nothing
@@ -316,9 +315,9 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 2
-        # TODO heal mimes
+        - !type:SatiateThirst
+          factor: 2
+          # TODO heal mimes
 
 - type: reagent
   id: NuclearCola
@@ -338,16 +337,16 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 6
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 3
-        type: Remove
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1
+        - !type:SatiateThirst
+          factor: 6
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 3
+          type: Remove
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
   fizziness: 0.5
 
 - type: reagent
@@ -377,12 +376,12 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 2
-        type: Remove
+        - !type:SatiateThirst
+          factor: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 2
+          type: Remove
 
 - type: reagent
   id: Tea
@@ -437,18 +436,18 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 4
+        - !type:SatiateThirst
+          factor: 4
     Respiration:
       effects:
-      - !type:HealthChange
-        ignoreResistances: true
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-        damage:
-          types:
-            Heat: 3
+        - !type:HealthChange
+          ignoreResistances: true
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+          damage:
+            types:
+              Heat: 3
 
 - type: reagent
   id: Ice
@@ -467,11 +466,11 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 3 # Slightly worse for quenching thirst than just straight water
+        - !type:SatiateThirst
+          factor: 3 # Slightly worse for quenching thirst than just straight water
   plantMetabolism:
-  - !type:PlantAdjustWater
-    amount: 1 # The internet tells me I should avoid watering plants with ice, but mostly because of temperature, so this value being the same as water should probably be fine?
+    - !type:PlantAdjustWater
+      amount: 1 # The internet tells me I should avoid watering plants with ice, but mostly because of temperature, so this value being the same as water should probably be fine?
   metamorphicSprite:
     sprite: Objects/Consumable/Drinks/iceglass.rsi
     state: icon_empty
@@ -490,8 +489,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateHunger
-        factor: 1
+        - !type:SatiateHunger
+          factor: 1
 
 - type: reagent
   id: HotRamen
@@ -504,8 +503,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateHunger
-        factor: 4
+        - !type:SatiateHunger
+          factor: 4
 
 - type: reagent
   id: ArnoldPalmer
@@ -526,8 +525,8 @@
       metabolites:
         Theobromine: 0.1
       effects:
-      - !type:SatiateThirst
-        factor: 4
+        - !type:SatiateThirst
+          factor: 4
 
 - type: reagent
   id: Pilk
@@ -596,8 +595,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 0.6
+        - !type:SatiateThirst
+          factor: 0.6
 
 - type: reagent
   id: Tortuga

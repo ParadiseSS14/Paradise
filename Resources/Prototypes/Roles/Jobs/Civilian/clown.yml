@@ -7,25 +7,25 @@
   icon: "JobIconClown"
   supervisors: job-supervisors-hop
   access:
-  - Theatre
-  - Maintenance
+    - Theatre
+    - Maintenance
   special:
-  - !type:AddComponentSpecial
-    components:
-    - type: Clumsy
-      gunShootFailDamage:
-        types: #literally just picked semi random valus. i tested this once and tweaked it.
-          Blunt: 5
-          Piercing: 4
-          Heat: 3
-      catchingFailDamage:
-        types:
-          Blunt: 1
-    - type: SleepEmitSound
-      snore: /Audio/Voice/Misc/silly_snore.ogg
-      interval: 10
-  - !type:AddImplantSpecial
-    implants: [ SadTromboneImplant ]
+    - !type:AddComponentSpecial
+      components:
+        - type: Clumsy
+          gunShootFailDamage:
+            types: #literally just picked semi random valus. i tested this once and tweaked it.
+              Blunt: 5
+              Piercing: 4
+              Heat: 3
+          catchingFailDamage:
+            types:
+              Blunt: 1
+        - type: SleepEmitSound
+          snore: /Audio/Voice/Misc/silly_snore.ogg
+          interval: 10
+    - !type:AddImplantSpecial
+      implants: [SadTromboneImplant]
 
 - type: startingGear
   id: ClownGear
@@ -36,11 +36,11 @@
     id: ClownPDA
     ears: ClothingHeadsetService
   inhand:
-  - FoolboxFilled
+    - FoolboxFilled
   storage:
     back:
-    - RubberStampClown
-    - CrayonRainbow
+      - RubberStampClown
+      - CrayonRainbow
 
 - type: chameleonOutfit
   id: ClownChameleonOutfit

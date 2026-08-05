@@ -3,12 +3,12 @@
   parent: PlastitaniumWindow
   name: xenoborg window
   components:
-  - type: Sprite
-    drawdepth: WallTops
-    sprite: Structures/Windows/xenoborg.rsi
-  - type: Icon
-    sprite: Structures/Windows/xenoborg.rsi
-    state: full
-  - type: IconSmooth
-    key: windows
-    base: xenoborg
+    - type: Sprite
+      drawdepth: WallTops
+      sprite: Structures/Windows/xenoborg.rsi
+    - type: Icon
+      sprite: Structures/Windows/xenoborg.rsi
+      state: full
+    - type: IconSmooth
+      key: windows
+      base: xenoborg

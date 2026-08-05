@@ -7,11 +7,11 @@
   priority: 3
   allowRepeat: false
   conditions:
-  - !type:NearbyComponentsCondition
-    components:
-    - type: AmbientMusicMarkerMedical
-    count: 3
-    range: 5
+    - !type:NearbyComponentsCondition
+      components:
+        - type: AmbientMusicMarkerMedical
+      count: 3
+      range: 5
 
 - type: ambientMusic
   id: Engineering
@@ -21,8 +21,8 @@
     collection: AmbienceEngineering
   priority: 3
   conditions:
-  - !type:NearbyComponentsCondition
-    components:
-    - type: AmbientMusicMarkerEngineering
-    count: 3
-    range: 5
+    - !type:NearbyComponentsCondition
+      components:
+        - type: AmbientMusicMarkerEngineering
+      count: 3
+      range: 5

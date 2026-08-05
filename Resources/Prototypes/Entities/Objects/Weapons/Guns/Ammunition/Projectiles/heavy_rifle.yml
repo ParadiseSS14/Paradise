@@ -1,21 +1,21 @@
 - type: entity
   parent: BaseBullet
   id: BulletHeavyRifle
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   name: bullet (.10 rifle)
   components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 19
+    - type: Projectile
+      damage:
+        types:
+          Piercing: 19
 
 - type: entity
   parent: BulletHeavyRifle
   id: BulletMinigun
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   name: minigun bullet (.10 rifle)
   components:
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 5
+    - type: Projectile
+      damage:
+        types:
+          Piercing: 5

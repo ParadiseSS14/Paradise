@@ -8,8 +8,8 @@
       sprite: Objects/Weapons/Bombs/hot_potato.rsi
       state: icon
       layers:
-      - state: icon
-        map: ["base"]
+        - state: icon
+          map: ["base"]
     - type: Item
       sprite: Objects/Specific/Hydroponics/potato.rsi
       heldPrefix: produce
@@ -32,7 +32,7 @@
           volume: -2
     - type: ExplodeOnTrigger
       keysIn:
-      - timer
+        - timer
     - type: Explosive
       explosionType: Default
       maxIntensity: 50
@@ -41,7 +41,7 @@
       canCreateVacuum: false
     - type: DeleteOnTrigger
       keysIn:
-      - timer
+        - timer
     - type: HotPotato
     - type: DamageOnHolding
       enabled: false
@@ -58,60 +58,59 @@
 
 - type: entity
   id: HotPotatoEffect
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: TimedDespawn
-    lifetime: 0.6
-  - type: Sprite
-    noRot: true
-    drawdepth: Effects
-    sprite: Effects/chemsmoke.rsi
-    state: chemsmoke
-    scale: "0.15, 0.15"
-  - type: EffectVisuals
-  - type: Tag
-    tags:
-      - HideContextMenu
-  - type: AnimationPlayer
+    - type: TimedDespawn
+      lifetime: 0.6
+    - type: Sprite
+      noRot: true
+      drawdepth: Effects
+      sprite: Effects/chemsmoke.rsi
+      state: chemsmoke
+      scale: "0.15, 0.15"
+    - type: EffectVisuals
+    - type: Tag
+      tags:
+        - HideContextMenu
+    - type: AnimationPlayer
 
 - type: entity
   parent: TrashBananaPeel
   id: TrashBananaPeelExplosive
   suffix: Explosive
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    layers:
-    - state: peel
-    - state: primed
-      shader: unshaded
-  - type: TriggerOnSlip
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 3.4
-    intensitySlope: 3
-    totalIntensity: 20
-    canCreateVacuum: false
-  - type: DeleteOnTrigger
-  - type: AnimationPlayer
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:TriggerBehavior
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Tag
-    tags:
-    - Recyclable
-    - Trash
-    - BananaPeel
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      layers:
+        - state: peel
+        - state: primed
+          shader: unshaded
+    - type: TriggerOnSlip
+    - type: ExplodeOnTrigger
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 3.4
+      intensitySlope: 3
+      totalIntensity: 20
+      canCreateVacuum: false
+    - type: DeleteOnTrigger
+    - type: AnimationPlayer
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:TriggerBehavior
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Tag
+      tags:
+        - Recyclable
+        - Trash
+        - BananaPeel
 
 - type: entity
   parent: BaseItem
@@ -120,29 +119,29 @@
   suffix: Unarmed
   description: There's something unusual about this banana.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    state: produce
-  - type: SpawnItemsOnUse
-    items:
-    - id: TrashBananaPeelExplosive
-    sound:
-      path: /Audio/Effects/unwrap.ogg
-  - type: Tag
-    tags:
-    - Banana
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      state: produce
+    - type: SpawnItemsOnUse
+      items:
+        - id: TrashBananaPeelExplosive
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+    - type: Tag
+      tags:
+        - Banana
 
 - type: entity
   parent: SnapPop
   id: SnapPopExplosive
   suffix: explosive
   components:
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 0.8
-    intensitySlope: 1
-    totalIntensity: 3.5
-    canCreateVacuum: false
-  - type: Construction
-    graph: SnapPopExplosiveGraph
-    node: snapPopExplosive
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 0.8
+      intensitySlope: 1
+      totalIntensity: 3.5
+      canCreateVacuum: false
+    - type: Construction
+      graph: SnapPopExplosiveGraph
+      node: snapPopExplosive

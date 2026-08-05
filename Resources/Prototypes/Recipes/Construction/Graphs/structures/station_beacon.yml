@@ -6,21 +6,20 @@
       edges:
         - to: complete
           steps:
-          - tool: Pulsing
+            - tool: Pulsing
           completed:
-          - !type:PlaySound
-            sound: /Audio/Effects/unwrap.ogg
+            - !type:PlaySound
+              sound: /Audio/Effects/unwrap.ogg
 
     - node: complete
       entity: DefaultStationBeaconUnanchored
       edges:
         - to: start
           steps:
-          - tool: Welding
-            doAfter: 1
+            - tool: Welding
+              doAfter: 1
           completed:
-          - !type:SpawnPrototype
-            prototype: SheetSteel1
-            amount: 1
-          - !type:DeleteEntity
-
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+            - !type:DeleteEntity

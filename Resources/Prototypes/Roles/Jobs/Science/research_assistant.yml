@@ -12,8 +12,8 @@
   icon: "JobIconResearchAssistant"
   supervisors: job-supervisors-science
   access:
-  - Research
-  - Maintenance
+    - Research
+    - Maintenance
 
 - type: startingGear
   id: ResearchAssistantGear
@@ -23,8 +23,8 @@
     ears: ClothingHeadsetScience
     pocket2: BookScientistsGuidebook
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: ResearchAssistantChameleonOutfit

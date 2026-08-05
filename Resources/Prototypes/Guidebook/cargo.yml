@@ -3,8 +3,8 @@
   name: guide-entry-cargo
   text: "/ServerInfo/Guidebook/Cargo/Cargo.xml"
   children:
-  - CargoBounties
-  - Salvage
+    - CargoBounties
+    - Salvage
 
 - type: guideEntry
   id: CargoBounties

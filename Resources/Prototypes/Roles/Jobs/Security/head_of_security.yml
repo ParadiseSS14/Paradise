@@ -21,23 +21,23 @@
   icon: "JobIconHeadOfSecurity"
   supervisors: job-supervisors-captain
   access:
-  - HeadOfSecurity
-  - Command
-  - Brig
-  - Security
-  - Armory
-  - Maintenance
-  - External
-  - Detective
-  - Cryogenics
-  - GenpopEnter
-  - GenpopLeave
+    - HeadOfSecurity
+    - Command
+    - Brig
+    - Security
+    - Armory
+    - Maintenance
+    - External
+    - Detective
+    - Cryogenics
+    - GenpopEnter
+    - GenpopLeave
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
+    - !type:AddComponentSpecial
+      components:
+        - type: CommandStaff
 
 - type: startingGear
   id: HoSGear
@@ -49,8 +49,8 @@
     pocket1: WeaponPistolMk58
   storage:
     back:
-    - Flash
-    - MagazinePistol
+      - Flash
+      - MagazinePistol
 
 - type: chameleonOutfit
   id: HeadOfSecurityChameleonOutfit

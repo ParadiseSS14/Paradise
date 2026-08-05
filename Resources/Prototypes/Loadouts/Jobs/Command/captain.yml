@@ -2,11 +2,10 @@
 - type: loadoutEffectGroup
   id: MasterCap
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobCaptain
-      time: 20h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobCaptain
+        time: 20h
 
 # Jumpsuit
 - type: loadout
@@ -56,8 +55,8 @@
   equipment:
     neck: ClothingNeckMantleCap
   effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCap
+    - !type:GroupLoadoutEffect
+      proto: MasterCap
 
 - type: startingGear
   id: CaptainMantle

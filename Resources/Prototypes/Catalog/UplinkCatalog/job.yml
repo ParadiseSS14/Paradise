@@ -11,11 +11,11 @@
   cost:
     Telecrystal: 6
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Botanist
+    - !type:BuyerJobCondition
+      whitelist:
+        - Botanist
 
 - type: listing
   id: uplinkHolyHandGrenade
@@ -28,11 +28,11 @@
   cost:
     Telecrystal: 20
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Chaplain
+    - !type:BuyerJobCondition
+      whitelist:
+        - Chaplain
 
 - type: listing
   id: uplinkRevolverCapGunFake
@@ -45,12 +45,12 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Mime
-    - Clown
+    - !type:BuyerJobCondition
+      whitelist:
+        - Mime
+        - Clown
 
 - type: listing
   id: UplinkClusterBananaPeel
@@ -63,11 +63,11 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Clown
+    - !type:BuyerJobCondition
+      whitelist:
+        - Clown
 
 - type: listing
   id: UplinkHoloclownKit
@@ -81,11 +81,11 @@
   cost:
     Telecrystal: 12
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Clown
+    - !type:BuyerJobCondition
+      whitelist:
+        - Clown
 
 - type: listing
   id: uplinkHotPotato
@@ -98,14 +98,14 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Chef
-    - Botanist
-    - Clown
-    - Mime
+    - !type:BuyerJobCondition
+      whitelist:
+        - Chef
+        - Botanist
+        - Clown
+        - Mime
 
 - type: listing
   id: UplinkChimpUpgradeKit
@@ -118,11 +118,11 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
     - !type:BuyerDepartmentCondition
       whitelist:
-      - Science
+        - Science
 
 - type: listing
   id: uplinkProximityMine
@@ -135,21 +135,21 @@
   cost:
     Telecrystal: 5 # was 4, with my buff made it 5 to be closer to minibomb -panzer
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Janitor
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+    - !type:BuyerJobCondition
+      whitelist:
+        - Janitor
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: UplinkSyndicateSpongeBox
   name: uplink-syndicate-sponge-box-name
   description: uplink-syndicate-sponge-box-desc
-  icon: { sprite:  Objects/Misc/monkeycube.rsi, state: box}
+  icon: { sprite: Objects/Misc/monkeycube.rsi, state: box }
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -157,19 +157,19 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition # We can't use BuyerDepartmentCondition here since Chef can also get this
-    whitelist:
-    - Scientist
-    - ResearchDirector
-    - Chef
+    - !type:BuyerJobCondition # We can't use BuyerDepartmentCondition here since Chef can also get this
+      whitelist:
+        - Scientist
+        - ResearchDirector
+        - Chef
 
 - type: listing
   id: UplinkCaneBlade
   name: uplink-cane-blade-name
   description: uplink-cane-blade-desc
-  icon: { sprite:  Objects/Weapons/Melee/cane.rsi, state: cane}
+  icon: { sprite: Objects/Weapons/Melee/cane.rsi, state: cane }
   productEntity: CaneSheathFilled
   discountCategory: rareDiscounts
   discountDownTo:
@@ -177,17 +177,17 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Librarian
+    - !type:BuyerJobCondition
+      whitelist:
+        - Librarian
 
 - type: listing
   id: UplinkCombatBakery
   name: uplink-combat-bakery-name
   description: uplink-combat-bakery-desc
-  icon: { sprite:  Objects/Consumable/Food/Baked/bread.rsi, state: baguette}
+  icon: { sprite: Objects/Consumable/Food/Baked/bread.rsi, state: baguette }
   productEntity: CombatBakeryKit
   discountCategory: usualDiscounts
   discountDownTo:
@@ -195,18 +195,18 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Chef
-    - Mime
+    - !type:BuyerJobCondition
+      whitelist:
+        - Chef
+        - Mime
 
 - type: listing
   id: UplinkAcolyteArmor
   name: uplink-acolyte-armor-name
   description: uplink-acolyte-armor-desc
-  icon: { sprite: Clothing/OuterClothing/Armor/cult_armour.rsi, state: icon}
+  icon: { sprite: Clothing/OuterClothing/Armor/cult_armour.rsi, state: icon }
   productEntity: ClothingBackpackDuffelAcolyteBundle
   discountCategory: veryRareDiscounts
   discountDownTo:
@@ -214,17 +214,17 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Chaplain
+    - !type:BuyerJobCondition
+      whitelist:
+        - Chaplain
 
 - type: listing
   id: UplinkSawAdvanced
   name: uplink-saw-advanced-name
   description: uplink-saw-advanced-desc
-  icon: { sprite:  Objects/Specific/Medical/Surgery/saw.rsi, state: advanced}
+  icon: { sprite: Objects/Specific/Medical/Surgery/saw.rsi, state: advanced }
   productEntity: SawAdvanced
   discountCategory: rareDiscounts
   discountDownTo:
@@ -232,11 +232,11 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - MedicalDoctor
+    - !type:BuyerJobCondition
+      whitelist:
+        - MedicalDoctor
 
 - type: listing
   id: uplinkBriefcaseGun
@@ -249,8 +249,8 @@
   cost:
     Telecrystal: 14
   categories:
-  - UplinkJob
+    - UplinkJob
   conditions:
-  - !type:BuyerJobCondition
-    whitelist:
-    - Lawyer
+    - !type:BuyerJobCondition
+      whitelist:
+        - Lawyer

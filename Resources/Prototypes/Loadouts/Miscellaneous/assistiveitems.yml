@@ -4,64 +4,60 @@
   id: OffsetCane
   storage:
     back:
-    - OffsetCane
+      - OffsetCane
   groupBy: "canes"
 
 - type: loadout
   id: OffsetCaneWood
   storage:
     back:
-    - OffsetCaneWood
+      - OffsetCaneWood
   groupBy: "canes"
 
 - type: loadout
   id: OffsetCaneClown
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobClown
-      time: 1h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobClown
+        time: 1h
   storage:
     back:
-    - OffsetCaneClown
+      - OffsetCaneClown
   groupBy: "canes"
 
 - type: loadout
   id: OffsetCaneMime
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobMime
-      time: 1h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobMime
+        time: 1h
   storage:
     back:
-    - OffsetCaneMime
+      - OffsetCaneMime
   groupBy: "canes"
 
 - type: loadout
   id: OffsetCaneNT
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Command
-      time: 5h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:DepartmentTimeRequirement
+        department: Command
+        time: 5h
   storage:
     back:
-    - OffsetCaneNT
+      - OffsetCaneNT
   groupBy: "canes"
 
 - type: loadout
   id: Cane
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobLibrarian
-      time: 1h # same as Jamjar.
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobLibrarian
+        time: 1h # same as Jamjar.
   storage:
     back:
-    - Cane
+      - Cane
   groupBy: "canes"

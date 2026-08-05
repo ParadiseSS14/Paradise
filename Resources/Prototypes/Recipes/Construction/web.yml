@@ -8,7 +8,7 @@
   canRotate: false
   entityWhitelist:
     tags:
-    - SpiderCraft
+      - SpiderCraft
 # endregion Base
 
 # region Web
@@ -18,21 +18,21 @@
   targetNode: wall
   category: construction-category-structures
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   parent: BaseWebStructure
   id: TableWeb
   targetNode: table
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   parent: BaseWebStructure
   id: WebBed
   targetNode: bed
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   parent: BaseWebStructure
@@ -40,7 +40,7 @@
   targetNode: chair
   canRotate: true
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   parent: BaseWebStructure
@@ -55,5 +55,5 @@
   targetNode: door
   category: construction-category-structures
   conditions:
-  - !type:TileNotBlocked
-# endregion Web
+    - !type:TileNotBlocked  # endregion Web
+

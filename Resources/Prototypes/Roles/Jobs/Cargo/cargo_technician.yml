@@ -7,14 +7,14 @@
   icon: "JobIconCargoTechnician"
   supervisors: job-supervisors-qm
   access:
-  - Cargo
-  - Maintenance
+    - Cargo
+    - Maintenance
   extendedAccess:
-  - Salvage
+    - Salvage
   special:
-  - !type:GiveItemOnHolidaySpecial
-    holiday: BoxingDay
-    prototype: BoxCardboard
+    - !type:GiveItemOnHolidaySpecial
+      holiday: BoxingDay
+      prototype: BoxCardboard
 
 - type: startingGear
   id: CargoTechGear
@@ -22,8 +22,8 @@
     ears: ClothingHeadsetCargo
     pocket1: AppraisalTool
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: CargoTechnicianChameleonOutfit

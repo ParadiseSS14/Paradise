@@ -11,14 +11,14 @@
   icon: "JobIconMedicalDoctor"
   supervisors: job-supervisors-cmo
   access:
-  - Medical
-  - Maintenance
+    - Medical
+    - Maintenance
   extendedAccess:
-  - Chemistry
+    - Chemistry
   special:
-  - !type:GiveItemOnHolidaySpecial
-    holiday: DoctorDay
-    prototype: WehMedipen
+    - !type:GiveItemOnHolidaySpecial
+      holiday: DoctorDay
+      prototype: WehMedipen
 
 - type: startingGear
   id: DoctorGear

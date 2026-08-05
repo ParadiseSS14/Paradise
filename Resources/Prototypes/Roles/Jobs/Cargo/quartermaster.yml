@@ -18,20 +18,20 @@
   icon: "JobIconQuarterMaster"
   supervisors: job-supervisors-captain
   access:
-  - Cargo
-  - Salvage
-  - Quartermaster
-  - Maintenance
-  - External
-  - Command
-  - Brig
-  - Cryogenics
+    - Cargo
+    - Salvage
+    - Quartermaster
+    - Maintenance
+    - External
+    - Command
+    - Brig
+    - Cryogenics
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
+    - !type:AddComponentSpecial
+      components:
+        - type: CommandStaff
 
 - type: startingGear
   id: QuartermasterGear
@@ -42,7 +42,7 @@
     pocket1: AppraisalTool
   storage:
     back:
-    - Flash
+      - Flash
 
 - type: chameleonOutfit
   id: QuartermasterChameleonOutfit

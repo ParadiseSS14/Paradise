@@ -4,7 +4,7 @@
   abstract: true
   reactiveEffects:
     Flammable:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
         - !type:Flammable
   plantMetabolism:
@@ -25,16 +25,16 @@
   boilingPoint: 2977.0 # Aluminum oxide
   meltingPoint: 2030.0
   tileReactions:
-  - !type:FlammableTileReaction
-    temperatureMultiplier: 2
+    - !type:FlammableTileReaction
+      temperatureMultiplier: 2
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Heat: 2
-            Poison: 1
+        - !type:HealthChange
+          damage:
+            types:
+              Heat: 2
+              Poison: 1
 
 - type: reagent
   id: Napalm
@@ -46,25 +46,25 @@
   flavor: bitter
   color: "#FA00AF"
   tileReactions:
-  - !type:FlammableTileReaction
-    temperatureMultiplier: 5
+    - !type:FlammableTileReaction
+      temperatureMultiplier: 5
   reactiveEffects:
     Flammable:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:Flammable
-        multiplier: 0.4
+        - !type:Flammable
+          multiplier: 0.4
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Heat: 2
-            Poison: 1
-            Caustic: 0.5 # based off napalm being an irritant
-      - !type:Flammable
-        multiplier: 0.4
+        - !type:HealthChange
+          damage:
+            types:
+              Heat: 2
+              Poison: 1
+              Caustic: 0.5 # based off napalm being an irritant
+        - !type:Flammable
+          multiplier: 0.4
 
 - type: reagent
   id: Phlogiston
@@ -78,23 +78,23 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Heat: 3
-            Poison: 1
-      - !type:Flammable
-        multiplier: 0.1
-      - !type:AdjustTemperature
-        amount: 6000
-      - !type:Ignite
+        - !type:HealthChange
+          damage:
+            types:
+              Heat: 3
+              Poison: 1
+        - !type:Flammable
+          multiplier: 0.1
+        - !type:AdjustTemperature
+          amount: 6000
+        - !type:Ignite
   reactiveEffects:
     Flammable:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:Flammable
-        multiplier: 0.2
-      - !type:Ignite
+        - !type:Flammable
+          multiplier: 0.2
+        - !type:Ignite
 
 - type: reagent
   id: ChlorineTrifluoride
@@ -106,35 +106,35 @@
   flavor: bitter
   color: "#FFC8C8"
   tileReactions:
-  - !type:PryTileReaction
+    - !type:PryTileReaction
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Heat: 2
-            Poison: 1
-            Caustic: 0.5 # CLF3 is corrosive
-      - !type:Flammable
-        multiplier: 0.2
-      - !type:AdjustTemperature
-        amount: 6000
+        - !type:HealthChange
+          damage:
+            types:
+              Heat: 2
+              Poison: 1
+              Caustic: 0.5 # CLF3 is corrosive
+        - !type:Flammable
+          multiplier: 0.2
+        - !type:AdjustTemperature
+          amount: 6000
   reactiveEffects:
     Flammable:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:Flammable
-        multiplier: 0.3
-      - !type:Ignite
-      - !type:Emote
-        emote: Scream
-        probability: 0.2
-      - !type:PopupMessage
-        messages: [ "clf3-it-burns", "clf3-get-away" ]
-        visualType: MediumCaution
-        probability: 0.3
-        type: Local
+        - !type:Flammable
+          multiplier: 0.3
+        - !type:Ignite
+        - !type:Emote
+          emote: Scream
+          probability: 0.2
+        - !type:PopupMessage
+          messages: ["clf3-it-burns", "clf3-get-away"]
+          visualType: MediumCaution
+          probability: 0.3
+          type: Local
 
 - type: reagent
   id: FoamingAgent
@@ -163,25 +163,25 @@
   meltingPoint: -80.7
   friction: 0.4
   tileReactions:
-  - !type:FlammableTileReaction {}
+    - !type:FlammableTileReaction {}
   metabolisms:
     Bloodstream:
       effects:
-      - !type:SatiateThirst
-        factor: 1
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Vox]
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Vox]
-          inverted: true
-        damage:
-          types:
-            Poison: 1
-      - !type:Flammable
-        multiplier: 0.4
+        - !type:SatiateThirst
+          factor: 1
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+              inverted: true
+          damage:
+            types:
+              Poison: 1
+        - !type:Flammable
+          multiplier: 0.4
 
 - type: reagent
   id: Fluorosurfactant

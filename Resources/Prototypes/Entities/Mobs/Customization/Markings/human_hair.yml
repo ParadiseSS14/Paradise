@@ -404,8 +404,8 @@
   id: HumanHairDoublebunLong
   bodyPart: Hair
   sprites:
-  - sprite: Mobs/Customization/human_hair.rsi
-    state: doublebun_long
+    - sprite: Mobs/Customization/human_hair.rsi
+      state: doublebun_long
 - type: marking
   id: HumanHairDreads
   bodyPart: Hair
@@ -1206,27 +1206,26 @@
   id: HumanHairLongWithBangs
   bodyPart: Hair
   sprites:
-  - sprite: Mobs/Customization/human_hair.rsi
-    state: longwithbangs
+    - sprite: Mobs/Customization/human_hair.rsi
+      state: longwithbangs
 - type: marking
   id: HumanHairOverEyePigtail
   bodyPart: Hair
   sprites:
-  - sprite: Mobs/Customization/human_hair.rsi
-    state: overeyepigtail
+    - sprite: Mobs/Customization/human_hair.rsi
+      state: overeyepigtail
 - type: marking
   id: HumanHairTerminal
   bodyPart: Hair
   coloring:
     layers:
       terminal_headband:
-        type:
-          !type:SimpleColoring
-            color: "#C3C3C3"
+        type: !type:SimpleColoring
+          color: "#C3C3C3"
   sprites:
-  - sprite: Mobs/Customization/human_hair.rsi
-    state: terminal
-  - sprite: Mobs/Customization/human_hair.rsi
-    state: terminal_highlight
-  - sprite: Mobs/Customization/human_hair.rsi
-    state: terminal_headband
+    - sprite: Mobs/Customization/human_hair.rsi
+      state: terminal
+    - sprite: Mobs/Customization/human_hair.rsi
+      state: terminal_highlight
+    - sprite: Mobs/Customization/human_hair.rsi
+      state: terminal_headband

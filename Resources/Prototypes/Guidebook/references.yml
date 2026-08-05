@@ -4,11 +4,11 @@
   priority: 30
   text: "/ServerInfo/Guidebook/References.xml"
   children:
-  - Chemicals
-  - Drinks
-  - FoodRecipes
-  - Writing
-  - Lawsets
+    - Chemicals
+    - Drinks
+    - FoodRecipes
+    - Writing
+    - Lawsets
 
 - type: guideEntry
   id: Drinks
@@ -22,21 +22,21 @@
   text: "/ServerInfo/Guidebook/Service/FoodRecipes.xml"
   filterEnabled: True
   children:
-  - PizzaRecipes
-  - SavoryRecipes
-  - BreadRecipes
-  - BreakfastRecipes
-  - MothRecipes
-  - PastaRecipes
-  - DessertRecipes
-  - SoupRecipes
-  - PieRecipes
-  - BarsAndCookiesRecipes
-  - CakeRecipes
-  - SaladRecipes
-  - OtherRecipes
-  - MedicinalRecipes
-  - SecretRecipes
+    - PizzaRecipes
+    - SavoryRecipes
+    - BreadRecipes
+    - BreakfastRecipes
+    - MothRecipes
+    - PastaRecipes
+    - DessertRecipes
+    - SoupRecipes
+    - PieRecipes
+    - BarsAndCookiesRecipes
+    - CakeRecipes
+    - SaladRecipes
+    - OtherRecipes
+    - MedicinalRecipes
+    - SecretRecipes
 
 - type: guideEntry
   id: PizzaRecipes

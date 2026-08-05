@@ -3,6 +3,6 @@
   id: IntegrationTestMarker
   name: Integration Test Marker
   components:
-  - type: TestMarker
-  - type: Sprite
-    state: pink
+    - type: TestMarker
+    - type: Sprite
+      state: pink

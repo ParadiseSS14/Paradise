@@ -52,7 +52,7 @@
   description: trait-monochromacy-desc
   category: Disabilities
   components:
-  - type: BlackAndWhiteOverlay
+    - type: BlackAndWhiteOverlay
 
 - type: trait
   id: Muted
@@ -84,9 +84,9 @@
   description: trait-painnumbness-desc
   category: Disabilities
   specials:
-  - !type:ApplyStatusEffectSpecial
-    statusEffects:
-    - TraitStatusEffectPainNumbness
+    - !type:ApplyStatusEffectSpecial
+      statusEffects:
+        - TraitStatusEffectPainNumbness
 
 - type: trait
   id: Hemophilia
@@ -94,9 +94,9 @@
   description: trait-hemophilia-desc
   category: Disabilities
   specials:
-  - !type:ApplyStatusEffectSpecial
-    statusEffects:
-    - TraitStatusEffectHemophilia
+    - !type:ApplyStatusEffectSpecial
+      statusEffects:
+        - TraitStatusEffectHemophilia
 
 - type: trait
   id: ImpairedMobility

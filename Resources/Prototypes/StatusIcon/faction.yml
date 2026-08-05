@@ -3,9 +3,9 @@
   priority: 11
   showTo:
     components:
-    - ShowAntagIcons
-    - Zombie
-    - InitialInfected
+      - ShowAntagIcons
+      - Zombie
+      - InitialInfected
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: Zombie
@@ -15,9 +15,9 @@
   priority: 11
   showTo:
     components:
-    - ShowAntagIcons
-    - InitialInfected
-    - Zombie
+      - ShowAntagIcons
+      - InitialInfected
+      - Zombie
   icon:
     sprite: /Textures/Interface/Misc/job_icons.rsi
     state: InitialInfected

@@ -4,21 +4,21 @@
   name: booze storage
   description: This is where the bartender keeps the booze.
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: cabinet
-    stateDoorOpen: cabinet_open
-    stateDoorClosed: cabinet_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: cabinet
+      stateDoorOpen: cabinet_open
+      stateDoorClosed: cabinet_door
 
-  - type: AccessReader
-    access: [["Bar"]]
-  - type: EntityStorage
-    closeSound:
-      path: /Audio/Effects/woodenclosetclose.ogg
-    openSound:
-      path: /Audio/Effects/woodenclosetopen.ogg
-  - type: Paintable
-    group: null # not shaped like other lockers
+    - type: AccessReader
+      access: [["Bar"]]
+    - type: EntityStorage
+      closeSound:
+        path: /Audio/Effects/woodenclosetclose.ogg
+      openSound:
+        path: /Audio/Effects/woodenclosetopen.ogg
+    - type: Paintable
+      group: null # not shaped like other lockers
 
 # Basic
 - type: entity
@@ -26,11 +26,11 @@
   parent: LockerBase
   name: secure closet
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: secure
-    stateDoorOpen: secure_open
-    stateDoorClosed: secure_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: secure
+      stateDoorOpen: secure_open
+      stateDoorClosed: secure_door
 
 # Cargo
 - type: entity
@@ -38,13 +38,13 @@
   parent: LockerBase
   name: quartermaster's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: qm
-    stateDoorOpen: qm_open
-    stateDoorClosed: qm_door
-  - type: AccessReader
-    access: [["Quartermaster"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: qm
+      stateDoorOpen: qm_open
+      stateDoorClosed: qm_door
+    - type: AccessReader
+      access: [["Quartermaster"]]
 
 - type: entity
   id: LockerSalvageSpecialist
@@ -52,13 +52,13 @@
   name: salvage specialist's equipment
   description: Nevermind the pickaxe.
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: mining
-    stateDoorOpen: mining_open
-    stateDoorClosed: mining_door
-  - type: AccessReader
-    access: [["Salvage"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: mining
+      stateDoorOpen: mining_open
+      stateDoorClosed: mining_door
+    - type: AccessReader
+      access: [["Salvage"]]
 
 # Command
 - type: entity
@@ -66,26 +66,26 @@
   parent: LockerBase
   name: captain's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: cap
-    stateDoorOpen: cap_open
-    stateDoorClosed: cap_door
-  - type: AccessReader
-    access: [["Captain"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: cap
+      stateDoorOpen: cap_open
+      stateDoorClosed: cap_door
+    - type: AccessReader
+      access: [["Captain"]]
 
 - type: entity
   id: LockerHeadOfPersonnel
   parent: LockerBase
   name: head of personnel's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: hop
-    stateDoorOpen: hop_open
-    stateDoorClosed: hop_door
-  - type: AccessReader
-    access: [["HeadOfPersonnel"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: hop
+      stateDoorOpen: hop_open
+      stateDoorClosed: hop_door
+    - type: AccessReader
+      access: [["HeadOfPersonnel"]]
 
 # CE
 - type: entity
@@ -93,13 +93,13 @@
   parent: LockerBase
   name: chief engineer's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: ce
-    stateDoorOpen: ce_open
-    stateDoorClosed: ce_door
-  - type: AccessReader
-    access: [ [ "ChiefEngineer" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: ce
+      stateDoorOpen: ce_open
+      stateDoorClosed: ce_door
+    - type: AccessReader
+      access: [["ChiefEngineer"]]
 
 # Electrical supplies
 - type: entity
@@ -107,13 +107,13 @@
   parent: LockerBase
   name: electrical supplies locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_elec_door
-  - type: AccessReader
-    access: [ [ "Engineering" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: eng
+      stateDoorOpen: eng_open
+      stateDoorClosed: eng_elec_door
+    - type: AccessReader
+      access: [["Engineering"]]
 
 # Welding supplies
 - type: entity
@@ -121,13 +121,13 @@
   parent: LockerBase
   name: welding supplies locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_weld_door
-  - type: AccessReader
-    access: [ [ "Engineering" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: eng
+      stateDoorOpen: eng_open
+      stateDoorClosed: eng_weld_door
+    - type: AccessReader
+      access: [["Engineering"]]
 
 # Atmos tech
 - type: entity
@@ -135,13 +135,13 @@
   parent: LockerBase
   name: atmospheric technician's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: atmos
-    stateDoorOpen: atmos_open
-    stateDoorClosed: atmos_door
-  - type: AccessReader
-    access: [ [ "Atmospherics" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: atmos
+      stateDoorOpen: atmos_open
+      stateDoorClosed: atmos_door
+    - type: AccessReader
+      access: [["Atmospherics"]]
 
 # Engineer
 - type: entity
@@ -149,13 +149,13 @@
   parent: LockerBase
   name: engineer's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: eng_secure
-    stateDoorOpen: eng_secure_open
-    stateDoorClosed: eng_secure_door
-  - type: AccessReader
-    access: [ [ "Engineering" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: eng_secure
+      stateDoorOpen: eng_secure_open
+      stateDoorClosed: eng_secure_door
+    - type: AccessReader
+      access: [["Engineering"]]
 
 # Evac Repair
 - type: entity
@@ -164,13 +164,13 @@
   name: emergency shuttle emergency locker
   description: It's emergencies all the way down.
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: eng
-    stateDoorOpen: eng_open
-    stateDoorClosed: eng_evac_door
-  - type: AccessReader
-    access: [ [ "Engineering" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: eng
+      stateDoorOpen: eng_open
+      stateDoorClosed: eng_evac_door
+    - type: AccessReader
+      access: [["Engineering"]]
 
 # Freezer
 - type: entity
@@ -179,21 +179,21 @@
   name: freezer
   suffix: No Access
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: freezer
-    stateDoorOpen: freezer_open
-    stateDoorClosed: freezer_door
-  - type: ExplosionResistance
-    damageCoefficient: 0.50
-  - type: AntiRottingContainer
-  - type: Construction
-    graph: ClosetFreezer
-    node: done
-    containers:
-    - entity_storage
-  - type: Paintable
-    group: null
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: freezer
+      stateDoorOpen: freezer_open
+      stateDoorClosed: freezer_door
+    - type: ExplosionResistance
+      damageCoefficient: 0.50
+    - type: AntiRottingContainer
+    - type: Construction
+      graph: ClosetFreezer
+      node: done
+      containers:
+        - entity_storage
+    - type: Paintable
+      group: null
 
 - type: entity
   id: LockerFreezer
@@ -201,8 +201,8 @@
   name: freezer
   suffix: Kitchen, Locked
   components:
-  - type: AccessReader
-    access: [ [ "Kitchen" ] ]
+    - type: AccessReader
+      access: [["Kitchen"]]
 
 # Botanist
 - type: entity
@@ -210,13 +210,13 @@
   parent: LockerBase
   name: botanist's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: hydro
-    stateDoorOpen: hydro_open
-    stateDoorClosed: hydro_door
-  - type: AccessReader
-    access: [ [ "Hydroponics" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: hydro
+      stateDoorOpen: hydro_open
+      stateDoorClosed: hydro_door
+    - type: AccessReader
+      access: [["Hydroponics"]]
 
 # Medicine
 - type: entity
@@ -225,13 +225,13 @@
   name: medicine locker
   description: Filled to the brim with medical junk.
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: med
-    stateDoorOpen: med_open
-    stateDoorClosed: med_door
-  - type: AccessReader
-    access: [ [ "Medical" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: med
+      stateDoorOpen: med_open
+      stateDoorClosed: med_door
+    - type: AccessReader
+      access: [["Medical"]]
 
 # Medical doctor
 - type: entity
@@ -239,13 +239,13 @@
   parent: LockerBase
   name: medical doctor's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: med_secure
-    stateDoorOpen: med_secure_open
-    stateDoorClosed: med_secure_door
-  - type: AccessReader
-    access: [ [ "Medical" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: med_secure
+      stateDoorOpen: med_secure_open
+      stateDoorClosed: med_secure_door
+    - type: AccessReader
+      access: [["Medical"]]
 
 # Paramedic
 - type: entity
@@ -253,14 +253,13 @@
   parent: LockerBase
   name: paramedic's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: paramed
-    stateDoorOpen: paramed_open
-    stateDoorClosed: paramed_door
-  - type: AccessReader
-    access: [ [ "Medical" ] ]
-
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: paramed
+      stateDoorOpen: paramed_open
+      stateDoorClosed: paramed_door
+    - type: AccessReader
+      access: [["Medical"]]
 
 # Chemical
 - type: entity
@@ -268,13 +267,13 @@
   parent: LockerBase
   name: chemical locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: med
-    stateDoorOpen: med_open
-    stateDoorClosed: chemical_door
-  - type: AccessReader
-    access: [ [ "Chemistry" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: med
+      stateDoorOpen: med_open
+      stateDoorClosed: chemical_door
+    - type: AccessReader
+      access: [["Chemistry"]]
 
 # CMO
 - type: entity
@@ -282,13 +281,13 @@
   parent: LockerBase
   name: chief medical officer's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: cmo
-    stateDoorOpen: cmo_open
-    stateDoorClosed: cmo_door
-  - type: AccessReader
-    access: [ [ "ChiefMedicalOfficer" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: cmo
+      stateDoorOpen: cmo_open
+      stateDoorClosed: cmo_door
+    - type: AccessReader
+      access: [["ChiefMedicalOfficer"]]
 
 # Science
 - type: entity
@@ -296,26 +295,26 @@
   parent: LockerBase
   name: research director's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: rd
-    stateDoorOpen: rd_open
-    stateDoorClosed: rd_door
-  - type: AccessReader
-    access: [ [ "ResearchDirector" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: rd
+      stateDoorOpen: rd_open
+      stateDoorClosed: rd_door
+    - type: AccessReader
+      access: [["ResearchDirector"]]
 
 - type: entity
   id: LockerScientist
   parent: LockerBase
   name: scientist's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: science
-    stateDoorOpen: science_open
-    stateDoorClosed: science_door
-  - type: AccessReader
-    access: [ [ "Research" ] ]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: science
+      stateDoorOpen: science_open
+      stateDoorClosed: science_door
+    - type: AccessReader
+      access: [["Research"]]
 
 # HoS
 - type: entity
@@ -323,13 +322,13 @@
   parent: LockerBase
   name: head of security's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: hos
-    stateDoorOpen: hos_open
-    stateDoorClosed: hos_door
-  - type: AccessReader
-    access: [["HeadOfSecurity"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: hos
+      stateDoorOpen: hos_open
+      stateDoorClosed: hos_door
+    - type: AccessReader
+      access: [["HeadOfSecurity"]]
 
 # Warden
 - type: entity
@@ -337,13 +336,13 @@
   parent: LockerBase
   name: warden's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: warden
-    stateDoorOpen: warden_open
-    stateDoorClosed: warden_door
-  - type: AccessReader
-    access: [["Armory"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: warden
+      stateDoorOpen: warden_open
+      stateDoorClosed: warden_door
+    - type: AccessReader
+      access: [["Armory"]]
 
 # Brigmedic
 - type: entity
@@ -351,13 +350,13 @@
   parent: LockerBase
   name: brigmedic locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: brigmedic
-    stateDoorOpen: armory_open
-    stateDoorClosed: brigmedic_door
-  - type: AccessReader
-    access: [["Medical"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: brigmedic
+      stateDoorOpen: armory_open
+      stateDoorClosed: brigmedic_door
+    - type: AccessReader
+      access: [["Medical"]]
 
 # Security Officer
 - type: entity
@@ -365,152 +364,152 @@
   parent: LockerBase
   name: security officer's locker
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: sec
-    stateDoorOpen: sec_open
-    stateDoorClosed: sec_door
-  - type: AccessReader
-    access: [["Security"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: sec
+      stateDoorOpen: sec_open
+      stateDoorClosed: sec_door
+    - type: AccessReader
+      access: [["Security"]]
 
 - type: entity
   id: GunSafe
   parent: LockerBase
   name: gun safe
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: shotguncase
-    stateDoorOpen: shotguncase_open
-    stateDoorClosed: shotguncase_door
-  - type: AccessReader
-  - type: Construction
-    graph: GunSafe
-    node: done
-    containers:
-    - entity_storage
-  - type: StaticPrice
-    price: 660
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: shotguncase
+      stateDoorOpen: shotguncase_open
+      stateDoorClosed: shotguncase_door
+    - type: AccessReader
+    - type: Construction
+      graph: GunSafe
+      node: done
+      containers:
+        - entity_storage
+    - type: StaticPrice
+      price: 660
 
 - type: entity
   id: GunSafeBaseSecure
   parent: GunSafe
   suffix: Armory, Locked
   components:
-  - type: AccessReader
-    access: [["Armory"]]
+    - type: AccessReader
+      access: [["Armory"]]
 
 # Genpop Storage
 - type: entity
   id: GenpopBase
   abstract: true
   components:
-  - type: GenpopLocker
-  - type: EntityStorageVisuals
-    stateBaseClosed: genpop
-    stateDoorOpen: genpop_open
-    stateDoorClosed: genpop_door_1
-  - type: UserInterface
-    interfaces:
-      enum.GenpopLockerUiKey.Key:
-        type: GenpopLockerBoundUserInterface
-  - type: AccessReader # note! this access is for the UI, not the door. door access is handled on GenpopLocker
-    access: [["Security"]]
-    examinationText: access-reader-examination-functionality-restricted
-  - type: Lock
-    locked: false
-    useAccess: false
-  - type: EntityStorage
-    open: True
-    removedMasks: 20
-  - type: PlaceableSurface
-    isPlaceable: True
+    - type: GenpopLocker
+    - type: EntityStorageVisuals
+      stateBaseClosed: genpop
+      stateDoorOpen: genpop_open
+      stateDoorClosed: genpop_door_1
+    - type: UserInterface
+      interfaces:
+        enum.GenpopLockerUiKey.Key:
+          type: GenpopLockerBoundUserInterface
+    - type: AccessReader # note! this access is for the UI, not the door. door access is handled on GenpopLocker
+      access: [["Security"]]
+      examinationText: access-reader-examination-functionality-restricted
+    - type: Lock
+      locked: false
+      useAccess: false
+    - type: EntityStorage
+      open: True
+      removedMasks: 20
+    - type: PlaceableSurface
+      isPlaceable: True
 
 - type: entity
-  parent: [ GenpopBase , LockerBase ]
+  parent: [GenpopBase, LockerBase]
   id: LockerPrisoner
   name: prisoner closet
   description: It's a secure locker for an inmate's personal belongings during their time in prison.
   suffix: 1
   components:
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape: !type:PolygonShape
-          radius: 0.01
-          vertices:
-          - -0.25,-0.48
-          - 0.25,-0.48
-          - 0.25,0.48
-          - -0.25,0.48
-        mask:
-        - Impassable
-        - TableLayer
-        - LowImpassable
-        layer:
-        - BulletImpassable
-        - Opaque
-        density: 75
-        hard: True
-        restitution: 0
-        friction: 0.4
-  - type: EntityStorage
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PolygonShape
+            radius: 0.01
+            vertices:
+              - -0.25,-0.48
+              - 0.25,-0.48
+              - 0.25,0.48
+              - -0.25,0.48
+          mask:
+            - Impassable
+            - TableLayer
+            - LowImpassable
+          layer:
+            - BulletImpassable
+            - Opaque
+          density: 75
+          hard: True
+          restitution: 0
+          friction: 0.4
+    - type: EntityStorage
 
 - type: entity
   parent: LockerPrisoner
   id: LockerPrisoner2
   suffix: 2
   components:
-  - type: EntityStorageVisuals
-    stateDoorClosed: genpop_door_2
+    - type: EntityStorageVisuals
+      stateDoorClosed: genpop_door_2
 
 - type: entity
   parent: LockerPrisoner
   id: LockerPrisoner3
   suffix: 3
   components:
-  - type: EntityStorageVisuals
-    stateDoorClosed: genpop_door_3
+    - type: EntityStorageVisuals
+      stateDoorClosed: genpop_door_3
 
 - type: entity
   parent: LockerPrisoner
   id: LockerPrisoner4
   suffix: 4
   components:
-  - type: EntityStorageVisuals
-    stateDoorClosed: genpop_door_4
+    - type: EntityStorageVisuals
+      stateDoorClosed: genpop_door_4
 
 - type: entity
   parent: LockerPrisoner
   id: LockerPrisoner5
   suffix: 5
   components:
-  - type: EntityStorageVisuals
-    stateDoorClosed: genpop_door_5
+    - type: EntityStorageVisuals
+      stateDoorClosed: genpop_door_5
 
 - type: entity
   parent: LockerPrisoner
   id: LockerPrisoner6
   suffix: 6
   components:
-  - type: EntityStorageVisuals
-    stateDoorClosed: genpop_door_6
+    - type: EntityStorageVisuals
+      stateDoorClosed: genpop_door_6
 
 - type: entity
   parent: LockerPrisoner
   id: LockerPrisoner7
   suffix: 7
   components:
-  - type: EntityStorageVisuals
-    stateDoorClosed: genpop_door_7
+    - type: EntityStorageVisuals
+      stateDoorClosed: genpop_door_7
 
 - type: entity
   parent: LockerPrisoner
   id: LockerPrisoner8
   suffix: 8
   components:
-  - type: EntityStorageVisuals
-    stateDoorClosed: genpop_door_8
+    - type: EntityStorageVisuals
+      stateDoorClosed: genpop_door_8
 
 # Detective
 - type: entity
@@ -519,8 +518,8 @@
   name: detective's cabinet
   description: Usually cold and empty... like your heart.
   components:
-  - type: AccessReader
-    access: [["Detective"]]
+    - type: AccessReader
+      access: [["Detective"]]
 
 - type: entity
   id: LockerEvidence
@@ -528,8 +527,8 @@
   name: evidence locker
   description: To store bags of bullet casings and detainee belongings.
   components:
-  - type: AccessReader
-    access: [["Security"]]
+    - type: AccessReader
+      access: [["Security"]]
 
 # Syndicate
 - type: entity
@@ -539,13 +538,13 @@
   description: It's a personal storage unit with a blood-red design.
   suffix: "Locked"
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: syndicate
-    stateDoorOpen: syndicate_open
-    stateDoorClosed: syndicate_door
-  - type: AccessReader
-    access: [["SyndicateAgent"]]
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: syndicate
+      stateDoorOpen: syndicate_open
+      stateDoorClosed: syndicate_door
+    - type: AccessReader
+      access: [["SyndicateAgent"]]
 
 # Bluespace
 - type: entity
@@ -555,29 +554,29 @@
   description: Advanced locker technology.
   suffix: once to station
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: syndicate
-    stateDoorOpen: syndicate_open
-    stateDoorClosed: syndicate_door
-  - type: ArrivalsBlacklist
-  - type: BluespaceLocker
-    minBluespaceLinks: 1
-    behaviorProperties:
-      delay: 1
-      actOnOpen: false
-      bluespaceEffectOnInit: true
-      bluespaceEffectOnTeleportSource: true
-      bluespaceEffectOnTeleportTarget: true
-      destroyAfterUses: 1
-      destroyAfterUsesMinItemsToCountUse: 1
-      destroyType: Delete
-    autoLinksUseProperties: true
-    autoLinkProperties:
-      actOnOpen: false
-      actOnClose: false
-      destroyAfterUses: 2
-      destroyType: DeleteComponent
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: syndicate
+      stateDoorOpen: syndicate_open
+      stateDoorClosed: syndicate_door
+    - type: ArrivalsBlacklist
+    - type: BluespaceLocker
+      minBluespaceLinks: 1
+      behaviorProperties:
+        delay: 1
+        actOnOpen: false
+        bluespaceEffectOnInit: true
+        bluespaceEffectOnTeleportSource: true
+        bluespaceEffectOnTeleportTarget: true
+        destroyAfterUses: 1
+        destroyAfterUsesMinItemsToCountUse: 1
+        destroyType: Delete
+      autoLinksUseProperties: true
+      autoLinkProperties:
+        actOnOpen: false
+        actOnClose: false
+        destroyAfterUses: 2
+        destroyType: DeleteComponent
 
 # Clown
 - type: entity
@@ -585,13 +584,13 @@
   name: clown locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Theatre"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: clown
-    stateDoorOpen: clown_open
-    stateDoorClosed: clown_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Theatre"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: clown
+      stateDoorOpen: clown_open
+      stateDoorClosed: clown_door
 
 # Mime
 - type: entity
@@ -599,13 +598,13 @@
   name: mime locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Theatre"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: mime
-    stateDoorOpen: mime_open
-    stateDoorClosed: mime_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Theatre"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: mime
+      stateDoorOpen: mime_open
+      stateDoorClosed: mime_door
 
 # Representative
 - type: entity
@@ -613,13 +612,13 @@
   name: representative locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Command"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: representative
-    stateDoorOpen: hop_open
-    stateDoorClosed: representative_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Command"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: representative
+      stateDoorOpen: hop_open
+      stateDoorClosed: representative_door
 
 # Blueshield
 - type: entity
@@ -627,13 +626,13 @@
   name: blueshield locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Command"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: bs
-    stateDoorOpen: hop_open
-    stateDoorClosed: bs_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Command"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: bs
+      stateDoorOpen: hop_open
+      stateDoorClosed: bs_door
 
 # Magistrate
 - type: entity
@@ -641,13 +640,13 @@
   name: magistrate locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Command"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: magi
-    stateDoorOpen: hop_open
-    stateDoorClosed: magi_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Command"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: magi
+      stateDoorOpen: hop_open
+      stateDoorClosed: magi_door
 
 # Explorer
 - type: entity
@@ -655,13 +654,13 @@
   name: explorer locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Salvage"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: explorer
-    stateDoorOpen: cargo_open
-    stateDoorClosed: explorer_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Salvage"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: explorer
+      stateDoorOpen: cargo_open
+      stateDoorClosed: explorer_door
 
 # Internal Affairs Agent
 - type: entity
@@ -669,13 +668,13 @@
   name: iaa locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Security"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: iaa
-    stateDoorOpen: robotics_open
-    stateDoorClosed: iaa_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Security"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: iaa
+      stateDoorOpen: robotics_open
+      stateDoorClosed: iaa_door
 
 # Roboticist
 - type: entity
@@ -683,13 +682,13 @@
   name: roboticist locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Research"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: robotics
-    stateDoorOpen: robotics_open
-    stateDoorClosed: robotics_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Research"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: robotics
+      stateDoorOpen: robotics_open
+      stateDoorClosed: robotics_door
 
 # Xenobiologist
 - type: entity
@@ -697,13 +696,13 @@
   name: xenobiologist locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Research"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: xenobiology
-    stateDoorOpen: ce_open
-    stateDoorClosed: xenobiology_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Research"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: xenobiology
+      stateDoorOpen: ce_open
+      stateDoorClosed: xenobiology_door
 
 # Smith
 - type: entity
@@ -711,13 +710,13 @@
   name: smith locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Command"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: smith
-    stateDoorOpen: cargo_open
-    stateDoorClosed: smith_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Command"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: smith
+      stateDoorOpen: cargo_open
+      stateDoorClosed: smith_door
 
 # Chaplain
 - type: entity
@@ -725,13 +724,13 @@
   name: chaplain locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: AccessReader
-    access: [["Chapel"]]
-  - type: EntityStorageVisuals
-    stateBaseClosed: chaplain
-    stateDoorOpen: chaplain_open
-    stateDoorClosed: chaplain_door
+    - type: Appearance
+    - type: AccessReader
+      access: [["Chapel"]]
+    - type: EntityStorageVisuals
+      stateBaseClosed: chaplain
+      stateDoorOpen: chaplain_open
+      stateDoorClosed: chaplain_door
 
 # Free Golem
 - type: entity
@@ -739,11 +738,11 @@
   name: freegolem locker
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: freegolem
-    stateDoorOpen: freegolem_open
-    stateDoorClosed: freegolem_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: freegolem
+      stateDoorOpen: freegolem_open
+      stateDoorClosed: freegolem_door
 
 # Bonus Syndicate Locker
 - type: entity
@@ -751,8 +750,8 @@
   name: syndicate locker 2
   parent: LockerBase
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: syndicate1
-    stateDoorOpen: syndicate1_open
-    stateDoorClosed: syndicate1_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: syndicate1
+      stateDoorOpen: syndicate1_open
+      stateDoorClosed: syndicate1_door

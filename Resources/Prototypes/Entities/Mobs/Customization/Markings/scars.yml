@@ -3,12 +3,11 @@
   bodyPart: Head
   groupWhitelist: [Human]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_eye_right
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_eye_right
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -16,12 +15,11 @@
   bodyPart: Head
   groupWhitelist: [Human]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_eye_left
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_eye_left
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -30,12 +28,11 @@
   groupWhitelist: [Human, Reptilian, Moth, Arachnid, Diona]
   sexRestriction: [Male]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_top_surgery_short
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_top_surgery_short
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -44,12 +41,11 @@
   groupWhitelist: [Human, Reptilian, Moth, Arachnid, Diona]
   sexRestriction: [Male]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_top_surgery_long
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_top_surgery_long
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -57,12 +53,11 @@
   bodyPart: Chest
   groupWhitelist: [Human, Reptilian, Moth, Arachnid, Diona]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_chest
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_chest
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -70,12 +65,11 @@
   bodyPart: Head
   groupWhitelist: [Human, Reptilian]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_neck
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_neck
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -83,12 +77,11 @@
   bodyPart: Chest
   groupWhitelist: [Human, Reptilian, Moth, Arachnid]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_chest_bullets
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_chest_bullets
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -96,12 +89,11 @@
   bodyPart: Chest
   groupWhitelist: [Human, Reptilian, Moth, Arachnid]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_stomach_bullets
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_stomach_bullets
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -109,12 +101,11 @@
   bodyPart: Head
   groupWhitelist: [Human, Reptilian, Moth]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_face_1
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_face_1
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -122,12 +113,11 @@
   bodyPart: Head
   groupWhitelist: [Human, Reptilian, Moth]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_face_2
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_face_2
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -135,12 +125,11 @@
   bodyPart: Head
   groupWhitelist: [Human, Reptilian]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_eye_right_small
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_eye_right_small
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"
 
 - type: marking
@@ -148,10 +137,9 @@
   bodyPart: Head
   groupWhitelist: [Human, Reptilian]
   sprites:
-  - sprite: Mobs/Customization/scars.rsi
-    state: scar_eye_left_small
+    - sprite: Mobs/Customization/scars.rsi
+      state: scar_eye_left_small
   coloring:
     default:
-      type:
-        !type:TattooColoring
+      type: !type:TattooColoring
       fallbackColor: "#666666"

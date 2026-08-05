@@ -1,11 +1,10 @@
 - type: loadoutEffectGroup
   id: SeniorBar
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobBartender
-      time: 52h # 1 hour per week for 1 year
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobBartender
+        time: 52h # 1 hour per week for 1 year
 
 # Head
 - type: loadout
@@ -54,8 +53,8 @@
 - type: loadout
   id: BartenderGoldenShaker
   effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorBar
+    - !type:GroupLoadoutEffect
+      proto: SeniorBar
   storage:
     back:
-    - DrinkShakerGold
+      - DrinkShakerGold

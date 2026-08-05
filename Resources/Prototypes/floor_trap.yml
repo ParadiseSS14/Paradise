@@ -10,8 +10,7 @@
     - type: Fixtures
       fixtures:
         floortrap:
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.4,-0.4,0.4,0.4"
           hard: false
           mask:

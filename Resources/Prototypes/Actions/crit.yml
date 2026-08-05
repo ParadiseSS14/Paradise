@@ -4,8 +4,8 @@
   parent: BaseMentalAction
   id: BaseCritAction
   components:
-  - type: Action
-    itemIconStyle: NoItem
+    - type: Action
+      itemIconStyle: NoItem
 
 - type: entity
   parent: BaseCritAction
@@ -13,15 +13,15 @@
   name: Succumb
   description: Accept your fate.
   components:
-  - type: Action
-    startDelay: true
-    useDelay: 10
-  - type: Sprite
-    sprite: Mobs/Ghosts/ghost_human.rsi
-    layers:
-    - state: icon
-  - type: InstantAction
-    event: !type:CritSuccumbEvent
+    - type: Action
+      startDelay: true
+      useDelay: 10
+    - type: Sprite
+      sprite: Mobs/Ghosts/ghost_human.rsi
+      layers:
+        - state: icon
+    - type: InstantAction
+      event: !type:CritSuccumbEvent
 
 - type: entity
   parent: BaseCritAction
@@ -29,14 +29,14 @@
   name: Fake Death
   description: Pretend to take your final breath while staying alive.
   components:
-  - type: Action
-    useDelay: 30
-  - type: Sprite
-    sprite: Interface/Actions/actions_crit.rsi
-    layers:
-    - state: fakedeath
-  - type: InstantAction
-    event: !type:CritFakeDeathEvent
+    - type: Action
+      useDelay: 30
+    - type: Sprite
+      sprite: Interface/Actions/actions_crit.rsi
+      layers:
+        - state: fakedeath
+    - type: InstantAction
+      event: !type:CritFakeDeathEvent
 
 - type: entity
   parent: ActionCritSuccumb # for use delay
@@ -44,10 +44,10 @@
   name: Say Last Words
   description: Whisper your last words to anyone nearby, and then succumb to your fate. You only have 30 characters to work with.
   components:
-  - type: Action
-  - type: Sprite
-    sprite: Interface/Actions/actions_crit.rsi
-    layers:
-    - state: lastwords
-  - type: InstantAction
-    event: !type:CritLastWordsEvent
+    - type: Action
+    - type: Sprite
+      sprite: Interface/Actions/actions_crit.rsi
+      layers:
+        - state: lastwords
+    - type: InstantAction
+      event: !type:CritLastWordsEvent

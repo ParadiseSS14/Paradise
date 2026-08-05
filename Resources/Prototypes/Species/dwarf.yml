@@ -6,9 +6,9 @@
   dollPrototype: AppearanceDwarf
   skinColoration: HumanToned
   defaultSoundsBySex:
-  - UnisexDwarf
-  - FemaleDwarf
-  - UnisexDwarf
+    - UnisexDwarf
+    - FemaleDwarf
+    - UnisexDwarf
   voices:
-  - UnisexDwarf
-  - FemaleDwarf
+    - UnisexDwarf
+    - FemaleDwarf

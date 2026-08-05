@@ -8,12 +8,12 @@
   icon: "JobIconNanotrasen"
   supervisors: job-supervisors-hos
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   id: CentcommGear
@@ -29,7 +29,6 @@
     belt: WeaponPistolN1984
     pocket1: BoxFolderCentComClipboardThreePapers
     pocket2: PenCentcom
-
 
 - type: chameleonOutfit
   id: CentralCommandOfficialOutfit

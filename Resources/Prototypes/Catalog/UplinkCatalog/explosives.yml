@@ -11,12 +11,12 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkSmokeGrenade
@@ -26,7 +26,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
 
 - type: listing
   id: UplinkSyndieMiniBomb
@@ -54,10 +54,10 @@
   categories:
     - UplinkExplosives
   conditions:
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: UplinkC4
@@ -70,7 +70,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
 
 - type: listing
   id: UplinkGrenadierRig
@@ -83,12 +83,12 @@
   cost:
     Telecrystal: 12
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkC4Bundle
@@ -101,7 +101,7 @@
   cost:
     Telecrystal: 12 #you're buying bulk so its a 25% discount, so no additional random discount over it
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
 
 - type: listing
   id: UplinkEmpGrenade
@@ -114,7 +114,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
 
 - type: listing
   id: UplinkExplodingPen
@@ -128,7 +128,7 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
 
 - type: listing
   id: UplinkSyndicateBomb
@@ -141,10 +141,10 @@
     - UplinkExplosives
   restockTime: 1800
   conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkSyndicateBombNukie
@@ -156,10 +156,10 @@
   categories:
     - UplinkExplosives
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkGrenadeShrapnel
@@ -172,7 +172,7 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
 
 - type: listing
   id: UplinkGrenadeIncendiary
@@ -185,7 +185,7 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkExplosives
+    - UplinkExplosives
 
 - type: listing
   id: UplinkPowerSink
@@ -198,4 +198,4 @@
   cost:
     Telecrystal: 8
   categories:
-  - UplinkExplosives
+    - UplinkExplosives

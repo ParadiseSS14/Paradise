@@ -20,19 +20,19 @@
   icon: "JobIconChiefMedicalOfficer"
   supervisors: job-supervisors-captain
   access:
-  - Medical
-  - Command
-  - Maintenance
-  - Chemistry
-  - ChiefMedicalOfficer
-  - Brig
-  - Cryogenics
+    - Medical
+    - Command
+    - Maintenance
+    - Chemistry
+    - ChiefMedicalOfficer
+    - Brig
+    - Cryogenics
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
+    - !type:AddComponentSpecial
+      components:
+        - type: CommandStaff
 
 - type: startingGear
   id: CMOGear
@@ -41,7 +41,7 @@
     ears: ClothingHeadsetCMO
   storage:
     back:
-    - Flash
+      - Flash
 
 - type: chameleonOutfit
   id: ChiefMedicalOfficerChameleonOutfit

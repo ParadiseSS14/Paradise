@@ -7,13 +7,13 @@
   icon: "JobIconJanitor"
   supervisors: job-supervisors-hop
   access:
-  - Service
-  - Janitor
-  - Maintenance
+    - Service
+    - Janitor
+    - Maintenance
   special:
-  - !type:GiveItemOnHolidaySpecial
-    holiday: GarbageDay
-    prototype: WeaponRevolverInspector
+    - !type:GiveItemOnHolidaySpecial
+      holiday: GarbageDay
+      prototype: WeaponRevolverInspector
 
 - type: startingGear
   id: JanitorGear
@@ -23,8 +23,8 @@
     ears: ClothingHeadsetService
     belt: ClothingBeltJanitorFilled
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: startingGear
   id: JanitorMaidGear

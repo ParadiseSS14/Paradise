@@ -4,15 +4,15 @@
   name: Toggle Internals
   description: Breathe from the equipped gas tank. Also requires equipped breath mask.
   components:
-  - type: Action
-    useDelay: 1
-  - type: Sprite
-    sprite: Interface/Alerts/internals.rsi
-    layers:
-    - state: internal2
-      map: ["enum.ActionVisuals.Icon"]
-    - state: internal1
-      map: ["enum.ActionVisuals.IconToggled"]
-      visible: false
-  - type: InstantAction
-    event: !type:ToggleActionEvent
+    - type: Action
+      useDelay: 1
+    - type: Sprite
+      sprite: Interface/Alerts/internals.rsi
+      layers:
+        - state: internal2
+          map: ["enum.ActionVisuals.Icon"]
+        - state: internal1
+          map: ["enum.ActionVisuals.IconToggled"]
+          visible: false
+    - type: InstantAction
+      event: !type:ToggleActionEvent

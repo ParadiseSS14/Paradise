@@ -16,12 +16,12 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 1
-        type: Remove
+        - !type:SatiateThirst
+          factor: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 1
+          type: Remove
 
 - type: reagent
   id: RoyRogers
@@ -40,8 +40,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 4
+        - !type:SatiateThirst
+          factor: 4
 
 - type: reagent
   id: ChangelingSting
@@ -80,12 +80,12 @@
       metabolites:
         Theobromine: 0.2
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDrowsiness
-        time: 2
-        type: Remove
+        - !type:SatiateThirst
+          factor: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDrowsiness
+          time: 2
+          type: Remove
   fizziness: 0.4
 
 - type: reagent
@@ -205,8 +205,8 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateThirst
-        factor: 4
+        - !type:SatiateThirst
+          factor: 4
 
 - type: reagent
   id: SpaceMountainWind
@@ -266,16 +266,16 @@
       metabolites:
         Theobromine: 0.2
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Slime]
-          inverted: true
-        damage:
-          types:
-            Poison: 1
+        - !type:SatiateThirst
+          factor: 2
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+          damage:
+            types:
+              Poison: 1
 
 - type: reagent
   id: ShamblersJuice

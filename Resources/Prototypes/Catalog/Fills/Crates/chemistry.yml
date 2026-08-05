@@ -4,20 +4,20 @@
   name: chemicals crate (P)
   description: Contains chemicals from the P-Block of elements. Requires Chemistry access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: JugAluminium
-        - id: JugCarbon
-        - id: JugChlorine
-        - id: JugFluorine
-        - id: JugIodine
-        - id: JugPhosphorus
-        - id: JugSulfur
-        - id: JugSilicon
-        - id: JugOxygen
-        - id: JugNitrogen
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: JugAluminium
+            - id: JugCarbon
+            - id: JugChlorine
+            - id: JugFluorine
+            - id: JugIodine
+            - id: JugPhosphorus
+            - id: JugSulfur
+            - id: JugSilicon
+            - id: JugOxygen
+            - id: JugNitrogen
 
 - type: entity
   parent: CrateChemistrySecure
@@ -25,15 +25,15 @@
   name: chemicals crate (S)
   description: Contains chemicals from the S-Block of elements. Requires Chemistry access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: JugHydrogen
-        - id: JugLithium
-        - id: JugSodium
-        - id: JugPotassium
-        - id: JugRadium
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: JugHydrogen
+            - id: JugLithium
+            - id: JugSodium
+            - id: JugPotassium
+            - id: JugRadium
 
 - type: entity
   parent: CrateChemistrySecure
@@ -41,15 +41,15 @@
   name: chemicals crate (D)
   description: Contains chemicals from the D-Block of elements. Requires Chemistry access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: JugIron
-        - id: JugCopper
-        - id: JugGold
-        - id: JugMercury
-        - id: JugSilver
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: JugIron
+            - id: JugCopper
+            - id: JugGold
+            - id: JugMercury
+            - id: JugSilver
 
 - type: entity
   parent: CrateGenericSteel
@@ -57,8 +57,8 @@
   name: bulk Plant-B-Gone crate
   description: From Monstano. "Unwanted Weeds, Meet Your Celestial Roundup!"
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage:
-        id: JugPlantBGone
-        amount: 5
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage:
+          id: JugPlantBGone
+          amount: 5

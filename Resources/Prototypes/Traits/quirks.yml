@@ -6,7 +6,7 @@
   description: trait-pacifist-desc
   category: Quirks
   components:
-  - type: Pacified
+    - type: Pacified
 
 - type: trait
   id: LightweightDrunk
@@ -14,8 +14,8 @@
   description: trait-lightweight-desc
   category: Quirks
   components:
-  - type: LightweightDrunk
-    boozeStrengthMultiplier: 2
+    - type: LightweightDrunk
+      boozeStrengthMultiplier: 2
 
 - type: trait
   id: Snoring
@@ -23,4 +23,4 @@
   description: trait-snoring-desc
   category: Quirks
   components:
-  - type: Snoring
+    - type: Snoring

@@ -4,7 +4,7 @@
   antagonist: true
   setPreference: false
   objective: roles-antag-space-ninja-objective
-  guides: [ SpaceNinja ]
+  guides: [SpaceNinja]
 
 - type: antagSpecifier
   parent: RestrictedAntag
@@ -13,26 +13,26 @@
   pickPlayer: false
   startingGear: SpaceNinjaGear
   roleLoadout:
-  - RoleSurvivalSpaceNinja
+    - RoleSurvivalSpaceNinja
   briefing:
     text: ninja-role-greeting
     color: Green
     sound: /Audio/Misc/ninja_greeting.ogg
   components:
-  - type: SpaceNinja
-  - type: NpcFactionMember
-    factions:
-    - Syndicate
-  - type: AutoImplant
-    implants:
-    - DeathAcidifierImplant
-  - type: RandomMetadata
-    nameSegments:
-    - NamesNinjaTitle
-    - NamesNinja
-    nameFormat: name-format-ninja
+    - type: SpaceNinja
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
+    - type: AutoImplant
+      implants:
+        - DeathAcidifierImplant
+    - type: RandomMetadata
+      nameSegments:
+        - NamesNinjaTitle
+        - NamesNinja
+      nameFormat: name-format-ninja
   mindRoles:
-  - MindRoleNinja
+    - MindRoleNinja
 
 #Ninja Gear
 - type: startingGear
@@ -55,16 +55,16 @@
     - JetpackBlackFilled
   storage:
     back: # belt holds katana so satchel has the tools for sabotaging things
-    - Crowbar
-    - Wrench
-    - Screwdriver
-    - Wirecutter
-    - Welder
-    - Multitool
-    - EmergencyMedipen
-    - Flare
-    - FoodSnackNutribrick
-    - DrinkWaterBottleFull
+      - Crowbar
+      - Wrench
+      - Screwdriver
+      - Wirecutter
+      - Welder
+      - Multitool
+      - EmergencyMedipen
+      - Flare
+      - FoodSnackNutribrick
+      - DrinkWaterBottleFull
 
 - type: chameleonOutfit
   id: NinjaChameleonOutfit

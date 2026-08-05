@@ -1,7 +1,7 @@
 - type: entity
   name: clientsideclone
   id: clientsideclone
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Sprite
-  - type: AnimationPlayer
+    - type: Sprite
+    - type: AnimationPlayer

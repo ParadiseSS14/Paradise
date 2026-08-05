@@ -34,9 +34,7 @@ public sealed class SplitbarSheetlet<T> : Sheetlet<T> where T : PalettedStyleshe
 
         return
         [
-            E<PanelContainer>()
-                .Class(SplitBar.SplitBarEntry)
-                .Panel(roundedButton),
+
         ];
     }
 }

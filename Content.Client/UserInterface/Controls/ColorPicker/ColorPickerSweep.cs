@@ -14,7 +14,6 @@ namespace Content.Client.UserInterface.Controls.ColorPicker;
 public sealed class ColorPickerSweep : ContainerForkedButton
 {
 
-    public event Action? OnSaveColors;
     public event Action<Vector2>? OnColorChanged;
 
     public Color ColorWeThinkWeHave;

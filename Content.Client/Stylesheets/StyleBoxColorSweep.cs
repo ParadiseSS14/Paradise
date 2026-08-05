@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Client.Stylesheets;
 
 // ReSharper disable once InconsistentNaming
-public sealed class StyleBoxColorSweep : StyleBox
+public sealed partial class StyleBoxColorSweep : StyleBox
 {
     [Dependency] private IPrototypeManager _prototype = default!;
     [Dependency] private IResourceCache _cache = default!;

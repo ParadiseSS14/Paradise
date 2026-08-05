@@ -13,8 +13,6 @@ namespace Content.Client.UserInterface.Controls.ColorPicker;
 [GenerateTypedNameReferences]
 public sealed partial class HueSweep : ContainerForkedButton
 {
-
-    public event Action? OnSaveColors;
     public event Action<float>? OnColorChanged;
 
     public HueSweep()

@@ -16,7 +16,7 @@ using static Robust.Client.UserInterface.Controls.BoxContainer;
 namespace Content.Client.UserInterface.Controls
 {
     [Virtual]
-    public class TguiKnob : Control
+    public partial class TguiKnob : Control
     {
         [Dependency] private IPrototypeManager _prototype = default!;
         [Dependency] private IResourceCache _resourceCache = default!;

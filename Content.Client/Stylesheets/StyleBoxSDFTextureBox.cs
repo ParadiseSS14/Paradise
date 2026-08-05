@@ -7,10 +7,10 @@ using Robust.Shared.Prototypes;
 namespace Content.Client.Stylesheets;
 
 // ReSharper disable once InconsistentNaming
-public sealed class StyleBoxSDFTextureBox : StyleBox
+public sealed partial class StyleBoxSDFTextureBox : StyleBox
 {
     [Dependency] private IPrototypeManager _prototype = default!;
-    [Dependency] private IResourceCache _cache = default!;
+
 
     public Texture? Texture { get; set; }
     public Color Modulate { get; set; } = Color.White;
@@ -18,7 +18,6 @@ public sealed class StyleBoxSDFTextureBox : StyleBox
     public float UiTiling { get; set; } = 1.0f;
 
     public Vector4 CornerRadius { get; set; } = new(0f, 0f, 0f, 0f);
-    public bool DoGradient { get; set; } = false;
 
     private ShaderInstance? _shaderInstance;
     public ProtoId<ShaderPrototype>? Shader

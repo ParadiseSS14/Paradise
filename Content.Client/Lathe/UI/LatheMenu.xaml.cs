@@ -266,7 +266,8 @@ public sealed partial class LatheMenu : FancyWindow
 
         CategoryList.DisposeAllChildren();
 
-        var allCategory = _prototypeManager.Index<LatheCategoryPrototype>("AllCategory");
+        ProtoId<LatheCategoryPrototype> id = "AllCategory";
+        var allCategory = _prototypeManager.Index(id);
         var all = new CategoryControl(allCategory);
         all.OnButtonPressed += category =>
         {

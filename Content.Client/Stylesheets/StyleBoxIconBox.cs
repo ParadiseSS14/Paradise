@@ -11,15 +11,12 @@ namespace Content.Client.Stylesheets;
 public sealed partial class StyleBoxIconBox : StyleBox
 {
     [Dependency] private IPrototypeManager _prototype = default!;
-    [Dependency] private IResourceCache _cache = default!;
 
     public Color HighlightColor { get; set; }
     public Color UnhighlitColor { get; set; }
     public Color BackgroundColor { get; set; }
 
     public float BorderThickness { get; set; }
-
-    public float CornerRadius { get; set; } = 0f;
 
     private ShaderInstance? _shaderInstance;
 
@@ -36,8 +33,6 @@ public sealed partial class StyleBoxIconBox : StyleBox
             ? proto.InstanceUnique()
             : null;
     }
-
-    private string? _texturePath;
 
     private Texture? _textureRef;
 

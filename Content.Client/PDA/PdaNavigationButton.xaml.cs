@@ -11,24 +11,6 @@ namespace Content.Client.PDA;
 public sealed partial class PdaNavigationButton : ContainerButton
 {
 
-    private bool _isCurrent;
-    private bool _isActive = true;
-
-    private Thickness _borderThickness = new(0, 0, 0, 2);
-    private Thickness _currentTabBorderThickness = new(2, 0, 2, 0);
-
-    private readonly StyleBoxFlat _styleBox = new()
-    {
-        BackgroundColor = Color.FromHex("#202023"),
-        BorderColor = Color.FromHex("#5a5a5a"),
-        BorderThickness = new Thickness(0, 0, 0, 2)
-    };
-
-    public string InactiveBgColor { get; set; } = "#202023";
-    public string ActiveBgColor { get; set; } = "#25252a";
-    public string InactiveFgColor { get; set; } = "#5a5a5a";
-    public string ActiveFgColor { get; set; } = "#FFFFFF";
-
     public SpriteSpecifier? IconTexture
     {
         set

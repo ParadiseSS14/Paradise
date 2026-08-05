@@ -10,9 +10,8 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.UserInterface.Systems.InspectionHud;
 
-public sealed class InspectionController : UIController
+public sealed partial class InspectionController : UIController
 {
-    [Dependency] private IEntityManager _entMan = default!;
     [Dependency] private IEntitySystemManager _sysMan = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
 

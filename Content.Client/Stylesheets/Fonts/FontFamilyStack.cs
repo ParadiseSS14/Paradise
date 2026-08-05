@@ -4,6 +4,7 @@ using Robust.Client.ResourceManagement;
 
 namespace Content.Client.Stylesheets.Fonts;
 
+[Virtual]
 public class FontFamilyStack(IResourceCache resCache, string variant = "")
 {
     /// <summary>

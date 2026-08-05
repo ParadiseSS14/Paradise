@@ -20,8 +20,6 @@ namespace Content.Client.UserInterface
 
         [Dependency] private IEntityManager _entityManager = default!;
 
-        private Action<bool>? OnScaleTweenDone;
-
         public Label Label { get; }
 
         [ViewVariables(VVAccess.ReadWrite)]

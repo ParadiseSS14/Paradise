@@ -4,7 +4,7 @@ using Content.Client.UserInterface.Tweens.Interpolators;
 
 namespace Content.Client.UserInterface.Tweens.Tweeners;
 
-public class Tweener<T> : ITweener
+public sealed class Tweener<T> : ITweener
 {
     public delegate void Setter(T value);
 

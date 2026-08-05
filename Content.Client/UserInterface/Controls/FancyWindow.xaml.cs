@@ -57,11 +57,8 @@ namespace Content.Client.UserInterface.Controls
             }
         }
 
-        private string? _stylesheet;
-
         public new string? Stylesheet
         {
-            get => _stylesheet;
             set
             {
                 if (value is null)
@@ -71,6 +68,7 @@ namespace Content.Client.UserInterface.Controls
                     base.Stylesheet = stylesheet;
             }
         }
+
 
         /// <summary>
         /// Applies the specified stylesheet from the <see cref="StylesheetComponent"/> on <paramref name="owner"/>.

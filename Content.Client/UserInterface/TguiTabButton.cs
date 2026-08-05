@@ -11,7 +11,7 @@ namespace Content.Client.UserInterface
     ///     A type of toggleable button that also has a checkbox.
     /// </summary>
     [Virtual]
-    public class TguiTabButton : ContainerButton
+    public partial class TguiTabButton : ContainerButton
     {
         public const string StyleClassCheckBox = "checkBox";
         public const string StyleClassCheckBoxChecked = "checkBoxChecked";

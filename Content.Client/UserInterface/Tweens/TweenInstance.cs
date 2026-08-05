@@ -4,6 +4,8 @@ namespace Content.Client.UserInterface.Tweens;
 
 public sealed class TweenInstance
 {
+
+#pragma warning disable warningnumber
     // Majorly Taken from https://github.com/Guillemsc/GTweens/blob/main/Source/Tweens/GTween.cs
     // Tweens are hard, this is MIT, so.
     public event Action? OnStartAction;
@@ -14,6 +16,7 @@ public sealed class TweenInstance
     public event Action? OnKillAction;
     public event Action? OnCompleteOrKillAction;
     public event Action<float>? OnTimeScaleChangedAction;
+#pragma warning restore warningnumber
 
     public ITweenBehaviour Behaviour { get; }
     public float TimeScale { get; set; } = 1;

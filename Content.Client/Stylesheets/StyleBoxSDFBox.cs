@@ -7,10 +7,9 @@ using Robust.Shared.Prototypes;
 namespace Content.Client.Stylesheets;
 
 // ReSharper disable once InconsistentNaming
-public sealed class StyleBoxSDFBox : StyleBox
+public sealed partial class StyleBoxSDFBox : StyleBox
 {
     [Dependency] private IPrototypeManager _prototype = default!;
-    [Dependency] private IResourceCache _cache = default!;
 
     public Color BackgroundColor { get; set; }
     public Color GradientBottomColor { get; set; }

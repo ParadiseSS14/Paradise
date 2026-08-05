@@ -25,4 +25,4 @@ if (( ${#files[@]} != 0 )); then
     fi
 fi
 
-npm exec -- prettier:check "${files[@]}"
+npm run prettier:check "${files[@]}"

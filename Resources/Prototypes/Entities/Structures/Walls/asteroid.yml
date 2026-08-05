@@ -1,35 +1,12 @@
 - type: entity
   parent: BaseWall
   id: BaseRock
+  name: Rock
   components:
-  - type: Transform
-    noRot: true
-  - type: IconSmooth
-    key: walls
-    base: rock_
-  - type: SmoothEdge
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: rock
-  - type: Sprite
-    sprite: Structures/Walls/rock.rsi
-    color: "#434343"
-  - type: MiningScannerViewable
   - type: Damageable
     damageModifierSet: Rock
   - type: Injurable
     damageContainer: StructuralInorganic
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.5,-0.5,0.5,0.5"
-        mask:
-        - FullTileMask
-        layer:
-        - WallLayer
-        density: 2000
   - type: Destructible
     thresholds:
     - trigger:
@@ -43,6 +20,28 @@
           path: /Audio/Effects/break_stone.ogg
           params:
             volume: -6
+  - type: Sprite
+    sprite: Structures/_Paradise/rock.rsi
+    color: "#434343"
+  - type: Icon
+    sprite: Structures/_Paradise/rock.rsi
+    state: full
+  - type: IconSmooth
+    key: walls
+    base: state
+  - type: Appearance
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 2000
+  - type: MiningScannerViewable
 
 #Asteroid rock
 - type: entity
@@ -343,12 +342,8 @@
   suffix: Low Ore Yield
   description: A rocky asteroid.
   components:
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: ironrock
-  - type: SmoothEdge
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
     color: "#bf8c7e"
 
 - type: entity
@@ -368,10 +363,8 @@
   name: ironsandstone
   suffix: no ore yield
   components:
-  - type: Icon
-    state: ironsandstone
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
 
 - type: entity
   id: IronSandstoneMining
@@ -574,11 +567,7 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: rock_
   - type: MiningScannerViewable
-  - type: SmoothEdge
 
 # Ore veins
 - type: entity
@@ -813,11 +802,8 @@
   name: basalt
   parent: BaseRock
   components:
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: rock_wall
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
     color: "#242424"
 
 - type: entity
@@ -981,11 +967,8 @@
   name: snowdrift
   parent: BaseRock
   components:
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: rock_snow
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
     color: "#b6ccdb"
 
 - type: entity
@@ -1149,11 +1132,8 @@
   name: sandstone
   parent: BaseRock
   components:
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: rock_sand
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
     color: "#d4a079"
 
 - type: entity
@@ -1316,11 +1296,8 @@
   name: chromite
   parent: BaseRock
   components:
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: rock_chromite
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
     color: "#7c828f"
 
 - type: entity
@@ -1484,11 +1461,8 @@
   name: andesite
   parent: BaseRock
   components:
-  - type: Icon
-    sprite: Structures/Walls/rock.rsi
-    state: rock_andesite
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
     color: "#575757"
 
 - type: entity
@@ -1501,7 +1475,7 @@
     oreChance: 1.0
     currentOre: OreCoal
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: Structures/_Paradise/rock.rsi
     layers:
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]

@@ -8,38 +8,6 @@
     },
     "states": [
         {
-            "name": "rock_0",
-            "directions": 4
-        },
-        {
-            "name": "rock_1",
-            "directions": 4
-        },
-        {
-            "name": "rock_2",
-            "directions": 4
-        },
-        {
-            "name": "rock_3",
-            "directions": 4
-        },
-        {
-            "name": "rock_4",
-            "directions": 4
-        },
-        {
-            "name": "rock_5",
-            "directions": 4
-        },
-        {
-            "name": "rock_6",
-            "directions": 4
-        },
-        {
-            "name": "rock_7",
-            "directions": 4
-        },
-        {
             "name": "rock"
         },
         {

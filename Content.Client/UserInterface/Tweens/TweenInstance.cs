@@ -5,18 +5,16 @@ namespace Content.Client.UserInterface.Tweens;
 public sealed class TweenInstance
 {
 
-#pragma warning disable warningnumber
+#pragma warning disable 61
     // Majorly Taken from https://github.com/Guillemsc/GTweens/blob/main/Source/Tweens/GTween.cs
     // Tweens are hard, this is MIT, so.
     public event Action? OnStartAction;
     public event Action? OnTickAction;
-    public event Action? OnLoopAction;
-    public event Action? OnResetAction;
     public event Action? OnCompleteAction;
     public event Action? OnKillAction;
     public event Action? OnCompleteOrKillAction;
     public event Action<float>? OnTimeScaleChangedAction;
-#pragma warning restore warningnumber
+#pragma warning restore 61
 
     public ITweenBehaviour Behaviour { get; }
     public float TimeScale { get; set; } = 1;
@@ -230,18 +228,6 @@ public sealed class TweenInstance
     public TweenInstance OnTick(Action action)
     {
         OnTickAction += action;
-        return this;
-    }
-
-    public TweenInstance OnLoop(Action action)
-    {
-        OnLoopAction += action;
-        return this;
-    }
-
-    public TweenInstance OnReset(Action action)
-    {
-        OnResetAction += action;
         return this;
     }
 

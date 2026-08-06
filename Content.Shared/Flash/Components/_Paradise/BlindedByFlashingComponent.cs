@@ -1,7 +1,6 @@
-using Content.Shared.Eye.Blinding.Systems;
 using Robust.Shared.GameStates;
 
-namespace Content.Shared.Flash.Components;
+namespace Content.Shared.Flash._Paradise.Components;
 
 /// <summary>
 /// This entity will take eye damage from flashes.

@@ -1,7 +1,7 @@
-using Content.Shared.Flash.Components;
+using Content.Shared.Flash._Paradise.Components;
 using Content.Shared.Eye.Blinding.Systems;
 
-namespace Content.Shared.Flash;
+namespace Content.Shared.Flash._Paradise;
 
 /// <summary>
 /// Modifies eye damage by a given amount.

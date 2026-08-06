@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseWall
-  id: BaseRock
+  id: BaseRockWall
   name: Rock
   components:
   - type: Damageable
@@ -21,10 +21,10 @@
           params:
             volume: -6
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     color: "#434343"
   - type: Icon
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     state: full
   - type: IconSmooth
     key: walls
@@ -45,7 +45,7 @@
 
 #Asteroid rock
 - type: entity
-  parent: BaseRock
+  parent: BaseRockWall
   id: AsteroidRock
   name: asteroid rock
   description: A rocky asteroid.
@@ -337,13 +337,13 @@
 
 - type: entity
   id: IronRock
-  parent: BaseRock
+  parent: BaseRockWall
   name: ironrock
   suffix: Low Ore Yield
   description: A rocky asteroid.
   components:
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     color: "#bf8c7e"
 
 - type: entity
@@ -359,12 +359,12 @@
 
 - type: entity
   id: IronSandstone
-  parent: BaseRock
+  parent: BaseRockWall
   name: ironsandstone
   suffix: no ore yield
   components:
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
 
 - type: entity
   id: IronSandstoneMining
@@ -544,7 +544,7 @@
 # Rocks and ore veins
 - type: entity
   id: WallRock
-  parent: BaseRock
+  parent: BaseRockWall
   name: rock
   suffix: planetmap
   components:
@@ -800,10 +800,10 @@
 - type: entity
   id: WallRockBasalt
   name: basalt
-  parent: BaseRock
+  parent: BaseRockWall
   components:
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     color: "#242424"
 
 - type: entity
@@ -965,10 +965,10 @@
 - type: entity
   id: WallRockSnow
   name: snowdrift
-  parent: BaseRock
+  parent: BaseRockWall
   components:
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     color: "#b6ccdb"
 
 - type: entity
@@ -1130,10 +1130,10 @@
 - type: entity
   id: WallRockSand
   name: sandstone
-  parent: BaseRock
+  parent: BaseRockWall
   components:
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     color: "#d4a079"
 
 - type: entity
@@ -1294,10 +1294,10 @@
 - type: entity
   id: WallRockChromite
   name: chromite
-  parent: BaseRock
+  parent: BaseRockWall
   components:
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     color: "#7c828f"
 
 - type: entity
@@ -1459,10 +1459,10 @@
 - type: entity
   id: WallRockAndesite
   name: andesite
-  parent: BaseRock
+  parent: BaseRockWall
   components:
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     color: "#575757"
 
 - type: entity
@@ -1475,7 +1475,7 @@
     oreChance: 1.0
     currentOre: OreCoal
   - type: Sprite
-    sprite: Structures/_Paradise/rock.rsi
+    sprite: Structures/_Paradise/Walls/rock.rsi
     layers:
     - state: rock_coal
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]

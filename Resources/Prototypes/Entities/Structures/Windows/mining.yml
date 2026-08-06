@@ -4,9 +4,9 @@
   name: mining window
   components:
   - type: Sprite
-    sprite: Structures/Windows/mining.rsi
+    sprite: Structures/_Paradise/Windows/mining.rsi
   - type: Icon
-    sprite: Structures/Windows/mining.rsi
+    sprite: Structures/_Paradise/Windows/mining.rsi
     state: full
   - type: Repairable
     fuelCost: 15
@@ -52,7 +52,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/mining_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/mining_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -63,7 +63,7 @@
     key: windows
     base: state
   - type: Icon
-    sprite: Structures/Windows/mining_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/mining_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:

@@ -71,9 +71,9 @@
   id: Window
   components:
   - type: Sprite
-    sprite: Structures/Windows/window.rsi
+    sprite: Structures/_Paradise/Windows/window.rsi
   - type: Icon
-    sprite: Structures/Windows/window.rsi
+    sprite: Structures/_Paradise/Windows/window.rsi
     state: full
   - type: Damageable
     damageModifierSet: Glass
@@ -103,9 +103,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/tinted_window.rsi
+    sprite: Structures/_Paradise/Windows/tinted_window.rsi
   - type: Icon
-    sprite: Structures/Windows/tinted_window.rsi
+    sprite: Structures/_Paradise/Windows/tinted_window.rsi
   - type: IconSmooth
     base: twindow
   - type: Construction
@@ -194,10 +194,10 @@
   id: WindowDirectional
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: Structures/_Paradise/Windows/directional.rsi
     state: window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: Structures/_Paradise/Windows/directional.rsi
     state: window
   - type: Damageable
     damageModifierSet: Glass
@@ -236,10 +236,10 @@
     - Window
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: Structures/_Paradise/Windows/directional.rsi
     state: frosted_window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: Structures/_Paradise/Windows/directional.rsi
     state: frosted_window
   - type: StaticPrice
     price: 35
@@ -255,7 +255,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/window_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/window_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -266,7 +266,7 @@
     key: windows
     base: state
   - type: Icon
-    sprite: Structures/Windows/window_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/window_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:

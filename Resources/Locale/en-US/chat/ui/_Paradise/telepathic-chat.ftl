@@ -6,4 +6,3 @@ telepathic-chat-compose-window-title = Project Mind
 telepathic-chat-select-target = Select
 telepathic-chat-target-unreachable = Target Unreachable
 telepathic-chat-ui-window-name = Select Target
-

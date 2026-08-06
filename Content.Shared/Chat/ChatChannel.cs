@@ -85,12 +85,10 @@ namespace Content.Shared.Chat
         /// </summary>
         Unspecified = 1 << 14,
 
-        // Paradise Content START
         /// <summary>
         ///     Telepathy chat
         /// </summary>
-        Telepathic = 1 << 15,
-        // Paradise Content END
+        Telepathic = 1 << 15, // Paradise Content
 
         /// <summary>
         ///     Channels considered to be IC.

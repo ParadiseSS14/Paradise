@@ -12,7 +12,7 @@ species-name-vox = Vox
 species-name-gingerbread = delicious baked good
 species-name-vulpkanin = Vulpkanin
 
-## Paradise Content
+# Paradise Content
 species-name-grey = Grey
 
 ## Misc species things

@@ -22,8 +22,7 @@ public sealed partial class TelepathicChatMenu : FancyWindow
         TargetsList.OnItemSelected += OnItemSelected;
     }
 
-    // TODO ALL of this does not work
-    public void OnItemSelected(ItemList.ItemListSelectedEventArgs obj)
+    private void OnItemSelected(ItemList.ItemListSelectedEventArgs obj)
     {
         var item = TargetsList[obj.ItemIndex].Metadata;
 

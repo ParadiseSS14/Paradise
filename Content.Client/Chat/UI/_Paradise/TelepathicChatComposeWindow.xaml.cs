@@ -21,7 +21,7 @@ public sealed partial class TelepathicChatComposeWindow : FancyWindow
 
     }
 
-    public void EnteredText(LineEdit.LineEditEventArgs args)
+    private void EnteredText(LineEdit.LineEditEventArgs args)
     {
         var submittedText = args.Text;
         OnTextEntered?.Invoke(submittedText);

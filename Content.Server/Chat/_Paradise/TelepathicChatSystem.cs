@@ -86,14 +86,11 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         {
             return;
         }
-        if (!_ui.IsUiOpen((ent, userInterfaceComp), TelepathicChatUiKey.Send, args.Performer))
-        {
-            _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Send, args.Performer);
-        }
 
         var targets = ChooseTargets(ent.Owner, ent.Comp.Range);
         var state = new TelepathicTargetsListState(targets);
 
+        _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Send, args.Performer);
         _ui.SetUiState(ent.Owner, TelepathicChatUiKey.Send, state);
     }
 
@@ -103,14 +100,11 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         {
             return;
         }
-        if (!_ui.IsUiOpen((ent, userInterfaceComp), TelepathicChatUiKey.Receive, args.Performer))
-        {
-            _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Receive, args.Performer);
-        }
 
         var targets = ChooseTargets(ent.Owner, ent.Comp.Range);
         var state = new TelepathicTargetsListState(targets);
 
+        _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Receive, args.Performer);
         _ui.SetUiState(ent.Owner, TelepathicChatUiKey.Receive, state);
     }
 
@@ -124,10 +118,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             {
                 return;
             }
-            if (!_ui.IsUiOpen((ent, userInterfaceComp), TelepathicChatUiKey.Compose, args.Actor))
-            {
-                _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Compose, args.Actor);
-            }
+
+            _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Compose, args.Actor);
+
         }
     }
 
@@ -159,7 +152,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         return null;
     }
 
-    // TODO: Method to handle received target data
+    // TODO: Method to handle received ScanMind target data
     private List<(NetEntity uid, string Name)> ReceiveMessage()
     {
         return new List<(NetEntity uid, string Name)>();

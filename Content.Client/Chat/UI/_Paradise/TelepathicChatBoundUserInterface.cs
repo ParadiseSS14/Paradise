@@ -3,23 +3,30 @@ using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 
 namespace Content.Client.Chat.UI._Paradise;
-// TODO: Need to find out how selection is confirmed when clicking "Select"
 [UsedImplicitly]
 public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
 {
     [ViewVariables]
     private TelepathicChatMenu? _menu;
-    private readonly TelepathicChatComposeWindow? _composeWindow;
-    private NetEntity _targetEntity;
+    private TelepathicChatComposeWindow? _composeWindow;
+    private NetEntity? _targetEntity;
 
     protected override void Open()
     {
         base.Open();
 
-        _menu = this.CreateWindow<TelepathicChatMenu>();
-        _menu.SelectPressed += OnPressedSelect;
-        _menu.CancelPressed += OnCancel;
-        _menu.OnTargetSelected += OnSelectTarget;
+        if (UiKey.Equals(TelepathicChatUiKey.Compose))
+        {
+            _composeWindow = this.CreateWindow<TelepathicChatComposeWindow>();
+        }
+        else
+        {
+            _menu = this.CreateWindow<TelepathicChatMenu>();
+        }
+
+        _menu?.SelectPressed += OnPressedSelect;
+        _menu?.CancelPressed += OnCancel;
+        _menu?.OnTargetSelected += OnSelectTarget;
         _composeWindow?.OnTextEntered += OnEnteredText;
         _composeWindow?.CancelPressed += OnCancel;
 
@@ -27,7 +34,10 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
 
     private void OnPressedSelect()
     {
-        SendMessage(new TelepathicTargetSelectedMsg(_targetEntity));
+        if (_targetEntity is not { } targetEntity)
+            return;
+
+        SendMessage(new TelepathicTargetSelectedMsg(targetEntity));
         _menu?.Close();
     }
 
@@ -40,6 +50,11 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
     private void OnSelectTarget(NetEntity netEntity)
     {
         _targetEntity = netEntity;
+    }
+
+    private void OnDeSelectTarget(NetEntity netEntity)
+    {
+        _targetEntity = null;
     }
 
     private void OnEnteredText(String message)

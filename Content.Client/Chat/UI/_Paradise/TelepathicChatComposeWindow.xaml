@@ -2,8 +2,10 @@
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                       xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Chat.Widgets"
                       Title="{Loc telepathic-chat-compose-window-title}"
-                      MinSize="465 265">
-    <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="150">
+                      Resizable= "False"
+                      MinWidth= "150"
+                      MinHeight="80">
+    <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="4" MinWidth="150">
         <LineEdit Name="TextLine" />
         <Button Name="CancelButton" Text="{Loc 'telepathic-chat-cancel'}"/>
     </BoxContainer>

@@ -637,9 +637,9 @@
   - type: Action
     useDelay: 0
   - type: Sprite
-    sprite: Interface/Actions/jump.rsi
+    sprite: Interface/Actions/_Paradise/telepathy.rsi
     layers:
-    - state: icon
+    - state: telepathy_project
   - type: InstantAction
     event: !type:ProjectMindEvent {}
 
@@ -651,8 +651,8 @@
   - type: Action
     useDelay: 0
   - type: Sprite
-    sprite: Interface/Actions/jump.rsi
+    sprite: Interface/Actions/_Paradise/telepathy.rsi
     layers:
-    - state: icon
+    - state: telepathy_mindscan
   - type: InstantAction
     event: !type:ScanMindEvent {}

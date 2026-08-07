@@ -15,7 +15,7 @@ namespace Content.Client.SprayPainter.UI;
 /// A window to select spray painter settings by object type, as well as pipe colours and decals.
 /// </summary>
 [GenerateTypedNameReferences]
-public sealed partial class SprayPainterWindow : DefaultWindow
+public sealed partial class SprayPainterWindow : FancyWindow
 {
     [Dependency] private IEntitySystemManager _sysMan = default!;
     [Dependency] private ILocalizationManager _loc = default!;

@@ -10,34 +10,7 @@ namespace Content.Client.PDA;
 public partial class PdaWindow : BaseWindow
 {
 
-    public string? BorderColor
-    {
-        get => Background.ActualModulateSelf.ToHex();
 
-        set => Background.ModulateSelfOverride = Color.FromHex(value, Color.White);
-    }
-
-    public string? AccentHColor
-    {
-        get => AccentH.ActualModulateSelf.ToHex();
-
-        set
-        {
-            AccentH.ModulateSelfOverride = Color.FromHex(value, Color.White);
-            AccentH.Visible = value != null;
-        }
-    }
-
-    public string? AccentVColor
-    {
-        get => AccentV.ActualModulateSelf.ToHex();
-
-        set
-        {
-            AccentV.ModulateSelfOverride = Color.FromHex(value, Color.White);
-            AccentV.Visible = value != null;
-        }
-    }
 
     public PdaWindow()
     {
@@ -45,9 +18,6 @@ public partial class PdaWindow : BaseWindow
 
         CloseButton.OnPressed += _ => Close();
         XamlChildren = ContentsContainer.Children;
-
-        AccentH.Visible = false;
-        AccentV.Visible = false;
     }
 
     protected override DragMode GetDragModeFor(Vector2 relativeMousePos)

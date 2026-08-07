@@ -52,5 +52,8 @@ comp-pda-ui-unknown = Unknown
 
 comp-pda-ui-unassigned = Unassigned
 
+comp-pda-ui-header-details = Details
+comp-pda-ui-header-programs = Programs
+
 pda-notification-message = [font size=12][bold]PDA[/bold] { $header }: [/font]
     "{ $message }"

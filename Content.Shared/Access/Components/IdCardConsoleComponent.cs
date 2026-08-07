@@ -83,9 +83,9 @@ public sealed partial class IdCardConsoleComponent : Component
         public readonly bool IsPrivilegedIdPresent;
         public readonly bool IsPrivilegedIdAuthorized;
         public readonly bool IsTargetIdPresent;
-        public readonly string TargetIdName;
+        public string TargetIdName;
         public readonly string? TargetIdFullName;
-        public readonly string? TargetIdJobTitle;
+        public string? TargetIdJobTitle;
         public readonly List<ProtoId<AccessLevelPrototype>>? TargetIdAccessList;
         public readonly List<ProtoId<AccessLevelPrototype>>? AllowedModifyAccessList;
         public readonly ProtoId<JobPrototype> TargetIdJobPrototype;

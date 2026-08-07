@@ -1,0 +1,93 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:colorPicker="clr-namespace:Content.Client.UserInterface.Controls.ColorPicker"
+                      Title="{Loc 'color-picker-window-title'}"
+                      MinWidth="650"
+                      MinHeight="300">
+    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
+
+        <PanelContainer StyleClasses="SurfacePrimary" Margin="8">
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True"
+                          SizeFlagsStretchRatio="0.5"
+                          Margin="8">
+                <colorPicker:ColorPickerSweep Name="ColorSweep" MinHeight="175" MinWidth="175" Margin="0 2"
+                                              VerticalExpand="False" StyleClasses="ColorPickerSweep" />
+                <colorPicker:HueSweep Name="hueSweep" MinHeight="25" MinWidth="175" VerticalExpand="False" />
+
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" MinHeight="25" Margin="0 8">
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+                        <Label Text="{Loc 'color-picker-preview-color-previous'}" HorizontalAlignment="Center"></Label>
+                        <PanelContainer Name="OldColor" StyleClasses="RoundedColorPreview" HorizontalExpand="True"
+                                        VerticalExpand="True" MinHeight="25" MinWidth="25" />
+                    </BoxContainer>
+                    <Control MinWidth="24" />
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+                        <Label Text="{Loc 'color-picker-preview-color-current'}" HorizontalAlignment="Center"></Label>
+                        <PanelContainer Name="NewColor" StyleClasses="RoundedColorPreview" HorizontalExpand="True"
+                                        VerticalExpand="True" MinHeight="25" MinWidth="25" />
+                    </BoxContainer>
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+
+        <PanelContainer StyleClasses="SurfacePrimary" HorizontalExpand="True"  Margin="8">
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" Margin="8"
+                          SeparationOverride="7">
+
+
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                    <Label Text="{Loc 'color-picker-hue-label'}" MinWidth="45"></Label>
+                    <LineEdit Name="HexEdit" HorizontalExpand="True"></LineEdit>
+                </BoxContainer>
+
+                <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True" Margin="8 4" />
+
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                    <Label Text="{Loc 'color-picker-hue-label'}" MinWidth="45"></Label>
+                    <colorPicker:HSVRGBSlider Name="Hue" HorizontalExpand="True" StyleClasses="StyleClassSliderHue"></colorPicker:HSVRGBSlider>
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                    <Label Text="{Loc 'color-picker-saturation-label'}" MinWidth="45"></Label>
+                    <colorPicker:HSVRGBSlider Name="Saturation" HorizontalExpand="True"
+                                              StyleClasses="StyleClassSliderSat">
+                    </colorPicker:HSVRGBSlider>
+                </BoxContainer>
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                    <Label Text="{Loc 'color-picker-value-label'}" MinWidth="45"></Label>
+                    <colorPicker:HSVRGBSlider Name="Value" HorizontalExpand="True" StyleClasses="StyleClassSliderVal"></colorPicker:HSVRGBSlider>
+                </BoxContainer>
+
+
+                <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True" Margin="8 4" />
+
+
+                <BoxContainer HorizontalExpand="True" Orientation="Vertical">
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                        <Label Text="{Loc 'color-picker-red-label'}" MinWidth="45"></Label>
+                        <colorPicker:HSVRGBSlider Name="Red" HorizontalExpand="True" StyleClasses="StyleClassSliderRed"></colorPicker:HSVRGBSlider>
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                        <Label Text="{Loc 'color-picker-green-label'}" MinWidth="45"></Label>
+                        <colorPicker:HSVRGBSlider Name="Green" HorizontalExpand="True"
+                                                  StyleClasses="StyleClassSliderGreen">
+                        </colorPicker:HSVRGBSlider>
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                        <Label Text="{Loc 'color-picker-blue-label'}" MinWidth="45"></Label>
+                        <colorPicker:HSVRGBSlider Name="Blue" HorizontalExpand="True"
+                                                  StyleClasses="StyleClassSliderBlue">
+                        </colorPicker:HSVRGBSlider>
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center" VerticalExpand="True" Margin="0 10 0 0">
+                        <Button Name="SaveClose" Text="{Loc 'color-picker-submit'}" StyleClasses="positive" VerticalAlignment="Center"
+                                Margin="32 0">
+                        </Button>
+                        <Button Name="CancelClose" Text="{Loc 'color-picker-cancel'}" StyleClasses="negative" VerticalAlignment="Center"
+                                Margin="32 0">
+                        </Button>
+                    </BoxContainer>
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
+    </BoxContainer>
+</controls:FancyWindow>

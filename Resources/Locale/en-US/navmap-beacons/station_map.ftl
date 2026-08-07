@@ -8,6 +8,7 @@ nav-beacon-window-title = Station Beacon
 nav-beacon-toggle-visible = Visible
 nav-beacon-toggle-invisible = Invisible
 nav-beacon-text-label = Label:
+nav-beacon-tag-color-label = Tag Color:
 nav-beacon-button-apply = Apply
 nav-beacon-examine-text = It is [color={$enabled ->
     [true] forestgreen]on

@@ -2,6 +2,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Client.Gameplay;
 using Content.Client.Stylesheets;
+using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Ghost;
@@ -215,7 +216,7 @@ namespace Content.Client.Voting.UI
             _entNetManager.SendSystemNetworkMessage(msg);
         }
 
-        private void VoteTypeSelected(OptionButton.ItemSelectedEventArgs obj)
+        private void VoteTypeSelected(TguiOptionButton.ItemSelectedEventArgs obj)
         {
             VoteTypeButton.SelectId(obj.Id);
 

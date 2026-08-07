@@ -1,0 +1,28 @@
+uniform highp vec2 size;
+uniform highp float highlightProgress;
+
+uniform lowp vec4 highlightColor;
+uniform lowp vec4 unhighlitColor;
+uniform lowp vec4 backgroundColor;
+uniform sampler2D iconTex;
+
+
+
+
+void fragment()
+{
+
+    vec4 xAlpha = vec4(0.0);
+    vec2 uv = UV * 2.0 - (1.0/2.0);
+
+    for (int x = 0; x < 2; x++) {
+        for (int y = 0; y < 2; y++) {
+            vec2 offset = vec2(x, y) * (0.005);
+            xAlpha += texture(iconTex, uv + offset) * 0.5;
+        }
+    }
+
+    vec4 IconbackgroundColor = mix(vec4(unhighlitColor.rgb, 0), highlightColor, highlightProgress);
+    vec4 IconforegroundColor = mix(backgroundColor * vec4(1,1,1,0.2), unhighlitColor, highlightProgress);
+    COLOR = mix(IconbackgroundColor, IconforegroundColor, xAlpha.a);
+}

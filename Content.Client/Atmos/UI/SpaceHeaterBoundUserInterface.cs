@@ -1,3 +1,4 @@
+using Content.Client.UserInterface.Controls;
 using Content.Shared.Atmos.Piping.Portable.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
@@ -24,7 +25,7 @@ public sealed class SpaceHeaterBoundUserInterface : BoundUserInterface
 
         _window = this.CreateWindow<SpaceHeaterWindow>();
 
-        _window.ToggleStatusButton.OnToggled += _ => OnToggleStatusButtonPressed();
+        _window.ToggleStatusButton.OnPressed += _ => OnToggleStatusButtonPressed();
         _window.IncreaseTempRange.OnPressed += _ => OnTemperatureRangeChanged(_window.TemperatureChangeDelta);
         _window.DecreaseTempRange.OnPressed += _ => OnTemperatureRangeChanged(-_window.TemperatureChangeDelta);
         _window.ModeSelector.OnItemSelected += OnModeChanged;
@@ -34,6 +35,7 @@ public sealed class SpaceHeaterBoundUserInterface : BoundUserInterface
 
     private void OnToggleStatusButtonPressed()
     {
+        _window?.SetActive(!_window.Active);
         SendMessage(new SpaceHeaterToggleMessage());
     }
 
@@ -42,7 +44,7 @@ public sealed class SpaceHeaterBoundUserInterface : BoundUserInterface
         SendMessage(new SpaceHeaterChangeTemperatureMessage(changeAmount));
     }
 
-    private void OnModeChanged(OptionButton.ItemSelectedEventArgs args)
+    private void OnModeChanged(TguiOptionButton.ItemSelectedEventArgs args)
     {
         _window?.ModeSelector.SelectId(args.Id);
         SendMessage(new SpaceHeaterChangeModeMessage((SpaceHeaterMode)args.Id));

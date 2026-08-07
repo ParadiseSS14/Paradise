@@ -35,18 +35,19 @@ public static class StyleClass
     public const string HighDivider = "HighDivider";
     public const string LowDivider = "LowDivider";
 
+    public const string LowDividerLowAlpha = "LowDividerLowAlpha";
+
     public const string LabelHeading = "LabelHeading";
     public const string LabelHeadingBigger = "LabelHeadingBigger";
-    public const string LabelSubHeading = "LabelSubHeading";
     public const string LabelSubText = "LabelSubText";
     public const string LabelKeyText = "LabelKeyText";
+    public const string LabelSmallText = "LabelSmallText";
     public const string LabelWeak = "LabelWeak"; // replaces `LabelSecondaryColor`
     public const string LabelMonospaceText = "ConsoleText";
     public const string LabelMonospaceHeading = "ConsoleHeading";
     public const string LabelMonospaceSubHeading = "ConsoleSubHeading";
 
     public const string BackgroundPanel = "BackgroundPanel"; // replaces `AngleRect`
-    public const string BackgroundPanelDark = "BackgroundPanelDark"; // replaces `Inset`
     public const string BackgroundPanelOpenLeft = "BackgroundPanelOpenLeft"; // replaces `BackgroundOpenLeft`
     public const string BackgroundPanelOpenRight = "BackgroundPanelOpenRight"; // replaces `BackgroundOpenRight`
 
@@ -64,7 +65,6 @@ public static class StyleClass
 
     public const string CrossButtonRed = "CrossButtonRed";
     public const string RefreshButton = "RefreshButton";
-    public const string HelpButton = "HelpButton";
 
     public const string ItemStatus = "ItemStatus";
     public const string ItemStatusNotHeld = "ItemStatusNotHeld";
@@ -72,4 +72,21 @@ public static class StyleClass
     public const string TooltipPanel = "TooltipPanel";
     public const string TooltipTitle = "TooltipTitle";
     public const string TooltipDesc = "TooltipDesc";
+
+    //oasis
+    public const string SurfacePrimary = "SurfacePrimary";
+    public const string SurfaceSecondary = "SurfaceSecondary";
+    public const string SurfaceTertiary = "SurfaceTertiary";
+    public const string SurfaceSunken = "SurfaceSunken";
+    public const string SurfaceBackground = "SurfaceBackground";
+
+    public const string AccentPrimary = "AccentPrimary";
+    public const string AccentSecondary = "AccentSecondary";
+    public const string AccentTertiary = "AccentTertiary";
+
+    public const string SeperatorAccented = "SeperatorAccented";
+    public const string ListView = "ListView";
+
+
+    public const string ChatboxDarkenedBackground = "ChatboxDarkenedBackground";
 }

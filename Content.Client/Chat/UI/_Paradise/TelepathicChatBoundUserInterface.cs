@@ -25,12 +25,10 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
             _composeWindow = this.CreateWindow<TelepathicChatComposeWindow>();
         }
 
-        _menu?.SelectPressed += OnPressedSelect;
-        _menu?.CancelPressed += OnCancel;
+        _menu?.OnSelectPressed += OnPressedSelect;
         _menu?.OnTargetSelected += OnSelectTarget;
         _menu?.OnTargetDeselected += OnDeselectTarget;
         _composeWindow?.OnTextEntered += OnEnteredText;
-        _composeWindow?.CancelPressed += OnCancel;
     }
     private void OnPressedSelect()
     {

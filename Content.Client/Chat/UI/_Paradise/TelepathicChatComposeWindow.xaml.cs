@@ -9,14 +9,12 @@ namespace Content.Client.Chat.UI._Paradise;
 public sealed partial class TelepathicChatComposeWindow : FancyWindow
 {
     public event Action<string>? OnTextEntered;
-    public event Action? CancelPressed;
 
     public TelepathicChatComposeWindow()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
-        CancelButton.OnPressed += _ => CancelPressed?.Invoke();
         TextLine.OnTextEntered += EnteredText;
 
     }

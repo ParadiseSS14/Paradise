@@ -7,6 +7,5 @@
                       MinHeight="80">
     <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="4" MinWidth="150">
         <LineEdit Name="TextLine" />
-        <Button Name="CancelButton" Text="{Loc 'telepathic-chat-cancel'}"/>
     </BoxContainer>
 </controls:FancyWindow>

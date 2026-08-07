@@ -1,7 +1,8 @@
-﻿<DefaultWindow xmlns="https://spacestation14.io"
-            Title="{Loc 'crayon-window-title'}"
-            MinSize="450 500"
-            SetSize="450 500">
+﻿<controls:FancyWindow xmlns="https://spacestation14.io"
+                                    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                                    Title="{Loc 'crayon-window-title'}"
+             MinSize="450 500"
+             SetSize="450 500">
     <BoxContainer Orientation="Vertical">
         <ColorSelectorSliders Name="ColorSelector" Visible="False" />
         <LineEdit Name="Search" Margin="0 0 0 8" PlaceHolder="{Loc 'crayon-window-placeholder'}" />
@@ -10,4 +11,4 @@
             </BoxContainer>
         </ScrollContainer>
     </BoxContainer>
-</DefaultWindow>
+</controls:FancyWindow>

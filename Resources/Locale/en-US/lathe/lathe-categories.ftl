@@ -1,3 +1,4 @@
+lathe-category-all = All
 # Generic
 lathe-category-circuitry = Circuitry
 lathe-category-clothing = Clothing

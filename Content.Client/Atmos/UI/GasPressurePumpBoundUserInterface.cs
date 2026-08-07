@@ -42,9 +42,12 @@ public sealed class GasPressurePumpBoundUserInterface(EntityUid owner, Enum uiKe
         _window.SetOutputPressure(pump.TargetPressure);
     }
 
-    private void OnToggleStatusButtonPressed(bool status)
+    private void OnToggleStatusButtonPressed()
     {
-        SendPredictedMessage(new GasPressurePumpToggleStatusMessage(status));
+        if (_window is null)
+            return;
+
+        SendPredictedMessage(new GasPressurePumpToggleStatusMessage(_window.PumpStatus));
     }
 
     private void OnPumpOutputPressurePressed(float value)
@@ -52,3 +55,4 @@ public sealed class GasPressurePumpBoundUserInterface(EntityUid owner, Enum uiKe
         SendPredictedMessage(new GasPressurePumpChangeOutputPressureMessage(value));
     }
 }
+

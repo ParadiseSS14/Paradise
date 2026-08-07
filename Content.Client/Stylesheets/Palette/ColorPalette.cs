@@ -41,7 +41,7 @@ public record ColorPalette(
     {
         var @base = Color.FromHex(hex);
 
-        element ??= Shift(@base, lightnessShift, chromaShift, -1); //                        Shift(@base, -1)
+        element ??= Shift(@base, lightnessShift, chromaShift, 0); //                        Shift(@base, 0)
         var hoveredElement = Shift(element.Value, lightnessShift, chromaShift, 1); //        Shift(@base,  0)
         var pressedElement = Shift(element.Value, lightnessShift, chromaShift, -1); //       Shift(@base, -2)
         var disabledElement = Shift(element.Value, lightnessShift, chromaShift, -2) //       Shift(@base, -3)

@@ -9,6 +9,7 @@ wires-component-ui-on-receive-message-cannot-mend-uncut-wire = You can't mend a 
 ## UI
 
 wires-menu-name-label = Wires
+wires-menu-statuslight-label = Status Lights
 wires-menu-dead-beef-text = DEAD-BEEF
 wires-menu-help-popup =
     Click on the gold contacts with a multitool in hand to pulse their wire.

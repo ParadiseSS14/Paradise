@@ -3,7 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:ui="clr-namespace:Content.Client.ContextMenu.UI"
     MinHeight="{x:Static ui:ContextMenuElement.ElementHeight}">
-    <BoxContainer Orientation="Horizontal">
+    <BoxContainer Orientation="Horizontal" Margin="4">
         <SpriteView
             Name="Icon"
             SetWidth="{x:Static ui:ContextMenuElement.ElementHeight}"

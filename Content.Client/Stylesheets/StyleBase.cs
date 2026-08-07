@@ -101,7 +101,7 @@ namespace Content.Client.Stylesheets
             };
             BaseAngleRect.SetPatchMargin(StyleBox.Margin.All, 10);
 
-            AngleBorderRect = new StyleBoxTexture
+                AngleBorderRect = new StyleBoxTexture
             {
                 Texture = resCache.GetTexture("/Textures/Interface/Nano/geometric_panel_border.svg.96dpi.png"),
             };
@@ -133,7 +133,7 @@ namespace Content.Client.Stylesheets
                     new[]
                     {
                         new StyleProperty(TextureButton.StylePropertyTexture, textureCloseButton),
-                        new StyleProperty(Control.StylePropertyModulateSelf, Color.FromHex("#4B596A")),
+                        new StyleProperty(Control.StylePropertyModulateSelf, StyleNano.NanoGold),
                     }),
                 // Window close button hover.
                 new StyleRule(

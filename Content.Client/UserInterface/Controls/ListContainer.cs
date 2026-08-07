@@ -389,14 +389,11 @@ public sealed class ListContainerButton : ContainerButton, IEntityControl
     public readonly ListData Data;
 
     public readonly int Index;
-    // public PanelContainer Background;
 
     public ListContainerButton(ListData data, int index)
     {
-        AddStyleClass(StyleClassButton);
         Data = data;
         Index = index;
-        StyleBoxOverride = new StyleBoxFlat(Color.White);
         // AddChild(Background = new PanelContainer
         // {
         //     HorizontalExpand = true,

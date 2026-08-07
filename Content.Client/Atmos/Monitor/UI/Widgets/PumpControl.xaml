@@ -1,5 +1,6 @@
 <BoxContainer xmlns="https://spacestation14.io"
          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
          Orientation="Vertical" Margin="2 0 2 4">
     <Collapsible>
         <CollapsibleHeading Name="CAddress" />
@@ -12,11 +13,11 @@
                 <BoxContainer Orientation="Horizontal" Margin="0 0 0 2" HorizontalExpand="True">
                     <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                         <Label Text="{Loc 'air-alarm-ui-vent-pump-label'}" Margin="0 0 0 1" />
-                        <OptionButton Name="CPumpDirection" />
+                        <controls:TguiOptionButton Name="CPumpDirection" />
                     </BoxContainer>
                     <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                         <Label Text="{Loc 'air-alarm-ui-vent-pressure-label'}" Margin="0 0 0 1" />
-                        <OptionButton Name="CPressureCheck" />
+                        <controls:TguiOptionButton Name="CPressureCheck" />
                     </BoxContainer>
                 </BoxContainer>
                 <!-- Lower row: pressure bounds, copy settings -->

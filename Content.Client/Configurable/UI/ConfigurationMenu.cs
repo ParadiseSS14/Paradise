@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using System.Text.RegularExpressions;
+using Content.Client.UserInterface.Controls;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
@@ -8,7 +9,7 @@ using static Robust.Client.UserInterface.Controls.BoxContainer;
 
 namespace Content.Client.Configurable.UI
 {
-    public sealed class ConfigurationMenu : DefaultWindow
+    public sealed class ConfigurationMenu : FancyWindow
     {
         public readonly BoxContainer Column;
         public readonly BoxContainer Row;

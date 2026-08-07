@@ -10,12 +10,21 @@ namespace Content.Shared.Chat._Paradise;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class TelepathicChatComponent : Component
 {
+    /// <summary>
+    /// Storage of the message sender
+    /// </summary>
+    public NetEntity? Sender;
+
+    /// <summary>
+    /// Storage of the message receiver
+    /// </summary>
+    public NetEntity? Receiver;
 
 
     /// <summary>
-    /// Storage of the intended message target
+    /// Is this a Scan Mind Reply?
     /// </summary>
-    public NetEntity? Target;
+    public bool IsReply;
 
     /// <summary>
     /// The action prototype that allows you send messages

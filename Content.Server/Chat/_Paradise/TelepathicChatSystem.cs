@@ -1,6 +1,8 @@
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
+using Content.Server.Chat.Commands._Paradise;
 using Content.Server.Chat.Managers;
+using Content.Shared.Actions.Components;
 using Content.Shared.Chat;
 using Content.Shared.Chat._Paradise;
 using Content.Shared.Database;
@@ -41,10 +43,10 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTextEnteredMsg>(OnTextEntered);
     }
 
-    private List<(NetEntity Uid, string Name)> ChooseTargets(EntityUid sender, float range)
+    private List<(NetEntity Uid, string Name)> ChooseTargets(EntityUid telepath, float range)
     {
         var validTargets = new List<(NetEntity Uid, string Name)>(); //NetEntity is serializable
-        var nearby = _lookup.GetEntitiesInRange<ActorComponent>(_transform.GetMapCoordinates(sender), range);
+        var nearby = _lookup.GetEntitiesInRange<ActorComponent>(_transform.GetMapCoordinates(telepath), range);
         string mobName;
 
         foreach (var entity in nearby)
@@ -53,11 +55,11 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             {
                 continue;
             }
-            if (entity.Owner == sender)
+            if (entity.Owner == telepath)
             {
                 continue;
             }
-            if (_interaction.InRangeUnobstructed(sender, entity.Owner, range + 0.1f))
+            if (_interaction.InRangeUnobstructed(telepath, entity.Owner, range + 0.1f))
             {
                 mobName = Name(entity.Owner);
             }
@@ -80,59 +82,116 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         return validTargets;
     }
 
-    private void OnSendEvent(Entity<TelepathicChatComponent> ent, ref ProjectMindEvent args)
+    private void OnEvent(Entity<TelepathicChatComponent> telepath, EntityUid performer, Entity<ActionComponent> action)
     {
-        if (!TryComp<UserInterfaceComponent>(ent, out var userInterfaceComp))
+        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
         {
             return;
         }
 
-        var targets = ChooseTargets(ent.Owner, ent.Comp.Range);
+        telepath.Comp.Sender = null;
+        telepath.Comp.Receiver = null;
+        telepath.Comp.IsReply = false;
+        Dirty(telepath);
+
+        var targets = ChooseTargets(telepath.Owner, telepath.Comp.Range);
+        if (targets.Count == 0)
+        {
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-no-targets"), telepath.Owner);
+            return;
+        }
+
         var state = new TelepathicTargetsListState(targets);
+        var uiKey = TelepathicChatUiKey.Send;
 
-        _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Send, args.Performer);
-        _ui.SetUiState(ent.Owner, TelepathicChatUiKey.Send, state);
+        if (action == telepath.Comp.ReceiveActionEntity)
+        {
+            uiKey = TelepathicChatUiKey.Receive;
+        }
+
+        _ui.OpenUi((telepath, userInterfaceComp), uiKey, performer);
+        _ui.SetUiState(telepath.Owner, uiKey, state);
+    }
+    private void OnSendEvent(Entity<TelepathicChatComponent> telepath, ref ProjectMindEvent args)
+    {
+        OnEvent(telepath, args.Performer, args.Action);
     }
 
-    private void OnReceiveEvent(Entity<TelepathicChatComponent> ent, ref ScanMindEvent args)
+    private void OnReceiveEvent(Entity<TelepathicChatComponent> telepath, ref ScanMindEvent args)
     {
-        if (!TryComp<UserInterfaceComponent>(ent, out var userInterfaceComp))
+        OnEvent(telepath, args.Performer, args.Action);
+    }
+
+    private void OnTargetChosen(Entity<TelepathicChatComponent> telepath, ref TelepathicTargetSelectedMsg args)
+    {
+        if (args.Target is not { } target)
         {
             return;
         }
 
-        var targets = ChooseTargets(ent.Owner, ent.Comp.Range);
-        var state = new TelepathicTargetsListState(targets);
 
-        _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Receive, args.Performer);
-        _ui.SetUiState(ent.Owner, TelepathicChatUiKey.Receive, state);
-    }
 
-    private void OnTargetChosen(Entity<TelepathicChatComponent> ent, ref TelepathicTargetSelectedMsg args)
-    {
-        if (args.Target is not null)
+        if (Equals(args.UiKey, TelepathicChatUiKey.Receive))
         {
-            ent.Comp.Target = args.Target; // Save target to Component
+            SendTelepathicChat(telepath.Owner, GetEntity(target), string.Empty, false, replyWrap: true);
 
-            if (!TryComp<UserInterfaceComponent>(ent, out var userInterfaceComp))
-            {
-                return;
-            }
+            telepath.Comp.Receiver = null;
+            telepath.Comp.IsReply = false;
+            Dirty(telepath);
+            return;
+        }
+        else if (TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
+        {
+            telepath.Comp.Receiver = args.Target; // Save receiver to Component
+            Dirty(telepath);
 
-            _ui.OpenUi((ent, userInterfaceComp), TelepathicChatUiKey.Compose, args.Actor);
-
+            _ui.OpenUi((telepath, userInterfaceComp), TelepathicChatUiKey.Compose, args.Actor);
         }
     }
 
-    private void OnTextEntered(Entity<TelepathicChatComponent> ent, ref TelepathicTextEnteredMsg args)
+    private void OnTextEntered(Entity<TelepathicChatComponent> telepath, ref TelepathicTextEnteredMsg args)
     {
-
-        if (ent.Comp.Target is not { } target)
+        if (telepath.Comp.Receiver is not { } receiverNet)
+        {
             return;
+        }
 
-        var targetentity = GetEntity(target);
+        var receiverEnt = GetEntity(receiverNet);
         var message = args.Message;
-        SendTelepathicChat(ent, targetentity, message, false);
+
+        if (telepath.Comp.IsReply)
+        {
+            SendTelepathicChat(telepath, receiverEnt, message, false, true);
+            telepath.Comp.Sender = receiverNet; // Swap target to sender for response
+            telepath.Comp.IsReply = false;
+        }
+        else
+        {
+            SendTelepathicChat(telepath, receiverEnt, message, false, false);
+        }
+
+        telepath.Comp.Receiver = null;
+        Dirty(telepath);
+    }
+
+    /// <summary>
+    /// This method handles the response of ScanMind targets
+    /// </summary>
+    public void OpenComposeFor(EntityUid telepath, EntityUid target, NetEntity telepathNet)
+    {
+        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
+        {
+            return;
+        }
+
+        if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
+            return;
+
+        telepathComp.Receiver = telepathNet; // Save receiver to Component
+        telepathComp.IsReply = true; // Mark as reply message
+        Dirty(telepath, telepathComp);
+
+        _ui.OpenUi((telepath, userInterfaceComp), TelepathicChatUiKey.Compose, target);
     }
 
 
@@ -142,9 +201,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             .Select(p => p.Channel);
     }
 
-    private INetChannel? GetTargetClients(EntityUid target)
+    private INetChannel? GetReceiverClients(EntityUid receiver)
     {
-        if (_playerManager.TryGetSessionByEntity(target, out var session))
+        if (_playerManager.TryGetSessionByEntity(receiver, out var session))
         {
             return session.Channel;
         }
@@ -152,39 +211,39 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         return null;
     }
 
-    // TODO: Method to handle received ScanMind target data
-    private List<(NetEntity uid, string Name)> ReceiveMessage()
-    {
-        return new List<(NetEntity uid, string Name)>();
-    }
-
     /// <summary>
     /// Much of this has been sourced/referenced from Simple-Station/Einstein-Engine 
     /// Commit: 10d41858d88d3ba9d36fdd9c98595d89701f1cbb
     /// Content.Server/Chat/TelepathicChatSystem.cs
     /// </summary>
-    public void SendTelepathicChat(EntityUid source, EntityUid target, string message, bool hideChat)
+    public void SendTelepathicChat(EntityUid sender, EntityUid receiver, string message, bool hideChat, bool replyWrap = false)
     {
-        var client = GetTargetClients(target);
+        var rxClient = GetReceiverClients(receiver);
         var admins = GetAdminClients();
+        string replyMessage;
         string messageWrap;
         string adminMessageWrap;
 
+        replyMessage = $"{Loc.GetString("chat-manager-telepathic-chat-scan")}";
         messageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message",
-            ("telepathicChannelName", Loc.GetString("chat-manager-telepathic-channel-name")), ("message", message));
-
+            ("sender", sender), ("message", message));
         adminMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-admin",
-            ("source", source), ("message", message));
+            ("sender", sender), ("message", message));
 
-        if (client is null)
+        if (replyWrap)
         {
-            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-unreachable"), source, source);
+            messageWrap = $"{replyMessage} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-reply")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)}\" /] ";
+        }
+
+        if (rxClient is null)
+        {
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-unreachable"), sender, sender);
         }
         else
         {
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(source):Player}: {message}");
-            _chatManager.ChatMessageToOne(ChatChannel.Telepathic, message, messageWrap, source, hideChat, client, Color.DarkMagenta);
-            _chatManager.ChatMessageToMany(ChatChannel.Telepathic, message, adminMessageWrap, source, hideChat, true, admins, Color.DarkMagenta);
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message} {messageWrap}");
+            _chatManager.ChatMessageToOne(ChatChannel.Telepathic, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);
+            _chatManager.ChatMessageToMany(ChatChannel.Telepathic, message, adminMessageWrap, sender, hideChat, true, admins, Color.DarkMagenta);
         }
     }
 }

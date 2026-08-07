@@ -11,6 +11,7 @@ public sealed partial class TelepathicChatMenu : FancyWindow
     public event Action? SelectPressed;
     public event Action? CancelPressed;
     public event Action<NetEntity>? OnTargetSelected;
+    public event Action? OnTargetDeselected;
 
     public TelepathicChatMenu()
     {
@@ -20,6 +21,7 @@ public sealed partial class TelepathicChatMenu : FancyWindow
         SelectButton.OnPressed += _ => SelectPressed?.Invoke();
         CancelButton.OnPressed += _ => CancelPressed?.Invoke();
         TargetsList.OnItemSelected += OnItemSelected;
+        TargetsList.OnItemDeselected += OnItemDeselected;
     }
 
     private void OnItemSelected(ItemList.ItemListSelectedEventArgs obj)
@@ -30,6 +32,11 @@ public sealed partial class TelepathicChatMenu : FancyWindow
         {
             OnTargetSelected?.Invoke(netEntity);
         }
+    }
+
+    private void OnItemDeselected(ItemList.ItemListDeselectedEventArgs obj)
+    {
+        OnTargetDeselected?.Invoke();
     }
     public void UpdateState(List<(NetEntity Uid, string Name)> targets)
     {

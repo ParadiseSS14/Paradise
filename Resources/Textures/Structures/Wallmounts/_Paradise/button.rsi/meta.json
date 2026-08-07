@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "Ported from Paradise 13, sprites by APT-Engineer at commit 30cbacccdfd395aa5b0c1f6fc84eaa15566b6ded",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "off"
+        },
+        {
+            "name": "on"
+        }
+    ]
+}

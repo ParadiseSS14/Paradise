@@ -1,4 +1,6 @@
-﻿using Robust.Client.Graphics;
+﻿using System.Numerics;
+using Content.Client.Stylesheets.Colorspace;
+using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using static Content.Client.Stylesheets.StylesheetHelpers;
@@ -22,10 +24,41 @@ public sealed class ItemListSheetlet : Sheetlet<PalettedStylesheet>
 
     public override StyleRule[] GetRules(PalettedStylesheet sheet, object config)
     {
-        var boxBackground = new StyleBoxFlat { BackgroundColor = sheet.PrimaryPalette.Background };
-        var boxItemBackground = Box(sheet.PrimaryPalette.Background);
-        var boxSelected = Box(sheet.PrimaryPalette.Element);
-        var boxDisabled = Box(sheet.PrimaryPalette.BackgroundDark);
+        var boxBackground = new StyleBoxSDFBox { BackgroundColor = Color.Transparent };
+        var boxItemBackground = new StyleBoxSDFBox
+        {
+            BackgroundColor = sheet.PanelPalette.PanelSunken.NudgeLightness(0.08f).WithAlpha(0.3f), ContentMarginTopOverride = 4,
+            ContentMarginBottomOverride = 4, ContentMarginRightOverride = 4, ContentMarginLeftOverride = 4,
+            BorderThickness = 1f,
+            BorderColor = sheet.PanelPalette.PanelBorderColor,
+        };
+        var boxSelected = new StyleBoxSDFBox
+        {
+            BackgroundColor = sheet.PanelPalette.PanelSunken.NudgeLightness(0.12f).WithAlpha(0.4f), ContentMarginTopOverride = 4,
+            ContentMarginBottomOverride = 4, ContentMarginRightOverride = 4, ContentMarginLeftOverride = 4,
+            BorderThickness = 1f,
+            BorderColor = sheet.PanelPalette.PanelBorderColor,
+        };
+        var boxDisabled = new StyleBoxSDFBox { BackgroundColor = sheet.PanelPalette.PanelSunken };
+
+        // var boxBackground = new StyleBoxSDFBox { BackgroundColor = Color.Transparent };
+        // var boxItemBackground = new StyleBoxSDFBox
+        // {
+        //     BackgroundColor = sheet.PanelPalette.PanelSunken.NudgeLightness(0.08f).WithAlpha(0.3f), ContentMarginTopOverride = 4,
+        //     ContentMarginBottomOverride = 4, ContentMarginRightOverride = 4, ContentMarginLeftOverride = 4,
+        //     CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius * 2),
+        //     BorderThickness = 1f,
+        //     BorderColor = sheet.PanelPalette.PanelBorderColor,
+        // };
+        // var boxSelected = new StyleBoxSDFBox
+        // {
+        //     BackgroundColor = sheet.PanelPalette.PanelSunken.NudgeLightness(0.12f).WithAlpha(0.4f), ContentMarginTopOverride = 4,
+        //     ContentMarginBottomOverride = 4, ContentMarginRightOverride = 4, ContentMarginLeftOverride = 4,
+        //     CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius * 2),
+        //     BorderThickness = 1f,
+        //     BorderColor = sheet.PanelPalette.PanelBorderColor,
+        // };
+        // var boxDisabled = new StyleBoxSDFBox { BackgroundColor = sheet.PanelPalette.PanelSunken };
 
         return
         [

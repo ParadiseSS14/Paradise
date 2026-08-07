@@ -4,9 +4,9 @@
   name: shuttle window
   components:
   - type: Sprite
-    sprite: Structures/Windows/shuttle_window.rsi
+    sprite: Structures/_Paradise/Windows/shuttle_window.rsi
   - type: Icon
-    sprite: Structures/Windows/shuttle_window.rsi
+    sprite: Structures/_Paradise/Windows/shuttle_window.rsi
     state: full
   - type: Repairable
     fuelCost: 15
@@ -60,7 +60,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/shuttle_window_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/shuttle_window_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -71,7 +71,7 @@
     key: windows
     base: state
   - type: Icon
-    sprite: Structures/Windows/shuttle_window_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/shuttle_window_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:

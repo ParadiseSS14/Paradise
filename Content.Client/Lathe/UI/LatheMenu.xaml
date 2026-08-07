@@ -5,56 +5,86 @@
     xmlns:ui="clr-namespace:Content.Client.Materials.UI"
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Title="{Loc 'lathe-menu-title'}"
-    MinSize="550 450"
-    SetSize="750 500">
+    MinSize="650 450"
+    SetSize="850 525">
     <BoxContainer
         Orientation="Horizontal"
         VerticalExpand="True"
         HorizontalExpand="True"
-        SeparationOverride="5">
+        SeparationOverride="5"
+        Margin="8">
         <!-- Left Col-->
-        <BoxContainer
-            VerticalExpand="True"
-            HorizontalExpand="True">
+        <PanelContainer VerticalExpand="True" HorizontalExpand="True" StyleClasses="SurfacePrimary"
+                        SizeFlagsStretchRatio="0.5">
             <BoxContainer
-                Orientation="Vertical"
                 VerticalExpand="True"
-                HorizontalExpand="True"
-                SeparationOverride="5">
-                <BoxContainer Orientation="Horizontal"
-                    HorizontalExpand="True">
-                    <LineEdit
-                        Name="SearchBar"
-                        PlaceHolder="{Loc 'lathe-menu-search-designs'}"
-                        HorizontalExpand="True">
-                    </LineEdit>
-                    <OptionButton
-                        Name="FilterOption"
-                        MinWidth="100"
-                        StyleClasses="ButtonSquare"/>
-                </BoxContainer>
-                <BoxContainer Orientation="Vertical"
-                    MinHeight="225"
+                HorizontalExpand="True" Margin="8">
+                <BoxContainer
+                    Orientation="Vertical"
                     VerticalExpand="True"
                     HorizontalExpand="True"
-                    SizeFlagsStretchRatio="4">
-                    <PanelContainer VerticalExpand="True">
-                        <PanelContainer.PanelOverride>
-                            <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
-                        </PanelContainer.PanelOverride>
-                        <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
+                    SeparationOverride="5">
+                    <Label Text="{Loc 'lathe-menu-categories'}" />
+
+                    <PanelContainer StyleClasses="LowDivider" HorizontalExpand="True" />
+
+                    <BoxContainer Orientation="Vertical"
+                                  MinHeight="225"
+                                  VerticalExpand="True"
+                                  HorizontalExpand="True"
+                                  SizeFlagsStretchRatio="4">
+                        <ScrollContainer VerticalExpand="True" HScrollEnabled="False" Margin="2 10">
                             <BoxContainer
-                                Name="RecipeList"
+                                Name="CategoryList"
                                 Orientation="Vertical"
                                 HorizontalExpand="True"
                                 VerticalExpand="True"
                                 RectClipContent="True">
                             </BoxContainer>
                         </ScrollContainer>
-                    </PanelContainer>
+                    </BoxContainer>
+
+                    <Button
+                        Name="ServerListButton"
+                        Text="{Loc 'lathe-menu-server-list'}"
+                        TextAlign="Center"
+                        Mode="Press">
+                    </Button>
                 </BoxContainer>
-                <BoxContainer Orientation="Horizontal"
+
+            </BoxContainer>
+        </PanelContainer>
+        <!-- seperator -->
+
+        <PanelContainer StyleClasses="SurfacePrimary" VerticalExpand="True"
+                        HorizontalExpand="True" SizeFlagsStretchRatio="1.25">
+
+            <BoxContainer Orientation="Vertical" SeparationOverride="5" Margin="8">
+
+                <Label Text="{Loc 'lathe-menu-categories'}" />
+
+                <PanelContainer StyleClasses="LowDivider" HorizontalExpand="True" />
+
+                <LineEdit
+                    Name="SearchBar"
+                    PlaceHolder="{Loc 'lathe-menu-search-designs'}"
                     HorizontalExpand="True">
+                </LineEdit>
+
+                <PanelContainer VerticalExpand="True" StyleClasses="ListView">
+                    <ScrollContainer VerticalExpand="True" HScrollEnabled="False" Margin="2 10">
+                        <BoxContainer
+                            Name="RecipeList"
+                            Orientation="Vertical"
+                            HorizontalExpand="True"
+                            VerticalExpand="True"
+                            RectClipContent="True">
+                        </BoxContainer>
+                    </ScrollContainer>
+                </PanelContainer>
+
+                <BoxContainer Orientation="Horizontal"
+                              HorizontalExpand="True">
                     <Label Margin="8 0 8 0" Text="{Loc 'lathe-menu-amount'}" />
                     <LineEdit
                         Name="AmountLineEdit"
@@ -64,95 +94,100 @@
                     <Label Name="RecipeCount" Margin="8 0 8 0" MinWidth="90" Align="Right" />
                 </BoxContainer>
             </BoxContainer>
-        </BoxContainer>
-        <BoxContainer MinWidth="5"/>
+        </PanelContainer>
+
         <!-- Right Col-->
+
         <BoxContainer
             Orientation="Vertical"
             VerticalExpand="True"
             HorizontalExpand="True"
-            SeparationOverride="5">
+            SeparationOverride="5"
+            SizeFlagsStretchRatio="0.75">
+
             <BoxContainer Orientation="Vertical" MinHeight="225">
                 <BoxContainer
                     Orientation="Horizontal"
                     Align="End"
                     HorizontalExpand="True">
-                    <Button
-                        Name="ServerListButton"
-                        Text="{Loc 'lathe-menu-server-list'}"
-                        TextAlign="Center"
-                        Mode="Press">
-                    </Button>
                 </BoxContainer>
-                <Label Text="{Loc 'lathe-menu-queue-title'}" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-                <BoxContainer
-                    Name="FabricatingContainer"
-                    Orientation="Horizontal"
-                    HorizontalExpand="True"
-                    SizeFlagsStretchRatio="2">
-                    <PanelContainer
-                        VerticalExpand="True"
-                        HorizontalExpand="True"
-                        SizeFlagsStretchRatio="3">
-                        <PanelContainer.PanelOverride>
-                            <gfx:StyleBoxFlat BackgroundColor="#408040" />
-                        </PanelContainer.PanelOverride>
-                        <Label
-                            RectClipContent="False"
-                            HorizontalAlignment="Left"
-                            Margin="5 0 0 0"
-                            Text="{Loc 'lathe-menu-fabricating-message'}">
-                        </Label>
-                        <BoxContainer Name="FabricatingDisplayContainer"
-                                      HorizontalAlignment="Left"
-                                      Margin="100 0 0 0"/>
-                        <Label
-                            Name="NameLabel"
-                            RectClipContent="True"
-                            HorizontalAlignment="Left"
-                            Margin="130 0 0 0">
-                        </Label>
-                        <Button
-                            Name="DeleteFabricating"
-                            Margin="0"
-                            Text="✖"
-                            SetSize="38 32"
-                            HorizontalAlignment="Right"
-                            ToolTip="{Loc 'lathe-menu-delete-fabricating-tooltip'}">
-                            <Button.StyleClasses>
-                                <system:String>negative</system:String>
-                                <system:String>OpenLeft</system:String>
-                            </Button.StyleClasses>
-                        </Button>
-                    </PanelContainer>
-                </BoxContainer>
-                <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
-                    <BoxContainer
-                        Name="QueueList"
-                        Orientation="Vertical"
-                        HorizontalExpand="True"
-                        VerticalExpand="True"
-                        RectClipContent="True">
+                <PanelContainer VerticalExpand="True" StyleClasses="SurfacePrimary">
+                    <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                        <Label Text="{Loc 'lathe-menu-queue-title'}" Margin="5 5 5 2" HorizontalAlignment="Center" />
+                        <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True"
+                                        Margin="8 2" />
+                        <BoxContainer
+                            Name="FabricatingContainer"
+                            Orientation="Horizontal"
+                            HorizontalExpand="True"
+                            SizeFlagsStretchRatio="2">
+                            <PanelContainer
+                                VerticalExpand="True"
+                                HorizontalExpand="True"
+                                SizeFlagsStretchRatio="3">
+                                <Label
+                                    RectClipContent="False"
+                                    HorizontalAlignment="Left"
+                                    Margin="5 0 0 0"
+                                    Text="{Loc 'lathe-menu-fabricating-message'}">
+                                </Label>
+                                <BoxContainer Name="FabricatingDisplayContainer"
+                                              HorizontalAlignment="Left"
+                                              Margin="100 0 0 0" />
+                                <Label
+                                    Name="NameLabel"
+                                    RectClipContent="True"
+                                    HorizontalAlignment="Left"
+                                    Margin="130 0 0 0">
+                                </Label>
+                                <Button
+                                    Name="DeleteFabricating"
+                                    Margin="0"
+                                    Text="✖"
+                                    SetSize="38 32"
+                                    HorizontalAlignment="Right"
+                                    ToolTip="{Loc 'lathe-menu-delete-fabricating-tooltip'}">
+                                    <Button.StyleClasses>
+                                        <system:String>Caution</system:String>
+                                        <system:String>OpenLeft</system:String>
+                                    </Button.StyleClasses>
+                                </Button>
+                            </PanelContainer>
+                        </BoxContainer>
+                        <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
+                            <BoxContainer
+                                Name="QueueList"
+                                Orientation="Vertical"
+                                HorizontalExpand="True"
+                                VerticalExpand="True"
+                                RectClipContent="True">
+                            </BoxContainer>
+                        </ScrollContainer>
                     </BoxContainer>
-                </ScrollContainer>
+                </PanelContainer>
             </BoxContainer>
-            <BoxContainer
-            VerticalExpand="True"
-            HorizontalExpand="True"
-            Orientation="Vertical">
-            <Label Text="{Loc 'lathe-menu-materials-title'}" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-            <PanelContainer VerticalExpand="True">
-                <PanelContainer.PanelOverride>
-                    <gfx:StyleBoxFlat BackgroundColor="#1B1B1E" />
-                </PanelContainer.PanelOverride>
+            <PanelContainer VerticalExpand="True" StyleClasses="SurfacePrimary">
                 <BoxContainer
-                    Orientation="Vertical"
                     VerticalExpand="True"
-                    HorizontalExpand="True">
-                    <ui:MaterialStorageControl Name="MaterialsList" SizeFlagsStretchRatio="8"/>
+                    HorizontalExpand="True"
+                    Orientation="Vertical">
+                    <Label Text="{Loc 'lathe-menu-materials-title'}" Margin="5 5 5 2" HorizontalAlignment="Center" />
+                    <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True" Margin="8 4" />
+
+                    <BoxContainer
+                        Orientation="Vertical"
+                        VerticalExpand="True"
+                        HorizontalExpand="True">
+                        <ui:MaterialStorageControl Name="MaterialsList" SizeFlagsStretchRatio="8" />
+                        <!-- Begin DeltaV Additions - Mining points -->
+                        <BoxContainer Orientation="Horizontal" Name="MiningPointsContainer" Visible="False">
+                            <Label Name="MiningPointsLabel" HorizontalExpand="True" />
+                            <Button Name="MiningPointsClaimButton" Text="{Loc 'lathe-menu-mining-points-claim-button'}" />
+                        </BoxContainer>
+                        <!-- End DeltaV Additions -->
+                    </BoxContainer>
                 </BoxContainer>
             </PanelContainer>
-        </BoxContainer>
         </BoxContainer>
 
     </BoxContainer>

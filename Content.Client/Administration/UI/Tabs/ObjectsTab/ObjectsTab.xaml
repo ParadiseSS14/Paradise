@@ -5,7 +5,7 @@
     <BoxContainer Orientation="Vertical">
         <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc object-tab-object-type}" />
-            <OptionButton Name="ObjectTypeOptions" HorizontalAlignment="Left" />
+            <co:TguiOptionButton Name="ObjectTypeOptions" HorizontalAlignment="Left" />
             <LineEdit Name="SearchLineEdit" PlaceHolder="{Loc object-tab-object-search}" HorizontalExpand="True"
                       SizeFlagsStretchRatio="1" />
             <Button Name="RefreshListButton" Text="{Loc object-tab-refresh-button}" ToggleMode="False" />

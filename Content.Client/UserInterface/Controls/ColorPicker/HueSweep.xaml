@@ -1,0 +1,7 @@
+<uiControls:ContainerForkedButton xmlns="https://spacestation14.io" Name="HueSweepbox" StyleClasses="ColorPickerHueSweep"
+                       HorizontalExpand="True" VerticalExpand="True"
+                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                       xmlns:uiControls="clr-namespace:Content.Client.UIControls"
+                       MinWidth="300"
+                       MinHeight="300">
+</uiControls:ContainerForkedButton>

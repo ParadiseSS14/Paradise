@@ -10,7 +10,7 @@
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
             <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" HorizontalAlignment="Center">
                 <Label Text="{Loc 'intercom-channel-label'}"  HorizontalAlignment="Center"/>
-                <OptionButton Name="ChannelOptions" VerticalExpand="True" MinWidth="125"/>
+                <controls:TguiOptionButton Name="ChannelOptions" VerticalExpand="True" MinWidth="125"/>
             </BoxContainer>
         </BoxContainer>
         <Control MinHeight="10"/>

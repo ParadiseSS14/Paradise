@@ -1,11 +1,12 @@
-<DefaultWindow
+<controls:FancyWindow
     SetSize="300 400"
     Margin="4 0"
-    xmlns="https://spacestation14.io">
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls">
     <BoxContainer Orientation="Vertical">
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 4">
             <Label Text ="{Loc 'admin-solutions-window-solution-label'}" Margin="0 0 10 0"/>
-            <OptionButton Name="SolutionOption" HorizontalExpand="True"/>
+            <controls:TguiOptionButton Name="SolutionOption" HorizontalExpand="True"/>
         </BoxContainer>
 
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="0 4">
@@ -41,4 +42,4 @@
 
         <Button Name="AddButton" Text="{Loc 'admin-solutions-window-add-new-button'}" HorizontalExpand="True"  Margin="0 4"/>
     </BoxContainer>
-</DefaultWindow>
+</controls:FancyWindow>

@@ -1,67 +1,89 @@
+using Content.Shared.Atmos;
 using Content.Shared.Atmos.Piping.Trinary.Components;
 using Content.Shared.Localizations;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
 
-namespace Content.Client.Atmos.UI;
-
-/// <summary>
-/// Initializes a <see cref="GasMixerWindow"/> and updates it from the entity's <see cref="GasMixerComponent"/>.
-/// </summary>
-[UsedImplicitly]
-public sealed class GasMixerBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
+namespace Content.Client.Atmos.UI
 {
-    [ViewVariables]
-    private GasMixerWindow? _window;
-
-    protected override void Open()
+    /// <summary>
+    /// Initializes a <see cref="GasMixerWindow"/> and updates it when new server messages are received.
+    /// </summary>
+    [UsedImplicitly]
+    public sealed class GasMixerBoundUserInterface : BoundUserInterface
     {
-        base.Open();
+        [ViewVariables]
+        private const float MaxPressure = Atmospherics.MaxOutputPressure;
 
-        _window = this.CreateWindow<GasMixerWindow>();
+        [ViewVariables]
+        private GasMixerWindow? _window;
 
-        _window.ToggleStatusButtonPressed += OnToggleStatusButtonPressed;
-        _window.MixerOutputPressureChanged += OnMixerOutputPressurePressed;
-        _window.MixerNodePercentageChanged += OnMixerSetPercentagePressed;
+        public GasMixerBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
+        {
+        }
 
-        Update();
+        protected override void Open()
+        {
+            base.Open();
+
+            _window = this.CreateWindow<GasMixerWindow>();
+
+            _window.ToggleStatusButtonPressed += OnToggleStatusButtonPressed;
+            _window.MixerNodeDataSet += RecieveMixerState;
+        }
+
+        private void RecieveMixerState(GasMixerState obj)
+        {
+            OnMixerOutputPressurePressed(obj.OutputPressure);
+            OnMixerDataSet(obj.MixerOneNodePercentage);
+        }
+
+        private void OnToggleStatusButtonPressed()
+        {
+            if (_window is null) return;
+            SendMessage(new GasMixerToggleStatusMessage(_window.MixerState.Enabled));
+        }
+
+        private void OnMixerOutputPressurePressed(float outputPressure)
+        {
+            var pressure = outputPressure;
+            if (pressure > MaxPressure)
+                pressure = MaxPressure;
+
+            SendMessage(new GasMixerChangeOutputPressureMessage(pressure));
+        }
+
+        private void OnMixerDataSet(float nodeA)
+        {
+            nodeA = Math.Clamp(nodeA, 0f, 100.0f);
+
+            SendMessage(new GasMixerChangeNodePercentageMessage(nodeA));
+        }
+
+        /// <summary>
+        /// Update the UI state based on server-sent info
+        /// </summary>
+        /// <param name="state"></param>
+        protected override void UpdateState(BoundUserInterfaceState state)
+        {
+            base.UpdateState(state);
+            if (_window == null || state is not GasMixerBoundUserInterfaceState cast)
+                return;
+
+            _window.Title = (cast.MixerLabel);
+            _window.SetMixerStatus(cast.Enabled);
+            _window.SetOutputPressure(cast.OutputPressure);
+            _window.SetNodePercentages(cast.NodeOne);
+        }
     }
 
-    public override void Update()
+    public struct GasMixerState
     {
-        base.Update();
-
-        if (_window == null || !EntMan.TryGetComponent(Owner, out GasMixerComponent? mixer))
-            return;
-
-        _window.Title = EntMan.GetComponent<MetaDataComponent>(Owner).EntityName;
-        _window.SetMixerStatus(mixer.Enabled);
-        _window.SetOutputPressure(mixer.TargetPressure);
-        _window.SetNodePercentages(mixer.InletOneConcentration);
-    }
-
-    private void OnToggleStatusButtonPressed(bool status)
-    {
-        SendPredictedMessage(new GasMixerToggleStatusMessage(status));
-    }
-
-    private void OnMixerOutputPressurePressed(string value)
-    {
-        var pressure = UserInputParser.TryFloat(value, out var parsed) ? parsed : 0f;
-
-        SendPredictedMessage(new GasMixerChangeOutputPressureMessage(pressure));
-    }
-
-    private void OnMixerSetPercentagePressed(string value)
-    {
-        // We don't need to send both nodes because it's just 100.0f - node
-        var node = UserInputParser.TryFloat(value, out var parsed) ? parsed : 1.0f;
-
-        node = Math.Clamp(node, 0f, 100.0f);
-
-        if (_window is not null)
-            node = _window.NodeOneLastEdited ? node : 100.0f - node;
-
-        SendPredictedMessage(new GasMixerChangeNodePercentageMessage(node));
+        public bool Enabled;
+        public float OutputPressure;
+        /// <summary>
+        /// No need for 2, just subtract.
+        /// </summary>
+        public float MixerOneNodePercentage;
     }
 }

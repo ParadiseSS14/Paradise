@@ -5,75 +5,97 @@
                       xmlns:ui="clr-namespace:Content.Client.Chemistry.UI"
                       Title="{Loc 'reagent-dispenser-bound-user-interface-title'}"
                       MinSize="600 300"
-                      SetSize="800 500">
-    <BoxContainer Orientation="Horizontal">
-        <BoxContainer Orientation="Vertical" MinWidth="170">
-            <Label Text="{Loc 'reagent-dispenser-window-amount-to-dispense-label'}" HorizontalAlignment="Center" />
-            <ui:ButtonGrid
-                Name="AmountGrid"
-                Access="Public"
-                Columns="3"
-                HorizontalAlignment="Center"
-                Margin="5"
-                ButtonList="1,5,10,15,20,30,40,60,120"
-                RadioGroup="True">
-            </ui:ButtonGrid>
-            <Control VerticalExpand="True" />
-            <Label Name="ContainerInfoName"
-                   Access="Public"
-                   Text=""
-                   HorizontalAlignment="Center" />
-            <Label Name="ContainerInfoFill"
-                   Access="Public"
-                   Text=""
-                   HorizontalAlignment="Center"
-                   StyleClasses="LabelSubText" />
-            <SpriteView Name="View"
-                        Scale="4 4"
-                        HorizontalAlignment="Center" />
-            <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button Name="ClearButton"
+                      SetSize="700 650">
+    <BoxContainer Orientation="Vertical" Margin="8">
+        <PanelContainer VerticalExpand="True" StyleClasses="SurfacePrimary">
+            <BoxContainer Orientation="Vertical"
+                          HorizontalExpand="True"
+                          VerticalExpand="True">
+                <BoxContainer Orientation="Horizontal" Margin="8 8 8 0" HorizontalExpand="True">
+                    <Label Text="{Loc 'reagent-dispenser-window-beaker'}" StyleClasses="LabelHeading"
+                           HorizontalExpand="True" />
+
+                    <ui:ButtonGrid
+                        Name="AmountGrid"
                         Access="Public"
-                        Text="{Loc 'reagent-dispenser-window-clear-button'}"
-                        StyleClasses="OpenRight" />
-                <Button Name="EjectButton"
-                        Access="Public"
-                        Text="{Loc 'reagent-dispenser-window-eject-button'}"
-                        StyleClasses="OpenLeft" />
+                        Columns="9"
+                        ButtonList="1,5,10,15,20,25,30,50,100"
+                        RadioGroup="True">
+                    </ui:ButtonGrid>
+                </BoxContainer>
+                <PanelContainer StyleClasses="LowDivider" HorizontalExpand="True" Margin="0 8 0 0" />
+                <ScrollContainer HScrollEnabled="False"
+                                 HorizontalExpand="True"
+                                 VerticalExpand="True"
+                                 MinHeight="50"
+                                 SizeFlagsStretchRatio="2.5">
+                    <GridContainer Name="ReagentList"
+                                   HorizontalExpand="True"
+                                   VerticalExpand="True"
+                                   Access="Public"
+                                   Columns="3"
+                                   Margin="8" />
+                </ScrollContainer>
             </BoxContainer>
-        </BoxContainer>
-        <SplitContainer Orientation="Vertical"
-                        HorizontalExpand="True"
-                        VerticalExpand="True"
-                        MouseFilter="Ignore">
-            <ScrollContainer HScrollEnabled="False"
-                             HorizontalExpand="True"
-                             VerticalExpand="True"
-                             MinHeight="50"
-                             SizeFlagsStretchRatio="2.5">
-                <GridContainer Name="ReagentList"
-                               HorizontalExpand="True"
-                               VerticalExpand="True"
+        </PanelContainer>
+
+        <Control MinHeight="8" />
+
+        <PanelContainer VerticalExpand="True" StyleClasses="SurfacePrimary" MinHeight="50"
+                        SizeFlagsStretchRatio="0.45">
+            <BoxContainer Orientation="Vertical">
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="8 8 8 0">
+                    <Label Text="{Loc 'reagent-dispenser-window-beaker'}" StyleClasses="LabelHeading"
+                           HorizontalExpand="True" />
+
+                    <Button Name="ClearButton"
+                            Access="Public"
+                            Text="{Loc 'reagent-dispenser-window-clear-button'}"
+                            StyleClasses="OpenRight"
+                            VerticalAlignment="Center" Margin="4 0" />
+                    <Button Name="EjectButton"
+                            Access="Public"
+                            Text="{Loc 'reagent-dispenser-window-eject-button'}"
+                            StyleClasses="OpenLeft"
+                            VerticalAlignment="Center"
+                            Margin="4 0" />
+                </BoxContainer>
+                <PanelContainer StyleClasses="LowDivider" HorizontalExpand="True" Margin="0 8 0 0" />
+
+                <BoxContainer Orientation="Horizontal" Margin="8">
+                    <BoxContainer Orientation="Vertical">
+                        <Label Name="ContainerInfoName"
                                Access="Public"
-                               Columns="3" />
-            </ScrollContainer>
-            <ScrollContainer HScrollEnabled="False"
-                             HorizontalExpand="True"
-                             VerticalExpand="True"
-                             MinHeight="50">
-                <PanelContainer VerticalExpand="True">
-                    <PanelContainer.PanelOverride>
-                        <gfx:StyleBoxFlat BackgroundColor="#1b1b1e" />
-                    </PanelContainer.PanelOverride>
-                    <BoxContainer Name="ContainerInfo"
-                                  Orientation="Vertical"
-                                  HorizontalExpand="True"
-                                  VerticalExpand="True"
-                                  Margin="5">
-                        <Label Text="{Loc 'reagent-dispenser-window-no-container-loaded-text'}" />
+                               Text=""
+                               HorizontalAlignment="Center" />
+                        <Label Name="ContainerInfoFill"
+                               Access="Public"
+                               Text=""
+                               HorizontalAlignment="Center"
+                               StyleClasses="LabelSubText" />
+                        <SpriteView Name="View"
+                                    Scale="4 4"
+                                    HorizontalAlignment="Center" />
                     </BoxContainer>
-                </PanelContainer>
-            </ScrollContainer>
-        </SplitContainer>
+                    <PanelContainer StyleClasses="SurfaceSunken" HorizontalExpand="True"
+                                    VerticalExpand="True"
+                                    Margin="8">
+                        <ScrollContainer HScrollEnabled="False">
+                        <GridContainer Name="ContainerInfo"
+                                       Rows="6"
+                                       Columns="4"
+                                       HorizontalExpand="True"
+                                       VerticalExpand="True"
+                                       ExpandBackwards="True"
+                                       HSeparationOverride="16"
+                                       VSeparationOverride="16">
+                            <Label Text="{Loc 'reagent-dispenser-window-no-container-loaded-text'}" />
+                        </GridContainer>
+                        </ScrollContainer>
+                    </PanelContainer>
+
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
     </BoxContainer>
 </controls:FancyWindow>

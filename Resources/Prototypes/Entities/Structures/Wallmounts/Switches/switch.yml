@@ -1,5 +1,5 @@
 - type: entity
-  parent: BaseWallmountMetallic
+  parent: [ BaseMachinePowered, BaseWallmountMetallic ]
   id: SignalSwitch
   name: signal switch
   description: It's a switch for toggling power to things.
@@ -9,8 +9,22 @@
   - type: StationAiWhitelist
   - type: Sprite
     drawdepth: SmallObjects
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
+    sprite: Structures/Wallmounts/_Paradise/button.rsi
+    layers:
+    - state: off
+    - state: on
+      map: ["powered"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ApcPowerReceiver
+    load: 5
+  - type: ExtensionCableReceiver
+  - type: Appearance
   - type: SignalSwitch
   - type: UseDelay
     delay: 0.5 # prevent light-toggling auto-clickers.
@@ -31,6 +45,7 @@
       Status: false
   - type: Transform
     anchored: false
+    noRot: false
   - type: Destructible
     thresholds:
     - trigger:
@@ -46,7 +61,7 @@
             volume: -8
 
 - type: entity
-  parent: BaseWallmountMetallic
+  parent: [ BaseMachinePowered, BaseWallmountMetallic ]
   id: SignalButton
   name: signal button
   description: It's a button for activating something.
@@ -56,8 +71,22 @@
   - type: StationAiWhitelist
   - type: Sprite
     drawdepth: SmallObjects
-    sprite: Structures/Wallmounts/switch.rsi
-    state: dead
+    sprite: Structures/Wallmounts/_Paradise/button.rsi
+    layers:
+    - state: off
+    - state: on
+      map: ["powered"]
+      shader: unshaded
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: ApcPowerReceiver
+    load: 5
+  - type: ExtensionCableReceiver
+  - type: Appearance
   - type: UseDelay
     delay: 0.5 # prevent light-toggling auto-clickers.
   - type: SignalSwitch
@@ -74,9 +103,10 @@
     range: 200
   - type: DeviceLinkSource
     ports:
-      - Pressed
+    - Pressed
   - type: Transform
     anchored: false
+    noRot: false
   - type: Destructible
     thresholds:
     - trigger:

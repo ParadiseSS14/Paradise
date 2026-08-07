@@ -3,7 +3,6 @@
     <BoxContainer Name="MainContainer" Orientation="Vertical" Margin="10 0 10 10">
         <PanelContainer Name="Background"
                         Access="Public"
-                        StyleClasses="PdaBackground"
                         MinHeight="15"
                         VerticalExpand="False"
                         HorizontalExpand="True"
@@ -12,7 +11,7 @@
                 Disabled="True"
                 HorizontalExpand="True"
                 VerticalExpand="True"
-                StyleClasses="ButtonSquare"
+                StyleClasses="latheCategoryButton"
                 Margin="0">
             <BoxContainer Orientation="Vertical"
                           VerticalExpand="True"
@@ -27,7 +26,18 @@
                             <Label Name="TechnologyNameLabel" StyleClasses="LabelKeyText" HorizontalExpand="True"/>
                             <TextureRect Name="DisciplineTexture" TextureScale="2 2" VerticalAlignment="Top" HorizontalAlignment="Right"/>
                         </BoxContainer>
-                        <customControls:HSeparator StyleClasses="LowDivider" Margin="0 5 0 5"/>
+
+                        <PanelContainer StyleClasses="LowDivider" HorizontalExpand="True" />
+                        <ProgressBar Name="ResearchBar"
+                                     HorizontalExpand="True"
+                                     MaxValue="1"
+                                     MinValue="0"
+                                     SetHeight="25"
+                                     Margin="0 8 0 8"
+                                     VerticalAlignment="Center"
+                                     StyleClasses="TguiProgressBar">
+                            <Label Name="CostLabel" HorizontalAlignment="Right" Margin="0 0 8 0"></Label>
+                        </ProgressBar>
                         <BoxContainer Orientation="Horizontal">
                             <RichTextLabel Name="TierLabel" HorizontalAlignment="Left" StyleClasses="LabelSubText" HorizontalExpand="True"/>
                             <Button Name="ResearchButton" Text="{Loc 'research-console-menu-server-research-button'}"/>

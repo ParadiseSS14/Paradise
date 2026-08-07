@@ -23,6 +23,7 @@ public sealed partial class CommunicationsConsoleBoundUserInterface(EntityUid ow
         base.Open();
 
         _menu = this.CreateWindow<CommunicationsConsoleMenu>();
+        _menu.ApplyStylesheetFrom(Owner);
         _menu.OnAnnounce += AnnounceButtonPressed;
         _menu.OnBroadcast += BroadcastButtonPressed;
         _menu.OnAlertLevel += AlertLevelSelected;

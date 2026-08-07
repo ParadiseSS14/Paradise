@@ -4,9 +4,9 @@
   name: reinforced window
   components:
   - type: Sprite
-    sprite: Structures/Windows/reinforced_window.rsi
+    sprite: Structures/_Paradise/Windows/reinforced_window.rsi
   - type: Icon
-    sprite: Structures/Windows/reinforced_window.rsi
+    sprite: Structures/_Paradise/Windows/reinforced_window.rsi
     state: full
   - type: Repairable
     fuelCost: 10
@@ -54,10 +54,10 @@
   name: directional reinforced window
   components:
   - type: Sprite
-    sprite: Structures/Windows/directional.rsi
+    sprite: Structures/_Paradise/Windows/directional.rsi
     state: reinforced_window
   - type: Icon
-    sprite: Structures/Windows/directional.rsi
+    sprite: Structures/_Paradise/Windows/directional.rsi
     state: reinforced_window
   - type: Construction
     graph: WindowDirectional
@@ -107,7 +107,7 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: Structures/Windows/reinforced_window_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/reinforced_window_diagonal.rsi
     state: state0
   - type: Tag
     tags:
@@ -118,7 +118,7 @@
     key: windows
     base: state
   - type: Icon
-    sprite: Structures/Windows/reinforced_window_diagonal.rsi
+    sprite: Structures/_Paradise/Windows/reinforced_window_diagonal.rsi
     state: state0
   - type: Fixtures
     fixtures:

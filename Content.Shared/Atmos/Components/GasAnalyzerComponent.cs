@@ -39,6 +39,7 @@ public sealed class GasAnalyzerUserMessage(GasMixEntry[] nodeGasMixes, string de
     public NetEntity DeviceUid = deviceUid;
     public bool DeviceFlipped = deviceFlipped;
     public GasMixEntry[] NodeGasMixes = nodeGasMixes;
+    public string? Error;
 }
 
 /// <summary>

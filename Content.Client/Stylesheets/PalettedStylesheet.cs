@@ -10,5 +10,7 @@ public abstract partial class PalettedStylesheet : BaseStylesheet
 {
     protected PalettedStylesheet(object config) : base(config)
     {
+
     }
+
 }

@@ -14,7 +14,7 @@ public partial class SystemStylesheet : CommonStylesheet
 {
     public override string StylesheetName => "System";
 
-    public override NotoFontFamilyStack BaseFont { get; } // TODO: NotoFontFamilyStack is temporary
+    public override FontFamilyStack BaseFont { get; } // TODO: NotoFontFamilyStack is temporary
 
     public override Dictionary<Type, ResPath[]> Roots => new()
     {
@@ -36,7 +36,7 @@ public partial class SystemStylesheet : CommonStylesheet
 
     public SystemStylesheet(object config, StylesheetManager man) : base(config)
     {
-        BaseFont = new NotoFontFamilyStack(ResCache);
+        BaseFont = new FontFamilyStack(ResCache);
         var rules = new[]
         {
             // Set up important rules that need to go first.

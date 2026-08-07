@@ -1,0 +1,77 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Airlock Helpers from Paradise SS13 by S34NW at commit f7c7a705594fe1804519a8f2c67cec489acfb4f4; Airlock Windoor Helpers from Paradise SS13 by Venuska1117 at commit 911910a84937675ad9ae2958f3aeb8c2637b10aa",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "airlock_locked_helper"
+        },
+        {
+            "name": "access_helper"
+        },
+        {
+            "name": "access_helper_command"
+        },
+        {
+            "name": "access_helper_medical"
+        },
+        {
+            "name": "access_helper_science"
+        },
+        {
+            "name": "access_helper_cargo"
+        },
+        {
+            "name": "access_helper_engineer"
+        },
+        {
+            "name": "access_helper_security"
+        },
+        {
+            "name": "access_helper_service"
+        },
+        {
+            "name": "access_helper_procedure"
+        },
+        {
+            "name": "access_windoor",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_medical",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_science",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_cargo",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_engineer",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_security",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_service",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_command",
+            "directions": 4
+        },
+        {
+            "name": "access_windoor_procedure",
+            "directions": 4
+        }
+    ]
+}

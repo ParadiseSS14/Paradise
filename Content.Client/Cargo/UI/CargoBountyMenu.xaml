@@ -9,16 +9,14 @@
                   HorizontalExpand="True">
         <PanelContainer VerticalExpand="True" HorizontalExpand="True" Margin="10">
             <TabContainer Name="MasterTabContainer" VerticalExpand="True" HorizontalExpand="True">
-                <PanelContainer StyleClasses="SurfacePrimary">
                 <ScrollContainer HScrollEnabled="False"
                                  HorizontalExpand="True"
                                  VerticalExpand="True">
                     <BoxContainer Name="BountyEntriesContainer"
                                   Orientation="Vertical"
                                   VerticalExpand="True"
-                                  HorizontalExpand="True" />
+                                  HorizontalExpand="True" SeparationOverride="8"/>
                 </ScrollContainer>
-                </PanelContainer>
                 <ScrollContainer HScrollEnabled="False"
                                  HorizontalExpand="True"
                                  VerticalExpand="True">

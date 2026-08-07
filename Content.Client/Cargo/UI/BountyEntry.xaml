@@ -1,11 +1,10 @@
 ﻿<BoxContainer xmlns="https://spacestation14.io"
               xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
-              Margin="10 10 10 0"
               HorizontalExpand="True"
               Visible="True">
-    <PanelContainer StyleClasses="SurfaceSecondary" HorizontalExpand="True">
+    <PanelContainer StyleClasses="SurfaceTertiary" HorizontalExpand="True">
         <BoxContainer Orientation="Vertical"
-                      HorizontalExpand="True" Margin="5">
+                      HorizontalExpand="True" Margin="8">
             <BoxContainer Orientation="Horizontal">
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                     <RichTextLabel Name="RewardLabel"/>

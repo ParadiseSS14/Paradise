@@ -1,3 +1,4 @@
+using Content.Shared.Administration.BanList;
 using Content.Shared.Chat._Paradise;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
@@ -10,6 +11,7 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
     private TelepathicChatMenu? _menu;
     private TelepathicChatComposeWindow? _composeWindow;
     private NetEntity? _targetEntity;
+    private TelepathicTargetsListState? _lastState;
 
     protected override void Open()
     {
@@ -31,6 +33,11 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
         _composeWindow?.OnTextEntered += OnEnteredText;
         _composeWindow?.CancelPressed += OnCancel;
 
+        if (_lastState != null)
+        {
+            _menu?.UpdateState(_lastState.Targets);
+        }
+
     }
 
     private void OnPressedSelect()
@@ -38,7 +45,7 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
         if (_targetEntity is not { } targetEntity)
             return;
 
-        SendMessage(new TelepathicTargetSelectedMsg(targetEntity));
+        SendPredictedMessage(new TelepathicTargetSelectedMsg(targetEntity));
         _menu?.Close();
     }
 
@@ -60,7 +67,7 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
 
     private void OnEnteredText(String message)
     {
-        SendMessage(new TelepathicTextEnteredMsg(message));
+        SendPredictedMessage(new TelepathicTextEnteredMsg(message));
         _composeWindow?.Close();
     }
 
@@ -70,6 +77,8 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
 
         if (state is not TelepathicTargetsListState targetState)
             return;
+
+        _lastState = targetState;
 
         _menu?.UpdateState(targetState.Targets);
     }

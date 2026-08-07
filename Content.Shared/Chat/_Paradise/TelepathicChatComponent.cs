@@ -27,6 +27,11 @@ public sealed partial class TelepathicChatComponent : Component
     public bool IsReply;
 
     /// <summary>
+    /// A token to handle command expiry
+    /// </summary>
+    public Guid? ReplyToken;
+
+    /// <summary>
     /// The action prototype that allows you send messages
     /// </summary>
     [DataField]
@@ -49,6 +54,13 @@ public sealed partial class TelepathicChatComponent : Component
 
     [DataField, AutoNetworkedField]
     public float Range;
+
+    public void Reset()
+    {
+        Sender = null;
+        Receiver = null;
+        IsReply = false;
+    }
 }
 
 public sealed partial class ProjectMindEvent : InstantActionEvent;

@@ -123,4 +123,13 @@ public abstract partial class SharedDoorSystem
 
         return component.BoltsDown;
     }
+
+    // Paradise Content - Sets bolts regardless of power
+    public void ForceSetBoltsDown(Entity<DoorBoltComponent> ent)
+    {
+        ent.Comp.BoltsDown = true;
+        Dirty(ent, ent.Comp);
+        UpdateBoltLightStatus(ent);
+    }
+
 }

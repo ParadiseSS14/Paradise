@@ -8,8 +8,7 @@ namespace Content.Client.Chat.UI._Paradise;
 [GenerateTypedNameReferences]
 public sealed partial class TelepathicChatMenu : FancyWindow
 {
-    public event Action? SelectPressed;
-    public event Action? CancelPressed;
+    public event Action? OnSelectPressed;
     public event Action<NetEntity>? OnTargetSelected;
     public event Action? OnTargetDeselected;
 
@@ -18,8 +17,7 @@ public sealed partial class TelepathicChatMenu : FancyWindow
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
 
-        SelectButton.OnPressed += _ => SelectPressed?.Invoke();
-        CancelButton.OnPressed += _ => CancelPressed?.Invoke();
+        SelectButton.OnPressed += _ => OnSelectPressed?.Invoke();
         TargetsList.OnItemSelected += OnItemSelected;
         TargetsList.OnItemDeselected += OnItemDeselected;
     }

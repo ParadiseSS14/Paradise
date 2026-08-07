@@ -8,6 +8,5 @@
             <ItemList Name="TargetsList" SelectMode="Single"/>
         </ScrollContainer>
         <Button Name="SelectButton" Text="{Loc 'telepathic-chat-select-target'}"/>
-        <Button Name="CancelButton" Text="{Loc 'telepathic-chat-cancel'}"/>
     </BoxContainer>
 </controls:FancyWindow>

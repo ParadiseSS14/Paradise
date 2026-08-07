@@ -17,6 +17,7 @@
   - Detective
   - Cryogenics
   - External
+  - Morgue
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

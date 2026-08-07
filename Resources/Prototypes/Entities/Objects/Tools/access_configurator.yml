@@ -50,6 +50,9 @@
       - Theatre
       - GenpopEnter
       - GenpopLeave
+      - Morgue
+      - Clown
+      - Mime
       privilegedIdSlot:
         name: id-card-console-privileged-id
         ejectSound: /Audio/Machines/id_swipe.ogg
@@ -130,6 +133,10 @@
     - Xenoborg
     - GenpopEnter
     - GenpopLeave
+    - Morgue
+    - Clown
+    - Mime
+
     privilegedIdSlot:
       name: id-card-console-privileged-id
       startingItem: UniversalIDCard

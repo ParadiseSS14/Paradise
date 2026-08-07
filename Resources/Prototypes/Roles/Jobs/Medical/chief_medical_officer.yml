@@ -27,6 +27,7 @@
   - ChiefMedicalOfficer
   - Brig
   - Cryogenics
+  - Morgue
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

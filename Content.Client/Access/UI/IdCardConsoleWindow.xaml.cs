@@ -51,18 +51,17 @@ namespace Content.Client.Access.UI
         // The job that will be picked if the ID doesn't have a job on the station.
         private static ProtoId<JobPrototype> _defaultJob = "Passenger";
 
-        private (DepartmentPrototype, BaseButton) _currentDepartmentSelectedInternal;
         private DepartmentListing? _departmentContainer;
         private readonly TweenManager? _tweenManager;
 
         public (DepartmentPrototype, BaseButton) CurrentDepartmentSelected
         {
-            get => _currentDepartmentSelectedInternal;
+            get;
             set
             {
-                _currentDepartmentSelectedInternal.Item2?.Pressed = false;
-                _currentDepartmentSelectedInternal = value;
-                _currentDepartmentSelectedInternal.Item2.Pressed = true;
+                field.Item2?.Pressed = false;
+                field = value;
+                field.Item2.Pressed = true;
             }
         }
 
@@ -84,19 +83,16 @@ namespace Content.Client.Access.UI
             FullNameLineEdit.OnTextEntered += arg2 =>
             {
                 _internalIDCardState?.TargetIdName = arg2.Text;
-                SubmitData();
+                SubmitDataFromCurrentMenu();
             };
             FullNameLineEdit.IsValid = s => s.Length <= _maxNameLength;
 
             JobTitleLineEdit.OnTextEntered += arg =>
             {
                 _internalIDCardState?.TargetIdJobTitle = arg.Text;
-                SubmitData();
+                SubmitDataFromCurrentMenu();
             };
             JobTitleLineEdit.IsValid = s => s.Length <= _maxIdJobLength;
-
-            // var jobs = _prototypeManager.EnumeratePrototypes<JobPrototype>().ToList();
-            // jobs.Sort((x, y) => string.Compare(x.LocalizedName, y.LocalizedName, StringComparison.CurrentCulture));
 
             UpdateUIMenu();
 
@@ -147,13 +143,13 @@ namespace Content.Client.Access.UI
             SelectAllButton.OnPressed += _ =>
             {
                 SetAllAccess(true);
-                SubmitData();
+                SubmitDataFromCurrentMenu();
             };
 
             DeselectAllButton.OnPressed += _ =>
             {
                 SetAllAccess(false);
-                SubmitData();
+                SubmitDataFromCurrentMenu();
             };
 
             JobPresetOptionButton.OnItemSelected += SelectJobPreset;
@@ -199,7 +195,7 @@ namespace Content.Client.Access.UI
             else
                 _internalIDCardState?.TargetIdAccessList?.Remove(obj.ID);
 
-            SubmitData();
+            SubmitDataFromCurrentMenu();
         }
 
         /// <param name="enabled">If true, every individual access button will be pressed. If false, each will be depressed.</param>
@@ -223,18 +219,24 @@ namespace Content.Client.Access.UI
             args.Button.SelectId(args.Id);
 
             SetAllAccess(false);
+            var oldstate = _internalIDCardState;
+            // Ugly, but do what we gotta do.
+            if (oldstate != null)
+            {
+                _internalIDCardState = new IdCardConsoleBoundUserInterfaceState(oldstate.IsPrivilegedIdPresent,
+                    oldstate.IsPrivilegedIdAuthorized,
+                    oldstate.IsTargetIdPresent,
+                    oldstate.TargetIdFullName,
+                    job.LocalizedName,
+                    (List<ProtoId<AccessLevelPrototype>>?)job.Access,
+                    oldstate.AllowedModifyAccessList,
+                    job,
+                    oldstate.PrivilegedIdName,
+                    oldstate.TargetIdName);
+            }
 
-            // this is a sussy way to do this
-            // foreach (var access in job.Access)
-            // {
-            //     if (_accessButtons.ButtonsList.TryGetValue(access, out var button) && !button.Disabled)
-            //     {
-            //         button.Pressed = true;
-            //     }
-            // }
-
-
-            SubmitData();
+            SubmitDataFromCurrentMenu();
+            RefreshUISelection(_prototypeManager);
         }
 
         public void RecieveNewID(IdCardConsoleBoundUserInterfaceState state)
@@ -313,7 +315,7 @@ namespace Content.Client.Access.UI
             _lastJobProto = state.TargetIdJobPrototype;
         }
 
-        private void SubmitData()
+        private void SubmitDataFromCurrentMenu()
         {
             // Don't send this if it isn't dirty.
             var jobProtoDirty = _lastJobProto != null &&
@@ -381,6 +383,7 @@ namespace Content.Client.Access.UI
                     PlayTransition(ShowIDEditScreen);
                     break;
             }
+
             _oldUIState = _uiState;
         }
 

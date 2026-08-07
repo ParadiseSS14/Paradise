@@ -27,6 +27,7 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
         _menu?.SelectPressed += OnPressedSelect;
         _menu?.CancelPressed += OnCancel;
         _menu?.OnTargetSelected += OnSelectTarget;
+        _menu?.OnTargetDeselected += OnDeselectTarget;
         _composeWindow?.OnTextEntered += OnEnteredText;
         _composeWindow?.CancelPressed += OnCancel;
 
@@ -52,7 +53,7 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
         _targetEntity = netEntity;
     }
 
-    private void OnDeSelectTarget(NetEntity netEntity)
+    private void OnDeselectTarget()
     {
         _targetEntity = null;
     }

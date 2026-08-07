@@ -98,10 +98,7 @@ public sealed partial class SprayPainterDecals : Control
             {
                 var panelContainer = new PanelContainer()
                 {
-                    PanelOverride = new StyleBoxFlat()
-                    {
-                        BackgroundColor = StyleNano.ButtonColorDefault,
-                    },
+                    StyleClasses = { Button.StyleClassButton },
                     Children =
                     {
                         button,

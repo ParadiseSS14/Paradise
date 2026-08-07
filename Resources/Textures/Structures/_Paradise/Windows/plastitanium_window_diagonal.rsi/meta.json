@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-SA-3.0",
-    "copyright": "Modified from plastitanium_window.rsi by Flareguy for Space Station 14, transparency tweaked by Ubaser.",
+    "copyright": "Taken from https://github.com/ss220club/Paradise-SS220/tree/master/icons/obj/smooth_structures/windows and modified",
     "states": [
         {
             "name": "state0"

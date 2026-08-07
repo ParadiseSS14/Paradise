@@ -111,22 +111,22 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
     {
         rules.AddRange([
             E<TC>().MaybeClass(styleclass).PseudoNormal().Modulate(Color.White),
-            E<TC>().MaybeClass(styleclass).PseudoHovered().Modulate(Color.White.NudgeLightness(0.1f)),
-            E<TC>().MaybeClass(styleclass).PseudoPressed().Modulate(Color.White.NudgeLightness(-0.05f)),
-            E<TC>().MaybeClass(styleclass).PseudoDisabled().Modulate(Color.White.NudgeLightness(-0.15f)),
+            E<TC>().MaybeClass(styleclass).PseudoHovered().Modulate(Color.White.NudgeLightness(0.125f)),
+            E<TC>().MaybeClass(styleclass).PseudoPressed().Modulate(Color.White.NudgeLightness(-0.2f)),
+            E<TC>().MaybeClass(styleclass).PseudoDisabled().Modulate(Color.White.NudgeLightness(-0.35f)),
         ]);
     }
 
-    public static void MakeButtonRules(
+    private static void MakeButtonRules(
         List<StyleRule> rules,
         ColorPalette palette,
         string? styleclass)
     {
         rules.AddRange([
             E().MaybeClass(styleclass).PseudoNormal().Modulate(Color.White),
-            E().MaybeClass(styleclass).PseudoHovered().Modulate(Color.White.NudgeLightness(0.1f)),
-            E().MaybeClass(styleclass).PseudoPressed().Modulate(Color.White.NudgeLightness(-0.05f)),
-            E().MaybeClass(styleclass).PseudoDisabled().Modulate(Color.White.NudgeLightness(-0.15f)),
+            E().MaybeClass(styleclass).PseudoHovered().Modulate(Color.White.NudgeLightness(0.125f)),
+            E().MaybeClass(styleclass).PseudoPressed().Modulate(Color.White.NudgeLightness(-0.2f)),
+            E().MaybeClass(styleclass).PseudoDisabled().Modulate(Color.White.NudgeLightness(-0.35f)),
         ]);
     }
 

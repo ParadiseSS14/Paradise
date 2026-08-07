@@ -38,7 +38,7 @@ public sealed partial class TelepathicChatMenu : FancyWindow
     {
         OnTargetDeselected?.Invoke();
     }
-    public void UpdateState(List<(NetEntity Uid, string Name)> targets)
+    public void BuildList(List<(NetEntity Uid, string Name)> targets)
     {
 
         TargetsList.Clear(); // Clear list of any existing entities

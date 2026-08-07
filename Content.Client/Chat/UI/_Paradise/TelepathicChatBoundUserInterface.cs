@@ -1,4 +1,3 @@
-using Content.Shared.Administration.BanList;
 using Content.Shared.Chat._Paradise;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
@@ -11,19 +10,19 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
     private TelepathicChatMenu? _menu;
     private TelepathicChatComposeWindow? _composeWindow;
     private NetEntity? _targetEntity;
-    private TelepathicTargetsListState? _lastState;
 
     protected override void Open()
     {
         base.Open();
 
-        if (UiKey.Equals(TelepathicChatUiKey.Compose))
+        if (UiKey.Equals(TelepathicChatUiKey.Send) || UiKey.Equals(TelepathicChatUiKey.Receive))
         {
-            _composeWindow = this.CreateWindow<TelepathicChatComposeWindow>();
+            _menu = this.CreateWindow<TelepathicChatMenu>();
+            Reload();
         }
         else
         {
-            _menu = this.CreateWindow<TelepathicChatMenu>();
+            _composeWindow = this.CreateWindow<TelepathicChatComposeWindow>();
         }
 
         _menu?.SelectPressed += OnPressedSelect;
@@ -32,14 +31,7 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
         _menu?.OnTargetDeselected += OnDeselectTarget;
         _composeWindow?.OnTextEntered += OnEnteredText;
         _composeWindow?.CancelPressed += OnCancel;
-
-        if (_lastState != null)
-        {
-            _menu?.UpdateState(_lastState.Targets);
-        }
-
     }
-
     private void OnPressedSelect()
     {
         if (_targetEntity is not { } targetEntity)
@@ -71,15 +63,11 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
         _composeWindow?.Close();
     }
 
-    protected override void UpdateState(BoundUserInterfaceState state)
+    public void Reload()
     {
-        base.UpdateState(state);
-
-        if (state is not TelepathicTargetsListState targetState)
-            return;
-
-        _lastState = targetState;
-
-        _menu?.UpdateState(targetState.Targets);
+        if (EntMan.TryGetComponent<TelepathicChatComponent>(Owner, out var comp))
+        {
+            _menu?.BuildList(comp.TargetsList);
+        }
     }
 }

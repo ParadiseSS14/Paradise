@@ -7,7 +7,7 @@ namespace Content.Shared.Chat._Paradise;
 /// <summary>
 ///   Telepathic chat component
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class TelepathicChatComponent : Component
 {
     /// <summary>
@@ -19,7 +19,6 @@ public sealed partial class TelepathicChatComponent : Component
     /// Storage of the message receiver
     /// </summary>
     public NetEntity? Receiver;
-
 
     /// <summary>
     /// Is this a Scan Mind Reply?
@@ -46,14 +45,20 @@ public sealed partial class TelepathicChatComponent : Component
     /// <summary>
     /// Entities to hold the action prototypes
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public EntityUid? SendActionEntity;
 
-    [DataField, AutoNetworkedField]
+    [DataField]
     public EntityUid? ReceiveActionEntity;
 
-    [DataField, AutoNetworkedField]
+    [DataField]
     public float Range;
+
+    /// <summary>
+    /// List of available targets for BUI state
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public List<(NetEntity Uid, string Name)> TargetsList = new();
 
     public void Reset()
     {

@@ -36,10 +36,34 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     {
         base.Initialize();
 
+        SubscribeLocalEvent<TelepathicChatComponent, GridUidChangedEvent>(OnGridChange);
         SubscribeLocalEvent<TelepathicChatComponent, ProjectMindEvent>(OnSendEvent);
         SubscribeLocalEvent<TelepathicChatComponent, ScanMindEvent>(OnReceiveEvent);
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTargetSelectedMsg>(OnTargetChosen);
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTextEnteredMsg>(OnTextEntered);
+    }
+
+    /// <summary>
+    /// Checking if the grid changed (portal, etc)
+    /// If so, do a purge for safety
+    /// </summary>
+    private void OnGridChange(Entity<TelepathicChatComponent> telepath, ref GridUidChangedEvent args)
+    {
+        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
+        {
+            return;
+        }
+
+        foreach (var uiKey in Enum.GetValues<TelepathicChatUiKey>())
+        {
+            if (_ui.TryGetOpenUi((telepath, userInterfaceComp), uiKey, out var bui))
+            {
+                bui.Close();
+            }
+        }
+
+        telepath.Comp.Reset();
+        Dirty(telepath);
     }
 
     private void OnEvent(Entity<TelepathicChatComponent> telepath, EntityUid performer, Entity<ActionComponent> action)
@@ -52,24 +76,23 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         telepath.Comp.Reset();
         Dirty(telepath);
 
-        var targets = ChooseTargets(telepath.Owner, telepath.Comp.Range);
-        if (targets.Count == 0)
+        telepath.Comp.TargetsList = ChooseTargets(telepath.Owner, telepath.Comp.Range);
+        if (telepath.Comp.TargetsList.Count == 0)
         {
             _popup.PopupEntity(Loc.GetString("telepathic-chat-no-targets"), telepath.Owner);
             return;
         }
 
-        var state = new TelepathicTargetsListState(targets);
         var uiKey = TelepathicChatUiKey.Send;
 
         if (action == telepath.Comp.ReceiveActionEntity)
         {
             uiKey = TelepathicChatUiKey.Receive;
             telepath.Comp.IsReply = true;
-            Dirty(telepath);
         }
+
+        Dirty(telepath);
         _ui.OpenUi((telepath, userInterfaceComp), uiKey, performer);
-        _ui.SetUiState(telepath.Owner, uiKey, state);
     }
     private void OnSendEvent(Entity<TelepathicChatComponent> telepath, ref ProjectMindEvent args)
     {

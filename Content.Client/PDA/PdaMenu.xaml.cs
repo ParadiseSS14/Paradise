@@ -136,7 +136,7 @@ namespace Content.Client.PDA
 
             if (state.PdaOwnerInfo.ActualOwnerName != null)
             {
-                _pdaOwner = FormattedMessage.EscapeText(state.PdaOwnerInfo.ActualOwnerName); // DeltaV - Escape actual owner
+                _pdaOwner = FormattedMessage.EscapeText(state.PdaOwnerInfo.ActualOwnerName);
                 PdaOwnerLabel.SetMarkup(Loc.GetString("comp-pda-ui-owner",
                     ("actualOwnerName", _pdaOwner)));
                 PdaOwnerLabel.Visible = true;

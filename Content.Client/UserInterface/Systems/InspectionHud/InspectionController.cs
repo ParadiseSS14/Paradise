@@ -15,6 +15,8 @@ public sealed partial class InspectionController : UIController
     [Dependency] private IEntitySystemManager _sysMan = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
 
+    private EntityUid? _lastInspectionEntity;
+
     private InteractionOutlineSystem _system = default!;
     private InspectionUI? inspectionUI => UIManager.GetActiveUIWidgetOrNull<InspectionUI>();
 
@@ -38,8 +40,13 @@ public sealed partial class InspectionController : UIController
 
     private void ChangeInspectionText(EntityUid? entity)
     {
-        if (inspectionUI == null)
+        if (inspectionUI == null || _lastInspectionEntity == null)
             return;
+
+        if (_lastInspectionEntity == entity)
+            return;
+
+        _lastInspectionEntity = entity;
 
         if (!entity.HasValue)
         {

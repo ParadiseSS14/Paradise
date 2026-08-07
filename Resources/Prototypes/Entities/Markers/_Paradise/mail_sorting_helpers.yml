@@ -9,6 +9,7 @@
         state: mail_sorting
         shader: unshaded
       - type: MailSortingHelper
+      - type: LocalGatherTargets
 
 # Cargo
 - type: entity

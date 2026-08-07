@@ -16,14 +16,21 @@ internal sealed partial class TelepathicChatReplyCommand : LocalizedEntityComman
 
     public override void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        if (args.Length != 1 || shell.Player?.AttachedEntity is not { } targetEnt)
+        if (args.Length != 2 || shell.Player?.AttachedEntity is not { } targetEnt)
             return;
 
         var telepath = args[0];
         if (!NetEntity.TryParse(telepath, out var telepathNet))
             return;
-
+        if (!Guid.TryParse(args[1], out var token))
+            return;
         var telepathEnt = _entman.GetEntity(telepathNet);
+
+        // Using a simple token to prevent command spam
+        if (!_telepathic.TryToken(telepathEnt, token))
+        {
+            return;
+        }
 
         _telepathic.OpenComposeFor(telepathEnt, targetEnt, telepathNet);
     }

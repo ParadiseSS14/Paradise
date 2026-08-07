@@ -42,5 +42,4 @@ public sealed partial class SharedTelepathicChatSystem : EntitySystem
         targetComp.ReceiveAction = ent.Comp.ReceiveAction;
         AddComp(args.CloneUid, targetComp, true);
     }
-
 }

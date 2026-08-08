@@ -227,21 +227,132 @@
   parent: BaseGasUnary
   id: GasVentPump
   targetNode: ventpump
+  placementMode: AlignAtmosPipeLayers # Funky
+  alternativePrototypes: # Funky
+  - GasVentPump
+  - GasVentPumpAlt1
+  - GasVentPumpAlt2
 
 - type: construction
   parent: BaseGasUnary
   id: GasPassiveVent
   targetNode: passivevent
+  placementMode: AlignAtmosPipeLayers # Funky
+  alternativePrototypes: # Funky
+  - GasPassiveVent
+  - GasPassiveVentAlt1
+  - GasPassiveVentAlt2
 
 - type: construction
   parent: BaseGasUnary
   id: GasVentScrubber
   targetNode: ventscrubber
+  placementMode: AlignAtmosPipeLayers # Funky
+  alternativePrototypes: # Funky
+  - GasVentScrubber
+  - GasVentScrubberAlt1
+  - GasVentScrubberAlt2
 
 - type: construction
   parent: BaseGasUnary
   id: GasOutletInjector
   targetNode: outletinjector
+  placementMode: AlignAtmosPipeLayers # Funky
+  alternativePrototypes: # Funky
+  - GasOutletInjector
+  - GasOutletInjectorAlt1
+  - GasOutletInjectorAlt2
+
+# Port from Funky Station
+- type: construction
+  id: GasVentPumpAlt1
+  hide: true
+  graph: GasUnary
+  targetNode: ventpumpAlt1
+  placementMode: AlignAtmosPipeLayers
+  alternativePrototypes:
+  - GasVentPump
+  - GasVentPumpAlt1
+  - GasVentPumpAlt2
+
+- type: construction
+  id: GasVentPumpAlt2
+  hide: true
+  graph: GasUnary
+  targetNode: ventpumpAlt2
+  placementMode: AlignAtmosPipeLayers
+  alternativePrototypes:
+  - GasVentPump
+  - GasVentPumpAlt1
+  - GasVentPumpAlt2
+
+- type: construction
+  id: GasPassiveVentAlt1
+  hide: true
+  graph: GasUnary
+  targetNode: passiveventAlt1
+  placementMode: AlignAtmosPipeLayers
+  alternativePrototypes:
+  - GasPassiveVent
+  - GasPassiveVentAlt1
+  - GasPassiveVentAlt2
+
+- type: construction
+  id: GasPassiveVentAlt2
+  hide: true
+  graph: GasUnary
+  targetNode: passiveventAlt2
+  placementMode: AlignAtmosPipeLayers
+  alternativePrototypes:
+  - GasPassiveVent
+  - GasPassiveVentAlt1
+  - GasPassiveVentAlt2
+
+- type: construction
+  id: GasVentScrubberAlt1
+  hide: true
+  graph: GasUnary
+  targetNode: ventscrubberAlt1
+  placementMode: AlignAtmosPipeLayers
+  alternativePrototypes:
+  - GasVentScrubber
+  - GasVentScrubberAlt1
+  - GasVentScrubberAlt2
+
+- type: construction
+  id: GasVentScrubberAlt2
+  hide: true
+  graph: GasUnary
+  targetNode: ventscrubberAlt2
+  placementMode: AlignAtmosPipeLayers
+  alternativePrototypes:
+  - GasVentScrubber
+  - GasVentScrubberAlt1
+  - GasVentScrubberAlt2
+
+- type: construction
+  id: GasOutletInjectorAlt1
+  hide: true
+  graph: GasUnary
+  targetNode: outletinjectorAlt1
+  placementMode: AlignAtmosPipeLayers
+  alternativePrototypes:
+  - GasOutletInjector
+  - GasOutletInjectorAlt1
+  - GasOutletInjectorAlt2
+
+- type: construction
+  id: GasOutletInjectorAlt2
+  hide: true
+  graph: GasUnary
+  targetNode: outletinjectorAlt2
+  placementMode: AlignAtmosPipeLayers
+
+  alternativePrototypes:
+  - GasOutletInjector
+  - GasOutletInjectorAlt1
+  - GasOutletInjectorAlt2
+
 # endregion Unary
 
 # region Binary

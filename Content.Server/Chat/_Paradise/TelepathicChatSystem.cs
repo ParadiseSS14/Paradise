@@ -273,8 +273,8 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         else
         {
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message} {messageWrap}");
-            _chatManager.ChatMessageToOne(ChatChannel.Telepathic, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);
-            _chatManager.ChatMessageToMany(ChatChannel.Telepathic, message, adminMessageWrap, sender, hideChat, true, admins, Color.DarkMagenta);
+            _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);
+            _chatManager.ChatMessageToMany(ChatChannel.Hivemind, message, adminMessageWrap, sender, hideChat, true, admins, Color.DarkMagenta);
         }
 
         telepath.Comp.Reset();

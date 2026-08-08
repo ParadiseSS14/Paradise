@@ -53,6 +53,6 @@
 
         Console = ChatChannel.Unspecified,
 
-        Telepathic = ChatChannel.Telepathic // Paradise Content
+        Hivemind = ChatChannel.Hivemind // Paradise Content
     }
 }

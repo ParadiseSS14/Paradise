@@ -13,14 +13,12 @@ mapfile -t files < <(
 if (( ${#files[@]} != 0 )); then
 
     if ! command -v npm >/dev/null 2>&1; then
-        echo "Node.js/npm is required to check YAML formatting."
-        echo "Install Node.js, then run: npm ci --prefix Tools/prettier"
+        echo "Node.js/npm is required to check YAML formatting. Install Node.js, then run: npm ci --prefix Tools/prettier"
         exit 1
     fi
 
     if [[ ! -x Tools/prettier/node_modules/.bin/prettier && ! -f Tools/prettier/node_modules/.bin/prettier.cmd ]]; then
-        echo "Prettier is not installed."
-        echo "Run: npm ci --prefix Tools/prettier"
+        echo "Prettier is not installed. Run: npm ci --prefix Tools/prettier"
         exit 1
     fi
 fi

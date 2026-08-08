@@ -2,10 +2,11 @@
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                       xmlns:widgets="clr-namespace:Content.Client.UserInterface.Systems.Chat.Widgets"
                       Title="{Loc telepathic-chat-compose-window-title}"
-                      Resizable= "False"
-                      MinWidth= "150"
+                      HideIcon="True"
+                      Resizable="False"
+                      MinWidth="150"
                       MinHeight="80">
-    <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="4" MinWidth="150">
+    <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="8" MinWidth="150">
         <LineEdit Name="TextLine" />
     </BoxContainer>
 </controls:FancyWindow>

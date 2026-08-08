@@ -1,9 +1,10 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
              xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
              Title="{Loc 'telepathic-chat-ui-window-name'}"
+             HideIcon="True"
              Resizable="False"
-             MinHeight= "250">
-    <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="150">
+             MinHeight="250">
+    <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="8" MinWidth="150">
         <ScrollContainer VerticalExpand="True">
             <ItemList Name="TargetsList" SelectMode="Single"/>
         </ScrollContainer>

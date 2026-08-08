@@ -1,7 +1,7 @@
 using Content.Client.Chat.UI._Paradise;
 using Content.Shared.Chat._Paradise;
 
-namespace Content.Server.Client._Paradise;
+namespace Content.Client.Client._Paradise;
 
 public sealed partial class TelepathicChatSystem : EntitySystem
 {

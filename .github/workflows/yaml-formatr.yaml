@@ -5,8 +5,8 @@ on:
     paths:
       - "Resources/Prototypes/**/*.yml"
       - "Resources/Prototypes/**/*.yaml"
-      - "package.json"
-      - "package-lock.json"
+      - "Tools/prettier/package.json"
+      - "Tools/prettier/package-lock.json"
       - ".github/workflows/yaml-formatr.yaml"
 
   push:
@@ -15,8 +15,8 @@ on:
     paths:
       - "Resources/Prototypes/**/*.yml"
       - "Resources/Prototypes/**/*.yaml"
-      - "package.json"
-      - "package-lock.json"
+      - "Tools/prettier/package.json"
+      - "Tools/prettier/package-lock.json"
       - ".github/workflows/yaml-formatr.yaml"
 
 permissions:
@@ -38,9 +38,12 @@ jobs:
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: Tools/prettier/package-lock.json
       - name: Install formatting tools
         run: npm ci
+        working-directory: Tools/prettier
 
       - name: Check formatting
-        run: npm run prettier:check -- Resources/Prototypes
+        run: npm run prettier:check -- ../../Resources/Prototypes
+        working-directory: Tools/prettier
 

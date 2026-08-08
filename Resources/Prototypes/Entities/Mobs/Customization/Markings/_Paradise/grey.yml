@@ -1,0 +1,103 @@
+- type: marking
+  id: TattooGreyHeartRightArm
+  bodyPart: RArm
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_heart_arm_r
+
+- type: marking
+  id: TattooGreyHiveChest
+  bodyPart: Chest
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_hive_chest
+
+- type: marking
+  id: TattooGreyNightlingChest
+  bodyPart: Chest
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_nightling
+
+- type: marking
+  id: TattooGreyTigerChest
+  bodyPart: Chest
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_tiger
+
+- type: marking
+  id: TattooGreySparta
+  bodyPart: Chest
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_sparta
+
+- type: marking
+  id: TattooGreyEnthralledRightEye
+  bodyPart: Head
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_enthralled_eye_r
+
+- type: marking
+  id: TattooGreyFlaredFace
+  bodyPart: Head
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_flared_face
+
+- type: marking
+  id: TattooGreyImpFace
+  bodyPart: Head
+  groupWhitelist: [Grey]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/grey.rsi
+    state: tattoo_imp_face

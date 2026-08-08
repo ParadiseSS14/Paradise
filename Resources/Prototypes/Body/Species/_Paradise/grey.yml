@@ -1,0 +1,244 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Grey
+  limits:
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 0
+      onlyGroupWhitelisted: true
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 0
+      onlyGroupWhitelisted: true
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Special:
+      limit: 0
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceGrey
+  categories: [ HideSpawnMenu ]
+  name: grey appearance
+  components:
+  - type: InitialBody
+    organs:
+      Torso: OrganGreyTorso
+      Head: OrganGreyHead
+      ArmLeft: OrganGreyArmLeft
+      ArmRight: OrganGreyArmRight
+      HandRight: OrganGreyHandRight
+      HandLeft: OrganGreyHandLeft
+      LegLeft: OrganGreyLegLeft
+      LegRight: OrganGreyLegRight
+      FootLeft: OrganGreyFootLeft
+      FootRight: OrganGreyFootRight
+      Brain: OrganGreyBrain
+      Eyes: OrganGreyEyes
+      Tongue: OrganGreyTongue
+      Appendix: OrganGreyAppendix
+      Ears: OrganGreyEars
+      Lungs: OrganGreyLungs
+      Heart: OrganGreyHeart
+      Stomach: OrganGreyStomach
+      Liver: OrganGreyLiver
+      Kidneys: OrganGreyKidneys
+  - type: HumanoidProfile
+    species: Grey
+
+- type: entity
+  parent:
+  - AppearanceGrey
+  - BaseSpeciesMobOrganic
+  - MobNightVision
+  id: MobGrey
+  name: Urist McBald
+  components:
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 5
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: ExoticBlood
+        Quantity: 600
+  - type: Reactive
+    groups:
+      Acidic: [ Ingestion ] # Skip damage on touch
+    reactions:
+    - reagents: [ Water ] 
+      methods: [ Touch ]
+      effects:
+      - !type:HealthChange
+        ignoreResistances: false
+        damage:
+          types:
+            Caustic: 0.3 # Water is acidic to Greys
+      - !type:Emote
+        emote: Scream
+        probability: 0.2
+  - type: NightVision 
+    prioritized: false
+    lightingColor: "#FFFFFF05" # Darkened from the base color
+  - type: BlindedByFlashing
+    eyeDamage: 3 # 3 flashes will blind a Grey (maxDamage is 9)
+  - type: IntrinsicRadioReceiver 
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Greymind # Grey hivemind
+  - type: ActiveRadio
+    channels: 
+    - Greymind
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganGrey
+  abstract: true
+  suffix: grey
+
+- type: entity
+  id: OrganGreyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Grey ]
+
+- type: entity
+  parent: OrganGrey
+  id: OrganGreyInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/_Paradise/Grey/organs.rsi
+
+- type: entity
+  id: OrganGreyVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/_Paradise/Grey/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Grey
+
+- type: entity
+  parent: [ OrganGrey, OrganGreyVisual ]
+  id: OrganGreyExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/_Paradise/Grey/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganGreyExternal ]
+  id: OrganGreyTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganGreyExternal ]
+  id: OrganGreyHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganGreyExternal ]
+  id: OrganGreyArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganGreyExternal ]
+  id: OrganGreyArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganGreyExternal ]
+  id: OrganGreyHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganGreyExternal ]
+  id: OrganGreyHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganGreyExternal ]
+  id: OrganGreyLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganGreyExternal ]
+  id: OrganGreyLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganGreyExternal ]
+  id: OrganGreyFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganGreyExternal ]
+  id: OrganGreyFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganGreyInternal ]
+  id: OrganGreyBrain
+
+- type: entity
+  parent: [ OrganGreyVisual, OrganBaseEyes, OrganGreyInternal ]
+  id: OrganGreyEyes
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganGreyInternal ]
+  id: OrganGreyTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganGreyInternal ]
+  id: OrganGreyAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganGreyInternal ]
+  id: OrganGreyEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganGreyInternal, OrganGreyMetabolizer ]
+  id: OrganGreyLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganGreyInternal, OrganGreyMetabolizer ]
+  id: OrganGreyHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganGreyInternal, OrganGreyMetabolizer ]
+  id: OrganGreyStomach
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganGreyInternal, OrganGreyMetabolizer ]
+  id: OrganGreyLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganGreyInternal, OrganGreyMetabolizer ]
+  id: OrganGreyKidneys

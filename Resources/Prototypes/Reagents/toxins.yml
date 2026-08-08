@@ -187,6 +187,7 @@
             Heat: 2.5
             Caustic: 1
 
+# Paradise Change: Added conditions to bloodstream effects
 - type: reagent
   id: FluorosulfuricAcid
   name: reagent-name-fluorosulfuric-acid
@@ -215,18 +216,31 @@
       metabolismRate: 3.00 # High damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+          inverted: true 
         damage:
           types:
             Caustic: 8
       - !type:PopupMessage
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+          inverted: true 
         type: Local
         visualType: Large
         messages: [ "generic-reagent-effect-burning-insides" ]
         probability: 0.33
       - !type:Emote
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+          inverted: true 
         emote: Scream
         probability: 0.25
 
+# Paradise Change: Added conditions to bloodstream effects
 - type: reagent
   id: SulfuricAcid
   name: reagent-name-sulfuric-acid
@@ -264,15 +278,27 @@
       metabolismRate: 3.00 # Okay damage, high metabolism rate. You need a lot of units to crit. Simulates acid burning through you fast.
       effects:
       - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+          inverted: true 
         damage:
           types:
             Caustic: 5
       - !type:PopupMessage
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+          inverted: true 
         type: Local
         visualType: Large
         messages: [ "generic-reagent-effect-burning-insides" ]
         probability: 0.33
       - !type:Emote
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Grey ]
+          inverted: true 
         emote: Scream
         probability: 0.2
 

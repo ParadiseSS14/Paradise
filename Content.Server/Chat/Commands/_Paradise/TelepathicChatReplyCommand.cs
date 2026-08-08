@@ -1,6 +1,6 @@
 using Content.Server.Chat._Paradise;
-using Content.Shared.Administration;
 using Content.Shared.Chat._Paradise;
+using Content.Shared.Administration;
 using Robust.Shared.Console;
 
 namespace Content.Server.Chat.Commands._Paradise;
@@ -26,25 +26,25 @@ internal sealed partial class TelepathicChatReplyCommand : LocalizedEntityComman
             return;
         }
 
-        var telepathEnt = _entMan.GetEntity(telepathNet);
+        var telepath = _entMan.GetEntity(telepathNet);
 
-        if (!_entMan.HasComponent<TelepathicChatComponent>(telepathEnt))
+        if (!_entMan.HasComponent<TelepathicChatComponent>(telepath))
         {
             return;
         }
 
-        if (args.Length != 2 || shell.Player?.AttachedEntity is not { } targetEnt)
+        if (args.Length != 2 || shell.Player?.AttachedEntity is not { } target)
         {
             return;
         }
 
         // Using a simple token to prevent command spam
-        if (!_telepathic.TryToken(telepathEnt, token))
+        if (!_telepathic.TryToken(telepath, token))
         {
-            shell.WriteLine($"{targetEnt}: {Loc.GetString("telepathic-chat-token-invalid")}");
+            shell.WriteLine($"{target}: {Loc.GetString("telepathic-chat-token-invalid")}");
             return;
         }
 
-        _telepathic.OpenComposeFor(telepathNet, targetEnt);
+        _telepathic.OpenComposeFor(target, telepathNet, telepath);
     }
 }

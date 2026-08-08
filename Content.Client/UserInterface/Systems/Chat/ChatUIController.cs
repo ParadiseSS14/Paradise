@@ -6,7 +6,6 @@ using Content.Client.Chat;
 using Content.Client.Chat.Managers;
 using Content.Client.Chat.TypingIndicator;
 using Content.Client.Chat.UI;
-using Content.Client.Chat.UI._Paradise;
 using Content.Client.Examine;
 using Content.Client.Gameplay;
 using Content.Client.Ghost;

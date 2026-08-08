@@ -10,6 +10,8 @@ using Content.Shared.Interaction;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
 using Robust.Server.Player;
+using Robust.Shared;
+using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using System.Linq;
@@ -21,16 +23,17 @@ namespace Content.Server.Chat._Paradise;
 /// </summary>
 public sealed partial class TelepathicChatSystem : EntitySystem
 {
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private IAdminManager _adminManager = default!;
+    [Dependency] private IChatManager _chatManager = default!;
+    [Dependency] private IConfigurationManager _configManager = default!;
     [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private MobStateSystem _mobStateSystem = default!;
     [Dependency] private SharedInteractionSystem _interaction = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private SharedUserInterfaceSystem _ui = default!;
-    [Dependency] private IAdminLogManager _adminLogger = default!;
-    [Dependency] private IAdminManager _adminManager = default!;
-    [Dependency] private IChatManager _chatManager = default!;
-    [Dependency] private IPlayerManager _playerManager = default!;
 
     public override void Initialize()
     {
@@ -43,10 +46,6 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTextEnteredMsg>(OnTextEntered);
     }
 
-    /// <summary>
-    /// Checking if the grid changed (portal, etc)
-    /// If so, do a purge for safety
-    /// </summary>
     private void OnGridChange(Entity<TelepathicChatComponent> telepath, ref GridUidChangedEvent args)
     {
         if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
@@ -125,29 +124,43 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     private void OnTextEntered(Entity<TelepathicChatComponent> telepath, ref TelepathicTextEnteredMsg args)
     {
         var message = args.Message;
-        SendTelepathicChat(telepath, message, false, telepath.Comp.IsReply);
+        SendTelepathicChat(telepath, message, false, telepath.Comp.IsScan);
     }
 
     /// <summary>
     /// This method handles the response of ScanMind targets
     /// </summary>
-    public void OpenComposeFor(NetEntity telepathNet, EntityUid target)
+    public void OpenComposeFor(EntityUid target, NetEntity telepathNet, EntityUid telepath)
     {
-        if (!TryComp<UserInterfaceComponent>(target, out _))
+
+        if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
         {
             return;
         }
 
-        var replyComp = EnsureComp<TelepathicReplyComponent>(target);
-        replyComp.Receiver = telepathNet;
-        Dirty(target, replyComp);
-
-        if (!TryComp<UserInterfaceComponent>(target, out var userInterfaceComp))
+        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
         {
             return;
         }
 
-        _ui.OpenUi((target, userInterfaceComp), TelepathicChatUiKey.Compose, target);
+        // Check if telepath is outside max PVS range so the OpenUi() doesn't fail spectactularly
+        var maxRange = _configManager.GetCVar(CVars.NetMaxUpdateRange);
+        var telepathPos = _transform.GetMapCoordinates(GetEntity(telepathNet));
+        var targetPos = _transform.GetMapCoordinates(target);
+
+        if (telepathPos.MapId != targetPos.MapId || (telepathPos.Position - targetPos.Position).Length() > maxRange * 0.9f)
+        {
+            telepathComp.Reset(); // position check fails, bail out
+            Dirty(telepath, telepathComp);
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), target);
+            return;
+        }
+
+        telepathComp.Sender = GetNetEntity(target);
+        telepathComp.Receiver = telepathNet;
+        Dirty(telepath, telepathComp);
+
+        _ui.OpenUi((telepath, userInterfaceComp), TelepathicChatUiKey.Compose, target);
     }
 
     private List<(NetEntity Uid, string Name)> ChooseTargets(EntityUid telepath, float range)
@@ -219,10 +232,13 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     }
 
     /// <summary>
+    /// Send Telepathic chats to Telepathic channel, logs, active admins
+    /// </summary>
+    /// <remarks>
     /// Much of this has been sourced/referenced from Simple-Station/Einstein-Engine 
     /// Commit: 10d41858d88d3ba9d36fdd9c98595d89701f1cbb
     /// Content.Server/Chat/TelepathicChatSystem.cs
-    /// </summary>
+    /// </remarks>
     public void SendTelepathicChat(Entity<TelepathicChatComponent> telepath, string message, bool hideChat, bool replyWrap = false)
     {
 

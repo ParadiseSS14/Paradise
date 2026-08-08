@@ -2,8 +2,8 @@ chat-manager-send-telepathic-chat-wrap-message = You hear {$sender}'s voice: "{$
 chat-manager-send-telepathic-chat-wrap-message-admin = {$sender}: Telepathically said "{$message}" using Project Mind
 
 chat-manager-telepathic-channel-name = Telepathic
-chat-manager-telepathic-chat-scan = You feel your mind expanding.
 chat-manager-telepathic-chat-reply = (Click here to send a message)
+chat-manager-telepathic-chat-scan = You feel your mind expanding.
 
 telepathic-chat-cancel = Cancel
 telepathic-chat-compose-window-title = Project Mind

@@ -217,28 +217,28 @@
       effects:
         - !type:HealthChange
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
-            inverted: true 
-            damage:
-              types:
-                Caustic: 8
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
+              inverted: true
+          damage:
+            types:
+              Caustic: 8
         - !type:PopupMessage
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
-            inverted: true 
-            type: Local
-            visualType: Large
-            messages: ["generic-reagent-effect-burning-insides"]
-            probability: 0.33
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
+              inverted: true
+          type: Local
+          visualType: Large
+          messages: ["generic-reagent-effect-burning-insides"]
+          probability: 0.33
         - !type:Emote
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
-            inverted: true 
-            emote: Scream
-            probability: 0.25
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
+              inverted: true
+          emote: Scream
+          probability: 0.25
 
 # Paradise Change: Added conditions to bloodstream effects
 - type: reagent
@@ -279,28 +279,28 @@
       effects:
         - !type:HealthChange
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
-            inverted: true 
-              damage:
-                types:
-                  Caustic: 5
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
+              inverted: true
+          damage:
+            types:
+              Caustic: 5
         - !type:PopupMessage
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
-            inverted: true 
-            type: Local
-            visualType: Large
-            messages: ["generic-reagent-effect-burning-insides"]
-            probability: 0.33
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
+              inverted: true
+          type: Local
+          visualType: Large
+          messages: ["generic-reagent-effect-burning-insides"]
+          probability: 0.33
         - !type:Emote
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
-            inverted: true 
-            emote: Scream
-            probability: 0.2
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
+              inverted: true
+          emote: Scream
+          probability: 0.2
 
 - type: reagent
   id: UnstableMutagen

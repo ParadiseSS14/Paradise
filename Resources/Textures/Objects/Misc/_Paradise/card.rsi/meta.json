@@ -1,0 +1,277 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Paradise Station at https://github.com/ParadiseSS13/Paradise/commits/master/icons/obj/card.dmi",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "id"
+        },
+        {
+            "name": "ERT_empty"
+        },
+        {
+            "name": "centcom"
+        },
+        {
+            "name": "ERT_leader"
+        },
+        {
+            "name": "ERT_security"
+        },
+        {
+            "name": "ERT_medical"
+        },
+        {
+            "name": "ERT_engineering"
+        },
+        {
+            "name": "ERT_paranormal"
+        },
+        {
+            "name": "ERT_janitorial"
+        },
+        {
+            "name": "ntrep"
+        },
+        {
+            "name": "blueshield"
+        },
+        {
+            "name": "magistrate"
+        },
+        {
+            "name": "captain"
+        },
+        {
+            "name": "HoP"
+        },
+        {
+            "name": "HoS"
+        },
+        {
+            "name": "CMO"
+        },
+        {
+            "name": "RD"
+        },
+        {
+            "name": "CE"
+        },
+        {
+            "name": "quartermaster"
+        },
+        {
+            "name": "cargo"
+        },
+        {
+            "name": "shaftminer"
+        },
+        {
+            "name": "commander"
+        },
+        {
+            "name": "deathsquad"
+        },
+        {
+            "name": "engineering"
+        },
+        {
+            "name": "atmostech"
+        },
+        {
+            "name": "medical"
+        },
+        {
+            "name": "coroner"
+        },
+        {
+            "name": "virologist"
+        },
+        {
+            "name": "chemist"
+        },
+        {
+            "name": "paramedic"
+        },
+        {
+            "name": "psychiatrist"
+        },
+        {
+            "name": "prisoner"
+        },
+        {
+            "name": "prisonerone"
+        },
+        {
+            "name": "prisonertwo"
+        },
+        {
+            "name": "prisonerthree"
+        },
+        {
+            "name": "prisonerfour"
+        },
+        {
+            "name": "prisonerfive"
+        },
+        {
+            "name": "prisonersix"
+        },
+        {
+            "name": "prisonerseven"
+        },
+        {
+            "name": "geneticist"
+        },
+        {
+            "name": "research"
+        },
+        {
+            "name": "roboticist"
+        },
+        {
+            "name": "security"
+        },
+        {
+            "name": "detective"
+        },
+        {
+            "name": "warden"
+        },
+        {
+            "name": "internalaffairsagent"
+        },
+        {
+            "name": "assistant"
+        },
+        {
+            "name": "tourist"
+        },
+        {
+            "name": "botanist"
+        },
+        {
+            "name": "librarian"
+        },
+        {
+            "name": "chaplain"
+        },
+        {
+            "name": "bartender"
+        },
+        {
+            "name": "chef"
+        },
+        {
+            "name": "janitor"
+        },
+        {
+            "name": "explorer"
+        },
+        {
+            "name": "clown"
+        },
+        {
+            "name": "mime"
+        },
+        {
+            "name": "rainbow"
+        },
+        {
+            "name": "gold"
+        },
+        {
+            "name": "silver"
+        },
+        {
+            "name": "syndie"
+        },
+        {
+            "name": "lifetimeid"
+        },
+        {
+            "name": "tsf"
+        },
+        {
+            "name": "admin"
+        },
+        {
+            "name": "data"
+        },
+        {
+            "name": "TDred"
+        },
+        {
+            "name": "TDgreen"
+        },
+        {
+            "name": "guest"
+        },
+        {
+            "name": "guest_invalid"
+        },
+        {
+            "name": "retro_engineering"
+        },
+        {
+            "name": "retro_nanotrasen"
+        },
+        {
+            "name": "retro_research"
+        },
+        {
+            "name": "retro_medical"
+        },
+        {
+            "name": "retro_security"
+        },
+        {
+            "name": "retro"
+        },
+        {
+            "name": "trade_card"
+        },
+        {
+            "name": "trade_card_holo",
+            "delays": [
+                [
+                    1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "emag"
+        },
+        {
+            "name": "cmag"
+        },
+        {
+            "name": "magic_key"
+        },
+        {
+            "name": "nctrainer"
+        },
+        {
+            "name": "nct_chip"
+        },
+        {
+            "name": "nct_chip_active"
+        },
+        {
+            "name": "smith"
+        },
+        {
+            "name": "xenobiologist"
+        },
+        {
+            "name": "credit_redemption"
+        }
+    ]
+}

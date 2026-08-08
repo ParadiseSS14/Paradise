@@ -340,7 +340,7 @@ public sealed partial class AdminVerbSystem
             {
                 Text = Loc.GetString("admin-verbs-grant-all-access"),
                 Category = VerbCategory.Tricks,
-                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/id_cards.rsi"), "centcom"),
+                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/_Paradise/card.rsi"), "centcom"),
                 Act = () =>
                 {
                     GiveAllAccess(activeId.Value);
@@ -355,7 +355,7 @@ public sealed partial class AdminVerbSystem
             {
                 Text = Loc.GetString("admin-verbs-revoke-all-access"),
                 Category = VerbCategory.Tricks,
-                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/id_cards.rsi"), "default"),
+                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/_Paradise/card.rsi"), "default"),
                 Act = () =>
                 {
                     RevokeAllAccess(activeId.Value);
@@ -373,7 +373,7 @@ public sealed partial class AdminVerbSystem
             {
                 Text = Loc.GetString("admin-verbs-grant-all-access"),
                 Category = VerbCategory.Tricks,
-                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/id_cards.rsi"), "centcom"),
+                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/_Paradise/card.rsi"), "centcom"),
                 Act = () =>
                 {
                     GiveAllAccess(args.Target);
@@ -388,7 +388,7 @@ public sealed partial class AdminVerbSystem
             {
                 Text = Loc.GetString("admin-verbs-revoke-all-access"),
                 Category = VerbCategory.Tricks,
-                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/id_cards.rsi"), "default"),
+                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/_Paradise/card.rsi"), "default"),
                 Act = () =>
                 {
                     RevokeAllAccess(args.Target);

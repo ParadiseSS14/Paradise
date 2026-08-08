@@ -21,9 +21,9 @@ public sealed partial class TelepathicChatComponent : Component
     public NetEntity? Receiver;
 
     /// <summary>
-    /// Is this a Scan Mind Reply?
+    /// Is this a Scan Mind?
     /// </summary>
-    public bool IsReply;
+    public bool IsScan;
 
     /// <summary>
     /// A token to handle command expiry
@@ -64,7 +64,7 @@ public sealed partial class TelepathicChatComponent : Component
     {
         Sender = null;
         Receiver = null;
-        IsReply = false;
+        IsScan = false;
     }
 }
 

@@ -53,7 +53,7 @@ public enum MessageType : byte
     /// Hidden chat that is sent by Telepathy actions.
     /// This has minimal implementation, since it is only used by an action.
     /// </summary>
-    Telepathic,  // Paradise Content
+    Hivemind,  // Paradise Content
 
     #endregion
 }

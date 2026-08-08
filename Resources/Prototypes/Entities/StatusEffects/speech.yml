@@ -3,12 +3,12 @@
   id: SpeechStatusEffectBase
   abstract: true
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - MobState
-      - Speech
-      requireAll: true
+    - type: StatusEffect
+      whitelist:
+        components:
+          - MobState
+          - Speech
+        requireAll: true
 
 # Causes you to st-t-u-t-t-t-er randomly when talking.
 - type: entity
@@ -16,7 +16,7 @@
   id: StatusEffectStutter
   name: stutter
   components:
-  - type: StutteringAccent
+    - type: StutteringAccent
 
 # Causes you to schlur your words schwhen talking.
 - type: entity
@@ -24,7 +24,7 @@
   id: StatusEffectSlurred
   name: slurred
   components:
-  - type: SlurredAccent
+    - type: SlurredAccent
 
 # Causes words your be to scrambled. Who?
 - type: entity
@@ -32,7 +32,7 @@
   id: StatusEffectScrambled
   name: scrambled
   components:
-  - type: ScrambledAccent
+    - type: ScrambledAccent
 
 # Causes wu to tawk wike a cat. ^w^
 - type: entity
@@ -40,7 +40,7 @@
   id: StatusEffectOwO
   name: owoaccent
   components:
-  - type: OwOAccent
+    - type: OwOAccent
 
 # Causes you to shout everything.
 - type: entity
@@ -48,7 +48,7 @@
   id: StatusEffectAllCaps
   name: allcapsaccent
   components:
-  - type: AllCapsAccent
+    - type: AllCapsAccent
 
 # Causes you to speak like a servant of Ratvar.
 - type: entity
@@ -56,7 +56,7 @@
   id: StatusEffectRatvarianLanguage
   name: ratvarian language patterns
   components:
-  - type: RatvarianLanguage
+    - type: RatvarianLanguage
 
 # Causes you to tark rike a dog. Woof!
 - type: entity
@@ -64,4 +64,4 @@
   id: StatusEffectBark
   name: barkaccent
   components:
-  - type: BarkAccent
+    - type: BarkAccent

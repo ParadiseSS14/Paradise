@@ -6,9 +6,9 @@
       edges:
         - to: spear
           completed:
-          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
-            message: "Construction"
-            impact: High
+            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+              message: "Construction"
+              impact: High
           steps:
             - material: MetalRod
               amount: 2
@@ -33,9 +33,9 @@
       edges:
         - to: spear
           completed:
-          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
-            message: "Construction"
-            impact: High
+            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+              message: "Construction"
+              impact: High
           steps:
             - material: MetalRod
               amount: 2
@@ -60,9 +60,9 @@
       edges:
         - to: spear
           completed:
-          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
-            message: "Construction"
-            impact: High
+            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+              message: "Construction"
+              impact: High
           steps:
             - material: MetalRod
               amount: 2
@@ -87,9 +87,9 @@
       edges:
         - to: spear
           completed:
-          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
-            message: "Construction"
-            impact: High
+            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+              message: "Construction"
+              impact: High
           steps:
             - material: MetalRod
               amount: 2
@@ -114,9 +114,9 @@
       edges:
         - to: spear
           completed:
-          - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
-            message: "Construction"
-            impact: High
+            - !type:AdminLog # Needs a log for start of attempt in addition to the completion log
+              message: "Construction"
+              impact: High
           steps:
             - material: Bones
               amount: 4
@@ -131,18 +131,18 @@
   id: SpearSharkMinnow
   start: start
   graph:
-  - node: start
-    edges:
-    - to: spear
-      steps:
-      - material: MetalRod
-        amount: 2
-        doAfter: 2
-      - material: Cable
-        amount: 3
-        doAfter: 1
-      - material: SharkMinnowTooth
-        amount: 1
-        doAfter: 1
-  - node: spear
-    entity: SpearSharkMinnow
+    - node: start
+      edges:
+        - to: spear
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 2
+            - material: Cable
+              amount: 3
+              doAfter: 1
+            - material: SharkMinnowTooth
+              amount: 1
+              doAfter: 1
+    - node: spear
+      entity: SpearSharkMinnow

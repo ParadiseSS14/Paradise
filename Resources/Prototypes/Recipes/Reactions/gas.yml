@@ -2,7 +2,7 @@
   id: CarbonDioxideBreakdown
   source: true
   requiredMixerCategories:
-  - Electrolysis
+    - Electrolysis
   reactants:
     CarbonDioxide:
       amount: 3
@@ -14,7 +14,7 @@
   id: NitrousOxideBreakdown
   source: true
   requiredMixerCategories:
-  - Electrolysis
+    - Electrolysis
   reactants:
     NitrousOxide:
       amount: 3

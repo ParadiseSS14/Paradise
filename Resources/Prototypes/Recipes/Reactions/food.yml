@@ -85,8 +85,8 @@
     Water:
       amount: 15
   effects:
-  - !type:SpawnEntity
-    entity: FoodDoughCotton
+    - !type:SpawnEntity
+      entity: FoodDoughCotton
 
 - type: reaction
   id: CreateCakeBatter
@@ -335,7 +335,7 @@
   id: BananaBreakdown
   source: true
   requiredMixerCategories:
-  - Centrifuge
+    - Centrifuge
   reactants:
     JuiceBanana:
       amount: 10
@@ -346,7 +346,7 @@
 - type: reaction
   id: OilBreakdown
   requiredMixerCategories:
-  - Centrifuge
+    - Centrifuge
   reactants:
     Oil:
       amount: 10
@@ -371,7 +371,7 @@
   id: AllicinBreakdown
   source: true
   requiredMixerCategories:
-  - Centrifuge
+    - Centrifuge
   reactants:
     Allicin:
       amount: 4
@@ -384,7 +384,7 @@
   id: NutrimentBreakdown
   source: true
   requiredMixerCategories:
-  - Centrifuge
+    - Centrifuge
   reactants:
     Nutriment:
       amount: 5
@@ -397,7 +397,7 @@
   id: FatBreakdown
   source: true
   requiredMixerCategories:
-  - Electrolysis
+    - Electrolysis
   reactants:
     Fat:
       amount: 15
@@ -411,7 +411,7 @@
   id: UncookedAnimalProteinBreakdown
   source: true
   requiredMixerCategories:
-  - Electrolysis
+    - Electrolysis
   reactants:
     UncookedAnimalProteins:
       amount: 10
@@ -425,7 +425,7 @@
   id: ProteinBreakdown
   source: true
   requiredMixerCategories:
-  - Electrolysis
+    - Electrolysis
   reactants:
     Protein:
       amount: 10
@@ -440,7 +440,7 @@
   id: VitaminBreakdown
   source: true
   requiredMixerCategories:
-  - Centrifuge
+    - Centrifuge
   reactants:
     Vitamin:
       amount: 4
@@ -453,9 +453,9 @@
   id: ReduceMilk #makes Cream renewable
   minTemp: 320
   requiredMixerCategories:
-  - Shake
+    - Shake
   reactants:
-   Milk:
-    amount: 2
+    Milk:
+      amount: 2
   products:
-   Cream: 1
+    Cream: 1

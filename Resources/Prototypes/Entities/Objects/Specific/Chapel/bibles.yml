@@ -4,62 +4,62 @@
   parent: BaseStorageItem
   id: Bible
   components:
-  - type: UseDelay
-    delay: 10.0
-  - type: Bible
-    damage:
-      types:
-        Blunt: -5
-        Piercing: -5
-        Slash: -5
-        Heat: -5
-        Cold: -5
-        Shock: -5
-    damageOnFail:
-      types:
-        Blunt: 5
-        Piercing: 5
-        Slash: 5
-        Asphyxiation: 15
-    damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
-      types:
-        Heat: 10
-  - type: MeleeWeapon
-    soundHit:
-      collection: Punch
-    damage:
-      types:
-        Holy: 25
-        Blunt: 1
-  - type: Prayable
-    bibleUserOnly: true
-  - type: Summonable
-    summonEntity: SpawnPointGhostRemilia
-  - type: ReactionMixer
-    mixMessage: "bible-mixing-success"
-    reactionTypes:
-    - Holy
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/bible.rsi
-    state: icon
-  - type: Item
-    size: Small
-    sprite: Objects/Specific/Chapel/bible.rsi
-  - type: Clothing
-    slots:
-    - Belt
-  - type: Storage
-    grid:
-    - 0,0,0,1
-  - type: UserInterface
-    interfaces:
-      enum.StorageUiKey.Key:
-        type: StorageBoundUserInterface
-  - type: Tag
-    tags:
-    - Book
-  - type: StealTarget
-    stealGroup: Bible
+    - type: UseDelay
+      delay: 10.0
+    - type: Bible
+      damage:
+        types:
+          Blunt: -5
+          Piercing: -5
+          Slash: -5
+          Heat: -5
+          Cold: -5
+          Shock: -5
+      damageOnFail:
+        types:
+          Blunt: 5
+          Piercing: 5
+          Slash: 5
+          Asphyxiation: 15
+      damageOnUntrainedUse: ## What a non-chaplain takes when attempting to heal someone
+        types:
+          Heat: 10
+    - type: MeleeWeapon
+      soundHit:
+        collection: Punch
+      damage:
+        types:
+          Holy: 25
+          Blunt: 1
+    - type: Prayable
+      bibleUserOnly: true
+    - type: Summonable
+      summonEntity: SpawnPointGhostRemilia
+    - type: ReactionMixer
+      mixMessage: "bible-mixing-success"
+      reactionTypes:
+        - Holy
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/bible.rsi
+      state: icon
+    - type: Item
+      size: Small
+      sprite: Objects/Specific/Chapel/bible.rsi
+    - type: Clothing
+      slots:
+        - Belt
+    - type: Storage
+      grid:
+        - 0,0,0,1
+    - type: UserInterface
+      interfaces:
+        enum.StorageUiKey.Key:
+          type: StorageBoundUserInterface
+    - type: Tag
+      tags:
+        - Book
+    - type: StealTarget
+      stealGroup: Bible
 
 - type: entity
   parent: [Bible, BaseSyndicateContraband]
@@ -67,33 +67,33 @@
   description: "There's a note: Klatuu, Verata, Nikto -- Don't forget it again!"
   id: BibleNecronomicon
   components:
-  - type: Bible
-    damage:
-      types:
-        Caustic: 20 ## ~15 dps
-    damageOnFail:
-      types:
-        Blunt: 5
-        Piercing: 5
-        Slash: 5
-        Asphyxiation: 25
-    damageOnUntrainedUse:
-      types:
-        Caustic: 50
-    failChance: 0
-    healFailOthersText: necro-heal-fail-others
-    healFailSelfText: necro-heal-fail-self
-    healSuccessOthersText: necro-heal-success-others
-    healSuccessSelfText: necro-heal-success-self
-    healSound: "/Audio/Effects/lightburn.ogg"
-    healingLightEffect: EvilLightEffect
-  - type: Summonable
-    summonEntity: SpawnPointGhostCerberus
-    respawnTime: 300
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/necronomicon.rsi
-  - type: Item
-    sprite: Objects/Specific/Chapel/necronomicon.rsi
+    - type: Bible
+      damage:
+        types:
+          Caustic: 20 ## ~15 dps
+      damageOnFail:
+        types:
+          Blunt: 5
+          Piercing: 5
+          Slash: 5
+          Asphyxiation: 25
+      damageOnUntrainedUse:
+        types:
+          Caustic: 50
+      failChance: 0
+      healFailOthersText: necro-heal-fail-others
+      healFailSelfText: necro-heal-fail-self
+      healSuccessOthersText: necro-heal-success-others
+      healSuccessSelfText: necro-heal-success-self
+      healSound: "/Audio/Effects/lightburn.ogg"
+      healingLightEffect: EvilLightEffect
+    - type: Summonable
+      summonEntity: SpawnPointGhostCerberus
+      respawnTime: 300
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/necronomicon.rsi
+    - type: Item
+      sprite: Objects/Specific/Chapel/necronomicon.rsi
 
 - type: entity
   parent: BaseAction
@@ -101,14 +101,14 @@
   name: Summon familiar
   description: Summon a familiar that will aid you and gain humanlike intelligence once inhabited by a soul.
   components:
-  - type: Action
-    useDelay: 1
-  - type: Sprite
-    sprite: Clothing/Head/Hats/witch.rsi
-    layers:
-    - state: icon
-  - type: InstantAction
-    event: !type:SummonActionEvent
+    - type: Action
+      useDelay: 1
+    - type: Sprite
+      sprite: Clothing/Head/Hats/witch.rsi
+      layers:
+        - state: icon
+    - type: InstantAction
+      event: !type:SummonActionEvent
 
 - type: entity
   id: BibleDruid
@@ -116,10 +116,10 @@
   parent: Bible
   description: "It's the mystery of the druids!"
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
-  - type: Item
-    sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
+    - type: Item
+      sprite: Objects/Specific/Chapel/mysteryofthedruids.rsi
 
 - type: entity
   id: BibleCommunistManifesto
@@ -127,10 +127,10 @@
   parent: Bible
   description: "Remove the mask of humanity from Capital."
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
-  - type: Item
-    sprite: Objects/Specific/Chapel/communistmanifesto.rsi
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/communistmanifesto.rsi
+    - type: Item
+      sprite: Objects/Specific/Chapel/communistmanifesto.rsi
 
 - type: entity
   id: BibleNarsie
@@ -138,10 +138,10 @@
   parent: Bible
   description: "What could possibly go wrong with a book covered in blood?"
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/tomeofnarsie.rsi
-  - type: Item
-    sprite: Objects/Specific/Chapel/tomeofnarsie.rsi
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/tomeofnarsie.rsi
+    - type: Item
+      sprite: Objects/Specific/Chapel/tomeofnarsie.rsi
 
 - type: entity
   id: BibleNanoTrasen
@@ -149,10 +149,10 @@
   parent: Bible
   description: "A familiar book containing the Sacred Operating Procedures."
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
-  - type: Item
-    sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
+    - type: Item
+      sprite: Objects/Specific/Chapel/codexnanotrasimus.rsi
 
 - type: entity
   id: BibleHonk
@@ -160,10 +160,10 @@
   parent: Bible
   description: "Oh great and glorious Mother, Mistress of Mirth, Matron of Mask and Merriments, Blessed is she amongst us jesters."
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/honk.rsi
-  - type: Item
-    sprite: Objects/Specific/Chapel/honk.rsi
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/honk.rsi
+    - type: Item
+      sprite: Objects/Specific/Chapel/honk.rsi
 
 - type: entity
   id: BibleRatvar
@@ -171,14 +171,14 @@
   parent: Bible
   description: "A holy relic of the Clockwork Cult, blessed by the Clockwork Justice, Ratvar."
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Chapel/ratvartablet.rsi
-  - type: Item
-    sprite: Objects/Specific/Chapel/ratvartablet.rsi
+    - type: Sprite
+      sprite: Objects/Specific/Chapel/ratvartablet.rsi
+    - type: Item
+      sprite: Objects/Specific/Chapel/ratvartablet.rsi
 
 - type: entity
   id: HolyLightEffect
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: PointLight
       enabled: true
@@ -193,7 +193,7 @@
 
 - type: entity
   id: EvilLightEffect
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   parent: HolyLightEffect
   components:
     - type: PointLight

@@ -10,8 +10,8 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - WeaponProtoKineticAccelerator
-  - ShuttleGunKineticCircuitboard
+    - WeaponProtoKineticAccelerator
+    - ShuttleGunKineticCircuitboard
   # These are roundstart but not replenishable for salvage
 
 - type: technology
@@ -24,17 +24,17 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - BoxShotgunIncendiary
-  - MagazineRifleIncendiary
-  - MagazinePistolIncendiary
-  - MagazinePistolSubMachineGunIncendiary
-  - MagazineLightRifleIncendiary
-  - SpeedLoaderMagnumIncendiary
-  - MagazineShotgunIncendiary
-  - MagazineBoxPistolIncendiary
-  - MagazineBoxMagnumIncendiary
-  - MagazineBoxLightRifleIncendiary
-  - MagazineBoxRifleIncendiary
+    - BoxShotgunIncendiary
+    - MagazineRifleIncendiary
+    - MagazinePistolIncendiary
+    - MagazinePistolSubMachineGunIncendiary
+    - MagazineLightRifleIncendiary
+    - SpeedLoaderMagnumIncendiary
+    - MagazineShotgunIncendiary
+    - MagazineBoxPistolIncendiary
+    - MagazineBoxMagnumIncendiary
+    - MagazineBoxLightRifleIncendiary
+    - MagazineBoxRifleIncendiary
 
 - type: technology
   id: WeaponizedLaserManipulation
@@ -46,7 +46,7 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - WeaponLaserCarbine
+    - WeaponLaserCarbine
 
 - type: technology
   id: NonlethalAmmunition
@@ -58,10 +58,10 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - MagazineShotgunBeanbag
-  - BoxShellTranquilizer
-  - BoxBeanbag
-  - WeaponDisabler
+    - MagazineShotgunBeanbag
+    - BoxShellTranquilizer
+    - BoxBeanbag
+    - WeaponDisabler
 
 - type: technology
   id: UraniumMunitions
@@ -73,16 +73,16 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - MagazineRifleUranium
-  - MagazinePistolUranium
-  - MagazinePistolSubMachineGunUranium
-  - MagazineLightRifleUranium
-  - SpeedLoaderMagnumUranium
-  - MagazineBoxPistolUranium
-  - MagazineBoxMagnumUranium
-  - MagazineBoxLightRifleUranium
-  - MagazineBoxRifleUranium
-  - BoxShotgunUranium
+    - MagazineRifleUranium
+    - MagazinePistolUranium
+    - MagazinePistolSubMachineGunUranium
+    - MagazineLightRifleUranium
+    - SpeedLoaderMagnumUranium
+    - MagazineBoxPistolUranium
+    - MagazineBoxMagnumUranium
+    - MagazineBoxLightRifleUranium
+    - MagazineBoxRifleUranium
+    - BoxShotgunUranium
 
 - type: technology
   id: AdvancedRiotControl
@@ -94,10 +94,10 @@
   tier: 1
   cost: 8000
   recipeUnlocks:
-  - Truncheon
-  - TelescopicShield
-  - HoloprojectorSecurity
-  - WeaponDisablerSMG
+    - Truncheon
+    - TelescopicShield
+    - HoloprojectorSecurity
+    - WeaponDisablerSMG
 
 - type: technology
   id: ExplosiveTechnology
@@ -109,15 +109,15 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - SignallerAdvanced
-  - SignalTrigger
-  - VoiceTrigger
-  - TimerTrigger
-  - FlashPayload
-  - ExplosivePayload
-  - ChemicalPayload
-  - CableDetStack1
-  - EmptyDetonator
+    - SignallerAdvanced
+    - SignalTrigger
+    - VoiceTrigger
+    - TimerTrigger
+    - FlashPayload
+    - ExplosivePayload
+    - ChemicalPayload
+    - CableDetStack1
+    - EmptyDetonator
 
 - type: technology
   id: SpecialMeans
@@ -129,7 +129,7 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - ClothingBackpackElectropack
+    - ClothingBackpackElectropack
 
 # Tier 2
 
@@ -143,7 +143,7 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - WeaponLaserCannon
+    - WeaponLaserCannon
 
 - type: technology
   id: WaveParticleHarnessing
@@ -155,7 +155,7 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - WeaponXrayCannon
+    - WeaponXrayCannon
 
 - type: technology
   id: KineticModifications
@@ -167,9 +167,9 @@
   tier: 2
   cost: 7500
   recipeUnlocks:
-  - PKAUpgradeDamage
-  - PKAUpgradeRange
-  - PKAUpgradeFireRate
+    - PKAUpgradeDamage
+    - PKAUpgradeRange
+    - PKAUpgradeFireRate
 
 - type: technology
   id: BasicShuttleArmament
@@ -181,17 +181,17 @@
   tier: 2
   cost: 10500
   recipeUnlocks:
-  - PowerCageRechargerCircuitboard
-  - PowerCageSmall
-  - PowerCageMedium
-  - MagazineGrenadeEmpty
-  - GrenadeFlash
-  - GrenadeBlast
-  - ShuttleGunSvalinnMachineGunCircuitboard
-  - ShuttleGunPerforatorCircuitboard
-  - ShuttleGunFriendshipCircuitboard
+    - PowerCageRechargerCircuitboard
+    - PowerCageSmall
+    - PowerCageMedium
+    - MagazineGrenadeEmpty
+    - GrenadeFlash
+    - GrenadeBlast
+    - ShuttleGunSvalinnMachineGunCircuitboard
+    - ShuttleGunPerforatorCircuitboard
+    - ShuttleGunFriendshipCircuitboard
   technologyPrerequisites:
-  - SalvageWeapons
+    - SalvageWeapons
 
 - type: technology
   id: DualWieldingTechnology
@@ -203,7 +203,7 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - ClothingBackpackHarmpack
+    - ClothingBackpackHarmpack
 
 # Tier 3
 
@@ -217,8 +217,8 @@
   tier: 3
   cost: 15000
   recipeUnlocks:
-  - WeaponAdvancedLaser
-  - PortableRecharger
+    - WeaponAdvancedLaser
+    - PortableRecharger
 
 - type: technology
   id: ThermalWeaponry
@@ -230,7 +230,7 @@
   tier: 3
   cost: 15000
   recipeUnlocks:
-  - WeaponTemperatureGun
+    - WeaponTemperatureGun
 
 - type: technology
   id: AdvancedShuttleWeapon
@@ -242,8 +242,8 @@
   tier: 3
   cost: 15000
   recipeUnlocks:
-  - GrenadeEMP
-  - PowerCageHigh
-  - ShuttleGunDusterCircuitboard
+    - GrenadeEMP
+    - PowerCageHigh
+    - ShuttleGunDusterCircuitboard
   technologyPrerequisites:
-  - BasicShuttleArmament
+    - BasicShuttleArmament

@@ -12,7 +12,7 @@
   cost:
     Telecrystal: 6
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkHypoDart
@@ -26,7 +26,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkChemistryKitBundle
@@ -40,7 +40,7 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkZombieBundle
@@ -51,16 +51,16 @@
   cost:
     Telecrystal: 40
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: UplinkNocturineChemistryBottle
@@ -73,7 +73,7 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkCombatMedkit
@@ -86,7 +86,7 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkCombatMedipen
@@ -99,7 +99,7 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkStimpack
@@ -112,7 +112,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkStimkit
@@ -125,7 +125,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkCigarettes
@@ -135,7 +135,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
 
 - type: listing
   id: UplinkMedsBundle
@@ -148,7 +148,7 @@
   cost:
     Telecrystal: 24
   categories:
-  - UplinkChemicals
+    - UplinkChemicals
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:

@@ -7,12 +7,13 @@
   icon: "JobIconChaplain"
   supervisors: job-supervisors-hop
   access:
-  - Chapel
-  - Maintenance
+    - Chapel
+    - Maintenance
+    - Morgue
   special:
-  - !type:AddComponentSpecial
-    components:
-    - type: BibleUser #Lets them heal with bibles
+    - !type:AddComponentSpecial
+      components:
+        - type: BibleUser #Lets them heal with bibles
 
 - type: startingGear
   id: ChaplainGear
@@ -22,7 +23,7 @@
     ears: ClothingHeadsetService
   storage:
     back:
-    - RubberStampChaplain
+      - RubberStampChaplain
 
 - type: chameleonOutfit
   id: ChaplainChameleonOutfit
@@ -34,4 +35,3 @@
     neck: ClothingNeckStoleChaplain
     outerClothing: ClothingOuterPlagueSuit
     gloves: ClothingHandsGlovesColorBlack
-

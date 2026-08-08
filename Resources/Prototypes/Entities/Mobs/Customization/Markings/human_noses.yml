@@ -4,8 +4,8 @@
   forcedColoring: true
   groupWhitelist: [Human]
   sprites:
-  - sprite: Mobs/Customization/human_noses.rsi
-    state: schnozz
+    - sprite: Mobs/Customization/human_noses.rsi
+      state: schnozz
 
 - type: marking
   id: HumanNoseNubby
@@ -13,8 +13,8 @@
   forcedColoring: true
   groupWhitelist: [Human]
   sprites:
-  - sprite: Mobs/Customization/human_noses.rsi
-    state: nubby
+    - sprite: Mobs/Customization/human_noses.rsi
+      state: nubby
 
 - type: marking
   id: HumanNoseDroop
@@ -22,8 +22,8 @@
   forcedColoring: true
   groupWhitelist: [Human]
   sprites:
-  - sprite: Mobs/Customization/human_noses.rsi
-    state: droop
+    - sprite: Mobs/Customization/human_noses.rsi
+      state: droop
 
 - type: marking
   id: HumanNoseBlob
@@ -31,8 +31,8 @@
   forcedColoring: true
   groupWhitelist: [Human]
   sprites:
-  - sprite: Mobs/Customization/human_noses.rsi
-    state: blob
+    - sprite: Mobs/Customization/human_noses.rsi
+      state: blob
 
 - type: marking
   id: HumanNoseUppie
@@ -40,5 +40,5 @@
   forcedColoring: true
   groupWhitelist: [Human]
   sprites:
-  - sprite: Mobs/Customization/human_noses.rsi
-    state: uppie
+    - sprite: Mobs/Customization/human_noses.rsi
+      state: uppie

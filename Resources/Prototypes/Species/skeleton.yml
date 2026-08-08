@@ -9,9 +9,9 @@
   dollPrototype: AppearanceSkeletonPerson
   skinColoration: TintedHues
   defaultSoundsBySex:
-  - Skeleton
-  - Skeleton
-  - Skeleton
+    - Skeleton
+    - Skeleton
+    - Skeleton
   voices:
-  - Skeleton
-  - Skeleton
+    - Skeleton
+    - Skeleton

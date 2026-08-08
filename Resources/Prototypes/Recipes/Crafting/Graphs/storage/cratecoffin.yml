@@ -10,7 +10,6 @@
               amount: 5
               doAfter: 5
 
-
     - node: cratecoffin
       entity: CrateCoffin
       edges:

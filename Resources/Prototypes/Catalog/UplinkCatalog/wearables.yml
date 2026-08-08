@@ -8,7 +8,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkChestRig
@@ -18,7 +18,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkChameleon
@@ -45,7 +45,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkClothingOuterVestWeb
@@ -58,7 +58,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkClothingOuterVestWebElite
@@ -71,7 +71,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkClothingShoesBootsMagSyndie
@@ -84,7 +84,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkEVASyndie
@@ -95,7 +95,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkHardsuitCarp
@@ -109,7 +109,7 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkHardsuitSyndie
@@ -123,7 +123,7 @@
   cost:
     Telecrystal: 7
   categories:
-  - UplinkWearables
+    - UplinkWearables
 
 - type: listing
   id: UplinkClothingOuterArmorRaid
@@ -134,12 +134,12 @@
   cost:
     Telecrystal: 8
   categories:
-  - UplinkWearables
+    - UplinkWearables
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkHardsuitSyndieElite
@@ -150,12 +150,12 @@
   cost:
     Telecrystal: 12
   categories:
-  - UplinkWearables
+    - UplinkWearables
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingOuterHardsuitJuggernaut
@@ -166,12 +166,12 @@
   cost:
     Telecrystal: 12
   categories:
-  - UplinkWearables
+    - UplinkWearables
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingEyesHudSyndicate

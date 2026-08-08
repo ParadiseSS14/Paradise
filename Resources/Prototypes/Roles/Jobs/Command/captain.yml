@@ -25,13 +25,13 @@
   joinNotifyCrew: true
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
+    - !type:AddComponentSpecial
+      components:
+        - type: CommandStaff
 
 - type: startingGear
   id: CaptainGear
@@ -43,7 +43,7 @@
     ears: ClothingHeadsetAltCommand
   storage:
     back:
-    - Flash
+      - Flash
     # - StationCharter
 
 - type: chameleonOutfit

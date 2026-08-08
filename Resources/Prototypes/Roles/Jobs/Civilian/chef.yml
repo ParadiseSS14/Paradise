@@ -11,12 +11,12 @@
   icon: "JobIconChef"
   supervisors: job-supervisors-hop
   access:
-  - Service
-  - Maintenance
-  - Kitchen
+    - Service
+    - Maintenance
+    - Kitchen
   extendedAccess:
-  - Hydroponics
-  - Bar
+    - Hydroponics
+    - Bar
 
 - type: startingGear
   id: ChefGear
@@ -26,8 +26,8 @@
     ears: ClothingHeadsetService
     belt: ClothingBeltChefFilled
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: ChefChameleonOutfit

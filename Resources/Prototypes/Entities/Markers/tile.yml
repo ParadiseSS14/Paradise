@@ -4,12 +4,12 @@
   suffix: Enabled
   parent: MarkerBase
   components:
-  - type: SetRoof
-    value: true
-  - type: Sprite
-    layers:
-    - state: green
-      shader: unshaded
+    - type: SetRoof
+      value: true
+    - type: Sprite
+      layers:
+        - state: green
+          shader: unshaded
 
 - type: entity
   id: NoRoofMarker
@@ -17,9 +17,9 @@
   suffix: Disabled
   parent: MarkerBase
   components:
-  - type: SetRoof
-    value: false
-  - type: Sprite
-    layers:
-    - state: red
-      shader: unshaded
+    - type: SetRoof
+      value: false
+    - type: Sprite
+      layers:
+        - state: red
+          shader: unshaded

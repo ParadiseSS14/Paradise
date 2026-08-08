@@ -3,90 +3,90 @@
 - type: latheRecipePack
   id: ToolsStatic
   recipes:
-  - VoiceSensor
-  - Wirecutter
-  - Screwdriver
-  - Welder
-  - Wrench
-  - CrowbarGreen
-  - Multitool
-  - NetworkConfigurator
-  - Signaller
-  - SprayPainter
-  - SprayPainterAmmo
-  - FlashlightLantern
-  - HandheldGPSBasic
-  - TRayScanner
-  - UtilityBelt
-  - ClothingOuterVestTank
-  - HandheldStationMap
-  - ClothingHeadHatWelding
-  - ClothingHeadHatCone
+    - VoiceSensor
+    - Wirecutter
+    - Screwdriver
+    - Welder
+    - Wrench
+    - CrowbarGreen
+    - Multitool
+    - NetworkConfigurator
+    - Signaller
+    - SprayPainter
+    - SprayPainterAmmo
+    - FlashlightLantern
+    - HandheldGPSBasic
+    - TRayScanner
+    - UtilityBelt
+    - ClothingOuterVestTank
+    - HandheldStationMap
+    - ClothingHeadHatWelding
+    - ClothingHeadHatCone
 
 - type: latheRecipePack
   id: AtmosStatic
   recipes:
-  - AirTank
-  - GasAnalyzer
+    - AirTank
+    - GasAnalyzer
 
 - type: latheRecipePack
   id: ElectronicsStatic
   recipes:
-  - IntercomElectronics
-  - FirelockElectronics
-  - DoorElectronics
-  - AirAlarmElectronics
-  - StationMapElectronics
-  - FireAlarmElectronics
-  - MailingUnitElectronics
-  - SignalTimerElectronics
-  - APCElectronics
-  - SMESMachineCircuitboard
-  - SubstationMachineCircuitboard
-  - WallmountSubstationElectronics
-  - CellRechargerCircuitboard
-  - WeaponCapacitorRechargerCircuitboard
-  - FreezerElectronics
+    - IntercomElectronics
+    - FirelockElectronics
+    - DoorElectronics
+    - AirAlarmElectronics
+    - StationMapElectronics
+    - FireAlarmElectronics
+    - MailingUnitElectronics
+    - SignalTimerElectronics
+    - APCElectronics
+    - SMESMachineCircuitboard
+    - SubstationMachineCircuitboard
+    - WallmountSubstationElectronics
+    - CellRechargerCircuitboard
+    - WeaponCapacitorRechargerCircuitboard
+    - FreezerElectronics
 
 - type: latheRecipePack
   id: EngineeringBoardsStatic
   recipes:
-  - SpaceHeaterMachineCircuitBoard
+    - SpaceHeaterMachineCircuitBoard
 
 ## Dynamic
 
 - type: latheRecipePack
   id: AdvancedTools
   recipes:
-  - PowerDrill
-  - WelderExperimental
-  - JawsOfLife
-  - Fulton
-  - FultonBeacon
+    - PowerDrill
+    - WelderExperimental
+    - JawsOfLife
+    - Fulton
+    - FultonBeacon
 
 - type: latheRecipePack
   id: AtmosTools
   recipes:
-  - HolofanProjector
+    - HolofanProjector
 
 - type: latheRecipePack
   id: EngineeringWeapons
   recipes:
-  - WeaponParticleDecelerator
+    - WeaponParticleDecelerator
 
 - type: latheRecipePack
   id: EngineeringBoards
   recipes:
-  - ThermomachineFreezerMachineCircuitBoard
-  - HellfireFreezerMachineCircuitBoard
-  - PortableScrubberMachineCircuitBoard
-  - SolarControlComputerCircuitboard
-  - SolarTrackerElectronics
-  - GasRecyclerMachineCircuitboard
-  - PortableGeneratorPacmanMachineCircuitboard
-  - PortableGeneratorSuperPacmanMachineCircuitboard
-  - PortableGeneratorJrPacmanMachineCircuitboard
-  - EmitterCircuitboard
-  - TelecomServerCircuitboard
-  - SMESAdvancedMachineCircuitboard
-  - HolopadMachineCircuitboard
+    - ThermomachineFreezerMachineCircuitBoard
+    - HellfireFreezerMachineCircuitBoard
+    - PortableScrubberMachineCircuitBoard
+    - SolarControlComputerCircuitboard
+    - SolarTrackerElectronics
+    - GasRecyclerMachineCircuitboard
+    - PortableGeneratorPacmanMachineCircuitboard
+    - PortableGeneratorSuperPacmanMachineCircuitboard
+    - PortableGeneratorJrPacmanMachineCircuitboard
+    - EmitterCircuitboard
+    - TelecomServerCircuitboard
+    - SMESAdvancedMachineCircuitboard
+    - HolopadMachineCircuitboard

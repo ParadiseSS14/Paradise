@@ -4,8 +4,8 @@
   id: AirSensorFreezerBase
   suffix: Freezer Atmosphere
   components:
-  - type: AtmosMonitor
-    temperatureThresholdId: freezerTemperature
+    - type: AtmosMonitor
+      temperatureThresholdId: freezerTemperature
 
 - type: entity
   parent: [AirSensorFreezerBase, AirSensor]
@@ -25,5 +25,5 @@
   id: AirAlarmFreezer
   suffix: Freezer Atmosphere, auto mode disabled
   components:
-  - type: AirAlarm
-    autoMode: false
+    - type: AirAlarm
+      autoMode: false

@@ -12,8 +12,9 @@
   icon: "JobIconMedicalIntern"
   supervisors: job-supervisors-medicine
   access:
-  - Medical
-  - Maintenance
+    - Medical
+    - Maintenance
+    - Morgue
 
 - type: startingGear
   id: MedicalInternGear

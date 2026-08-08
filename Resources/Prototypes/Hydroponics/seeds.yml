@@ -999,11 +999,11 @@
     Happiness:
       Min: 1
       Max: 5
-#     PotencyDivisor: 20
-#   ColorfulReagent:
-#     Min: 0
-#     Max: 5
-#     PotencyDivisor: 20
+    #     PotencyDivisor: 20
+    #   ColorfulReagent:
+    #     Min: 0
+    #     Max: 5
+    #     PotencyDivisor: 20
     Psicodine:
       Min: 0
       Max: 5
@@ -2000,7 +2000,7 @@
   plantRsi: Objects/Specific/Hydroponics/bloonion.rsi
   packetPrototype: BloonionSeeds
   productPrototypes:
-  - FoodBloonion
+    - FoodBloonion
   lifespan: 25
   maturation: 15
   production: 3

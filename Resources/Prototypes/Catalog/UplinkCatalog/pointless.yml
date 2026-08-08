@@ -8,7 +8,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkSnackBox
@@ -18,7 +18,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkClothingConductingGloves
@@ -28,7 +28,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkRevolverCapGun
@@ -38,7 +38,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkSyndicateStamp
@@ -46,10 +46,10 @@
   description: uplink-syndicate-stamp-desc
   productEntity: RubberStampSyndicate
   categories:
-  - UplinkPointless
+    - UplinkPointless
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: UplinkCatEars
@@ -59,12 +59,12 @@
   cost:
     Telecrystal: 26
   categories:
-  - UplinkPointless
+    - UplinkPointless
   conditions:
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: UplinkOutlawHat
@@ -72,10 +72,10 @@
   description: uplink-outlaw-hat-desc
   productEntity: ClothingHeadHatOutlawHat
   categories:
-  - UplinkPointless
+    - UplinkPointless
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: UplinkOutlawGlasses
@@ -85,7 +85,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkCostumePyjama
@@ -95,7 +95,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkCostumeClown
@@ -105,7 +105,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkCarpSuitBundle
@@ -115,7 +115,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkOperativeSuit
@@ -123,10 +123,10 @@
   description: uplink-operative-suit-desc
   productEntity: ClothingUniformJumpsuitOperative
   categories:
-  - UplinkPointless
+    - UplinkPointless
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: UplinkOperativeSkirt
@@ -134,10 +134,10 @@
   description: uplink-operative-skirt-desc
   productEntity: ClothingUniformJumpskirtOperative
   categories:
-  - UplinkPointless
+    - UplinkPointless
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: UplinkBalloon
@@ -147,12 +147,12 @@
   cost:
     Telecrystal: 20
   categories:
-  - UplinkPointless
+    - UplinkPointless
   conditions:
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: UplinkScarfSyndieRed
@@ -160,10 +160,10 @@
   description: uplink-scarf-syndie-red-desc
   productEntity: ClothingNeckScarfStripedSyndieRed
   categories:
-  - UplinkPointless
+    - UplinkPointless
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: UplinkScarfSyndieGreen
@@ -173,8 +173,8 @@
   categories:
     - UplinkPointless
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: UplinkSyndicateBusinessCard
@@ -184,8 +184,8 @@
   categories:
     - UplinkPointless
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 3
+    - !type:ListingLimitedStockCondition
+      stock: 3
 
 - type: listing
   id: UplinkDecoyKit
@@ -196,15 +196,15 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
+    - UplinkPointless
 
 - type: listing
   id: UplinkContrabandLighter
   name: uplink-contraband-lighter-name
   description: uplink-contraband-lighter-desc
-  icon: { sprite:  Objects/Tools/Lighters/syndielighter.rsi, state: icon}
+  icon: { sprite: Objects/Tools/Lighters/syndielighter.rsi, state: icon }
   productEntity: UplinkLighterBox
   cost:
     Telecrystal: 1
   categories:
-  - UplinkPointless
+    - UplinkPointless

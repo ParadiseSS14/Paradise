@@ -7,7 +7,7 @@
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
   access:
-  - Maintenance
+    - Maintenance
 
 - type: startingGear
   id: PassengerGear
@@ -15,8 +15,8 @@
     id: PassengerPDA
     ears: ClothingHeadsetGrey
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: PassengerChameleonOutfit

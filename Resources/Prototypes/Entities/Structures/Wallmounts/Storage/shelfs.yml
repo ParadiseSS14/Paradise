@@ -6,33 +6,32 @@
   name: shelf
   description: A strange place to place, well, anything really. You feel like you shouldn't be seeing this.
   components:
-  - type: Sprite
-    drawdepth: WallMountedItems
-    sprite: Structures/Storage/Shelfs/wood.rsi
-    state: base
-  - type: Damageable
-  - type: Injurable
-    damageContainer: StructuralInorganic
-  - type: Destructible
-    thresholds:
-    - trigger: &DamageTrigger50
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Storage
-    grid:
-    - 0,0,3,1
-    - 0,3,3,4
-    maxItemSize: Normal
-  - type: UserInterface
-    interfaces:
-     enum.StorageUiKey.Key:
-      type: StorageBoundUserInterface
-  - type: ContainerContainer
-    containers:
-      storagebase: !type:Container
+    - type: Sprite
+      drawdepth: WallMountedItems
+      sprite: Structures/Storage/Shelfs/wood.rsi
+      state: base
+    - type: Damageable
+    - type: Injurable
+      damageContainer: StructuralInorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger &DamageTrigger50
+            damage: 50
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Storage
+      grid:
+        - 0,0,3,1
+        - 0,3,3,4
+      maxItemSize: Normal
+    - type: UserInterface
+      interfaces:
+        enum.StorageUiKey.Key:
+          type: StorageBoundUserInterface
+    - type: ContainerContainer
+      containers:
+        storagebase: !type:Container
 
 - type: entity
   abstract: true
@@ -41,28 +40,28 @@
   name: reinforced shelf
   description: It looks as strong as reality itself.
   components:
-  - type: Lock
-  - type: LockedStorage
-  - type: LockVisuals
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/wood.rsi
-    state: base
-    layers:
-    - state: rbase
-      map: ["enum.StorageVisualLayers.Base"]
-    - state: unlocked
-      shader: unshaded
-      # used to keep the unlocked light visible while open.
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateDoorOpen: open
-    stateDoorClosed: closed
-  - type: AccessReader
+    - type: Lock
+    - type: LockedStorage
+    - type: LockVisuals
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/wood.rsi
+      state: base
+      layers:
+        - state: rbase
+          map: ["enum.StorageVisualLayers.Base"]
+        - state: unlocked
+          shader: unshaded
+          # used to keep the unlocked light visible while open.
+        - state: closed
+          map: ["enum.StorageVisualLayers.Door"]
+        - state: locked
+          map: ["enum.LockVisualLayers.Lock"]
+          shader: unshaded
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateDoorOpen: open
+      stateDoorClosed: closed
+    - type: AccessReader
 
 # Normal
 - type: entity
@@ -71,25 +70,25 @@
   name: wooden shelf
   description: A convenient place to place, well, anything really.
   components:
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WoodDestroyHeavy
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          MaterialWoodPlank1:
-            min: 1
-            max: 3
-  - type: Tag
-    tags:
-    - Structure
-    - Wooden
-  - type: Construction
-    graph: Shelf
-    node: ShelfWood
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WoodDestroyHeavy
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MaterialWoodPlank1:
+                  min: 1
+                  max: 3
+    - type: Tag
+      tags:
+        - Structure
+        - Wooden
+    - type: Construction
+      graph: Shelf
+      node: ShelfWood
 
 - type: entity
   parent: ShelfBase
@@ -97,26 +96,26 @@
   name: metal shelf
   description: A sturdy place to place, well, anything really.
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/metal.rsi
-    state: base
-  - type: Damageable
-    damageModifierSet: Metallic
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 2
-            max: 4
-  - type: Construction
-    graph: Shelf
-    node: ShelfMetal
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/metal.rsi
+      state: base
+    - type: Damageable
+      damageModifierSet: Metallic
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel1:
+                  min: 2
+                  max: 4
+    - type: Construction
+      graph: Shelf
+      node: ShelfMetal
 
 - type: entity
   parent: ShelfBase
@@ -124,26 +123,26 @@
   name: glass shelf
   description: A fragile place to place, well, anything really.
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/glass.rsi
-    state: base
-  - type: Damageable
-    damageModifierSet: Glass
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WindowShatter
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlass:
-            min: 0
-            max: 2
-  - type: Construction
-    graph: Shelf
-    node: ShelfGlass
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/glass.rsi
+      state: base
+    - type: Damageable
+      damageModifierSet: Glass
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WindowShatter
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardGlass:
+                  min: 0
+                  max: 2
+    - type: Construction
+      graph: Shelf
+      node: ShelfGlass
 
 # Reinforced
 - type: entity
@@ -152,32 +151,32 @@
   name: sturdy wood shelf
   description: A safe place to put your favorite bottle of whiskey.
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/wood.rsi
-    state: base
-    layers:
-    - state: rbase
-      map: ["enum.StorageVisualLayers.Base"]
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WoodDestroyHeavy
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          MaterialWoodPlank:
-            min: 2
-            max: 5
-  - type: Construction
-    graph: Shelf
-    node: ShelfRWood
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/wood.rsi
+      state: base
+      layers:
+        - state: rbase
+          map: ["enum.StorageVisualLayers.Base"]
+        - state: closed
+          map: ["enum.StorageVisualLayers.Door"]
+        - state: locked
+          map: ["enum.LockVisualLayers.Lock"]
+          shader: unshaded
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WoodDestroyHeavy
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MaterialWoodPlank:
+                  min: 2
+                  max: 5
+    - type: Construction
+      graph: Shelf
+      node: ShelfRWood
 
 - type: entity
   parent: ShelfBaseReinforced
@@ -185,29 +184,29 @@
   name: sturdy metal shelf
   description: A strong & shiny place to keep all your vials safe.
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/metal.rsi
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetPlasteel1:
-            min: 2
-            max: 3
-          ShardGlass:
-            min: 1
-            max: 2
-          PartRodMetal1:
-            min: 1
-            max: 2
-  - type: Construction
-    graph: Shelf
-    node: ShelfRMetal
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/metal.rsi
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetPlasteel1:
+                  min: 2
+                  max: 3
+                ShardGlass:
+                  min: 1
+                  max: 2
+                PartRodMetal1:
+                  min: 1
+                  max: 2
+    - type: Construction
+      graph: Shelf
+      node: ShelfRMetal
 
 - type: entity
   parent: ShelfBaseReinforced
@@ -215,29 +214,29 @@
   name: sturdy glass shelf
   description: Crystal clear reinforced glass doors to show off all your fancy bottles you definitely didn't sell a co-worker's favorite mothroach for.
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/glass.rsi
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WindowShatter
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetPlastic1:
-            min: 1
-            max: 3
-          ShardGlass:
-            min: 1
-            max: 2
-          PartRodMetal1:
-            min: 0
-            max: 1
-  - type: Construction
-    graph: Shelf
-    node: ShelfRGlass
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/glass.rsi
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WindowShatter
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetPlastic1:
+                  min: 1
+                  max: 3
+                ShardGlass:
+                  min: 1
+                  max: 2
+                PartRodMetal1:
+                  min: 0
+                  max: 1
+    - type: Construction
+      graph: Shelf
+      node: ShelfRGlass
 
 # Departmental
 - type: entity
@@ -246,36 +245,36 @@
   name: bar shelf
   description: Made out of the finest synthetic wood for all alcohol holding needs.
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/Departments/Service/bar.rsi
-    state: base
-    layers:
-      - state: base
-      - state: bar-0
-      - map: ["enum.StorageFillLayers.Fill"]
-  - type: Appearance
-  - type: StorageFillVisualizer
-    maxFillLevels: 13
-    fillBaseName: bar
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WoodDestroyHeavy
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          MaterialWoodPlank1:
-            min: 1
-            max: 4
-  - type: Storage
-    grid:
-    - 0,0,5,1
-    - 0,3,5,4
-  - type: Construction
-    graph: Shelf
-    node: ShelfBar
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/Departments/Service/bar.rsi
+      state: base
+      layers:
+        - state: base
+        - state: bar-0
+        - map: ["enum.StorageFillLayers.Fill"]
+    - type: Appearance
+    - type: StorageFillVisualizer
+      maxFillLevels: 13
+      fillBaseName: bar
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WoodDestroyHeavy
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MaterialWoodPlank1:
+                  min: 1
+                  max: 4
+    - type: Storage
+      grid:
+        - 0,0,5,1
+        - 0,3,5,4
+    - type: Construction
+      graph: Shelf
+      node: ShelfBar
 
 - type: entity
   parent: ShelfBase
@@ -283,42 +282,42 @@
   name: kitchen shelf
   description: Holds knifes, spice, and everything nice!
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/Departments/Service/kitchen.rsi
-    state: base
-    layers:
-      - state: base
-      - state: kitchen-0
-      - map: ["enum.StorageFillLayers.Fill"]
-  - type: Appearance
-  - type: StorageFillVisualizer
-    maxFillLevels: 13
-    fillBaseName: kitchen
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel1:
-            min: 1
-            max: 4
-          MaterialWoodPlank1:
-            min: 0
-            max: 1
-          PartRodMetal1:
-            min: 0
-            max: 2
-  - type: Storage
-    grid:
-    - 0,0,5,1
-    - 0,3,5,4
-  - type: Construction
-    graph: Shelf
-    node: ShelfKitchen
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/Departments/Service/kitchen.rsi
+      state: base
+      layers:
+        - state: base
+        - state: kitchen-0
+        - map: ["enum.StorageFillLayers.Fill"]
+    - type: Appearance
+    - type: StorageFillVisualizer
+      maxFillLevels: 13
+      fillBaseName: kitchen
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel1:
+                  min: 1
+                  max: 4
+                MaterialWoodPlank1:
+                  min: 0
+                  max: 1
+                PartRodMetal1:
+                  min: 0
+                  max: 2
+    - type: Storage
+      grid:
+        - 0,0,5,1
+        - 0,3,5,4
+    - type: Construction
+      graph: Shelf
+      node: ShelfKitchen
 
 - type: entity
   parent: ShelfBaseReinforced
@@ -326,51 +325,51 @@
   name: chemical shelf
   description: Keeps all your chemicals safe and out of the clow- er, public hands!
   components:
-  - type: Sprite
-    sprite: Structures/Storage/Shelfs/Departments/Medical/chemistry.rsi
-    layers:
-    - state: base
-      map: ["enum.StorageVisualLayers.Base"]
-    - state: unlocked
-      shader: unshaded
-    - state: chem-0
-    - map: ["enum.StorageFillLayers.Fill"]
-    - state: closed
-      map: ["enum.StorageVisualLayers.Door"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-      shader: unshaded
-  - type: StorageFillVisualizer
-    maxFillLevels: 7
-    fillBaseName: chem
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger50
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetPlasteel1:
-            min: 1
-            max: 2
-          SheetPlastic1:
-            min: 1
-            max: 2
-          ShardGlass:
-            min: 1
-            max: 1
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Storage
-    grid:
-    - 0,0,5,1
-    - 0,3,5,4
-  - type: Construction
-    graph: Shelf
-    node: ShelfChemistry
-  - type: AmbientMusicMarkerMedical
+    - type: Sprite
+      sprite: Structures/Storage/Shelfs/Departments/Medical/chemistry.rsi
+      layers:
+        - state: base
+          map: ["enum.StorageVisualLayers.Base"]
+        - state: unlocked
+          shader: unshaded
+        - state: chem-0
+        - map: ["enum.StorageFillLayers.Fill"]
+        - state: closed
+          map: ["enum.StorageVisualLayers.Door"]
+        - state: locked
+          map: ["enum.LockVisualLayers.Lock"]
+          shader: unshaded
+    - type: StorageFillVisualizer
+      maxFillLevels: 7
+      fillBaseName: chem
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger50
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetPlasteel1:
+                  min: 1
+                  max: 2
+                SheetPlastic1:
+                  min: 1
+                  max: 2
+                ShardGlass:
+                  min: 1
+                  max: 1
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Storage
+      grid:
+        - 0,0,5,1
+        - 0,3,5,4
+    - type: Construction
+      graph: Shelf
+      node: ShelfChemistry
+    - type: AmbientMusicMarkerMedical
 
 # Access presets
 # Try to keep alphabetical sorting if adding more
@@ -380,6 +379,5 @@
   id: ShelfChemistryChemistrySecure
   suffix: Chemistry, Secure
   components:
-  - type: AccessReader
-    access: [["Chemistry"]]
-
+    - type: AccessReader
+      access: [["Chemistry"]]

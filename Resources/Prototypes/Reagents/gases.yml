@@ -13,66 +13,66 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant ]
-      # Convert Oxygen into CO2.
-      - !type:ModifyLungGas
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-          inverted: true
-        ratios:
-          CarbonDioxide: 1.0
-          Oxygen: -1.0
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-        ignoreResistances: true
-        damage:
-          types:
-            Poison: 1.5
-      - !type:AdjustAlert
-        alertType: Toxins
-        minScale: 1
-        conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Vox ]
-        clear: true
-        time: 5
+        - !type:Oxygenate
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Human, Animal, Rat, Plant]
+        # Convert Oxygen into CO2.
+        - !type:ModifyLungGas
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+              inverted: true
+          ratios:
+            CarbonDioxide: 1.0
+            Oxygen: -1.0
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+          ignoreResistances: true
+          damage:
+            types:
+              Poison: 1.5
+        - !type:AdjustAlert
+          alertType: Toxins
+          minScale: 1
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+          clear: true
+          time: 5
     Respiration:
       effects:
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Moth ]
-      # Convert Oxygen into CO2.
-      - !type:ModifyLungGas
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-          inverted: true
-        ratios:
-          CarbonDioxide: 1.0
-          Oxygen: -1.0
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-        ignoreResistances: true
-        damage:
-          types:
-            Poison: 0.7
-      - !type:AdjustAlert
-        alertType: Toxins
-        minScale: 0.5
-        conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Vox ]
-        clear: true
-        time: 5
+        - !type:Oxygenate
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Human, Animal, Rat, Plant, Arachnid, Moth]
+        # Convert Oxygen into CO2.
+        - !type:ModifyLungGas
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+              inverted: true
+          ratios:
+            CarbonDioxide: 1.0
+            Oxygen: -1.0
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+          ignoreResistances: true
+          damage:
+            types:
+              Poison: 0.7
+        - !type:AdjustAlert
+          alertType: Toxins
+          minScale: 0.5
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+          clear: true
+          time: 5
 
 - type: reagent
   id: Plasma
@@ -85,37 +85,36 @@
   boilingPoint: -127.3 # Random values picked between the actual values for CO2 and O2
   meltingPoint: -186.4
   tileReactions:
-  - !type:FlammableTileReaction
-    temperatureMultiplier: 1.5
+    - !type:FlammableTileReaction
+      temperatureMultiplier: 1.5
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1.5
-      - !type:AdjustReagent
-        reagent: Inaprovaline
-        amount: -2.0
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1.5
+        - !type:AdjustReagent
+          reagent: Inaprovaline
+          amount: -2.0
     Respiration:
       effects:
-      - !type:HealthChange
-        ignoreResistances: true
-        damage:
-          types:
-            Poison:
-              0.1
-      # We need a metabolism effect on reagent removal
-      - !type:AdjustAlert
-        alertType: Toxins
-        minScale: 1.5
-        clear: True
-        time: 5
+        - !type:HealthChange
+          ignoreResistances: true
+          damage:
+            types:
+              Poison: 0.1
+        # We need a metabolism effect on reagent removal
+        - !type:AdjustAlert
+          alertType: Toxins
+          minScale: 1.5
+          clear: True
+          time: 5
   reactiveEffects:
     Flammable:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:Flammable
+        - !type:Flammable
 
 - type: reagent
   id: Tritium
@@ -123,39 +122,38 @@
   desc: reagent-desc-tritium
   physicalDesc: reagent-physical-desc-ionizing
   allowedDepartments:
-  - Engineering
+    - Engineering
   flavor: bitter
   color: "#66ff33"
   tileReactions:
-  - !type:FlammableTileReaction
-    temperatureMultiplier: 2.0
+    - !type:FlammableTileReaction
+      temperatureMultiplier: 2.0
   reactiveEffects:
     Flammable:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:Flammable
-        multiplier: 0.8
+        - !type:Flammable
+          multiplier: 0.8
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Radiation: 1.5
+        - !type:HealthChange
+          damage:
+            types:
+              Radiation: 1.5
     Respiration:
       effects:
-      - !type:HealthChange
-        ignoreResistances: true
-        damage:
-          types:
-            Radiation:
-              1
-      # We need a metabolism effect on reagent removal
-      - !type:AdjustAlert
-        alertType: Toxins
-        minScale: 1.5
-        clear: True
-        time: 5
+        - !type:HealthChange
+          ignoreResistances: true
+          damage:
+            types:
+              Radiation: 1
+        # We need a metabolism effect on reagent removal
+        - !type:AdjustAlert
+          alertType: Toxins
+          minScale: 1.5
+          clear: True
+          time: 5
 
 - type: reagent
   id: CarbonDioxide
@@ -167,51 +165,49 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant ]
-      - !type:HealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant, Vox ]
-          inverted: true
-        ignoreResistances: true
-        damage:
-          types:
-            Poison:
-              0.4
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant ]
-          inverted: true
-        factor: -4
+        - !type:Oxygenate
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Plant]
+        - !type:HealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Plant, Vox]
+              inverted: true
+          ignoreResistances: true
+          damage:
+            types:
+              Poison: 0.4
+        - !type:Oxygenate
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Plant]
+              inverted: true
+          factor: -4
     Respiration:
       effects:
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant ]
-      - !type:HealthChange
-        minScale: 0.5
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant, Vox ]
-          inverted: true
-        # Don't want people to get toxin damage from the gas they just
-        # exhaled, right?
-        ignoreResistances: true
-        damage:
-          types:
-            Poison:
-              0.8
-      - !type:Oxygenate # carbon dioxide displaces oxygen from the bloodstream, causing asphyxiation
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Plant ]
-          inverted: true
-        factor: -4
+        - !type:Oxygenate
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Plant]
+        - !type:HealthChange
+          minScale: 0.5
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Plant, Vox]
+              inverted: true
+          # Don't want people to get toxin damage from the gas they just
+          # exhaled, right?
+          ignoreResistances: true
+          damage:
+            types:
+              Poison: 0.8
+        - !type:Oxygenate # carbon dioxide displaces oxygen from the bloodstream, causing asphyxiation
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Plant]
+              inverted: true
+          factor: -4
       # We need a metabolism effect on reagent removal
       #- !type:AdjustAlert
       #  alertType: CarbonDioxide
@@ -228,31 +224,31 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Cold: 0.5 # liquid nitrogen is cold
+        - !type:HealthChange
+          damage:
+            types:
+              Cold: 0.5 # liquid nitrogen is cold
     Respiration:
       effects:
-      - !type:Oxygenate
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox, Slime ]
-      # Converts Nitrogen into Ammonia
-      - !type:ModifyLungGas
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Vox ]
-        ratios:
-          Ammonia: 1.0
-          Nitrogen: -1.0
-      - !type:ModifyLungGas
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-        ratios:
-          NitrousOxide: 1.0
-          Nitrogen: -1.0
+        - !type:Oxygenate
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox, Slime]
+        # Converts Nitrogen into Ammonia
+        - !type:ModifyLungGas
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Vox]
+          ratios:
+            Ammonia: 1.0
+            Nitrogen: -1.0
+        - !type:ModifyLungGas
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+          ratios:
+            NitrousOxide: 1.0
+            Nitrogen: -1.0
 
 - type: reagent
   id: NitrousOxide
@@ -266,68 +262,68 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
     Respiration:
       effects:
-      - !type:Emote
-        minScale: 0.2
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-          inverted: true
-        emote: Laugh
-        showInChat: true
-        probability: 0.1
-      - !type:Emote
-        minScale: 0.2
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-          inverted: true
-        emote: Scream
-        showInChat: true
-        probability: 0.01
-      - !type:PopupMessage
-        minScale: 0.5
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-          inverted: true
-        type: Local
-        visualType: Medium
-        messages: [ "effect-sleepy" ]
-        probability: 0.1
-      - !type:MovementSpeedModifier
-        minScale: 1
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-          inverted: true
-        walkSpeedModifier: 0.65
-        sprintSpeedModifier: 0.65
-      - !type:ModifyStatusEffect
-        minScale: 1.8
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-          inverted: true
-        effectProto: StatusEffectForcedSleeping
-        time: 3
-        type: Update
-      - !type:HealthChange
-        minScale: 3.5
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Slime ]
-          inverted: true
-        ignoreResistances: true
-        scaling: true
-        damage:
-          types:
-            Poison: 1
+        - !type:Emote
+          minScale: 0.2
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+          emote: Laugh
+          showInChat: true
+          probability: 0.1
+        - !type:Emote
+          minScale: 0.2
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+          emote: Scream
+          showInChat: true
+          probability: 0.01
+        - !type:PopupMessage
+          minScale: 0.5
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+          type: Local
+          visualType: Medium
+          messages: ["effect-sleepy"]
+          probability: 0.1
+        - !type:MovementSpeedModifier
+          minScale: 1
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+          walkSpeedModifier: 0.65
+          sprintSpeedModifier: 0.65
+        - !type:ModifyStatusEffect
+          minScale: 1.8
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+          effectProto: StatusEffectForcedSleeping
+          time: 3
+          type: Update
+        - !type:HealthChange
+          minScale: 3.5
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+          ignoreResistances: true
+          scaling: true
+          damage:
+            types:
+              Poison: 1
 
 - type: reagent
   id: Frezon
@@ -335,9 +331,9 @@
   desc: reagent-desc-frezon
   physicalDesc: reagent-physical-desc-gaseous
   allowedDepartments:
-  - Engineering
+    - Engineering
   allowedJobs:
-  - Chemist
+    - Chemist
   flavor: bitter
   color: "#3a758c"
   boilingPoint: -195.8
@@ -345,53 +341,53 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:HealthChange
-        ignoreResistances: true
-        damage:
-          types:
-            Cellular: 0.5
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        type: Add
-        time: 15
-      - !type:Drunk
-        boozePower: 15
-      - !type:PopupMessage
-        type: Local
-        messages: [ "frezon-lungs-cold" ]
-        probability: 0.1
-        minScale: 1
-      - !type:PopupMessage
-        type: Local
-        visualType: Medium
-        messages: [ "frezon-euphoric" ]
-        probability: 0.1
-        conditions:
-        minScale: 2
+        - !type:HealthChange
+          ignoreResistances: true
+          damage:
+            types:
+              Cellular: 0.5
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          type: Add
+          time: 15
+        - !type:Drunk
+          boozePower: 15
+        - !type:PopupMessage
+          type: Local
+          messages: ["frezon-lungs-cold"]
+          probability: 0.1
+          minScale: 1
+        - !type:PopupMessage
+          type: Local
+          visualType: Medium
+          messages: ["frezon-euphoric"]
+          probability: 0.1
+          conditions:
+          minScale: 2
     Respiration:
       effects:
-      - !type:HealthChange
-        minScale: 0.5
-        ignoreResistances: true
-        damage:
-          types:
-            Cellular: 0.05
-      - !type:ModifyStatusEffect
-        minScale: 1
-        effectProto: StatusEffectSeeingRainbow
-        type: Add
-        time: 500
-      - !type:Drunk
-        boozePower: 500
-        minScale: 1
-      - !type:PopupMessage
-        type: Local
-        messages: [ "frezon-lungs-cold" ]
-        probability: 0.1
-        minScale: 1
-      - !type:PopupMessage
-        type: Local
-        visualType: Medium
-        messages: [ "frezon-euphoric" ]
-        probability: 0.1
-        minScale: 1
+        - !type:HealthChange
+          minScale: 0.5
+          ignoreResistances: true
+          damage:
+            types:
+              Cellular: 0.05
+        - !type:ModifyStatusEffect
+          minScale: 1
+          effectProto: StatusEffectSeeingRainbow
+          type: Add
+          time: 500
+        - !type:Drunk
+          boozePower: 500
+          minScale: 1
+        - !type:PopupMessage
+          type: Local
+          messages: ["frezon-lungs-cold"]
+          probability: 0.1
+          minScale: 1
+        - !type:PopupMessage
+          type: Local
+          visualType: Medium
+          messages: ["frezon-euphoric"]
+          probability: 0.1
+          minScale: 1

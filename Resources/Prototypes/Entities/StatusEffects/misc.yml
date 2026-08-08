@@ -2,22 +2,22 @@
   id: StatusEffectBase
   abstract: true
   components:
-  - type: StatusEffect
-  - type: Sprite
-    drawdepth: Effects
-  - type: Tag
-    tags:
-    - HideContextMenu
+    - type: StatusEffect
+    - type: Sprite
+      drawdepth: Effects
+    - type: Tag
+      tags:
+        - HideContextMenu
 
 - type: entity
   parent: StatusEffectBase
   id: MobStatusEffectBase
   abstract: true
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - MobState
+    - type: StatusEffect
+      whitelist:
+        components:
+          - MobState
 
 # Things that should be removed by rejuvenation should parent to this
 # Also blocks the status effect being added to godmode-ed entities.
@@ -26,22 +26,22 @@
   id: MobStatusEffectDebuff
   abstract: true
   components:
-  - type: RejuvenateRemovedStatusEffect
+    - type: RejuvenateRemovedStatusEffect
 
 - type: entity
   parent: MobStatusEffectDebuff
   id: MobStandStatusEffectBase
   abstract: true
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - MobState
-      - StandingState
-      requireAll: true
-    blacklist: # This blacklist exists because mob prototypes are smelly and everything needs a standing state component.
-      tags:
-      - KnockdownImmune
+    - type: StatusEffect
+      whitelist:
+        components:
+          - MobState
+          - StandingState
+        requireAll: true
+      blacklist: # This blacklist exists because mob prototypes are smelly and everything needs a standing state component.
+        tags:
+          - KnockdownImmune
 
 # The creature sleeps so heavily that nothing can wake him up. Not even its own death.
 - type: entity
@@ -49,9 +49,9 @@
   id: StatusEffectForcedSleeping
   name: forced sleep
   components:
-  - type: ForcedSleepingStatusEffect
-  - type: StunnedStatusEffect
-  - type: KnockdownStatusEffect
+    - type: ForcedSleepingStatusEffect
+    - type: StunnedStatusEffect
+    - type: KnockdownStatusEffect
 
 # This creature is asleep because it's disconnected from the game.
 - type: entity
@@ -59,9 +59,9 @@
   id: StatusEffectSSDSleeping
   name: forced sleep
   components:
-  - type: ForcedSleepingStatusEffect
-  - type: StunnedStatusEffect
-  - type: KnockdownStatusEffect
+    - type: ForcedSleepingStatusEffect
+    - type: StunnedStatusEffect
+    - type: KnockdownStatusEffect
 
 # Blurs your vision and makes you randomly fall asleep
 - type: entity
@@ -69,7 +69,7 @@
   id: StatusEffectDrowsiness
   name: drowsiness
   components:
-  - type: DrowsinessStatusEffect
+    - type: DrowsinessStatusEffect
 
 # Adds drugs overlay
 - type: entity
@@ -77,7 +77,7 @@
   id: StatusEffectSeeingRainbow
   name: hallucinations
   components:
-  - type: SeeingRainbowsStatusEffect
+    - type: SeeingRainbowsStatusEffect
 
 # Causes your vision to become blurry and gives me a headache.
 - type: entity
@@ -85,11 +85,11 @@
   id: StatusEffectWoozy
   name: woozy
   components:
-  - type: DrunkStatusEffect
+    - type: DrunkStatusEffect
 
 # Causes you to get drunk
 - type: entity
-  parent: [ StatusEffectWoozy, StatusEffectSlurred ]
+  parent: [StatusEffectWoozy, StatusEffectSlurred]
   id: StatusEffectDrunk
   name: drunk
 
@@ -99,13 +99,13 @@
   id: StatusEffectBlindness
   name: temporary blindness
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - MobState
-      - Blindable
-      requireAll: true
-  - type: BlindnessStatusEffect
+    - type: StatusEffect
+      whitelist:
+        components:
+          - MobState
+          - Blindable
+        requireAll: true
+    - type: BlindnessStatusEffect
 
 # Obstructs the target's vision with the flash overlay.
 - type: entity
@@ -113,10 +113,10 @@
   id: StatusEffectFlashed
   name: flashed
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - MobState
-      - Blindable
-      requireAll: true
-  - type: FlashedStatusEffect
+    - type: StatusEffect
+      whitelist:
+        components:
+          - MobState
+          - Blindable
+        requireAll: true
+    - type: FlashedStatusEffect

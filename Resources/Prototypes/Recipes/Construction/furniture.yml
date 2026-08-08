@@ -11,7 +11,7 @@
   id: BaseChair
   graph: Seat
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   abstract: true
@@ -20,7 +20,7 @@
   graph: Table
   canRotate: false
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   abstract: true
@@ -29,7 +29,7 @@
   graph: bed
   canRotate: false
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   abstract: true
@@ -345,7 +345,7 @@
   targetNode: MeatSpike
   canRotate: false
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   parent: BaseTable # close enough
@@ -373,7 +373,7 @@
   canRotate: true
   canBuildInImpassable: true
   conditions:
-  - !type:WallmountCondition
+    - !type:WallmountCondition
 
 - type: construction
   parent: BaseFurniture
@@ -382,4 +382,4 @@
   targetNode: mannequin
   canRotate: true
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked

@@ -4,20 +4,20 @@
   name: red-tie
   description: A neosilk clip-on red tie.
   components:
-  - type: Sprite
-    sprite: Clothing/Neck/Ties/redtie.rsi
-  - type: Clothing
-    sprite: Clothing/Neck/Ties/redtie.rsi
-  - type: Item
-    storedSprite:
-      state: storage
+    - type: Sprite
       sprite: Clothing/Neck/Ties/redtie.rsi
-  - type: Tag
-    tags:
-    - HamsterWearable
-    - WhitelistChameleon
-    - ClothMade
-    - Recyclable
+    - type: Clothing
+      sprite: Clothing/Neck/Ties/redtie.rsi
+    - type: Item
+      storedSprite:
+        state: storage
+        sprite: Clothing/Neck/Ties/redtie.rsi
+    - type: Tag
+      tags:
+        - HamsterWearable
+        - WhitelistChameleon
+        - ClothMade
+        - Recyclable
 
 - type: entity
   parent: ClothingNeckBase
@@ -25,14 +25,14 @@
   name: detective's tie
   description: A loosely tied necktie, a perfect accessory for the over-worked detective.
   components:
-  - type: Sprite
-    sprite: Clothing/Neck/Ties/dettie.rsi
-  - type: Clothing
-    sprite: Clothing/Neck/Ties/dettie.rsi
-  - type: Item
-    storedSprite:
-      state: storage
+    - type: Sprite
       sprite: Clothing/Neck/Ties/dettie.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Ties/dettie.rsi
+    - type: Item
+      storedSprite:
+        state: storage
+        sprite: Clothing/Neck/Ties/dettie.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -40,17 +40,17 @@
   name: scientist's tie
   description: Why do we all have to wear these ridiculous ties?
   components:
-  - type: Sprite
-    sprite: Clothing/Neck/Ties/scitie.rsi
-  - type: Clothing
-    sprite: Clothing/Neck/Ties/scitie.rsi
-  - type: Item
-    storedSprite:
-      state: storage
+    - type: Sprite
       sprite: Clothing/Neck/Ties/scitie.rsi
-  - type: Tag
-    tags:
-    - ClothMade
-    - Recyclable
-    - HamsterWearable
-    - WhitelistChameleon
+    - type: Clothing
+      sprite: Clothing/Neck/Ties/scitie.rsi
+    - type: Item
+      storedSprite:
+        state: storage
+        sprite: Clothing/Neck/Ties/scitie.rsi
+    - type: Tag
+      tags:
+        - ClothMade
+        - Recyclable
+        - HamsterWearable
+        - WhitelistChameleon

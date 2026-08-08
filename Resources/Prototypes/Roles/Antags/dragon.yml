@@ -10,4 +10,4 @@
   spawnerPrototype: SpawnPointGhostDragon
   pickPlayer: false
   mindRoles:
-  - MindRoleDragon
+    - MindRoleDragon

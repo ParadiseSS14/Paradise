@@ -5,8 +5,8 @@
   id: StrippingHiddenEntity
   name: hidden entity
   description: There is something in this pocket. #Or maybe they ar... nah... too obvious a joke.
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Sprite
-    texture: Interface/VerbIcons/information.svg.192dpi.png
-    scale: 0.3,0.3
+    - type: Sprite
+      texture: Interface/VerbIcons/information.svg.192dpi.png
+      scale: 0.3,0.3

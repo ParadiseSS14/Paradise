@@ -1,5 +1,5 @@
 # These options are kept very sparse to not put emphasis on nudity, and to provide a base for players to feel comfortable with.
-# It's unlikely more will be added to upstream for cosmetic reasons. 
+# It's unlikely more will be added to upstream for cosmetic reasons.
 
 - type: marking
   id: UndergarmentBottomBoxers
@@ -8,10 +8,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: boxers
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: boxers
 
 - type: marking
   id: UndergarmentBottomBriefs
@@ -20,10 +20,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: briefs
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: briefs
 
 - type: marking
   id: UndergarmentBottomSatin
@@ -32,10 +32,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: satin
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: satin
 
 - type: marking
   id: UndergarmentTopBra
@@ -44,10 +44,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: classic
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: classic
 
 - type: marking
   id: UndergarmentTopSportsbra
@@ -56,10 +56,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: sports
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: sports
 
 - type: marking
   id: UndergarmentTopBinder
@@ -68,10 +68,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: binder
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: binder
 
 - type: marking
   id: UndergarmentTopTanktop
@@ -80,10 +80,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: tanktop
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: tanktop
 
 - type: marking
   id: UndergarmentBottomBoxersVox # Voxers.
@@ -92,10 +92,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: boxers_vox
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: boxers_vox
 
 - type: marking
   id: UndergarmentBottomBriefsVox
@@ -104,10 +104,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: briefs_vox
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: briefs_vox
 
 - type: marking
   id: UndergarmentBottomSatinVox
@@ -116,10 +116,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: satin_vox
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: satin_vox
 
 - type: marking
   id: UndergarmentTopBraVox
@@ -128,10 +128,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: classic_vox
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: classic_vox
 
 - type: marking
   id: UndergarmentTopSportsbraVox
@@ -140,10 +140,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: sports_vox
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: sports_vox
 
 - type: marking
   id: UndergarmentTopBinderVox
@@ -152,10 +152,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: binder_vox
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: binder_vox
 
 - type: marking
   id: UndergarmentTopTanktopVox
@@ -164,10 +164,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: tanktop_vox
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: tanktop_vox
 
 - type: marking
   id: UndergarmentBottomBoxersReptilian
@@ -176,10 +176,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: boxers_reptilian
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: boxers_reptilian
 
 - type: marking
   id: UndergarmentBottomBriefsReptilian
@@ -188,10 +188,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: briefs_reptilian
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: briefs_reptilian
 
 - type: marking
   id: UndergarmentBottomSatinReptilian
@@ -200,10 +200,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: satin_reptilian
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: satin_reptilian
 
 - type: marking
   id: UndergarmentBottomBoxersVulpkanin
@@ -212,10 +212,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: boxers_vulpkanin
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: boxers_vulpkanin
 
 - type: marking
   id: UndergarmentBottomBriefsVulpkanin
@@ -224,10 +224,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: briefs_vulpkanin
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: briefs_vulpkanin
 
 - type: marking
   id: UndergarmentBottomSatinVulpkanin
@@ -236,10 +236,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: satin_vulpkanin
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: satin_vulpkanin
 
 - type: marking
   id: UndergarmentTopBraVulpkanin
@@ -248,10 +248,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: classic_vulpkanin
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: classic_vulpkanin
 
 - type: marking
   id: UndergarmentTopSportsbraVulpkanin
@@ -260,10 +260,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: sports_vulpkanin
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: sports_vulpkanin
 
 - type: marking
   id: UndergarmentTopBinderVulpkanin
@@ -272,10 +272,10 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: binder_vulpkanin
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: binder_vulpkanin
 
 - type: marking
   id: UndergarmentTopTanktopVulpkanin
@@ -284,8 +284,7 @@
   coloring:
     default:
       type: null
-      fallbackColor: '#FFFFFF'
+      fallbackColor: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/undergarments.rsi
-    state: tanktop_vulpkanin
-    
+    - sprite: Mobs/Customization/undergarments.rsi
+      state: tanktop_vulpkanin

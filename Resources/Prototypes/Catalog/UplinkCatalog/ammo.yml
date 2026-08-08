@@ -4,12 +4,13 @@
   id: UplinkPistol9mmMagazine
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_high_capacity_mag.rsi, state: base-icon }
+  icon:
+    { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_high_capacity_mag.rsi, state: base-icon }
   productEntity: MagazinePistolHighCapacity
   cost:
     Telecrystal: 1
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 # For the C20R
 - type: listing
@@ -21,7 +22,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 # For the Bulldog
 - type: listing
@@ -33,7 +34,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 - type: listing
   id: UplinkMagazineShotgunSlug
@@ -44,19 +45,23 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 # For the Cobra
 - type: listing
   id: UplinkMagazinePistolCaselessRifle
   name: uplink-pistol-magazine-caseless-name
   description: uplink-pistol-magazine-caseless-desc
-  icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
+  icon:
+    {
+      sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi,
+      state: red-icon,
+    }
   productEntity: MagazinePistolCaselessRifle
   cost:
     Telecrystal: 1
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 # For the Mosin
 - type: listing
@@ -67,7 +72,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 # For the Estoc
 - type: listing
@@ -78,7 +83,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 # For the Hristov
 - type: listing
@@ -89,7 +94,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
 
 - type: listing
   id: UplinkAmmoBundle
@@ -99,7 +104,7 @@
   cost:
     Telecrystal: 15
   categories:
-  - UplinkAmmo
+    - UplinkAmmo
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:

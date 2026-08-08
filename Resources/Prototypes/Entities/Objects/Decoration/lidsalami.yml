@@ -4,13 +4,13 @@
   name: salami lid
   description: Ain't gon' fit, won't fit.
   components:
-  - type: Sprite
-    sprite: Objects/Decoration/lidsalami.rsi
-    layers:
-      - state: icon
-  - type: Item
-    size: Ginormous
-    shape:
-    - 0,0,16,8
-  - type: StaticPrice
-    price: 0
+    - type: Sprite
+      sprite: Objects/Decoration/lidsalami.rsi
+      layers:
+        - state: icon
+    - type: Item
+      size: Ginormous
+      shape:
+        - 0,0,16,8
+    - type: StaticPrice
+      price: 0

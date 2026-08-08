@@ -4,12 +4,12 @@
   abstract: true
   id: BaseChameleon
   components:
-  - type: UIRequiresLock
-    userInterfaceKeys:
-      - enum.ChameleonUiKey.Key
-    accessDeniedSound: null
-    popup: null
-  - type: UserInterface
-    interfaces:
-      enum.ChameleonUiKey.Key:
-        type: ChameleonBoundUserInterface
+    - type: UIRequiresLock
+      userInterfaceKeys:
+        - enum.ChameleonUiKey.Key
+      accessDeniedSound: null
+      popup: null
+    - type: UserInterface
+      interfaces:
+        enum.ChameleonUiKey.Key:
+          type: ChameleonBoundUserInterface

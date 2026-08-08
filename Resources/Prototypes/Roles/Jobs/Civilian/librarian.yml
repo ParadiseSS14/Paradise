@@ -7,8 +7,8 @@
   icon: "JobIconLibrarian"
   supervisors: job-supervisors-hop
   access:
-  - Service
-  - Maintenance
+    - Service
+    - Maintenance
 
 - type: startingGear
   id: LibrarianGear
@@ -20,7 +20,7 @@
     pocket2: HandLabeler # for making named bestsellers
   storage:
     back:
-    - BookRandom
+      - BookRandom
 
 - type: chameleonOutfit
   id: LibrarianChameleonOutfit

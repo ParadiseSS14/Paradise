@@ -11,14 +11,14 @@
   id: BaseStructureFullTile
   canRotate: false
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   abstract: true
   parent: BaseStructure
   id: BaseStructureFullTileDirectional
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   abstract: true
@@ -28,8 +28,8 @@
   canBuildInImpassable: true
   canRotate: false
   conditions:
-  - !type:EmptyOrWindowValidInTile
-  - !type:NoWindowsInTile
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
 
 - type: construction
   abstract: true
@@ -138,8 +138,8 @@
   graph: Cardwall
   targetNode: cardwall
   conditions:
-  - !type:TileNotBlocked
-    failIfSpace: false
+    - !type:TileNotBlocked
+      failIfSpace: false
 # endregion Walls
 
 # region Grilles
@@ -149,8 +149,8 @@
   graph: Grille
   targetNode: grille
   conditions:
-  - !type:TileNotBlocked
-    failIfSpace: false
+    - !type:TileNotBlocked
+      failIfSpace: false
 
 - type: construction
   parent: Grille
@@ -337,12 +337,12 @@
   graph: Catwalk
   targetNode: Catwalk
   conditions:
-  - !type:TileNotBlocked
-    failIfSpace: false
-  - !type:TileType
-    targets:
-    - Lattice
-    - Plating
+    - !type:TileNotBlocked
+      failIfSpace: false
+    - !type:TileType
+      targets:
+        - Lattice
+        - Plating
 
 - type: construction
   parent: BaseStructureFullTile
@@ -350,11 +350,11 @@
   graph: FloorBananium
   targetNode: BananiumFloor
   conditions:
-  - !type:TileNotBlocked
-    failIfSpace: false
-  - !type:TileType
-    targets:
-    - Plating
+    - !type:TileNotBlocked
+      failIfSpace: false
+    - !type:TileType
+      targets:
+        - Plating
 # endregion Floors
 
 # region Barricades
@@ -548,8 +548,8 @@
   graph: LightFixture
   targetNode: tubeLight
   conditions:
-  - !type:TileNotBlocked
-  - !type:AgainstWall
+    - !type:TileNotBlocked
+    - !type:AgainstWall
 
 - type: construction
   parent: LightTubeFixture

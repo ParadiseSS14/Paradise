@@ -5,7 +5,6 @@
   placement:
     mode: PlaceFree
   components:
-  - type: MapText
-  - type: Sprite
-    state: pink
-
+    - type: MapText
+    - type: Sprite
+      state: pink

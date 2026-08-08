@@ -31,15 +31,14 @@
               amount: 1
               doAfter: 1
 
-
     - node: TableFrame
       entity: TableFrame
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-                prototype: PartRodMetal
-                amount: 2
+              prototype: PartRodMetal
+              amount: 2
           steps:
             - tool: Anchoring
               doAfter: 1
@@ -94,7 +93,6 @@
               amount: 1
               doAfter: 1
 
-
     - node: CounterWoodFrame
       entity: CounterWoodFrame
       edges:
@@ -121,14 +119,13 @@
               prototype: SheetSteel1
               amount: 1
           steps:
-          - tool: Anchoring
-            doAfter: 1
+            - tool: Anchoring
+              doAfter: 1
         - to: CounterMetal
           steps:
             - material: Steel
               amount: 1
               doAfter: 1
-
 
     - node: Table
       entity: Table
@@ -325,12 +322,12 @@
       edges:
         - to: TableWood
           completed:
-          - !type:SpawnPrototype
-            prototype: FloorCarpetItemSkyBlue
-            amount: 1
+            - !type:SpawnPrototype
+              prototype: FloorCarpetItemSkyBlue
+              amount: 1
           steps:
-          - tool: Prying
-            doAfter: 1
+            - tool: Prying
+              doAfter: 1
 
     - node: TableFancyCyan
       entity: TableFancyCyan
@@ -443,11 +440,11 @@
     - node: TableXeno
       entity: TableXeno
       edges:
-      - to: TableFrame
-        completed:
-        - !type:SpawnPrototype
-          prototype: SheetSteel1
-          amount: 1
-        steps:
-        - tool: Anchoring
-          doAfter: 1
+        - to: TableFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+          steps:
+            - tool: Anchoring
+              doAfter: 1

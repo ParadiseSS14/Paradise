@@ -2,7 +2,7 @@
 # If a sprite is given then the default component's value will be overriden
 - type: entity
   id: MultipartMachineGhost
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: MultipartMachineGhost
     - type: Sprite

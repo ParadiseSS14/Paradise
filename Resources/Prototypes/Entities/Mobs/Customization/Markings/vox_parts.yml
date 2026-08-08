@@ -4,12 +4,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: beak
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: beak
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -19,12 +18,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: beak_squarecere
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: beak_squarecere
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -33,12 +31,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: beak_shaved
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: beak_shaved
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -47,12 +44,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: beak_hooked
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: beak_hooked
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -61,12 +57,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: l_arm
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: l_arm
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -75,12 +70,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: l_leg
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: l_leg
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -89,12 +83,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: r_arm
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: r_arm
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -103,12 +96,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: r_leg
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: r_leg
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -117,12 +109,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: r_hand
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: r_hand
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -131,12 +122,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: l_hand
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: l_hand
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -145,12 +135,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: l_foot
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: l_foot
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -159,12 +148,11 @@
   forcedColoring: true
   groupWhitelist: [Vox]
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: r_foot
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: r_foot
   coloring:
     default:
-      type:
-        !type:SimpleColoring
+      type: !type:SimpleColoring
         color: "#937e3d"
 
 - type: marking
@@ -173,8 +161,8 @@
   groupWhitelist: [Vox]
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail
 
 - type: marking
   id: VoxTailAnimated
@@ -182,8 +170,8 @@
   groupWhitelist: []
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_animated
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_animated
 
 - type: marking
   id: VoxTailShort
@@ -191,8 +179,8 @@
   groupWhitelist: [Vox]
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_short
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_short
 
 - type: marking
   id: VoxTailShortAnimated
@@ -200,8 +188,8 @@
   groupWhitelist: []
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_short_animated
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_short_animated
 
 - type: marking
   id: VoxTailBig
@@ -209,8 +197,8 @@
   groupWhitelist: [Vox]
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_big
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_big
 
 - type: marking
   id: VoxTailBigAnimated
@@ -218,8 +206,8 @@
   groupWhitelist: []
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_big_animated
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_big_animated
 
 - type: marking
   id: VoxTailSpikes
@@ -227,8 +215,8 @@
   groupWhitelist: [Vox]
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_spikes
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_spikes
 
 - type: marking
   id: VoxTailSpikesAnimated
@@ -236,8 +224,8 @@
   groupWhitelist: []
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_spikes_animated
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_spikes_animated
 
 - type: marking
   id: VoxTailDocked
@@ -245,8 +233,8 @@
   groupWhitelist: [Vox]
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_docked
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_docked
 
 - type: marking
   id: VoxTailDockedAnimated
@@ -254,9 +242,8 @@
   groupWhitelist: []
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_docked_animated
-
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_docked_animated
 
 - type: marking
   id: VoxTailSplit
@@ -264,8 +251,8 @@
   groupWhitelist: [Vox]
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_split
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_split
 
 - type: marking
   id: VoxTailSplitAnimated
@@ -273,5 +260,5 @@
   groupWhitelist: []
   forcedColoring: true
   sprites:
-  - sprite: Mobs/Customization/vox_parts.rsi
-    state: tail_split_animated
+    - sprite: Mobs/Customization/vox_parts.rsi
+      state: tail_split_animated

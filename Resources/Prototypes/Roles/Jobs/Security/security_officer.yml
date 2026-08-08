@@ -11,14 +11,14 @@
   icon: "JobIconSecurityOfficer"
   supervisors: job-supervisors-hos
   access:
-  - Security
-  - Brig
-  - Maintenance
-  - External
-  - Cryogenics
+    - Security
+    - Brig
+    - Maintenance
+    - External
+    - Cryogenics
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
 
 - type: startingGear
   id: SecurityOfficerGear
@@ -28,8 +28,8 @@
     pocket1: WeaponPistolMk58
   storage:
     back:
-    - Flash
-    - MagazinePistol
+      - Flash
+      - MagazinePistol
 
 - type: chameleonOutfit
   id: SecurityOfficerChameleonOutfit

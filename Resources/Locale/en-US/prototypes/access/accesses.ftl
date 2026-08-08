@@ -23,6 +23,7 @@ id-card-access-level-chief-medical-officer = Chief Medical Officer
 id-card-access-level-medical = Medical
 id-card-access-level-chemistry = Chemistry
 id-card-access-level-paramedic = Paramedic
+id-card-access-level-morgue = Morgue
 
 id-card-access-level-quartermaster = Quartermaster
 id-card-access-level-cargo = Cargo
@@ -36,6 +37,8 @@ id-card-access-level-janitor = Janitor
 id-card-access-level-theatre = Theatre
 id-card-access-level-chapel = Chapel
 id-card-access-level-lawyer = Lawyer
+id-card-access-level-clown = Clown
+id-card-access-level-mime = Mime
 
 id-card-access-level-maintenance = Maintenance
 

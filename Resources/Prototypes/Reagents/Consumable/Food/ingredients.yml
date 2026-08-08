@@ -13,8 +13,8 @@
         Sugar: 0.4
         Nutriment: 0.2
       effects:
-      - !type:SatiateThirst
-        factor: -0.2 #its flour
+        - !type:SatiateThirst
+          factor: -0.2 #its flour
 
 - type: reagent
   id: Cornmeal
@@ -29,8 +29,8 @@
       metabolites:
         Nutriment: 0.2
       effects:
-      - !type:SatiateThirst
-        factor: -0.2 #its cornflour
+        - !type:SatiateThirst
+          factor: -0.2 #its cornflour
 
 - type: reagent
   id: Oats
@@ -95,22 +95,22 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:Emote
-        emote: Cough
-        showInChat: true
-        showInGuidebook: true
-        probability: 0.05
+        - !type:Emote
+          emote: Cough
+          showInChat: true
+          showInGuidebook: true
+          probability: 0.05
   reactiveEffects:
     Acidic:
-      methods: [ Touch ]
+      methods: [Touch]
       effects:
-      - !type:Emote
-        emote: Cough
-        showInGuidebook: true
-        conditions:
-        - !type:BreathingCondition
-        - !type:InternalsCondition
-          inverted: true
+        - !type:Emote
+          emote: Cough
+          showInGuidebook: true
+          conditions:
+            - !type:BreathingCondition
+            - !type:InternalsCondition
+              inverted: true
 
 - type: reagent
   id: Vinegar
@@ -127,12 +127,12 @@
         Water: 0.8
         Vitamin: 0.2
       effects:
-      - !type:Vomit
-        probability: 0.1
-        conditions:
-          - !type:ReagentCondition
-            reagent: Vinegar
-            min: 6
+        - !type:Vomit
+          probability: 0.1
+          conditions:
+            - !type:ReagentCondition
+              reagent: Vinegar
+              min: 6
 
 - type: reagent
   id: Rice
@@ -177,7 +177,7 @@
   boilingPoint: 300.0
   meltingPoint: -16.0
   tileReactions:
-  - !type:FlammableTileReaction {}
+    - !type:FlammableTileReaction {}
 
 - type: reagent
   id: CapsaicinOil
@@ -196,20 +196,20 @@
       metabolites:
         Nutriment: 1.5
       effects:
-      - !type:AdjustTemperature
-        amount: 250 # thermal energy, not temp
-      - !type:HealthChange
-        conditions:
-          - !type:ReagentCondition
-            reagent: CapsaicinOil
-            min: 5
-        damage:
-          types:
-            Caustic: 1
-      - !type:PopupMessage
-        type: Local
-        messages: [ "capsaicin-effect-light-burn" ]
-        probability: 0.2
+        - !type:AdjustTemperature
+          amount: 250 # thermal energy, not temp
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: CapsaicinOil
+              min: 5
+          damage:
+            types:
+              Caustic: 1
+        - !type:PopupMessage
+          type: Local
+          messages: ["capsaicin-effect-light-burn"]
+          probability: 0.2
 
 - type: reagent
   id: CocoaPowder #Candy and chocolate
@@ -223,19 +223,19 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateHunger
-        conditions:
-        - !type:ReagentCondition #Only satiates when eaten with nutriment
-          reagent: Nutriment
-          min: 0.1
-        factor: 1
+        - !type:SatiateHunger
+          conditions:
+            - !type:ReagentCondition #Only satiates when eaten with nutriment
+              reagent: Nutriment
+              min: 0.1
+          factor: 1
   plantMetabolism:
-  - !type:PlantAdjustNutrition
-    amount: 0.1
-  - !type:PlantAdjustWeeds
-    amount: 2
-  - !type:PlantAdjustPests
-    amount: 2
+    - !type:PlantAdjustNutrition
+      amount: 0.1
+    - !type:PlantAdjustWeeds
+      amount: 2
+    - !type:PlantAdjustPests
+      amount: 2
 
 - type: reagent
   id: Butter
@@ -266,8 +266,8 @@
       metabolites:
         Nutriment: 0.2
       effects:
-      - !type:SatiateThirst
-        factor: -0.2
+        - !type:SatiateThirst
+          factor: -0.2
 
 - type: reagent
   id: FrostOil
@@ -282,17 +282,17 @@
       metabolites:
         Nutriment: 1.5
       effects:
-      - !type:AdjustTemperature
-        amount: -250 # thermal energy, not temp
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: FrostOil
-          min: 5
-        damage:
-          types:
-            Cold: 1
-      - !type:PopupMessage
-        type: Local
-        messages: [ "frost-oil-effect-light-cold" ]
-        probability: 0.2
+        - !type:AdjustTemperature
+          amount: -250 # thermal energy, not temp
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: FrostOil
+              min: 5
+          damage:
+            types:
+              Cold: 1
+        - !type:PopupMessage
+          type: Local
+          messages: ["frost-oil-effect-light-cold"]
+          probability: 0.2

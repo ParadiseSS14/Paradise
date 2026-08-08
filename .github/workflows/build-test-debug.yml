@@ -61,7 +61,7 @@ jobs:
 
     - name: Archive NUnit3 test results.
       if: always()
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: nunit3-results-${{ matrix.os }}
         path: test_results/*

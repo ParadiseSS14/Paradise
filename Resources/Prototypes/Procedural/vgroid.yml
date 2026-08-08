@@ -100,49 +100,49 @@
 - type: dungeonConfig
   id: VGRoidBlob
   layers:
-  - !type:NoiseDistanceDunGen
-    size: 272, 272
-    distanceConfig: !type:DunGenEuclideanSquaredDistance
-      blendWeight: 0.80
-    layers:
-    - tile: FloorAsteroidSand
-      threshold: 0.50
-      noise:
-        frequency: 0.010
-        noiseType: OpenSimplex2
-        fractalType: FBm
-        octaves: 5
-        lacunarity: 2
-        gain: 0.5
+    - !type:NoiseDistanceDunGen
+      size: 272, 272
+      distanceConfig: !type:DunGenEuclideanSquaredDistance
+        blendWeight: 0.80
+      layers:
+        - tile: FloorAsteroidSand
+          threshold: 0.50
+          noise:
+            frequency: 0.010
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 5
+            lacunarity: 2
+            gain: 0.5
 
 - type: dungeonConfig
   id: VGRoidSmaller
   minOffset: 40
   maxOffset: 60
   layers:
-  - !type:NoiseDistanceDunGen
-    size: 150, 150
-    distanceConfig: !type:DunGenEuclideanSquaredDistance
-    layers:
-    - tile: FloorAsteroidSand
-      threshold: 0.50
-      noise:
-        frequency: 0.080
-        noiseType: OpenSimplex2
-        fractalType: FBm
-        octaves: 5
-        lacunarity: 1.5
-        gain: 0.5
+    - !type:NoiseDistanceDunGen
+      size: 150, 150
+      distanceConfig: !type:DunGenEuclideanSquaredDistance
+      layers:
+        - tile: FloorAsteroidSand
+          threshold: 0.50
+          noise:
+            frequency: 0.080
+            noiseType: OpenSimplex2
+            fractalType: FBm
+            octaves: 5
+            lacunarity: 1.5
+            gain: 0.5
 
 - type: dungeonConfig
   id: VGRoidExterior
   reserveTiles: true
   layers:
-  - !type:PrototypeDunGen
-    proto: VGRoidExteriorDungeons
-  - !type:SplineDungeonConnectorDunGen
-    tile: PlatingAsteroid
-    widenTile: FloorAsteroidSand
+    - !type:PrototypeDunGen
+      proto: VGRoidExteriorDungeons
+    - !type:SplineDungeonConnectorDunGen
+      tile: PlatingAsteroid
+      widenTile: FloorAsteroidSand
 
 - type: dungeonConfig
   id: VGRoidExteriorDungeons
@@ -150,47 +150,47 @@
   minCount: 2
   maxCount: 3
   layers:
-  - !type:ExteriorDunGen
-    proto: Experiment
-  - !type:EntityTableDunGen
-    minCount: 25
-    maxCount: 40
-    perDungeon: true
-    ignoreReserved: true
-    table: !type:NestedSelector
-      tableId: SalvageScrapSpawnerCommon
-  - !type:EntityTableDunGen
-    minCount: 30
-    maxCount: 40
-    perDungeon: true
-    ignoreReserved: true
-    table: !type:NestedSelector
-      tableId: SalvageScrapSpawnerValuable
-  - !type:EntityTableDunGen
-    minCount: 30
-    maxCount: 45
-    perDungeon: true
-    ignoreReserved: true
-    table: !type:NestedSelector
-      tableId: SalvageTreasureSpawnerCommon
-  - !type:EntityTableDunGen
-    minCount: 30
-    maxCount: 45
-    perDungeon: true
-    ignoreReserved: true
-    table: !type:NestedSelector
-      tableId: SalvageTreasureSpawnerValuable
-  - !type:MobsDunGen
-    minCount: 8
-    maxCount: 15
-    contents: VGRoidExteriorDungeonsMobs
+    - !type:ExteriorDunGen
+      proto: Experiment
+    - !type:EntityTableDunGen
+      minCount: 25
+      maxCount: 40
+      perDungeon: true
+      ignoreReserved: true
+      table: !type:NestedSelector
+        tableId: SalvageScrapSpawnerCommon
+    - !type:EntityTableDunGen
+      minCount: 30
+      maxCount: 40
+      perDungeon: true
+      ignoreReserved: true
+      table: !type:NestedSelector
+        tableId: SalvageScrapSpawnerValuable
+    - !type:EntityTableDunGen
+      minCount: 30
+      maxCount: 45
+      perDungeon: true
+      ignoreReserved: true
+      table: !type:NestedSelector
+        tableId: SalvageTreasureSpawnerCommon
+    - !type:EntityTableDunGen
+      minCount: 30
+      maxCount: 45
+      perDungeon: true
+      ignoreReserved: true
+      table: !type:NestedSelector
+        tableId: SalvageTreasureSpawnerValuable
+    - !type:MobsDunGen
+      minCount: 8
+      maxCount: 15
+      contents: VGRoidExteriorDungeonsMobs
 
 - type: entityTable
   id: VGRoidExteriorDungeonsMobs
   table: !type:GroupSelector
     children:
-    - id: SalvageSpawnerMobMiningAsteroid
-      amount: 1
+      - id: SalvageSpawnerMobMiningAsteroid
+        amount: 1
 
 #- type: dungeonConfig
 #  id: VGRoidInteriorDungeons
@@ -202,30 +202,30 @@
   id: VGRoidSmallPaths
   reserveTiles: true
   layers:
-  - !type:ReplaceTileDunGen
-    layers:
-    - tile: FloorAsteroidSand
-      threshold: 0.75
-      noise:
-        frequency: 0.040
-        noiseType: OpenSimplex2
-        fractalType: Ridged
-        lacunarity: 1.5
-        octaves: 2
-        gain: 2.0
-  # Mobs
-  # If you want exterior dungeon mobs add them under the prototype.
-  - !type:MobsDunGen
-    minCount: 25
-    maxCount: 35
-    contents: VGRoidSmallPathsMobs
+    - !type:ReplaceTileDunGen
+      layers:
+        - tile: FloorAsteroidSand
+          threshold: 0.75
+          noise:
+            frequency: 0.040
+            noiseType: OpenSimplex2
+            fractalType: Ridged
+            lacunarity: 1.5
+            octaves: 2
+            gain: 2.0
+    # Mobs
+    # If you want exterior dungeon mobs add them under the prototype.
+    - !type:MobsDunGen
+      minCount: 25
+      maxCount: 35
+      contents: VGRoidSmallPathsMobs
 
 - type: entityTable
   id: VGRoidSmallPathsMobs
   table: !type:GroupSelector
     children:
-    - id: SalvageSpawnerMobMiningAsteroid
-      amount: 1
+      - id: SalvageSpawnerMobMiningAsteroid
+        amount: 1
 
 #- type: dungeonConfig
 #  id: VGRoidOres
@@ -234,7 +234,7 @@
 - type: dungeonConfig
   id: VGRoidFill
   layers:
-  - !type:FillGridDunGen
-    entity: IronRock
-    allowedTiles:
-    - FloorAsteroidSand
+    - !type:FillGridDunGen
+      entity: IronRock
+      allowedTiles:
+        - FloorAsteroidSand

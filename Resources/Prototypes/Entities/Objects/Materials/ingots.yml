@@ -4,16 +4,16 @@
   id: IngotBase
   description: A heavy metal ingot stamped with the Nanotrasen logo.
   components:
-  - type: Sprite
-    sprite: Objects/Materials/ingots.rsi
-  - type: Item
-    sprite: Objects/Materials/ingots.rsi
-  - type: Tag
-    tags:
-    - Ingot
-    - ConstructionMaterial
-  - type: Damageable
-    damageModifierSet: Metallic
+    - type: Sprite
+      sprite: Objects/Materials/ingots.rsi
+    - type: Item
+      sprite: Objects/Materials/ingots.rsi
+    - type: Tag
+      tags:
+        - Ingot
+        - ConstructionMaterial
+    - type: Damageable
+      damageModifierSet: Metallic
 
 - type: entity
   parent: IngotBase
@@ -21,28 +21,28 @@
   name: gold bar
   suffix: Full
   components:
-  - type: PhysicalComposition
-    materialComposition:
-      Gold: 100
-  - type: Stack
-    stackType: Gold
-    baseLayer: base
-    layerStates:
-    - gold
-    - gold_2
-    - gold_3
-  - type: Sprite
-    state: gold_3
-    layers:
-    - state: gold_3
-      map: ["base"]
-  - type: Item
-    heldPrefix: gold
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Gold
-        Quantity: 10
+    - type: PhysicalComposition
+      materialComposition:
+        Gold: 100
+    - type: Stack
+      stackType: Gold
+      baseLayer: base
+      layerStates:
+        - gold
+        - gold_2
+        - gold_3
+    - type: Sprite
+      state: gold_3
+      layers:
+        - state: gold_3
+          map: ["base"]
+    - type: Item
+      heldPrefix: gold
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Gold
+            Quantity: 10
 
 - type: entity
   parent: IngotGold
@@ -50,10 +50,10 @@
   name: gold bar
   suffix: Single
   components:
-  - type: Sprite
-    state: gold
-  - type: Stack
-    count: 1
+    - type: Sprite
+      state: gold
+    - type: Stack
+      count: 1
 
 - type: entity
   parent: IngotBase
@@ -61,28 +61,28 @@
   name: silver bar
   suffix: Full
   components:
-  - type: PhysicalComposition
-    materialComposition:
-      Silver: 100
-  - type: Stack
-    stackType: Silver
-    baseLayer: base
-    layerStates:
-    - silver
-    - silver_2
-    - silver_3
-  - type: Sprite
-    state: silver_3
-    layers:
-    - state: silver_3
-      map: ["base"]
-  - type: Item
-    heldPrefix: silver
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Silver
-        Quantity: 10
+    - type: PhysicalComposition
+      materialComposition:
+        Silver: 100
+    - type: Stack
+      stackType: Silver
+      baseLayer: base
+      layerStates:
+        - silver
+        - silver_2
+        - silver_3
+    - type: Sprite
+      state: silver_3
+      layers:
+        - state: silver_3
+          map: ["base"]
+    - type: Item
+      heldPrefix: silver
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Silver
+            Quantity: 10
 
 - type: entity
   parent: IngotSilver
@@ -90,7 +90,7 @@
   name: silver bar
   suffix: Single
   components:
-  - type: Sprite
-    state: silver
-  - type: Stack
-    count: 1
+    - type: Sprite
+      state: silver
+    - type: Stack
+      count: 1

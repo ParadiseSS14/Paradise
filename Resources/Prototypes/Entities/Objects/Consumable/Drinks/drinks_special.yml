@@ -4,30 +4,29 @@
   name: shot glass
   description: Perfect for slamming down onto the table angrily.
   components:
-  - type: Solution
-    solution:
-      maxVol: 5 # Shot glass translates to about 5.3u so we round down because Nanotrasen is cheap.
-  - type: Item
-    size: Tiny
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shotglass.rsi
-  - type: SolutionContainerVisuals
-    maxFillLevels: 2
-    inHandsMaxFillLevels: 1
-  - type: FitsInDispenser
-    solution: drink
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 5
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlass:
-            min: 0
-            max: 1
-        transferForensics: true
+    - type: Solution
+      solution:
+        maxVol: 5 # Shot glass translates to about 5.3u so we round down because Nanotrasen is cheap.
+    - type: Item
+      size: Tiny
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shotglass.rsi
+    - type: SolutionContainerVisuals
+      maxFillLevels: 2
+      inHandsMaxFillLevels: 1
+    - type: FitsInDispenser
+      solution: drink
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 5
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardGlass:
+                  min: 0
+                  max: 1
+              transferForensics: true
 
 - type: entity
   parent: [DrinkBaseMaterialMetal, SolutionLarge, DrinkBase]
@@ -35,37 +34,37 @@
   name: ice bucket
   description: A special bucket of refreshy ice. Prohibited use for challenge with the same name!
   components:
-  - type: Item
-    size: Large
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Ice
-        Quantity: 240
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/icebucket.rsi
-    state: icon
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 75
+    - type: Item
+      size: Large
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Ice
+            Quantity: 240
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/icebucket.rsi
+      state: icon
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 75
 
 - type: entity
   parent: [DrinkBaseMaterialPorcelain, SolutionNormal, DrinkBase]
   id: DrinkTeapot
-  name: teapot  # short and stout
+  name: teapot # short and stout
   description: An elegant teapot. It simply oozes class.
   components:
-  - type: Item
-    size: Normal
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Tea
-        Quantity: 120
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/teapot.rsi
-  - type: FitsInDispenser
-    solution: drink
+    - type: Item
+      size: Normal
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Tea
+            Quantity: 120
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/teapot.rsi
+    - type: FitsInDispenser
+      solution: drink
 
 # Probably shouldn't be here
 # Also probably shouldn't let you put the cola back in, and should spawn deadly plastic rings after removing the last one
@@ -74,48 +73,48 @@
   id: DrinkCanPack
   name: 6pack
   components:
-  - type: Sprite
-    sprite: Objects/Misc/6pack.rsi
-    layers:
-    - state: plastic-thingy
-    - state: 6pack1
-      map: ["6pack1"]
-    - state: 6pack2
-      map: ["6pack2"]
-    - state: 6pack3
-      map: ["6pack3"]
-    - state: 6pack4
-      map: ["6pack4"]
-    - state: 6pack5
-      map: ["6pack5"]
-    - state: 6pack6
-      map: ["6pack6"]
-  - type: Item
-    size: Normal
-  - type: Storage
-    grid:
-    - 0,0,2,3
-    whitelist:
-      tags:
-      - Cola
-    hideStackVisualsWhenClosed: false
-  - type: EntityTableContainerFill
-    containers:
-      storagebase:
-        id: DrinkColaCan
-        amount: 6
-  - type: ItemCounter
-    count:
-      tags: [Cola]
-    composite: true
-    layerStates:
-    - 6pack1
-    - 6pack2
-    - 6pack3
-    - 6pack4
-    - 6pack5
-    - 6pack6
-  - type: Appearance
+    - type: Sprite
+      sprite: Objects/Misc/6pack.rsi
+      layers:
+        - state: plastic-thingy
+        - state: 6pack1
+          map: ["6pack1"]
+        - state: 6pack2
+          map: ["6pack2"]
+        - state: 6pack3
+          map: ["6pack3"]
+        - state: 6pack4
+          map: ["6pack4"]
+        - state: 6pack5
+          map: ["6pack5"]
+        - state: 6pack6
+          map: ["6pack6"]
+    - type: Item
+      size: Normal
+    - type: Storage
+      grid:
+        - 0,0,2,3
+      whitelist:
+        tags:
+          - Cola
+      hideStackVisualsWhenClosed: false
+    - type: EntityTableContainerFill
+      containers:
+        storagebase:
+          id: DrinkColaCan
+          amount: 6
+    - type: ItemCounter
+      count:
+        tags: [Cola]
+      composite: true
+      layerStates:
+        - 6pack1
+        - 6pack2
+        - 6pack3
+        - 6pack4
+        - 6pack5
+        - 6pack6
+    - type: Appearance
 
 # Bartender tools
 
@@ -125,28 +124,28 @@
   name: shaker
   description: The trusty mixing buddy of the bartender.
   components:
-  - type: Solution
-    solution:
-      maxVol: 90 # Shakers are often about 700ml give or take and I like weird sizes so.
-  - type: FitsInDispenser
-    solution: drink
-  - type: ExaminableSolution
-    heldOnly: true # Opaque, can't see inside from a distance
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shaker.rsi
-    state: icon
-  - type: Item
-    sprite: Objects/Consumable/Drinks/shaker.rsi
-    shape:
-    - 0,0,0,2 # 3 tall
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 50
-  - type: Shakeable
-  - type: ReactionMixer
-    mixerType: None
-    reactionTypes:
-    - Shake
+    - type: Solution
+      solution:
+        maxVol: 90 # Shakers are often about 700ml give or take and I like weird sizes so.
+    - type: FitsInDispenser
+      solution: drink
+    - type: ExaminableSolution
+      heldOnly: true # Opaque, can't see inside from a distance
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shaker.rsi
+      state: icon
+    - type: Item
+      sprite: Objects/Consumable/Drinks/shaker.rsi
+      shape:
+        - 0,0,0,2 # 3 tall
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 50
+    - type: Shakeable
+    - type: ReactionMixer
+      mixerType: None
+      reactionTypes:
+        - Shake
 
 - type: entity
   parent: DrinkShaker
@@ -154,14 +153,14 @@
   name: golden shaker
   description: A gold-plated shaker given as a token of appreciation for years of service. It doesn't make the drinks taste any different.
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shaker_gold.rsi
-  - type: Item
-    sprite: Objects/Consumable/Drinks/shaker_gold.rsi
-  - type: PhysicalComposition
-    materialComposition:
-      Gold: 10 # Gold plated, not solid gold
-      Steel: 40
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shaker_gold.rsi
+    - type: Item
+      sprite: Objects/Consumable/Drinks/shaker_gold.rsi
+    - type: PhysicalComposition
+      materialComposition:
+        Gold: 10 # Gold plated, not solid gold
+        Steel: 40
 
 - type: entity
   parent: [DrinkBaseMaterialMetal, DrinkBase]
@@ -169,26 +168,26 @@
   name: jigger
   description: Like a shaker, but smaller. Used to control the amount of ingredients.
   components:
-  - type: Item
-    size: Tiny
-  - type: Solution
-    solution:
-      maxVol: 10 # Two shot glasses in size
-  - type: SolutionTransfer
-    canChangeTransferAmount: true
-    minTransferAmount: 1
-    maxTransferAmount: 20
-  - type: FitsInDispenser
-    solution: drink
-  - type: ExaminableSolution
-    heldOnly: true
-    exactVolume: true
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/jigger.rsi
-    state: icon
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 20
+    - type: Item
+      size: Tiny
+    - type: Solution
+      solution:
+        maxVol: 10 # Two shot glasses in size
+    - type: SolutionTransfer
+      canChangeTransferAmount: true
+      minTransferAmount: 1
+      maxTransferAmount: 20
+    - type: FitsInDispenser
+      solution: drink
+    - type: ExaminableSolution
+      heldOnly: true
+      exactVolume: true
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/jigger.rsi
+      state: icon
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 20
 
 - type: entity
   parent: [DrinkBaseMaterialStrongMetal, SolutionNormal, DrinkBase, DrinkVisualsFill]
@@ -196,15 +195,15 @@
   name: metal pitcher
   description: A stainless steel insulated pitcher. Everyone's best friend in the morning.
   components:
-  - type: Item
-    size: Normal
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/pitcher.rsi
-  - type: SolutionContainerVisuals
-    maxFillLevels: 6
-    inHandsMaxFillLevels: 2
-  - type: FitsInDispenser
-    solution: drink
+    - type: Item
+      size: Normal
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/pitcher.rsi
+    - type: SolutionContainerVisuals
+      maxFillLevels: 6
+      inHandsMaxFillLevels: 2
+    - type: FitsInDispenser
+      solution: drink
 
 # Weird empty shakes
 
@@ -212,61 +211,60 @@
   abstract: true
   parent: [DrinkBaseMaterialGlass, DrinkBase]
   id: DrinkShakeBase
-  description: ''
+  description: ""
   components:
-  - type: ExaminableSolution
-    solution: drink
-  - type: FitsInDispenser
-    solution: drink
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 5
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlass:
-            min: 1
-            max: 1
-        transferForensics: true
+    - type: ExaminableSolution
+      solution: drink
+    - type: FitsInDispenser
+      solution: drink
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 5
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardGlass:
+                  min: 1
+                  max: 1
+              transferForensics: true
 
 - type: entity
   parent: DrinkShakeBase
   id: DrinkShakeBlue
   name: blue milkshake
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shake-blue.rsi
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shake-blue.rsi
 
 - type: entity
   parent: DrinkShakeBase
   id: DrinkShakeEmpty
   name: shakeempty
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shake-empty.rsi
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shake-empty.rsi
 
 - type: entity
   parent: DrinkShakeBase
   id: DrinkShakeMeat
   name: meat shake
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shake-meat.rsi
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shake-meat.rsi
 
 - type: entity
   parent: DrinkShakeBase
   id: DrinkShakeRobo
   name: robo shake
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shake-robo.rsi
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shake-robo.rsi
 
 - type: entity
   parent: DrinkShakeBase
   id: DrinkShakeWhite
   name: white shake
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/shake-white.rsi
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/shake-white.rsi

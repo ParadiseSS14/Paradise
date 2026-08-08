@@ -137,7 +137,7 @@
     pocket1: WeaponDisabler
     pocket2: MagazinePistolSubMachineGunTopMounted
   inhand:
-  - WeaponSubMachineGunWt550
+    - WeaponSubMachineGunWt550
 
 - type: startingGear
   id: VisitorHOSAlt
@@ -155,7 +155,7 @@
     pocket1: WeaponDisabler
     pocket2: MagazinePistolSubMachineGunTopMounted
   inhand:
-  - WeaponSubMachineGunWt550
+    - WeaponSubMachineGunWt550
 
 - type: startingGear
   id: VisitorRD
@@ -230,7 +230,7 @@
     pocket1: WeaponPistolMk58
     pocket2: MagazinePistol
   inhand:
-  - FlashlightSeclite
+    - FlashlightSeclite
 
 - type: startingGear
   id: VisitorSecurityCadetAlt
@@ -248,7 +248,7 @@
     pocket1: WeaponPistolMk58
     pocket2: MagazinePistol
   inhand:
-  - FlashlightSeclite
+    - FlashlightSeclite
 
 - type: startingGear
   id: VisitorSecurityOfficer
@@ -265,7 +265,7 @@
     pocket1: WeaponPistolMk58
     pocket2: MagazinePistol
   inhand:
-  - FlashlightSeclite
+    - FlashlightSeclite
 
 - type: startingGear
   id: VisitorSecurityOfficerAlt
@@ -283,7 +283,7 @@
     pocket1: WeaponPistolMk58
     pocket2: MagazinePistol
   inhand:
-  - FlashlightSeclite
+    - FlashlightSeclite
 
 - type: startingGear
   id: VisitorDetective
@@ -301,7 +301,7 @@
     pocket1: ForensicScanner
     pocket2: ForensicPad
   inhand:
-  - FlashlightSeclite
+    - FlashlightSeclite
 
 - type: startingGear
   id: VisitorDetectiveAlt
@@ -319,7 +319,7 @@
     pocket1: ForensicScanner
     pocket2: ForensicPad
   inhand:
-  - FlashlightSeclite
+    - FlashlightSeclite
 
 - type: startingGear
   id: VisitorWarden
@@ -338,8 +338,8 @@
     pocket1: WeaponDisabler
     pocket2: Zipties
   inhand:
-  - FlashlightSeclite
-  - WeaponShotgunKammerer
+    - FlashlightSeclite
+    - WeaponShotgunKammerer
 
 - type: startingGear
   id: VisitorWardenAlt
@@ -357,8 +357,8 @@
     pocket1: WeaponDisabler
     pocket2: Zipties
   inhand:
-  - FlashlightSeclite
-  - WeaponShotgunKammerer
+    - FlashlightSeclite
+    - WeaponShotgunKammerer
 
 # Cargo
 
@@ -374,7 +374,7 @@
     pocket1: AppraisalTool
     pocket2: DrinkColaCan
   inhand:
-  - DrinkRumBottleFull
+    - DrinkRumBottleFull
 
 - type: startingGear
   id: VisitorCargoTechAlt
@@ -389,8 +389,8 @@
     pocket2: SpaceCash500
     outerClothing: ClothingOuterWinterCargo
   inhand:
-  - FoodBoxPizzaFilled
-  - KnifePlastic
+    - FoodBoxPizzaFilled
+    - KnifePlastic
 
 - type: startingGear
   id: VisitorSalvageSpecialist
@@ -405,7 +405,7 @@
     pocket1: SurvivalKnife
     pocket2: HandheldGPSBasic
   inhand:
-  - FoodSnackBoritos
+    - FoodSnackBoritos
 
 - type: startingGear
   id: VisitorSalvageSpecialistAlt
@@ -421,7 +421,7 @@
     pocket1: SurvivalKnife
     pocket2: HandheldGPSBasic
   inhand:
-  - Shovel
+    - Shovel
 
 # Engineering
 
@@ -440,7 +440,7 @@
     suitstorage: AirTankFilled
     pocket1: CrowbarRed
   inhand:
-  - FireExtinguisher
+    - FireExtinguisher
 
 - type: startingGear
   id: VisitorAtmosTechAlt
@@ -459,7 +459,7 @@
     pocket1: FlashlightLantern
     pocket2: CrowbarRed
   inhand:
-  - FoodSnackBoritos
+    - FoodSnackBoritos
 
 - type: startingGear
   id: VisitorTechnicalAssistant
@@ -475,7 +475,7 @@
     pocket1: LightReplacer
     pocket2: Welder
   inhand:
-  - CableApcStack
+    - CableApcStack
 
 - type: startingGear
   id: VisitorTechnicalAssistantAlt
@@ -493,7 +493,7 @@
     pocket1: HolofanProjector
     pocket2: GasAnalyzer
   inhand:
-  - SheetSteel
+    - SheetSteel
 
 - type: startingGear
   id: VisitorEngineer
@@ -511,8 +511,8 @@
     pocket1: RCD
     pocket2: RCDAmmo
   inhand:
-  - trayScanner
-  - CableApcStack
+    - trayScanner
+    - CableApcStack
 
 - type: startingGear
   id: VisitorEngineerAlt
@@ -529,8 +529,8 @@
     pocket1: RCD
     pocket2: RCDAmmo
   inhand:
-  - SheetSteel
-  - SheetGlass
+    - SheetSteel
+    - SheetGlass
 
 # Medical
 
@@ -549,8 +549,8 @@
     pocket1: PillCanisterRandom
     pocket2: PillCanisterRandom
   inhand:
-  - PillCanisterRandom
-  - PillCanisterRandom
+    - PillCanisterRandom
+    - PillCanisterRandom
 
 - type: startingGear
   id: VisitorChemistAlt
@@ -567,8 +567,8 @@
     pocket1: PillCanisterRandom
     pocket2: PillCanisterRandom
   inhand:
-  - PillCanisterRandom
-  - PillCanisterRandom
+    - PillCanisterRandom
+    - PillCanisterRandom
 
 - type: startingGear
   id: VisitorGeneticist
@@ -586,7 +586,7 @@
     pocket1: PillCanisterCharcoal
     pocket2: PillCanisterRandom
   inhand:
-  - SyringePhalanximine
+    - SyringePhalanximine
 
 - type: startingGear
   id: VisitorGeneticistAlt
@@ -604,7 +604,7 @@
     pocket1: PillCanisterHyronalin
     pocket2: PillCanisterRandom
   inhand:
-  - SyringeBicaridine
+    - SyringeBicaridine
 
 - type: startingGear
   id: VisitorVirologist
@@ -622,7 +622,7 @@
     pocket1: PillCanisterTricordrazine
     pocket2: PillCanisterRandom
   inhand:
-  - SyringeSigynate
+    - SyringeSigynate
 
 - type: startingGear
   id: VisitorVirologistAlt
@@ -641,7 +641,7 @@
     pocket1: PillCanisterTricordrazine
     pocket2: PillCanisterRandom
   inhand:
-  - SyringeEphedrine
+    - SyringeEphedrine
 
 - type: startingGear
   id: VisitorMedicalDoctor
@@ -660,7 +660,7 @@
     pocket1: PillCanisterTricordrazine
     pocket2: PillCanisterDermaline
   inhand:
-  - SyringeInaprovaline
+    - SyringeInaprovaline
 
 - type: startingGear
   id: VisitorMedicalDoctorAlt
@@ -679,7 +679,7 @@
     pocket1: PillCanisterTricordrazine
     pocket2: PillCanisterBicaridine
   inhand:
-  - SyringeSaline
+    - SyringeSaline
 
 - type: startingGear
   id: VisitorDentist
@@ -688,7 +688,7 @@
     shoes: ClothingShoesColorBlue
     gloves: ClothingHandsGlovesLatex
     head: ClothingHeadHatSurgcapBlue
-#    mask: ClothingMaskBreathMedical # right now this is broken for vox, but maybe some day.
+    #    mask: ClothingMaskBreathMedical # right now this is broken for vox, but maybe some day.
     id: VisitorPDA
     belt: ClothingBeltStorageWaistbag
     back: NitrousOxideTankFilled
@@ -697,8 +697,8 @@
     pocket1: Scalpel
     pocket2: Gauze
   inhand:
-  - Cautery
-  - Drill
+    - Cautery
+    - Drill
 
 - type: startingGear
   id: VisitorPsychologist
@@ -715,8 +715,8 @@
     pocket1: WhoopieCushion
     pocket2: PillSpaceDrugs
   inhand:
-  - CigarCase
-  - Lighter
+    - CigarCase
+    - Lighter
 
 - type: startingGear
   id: VisitorPsychologistAlt
@@ -732,8 +732,8 @@
     pocket1: BulletFoam
     pocket2: PillSpaceDrugs
   inhand:
-  - FoamCrossbow
-  - DrinkWhiskeyBottleFull
+    - FoamCrossbow
+    - DrinkWhiskeyBottleFull
 
 - type: startingGear
   id: VisitorParamedic
@@ -752,8 +752,8 @@
     pocket1: CombatMedipen
     pocket2: Brutepack
   inhand:
-  - SyringeTranexamicAcid
-  - Gauze
+    - SyringeTranexamicAcid
+    - Gauze
 
 - type: startingGear
   id: VisitorParamedicAlt
@@ -772,8 +772,8 @@
     pocket1: CombatMedipen
     pocket2: Brutepack
   inhand:
-  - AntiPoisonMedipen
-  - Gauze
+    - AntiPoisonMedipen
+    - Gauze
 
 - type: startingGear
   id: VisitorMedicalIntern
@@ -789,8 +789,8 @@
     pocket1: Ointment
     pocket2: Brutepack
   inhand:
-  - Bloodpack
-  - Gauze
+    - Bloodpack
+    - Gauze
 
 - type: startingGear
   id: VisitorMedicalInternAlt
@@ -806,8 +806,8 @@
     pocket1: Ointment
     pocket2: Brutepack
   inhand:
-  - Bloodpack
-  - Gauze
+    - Bloodpack
+    - Gauze
 
 - type: startingGear
   id: VisitorScrubsPurple
@@ -824,8 +824,8 @@
     pocket1: RegenerativeMesh
     pocket2: PillCanisterBicaridine
   inhand:
-  - ScalpelAdvanced
-  - MedicatedSuture
+    - ScalpelAdvanced
+    - MedicatedSuture
 
 - type: startingGear
   id: VisitorScrubsGreen
@@ -842,8 +842,8 @@
     pocket1: RegenerativeMesh
     pocket2: PillCanisterBicaridine
   inhand:
-  - ScalpelAdvanced
-  - MedicatedSuture
+    - ScalpelAdvanced
+    - MedicatedSuture
 
 - type: startingGear
   id: VisitorScrubsBlue
@@ -860,8 +860,8 @@
     pocket1: RegenerativeMesh
     pocket2: PillCanisterBicaridine
   inhand:
-  - ScalpelAdvanced
-  - MedicatedSuture
+    - ScalpelAdvanced
+    - MedicatedSuture
 
 # Science
 
@@ -877,7 +877,7 @@
     ears: ClothingHeadsetScience
     eyes: ClothingEyesGlasses
   inhand:
-  - NetworkConfigurator
+    - NetworkConfigurator
 
 - type: startingGear
   id: VisitorResearchAssistantAlt
@@ -891,7 +891,7 @@
     ears: ClothingHeadsetScience
     eyes: ClothingEyesGlasses
   inhand:
-  - DrinkHotCoffee
+    - DrinkHotCoffee
 
 - type: startingGear
   id: VisitorScientist
@@ -905,7 +905,7 @@
     ears: ClothingHeadsetScience
     eyes: ClothingEyesGlasses
   inhand:
-  - DrinkHotCoffee
+    - DrinkHotCoffee
 
 - type: startingGear
   id: VisitorScientistAlt
@@ -920,7 +920,7 @@
     ears: ClothingHeadsetScience
     eyes: ClothingEyesGlasses
   inhand:
-  - AnomalyScanner
+    - AnomalyScanner
 
 # Civilian
 
@@ -964,8 +964,7 @@
     back: ClothingBackpackDuffelHydroponics
     ears: ClothingHeadsetService
   inhand:
-  - HydroponicsToolScythe
-
+    - HydroponicsToolScythe
 
 - type: startingGear
   id: VisitorBotanistAlt
@@ -1037,7 +1036,7 @@
     jumpsuit: ClothingUniformJumpsuitChef
     shoes: ClothingShoesChef
     head: ClothingHeadHatChef
-#    mask: ClothingMaskItalianMoustache # right now this is broken for vox, so its inhand.
+    #    mask: ClothingMaskItalianMoustache # right now this is broken for vox, so its inhand.
     id: VisitorPDA
     back: ClothingBackpackSatchel
     belt: ClothingBeltChefFilled
@@ -1046,8 +1045,8 @@
     pocket1: ButchCleaver
     pocket2: BookHowToCookForFortySpaceman
   inhand:
-  - ClothingMaskItalianMoustache
-  - DrinkWineBottleFull
+    - ClothingMaskItalianMoustache
+    - DrinkWineBottleFull
 
 - type: startingGear
   id: VisitorChefAlt
@@ -1055,7 +1054,7 @@
     jumpsuit: ClothingUniformJumpsuitChef
     shoes: ClothingShoesColorBlack
     head: ClothingHeadHatChef
-#    mask: ClothingMaskItalianMoustache # right now this is broken for vox, so its inhand.
+    #    mask: ClothingMaskItalianMoustache # right now this is broken for vox, so its inhand.
     id: VisitorPDA
     back: ClothingBackpack
     belt: ClothingBeltChefFilled
@@ -1064,8 +1063,8 @@
     pocket1: RollingPin
     pocket2: BookHowToCookForFortySpaceman
   inhand:
-  - ClothingMaskItalianMoustache
-  - FoodCheese
+    - ClothingMaskItalianMoustache
+    - FoodCheese
 
 - type: startingGear
   id: VisitorClown
@@ -1092,8 +1091,8 @@
     ears: ClothingHeadsetService
     outerClothing: ClothingOuterWinterJani
   inhand:
-  - MopItem
-  - Bucket
+    - MopItem
+    - Bucket
 
 - type: startingGear
   id: VisitorJanitorAlt
@@ -1108,8 +1107,8 @@
     ears: ClothingHeadsetService
     outerClothing: ClothingOuterBioJanitor
   inhand:
-  - MopItem
-  - Bucket
+    - MopItem
+    - Bucket
 
 - type: startingGear
   id: VisitorLawyerAltA
@@ -1124,7 +1123,7 @@
     pocket1: RubberStampLawyer
     pocket2: LuxuryPen
   inhand:
-  - BriefcaseBrownFilled
+    - BriefcaseBrownFilled
 
 - type: startingGear
   id: VisitorLawyerAltB
@@ -1139,7 +1138,7 @@
     pocket1: RubberStampLawyer
     pocket2: SmokingPipeFilledTobacco
   inhand:
-  - BriefcaseBrownFilled
+    - BriefcaseBrownFilled
 
 - type: startingGear
   id: VisitorLawyerAltC
@@ -1155,7 +1154,7 @@
     pocket1: RubberStampLawyer
     pocket2: SmokingPipeFilledTobacco
   inhand:
-  - BriefcaseBrownFilled
+    - BriefcaseBrownFilled
 
 - type: startingGear
   id: VisitorLawyerAltD
@@ -1173,7 +1172,7 @@
     pocket1: RubberStampLawyer
     pocket2: LuxuryPen
   inhand:
-  - BriefcaseBrownFilled
+    - BriefcaseBrownFilled
 
 - type: startingGear
   id: VisitorLawyerAltE
@@ -1189,7 +1188,7 @@
     pocket1: RubberStampLawyer
     pocket2: LuxuryPen
   inhand:
-  - BriefcaseBrownFilled
+    - BriefcaseBrownFilled
 
 - type: startingGear
   id: VisitorLawyerCentcom
@@ -1207,7 +1206,7 @@
     pocket1: RubberStampLawyer
     pocket2: LuxuryPen
   inhand:
-  - BriefcaseBrownFilled
+    - BriefcaseBrownFilled
 
 - type: startingGear
   id: VisitorLibrarian
@@ -1223,7 +1222,7 @@
     pocket1: BookJanitorTale
     pocket2: BookRandomStory
   inhand:
-  - Cane
+    - Cane
 
 - type: startingGear
   id: VisitorLibrarianAlt
@@ -1239,7 +1238,7 @@
     pocket1: BookSun
     pocket2: BookRandomStory
   inhand:
-  - BoxFolderClipboardThreePapers
+    - BoxFolderClipboardThreePapers
 
 - type: startingGear
   id: VisitorMusicianFancyAltA
@@ -1253,7 +1252,7 @@
     pocket1: DrinkGrapeCan
     pocket2: FoodSnackBoritos
   inhand:
-  - TromboneInstrument
+    - TromboneInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltB
@@ -1267,7 +1266,7 @@
     pocket1: FoodSnackCheesie
     pocket2: DrinkShamblersJuiceCan
   inhand:
-  - SynthesizerInstrument
+    - SynthesizerInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltC
@@ -1281,7 +1280,7 @@
     pocket1: FoodSnackPistachios
     pocket2: DrinkNukieCan
   inhand:
-  - CelloInstrument
+    - CelloInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltD
@@ -1295,7 +1294,7 @@
     pocket1: DrinkSolDryCan
     pocket2: FoodSnackBoritos
   inhand:
-  - ViolinInstrument
+    - ViolinInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltE
@@ -1309,7 +1308,7 @@
     pocket1: DrinkEnergyDrinkCan
     pocket2: FoodSnackRaisins
   inhand:
-  - ViolaInstrument
+    - ViolaInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltF
@@ -1323,7 +1322,7 @@
     pocket1: FoodSnackSus
     pocket2: DrinkFourteenLokoCan
   inhand:
-  - ClarinetInstrument
+    - ClarinetInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltG
@@ -1337,7 +1336,7 @@
     pocket1: FoodSnackCnDs
     pocket2: DrinkDrGibbCan
   inhand:
-  - SaxophoneInstrument
+    - SaxophoneInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltH
@@ -1351,7 +1350,7 @@
     pocket1: FoodSnackChips
     pocket2: DrinkRootBeerCan
   inhand:
-  - FrenchHornInstrument
+    - FrenchHornInstrument
 
 - type: startingGear
   id: VisitorMusicianFancyAltI
@@ -1365,7 +1364,7 @@
     pocket1: BluntRainbow
     pocket2: DrinkGrapeCan
   inhand:
-  - TrumpetInstrument
+    - TrumpetInstrument
 
 - type: startingGear
   id: VisitorMusicianRelaxedAltA
@@ -1379,7 +1378,7 @@
     pocket1: BluntRainbow
     pocket2: DrinkNukieCan
   inhand:
-  - RockGuitarInstrument
+    - RockGuitarInstrument
 
 - type: startingGear
   id: VisitorMusicianRelaxedAltB
@@ -1393,7 +1392,7 @@
     pocket1: BluntRainbow
     pocket2: FoodSnackCheesie
   inhand:
-  - BanjoInstrument
+    - BanjoInstrument
 
 - type: startingGear
   id: VisitorMusicianRelaxedAltC
@@ -1407,7 +1406,7 @@
     pocket1: BluntRainbow
     pocket2: FoodSnackPistachios
   inhand:
-  - AcousticGuitarInstrument
+    - AcousticGuitarInstrument
 
 - type: startingGear
   id: VisitorMusicianRelaxedAltD
@@ -1421,7 +1420,7 @@
     pocket1: BluntRainbow
     pocket2: DrinkEnergyDrinkCan
   inhand:
-  - ElectricGuitarInstrument
+    - ElectricGuitarInstrument
 
 - type: startingGear
   id: VisitorMusicianRelaxedAltE
@@ -1434,7 +1433,7 @@
     pocket1: BluntRainbow
     pocket2: FoodSnackSus
   inhand:
-  - TrumpetInstrument
+    - TrumpetInstrument
 
 - type: startingGear
   id: VisitorMusicianRelaxedAltF
@@ -1449,7 +1448,7 @@
     pocket1: BluntRainbow
     pocket2: FoodSnackSus
   inhand:
-  - SaxophoneInstrument
+    - SaxophoneInstrument
 
 - type: startingGear
   id: VisitorMusicianMariachi
@@ -1465,7 +1464,7 @@
     pocket1: BluntRainbow
     pocket2: FoodSnackSus
   inhand:
-  - AcousticGuitarInstrument
+    - AcousticGuitarInstrument
 
 - type: startingGear
   id: VisitorMime
@@ -1498,7 +1497,7 @@
     pocket1: CrayonMime
     pocket2: RubberStampMime
   inhand:
-  - FoodBurgerMime
+    - FoodBurgerMime
 
 - type: startingGear
   id: VisitorReporter

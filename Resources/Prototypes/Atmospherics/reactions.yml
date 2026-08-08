@@ -26,7 +26,7 @@
     Nitrogen: 0.01
     Frezon: 0.01
   effects:
-  - !type:FrezonCoolantReaction {}
+    - !type:FrezonCoolantReaction {}
 
 - type: gasReaction
   id: FrezonProduction
@@ -37,7 +37,7 @@
     Nitrogen: 0.01
     Tritium: 0.01
   effects:
-  - !type:FrezonProductionReaction {}
+    - !type:FrezonProductionReaction {}
 
 - type: gasReaction
   id: AmmoniaOxygenReaction
@@ -47,7 +47,7 @@
     Oxygen: 0.01
     Ammonia: 0.01
   effects:
-  - !type:AmmoniaOxygenReaction {}
+    - !type:AmmoniaOxygenReaction {}
 
 - type: gasReaction
   id: N2ODecomposition
@@ -56,8 +56,7 @@
   minimumRequirements:
     NitrousOxide: 0.01
   effects:
-  - !type:N2ODecompositionReaction {}
-
+    - !type:N2ODecompositionReaction {}
 #- type: gasReaction
 #  id: WaterVaporPuddle
 #  priority: 1

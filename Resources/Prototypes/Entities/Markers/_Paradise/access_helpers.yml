@@ -5,14 +5,13 @@
   description: "Base Access Helper"
   parent: MarkerBase
   components:
-  - type: Sprite
-    sprite: Markers/_Paradise/access_helper.rsi
-    layers:
-    - state: access_helper
-      shader: unshaded
-  - type: AccessHelper
-  - type: LocalGatherTargets
-
+    - type: Sprite
+      sprite: Markers/_Paradise/access_helper.rsi
+      layers:
+        - state: access_helper
+          shader: unshaded
+    - type: AccessHelper
+    - type: LocalGatherTargets
 
 # region Command Access Helpers
 
@@ -23,33 +22,33 @@
   description: "Command Access helper"
   parent: AccessHelper
   components:
-  - type: Sprite
-    layers:
-    - state: access_helper_command
+    - type: Sprite
+      layers:
+        - state: access_helper_command
 
 - type: entity
   id: CaptainAccessHelper
   suffix: "Captain"
   parent: CommandBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Captain
+    - type: AccessHelper
+      access: Captain
 
 - type: entity
   id: HeadOfPersonnelAccessHelper
   suffix: "Head of Personnel"
   parent: CommandBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: HeadOfPersonnel
+    - type: AccessHelper
+      access: HeadOfPersonnel
 
 - type: entity
   id: CommandAccessHelper
   suffix: "Command"
   parent: CommandBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Command
+    - type: AccessHelper
+      access: Command
 # endregion
 
 # region Engineering Access Helpers
@@ -61,49 +60,49 @@
   description: "Engineering Access helper"
   parent: AccessHelper
   components:
-  - type: Sprite
-    layers:
-    - state: access_helper_engineer
+    - type: Sprite
+      layers:
+        - state: access_helper_engineer
 
 - type: entity
   id: ChiefEngineerAccessHelper
   suffix: "Chief Engineer"
   parent: EngineeringBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: ChiefEngineer
+    - type: AccessHelper
+      access: ChiefEngineer
 
 - type: entity
   id: EngineeringAccessHelper
   suffix: "Engineering"
   parent: EngineeringBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Engineering
+    - type: AccessHelper
+      access: Engineering
 
 - type: entity
   id: AtmosphericsAccessHelper
   suffix: "Atmospherics"
   parent: EngineeringBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Atmospherics
+    - type: AccessHelper
+      access: Atmospherics
 
 - type: entity
   id: ExternalAccessHelper
   suffix: "External"
   parent: EngineeringBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: External
+    - type: AccessHelper
+      access: External
 
 - type: entity
   id: MaintenanceAccessHelper
   suffix: "Maintenance"
   parent: EngineeringBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Maintenance
+    - type: AccessHelper
+      access: Maintenance
 # endregion
 
 # region Medical Access Helpers
@@ -115,49 +114,49 @@
   description: "Medical Access helper"
   parent: AccessHelper
   components:
-  - type: Sprite
-    layers:
-    - state: access_helper_medical
+    - type: Sprite
+      layers:
+        - state: access_helper_medical
 
 - type: entity
   id: ChiefMedicalOfficerAccessHelper
   suffix: "Chief Medical Officer"
   parent: MedicalBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: ChiefMedicalOfficer
+    - type: AccessHelper
+      access: ChiefMedicalOfficer
 
 - type: entity
   id: MedicalAccessHelper
   suffix: "Medical"
   parent: MedicalBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Medical
+    - type: AccessHelper
+      access: Medical
 
 - type: entity
   id: ChemistryAccessHelper
   suffix: "Chemistry"
   parent: MedicalBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Chemistry
+    - type: AccessHelper
+      access: Chemistry
 
 - type: entity
   id: ParamedicAccessHelper
   suffix: "Paramedic"
   parent: MedicalBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Paramedic
+    - type: AccessHelper
+      access: Paramedic
 
 - type: entity
   id: MorgueAccessHelper
   suffix: "Morgue"
   parent: MedicalBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Morgue
+    - type: AccessHelper
+      access: Morgue
 # endregion
 
 # region Science Access Helpers
@@ -169,25 +168,25 @@
   description: "Science Access helper"
   parent: AccessHelper
   components:
-  - type: Sprite
-    layers:
-    - state: access_helper_science
+    - type: Sprite
+      layers:
+        - state: access_helper_science
 
 - type: entity
   id: ResearchDirectorAccessHelper
   suffix: "Research Director"
   parent: ScienceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: ResearchDirector
+    - type: AccessHelper
+      access: ResearchDirector
 
 - type: entity
   id: ResearchAccessHelper
   suffix: "Research"
   parent: ScienceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Research
+    - type: AccessHelper
+      access: Research
 # endregion
 
 # region Security Access Helpers
@@ -199,65 +198,65 @@
   description: "Security Access helper"
   parent: AccessHelper
   components:
-  - type: Sprite
-    layers:
-    - state: access_helper_security
+    - type: Sprite
+      layers:
+        - state: access_helper_security
 
 - type: entity
   id: HeadOfSecurityAccessHelper
   suffix: "Head of Security"
   parent: SecurityBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: HeadOfSecurity
+    - type: AccessHelper
+      access: HeadOfSecurity
 
 - type: entity
   id: SecurityAccessHelper
   suffix: "Security"
   parent: SecurityBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Security
+    - type: AccessHelper
+      access: Security
 
 - type: entity
   id: BrigAccessHelper
   suffix: "Brig"
   parent: SecurityBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Brig
+    - type: AccessHelper
+      access: Brig
 
 - type: entity
   id: DetectiveAccessHelper
   suffix: "Detective"
   parent: SecurityBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Detective
+    - type: AccessHelper
+      access: Detective
 
 - type: entity
   id: ArmoryAccessHelper
   suffix: "Armory"
   parent: SecurityBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Armory
+    - type: AccessHelper
+      access: Armory
 
 - type: entity
   id: GenpopEnterAccessHelper
   suffix: "Enter Genpop"
   parent: SecurityBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: GenpopEnter
+    - type: AccessHelper
+      access: GenpopEnter
 
 - type: entity
   id: GenpopLeaveAccessHelper
   suffix: "Leave Genpop"
   parent: SecurityBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: GenpopLeave
+    - type: AccessHelper
+      access: GenpopLeave
 # endregion
 
 # region Service Access Helpers
@@ -269,89 +268,89 @@
   description: "Service Access helper"
   parent: AccessHelper
   components:
-  - type: Sprite
-    layers:
-    - state: access_helper_service
+    - type: Sprite
+      layers:
+        - state: access_helper_service
 
 - type: entity
   id: ServiceAccessHelper
   suffix: "Service"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Service
+    - type: AccessHelper
+      access: Service
 
 - type: entity
   id: BarAccessHelper
   suffix: "Bar"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Bar
+    - type: AccessHelper
+      access: Bar
 
 - type: entity
   id: ChapelAccessHelper
   suffix: "Chapel"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Chapel
+    - type: AccessHelper
+      access: Chapel
 
 - type: entity
   id: JanitorAccessHelper
   suffix: "Janitor"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Janitor
+    - type: AccessHelper
+      access: Janitor
 
 - type: entity
   id: KitchenAccessHelper
   suffix: "Kitchen"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Kitchen
+    - type: AccessHelper
+      access: Kitchen
 
 - type: entity
   id: HydroponicsAccessHelper
   suffix: "Hydroponics"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Hydroponics
+    - type: AccessHelper
+      access: Hydroponics
 
 - type: entity
   id: LawyerAccessHelper
   suffix: "Lawyer"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Lawyer
+    - type: AccessHelper
+      access: Lawyer
 
 - type: entity
   id: TheatreAccessHelper
   suffix: "Theatre"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Theatre
+    - type: AccessHelper
+      access: Theatre
 
 - type: entity
   id: ClownAccessHelper
   suffix: "Clown"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Clown
+    - type: AccessHelper
+      access: Clown
 
 - type: entity
   id: MimeAccessHelper
   suffix: "Mime"
   parent: ServiceBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Mime
+    - type: AccessHelper
+      access: Mime
 # endregion
 
 # region Cargo Access Helpers
@@ -363,33 +362,33 @@
   description: "Cargo Access helper"
   parent: AccessHelper
   components:
-  - type: Sprite
-    layers:
-    - state: access_helper_cargo
+    - type: Sprite
+      layers:
+        - state: access_helper_cargo
 
 - type: entity
   id: CargoAccessHelper
   suffix: "Cargo"
   parent: CargoBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Cargo
+    - type: AccessHelper
+      access: Cargo
 
 - type: entity
   id: QuartermasterAccessHelper
   suffix: "Quartermaster"
   parent: CargoBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Quartermaster
+    - type: AccessHelper
+      access: Quartermaster
 
 - type: entity
   id: SalvageAccessHelper
   suffix: "Salvage"
   parent: CargoBaseAccessHelper
   components:
-  - type: AccessHelper
-    access: Salvage
+    - type: AccessHelper
+      access: Salvage
 # endregion
 
 # Door Bolt Helper
@@ -400,9 +399,9 @@
   description: "Door Bolt Helper"
   parent: MarkerBase
   components:
-  - type: Sprite
-    sprite: Markers/_Paradise/access_helper.rsi
-    layers:
-    - state: airlock_locked_helper
-      shader: unshaded
-  - type: DoorBoltHelper
+    - type: Sprite
+      sprite: Markers/_Paradise/access_helper.rsi
+      layers:
+        - state: airlock_locked_helper
+          shader: unshaded
+    - type: DoorBoltHelper

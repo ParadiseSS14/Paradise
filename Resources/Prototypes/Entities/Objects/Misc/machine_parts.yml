@@ -13,7 +13,7 @@
       count: 1
     - type: Tag
       tags:
-      - ConstructionMaterial
+        - ConstructionMaterial
 
 - type: entity
   id: MicroManipulatorStockPart

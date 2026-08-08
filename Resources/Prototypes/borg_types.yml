@@ -9,17 +9,17 @@
   extraModuleCount: 5
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - BorgModuleScience #until sciborgs are added
+      - BorgModuleGeneric
+      - BorgModuleScience #until sciborgs are added
 
   defaultModules:
-  - BorgModulePrying
-  - BorgModuleTool
-  - BorgModuleInflatable
-  - BorgModuleArtifact
-  - BorgModuleAnomaly
+    - BorgModulePrying
+    - BorgModuleTool
+    - BorgModuleInflatable
+    - BorgModuleArtifact
+    - BorgModuleAnomaly
   radioChannels:
-  - Science
+    - Science
 
   # Visual
   inventoryTemplateId: borgShort
@@ -32,7 +32,6 @@
   petSuccessString: petting-success-generic-cyborg
   petFailureString: petting-failure-generic-cyborg
 
-
 # Engineering borg
 - type: borgType
   id: engineering
@@ -44,19 +43,19 @@
   extraModuleCount: 3
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - BorgModuleEngineering
+      - BorgModuleGeneric
+      - BorgModuleEngineering
 
   defaultModules:
-  - BorgModulePrying
-  - BorgModuleTool
-  - BorgModuleConstruction
-  - BorgModuleRCD
-  - BorgModuleCable
+    - BorgModulePrying
+    - BorgModuleTool
+    - BorgModuleConstruction
+    - BorgModuleRCD
+    - BorgModuleCable
 
   radioChannels:
-  - Engineering
-  - Science
+    - Engineering
+    - Science
 
   # Visual
   inventoryTemplateId: borgShort
@@ -69,7 +68,6 @@
   petSuccessString: petting-success-engineer-cyborg
   petFailureString: petting-failure-engineer-cyborg
 
-
 # Salvage borg
 - type: borgType
   id: mining
@@ -81,19 +79,19 @@
   extraModuleCount: 3
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - BorgModuleCargo
+      - BorgModuleGeneric
+      - BorgModuleCargo
 
   defaultModules:
-  - BorgModulePrying
-  - BorgModuleTool
-  - BorgModuleMining
-  - BorgModuleTraversal
-  - BorgModuleAppraisal
+    - BorgModulePrying
+    - BorgModuleTool
+    - BorgModuleMining
+    - BorgModuleTraversal
+    - BorgModuleAppraisal
 
   radioChannels:
-  - Supply
-  - Science
+    - Supply
+    - Science
 
   # Visual
   inventoryTemplateId: borgTall
@@ -107,7 +105,6 @@
   petSuccessString: petting-success-salvage-cyborg
   petFailureString: petting-failure-salvage-cyborg
 
-
 # Janitor borg
 - type: borgType
   id: janitor
@@ -119,17 +116,17 @@
   extraModuleCount: 3
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - BorgModuleJanitor
+      - BorgModuleGeneric
+      - BorgModuleJanitor
 
   defaultModules:
-  - BorgModulePrying
-  - BorgModuleCleaning
-  - BorgModuleCustodial
+    - BorgModulePrying
+    - BorgModuleCleaning
+    - BorgModuleCustodial
 
   radioChannels:
-  - Science
-  - Service
+    - Science
+    - Service
 
   # Visual
   inventoryTemplateId: borgShort
@@ -143,7 +140,6 @@
   petSuccessString: petting-success-janitor-cyborg
   petFailureString: petting-failure-janitor-cyborg
 
-
 # Medical borg
 - type: borgType
   id: medical
@@ -155,27 +151,27 @@
   extraModuleCount: 3
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - BorgModuleMedical
+      - BorgModuleGeneric
+      - BorgModuleMedical
 
   defaultModules:
-  - BorgModulePrying
-  - BorgModuleChemical
-  - BorgModuleTopicals
-  - BorgModuleRescue
+    - BorgModulePrying
+    - BorgModuleChemical
+    - BorgModuleTopicals
+    - BorgModuleRescue
 
   radioChannels:
-  - Science
-  - Medical
+    - Science
+    - Medical
 
   addComponents:
-  - type: SolutionScanner
-  - type: ShowHealthBars
-    damageContainers:
-    - Biological
-  - type: ShowHealthIcons
-    damageContainers:
-    - Biological
+    - type: SolutionScanner
+    - type: ShowHealthBars
+      damageContainers:
+        - Biological
+    - type: ShowHealthIcons
+      damageContainers:
+        - Biological
 
   # Visual
   inventoryTemplateId: borgDutch
@@ -193,7 +189,6 @@
   footstepCollection:
     collection: FootstepHoverBorg
 
-
 # Service borg
 - type: borgType
   id: service
@@ -205,19 +200,19 @@
   extraModuleCount: 3
   moduleWhitelist:
     tags:
-    - BorgModuleGeneric
-    - BorgModuleService
+      - BorgModuleGeneric
+      - BorgModuleService
 
   defaultModules:
-  - BorgModulePrying
-  - BorgModuleMusique
-  - BorgModuleService
-  - BorgModuleClowning
-  - BorgModuleGardening
-  - BorgModuleHarvesting
+    - BorgModulePrying
+    - BorgModuleMusique
+    - BorgModuleService
+    - BorgModuleClowning
+    - BorgModuleGardening
+    - BorgModuleHarvesting
   radioChannels:
-  - Science
-  - Service
+    - Science
+    - Service
 
   # Visual
   inventoryTemplateId: borgTall

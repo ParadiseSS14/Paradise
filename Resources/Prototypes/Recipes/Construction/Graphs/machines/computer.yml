@@ -15,7 +15,7 @@
 
     - node: frameUnsecured
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       entity: ComputerFrame
       edges:
         - to: boardUnsecured
@@ -41,7 +41,7 @@
 
     - node: boardUnsecured
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: missingWires
           conditions:
@@ -51,7 +51,7 @@
 
         - to: frameUnsecured
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           completed:
             - !type:EmptyAllContainers {}
           steps:
@@ -59,7 +59,7 @@
 
     - node: missingWires
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: monitorMissing
           conditions:
@@ -70,14 +70,14 @@
 
         - to: boardUnsecured
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           steps:
             - tool: Screwing
 
     - node: monitorMissing
       entity: ComputerFrame
       actions:
-        - !type:SetAnchor { }
+        - !type:SetAnchor {}
         - !type:AppearanceChange
       edges:
         - to: monitorUnsecured
@@ -89,7 +89,7 @@
 
         - to: missingWires
           conditions:
-            - !type:EntityAnchored { }
+            - !type:EntityAnchored {}
           completed:
             - !type:SpawnPrototype
               prototype: CableApcStack1
@@ -99,7 +99,7 @@
 
     - node: monitorUnsecured
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       entity: ComputerFrame
       edges:
         - to: computer
@@ -125,7 +125,7 @@
         - to: monitorUnsecured
           completed:
             - !type:RaiseEvent
-                event: !type:MachineDeconstructedEvent
+              event: !type:MachineDeconstructedEvent
           steps:
             - tool: Prying
               doAfter: 1

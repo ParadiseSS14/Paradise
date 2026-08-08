@@ -84,14 +84,14 @@
       stripHidden: true
     - name: suitstorage
       slotTexture: suit_storage
-      slotFlags:   SUITSTORAGE
+      slotFlags: SUITSTORAGE
       slotGroup: MainHotbar
       stripTime: 3
       uiWindowPos: 2,0
       strippingWindowPos: 2,5
       dependsOn: outerClothing
       dependsOnComponents:
-      - type: AllowSuitStorage
+        - type: AllowSuitStorage
       displayName: Suit Storage
     - name: id
       slotTexture: id
@@ -123,4 +123,4 @@
       displayName: Back
       blacklist:
         tags:
-        - PetOnly
+          - PetOnly

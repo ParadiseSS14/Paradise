@@ -1,7 +1,7 @@
 - type: entity
   # Just fades out with no movement animation
   id: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: TimedDespawn
       lifetime: 2.0
@@ -18,7 +18,7 @@
 - type: entity
   # Plays the state animation then disappears with no fade or swing
   id: WeaponArcAnimated
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: Sprite
       sprite: Effects/arcs.rsi
@@ -28,13 +28,12 @@
     - type: WeaponArcVisuals
       fadeOut: false
 
-
 # Uses TimedDespawn instead of EffectVisuals because auto animation is easier but doesn't raise an animation complete event.
 
 - type: entity
   id: WeaponArcThrust
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       animation: Thrust
@@ -42,16 +41,15 @@
 - type: entity
   id: WeaponArcSlash
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       animation: Slash
 
-
 - type: entity
   id: WeaponArcBite
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       fadeOut: false
@@ -63,7 +61,7 @@
 - type: entity
   id: WeaponArcClaw
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       fadeOut: false
@@ -75,7 +73,7 @@
 - type: entity
   id: WeaponArcDisarm
   parent: WeaponArcAnimated
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       fadeOut: false
@@ -87,7 +85,7 @@
 - type: entity
   id: WeaponArcFist
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: Sprite
       state: fist
@@ -95,7 +93,7 @@
 - type: entity
   id: WeaponArcPunch
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       fadeOut: false
@@ -107,7 +105,7 @@
 - type: entity
   id: WeaponArcKick
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       fadeOut: false
@@ -119,7 +117,7 @@
 - type: entity
   id: WeaponArcSmash
   parent: WeaponArcStatic
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
     - type: WeaponArcVisuals
       fadeOut: false

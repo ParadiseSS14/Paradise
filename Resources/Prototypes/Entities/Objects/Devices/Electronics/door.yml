@@ -16,7 +16,7 @@
       key: enum.DoorElectronicsConfigurationUiKey.Key
       requiredItems:
         tags:
-        - DoorElectronicsConfigurator
+          - DoorElectronicsConfigurator
     - type: UserInterface
       interfaces:
         enum.DoorElectronicsConfigurationUiKey.Key:

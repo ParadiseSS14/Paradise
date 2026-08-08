@@ -47,7 +47,6 @@
     sprite: Decals/originsign.rsi
     state: origin7
 
-
 - type: decal
   id: OriginStationSign8
   tags: ["station"]
@@ -89,4 +88,3 @@
   sprite:
     sprite: Decals/originsign.rsi
     state: origin13
-

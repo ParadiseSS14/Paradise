@@ -12,30 +12,28 @@
     - type: Fixtures
       fixtures:
         fix1:
-          shape:
-            !type:PhysShapeCircle
+          shape: !type:PhysShapeCircle
             radius: 0.3
           density: 125
           layer:
-          - MobLayer
+            - MobLayer
           mask:
-          - MobMask
+            - MobMask
     - type: Damageable
       damageModifierSet: Metallic
     - type: Injurable
       damageContainer: Inorganic
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 200
-        behaviors:
-        - !type:EmptyAllContainersBehaviour
-        - !type:DoActsBehavior
-          acts: ["Destruction"]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalBreak
+        - trigger: !type:DamageTrigger
+            damage: 200
+          behaviors:
+            - !type:EmptyAllContainersBehaviour
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
     - type: Appearance
     - type: UserInterface
       interfaces:
@@ -44,22 +42,22 @@
     - type: Storage
       maxItemSize: Normal
       grid:
-      - 0,0,7,4
+        - 0,0,7,4
     - type: TileFrictionModifier
       modifier: 0.4 # makes it slide
 
 # Add this if freezing/heating container/objects thermodynamics becomes a thing
 
-    #- type: PowerCellSlot
-    #  cellSlotId: cell_slot
-    #- type: ContainerContainer
-    #  containers:
-    #    cell_slot: !type:ContainerSlot
-    #- type: ItemSlots
-    #  slots:
-    #    cell_slot:
-    #      name: power-cell-slot-component-slot-name-default
-    #      startingItem: PowerCellMedium
+#- type: PowerCellSlot
+#  cellSlotId: cell_slot
+#- type: ContainerContainer
+#  containers:
+#    cell_slot: !type:ContainerSlot
+#- type: ItemSlots
+#  slots:
+#    cell_slot:
+#      name: power-cell-slot-component-slot-name-default
+#      startingItem: PowerCellMedium
 
 - type: entity
   name: hot food cart

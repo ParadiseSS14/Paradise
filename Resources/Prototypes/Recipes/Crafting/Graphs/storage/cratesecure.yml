@@ -12,7 +12,6 @@
               amount: 2
               doAfter: 5
 
-
     - node: cratesecure
       entity: CrateSecure
       edges:

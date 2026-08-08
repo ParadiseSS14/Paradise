@@ -3,8 +3,8 @@
   id: BaseFlag
   abstract: true
   components:
-  - type: Sprite
-    sprite: Structures/Wallmounts/flags.rsi
+    - type: Sprite
+      sprite: Structures/Wallmounts/flags.rsi
 
 - type: entity
   parent: BaseFlag
@@ -12,8 +12,8 @@
   name: blank flag
   description: Some piece of white cloth. Definitely not the flag of France.
   components:
-  - type: Sprite
-    state: blank_flag
+    - type: Sprite
+      state: blank_flag
 
 - type: entity
   parent: BaseFlag
@@ -21,8 +21,8 @@
   name: Nanotrasen flag
   description: Glory to NT! Wait, they really made a flag for a corporation?
   components:
-  - type: Sprite
-    state: NT_flag
+    - type: Sprite
+      state: NT_flag
 
 - type: entity
   parent: BaseFlag
@@ -30,17 +30,17 @@
   name: syndicate flag
   description: Smells bloody. Death to NT!
   components:
-  - type: Sprite
-    state: syndie_flag
+    - type: Sprite
+      state: syndie_flag
 
 - type: entity
   parent: BaseFlag
   id: LGBTQFlag
   name: LGBTQ flag
-  description: "\"Be gay do crime\" flag."
+  description: '"Be gay do crime" flag.'
   components:
-  - type: Sprite
-    state: lgbtq_flag
+    - type: Sprite
+      state: lgbtq_flag
 
 - type: entity
   parent: BaseFlag
@@ -48,5 +48,5 @@
   name: pirate flag
   description: Raise the jolly roger, scallywags!
   components:
-  - type: Sprite
-    state: pirate_flag
+    - type: Sprite
+      state: pirate_flag

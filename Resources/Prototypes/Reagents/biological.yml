@@ -19,25 +19,25 @@
       metabolites:
         UncookedAnimalProteins: 0.2
       effects:
-      - !type:SatiateThirst
-        factor: 1.0
-        conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Human ]
-            inverted: true
-      - !type:EvenHealthChange
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Bloodsucker ]
-        damage:
-          Brute: -3
-          Burn: -1.25
+        - !type:SatiateThirst
+          factor: 1.0
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Human]
+              inverted: true
+        - !type:EvenHealthChange
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Bloodsucker]
+          damage:
+            Brute: -3
+            Burn: -1.25
     Bloodstream: # Don't inject someone else's blood into yourself! Your own blood won't actually metabolise.
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 0.2
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 0.2
   plantMetabolism:
     - !type:PlantAdjustWater
       amount: 0.5
@@ -74,17 +74,17 @@
     Digestion:
       # Delicious!
       effects:
-      - !type:SatiateHunger
-        factor: 1
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Slime]
-          inverted: true
-      - !type:ModifyBloodLevel
-        amount: 0.5 # drawing 15u removes 5% blood level from a slimeperson, this will add 5% when injecting 15u
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [Slime]
+        - !type:SatiateHunger
+          factor: 1
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
+              inverted: true
+        - !type:ModifyBloodLevel
+          amount: 0.5 # drawing 15u removes 5% blood level from a slimeperson, this will add 5% when injecting 15u
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Slime]
   footstepSound:
     collection: FootstepSlime # makes sense
     params:
@@ -106,10 +106,10 @@
     Digestion:
       # Sweet!
       effects:
-      - !type:SatiateHunger
-        factor: 1
-      - !type:SatiateThirst
-        factor: 1
+        - !type:SatiateHunger
+          factor: 1
+        - !type:SatiateThirst
+          factor: 1
   footstepSound:
     collection: FootstepSlime
     params:
@@ -160,16 +160,16 @@
     Digestion:
       # Disgusting!
       effects:
-      - !type:SatiateThirst
-        factor: -0.5
+        - !type:SatiateThirst
+          factor: -0.5
     Bloodstream:
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 4
-      - !type:Vomit
-        probability: 0.25
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 4
+        - !type:Vomit
+          probability: 0.25
 
 - type: reagent
   id: Ichor
@@ -183,26 +183,26 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:SatiateThirst
-        factor: 1.5
-    # Dragon doesn't require airloss healing, so omnizine is still best for humans.
-      - !type:ModifyBloodLevel
-        amount: 3
-      - !type:EvenHealthChange
-        damage:
-          Burn: -3
-          Brute: -3
-          Toxin: -2
-      - !type:HealthChange
-        damage:
-          types:
-            Bloodloss: -3
-      - !type:ModifyBleed
-        amount: -1.5
+        - !type:SatiateThirst
+          factor: 1.5
+        # Dragon doesn't require airloss healing, so omnizine is still best for humans.
+        - !type:ModifyBloodLevel
+          amount: 3
+        - !type:EvenHealthChange
+          damage:
+            Burn: -3
+            Brute: -3
+            Toxin: -2
+        - !type:HealthChange
+          damage:
+            types:
+              Bloodloss: -3
+        - !type:ModifyBleed
+          amount: -1.5
   # Just in case you REALLY want to water your plants
   plantMetabolism:
-  - !type:PlantAdjustWater
-    amount: 0.5
+    - !type:PlantAdjustWater
+      amount: 0.5
   footstepSound:
     collection: FootstepBlood
     params:
@@ -237,8 +237,8 @@
       metabolites:
         Nutriment: 0.1
       effects:
-      - !type:SatiateThirst
-        factor: 0.5
+        - !type:SatiateThirst
+          factor: 0.5
   footstepSound:
     collection: FootstepBlood
     params:
@@ -255,9 +255,9 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:SatiateHunger
-        factor: 1.5
-      - !type:HealthChange
-        damage:
-          types:
-            Cellular: 2
+        - !type:SatiateHunger
+          factor: 1.5
+        - !type:HealthChange
+          damage:
+            types:
+              Cellular: 2

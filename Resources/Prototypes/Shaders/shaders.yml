@@ -151,7 +151,6 @@
   kind: source
   path: "/Textures/Shaders/uiSDFRadialKnobProgressBar.swsl"
 
-
 - type: shader
   id: UIShaderSDFTexture
   kind: source

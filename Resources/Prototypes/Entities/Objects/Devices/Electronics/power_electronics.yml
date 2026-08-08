@@ -40,17 +40,17 @@
   name: wallmount generator electronics
   description: Circuit used to construct a wallmount generator.
   components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: charger_APC
-  - type: StaticPrice
-    price: 20
-  - type: PhysicalComposition
-    materialComposition:
-      Glass: 90
-  - type: Tag
-    tags:
-      - WallmountGeneratorElectronics
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: charger_APC
+    - type: StaticPrice
+      price: 20
+    - type: PhysicalComposition
+      materialComposition:
+        Glass: 90
+    - type: Tag
+      tags:
+        - WallmountGeneratorElectronics
 
 # APU
 - type: entity

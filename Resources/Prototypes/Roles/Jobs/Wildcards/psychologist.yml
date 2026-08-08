@@ -7,10 +7,10 @@
   icon: "JobIconPsychologist"
   supervisors: job-supervisors-cmo
   access:
-  - Medical
-  - Maintenance
+    - Medical
+    - Maintenance
   extendedAccess:
-  - Chemistry
+    - Chemistry
 
 - type: startingGear
   id: PsychologistGear
@@ -20,7 +20,7 @@
     ears: ClothingHeadsetMedical
   storage:
     back:
-    - RubberStampPsychologist
+      - RubberStampPsychologist
 
 - type: chameleonOutfit
   id: PsychologistChameleonOutfit

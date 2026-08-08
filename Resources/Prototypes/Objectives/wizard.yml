@@ -3,13 +3,13 @@
   parent: BaseObjective
   id: BaseWizardObjective
   components:
-  - type: Objective
-    # required but not used
-    difficulty: 1
-    issuer: SpaceWizardsFederation
-  - type: RoleRequirement
-    roles:
-    - WizardRole
+    - type: Objective
+      # required but not used
+      difficulty: 1
+      issuer: SpaceWizardsFederation
+    - type: RoleRequirement
+      roles:
+        - WizardRole
 
 - type: entity
   parent: [BaseWizardObjective, BaseSurviveObjective]
@@ -17,10 +17,10 @@
   name: Survive
   description: The Space Wizards Federation want you to live!
   components:
-  - type: Objective
-    icon:
-      sprite: Clothing/Head/Hats/wizardhat.rsi
-      state: icon
+    - type: Objective
+      icon:
+        sprite: Clothing/Head/Hats/wizardhat.rsi
+        state: icon
 
 - type: entity
   parent: [BaseWizardObjective, BaseFreeObjective]
@@ -28,7 +28,7 @@
   name: Cause chaos
   description: Teach those station welps to never disrespect a Wizard again!
   components:
-  - type: Objective
-    icon:
-      sprite: Objects/Magic/magicactions.rsi
-      state: fireball
+    - type: Objective
+      icon:
+        sprite: Objects/Magic/magicactions.rsi
+        state: fireball

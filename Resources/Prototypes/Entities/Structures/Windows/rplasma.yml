@@ -3,99 +3,97 @@
   id: ReinforcedPlasmaWindow
   name: reinforced plasma window
   components:
-  - type: Sprite
-    sprite: Structures/_Paradise/Windows/reinforced_plasma_window.rsi
-  - type: Icon
-    sprite: Structures/_Paradise/Windows/reinforced_plasma_window.rsi
-    state: full
-  - type: Damageable
-    damageModifierSet: RGlass
-  - type: Injurable
-    damageContainer: StructuralInorganic
-  - type: RadiationBlocker
-    resistance: 4
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WindowShatter
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlassPlasma:
-            min: 1
-            max: 2
-          PartRodMetal:
-            min: 1
-            max: 2
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: IconSmooth
-    base: rpwindow
-  - type: Construction
-    graph: Window
-    node: reinforcedPlasmaWindow
-  - type: Appearance
-  - type: DamageVisuals
-    thresholds: [5, 10, 20]
-    damageDivisor: 6
-    trackAllDamage: true
-    damageOverlay:
-      sprite: Structures/Windows/cracks.rsi
-  - type: StaticPrice
-    price: 132
+    - type: Sprite
+      sprite: Structures/_Paradise/Windows/reinforced_plasma_window.rsi
+    - type: Icon
+      sprite: Structures/_Paradise/Windows/reinforced_plasma_window.rsi
+      state: full
+    - type: Damageable
+      damageModifierSet: RGlass
+    - type: Injurable
+      damageContainer: StructuralInorganic
+    - type: RadiationBlocker
+      resistance: 4
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 150
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WindowShatter
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardGlassPlasma:
+                  min: 1
+                  max: 2
+                PartRodMetal:
+                  min: 1
+                  max: 2
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: IconSmooth
+      base: rpwindow
+    - type: Construction
+      graph: Window
+      node: reinforcedPlasmaWindow
+    - type: Appearance
+    - type: DamageVisuals
+      thresholds: [5, 10, 20]
+      damageDivisor: 6
+      trackAllDamage: true
+      damageOverlay:
+        sprite: Structures/Windows/cracks.rsi
+    - type: StaticPrice
+      price: 132
 
 - type: entity
   parent: [BaseDeltaPressureReinforcedPlasmaQuarter, BaseWindowStructureDirectional, BaseRCDResistant]
   id: PlasmaReinforcedWindowDirectional
   name: directional reinforced plasma window
   components:
-  - type: Sprite
-    sprite: Structures/_Paradise/Windows/directional.rsi
-    state: plasma_reinforced_window
-  - type: Icon
-    sprite: Structures/_Paradise/Windows/directional.rsi
-    state: plasma_reinforced_window
-  - type: Construction
-    graph: WindowDirectional
-    node: plasmaReinforcedWindowDirectional
-  - type: Appearance
-  - type: DamageVisuals
-    thresholds: [5, 10, 20]
-    damageDivisor: 3
-    trackAllDamage: true
-    damageOverlay:
-      sprite: Structures/Windows/cracks_directional.rsi
-  - type: Damageable
-    damageModifierSet: RGlass
-  - type: Injurable
-    damageContainer: StructuralInorganic
-  - type: RadiationBlocker
-    resistance: 2
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 75
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: WindowShatter
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlassPlasma:
-            min: 1
-            max: 1
-          PartRodMetal:
-            min: 1
-            max: 1
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: StaticPrice
-    price: 66
+    - type: Sprite
+      sprite: Structures/_Paradise/Windows/directional.rsi
+      state: plasma_reinforced_window
+    - type: Icon
+      sprite: Structures/_Paradise/Windows/directional.rsi
+      state: plasma_reinforced_window
+    - type: Construction
+      graph: WindowDirectional
+      node: plasmaReinforcedWindowDirectional
+    - type: Appearance
+    - type: DamageVisuals
+      thresholds: [5, 10, 20]
+      damageDivisor: 3
+      trackAllDamage: true
+      damageOverlay:
+        sprite: Structures/Windows/cracks_directional.rsi
+    - type: Damageable
+      damageModifierSet: RGlass
+    - type: Injurable
+      damageContainer: StructuralInorganic
+    - type: RadiationBlocker
+      resistance: 2
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 75
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WindowShatter
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardGlassPlasma:
+                  min: 1
+                  max: 1
+                PartRodMetal:
+                  min: 1
+                  max: 1
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: StaticPrice
+      price: 66
 
 - type: entity
   parent: ReinforcedPlasmaWindow
@@ -104,45 +102,44 @@
   placement:
     mode: SnapgridCenter
     snap:
-    - Window
+      - Window
   components:
-  - type: Sprite
-    drawdepth: WallTops
-    sprite: Structures/_Paradise/Windows/reinforced_plasma_diagonal.rsi
-    state: state0
-  - type: Tag
-    tags:
-    - Diagonal
-    - Window
-  - type: IconSmooth
-    mode: Diagonal
-    key: windows
-    base: state
-  - type: Icon
-    sprite: Structures/_Paradise/Windows/reinforced_plasma_diagonal.rsi
-    state: state0
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PolygonShape
+    - type: Sprite
+      drawdepth: WallTops
+      sprite: Structures/_Paradise/Windows/reinforced_plasma_diagonal.rsi
+      state: state0
+    - type: Tag
+      tags:
+        - Diagonal
+        - Window
+    - type: IconSmooth
+      mode: Diagonal
+      key: windows
+      base: state
+    - type: Icon
+      sprite: Structures/_Paradise/Windows/reinforced_plasma_diagonal.rsi
+      state: state0
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PolygonShape
             vertices:
-            - "-0.5,-0.5"
-            - "0.5,0.5"
-            - "0.5,-0.5"
-        mask:
-        - FullTileMask
-        layer:
-        - GlassLayer
-        density: 2000
-  - type: Airtight
-    noAirWhenFullyAirBlocked: false
-    airBlockedDirection:
-    - South
-    - East
-  - type: DamageVisuals
-    damageOverlay:
-      sprite: Structures/Windows/cracks_diagonal.rsi
-  - type: Construction
-    graph: WindowDiagonal
-    node: reinforcedPlasmaWindowDiagonal
+              - "-0.5,-0.5"
+              - "0.5,0.5"
+              - "0.5,-0.5"
+          mask:
+            - FullTileMask
+          layer:
+            - GlassLayer
+          density: 2000
+    - type: Airtight
+      noAirWhenFullyAirBlocked: false
+      airBlockedDirection:
+        - South
+        - East
+    - type: DamageVisuals
+      damageOverlay:
+        sprite: Structures/Windows/cracks_diagonal.rsi
+    - type: Construction
+      graph: WindowDiagonal
+      node: reinforcedPlasmaWindowDiagonal

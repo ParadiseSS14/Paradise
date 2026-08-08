@@ -4,19 +4,19 @@
   description: job-description-serviceworker
   playTimeTracker: JobServiceWorker
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Civilian
-    time: 0.5h
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 0.5h
   startingGear: ServiceWorkerGear
   icon: "JobIconServiceWorker"
   supervisors: job-supervisors-service
   access:
-  - Service
-  - Maintenance
-  - Bar
-  - Kitchen
+    - Service
+    - Maintenance
+    - Bar
+    - Kitchen
   extendedAccess:
-  - Hydroponics
+    - Hydroponics
 
 - type: startingGear
   id: ServiceWorkerGear
@@ -25,8 +25,8 @@
     id: ServiceWorkerPDA
     ears: ClothingHeadsetService
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: ServiceWorkerChameleonOutfit

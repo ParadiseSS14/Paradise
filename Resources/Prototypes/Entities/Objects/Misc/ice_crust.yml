@@ -22,29 +22,27 @@
       anchored: true
     - type: Tag
       tags:
-      - Ice
+        - Ice
     - type: Physics
     - type: Fixtures
       fixtures:
         fix1:
           hard: false
           density: 7
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.4,-0.4,0.4,0.4"
           layer:
-          - MidImpassable
+            - MidImpassable
     - type: Damageable
       damageModifierSet: Wood
     - type: Injurable
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 10
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
+        - trigger: !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
     - type: Temperature
       temperature: 250
       heatCapacity: 13440.002

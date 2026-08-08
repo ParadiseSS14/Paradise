@@ -15,7 +15,7 @@
       description: ghost-role-information-guardian-description
       rules: ghost-role-information-familiar-rules
       mindRoles:
-      - MindRoleGhostRoleFamiliar
+        - MindRoleGhostRoleFamiliar
       raffle:
         settings: default
     - type: GhostTakeoverAvailable
@@ -51,9 +51,9 @@
       sprite: Mobs/Aliens/Guardians/guardians.rsi
       layers:
         - state: tech_base
-          map: [ "enum.DamageStateVisualLayers.Base" ]
+          map: ["enum.DamageStateVisualLayers.Base"]
         - state: tech_flare
-          map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          map: ["enum.DamageStateVisualLayers.BaseUnshaded"]
           color: "#40a7d7"
           shader: unshaded
       noRot: true
@@ -64,8 +64,7 @@
     - type: Fixtures
       fixtures:
         fix1:
-          shape:
-            !type:PhysShapeCircle
+          shape: !type:PhysShapeCircle
             radius: 0.35
           density: 25
           mask:
@@ -139,9 +138,9 @@
     - type: Sprite
       layers:
         - state: tech_base
-          map: [ "enum.DamageStateVisualLayers.Base" ]
+          map: ["enum.DamageStateVisualLayers.Base"]
         - state: tech_flare
-          map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          map: ["enum.DamageStateVisualLayers.BaseUnshaded"]
           color: "#40a7d7"
           shader: unshaded
     - type: HTN
@@ -172,9 +171,9 @@
     - type: Sprite
       layers:
         - state: magic_base
-          map: [ "enum.DamageStateVisualLayers.Base" ]
+          map: ["enum.DamageStateVisualLayers.Base"]
         - state: magic_flare
-          map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          map: ["enum.DamageStateVisualLayers.BaseUnshaded"]
           color: "#40a7d7"
           shader: unshaded
 
@@ -220,9 +219,9 @@
     - type: Sprite
       layers:
         - state: holoclown_base
-          map: [ "enum.DamageStateVisualLayers.Base" ]
+          map: ["enum.DamageStateVisualLayers.Base"]
         - state: holoclown_flare
-          map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+          map: ["enum.DamageStateVisualLayers.BaseUnshaded"]
           color: "#8adaff"
           shader: unshaded
     - type: Tag
@@ -247,10 +246,10 @@
         types:
           Blunt: 5
     - type: Loadout
-      prototypes: [ HoloClownGear ]
+      prototypes: [HoloClownGear]
     - type: RandomMetadata
       nameSegments:
-      - NamesClown
+        - NamesClown
     - type: HTN
       rootTask:
         task: SimpleHumanoidHostileCompound
@@ -261,10 +260,10 @@
   name: Toggle Guardian
   description: Either manifests the guardian or recalls it back into your body
   components:
-  - type: Action
-    useDelay: 2
-  - type: Sprite
-    layers:
-    - texture: Interface/Actions/manifest.png
-  - type: InstantAction
-    event: !type:GuardianToggleActionEvent
+    - type: Action
+      useDelay: 2
+    - type: Sprite
+      layers:
+        - texture: Interface/Actions/manifest.png
+    - type: InstantAction
+      event: !type:GuardianToggleActionEvent

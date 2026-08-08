@@ -29,16 +29,16 @@
 - type: accessGroup
   id: Security
   tags:
-  - HeadOfSecurity
-  - Security
-  - Armory
-  - Brig
-  - Detective
-  - Cryogenics
+    - HeadOfSecurity
+    - Security
+    - Armory
+    - Brig
+    - Detective
+    - Cryogenics
 
 - type: accessGroup
   id: Armory
   tags:
-  - Security
-  - Armory
-  - Brig
+    - Security
+    - Armory
+    - Brig

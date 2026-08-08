@@ -3,25 +3,25 @@
   id: SpawnMechRipley
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-      - state: green
-      - sprite: Objects/Specific/Mech/mecha.rsi
-        state: ripley
-  - type: ConditionalSpawner
-    prototypes:
-      - MechRipleyBattery
+    - type: Sprite
+      layers:
+        - state: green
+        - sprite: Objects/Specific/Mech/mecha.rsi
+          state: ripley
+    - type: ConditionalSpawner
+      prototypes:
+        - MechRipleyBattery
 
 - type: entity
   name: H.O.N.K. Spawner
   id: SpawnMechHonker
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-      - state: green
-      - sprite: Objects/Specific/Mech/mecha.rsi
-        state: honker
-  - type: ConditionalSpawner
-    prototypes:
-      - MechHonkerBattery
+    - type: Sprite
+      layers:
+        - state: green
+        - sprite: Objects/Specific/Mech/mecha.rsi
+          state: honker
+    - type: ConditionalSpawner
+      prototypes:
+        - MechHonkerBattery

@@ -8,10 +8,10 @@
   name: battlemap
   description: A battlemap for your epic dungeon exploring to begin, pieces not included!
   components:
-  - type: Sprite
-    state: icon
-  - type: TabletopGame
-    boardName: tabletop-battlemap-board-name
+    - type: Sprite
+      state: icon
+    - type: TabletopGame
+      boardName: tabletop-battlemap-board-name
 
 - type: entity
   parent: BaseBattlemap
@@ -19,12 +19,11 @@
   name: grass battlemap
   description: A battlemap for your epic dungeon exploring to begin, pieces not included!
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/grassbm.rsi
-  - type: TabletopGame
-    setup:
-      !type:TabletopEmptySetup
-      boardPrototype: &GrassBoard GrassBoardTabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/grassbm.rsi
+    - type: TabletopGame
+      setup: !type:TabletopEmptySetup
+        boardPrototype: &GrassBoard GrassBoardTabletop
 
 - type: entity
   parent: BaseBattlemap
@@ -32,12 +31,11 @@
   name: moon battlemap
   description: A battlemap for your epic moon exploring to begin, pieces not included!
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/moonbm.rsi
-  - type: TabletopGame
-    setup:
-      !type:TabletopEmptySetup
-      boardPrototype: &MoonBoard MoonBoardTabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/moonbm.rsi
+    - type: TabletopGame
+      setup: !type:TabletopEmptySetup
+        boardPrototype: &MoonBoard MoonBoardTabletop
 
 - type: entity
   parent: BaseBattlemap
@@ -45,12 +43,11 @@
   name: sand battlemap
   description: A battlemap for your epic beach episodes to begin, pieces not included!
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/sandbm.rsi
-  - type: TabletopGame
-    setup:
-      !type:TabletopEmptySetup
-      boardPrototype: &SandBoard SandBoardTabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/sandbm.rsi
+    - type: TabletopGame
+      setup: !type:TabletopEmptySetup
+        boardPrototype: &SandBoard SandBoardTabletop
 
 - type: entity
   parent: BaseBattlemap
@@ -58,12 +55,11 @@
   name: snow battlemap
   description: A battlemap for your frigid exploring to begin, pieces not included! # if this isn't funny enough i can remove it
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/snowbm.rsi
-  - type: TabletopGame
-    setup:
-      !type:TabletopEmptySetup
-      boardPrototype: &SnowBoard SnowBoardTabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/snowbm.rsi
+    - type: TabletopGame
+      setup: !type:TabletopEmptySetup
+        boardPrototype: &SnowBoard SnowBoardTabletop
 
 - type: entity
   parent: BaseBattlemap
@@ -71,61 +67,60 @@
   name: ship battlemap
   description: A battlemap for your epic space exploring to begin, pieces not included!
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/shipbm.rsi
-  - type: TabletopGame
-    size: 543, 543
-    setup:
-      !type:TabletopEmptySetup
-      boardPrototype: &ShipBoard ShipBoardTabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/shipbm.rsi
+    - type: TabletopGame
+      size: 543, 543
+      setup: !type:TabletopEmptySetup
+        boardPrototype: &ShipBoard ShipBoardTabletop
 
 # Background entity (actually shown in the board)
 - type: entity
   parent: BaseBoardTabletop
   id: *GrassBoard
   name: grass battlemap
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/grassbm_tabletop.rsi
-    state: tabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/grassbm_tabletop.rsi
+      state: tabletop
 
 - type: entity
   parent: BaseBoardTabletop
   id: *MoonBoard
   name: grass battlemap
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/moonbm_tabletop.rsi
-    state: tabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/moonbm_tabletop.rsi
+      state: tabletop
 
 - type: entity
   parent: BaseBoardTabletop
   id: *SandBoard
   name: sand battlemap
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/sandbm_tabletop.rsi
-    state: tabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/sandbm_tabletop.rsi
+      state: tabletop
 
 - type: entity
   parent: BaseBoardTabletop
   id: *SnowBoard
   name: snow battlemap
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/snowbm_tabletop.rsi
-    state: tabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/snowbm_tabletop.rsi
+      state: tabletop
 
 - type: entity
   parent: BaseBoardTabletop
   id: *ShipBoard
   name: ship battlemap
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Sprite
-    sprite: Objects/Fun/Tabletop/Battlemaps/shipbm_tabletop.rsi
-    state: tabletop
+    - type: Sprite
+      sprite: Objects/Fun/Tabletop/Battlemaps/shipbm_tabletop.rsi
+      state: tabletop

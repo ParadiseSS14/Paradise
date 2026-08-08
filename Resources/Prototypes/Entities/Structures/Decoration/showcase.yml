@@ -5,29 +5,28 @@
   name: security robot showcase
   description: A non-functional replica of an old security robot.
   components:
-  - type: Sprite
-    noRot: true
-  - type: Anchorable
-  - type: Damageable
-    damageModifierSet: Metallic
-  - type: Injurable
-    damageContainer: StructuralInorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 75
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          PartRodMetal1:
-            min: 5
-            max: 10
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+    - type: Sprite
+      noRot: true
+    - type: Anchorable
+    - type: Damageable
+      damageModifierSet: Metallic
+    - type: Injurable
+      damageContainer: StructuralInorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 75
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                PartRodMetal1:
+                  min: 5
+                  max: 10
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
 
 - type: entity
   id: ShowcaseRobot
@@ -35,9 +34,9 @@
   name: security robot showcase
   description: A non-functional replica of an old security robot.
   components:
-  - type: Sprite
-    sprite: Structures/Decoration/showcase.rsi
-    state: showcase_1
+    - type: Sprite
+      sprite: Structures/Decoration/showcase.rsi
+      state: showcase_1
 
 - type: entity
   id: ShowcaseRobotWhite
@@ -45,9 +44,9 @@
   name: white robot showcase
   description: A non-functional replica of an old robot.
   components:
-  - type: Sprite
-    sprite: Structures/Decoration/showcase.rsi
-    state: showcase_2
+    - type: Sprite
+      sprite: Structures/Decoration/showcase.rsi
+      state: showcase_2
 
 - type: entity
   id: ShowcaseRobotAntique
@@ -55,9 +54,9 @@
   name: cargo robot showcase
   description: A non-functional replica of an old cargo robot.
   components:
-  - type: Sprite
-    sprite: Structures/Decoration/showcase.rsi
-    state: showcase_3
+    - type: Sprite
+      sprite: Structures/Decoration/showcase.rsi
+      state: showcase_3
 
 - type: entity
   id: ShowcaseRobotMarauder
@@ -65,6 +64,6 @@
   name: marauder showcase
   description: A non-functional replica of a marauder, painted green.
   components:
-  - type: Sprite
-    sprite: Structures/Decoration/showcase.rsi
-    state: showcase_4
+    - type: Sprite
+      sprite: Structures/Decoration/showcase.rsi
+      state: showcase_4

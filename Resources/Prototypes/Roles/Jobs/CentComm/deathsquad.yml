@@ -8,12 +8,12 @@
   icon: "JobIconDeathSquad"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   id: DeathSquadGear
@@ -32,18 +32,18 @@
     belt: ClothingBeltMilitaryWebbingMedFilled
   storage:
     back:
-    - WeaponPulsePistol
-    - WeaponRevolverMatebaAP
-    - SpeedLoaderMagnumAP
-    - SpeedLoaderMagnumAP
-    - BoxFlashbang
-    - ToolDebug # spanish army knife
-    - WelderExperimental
-    - Hypospray
-    - DeathAcidifierImplanter # crew will try to steal their amazing hardsuits
-    - FreedomImplanter
+      - WeaponPulsePistol
+      - WeaponRevolverMatebaAP
+      - SpeedLoaderMagnumAP
+      - SpeedLoaderMagnumAP
+      - BoxFlashbang
+      - ToolDebug # spanish army knife
+      - WelderExperimental
+      - Hypospray
+      - DeathAcidifierImplanter # crew will try to steal their amazing hardsuits
+      - FreedomImplanter
   inhand:
-  - WeaponPulseRifle
+    - WeaponPulseRifle
 
 - type: chameleonOutfit
   id: DeathSquadChameleonOutfit

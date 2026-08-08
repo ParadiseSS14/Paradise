@@ -4,15 +4,15 @@
   priority: 0
   text: "/ServerInfo/Guidebook/NewPlayer/NewPlayer.xml"
   children:
-  - Controls
-  - CharacterCreation
+    - Controls
+    - CharacterCreation
 
 - type: guideEntry
   id: Controls
   name: guide-entry-controls
   text: "/ServerInfo/Guidebook/NewPlayer/Controls/Controls.xml"
   children:
-  - Radio
+    - Radio
 
 - type: guideEntry
   id: Radio
@@ -24,8 +24,8 @@
   name: guide-entry-charactercreation
   text: "/ServerInfo/Guidebook/NewPlayer/CharacterCreation.xml"
   children:
-  - YourFirstCharacter
-  - Species
+    - YourFirstCharacter
+    - Species
 
 - type: guideEntry
   id: YourFirstCharacter

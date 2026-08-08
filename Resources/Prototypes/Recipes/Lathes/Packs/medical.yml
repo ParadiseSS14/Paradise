@@ -3,89 +3,89 @@
 - type: latheRecipePack
   id: TopicalsStatic
   recipes:
-  - Brutepack
-  - Ointment
-  - Gauze
+    - Brutepack
+    - Ointment
+    - Gauze
 
 - type: latheRecipePack
   id: BasicChemistryStatic
   recipes:
-  - Beaker
-  - LargeBeaker
-  - Syringe
-  - PillCanister
-  - HandLabeler
-  - ChemistryEmptyVial
-  - ChemistryEmptyVialSmall
-  - Dropper
+    - Beaker
+    - LargeBeaker
+    - Syringe
+    - PillCanister
+    - HandLabeler
+    - ChemistryEmptyVial
+    - ChemistryEmptyVialSmall
+    - Dropper
 
 - type: latheRecipePack
   parent: BasicChemistryStatic
   id: ChemistryStatic
   recipes:
-  - Jug
-  - ChemistryEmptyBottle01
-  - ClothingEyesGlassesChemical
+    - Jug
+    - ChemistryEmptyBottle01
+    - ClothingEyesGlassesChemical
 
 - type: latheRecipePack
   id: SurgeryStatic
   recipes:
-  - Scalpel
-  - Retractor
-  - Cautery
-  - Drill
-  - Saw
-  - Hemostat
+    - Scalpel
+    - Retractor
+    - Cautery
+    - Drill
+    - Saw
+    - Hemostat
 
 - type: latheRecipePack
   id: MedicalStatic
   recipes:
-  - Implanter
-  - Defibrillator
-  - HandheldHealthAnalyzer
-  - DiseaseSwab
-  - BodyBag
-  - WhiteCane
-  - OffsetCane
-  - OffsetCaneWood
-  - JetInjector
+    - Implanter
+    - Defibrillator
+    - HandheldHealthAnalyzer
+    - DiseaseSwab
+    - BodyBag
+    - WhiteCane
+    - OffsetCane
+    - OffsetCaneWood
+    - JetInjector
 
 - type: latheRecipePack
   id: RollerBedsStatic
   recipes:
-  - RollerBedSpawnFolded
-  - CheapRollerBedSpawnFolded
-  - EmergencyRollerBedSpawnFolded
+    - RollerBedSpawnFolded
+    - CheapRollerBedSpawnFolded
+    - EmergencyRollerBedSpawnFolded
 
 - type: latheRecipePack
   id: MedicalClothingStatic
   recipes:
-  - ClothingHandsGlovesLatex
-  - ClothingHandsGlovesNitrile
-  - ClothingMaskSterile
+    - ClothingHandsGlovesLatex
+    - ClothingHandsGlovesNitrile
+    - ClothingMaskSterile
 
 # These are all empty
 - type: latheRecipePack
   id: EmptyMedkitsStatic
   recipes:
-  - Medkit
-  - MedkitBurn
-  - MedkitToxin
-  - MedkitO2
-  - MedkitBrute
-  - MedkitAdvanced
-  - MedkitRadiation
-  - MedkitCombat
+    - Medkit
+    - MedkitBurn
+    - MedkitToxin
+    - MedkitO2
+    - MedkitBrute
+    - MedkitAdvanced
+    - MedkitRadiation
+    - MedkitCombat
 
 - type: latheRecipePack
   id: MedicalBoardsStatic
   recipes:
-  - ElectrolysisUnitMachineCircuitboard
-  - CentrifugeMachineCircuitboard
-  - ChemDispenserMachineCircuitboard
-  - ChemMasterMachineCircuitboard
-  - CondenserMachineCircuitBoard
-  - HotplateMachineCircuitboard
+    - ElectrolysisUnitMachineCircuitboard
+    - CentrifugeMachineCircuitboard
+    - ChemDispenserMachineCircuitboard
+    - ChemMasterMachineCircuitboard
+    - CondenserMachineCircuitBoard
+    - HotplateMachineCircuitboard
 
 ## Dynamic
 
@@ -93,18 +93,18 @@
 - type: latheRecipePack
   id: Chemistry
   recipes:
-  - ChemicalPayload
-  - CryostasisBeaker
-  - SyringeCryostasis
-  - BluespaceBeaker
-  - SyringeBluespace
-  - LauncherSyringe
-  - MiniSyringe
-  - AdvancedJetInjector
+    - ChemicalPayload
+    - CryostasisBeaker
+    - SyringeCryostasis
+    - BluespaceBeaker
+    - SyringeBluespace
+    - LauncherSyringe
+    - MiniSyringe
+    - AdvancedJetInjector
 
 - type: latheRecipePack
   id: MedicalBoards
   recipes:
-  - StasisBedMachineCircuitboard
-  - CryoPodMachineCircuitboard
-  - BiomassReclaimerMachineCircuitboard
+    - StasisBedMachineCircuitboard
+    - CryoPodMachineCircuitboard
+    - BiomassReclaimerMachineCircuitboard

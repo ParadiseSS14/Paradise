@@ -9,12 +9,12 @@
   icon: "JobIconERTLeader"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   parent: ERTLeaderGearEVA
@@ -43,23 +43,23 @@
     suitstorage: WeaponDisablerSMG
   storage:
     back:
-    - Binoculars
-    - HoloprojectorField
-    - PhoneInstrument
-    - PinpointerNuclear
-    - PowerCellHigh
-    - PowerCellHigh
-    - MedkitCombatFilled # End of first line
-    - MedkitCombatFilled
-    - TelescopicShield
+      - Binoculars
+      - HoloprojectorField
+      - PhoneInstrument
+      - PinpointerNuclear
+      - PowerCellHigh
+      - PowerCellHigh
+      - MedkitCombatFilled # End of first line
+      - MedkitCombatFilled
+      - TelescopicShield
     belt:
-    - Stunbaton
-    - Handcuffs
-    - Handcuffs
-    - CrowbarRed
-    - WeaponPistolN1984
-    - MagazineMagnum
-    - EmergencyMedipen
+      - Stunbaton
+      - Handcuffs
+      - Handcuffs
+      - CrowbarRed
+      - WeaponPistolN1984
+      - MagazineMagnum
+      - EmergencyMedipen
 
 - type: startingGear
   parent: ERTLeaderGearEVA
@@ -69,24 +69,24 @@
     suitstorage: WeaponRifleLecterXL8
   storage:
     back:
-    - HoloprojectorField
-    - PhoneInstrument
-    - PinpointerNuclear
-    - MagazineRifle
-    - MagazineRifle
-    - MagazineRifleIncendiary
-    - MagazineRifleUranium
-    - MedkitCombatFilled # End of first line
-    - GrenadeShrapnel
-    - EmpGrenade
+      - HoloprojectorField
+      - PhoneInstrument
+      - PinpointerNuclear
+      - MagazineRifle
+      - MagazineRifle
+      - MagazineRifleIncendiary
+      - MagazineRifleUranium
+      - MedkitCombatFilled # End of first line
+      - GrenadeShrapnel
+      - EmpGrenade
     belt:
-    - Truncheon
-    - Handcuffs
-    - Handcuffs
-    - CrowbarRed
-    - WeaponPistolN1984
-    - MagazineMagnum
-    - EmergencyMedipen
+      - Truncheon
+      - Handcuffs
+      - Handcuffs
+      - CrowbarRed
+      - WeaponPistolN1984
+      - MagazineMagnum
+      - EmergencyMedipen
 
 - type: chameleonOutfit
   id: ERTLeaderChameleonOutfit
@@ -107,15 +107,15 @@
   icon: "JobIconERTChaplain"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddComponentSpecial
-    components:
-    - type: BibleUser #Lets them heal with bibles
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddComponentSpecial
+      components:
+        - type: BibleUser #Lets them heal with bibles
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   parent: ERTChaplainGearEVA
@@ -143,24 +143,24 @@
     pocket2: CombatKnife
   storage:
     back:
-    - BoxCandle
-    - BodyBagFolded
-    - BodyBagFolded
-    - JugWater
-    - JugBlood # End of first row
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
-    - FoodBakedBunHotX
+      - BoxCandle
+      - BodyBagFolded
+      - BodyBagFolded
+      - JugWater
+      - JugBlood # End of first row
+      - FoodBakedBunHotX
+      - FoodBakedBunHotX
+      - FoodBakedBunHotX
+      - FoodBakedBunHotX
     belt:
-    - Bible
-    - Lantern
-    - Lantern
-    - Lantern
-    - CrowbarRed
-    - WeaponPistolMk58
-    - MagazinePistol
-    - FlippoEngravedLighter
+      - Bible
+      - Lantern
+      - Lantern
+      - Lantern
+      - CrowbarRed
+      - WeaponPistolMk58
+      - MagazinePistol
+      - FlippoEngravedLighter
 
 - type: chameleonOutfit
   id: ERTChaplainChameleonOutfit
@@ -183,12 +183,12 @@
   icon: "JobIconERTEngineer"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   parent: ERTEngineerGearEVA
@@ -215,27 +215,27 @@
     pocket2: CombatKnife
   storage:
     back:
-    - RCD
-    - GasAnalyzer
-    - trayScanner
-    - HolofanProjector
-    - PartRodMetal
-    - SheetPlasteel # End of first line
-    - MiningDrillDiamond
-    - RCDAmmo
-    - RCDAmmo
-    - RCDAmmo
-    - RCDAmmo
-    - MetalFoamGrenade
-    - AirGrenade
+      - RCD
+      - GasAnalyzer
+      - trayScanner
+      - HolofanProjector
+      - PartRodMetal
+      - SheetPlasteel # End of first line
+      - MiningDrillDiamond
+      - RCDAmmo
+      - RCDAmmo
+      - RCDAmmo
+      - RCDAmmo
+      - MetalFoamGrenade
+      - AirGrenade
     belt:
-    - JawsOfLife
-    - PowerDrill
-    - WelderIndustrialAdvanced
-    - Multitool
-    - WeaponPistolMk58
-    - MagazinePistol
-    - EmergencyMedipen
+      - JawsOfLife
+      - PowerDrill
+      - WelderIndustrialAdvanced
+      - Multitool
+      - WeaponPistolMk58
+      - MagazinePistol
+      - EmergencyMedipen
 
 - type: startingGear
   parent: ERTEngineerGearEVA
@@ -244,18 +244,18 @@
     suitstorage: WeaponShotgunEnforcer
   storage:
     back:
-    - RCD
-    - GasAnalyzer
-    - HolofanProjector
-    - MiningDrillDiamond
-    - BoxLethalshot
-    - BoxShotgunSlug # End of first line
-    - RCDAmmo
-    - RCDAmmo
-    - RCDAmmo
-    - RCDAmmo
-    - CableDetStack
-    - BoxDetonator
+      - RCD
+      - GasAnalyzer
+      - HolofanProjector
+      - MiningDrillDiamond
+      - BoxLethalshot
+      - BoxShotgunSlug # End of first line
+      - RCDAmmo
+      - RCDAmmo
+      - RCDAmmo
+      - RCDAmmo
+      - CableDetStack
+      - BoxDetonator
 
 - type: chameleonOutfit
   id: ERTEngineerChameleonOutfit
@@ -276,12 +276,12 @@
   icon: "JobIconERTSecurity"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   parent: ERTSecurityGearEVA
@@ -310,23 +310,23 @@
     suitstorage: WeaponDisablerSMG
   storage:
     back:
-    - BoxZiptie
-    - Flash
-    - GrenadeFlashBang
-    - TearGasGrenade
-    - GrenadeStinger
-    - MedkitCombatFilled # End of first line
-    - TelescopicShield
-    - HoloprojectorSecurity
-    - PowerCellHigh
+      - BoxZiptie
+      - Flash
+      - GrenadeFlashBang
+      - TearGasGrenade
+      - GrenadeStinger
+      - MedkitCombatFilled # End of first line
+      - TelescopicShield
+      - HoloprojectorSecurity
+      - PowerCellHigh
     belt:
-    - Stunbaton
-    - Handcuffs
-    - Handcuffs
-    - CrowbarRed
-    - WeaponPistolMk58
-    - MagazinePistol
-    - EmergencyMedipen
+      - Stunbaton
+      - Handcuffs
+      - Handcuffs
+      - CrowbarRed
+      - WeaponPistolMk58
+      - MagazinePistol
+      - EmergencyMedipen
 
 - type: startingGear
   id: ERTSecurityGearArmedRifle
@@ -347,14 +347,14 @@
     - PortableRecharger
   storage:
     belt:
-    - CrowbarRed
-    - Zipties
-    - MedkitCombatFilled
-    - MagazineRifle
-    - MagazineRifle
-    - MagazineRifleIncendiary
-    - MagazineRifleUranium
-    - Zipties
+      - CrowbarRed
+      - Zipties
+      - MedkitCombatFilled
+      - MagazineRifle
+      - MagazineRifle
+      - MagazineRifleIncendiary
+      - MagazineRifleUranium
+      - Zipties
 
 - type: startingGear
   parent: ERTSecurityGearEVA
@@ -364,29 +364,29 @@
     suitstorage: WeaponLauncherHydraLethal
   storage:
     back:
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
-    - MagazinePistol
-    - MedkitCombatFilled # End of first line
-    - GrenadeEMP
-    - GrenadeEMP
-    - GrenadeEMP
-    - GrenadeFlash
-    - GrenadeFlash
-    - GrenadeFlash
-    - MagazinePistol
+      - GrenadeBlast
+      - GrenadeBlast
+      - GrenadeBlast
+      - GrenadeBlast
+      - GrenadeBlast
+      - GrenadeBlast
+      - MagazinePistol
+      - MedkitCombatFilled # End of first line
+      - GrenadeEMP
+      - GrenadeEMP
+      - GrenadeEMP
+      - GrenadeFlash
+      - GrenadeFlash
+      - GrenadeFlash
+      - MagazinePistol
     belt:
-    - Truncheon
-    - Handcuffs
-    - Handcuffs
-    - CrowbarRed
-    - WeaponPistolMk58
-    - MagazinePistol
-    - EmergencyMedipen
+      - Truncheon
+      - Handcuffs
+      - Handcuffs
+      - CrowbarRed
+      - WeaponPistolMk58
+      - MagazinePistol
+      - EmergencyMedipen
 
 - type: startingGear
   parent: ERTSecurityGearEVA
@@ -396,26 +396,26 @@
     suitstorage: WeaponSubMachineGunWt550
   storage:
     back:
-    - ExGrenade
-    - SmokeGrenade
-    - EmpGrenade
-    - HoloprojectorSecurity
-    - TelescopicShield
-    - TelescopicShield
-    - TelescopicShield
-    - MedkitCombatFilled # End of first line
-    - MagazinePistolSubMachineGunTopMounted
-    - MagazinePistolSubMachineGunTopMounted
-    - MagazinePistolSubMachineGunTopMounted
-    - MagazinePistolSubMachineGunTopMounted
+      - ExGrenade
+      - SmokeGrenade
+      - EmpGrenade
+      - HoloprojectorSecurity
+      - TelescopicShield
+      - TelescopicShield
+      - TelescopicShield
+      - MedkitCombatFilled # End of first line
+      - MagazinePistolSubMachineGunTopMounted
+      - MagazinePistolSubMachineGunTopMounted
+      - MagazinePistolSubMachineGunTopMounted
+      - MagazinePistolSubMachineGunTopMounted
     belt:
-    - Truncheon
-    - Handcuffs
-    - Handcuffs
-    - CrowbarRed
-    - WeaponPistolMk58
-    - MagazinePistol
-    - EmergencyMedipen
+      - Truncheon
+      - Handcuffs
+      - Handcuffs
+      - CrowbarRed
+      - WeaponPistolMk58
+      - MagazinePistol
+      - EmergencyMedipen
 
 - type: startingGear
   parent: ERTSecurityGearEVA
@@ -425,23 +425,23 @@
     suitstorage: WeaponShotgunEnforcer
   storage:
     back:
-    - SmokeGrenade
-    - BoxLethalshot
-    - BoxShotgunSlug
-    - BoxShotgunIncendiary
-    - MedkitCombatFilled # End of first line
-    - SmokeGrenade
-    - ExGrenade
-    - CableDetStack
-    - BoxDetonator
+      - SmokeGrenade
+      - BoxLethalshot
+      - BoxShotgunSlug
+      - BoxShotgunIncendiary
+      - MedkitCombatFilled # End of first line
+      - SmokeGrenade
+      - ExGrenade
+      - CableDetStack
+      - BoxDetonator
     belt:
-    - Truncheon
-    - Handcuffs
-    - Handcuffs
-    - CrowbarRed
-    - WeaponPistolMk58
-    - MagazinePistol
-    - EmergencyMedipen
+      - Truncheon
+      - Handcuffs
+      - Handcuffs
+      - CrowbarRed
+      - WeaponPistolMk58
+      - MagazinePistol
+      - EmergencyMedipen
 
 - type: chameleonOutfit
   id: ERTSecurityChameleonOutfit
@@ -462,12 +462,12 @@
   icon: "JobIconERTMedic"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   parent: ERTMedicalGearEVA
@@ -494,25 +494,25 @@
     pocket2: CombatKnife
   storage:
     back:
-    - Hypospray
-    - BeakerSmallBruiz
-    - BeakerSmallLace
-    - JugPunctTranex
-    - JugPyraDerma
-    - JugDexPlusSaline # End of first line
-    - JugTrico
-    - BeakerSmallArith
-    - BeakerSmallDiph
-    - BeakerSmallSigy
-    - ClothingEyesGlassesChemical
-    - ChemistryBottleOmnizine
+      - Hypospray
+      - BeakerSmallBruiz
+      - BeakerSmallLace
+      - JugPunctTranex
+      - JugPyraDerma
+      - JugDexPlusSaline # End of first line
+      - JugTrico
+      - BeakerSmallArith
+      - BeakerSmallDiph
+      - BeakerSmallSigy
+      - ClothingEyesGlassesChemical
+      - ChemistryBottleOmnizine
     belt:
-    - DefibrillatorCompact
-    - MedkitCombatFilled
-    - CrowbarRed
-    - WeaponPistolMk58
-    - MagazinePistol
-    - EmergencyMedipen
+      - DefibrillatorCompact
+      - MedkitCombatFilled
+      - CrowbarRed
+      - WeaponPistolMk58
+      - MagazinePistol
+      - EmergencyMedipen
 
 - type: startingGear
   parent: ERTMedicalGearEVA
@@ -522,25 +522,25 @@
     pocket2: WeaponDisabler
   storage:
     back:
-    - Hypospray
-    - JugPunctTranex
-    - JugPyraDerma
-    - JugDexPlusSaline
-    - JugTrico # End of first line
-    - BeakerSmallArith
-    - DefibrillatorCompact
-    - MedkitCombatFilled
-    - ClothingEyesGlassesChemical
-    - ChemistryBottleOmnizine
+      - Hypospray
+      - JugPunctTranex
+      - JugPyraDerma
+      - JugDexPlusSaline
+      - JugTrico # End of first line
+      - BeakerSmallArith
+      - DefibrillatorCompact
+      - MedkitCombatFilled
+      - ClothingEyesGlassesChemical
+      - ChemistryBottleOmnizine
     belt:
-    - Truncheon
-    - Zipties
-    - CrowbarRed
-    - MagazineRifle
-    - MagazineRifle
-    - MagazineRifleIncendiary
-    - MagazineRifleUranium # End of first line
-    - Zipties
+      - Truncheon
+      - Zipties
+      - CrowbarRed
+      - MagazineRifle
+      - MagazineRifle
+      - MagazineRifleIncendiary
+      - MagazineRifleUranium # End of first line
+      - Zipties
 
 - type: chameleonOutfit
   id: ERTMedicalChameleonOutfit
@@ -561,12 +561,12 @@
   icon: "JobIconERTJanitor"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   parent: ERTJanitorGearEVA
@@ -594,25 +594,25 @@
     suitstorage: WeaponLauncherHydra
   storage:
     back:
-    - SoapNT
-    - Plunger
-    - Screwdriver
-    - AdvMopItem
-    - GrenadeCleanade
-    - GrenadeCleanade # End of first line
-    - GrenadeCleanade
-    - GrenadeCleanade
-    - GrenadeCleanade
-    - GrenadeCleanade
+      - SoapNT
+      - Plunger
+      - Screwdriver
+      - AdvMopItem
+      - GrenadeCleanade
+      - GrenadeCleanade # End of first line
+      - GrenadeCleanade
+      - GrenadeCleanade
+      - GrenadeCleanade
+      - GrenadeCleanade
     belt:
-    - MegaSprayBottleSpaceCleaner
-    - Holoprojector
-    - LightReplacer
-    - WireBrush
-    - CrowbarRed
-    - WeaponPistolMk58
-    - MagazinePistol
-    - EmergencyMedipen
+      - MegaSprayBottleSpaceCleaner
+      - Holoprojector
+      - LightReplacer
+      - WireBrush
+      - CrowbarRed
+      - WeaponPistolMk58
+      - MagazinePistol
+      - EmergencyMedipen
   inhand:
     - TrashBag
 

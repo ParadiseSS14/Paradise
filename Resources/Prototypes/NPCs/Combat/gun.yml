@@ -92,7 +92,6 @@
         - !type:HTNCompoundTask
           task: GunCombatCompound
 
-
 - type: htnCompound
   id: RangedCombatCompound
   branches:
@@ -152,19 +151,19 @@
     #  tasks:
     #    - !type:HTNCompoundTask
     #      task: ClearActiveHandCompound
-#
-#        - !type:HTNCompoundTask
-#          task: PickupAmmoCompound
+    #
+    #        - !type:HTNCompoundTask
+    #          task: PickupAmmoCompound
 
     # Pickup gun with ammo if we have no ammo
-    -  preconditions:
-         - !type:ActiveHandComponentPrecondition
-           components:
-             - type: Gun
-           invert: true
-       tasks:
-         - !type:HTNCompoundTask
-           task: PickupGunCompound
+    - preconditions:
+        - !type:ActiveHandComponentPrecondition
+          components:
+            - type: Gun
+          invert: true
+      tasks:
+        - !type:HTNCompoundTask
+          task: PickupGunCompound
 
     # Discard gun if no ammo
     - preconditions:
@@ -178,5 +177,4 @@
           preconditions:
             - !type:ActiveHandEntityPrecondition
           operator: !type:DropOperator
-
 # TODO: Reload a nearby gun

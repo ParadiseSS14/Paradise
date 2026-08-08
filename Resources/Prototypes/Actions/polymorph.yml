@@ -4,26 +4,26 @@
   name: Revert
   description: Revert back into your original form.
   components:
-  - type: InstantAction
-    event: !type:RevertPolymorphActionEvent
+    - type: InstantAction
+      event: !type:RevertPolymorphActionEvent
 
 - type: entity
   parent: ActionRevertPolymorph
   id: ActionRevertPolymorphConfirm
   components:
-  - type: ConfirmableAction
-    popup: revert-polymorph-action-popup
+    - type: ConfirmableAction
+      popup: revert-polymorph-action-popup
 
 - type: entity
   abstract: true
   parent: BaseAction
   id: BaseActionPolymorph
   components:
-  - type: Action
-    itemIconStyle: NoItem
-    useDelay: 60
-  - type: InstantAction
-    event: !type:PolymorphActionEvent
+    - type: Action
+      itemIconStyle: NoItem
+      useDelay: 60
+    - type: InstantAction
+      event: !type:PolymorphActionEvent
 
 - type: entity
   parent: BaseActionPolymorph
@@ -31,14 +31,14 @@
   name: Spider Polymorph
   description: Polymorphs you into a Spider.
   components:
-  - type: Action
-  - type: Sprite
-    sprite: Mobs/Animals/spider.rsi
-    layers:
-    - state: tarantula
-  - type: InstantAction
-    event: !type:PolymorphActionEvent
-      protoId: WizardSpider
+    - type: Action
+    - type: Sprite
+      sprite: Mobs/Animals/spider.rsi
+      layers:
+        - state: tarantula
+    - type: InstantAction
+      event: !type:PolymorphActionEvent
+        protoId: WizardSpider
 
 - type: entity
   parent: BaseActionPolymorph
@@ -46,14 +46,14 @@
   name: Rod Form
   description: CLANG!
   components:
-  - type: Action
-  - type: Sprite
-    sprite: Objects/Fun/immovable_rod.rsi
-    layers:
-    - state: icon
-  - type: InstantAction
-    event: !type:PolymorphActionEvent
-      protoId: WizardRod
+    - type: Action
+    - type: Sprite
+      sprite: Objects/Fun/immovable_rod.rsi
+      layers:
+        - state: icon
+    - type: InstantAction
+      event: !type:PolymorphActionEvent
+        protoId: WizardRod
 
 - type: entity
   parent: BaseActionPolymorph
@@ -61,21 +61,21 @@
   name: Ethereal Jaunt
   description: Melt into the Ethereal Plane for a quick getaway!
   components:
-  - type: Magic
-  - type: Action
-    useDelay: 30
-  - type: Sprite
-    sprite: Objects/Magic/magicactions.rsi
-    layers:
-    - state: jaunt
-  - type: InstantAction
-    event: !type:PolymorphActionEvent
-      protoId: Jaunt
-    # TODO: Effect ECS (from cardboard box)
-  - type: ActionUpgrade
-    effectedLevels:
-      2: ActionPolymorphJauntII
-      3: ActionPolymorphJauntIII
+    - type: Magic
+    - type: Action
+      useDelay: 30
+    - type: Sprite
+      sprite: Objects/Magic/magicactions.rsi
+      layers:
+        - state: jaunt
+    - type: InstantAction
+      event: !type:PolymorphActionEvent
+        protoId: Jaunt
+      # TODO: Effect ECS (from cardboard box)
+    - type: ActionUpgrade
+      effectedLevels:
+        2: ActionPolymorphJauntII
+        3: ActionPolymorphJauntIII
 
 - type: entity
   parent: ActionPolymorphJaunt
@@ -83,8 +83,8 @@
   name: Ethereal Jaunt II
   description: Melt into the Ethereal Plane for an even quicker getaway!
   components:
-  - type: Action
-    useDelay: 25
+    - type: Action
+      useDelay: 25
 
 - type: entity
   parent: ActionPolymorphJaunt
@@ -92,5 +92,5 @@
   name: Ethereal Jaunt III
   description: Are you even tangible anymore?
   components:
-  - type: Action
-    useDelay: 20
+    - type: Action
+      useDelay: 20

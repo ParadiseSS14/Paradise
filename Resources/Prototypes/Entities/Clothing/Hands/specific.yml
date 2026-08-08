@@ -7,8 +7,8 @@
   components:
     - type: Tag
       tags: # ignore "WhitelistChameleon" tag
-      - ClothMade
-      - Recyclable
+        - ClothMade
+        - Recyclable
     - type: Sprite
       sprite: Clothing/Hands/Gloves/Color/black.rsi
     - type: Clothing
@@ -25,6 +25,6 @@
   id: ClothingHandsChameleonThief
   suffix: Chameleon, Thieving
   components:
-  - type: Thieving
-    stripTimeReduction: 2
-    stealthy: true
+    - type: Thieving
+      stripTimeReduction: 2
+      stealthy: true

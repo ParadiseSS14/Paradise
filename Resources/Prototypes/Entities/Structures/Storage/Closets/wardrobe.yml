@@ -14,11 +14,11 @@
   name: blue wardrobe
   description: "A wardrobe packed with stylish blue clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: blue_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: blue_door
 
 # Pink wardrobe
 - type: entity
@@ -27,11 +27,11 @@
   name: pink wardrobe
   description: "A wardrobe packed with fabulous pink clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: pink_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: pink_door
 
 # Black wardrobe
 - type: entity
@@ -40,11 +40,11 @@
   name: black wardrobe
   description: "A wardrobe packed with stylish black clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: black_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: black_door
 
 # Green wardrobe
 - type: entity
@@ -53,11 +53,11 @@
   name: green wardrobe
   description: "A wardrobe packed with stylish green clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: green_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: green_door
 
 # Prison wardrobe
 - type: entity
@@ -65,11 +65,11 @@
   parent: WardrobeBase
   name: prison wardrobe
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: orange_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: orange_door
 
 # Yellow wardrobe
 - type: entity
@@ -78,11 +78,11 @@
   name: yellow wardrobe
   description: "A wardrobe packed with stylish yellow clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: yellow_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: yellow_door
 
 # White wardrobe
 - type: entity
@@ -91,11 +91,11 @@
   name: white wardrobe
   description: "A wardrobe packed with stylish white clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: white_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: white_door
 
 # Grey wardrobe
 - type: entity
@@ -104,11 +104,11 @@
   name: grey wardrobe
   description: "A wardrobe packed with a tide of grey clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: grey_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: grey_door
 
 # Mixed wardrobe
 - type: entity
@@ -117,11 +117,11 @@
   name: mixed wardrobe
   description: "A wardrobe packed with a mix of colorful clothing."
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: mixed_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: mixed_door
 
 # Jobs
 
@@ -130,22 +130,22 @@
   parent: WardrobeBase
   name: security wardrobe
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: red_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: red_door
 
 - type: entity
   id: WardrobeAtmospherics
   parent: WardrobeBase
   name: atmospherics wardrobe
   components:
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateBaseClosed: generic
-    stateDoorOpen: generic_open
-    stateDoorClosed: atmos_wardrobe_door
+    - type: Appearance
+    - type: EntityStorageVisuals
+      stateBaseClosed: generic
+      stateDoorOpen: generic_open
+      stateDoorClosed: atmos_wardrobe_door
 
 - type: entity
   id: ClosetJanitor

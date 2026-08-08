@@ -10,10 +10,10 @@
   femaleFirstNames: NamesArachnidFirst
   lastNames: NamesArachnidLast
   sexes:
-  - Unsexed
+    - Unsexed
   defaultSoundsBySex:
-  - UnisexArachnid
-  - UnisexArachnid
-  - UnisexArachnid
+    - UnisexArachnid
+    - UnisexArachnid
+    - UnisexArachnid
   voices:
-  - UnisexArachnid
+    - UnisexArachnid

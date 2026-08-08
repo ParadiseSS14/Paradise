@@ -13,6 +13,6 @@
 - type: accessGroup
   id: Cargo
   tags:
-  - Quartermaster
-  - Salvage
-  - Cargo
+    - Quartermaster
+    - Salvage
+    - Cargo

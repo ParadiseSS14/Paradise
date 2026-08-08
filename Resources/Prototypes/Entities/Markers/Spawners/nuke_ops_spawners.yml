@@ -142,14 +142,13 @@
   id: NukeOpsLootSpawner
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Objects/Devices/jammer.rsi
-      state: jammer
-  - type: EntityTableSpawner
-    table: !type:NestedSelector
-      tableId: NukeOpsLootTable
+    - type: Sprite
+      layers:
+        - sprite: Markers/spawners.rsi
+          state: nuke_ops_loot
+    - type: EntityTableSpawner
+      table: !type:NestedSelector
+        tableId: NukeOpsLootTable
   placement:
     mode: AlignTileAny
 
@@ -158,15 +157,14 @@
   id: NukeOpsWeaponSpawner
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Objects/Weapons/Guns/Revolvers/python.rsi
-      state: icon
-  - type: EntityTableSpawner
-    offset: 0.15
-    table: !type:NestedSelector
-      tableId: NukeOpsWeaponsTable
+    - type: Sprite
+      layers:
+        - sprite: Markers/spawners.rsi
+          state: python_pistol
+    - type: EntityTableSpawner
+      offset: 0.15
+      table: !type:NestedSelector
+        tableId: NukeOpsWeaponsTable
   placement:
     mode: AlignTileAny
 
@@ -175,14 +173,13 @@
   id: NukeOpsMedkitBruteSpawner
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Objects/Specific/Medical/firstaidkits.rsi
-      state: brutekit
-  - type: EntityTableSpawner
-    table: !type:NestedSelector
-      tableId: NukeOpsMedkitTableBrute
+    - type: Sprite
+      layers:
+        - sprite: Markers/spawners.rsi
+          state: brutekit
+    - type: EntityTableSpawner
+      table: !type:NestedSelector
+        tableId: NukeOpsMedkitTableBrute
   placement:
     mode: AlignTileAny
 
@@ -191,16 +188,15 @@
   id: NukeOpsMedkitSpawner
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Objects/Specific/Medical/firstaidkits.rsi
-      state: burnkit
-  - type: EntityTableSpawner
-    table: !type:NestedSelector
-      tableId: NukeOpsMedKitGeneral
-      rolls: !type:RangeNumberSelector
-        range: 2, 4
+    - type: Sprite
+      layers:
+        - sprite: Markers/spawners.rsi
+          state: medkit
+    - type: EntityTableSpawner
+      table: !type:NestedSelector
+        tableId: NukeOpsMedKitGeneral
+        rolls: !type:RangeNumberSelector
+          range: 2, 4
   placement:
     mode: AlignTileAny
 
@@ -209,17 +205,16 @@
   id: NukeOpsGrenadeSpawner
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Objects/Weapons/Grenades/grenade.rsi
-      state: icon
-  - type: EntityTableSpawner
-    offset: 0.15
-    table: !type:NestedSelector
-      tableId: NukeOpsGrenadeTable
-      rolls: !type:RangeNumberSelector
-        range: 1, 2
+    - type: Sprite
+      layers:
+        - sprite: Markers/spawners.rsi
+          state: grenade
+    - type: EntityTableSpawner
+      offset: 0.15
+      table: !type:NestedSelector
+        tableId: NukeOpsGrenadeTable
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
   placement:
     mode: AlignTileAny
 
@@ -228,16 +223,15 @@
   id: NukeOpsAmmoSpawner
   parent: MarkerBase
   components:
-  - type: Sprite
-    layers:
-    - state: green
-    - sprite: Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi
-      state: base
-  - type: EntityTableSpawner
-    offset: 0.15
-    table: !type:NestedSelector
-      tableId: NukeOpsAmmoTable
-      rolls: !type:RangeNumberSelector
-        range: 1, 2
+    - type: Sprite
+      layers:
+        - sprite: Markers/spawners.rsi
+          state: ammo
+    - type: EntityTableSpawner
+      offset: 0.15
+      table: !type:NestedSelector
+        tableId: NukeOpsAmmoTable
+        rolls: !type:RangeNumberSelector
+          range: 1, 2
   placement:
     mode: AlignTileAny

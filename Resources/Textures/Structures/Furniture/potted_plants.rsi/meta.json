@@ -16,14 +16,6 @@
       "directions": 4
     },
     {
-      "name": "random",
-      "delays": [
-        [
-          1.0
-        ]
-      ]
-    },
-    {
       "name": "applebush",
       "delays": [
         [

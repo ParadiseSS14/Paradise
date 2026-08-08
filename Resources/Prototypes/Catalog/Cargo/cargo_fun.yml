@@ -184,8 +184,8 @@
 - type: cargoProduct
   id: FunPlants
   icon:
-    sprite: Structures/Furniture/potted_plants.rsi
-    state: random
+    sprite: Markers/spawners.rsi
+    state: plant
   product: CratePlants
   cost: 1000
   category: cargoproduct-category-name-fun

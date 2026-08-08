@@ -539,7 +539,7 @@ public sealed partial class ChatUIController : UIController
             FilterableChannels |= ChatChannel.Radio;
             FilterableChannels |= ChatChannel.Emotes;
             FilterableChannels |= ChatChannel.Notifications;
-            FilterableChannels |= ChatChannel.Telepathic; // Paradise Content
+            FilterableChannels |= ChatChannel.Hivemind; // Paradise Content
 
             // Can only send local / radio / emote when attached to a non-ghost entity.
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
@@ -549,7 +549,7 @@ public sealed partial class ChatUIController : UIController
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
                 CanSendChannels |= ChatSelectChannel.Emotes;
-                CanSendChannels |= ChatSelectChannel.Telepathic; // Paradise Content
+                CanSendChannels |= ChatSelectChannel.Hivemind; // Paradise Content
             }
         }
 
@@ -901,7 +901,7 @@ public sealed partial class ChatUIController : UIController
                     AddSpeechBubble(msg, SpeechBubble.SpeechType.Looc);
                 break;
 
-            case ChatChannel.Telepathic: // Paradise Content
+            case ChatChannel.Hivemind: // Paradise Content
                 break; // No Speechbubble here
         }
     }

@@ -27,7 +27,7 @@ public sealed partial class ChannelFilterPopup : Popup
         ChatChannel.AdminAlert,
         ChatChannel.AdminChat,
         ChatChannel.Server,
-        ChatChannel.Telepathic // Paradise Change
+        ChatChannel.Hivemind // Paradise Change
     };
 
     private readonly Dictionary<ChatChannel, ChannelFilterCheckbox> _filterStates = new();

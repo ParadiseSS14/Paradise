@@ -41,9 +41,10 @@ internal sealed partial class TelepathicChatReplyCommand : LocalizedEntityComman
         // Using a simple token to prevent command spam
         if (!_telepathic.TryToken(telepathEnt, token))
         {
+            shell.WriteLine($"{targetEnt}: {Loc.GetString("telepathic-chat-token-invalid")}");
             return;
         }
 
-        _telepathic.OpenComposeFor(telepathEnt, targetEnt, telepathNet);
+        _telepathic.OpenComposeFor(telepathNet, targetEnt);
     }
 }

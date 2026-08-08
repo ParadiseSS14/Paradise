@@ -64,6 +64,8 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         telepath.Comp.Reset();
         Dirty(telepath);
+
+        _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), telepath.Owner);
     }
 
     private void OnEvent(Entity<TelepathicChatComponent> telepath, EntityUid performer, Entity<ActionComponent> action)
@@ -88,7 +90,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (action == telepath.Comp.ReceiveActionEntity)
         {
             uiKey = TelepathicChatUiKey.Receive;
-            telepath.Comp.IsReply = true;
+            telepath.Comp.IsScan = true;
         }
 
         Dirty(telepath);
@@ -110,9 +112,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         telepath.Comp.Receiver = args.Target;
         Dirty(telepath);
 
-        if (telepath.Comp.IsReply)
+        if (telepath.Comp.IsScan)
         {
-            SendTelepathicChat(telepath, string.Empty, false, telepath.Comp.IsReply);
+            SendTelepathicChat(telepath, string.Empty, false, telepath.Comp.IsScan);
         }
         else if (TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
         {
@@ -129,21 +131,23 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// <summary>
     /// This method handles the response of ScanMind targets
     /// </summary>
-    public void OpenComposeFor(EntityUid telepath, EntityUid target, NetEntity telepathNet)
+    public void OpenComposeFor(NetEntity telepathNet, EntityUid target)
     {
-        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
+        if (!TryComp<UserInterfaceComponent>(target, out _))
         {
             return;
         }
 
-        if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
+        var replyComp = EnsureComp<TelepathicReplyComponent>(target);
+        replyComp.Receiver = telepathNet;
+        Dirty(target, replyComp);
+
+        if (!TryComp<UserInterfaceComponent>(target, out var userInterfaceComp))
+        {
             return;
+        }
 
-        telepathComp.Sender = GetNetEntity(target);
-        telepathComp.Receiver = telepathNet;
-        Dirty(telepath, telepathComp);
-
-        _ui.OpenUi((telepath, userInterfaceComp), TelepathicChatUiKey.Compose, target);
+        _ui.OpenUi((target, userInterfaceComp), TelepathicChatUiKey.Compose, target);
     }
 
     private List<(NetEntity Uid, string Name)> ChooseTargets(EntityUid telepath, float range)

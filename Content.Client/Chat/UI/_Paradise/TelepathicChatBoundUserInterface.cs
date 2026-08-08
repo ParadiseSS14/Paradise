@@ -39,12 +39,6 @@ public sealed class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey
         _menu?.Close();
     }
 
-    private void OnCancel()
-    {
-        _menu?.Close();
-        _composeWindow?.Close();
-    }
-
     private void OnSelectTarget(NetEntity netEntity)
     {
         _targetEntity = netEntity;

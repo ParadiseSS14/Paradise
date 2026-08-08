@@ -152,6 +152,14 @@
   components:
   - type: AccessHelper
     access: Paramedic
+
+- type: entity
+  id: MorgueAccessWindoorHelper
+  suffix: "Morgue"
+  parent: MedicalBaseAccessWindoorHelper
+  components:
+  - type: AccessHelper
+    access: Morgue
 # endregion
 
 # region Science Access Windoor Helpers
@@ -330,6 +338,22 @@
   components:
   - type: AccessHelper
     access: Theatre
+
+- type: entity
+  id: ClownAccessWindoorHelper
+  suffix: "Clown"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+  - type: AccessHelper
+    access: Clown
+
+- type: entity
+  id: MimeAccessWindoorHelper
+  suffix: "Mime"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+  - type: AccessHelper
+    access: Mime
 # endregion
 
 # region Cargo Access Windoor Helpers

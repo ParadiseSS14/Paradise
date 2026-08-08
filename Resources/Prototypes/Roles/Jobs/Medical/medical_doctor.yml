@@ -13,6 +13,7 @@
   access:
   - Medical
   - Maintenance
+  - Morgue
   extendedAccess:
   - Chemistry
   special:

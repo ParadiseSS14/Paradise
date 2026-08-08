@@ -14,6 +14,7 @@
   access:
   - Medical
   - Maintenance
+  - Morgue
 
 - type: startingGear
   id: MedicalInternGear

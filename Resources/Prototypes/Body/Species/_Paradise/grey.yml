@@ -110,7 +110,18 @@
       - !type:Emote
         emote: Scream
         probability: 0.2
-  - type: NightVision 
+  - type: TelepathicChat # Send/Project Mind
+    range: 14.0
+  - type: UserInterface
+    interfaces:
+      enum.TelepathicChatUiKey.Send:
+        type: TelepathicChatBoundUserInterface
+      enum.TelepathicChatUiKey.Receive:
+        type: TelepathicChatBoundUserInterface
+      enum.TelepathicChatUiKey.Compose:
+        type: TelepathicChatBoundUserInterface
+        interactionRange: 0 # TelepathicChatSystem has own range checks, and this blocks obstruction
+  - type: NightVision
     prioritized: false
     lightingColor: "#FFFFFF05" # Darkened from the base color
   - type: BlindedByFlashing

@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
+using Content.Server.Atmos.Events;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Damage.Components;
@@ -10,7 +11,6 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Robust.Shared.Containers;
-
 namespace Content.Server.Atmos.EntitySystems
 {
     public sealed partial class BarotraumaSystem : EntitySystem
@@ -30,7 +30,7 @@ namespace Content.Server.Atmos.EntitySystems
             SubscribeLocalEvent<PressureProtectionComponent, GotUnequippedEvent>(OnPressureProtectionUnequipped);
             SubscribeLocalEvent<PressureProtectionComponent, ComponentInit>(OnUpdateResistance);
             SubscribeLocalEvent<PressureProtectionComponent, ComponentRemove>(OnUpdateResistance);
-
+            SubscribeLocalEvent<PressureProtectionComponent, RefreshPressureProtectionEvent>(OnPressureUpdate);
             SubscribeLocalEvent<PressureImmunityComponent, ComponentInit>(OnPressureImmuneInit);
             SubscribeLocalEvent<PressureImmunityComponent, ComponentRemove>(OnPressureImmuneRemove);
         }
@@ -288,6 +288,21 @@ namespace Content.Server.Atmos.EntitySystems
                     }
                 }
             }
+        }
+
+        private void OnPressureUpdate(Entity<PressureProtectionComponent> ent, ref RefreshPressureProtectionEvent args)
+        {
+            if (!Resolve(ent, ref ent.Comp!, false))
+                return;
+
+            var comp = ent.Comp;
+            comp.LowPressureModifier = args.LowPressureModifier;
+            comp.LowPressureMultiplier = args.LowPressureMultiplier;
+            comp.HighPressureModifier = args.HighPressureModifier;
+            comp.HighPressureMultiplier = args.HighPressureMultiplier;
+            if (TryComp<BarotraumaComponent>(args.Performer, out var baroTraumaComp))
+                UpdateCachedResistances(args.Performer, baroTraumaComp);
+            return;
         }
     }
 }

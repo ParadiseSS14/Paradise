@@ -1,0 +1,30 @@
+- type: entity
+  parent: BaseAction
+  id: ActionModsuitWheel
+  name: Deploy MOD
+  description: Deploy your modsuit
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+  - type: Sprite
+    sprite: Interface/Actions/actions_modsuit.rsi
+    layers:
+    - state: deploy
+  - type: InstantAction
+    event: !type:DeployModsuit
+
+- type: entity
+  parent: BaseAction
+  id: ActionModsuitPower
+  name: Activate MOD
+  description: Activate your modsuit
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    useDelay: 10
+  - type: Sprite
+    sprite: Interface/Actions/actions_modsuit.rsi
+    layers:
+    - state: activate
+  - type: InstantAction
+    event: !type:PowerModsuit

@@ -563,8 +563,8 @@
   name: syndicate team leader ghost role
   components:
     - type: Sprite
-      sprite: Structures/Decoration/banner.rsi
-      state: banner_syndicate
+      sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+      state: icon
     - type: RandomHumanoidSpawner
       settings: SyndieSoldierTeamLeader
 
@@ -573,8 +573,8 @@
   name: syndicate soldier ghost role
   components:
     - type: Sprite
-      sprite: Structures/Decoration/banner.rsi
-      state: banner_syndicate
+      sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+      state: icon
     - type: RandomHumanoidSpawner
       settings: SyndieSoldier
 
@@ -583,8 +583,8 @@
   name: syndie disaster victim ghost role
   components:
     - type: Sprite
-      sprite: Structures/Decoration/banner.rsi
-      state: banner_syndicate
+      sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+      state: icon
     - type: RandomHumanoidSpawner
       settings: SyndieVisitor
 
@@ -594,8 +594,8 @@
   suffix: scooner
   components:
     - type: Sprite
-      sprite: Structures/Decoration/banner.rsi
-      state: banner-red
+      sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+      state: icon
     - type: RandomHumanoidSpawner
       settings: PirateScooner
 
@@ -605,8 +605,8 @@
   suffix: scooner
   components:
     - type: Sprite
-      sprite: Structures/Decoration/banner.rsi
-      state: banner-red
+      sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+      state: icon
     - type: RandomHumanoidSpawner
       settings: PirateCaptainScooner
 
@@ -617,8 +617,8 @@
   name: visiting blackmarketeer ghost role
   components:
     - type: Sprite
-      sprite: Structures/Decoration/banner.rsi
-      state: banner-yellow
+      sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+      state: icon
     - type: RandomHumanoidSpawner
       settings: VisitorBlackmarketeer
 
@@ -628,7 +628,7 @@
   name: cossack ghost role
   components:
     - type: Sprite
-      sprite: Structures/Decoration/banner.rsi
-      state: banner-yellow
+      sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+      state: icon
     - type: RandomHumanoidSpawner
       settings: Cossack

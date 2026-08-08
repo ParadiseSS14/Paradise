@@ -12,8 +12,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorCaptain
@@ -32,8 +32,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorCaptain
@@ -46,8 +46,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_engineering
+      - sprite: Objects/Decoration/_Paradise/Banners/atmospherics.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorCE
@@ -60,8 +60,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorCMO
@@ -74,8 +74,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorHOP
@@ -88,8 +88,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_security
+      - sprite: Objects/Decoration/_Paradise/Banners/security.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorHOS
@@ -102,8 +102,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_science
+      - sprite: Objects/Decoration/_Paradise/Banners/science.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorRD
@@ -116,8 +116,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_cargo
+      - sprite: Objects/Decoration/_Paradise/Banners/cargo.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorQM
@@ -132,8 +132,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_security
+      - sprite: Objects/Decoration/_Paradise/Banners/security.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorSecurityOfficer
@@ -152,8 +152,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_security
+      - sprite: Objects/Decoration/_Paradise/Banners/security.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorSecurityCadet
@@ -166,8 +166,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_security
+      - sprite: Objects/Decoration/_Paradise/Banners/security.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorSecurityOfficer
@@ -180,8 +180,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_security
+      - sprite: Objects/Decoration/_Paradise/Banners/security.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorDetective
@@ -194,8 +194,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_security
+      - sprite: Objects/Decoration/_Paradise/Banners/security.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorWarden
@@ -210,8 +210,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_cargo
+      - sprite: Objects/Decoration/_Paradise/Banners/cargo.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorCargoTechnician
@@ -228,8 +228,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_cargo
+      - sprite: Objects/Decoration/_Paradise/Banners/cargo.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorCargoTechnician
@@ -242,8 +242,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_cargo
+      - sprite: Objects/Decoration/_Paradise/Banners/cargo.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorSalvageSpecialist
@@ -258,8 +258,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_engineering
+      - sprite: Objects/Decoration/_Paradise/Banners/atmospherics.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorAtmosTech
@@ -277,8 +277,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_engineering
+      - sprite: Objects/Decoration/_Paradise/Banners/atmospherics.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorAtmosTech
@@ -291,8 +291,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_engineering
+      - sprite: Objects/Decoration/_Paradise/Banners/atmospherics.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorTechnicalAssistant
@@ -305,8 +305,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_engineering
+      - sprite: Objects/Decoration/_Paradise/Banners/atmospherics.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorEngineer
@@ -321,8 +321,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorChemist
@@ -345,8 +345,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorChemist
@@ -359,8 +359,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorMedicalIntern
@@ -373,8 +373,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorMedicalDoctor
@@ -387,8 +387,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorParamedic
@@ -401,8 +401,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorVirologist
@@ -415,8 +415,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorGeneticist
@@ -429,8 +429,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorPsychologist
@@ -443,8 +443,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_medical
+      - sprite: Objects/Decoration/_Paradise/Banners/medical.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorDentist
@@ -459,8 +459,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_science
+      - sprite: Objects/Decoration/_Paradise/Banners/science.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorResearchAssistant
@@ -477,8 +477,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_science
+      - sprite: Objects/Decoration/_Paradise/Banners/science.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorScientist
@@ -491,8 +491,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_science
+      - sprite: Objects/Decoration/_Paradise/Banners/science.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorResearchAssistant
@@ -507,8 +507,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorBartender
@@ -537,8 +537,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorBartender
@@ -551,8 +551,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorBotanist
@@ -565,8 +565,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorBoxer
@@ -579,8 +579,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorChaplain
@@ -593,8 +593,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorChef
@@ -607,8 +607,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/clown.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorClown
@@ -621,8 +621,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorJanitor
@@ -635,8 +635,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorLawyer
@@ -649,8 +649,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorLawyerCentcom
@@ -663,8 +663,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorLibrarian
@@ -677,8 +677,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorMusician
@@ -691,8 +691,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorMusicianFancy
@@ -705,8 +705,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorMusicianRelaxed
@@ -719,8 +719,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/mime.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorMime
@@ -733,8 +733,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorReporter
@@ -747,8 +747,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorServiceWorker
@@ -761,8 +761,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorZookeeper
@@ -781,8 +781,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidChallengeVictimCaptain
@@ -809,8 +809,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_cargo
+      - sprite: Objects/Decoration/_Paradise/Banners/cargo.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidChallengeCargoTechnician
@@ -834,8 +834,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorCaptain
@@ -889,8 +889,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner
+      - sprite: Objects/Decoration/_Paradise/Banners/nanotrasen.rsi
+        state: icon
   - type: ConditionalSpawner
     prototypes:
     - NTVisitorSpawner
@@ -950,8 +950,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_syndicate
+      - sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidSyndieSoldierTeamLeader
@@ -964,8 +964,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_syndicate
+      - sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidSyndieSoldier
@@ -978,8 +978,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner_syndicate
+      - sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidSyndieVisitor
@@ -993,8 +993,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner-red
+      - sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidPirateScooner
@@ -1008,8 +1008,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner-red
+      - sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidPirateCaptainScooner
@@ -1024,8 +1024,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner-yellow
+      - sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidVisitorBlackmarketeer
@@ -1038,8 +1038,8 @@
   - type: Sprite
     layers:
       - state: red
-      - sprite: Structures/Decoration/banner.rsi
-        state: banner-yellow
+      - sprite: Objects/Decoration/_Paradise/Banners/syndicate.rsi
+        state: icon
   - type: RandomSpawner
     prototypes:
     - RandomHumanoidCossack

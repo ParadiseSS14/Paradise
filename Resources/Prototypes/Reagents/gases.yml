@@ -21,7 +21,7 @@
       - !type:ModifyLungGas
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Vox ]
+          type: [ Vox, Plasmaman ]
           inverted: true
         ratios:
           CarbonDioxide: 1.0
@@ -99,7 +99,22 @@
         amount: -2.0
     Respiration:
       effects:
+      - !type:Oxygenate
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Plasmaman ]
+      - !type:ModifyLungGas
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Plasmaman ]
+        ratios:
+          CarbonDioxide: 1.0
+          Plasma: -1.0
       - !type:HealthChange
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Plasmaman ]
+          inverted: true
         ignoreResistances: true
         damage:
           types:
@@ -111,6 +126,10 @@
         minScale: 1.5
         clear: True
         time: 5
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Plasmaman ]
+          inverted: true
   reactiveEffects:
     Flammable:
       methods: [ Touch ]

@@ -271,3 +271,34 @@
     - Hair
     - HeadTop
     - HeadSide
+
+- type: entity
+  abstract: true
+  parent: [ ClothingHeadLightBase, TemperatureProtection ]
+  id: ClothingHeadEnvirohelmBase
+  components:
+  - type: Clothing
+    equipDelay: 0.5
+    unequipDelay: 0.5
+    equipSound: /Audio/Machines/airlock_open.ogg
+    unequipSound: /Audio/Machines/airlock_open.ogg
+  - type: GuideHelp
+    guides: [ Plasmaman ]
+  - type: BreathMask
+  - type: Item
+    size: Normal
+  - type: PressureProtection
+    highPressureMultiplier: 0.6
+    lowPressureMultiplier: 1000
+  - type: IngestionBlocker
+  - type: Tag
+    tags:
+    - HelmetEVA
+  - type: EyeProtection
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+    - FacialHair

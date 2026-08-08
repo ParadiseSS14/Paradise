@@ -1,0 +1,7 @@
+- type: species
+  id: Plasmaman
+  name: species-name-plasmaman
+  roundStart: true
+  prototype: MobPlasmaman
+  dollPrototype: AppearancePlasmaman
+  skinColoration: PlasmamanToned

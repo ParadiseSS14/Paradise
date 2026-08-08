@@ -44,6 +44,11 @@
   realisticColors: true
 
 - type: skinColoration
+  id: PlasmamanToned
+  strategy: !type:PlasmamanTonedSkinColoration {}
+  realisticColors: true
+
+- type: skinColoration
   id: VulpkaninColors
   strategy: !type:HueNodeClampedHsvColoration
     nodes:

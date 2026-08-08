@@ -1,0 +1,27 @@
+<Document>
+  # Plasmaman
+
+  <Box>
+    <GuideEntityEmbed Entity="MobPlasmaman" Caption=""/>
+  </Box>
+
+ [color=#ffa500]Warning! This species is not recommended for new players due to their combustion in oxygen![/color]
+
+  Plasmamen breathe plasma instead of oxygen, a rare substance that is difficult to find compressed into tanks.
+
+  Plasma is highly flammable when introduced to oxygen and body heat, requiring plasmamen to wear a containment suit at all times. These suits provide a built-in headlamp and welding protection.
+
+  Alternatively, EVA suits, hardsuits, and any other spaceworthy suits and helmets will protect plasmamen from oxygen.
+
+  Plasmamen always spawn wearing a plasma envirosuit, spaceworthy envirosuit helmet, and working plasma internals.
+  A spare breathing mask and an emergency plasma canister is provided in their survival box.
+
+  Plasmamen do not have blood, being composed of a skeletal structure and internal organs.
+
+  Plasmamen do not require food nor water.
+
+  Plasmamen can be [color=#1e90ff]minorly healed by plasma dust.[/color]
+
+  Plasmamen are [color=#1e90ff]immune to Radiation damage[/color], but take [color=#ffa500]50% more Heat damage.[/color]
+
+</Document>

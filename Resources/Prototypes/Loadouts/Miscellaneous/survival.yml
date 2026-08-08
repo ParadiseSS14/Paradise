@@ -8,6 +8,13 @@
     - Vox
 
 - type: loadoutEffectGroup
+  id: PlasmaBreather
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Plasmaman
+
+- type: loadoutEffectGroup
   id: OxygenBreather
   effects:
   - !type:SpeciesLoadoutEffect
@@ -36,6 +43,15 @@
   storage:
     back:
     - BoxSurvival
+
+- type: loadout
+  id: EmergencyPlasma
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: PlasmaBreather
+  storage:
+    back:
+    - BoxSurvivalPlasma
 
 - type: loadout
   id: EmergencyNitrogen

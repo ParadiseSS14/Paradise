@@ -36,6 +36,24 @@
 
 - type: entity
   parent: BoxSurvival
+  id: BoxSurvivalPlasma
+  name: plasma survival box
+  description: A small box containing a breath mask, an emergency plasma tank, and an emergency medipen. Standard-issue for most plasma-breathing crew.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingMaskBreath
+        - id: EmergencyPlasmaTankFilled
+        - id: EmergencyMedipen
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: plasmatank
+
+- type: entity
+  parent: BoxSurvival
   id: BoxSurvivalEngineering
   name: extended-capacity O2 survival box
   description: A small box containing a breath mask, an extended-capacity emergency oxygen tank, and an emergency medipen. Issued to oxygen-breathing crew whose job responsibilities often take them to places with no atmosphere.

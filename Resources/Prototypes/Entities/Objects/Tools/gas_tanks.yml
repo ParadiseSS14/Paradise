@@ -281,3 +281,51 @@
     slots:
     - Belt
     - suitStorage
+
+- type: entity
+  parent: EmergencyOxygenTank
+  id: EmergencyPlasmaTank
+  name: emergency plasma tank
+  description: An easily portable tank for emergencies. Contains very little plasma, rated for survival use only. It can hold 0.66 L of gas.
+  components:
+  - type: Sprite
+    sprite: Objects/Tanks/emergency_plasma.rsi
+  - type: Item
+    sprite: Objects/Tanks/emergency_plasma.rsi
+    storedSprite:
+      state: storage
+      sprite: Objects/Tanks/emergency_plasma.rsi
+  - type: Clothing
+    sprite: Objects/Tanks/emergency_plasma.rsi
+
+- type: entity
+  parent: DoubleEmergencyOxygenTank
+  id: BeltPlasmaTank
+  name: specialized plasma tank
+  description: A high-grade plasmaman life support container. It holds a decent amount of plasma for its small size. It can hold 2.5 L of gas.
+  components:
+  - type: Sprite
+    sprite: Objects/Tanks/plasma_belt.rsi
+  - type: Item
+    sprite: Objects/Tanks/plasma_belt.rsi
+    storedSprite:
+      state: icon
+      sprite: Objects/Tanks/plasma_belt.rsi
+  - type: Clothing
+    sprite: Objects/Tanks/plasma_belt.rsi
+
+- type: entity
+  parent: OxygenTank
+  id: PlasmamanTank
+  name: large specialized plasma tank
+  description: A standard cylindrical gas tank for plasma. It can hold 5 L of gas.
+  components:
+  - type: Sprite
+    sprite: Objects/Tanks/plasmaman.rsi
+  - type: Item
+    sprite: Objects/Tanks/plasmaman.rsi
+    storedSprite:
+      state: icon
+      sprite: Objects/Tanks/plasmaman.rsi
+  - type: Clothing
+    sprite: Objects/Tanks/plasmaman.rsi

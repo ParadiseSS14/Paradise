@@ -189,6 +189,49 @@
       temperature: 293.15
 
 - type: entity
+  id: EmergencyPlasmaTankFilled
+  parent: EmergencyPlasmaTank
+  name: emergency plasma tank
+  suffix: Filled
+  components:
+  - type: GasTank
+    releasePressure: 21.3
+    air:
+      volume: 0.66
+      moles:
+        Plasma: 0.270782035
+      temperature: 293.15
+
+- type: entity
+  id: BeltPlasmaTankFilled
+  parent: BeltPlasmaTank
+  suffix: Filled
+  components:
+  - type: GasTank
+    releasePressure: 21.3
+    air:
+      # 15 minutes
+      volume: 2.5
+      moles:
+        Plasma: 1.025689525
+      temperature: 293.15
+
+- type: entity
+  id: PlasmamanTankFilled
+  parent: PlasmamanTank
+  suffix: Filled
+  components:
+  - type: GasTank
+    releasePressure: 21.3
+    air:
+      # 31 minutes
+      volume: 5
+      moles:
+        Plasma: 2.051379050
+      temperature: 293.15
+
+
+- type: entity
   id: PlasmaTankFilled
   parent: PlasmaTank
   name: plasma tank

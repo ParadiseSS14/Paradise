@@ -39,32 +39,10 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<TelepathicChatComponent, GridUidChangedEvent>(OnGridChange);
         SubscribeLocalEvent<TelepathicChatComponent, ProjectMindEvent>(OnSendEvent);
         SubscribeLocalEvent<TelepathicChatComponent, ScanMindEvent>(OnReceiveEvent);
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTargetSelectedMsg>(OnTargetChosen);
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTextEnteredMsg>(OnTextEntered);
-    }
-
-    private void OnGridChange(Entity<TelepathicChatComponent> telepath, ref GridUidChangedEvent args)
-    {
-        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
-        {
-            return;
-        }
-
-        foreach (var uiKey in Enum.GetValues<TelepathicChatUiKey>())
-        {
-            if (_ui.TryGetOpenUi((telepath, userInterfaceComp), uiKey, out var bui))
-            {
-                bui.Close();
-            }
-        }
-
-        telepath.Comp.Reset();
-        Dirty(telepath);
-
-        _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), telepath.Owner);
     }
 
     private void OnEvent(Entity<TelepathicChatComponent> telepath, EntityUid performer, Entity<ActionComponent> action)
@@ -74,6 +52,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             return;
         }
 
+        // Resetting the state of everything on a new Event use.
         telepath.Comp.Reset();
         Dirty(telepath);
 
@@ -107,6 +86,12 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
     private void OnTargetChosen(Entity<TelepathicChatComponent> telepath, ref TelepathicTargetSelectedMsg args)
     {
+
+        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
+        {
+            return;
+        }
+
         telepath.Comp.Sender = GetNetEntity(telepath.Owner);
         telepath.Comp.Receiver = args.Target;
         Dirty(telepath);
@@ -114,11 +99,23 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (telepath.Comp.IsScan)
         {
             SendTelepathicChat(telepath, string.Empty, false, telepath.Comp.IsScan);
+            return;
         }
-        else if (TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
+
+        if (args.Target is not { } target)
         {
-            _ui.OpenUi((telepath, userInterfaceComp), TelepathicChatUiKey.Compose, args.Actor);
+            return;
         }
+
+        if (!CheckRange(telepath.Owner, GetEntity(target)))
+        {
+            telepath.Comp.Reset();
+            Dirty(telepath);
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), telepath.Owner);
+            return;
+        }
+
+        _ui.OpenUi((telepath, userInterfaceComp), TelepathicChatUiKey.Compose, args.Actor);
     }
 
     private void OnTextEntered(Entity<TelepathicChatComponent> telepath, ref TelepathicTextEnteredMsg args)
@@ -143,14 +140,10 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             return;
         }
 
-        // Check if telepath is outside max PVS range so the OpenUi() doesn't fail spectactularly
-        var maxRange = _configManager.GetCVar(CVars.NetMaxUpdateRange);
-        var telepathPos = _transform.GetMapCoordinates(GetEntity(telepathNet));
-        var targetPos = _transform.GetMapCoordinates(target);
-
-        if (telepathPos.MapId != targetPos.MapId || (telepathPos.Position - targetPos.Position).Length() > maxRange * 0.9f)
+        // In case the telepath leaves PVS range before the link is clicked
+        if (!CheckRange(telepath, target))
         {
-            telepathComp.Reset(); // position check fails, bail out
+            telepathComp.Reset();
             Dirty(telepath, telepathComp);
             _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), target);
             return;
@@ -202,6 +195,19 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         return validTargets;
     }
 
+    /// <summary>
+    /// Check if telepath is outside max PVS range to enforce range limits and prevent OpenUI failure
+    /// true = in range, false = outside range
+    /// </summary>
+    private bool CheckRange(EntityUid telepath, EntityUid target)
+    {
+        var maxRange = _configManager.GetCVar(CVars.NetMaxUpdateRange);
+        var telepathPos = _transform.GetMapCoordinates(telepath);
+        var targetPos = _transform.GetMapCoordinates(target);
+
+        return telepathPos.MapId == targetPos.MapId && (telepathPos.Position - targetPos.Position).Length() <= maxRange * 0.9f;
+    }
+
     private IEnumerable<INetChannel> GetAdminClients()
     {
         return _adminManager.ActiveAdmins
@@ -244,6 +250,14 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         if (GetEntity(telepath.Comp.Sender) is not { } sender || GetEntity(telepath.Comp.Receiver) is not { } receiver)
         {
+            return;
+        }
+
+        if (!CheckRange(sender, receiver))
+        {
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), sender);
+            telepath.Comp.Reset();
+            Dirty(telepath);
             return;
         }
 

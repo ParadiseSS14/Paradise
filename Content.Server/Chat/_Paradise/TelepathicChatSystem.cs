@@ -277,36 +277,39 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         var txClient = GetSenderClients(sender);
         var admins = GetAdminClients();
 
-        var messageWrap = $"{telepath.Comp.ObscuredMessage}";
-        var sendMessageWrap = $"{Loc.GetString("chat-manager-send-telepathic-chat-wrap-message")}";
+        var messageWrap = $"{telepath.Comp.ObscuredMessage} \"{message}\"";
+        var sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message", ("receiver", receiver));
         var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-offer")}";
         var adminMessageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-admin", ("sender", sender), ("message", message));
 
         if (TryComp<TelepathicChatComponent>(receiver, out var _)) // Check if the receiver is a telepath
         {
-            offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-telepath")}";
+            offerMessageWrap = Loc.GetString("chat-manager-telepathic-chat-telepath", ("sender", sender));
             messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message", ("sender", sender), ("message", message));
+        }
+
+        if (rxClient is null || txClient is null)
+        {
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-unreachable"), sender, sender);
+            return;
         }
 
         if (offerWrap)
         {
             var token = Guid.NewGuid();
             telepath.Comp.ReplyToken = token;
-            sendMessageWrap = $"{Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-offer")}";
+            sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-offer", ("receiver", receiver));
             messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
-        }
-
-        if (rxClient is null || txClient is null)
-        {
-            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-unreachable"), sender, sender);
         }
         else
         {
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message} {messageWrap}");
-            _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);
-            _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, sendMessageWrap, sender, hideChat, txClient, Color.DarkMagenta);
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message} {messageWrap}"); //Not logging the linksend
             _chatManager.ChatMessageToMany(ChatChannel.Hivemind, message, adminMessageWrap, sender, hideChat, true, admins, Color.DarkMagenta);
         }
+
+        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);
+        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, sendMessageWrap, sender, hideChat, txClient, Color.DarkMagenta);
+
 
         telepath.Comp.Reset();
         Dirty(telepath);

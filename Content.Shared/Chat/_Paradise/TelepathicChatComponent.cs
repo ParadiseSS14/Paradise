@@ -70,16 +70,17 @@ public sealed partial class TelepathicChatComponent : Component
         Sender = null;
         Receiver = null;
         IsOffer = false;
-        ObscuredMessage = null;
     }
 }
 
 public sealed partial class SendTelepathyEvent : InstantActionEvent
 {
-    public readonly string ObscuredMessage;
+    [DataField, AutoNetworkedField]
+    public string ObscuredMessage;
 }
 
 public sealed partial class OfferTelepathyEvent : InstantActionEvent
 {
-    public readonly string ObscuredMessage;
+    [DataField, AutoNetworkedField]
+    public string ObscuredMessage;
 }

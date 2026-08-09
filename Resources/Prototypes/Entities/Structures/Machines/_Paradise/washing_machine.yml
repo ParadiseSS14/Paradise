@@ -1,6 +1,6 @@
 ﻿- type: entity
   id: WashingMachine
-  parent: [BaseMachinePowered, BaseMachineDestructible]
+  parent: [BaseMachinePowered, ConstructibleMachine, BaseConstructibleMachineDestructible]
   name: washing machine
   desc: Gets rid of those pesky bloodstains, or your money back!
   components:
@@ -17,8 +17,7 @@
         - state: closed
           map: ["door"]
         - state: panelopen
-          map: ["panel"]
-          visible: false
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
     - type: GenericVisualizer
       visuals:
         enum.WashingMachineVisual.State:
@@ -33,9 +32,26 @@
           running:
             True: { state: running, visible: true }
             False: { visible: false }
-        enum.WashingMachineVisual.Panel:
-          panel:
-            True: { state: panelopen, visible: true }
-            False: { visible: false }
     - type: WashingMachine
     - type: Appearance
+    - type: WiresVisuals
+    - type: WiresPanel
+    - type: Machine
+      board: WashingMachineCircuitboard
+    - type: Construction
+      graph: Machine
+      node: machine
+      containers:
+        - machine_board
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.45,0.25,0.30"
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer

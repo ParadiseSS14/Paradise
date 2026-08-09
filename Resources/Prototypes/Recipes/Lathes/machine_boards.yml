@@ -262,6 +262,11 @@
   id: SmartFridgeCircuitboard
   result: SmartFridgeCircuitboard
 
+- type: latheRecipe
+  parent: [BaseCircuitboardRecipe]
+  id: WashingMachineCircuitboard
+  result: WashingMachineCircuitboard
+
 # Bar
 - type: latheRecipe
   parent: [BaseCircuitboardRecipe, BaseServiceMachineRecipeCategory]

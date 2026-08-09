@@ -4,12 +4,12 @@
   id: MailSortingHelper
   parent: MarkerBase
   components:
-      - type: Sprite
-        sprite: Markers/_Paradise/mail_sorting_helper.rsi
-        state: mail_sorting
-        shader: unshaded
-      - type: MailSortingHelper
-      - type: LocalGatherTargets
+    - type: Sprite
+      sprite: Markers/_Paradise/mail_sorting_helper.rsi
+      state: mail_sorting
+      shader: unshaded
+    - type: MailSortingHelper
+    - type: LocalGatherTargets
 
 # Cargo
 - type: entity
@@ -18,10 +18,10 @@
   id: CargoMailroomMailSortingHelper
   parent: MailSortingHelper
   components:
-      - type: Sprite
-        state: mail_sorting_cargo
-      - type: MailSortingHelper
-        mailtag: ["mailroom"]
+    - type: Sprite
+      state: mail_sorting_cargo
+    - type: MailSortingHelper
+      mailtag: ["mailroom"]
 # Command
 - type: entity
   name: Command Disposal Junction Helper
@@ -29,20 +29,20 @@
   id: HeadOfPersonnelMailSortingHelper
   parent: MailSortingHelper
   components:
-      - type: Sprite
-        state: mail_sorting_command
-      - type: MailSortingHelper
-        mailtag: ["hop"]
+    - type: Sprite
+      state: mail_sorting_command
+    - type: MailSortingHelper
+      mailtag: ["hop"]
 - type: entity
   name: Command Disposal Junction Helper
   suffix: "Bridge"
   id: BridgeMailSortingHelper
   parent: MailSortingHelper
   components:
-      - type: Sprite
-        state: mail_sorting_command
-      - type: MailSortingHelper
-        mailtag: ["bridge"]
+    - type: Sprite
+      state: mail_sorting_command
+    - type: MailSortingHelper
+      mailtag: ["bridge"]
 # Engineering
 - type: entity
   name: Engineering Disposal Junction Helper
@@ -50,10 +50,10 @@
   id: EngineeringMailSortingHelper
   parent: MailSortingHelper
   components:
-      - type: Sprite
-        state: mail_sorting_engineer
-      - type: MailSortingHelper
-        mailtag: ["engineering"]
+    - type: Sprite
+      state: mail_sorting_engineer
+    - type: MailSortingHelper
+      mailtag: ["engineering"]
 # Medical
 - type: entity
   name: Medical Disposal Junction Helper
@@ -61,10 +61,10 @@
   id: MedicalMailSortingHelper
   parent: MailSortingHelper
   components:
-      - type: Sprite
-        state: mail_sorting_medical
-      - type: MailSortingHelper
-        mailtag: ["medical"]
+    - type: Sprite
+      state: mail_sorting_medical
+    - type: MailSortingHelper
+      mailtag: ["medical"]
 # Research
 - type: entity
   name: Science Disposal Junction Helper
@@ -72,10 +72,10 @@
   id: ScienceMailSortingHelper
   parent: MailSortingHelper
   components:
-      - type: Sprite
-        state: mail_sorting_science
-      - type: MailSortingHelper
-        mailtag: ["science"]
+    - type: Sprite
+      state: mail_sorting_science
+    - type: MailSortingHelper
+      mailtag: ["science"]
 # Security
 - type: entity
   name: Security Disposal Junction Helper
@@ -83,8 +83,8 @@
   id: SecurityMailSortingHelper
   parent: MailSortingHelper
   components:
-      - type: Sprite
-        state: mail_sorting_security
-      - type: MailSortingHelper
-        mailtag: ["security"]
+    - type: Sprite
+      state: mail_sorting_security
+    - type: MailSortingHelper
+      mailtag: ["security"]
 # Service - Unused at the moment (probably)

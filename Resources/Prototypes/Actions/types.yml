@@ -641,7 +641,8 @@
     layers:
     - state: telepathy_project
   - type: InstantAction
-    event: !type:ProjectMindEvent {}
+    event: !type:SendTelepathyEvent
+      obscuredMessage: "You hear a voice that seems to echo around the room:"
 
 - type: entity
   id: ActionScanMind
@@ -654,5 +655,5 @@
     sprite: Interface/Actions/_Paradise/telepathy.rsi
     layers:
     - state: telepathy_mindscan
-  - type: InstantAction
-    event: !type:ScanMindEvent {}
+    event: !type:OfferTelepathyEvent
+      obscuredMessage: "You hear a voice that seems to echo around the room:"

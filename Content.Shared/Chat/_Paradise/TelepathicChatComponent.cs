@@ -21,9 +21,14 @@ public sealed partial class TelepathicChatComponent : Component
     public NetEntity? Receiver;
 
     /// <summary>
-    /// Is this a Scan Mind?
+    /// Is this an OfferCompose?
     /// </summary>
-    public bool IsScan;
+    public bool IsOffer;
+
+    /// <summary>
+    /// Message to use when the sender is obscured
+    /// </summary>
+    public string ObscuredMessage;
 
     /// <summary>
     /// A token to handle command expiry
@@ -64,10 +69,17 @@ public sealed partial class TelepathicChatComponent : Component
     {
         Sender = null;
         Receiver = null;
-        IsScan = false;
+        IsOffer = false;
+        ObscuredMessage = null;
     }
 }
 
-public sealed partial class ProjectMindEvent : InstantActionEvent;
+public sealed partial class SendTelepathyEvent : InstantActionEvent
+{
+    public readonly string ObscuredMessage;
+}
 
-public sealed partial class ScanMindEvent : InstantActionEvent;
+public sealed partial class OfferTelepathyEvent : InstantActionEvent
+{
+    public readonly string ObscuredMessage;
+}

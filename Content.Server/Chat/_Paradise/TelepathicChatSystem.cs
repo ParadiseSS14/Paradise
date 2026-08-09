@@ -2,6 +2,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Commands._Paradise;
 using Content.Server.Chat.Managers;
+using Content.Shared.Abilities.Mime;
 using Content.Shared.Actions.Components;
 using Content.Shared.Chat;
 using Content.Shared.Chat._Paradise;
@@ -265,9 +266,15 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             return;
         }
 
+        if (TryComp<MimePowersComponent>(sender, out var comp) && comp.VowBroken == false) // Mime Check
+        {
+            _popup.PopupEntity(Loc.GetString("mime-cant-speak"), sender, sender);
+            return;
+        }
+
         if (!CheckRange(sender, receiver))
         {
-            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), sender);
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), sender, sender);
             telepath.Comp.Reset();
             Dirty(telepath);
             return;
@@ -284,8 +291,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         if (TryComp<TelepathicChatComponent>(receiver, out var _)) // Check if the receiver is a telepath
         {
-            offerMessageWrap = Loc.GetString("chat-manager-telepathic-chat-telepath", ("sender", sender));
             messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message", ("sender", sender), ("message", message));
+            sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-telepath", ("receiver", receiver));
+            offerMessageWrap = Loc.GetString("chat-manager-telepathic-chat-telepath", ("sender", sender));
         }
 
         if (rxClient is null || txClient is null)
@@ -301,10 +309,10 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-offer", ("receiver", receiver));
             messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
         }
-        else
+        else //Not logging the linksend
         {
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message} {messageWrap}"); //Not logging the linksend
-            _chatManager.ChatMessageToMany(ChatChannel.Hivemind, message, adminMessageWrap, sender, hideChat, true, admins, Color.DarkMagenta);
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message}");
+            _chatManager.ChatMessageToMany(ChatChannel.Admin, message, adminMessageWrap, sender, hideChat, true, admins);
         }
 
         _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);

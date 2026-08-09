@@ -24,10 +24,10 @@
                            VerticalAlignment="Top"
                            Margin="10"/>
                     <BoxContainer Name="EntriesContainer"
-                                  Orientation="Vertical"
-                                  Margin="10"
-                                  VerticalExpand="True"
-                                  HorizontalExpand="True"/>
+                           Orientation="Vertical"
+                           Margin="10"
+                           VerticalExpand="True"
+                           HorizontalExpand="True"/>
                 </Control>
             </ScrollContainer>
         </PanelContainer>

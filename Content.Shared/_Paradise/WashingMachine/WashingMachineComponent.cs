@@ -25,7 +25,7 @@ public sealed partial class WashingMachineComponent : Component
 
     // Are we currently running
     [DataField]
-    public bool Running = false;
+    public bool IsRunning = false;
 
     // Sound for opening our door
     [DataField]

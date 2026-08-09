@@ -35,7 +35,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     private void OnInteractHand(Entity<WashingMachineComponent> entity, ref InteractHandEvent args)
     {
         // If we're running, don't do anything.
-        if (entity.Comp.Running)
+        if (entity.Comp.IsRunning)
             return;
 
         // If our state is closed, set it to open and vice versa.
@@ -52,7 +52,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     private void OnInteractUsing(Entity<WashingMachineComponent> entity, ref InteractUsingEvent args)
     {
         // If we're running or our doors closed, return.
-        if (entity.Comp.Running || entity.Comp.State == WashingMachineVisualState.Closed)
+        if (entity.Comp.IsRunning || entity.Comp.State == WashingMachineVisualState.Closed)
             return;
 
         // If we're already full, return and popup message
@@ -78,7 +78,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     private void AddVerbs(Entity<WashingMachineComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
     {
         // If we're not running, not open, nor empty, show startwashverb.
-        if (!entity.Comp.Running && entity.Comp.State == WashingMachineVisualState.Closed && entity.Comp.Filled)
+        if (!entity.Comp.IsRunning && entity.Comp.State == WashingMachineVisualState.Closed && entity.Comp.Filled)
         {
             AlternativeVerb startwashverb = new()
             {

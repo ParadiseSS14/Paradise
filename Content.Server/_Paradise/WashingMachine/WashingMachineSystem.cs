@@ -13,7 +13,7 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
     [Dependency] private IGameTiming _timing = default!;
     protected override void StartWash(Entity<WashingMachineComponent> entity)
     {
-        entity.Comp.Running = true;
+        entity.Comp.IsRunning = true;
         entity.Comp.WashEndTime = _timing.CurTime + TimeSpan.FromSeconds(6);
         _appearanceSystem.SetData(entity.Owner, WashingMachineVisual.Running, true);
     }
@@ -25,7 +25,7 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
         var query = EntityQueryEnumerator<WashingMachineComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
-            if (!comp.Running)
+            if (!comp.IsRunning)
                 continue;
 
             if (_timing.CurTime <= comp.WashEndTime)
@@ -33,7 +33,7 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
 
             // Ideally there'd be some code in here to wash the items inside, but we don't HAVE blood staining mechanics!! (yet)
             // Set our running state to false, update our appearance, and play a little ding.
-            comp.Running = false;
+            comp.IsRunning = false;
             _appearanceSystem.SetData(uid, WashingMachineVisual.Running, false);
             _audioSystem.PlayPvs(comp.FinishSound, uid, AudioParams.Default.WithVolume(-5f).WithMaxDistance(2f));
         }

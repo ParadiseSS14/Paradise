@@ -1393,3 +1393,6 @@
       state: service
     - type: MachineBoard
       prototype: WashingMachine
+      stackRequirements:
+        Glass: 2
+        Manipulator: 1

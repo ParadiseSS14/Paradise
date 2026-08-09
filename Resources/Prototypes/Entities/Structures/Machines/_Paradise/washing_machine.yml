@@ -2,7 +2,7 @@
   id: WashingMachine
   parent: [BaseMachinePowered, ConstructibleMachine, BaseConstructibleMachineDestructible]
   name: washing machine
-  desc: Gets rid of those pesky bloodstains, or your money back!
+  description: Gets rid of those pesky bloodstains, or your money back!
   components:
     - type: Sprite
       sprite: Structures/Machines/_Paradise/washingmachine.rsi

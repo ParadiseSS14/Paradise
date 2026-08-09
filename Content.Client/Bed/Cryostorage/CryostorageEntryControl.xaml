@@ -9,12 +9,16 @@
     Margin="0 0 0 5">
     <PanelContainer StyleClasses="SurfacePrimary">
         <Collapsible Name="Collapsible">
-            <CollapsibleHeading Name="Heading" MinHeight="35" StyleClasses="PanelDark"/>
+            <CollapsibleHeading Name="Heading"
+                MinHeight="35"
+                StyleClasses="PanelDark"
+                Margin="5"/>
             <CollapsibleBody Name="Body" StyleClasses="SurfacePrimary">
                 <BoxContainer Name="ItemsContainer"
                  Orientation="Vertical"
                  HorizontalExpand="True"
-                 StyleClasses="SurfacePrimary"/>
+                 StyleClasses="SurfacePrimary"
+                 Margin="5"/>
             </CollapsibleBody>
         </Collapsible>
     </PanelContainer>

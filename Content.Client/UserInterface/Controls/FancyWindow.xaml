@@ -22,7 +22,8 @@
                 <Label Name="WindowTitle"
                        HorizontalExpand="True" VAlign="Center" StyleClasses="FancyWindowTitle" ClipText="true" Margin="8 8 8 4" />
                 <TextureButton Name="HelpButton" StyleClasses="windowHelpButton" VerticalAlignment="Center" Disabled="True" Visible="False" Access="Public" />
-                <uiControls:CloseContainerButton Name="CloseButton" StyleClasses="closeButton" MinHeight="32" MinWidth="32"/>
+                <TextureButton Name="CloseButton" StyleClasses="windowCloseButton"
+                               VerticalAlignment="Center" />
             </BoxContainer>
         </Control>
         <PanelContainer StyleClasses="LowDivider" />

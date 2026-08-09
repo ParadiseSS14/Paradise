@@ -4,10 +4,10 @@
   name: freezer electronics
   description: An electronics board used in kitchen freezers.
   components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: door_electronics
-  - type: Tag
-    tags:
-      - FreezerElectronics
-  - type: DoorElectronics
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: door_electronics
+    - type: Tag
+      tags:
+        - FreezerElectronics
+    - type: DoorElectronics

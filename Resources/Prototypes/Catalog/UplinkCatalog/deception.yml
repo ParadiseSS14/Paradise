@@ -8,7 +8,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkAgentIDCard
@@ -21,7 +21,7 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkStealthBox
@@ -34,7 +34,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkChameleonProjector
@@ -47,7 +47,7 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkHeadsetEncryptionKey
@@ -61,7 +61,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkBinaryTranslatorKey
@@ -72,7 +72,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkCyberpen
@@ -82,7 +82,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkDecoyDisk
@@ -92,7 +92,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkBribe
@@ -128,13 +128,13 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkDeception
+    - UplinkDeception
   restockTime: 1800
   conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkSyndicateBombFakeNukie
@@ -147,12 +147,12 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkDeception
+    - UplinkDeception
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkTravelCamera
@@ -162,7 +162,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
 - type: listing
   id: UplinkSmugglerSatchel
@@ -172,7 +172,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDeception
+    - UplinkDeception
 
   #- type: listing
 #  id: uplinkd2DiceTricked

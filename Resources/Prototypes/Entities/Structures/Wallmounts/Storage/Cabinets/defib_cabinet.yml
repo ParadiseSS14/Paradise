@@ -7,55 +7,55 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: Sprite
-    sprite: Structures/Wallmounts/defib_cabinet.rsi
-    noRot: false
-    layers:
-    - state: frame
-    - state: fill
-      map: ["enum.ItemCabinetVisuals.Layer"]
-      visible: true
-    - state: closed
-      map: ["enum.OpenableVisuals.Layer"]
-  - type: ItemSlots
-    slots:
-      ItemCabinet:
-        ejectOnInteract: true
-        whitelist:
-          components:
-          - Defibrillator
-  - type: Construction
-    graph: DefibrillatorCabinet
-    node: done
-  - type: Destructible
-    thresholds:
-    - trigger: !type:DamageTrigger
-        damage: 40
-      behaviors:
-      - !type:EmptyAllContainersBehaviour
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalGlassBreak
+    - type: Sprite
+      sprite: Structures/Wallmounts/defib_cabinet.rsi
+      noRot: false
+      layers:
+        - state: frame
+        - state: fill
+          map: ["enum.ItemCabinetVisuals.Layer"]
+          visible: true
+        - state: closed
+          map: ["enum.OpenableVisuals.Layer"]
+    - type: ItemSlots
+      slots:
+        ItemCabinet:
+          ejectOnInteract: true
+          whitelist:
+            components:
+              - Defibrillator
+    - type: Construction
+      graph: DefibrillatorCabinet
+      node: done
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 40
+          behaviors:
+            - !type:EmptyAllContainersBehaviour
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalGlassBreak
 
 - type: entity
   parent: DefibrillatorCabinet
   id: DefibrillatorCabinetOpen
   suffix: Open
   components:
-  - type: Openable
-    opened: true
+    - type: Openable
+      opened: true
 
 - type: entity
   parent: DefibrillatorCabinet
   id: DefibrillatorCabinetFilled
   suffix: Filled
   components:
-  - type: ContainerFill
-    containers:
-      ItemCabinet:
-      - Defibrillator
+    - type: ContainerFill
+      containers:
+        ItemCabinet:
+          - Defibrillator
 
 - type: entity
   parent: [DefibrillatorCabinetFilled, DefibrillatorCabinetOpen]

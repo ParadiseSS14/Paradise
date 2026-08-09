@@ -7,16 +7,16 @@
   icon: "JobIconBotanist"
   supervisors: job-supervisors-hop
   access:
-  - Service
-  - Maintenance
-  - Hydroponics
+    - Service
+    - Maintenance
+    - Hydroponics
   extendedAccess:
-  - Kitchen
-  - Bar
+    - Kitchen
+    - Bar
   special:
-  - !type:GiveItemOnHolidaySpecial
-    holiday: FourTwenty
-    prototype: CannabisSeeds
+    - !type:GiveItemOnHolidaySpecial
+      holiday: FourTwenty
+      prototype: CannabisSeeds
 
 - type: startingGear
   id: BotanistGear
@@ -26,8 +26,8 @@
     ears: ClothingHeadsetService
     belt: ClothingBeltPlantFilled
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: BotanistChameleonOutfit

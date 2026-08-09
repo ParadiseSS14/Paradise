@@ -4,21 +4,21 @@
   name: official security anti-inflatable armament
   description: A specialty weapon used in the destruction of unique syndicate morale-boosting equipment.
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Melee/needle.rsi
-    state: icon
-  - type: MeleeWeapon
-    wideAnimationRotation: -135
-    damage:
-      types:
-        Piercing: 1
-  - type: DamageOtherOnHit
-    damage:
-      types:
-        Piercing: 1
-  - type: Item
-    size: Tiny
-  - type: BalloonPopper
-  - type: ThrowingAngle
-    angle: -135
-  - type: LandAtCursor
+    - type: Sprite
+      sprite: Objects/Weapons/Melee/needle.rsi
+      state: icon
+    - type: MeleeWeapon
+      wideAnimationRotation: -135
+      damage:
+        types:
+          Piercing: 1
+    - type: DamageOtherOnHit
+      damage:
+        types:
+          Piercing: 1
+    - type: Item
+      size: Tiny
+    - type: BalloonPopper
+    - type: ThrowingAngle
+      angle: -135
+    - type: LandAtCursor

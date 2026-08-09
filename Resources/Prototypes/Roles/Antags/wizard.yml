@@ -12,9 +12,9 @@
   # setPreference: true # Disabled as roundstart gamemode until reworked
   objective: roles-antag-wizard-objective # TODO: maybe give random objs and stationary ones from AntagObjectives and AntagRandomObjectives
   requirements: # I hate time locked roles but this should be enough time for someone to be acclimated
-  - !type:OverallPlaytimeRequirement
-    time: 5h
-  guides: [ Wizard ]
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+  guides: [Wizard]
 
 - type: antagSpecifier
   parent: RestrictedAntag
@@ -22,7 +22,7 @@
   spawnerPrototype: SpawnPointGhostWizard
   startingGear: WizardBlueGear
   roleLoadout:
-  - RoleSurvivalExtendedAntag
+    - RoleSurvivalExtendedAntag
   briefing:
     text: wizard-role-greeting
     color: Turquoise
@@ -30,15 +30,14 @@
     #sound: "/Audio/Ambience/Antag/wizard_start.ogg"
   # TODO: WizardComp as needed
   components:
-  - type: NpcFactionMember
-    factions:
-    - Wizard
-  - type: RandomMetadata
-    nameSegments:
-    - NamesWizardFirst
-    - NamesWizardLast
-    nameFormat: name-format-wizard
+    - type: NpcFactionMember
+      factions:
+        - Wizard
+    - type: RandomMetadata
+      nameSegments:
+        - NamesWizardFirst
+        - NamesWizardLast
+      nameFormat: name-format-wizard
   mindRoles:
-  - MindRoleWizard
-
+    - MindRoleWizard
 # See wizard_startinggear for wiz start gear options

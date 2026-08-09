@@ -6,17 +6,16 @@
       edges:
         - to: frame1
           completed:
-            - !type:SnapToGrid { }
+            - !type:SnapToGrid {}
           steps:
             - material: Steel
               amount: 3
               doAfter: 1
 
-
     - node: frame1
       entity: FirelockFrame
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: frame2
           conditions:
@@ -41,7 +40,7 @@
 
     - node: frame2
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: frame3
           conditions:
@@ -69,7 +68,7 @@
 
     - node: frame3
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: frame4
           conditions:
@@ -93,7 +92,7 @@
     - node: frame4
       entity: FirelockFrame
       actions:
-      - !type:AppearanceChange
+        - !type:AppearanceChange
       edges:
         - to: Firelock
           conditions:
@@ -159,7 +158,6 @@
           steps:
             - tool: Prying
               doAfter: 1
-
 
     - node: FirelockGlass
       entity: FirelockGlass

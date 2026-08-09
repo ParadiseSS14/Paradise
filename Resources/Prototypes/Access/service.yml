@@ -30,15 +30,25 @@
   id: Lawyer
   name: id-card-access-level-lawyer
 
+- type: accessLevel
+  id: Clown
+  name: id-card-access-level-clown
+
+- type: accessLevel
+  id: Mime
+  name: id-card-access-level-mime
+
 - type: accessGroup
   id: Service
   tags:
-  - HeadOfPersonnel
-  - Bar
-  - Kitchen
-  - Hydroponics
-  - Service
-  - Janitor
-  - Theatre
-  - Chapel
-  - Lawyer
+    - HeadOfPersonnel
+    - Bar
+    - Kitchen
+    - Hydroponics
+    - Service
+    - Janitor
+    - Theatre
+    - Chapel
+    - Lawyer
+    - Mime
+    - Clown

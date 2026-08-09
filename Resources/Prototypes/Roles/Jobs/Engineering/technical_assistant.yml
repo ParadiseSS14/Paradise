@@ -14,9 +14,9 @@
   icon: "JobIconTechnicalAssistant"
   supervisors: job-supervisors-engineering
   access:
-  - Maintenance
-  - Engineering
-  - External
+    - Maintenance
+    - Engineering
+    - External
 
 - type: startingGear
   id: TechnicalAssistantGear
@@ -27,8 +27,8 @@
     ears: ClothingHeadsetEngineering
     pocket2: BookEngineersHandbook
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: TechnicalAssistantChameleonOutfit

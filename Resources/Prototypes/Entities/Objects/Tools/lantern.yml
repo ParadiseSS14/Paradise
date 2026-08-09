@@ -10,28 +10,28 @@
       radiatingBehaviourId: radiating
     - type: LightBehaviour
       behaviours:
-      - !type:FadeBehaviour
-        id: radiating
-        maxDuration: 2.0
-        startValue: 3.0
-        endValue: 2.0
-        isLooped: true
-        reverseWhenFinished: true
-      - !type:PulseBehaviour
-        id: blinking
-        interpolate: Nearest
-        maxDuration: 1.0
-        startValue: 0.1
-        endValue: 2.0
-        isLooped: true
+        - !type:FadeBehaviour
+          id: radiating
+          maxDuration: 2.0
+          startValue: 3.0
+          endValue: 2.0
+          isLooped: true
+          reverseWhenFinished: true
+        - !type:PulseBehaviour
+          id: blinking
+          interpolate: Nearest
+          maxDuration: 1.0
+          startValue: 0.1
+          endValue: 2.0
+          isLooped: true
     - type: Sprite
       sprite: Objects/Tools/lantern.rsi
       layers:
-      - state: lantern
-      - state: lantern-on
-        shader: unshaded
-        visible: false
-        map: [ "light" ]
+        - state: lantern
+        - state: lantern-on
+          shader: unshaded
+          visible: false
+          map: ["light"]
     - type: Item
       sprite: Objects/Tools/lantern.rsi
       heldPrefix: off
@@ -64,10 +64,10 @@
       equippedPrefix: off
       quickEquip: false
       slots:
-      - Belt
+        - Belt
     - type: Tag
       tags:
-      - Flashlight
+        - Flashlight
 
 - type: entity
   parent: Lantern
@@ -77,15 +77,15 @@
     - type: Sprite
       sprite: Objects/Tools/lantern.rsi
       layers:
-      - state: lantern
-        map: [ "enum.FlashVisualLayers.BaseLayer" ]
-      - state: lantern-on
-        shader: unshaded
-        visible: false
-        map: [ "light" ]
-      - state: flashing
-        map: [ "enum.FlashVisualLayers.LightLayer" ]
-        visible: false
+        - state: lantern
+          map: ["enum.FlashVisualLayers.BaseLayer"]
+        - state: lantern-on
+          shader: unshaded
+          visible: false
+          map: ["light"]
+        - state: flashing
+          map: ["enum.FlashVisualLayers.LightLayer"]
+          visible: false
     - type: PointLight
       radius: 5
       energy: 10
@@ -103,8 +103,8 @@
       visuals:
         enum.FlashVisuals.Burnt:
           enum.FlashVisualLayers.BaseLayer:
-            True: {state: burnt}
+            True: { state: burnt }
         enum.FlashVisuals.Flashing:
           enum.FlashVisualLayers.LightLayer:
-            True: {visible: true}
-            False: {visible: false}
+            True: { visible: true }
+            False: { visible: false }

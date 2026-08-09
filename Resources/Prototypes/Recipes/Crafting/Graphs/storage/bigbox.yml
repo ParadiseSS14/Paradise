@@ -10,6 +10,5 @@
               amount: 5
               doAfter: 5
 
-
     - node: basebigbox
       entity: BigBox

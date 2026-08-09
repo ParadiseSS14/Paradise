@@ -4,14 +4,14 @@
   name: air alarm electronics
   description: An electronics board used in air alarms.
   components:
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: airalarm_electronics
-  - type: Tag
-    tags:
-      - AirAlarmElectronics
-  - type: StaticPrice
-    price: 61
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: airalarm_electronics
+    - type: Tag
+      tags:
+        - AirAlarmElectronics
+    - type: StaticPrice
+      price: 61
 
 - type: entity
   id: FireAlarmElectronics
@@ -19,13 +19,13 @@
   name: fire alarm electronics
   description: An electronics board used in fire alarms.
   components:
-  - type: Item
-    storedRotation: 0
-  - type: Sprite
-    sprite: Objects/Misc/module.rsi
-    state: airalarm_electronics
-  - type: Tag
-    tags:
-      - FireAlarmElectronics
-  - type: StaticPrice
-    price: 61
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: airalarm_electronics
+    - type: Tag
+      tags:
+        - FireAlarmElectronics
+    - type: StaticPrice
+      price: 61

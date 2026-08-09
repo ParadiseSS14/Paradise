@@ -2,13 +2,13 @@
   id: BaseStationAlertLevels
   abstract: true
   components:
-  - type: AlertLevel
-    availableAlertLevels:
-    - Blue
-    - DeltaNuke
-    - Epsilon
-    - Gamma
-    - Green
-    - Red
-    - Violet
-    - Yellow
+    - type: AlertLevel
+      availableAlertLevels:
+        - Blue
+        - DeltaNuke
+        - Epsilon
+        - Gamma
+        - Green
+        - Red
+        - Violet
+        - Yellow

@@ -4,17 +4,17 @@
   name: O2 survival box
   description: A small box containing a breath mask, an emergency oxygen tank, and an emergency medipen. Standard-issue for most oxygen-breathing crew.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: EmergencyOxygenTankFilled
-        - id: EmergencyMedipen
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: emergencytank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: EmergencyOxygenTankFilled
+            - id: EmergencyMedipen
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: emergencytank
 
 - type: entity
   parent: BoxSurvival
@@ -22,17 +22,17 @@
   name: N2 survival box
   description: A small box containing a breath mask, an emergency nitrogen tank, and an emergency medipen. Standard-issue for most nitrogen-breathing crew.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: EmergencyNitrogenTankFilled
-        - id: EmergencyMedipen
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: nitrogentank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: EmergencyNitrogenTankFilled
+            - id: EmergencyMedipen
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: nitrogentank
 
 - type: entity
   parent: BoxSurvival
@@ -40,17 +40,17 @@
   name: extended-capacity O2 survival box
   description: A small box containing a breath mask, an extended-capacity emergency oxygen tank, and an emergency medipen. Issued to oxygen-breathing crew whose job responsibilities often take them to places with no atmosphere.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: ExtendedEmergencyOxygenTankFilled
-        - id: EmergencyMedipen
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: extendedtank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: ExtendedEmergencyOxygenTankFilled
+            - id: EmergencyMedipen
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: extendedtank
 
 - type: entity
   parent: BoxSurvivalEngineering
@@ -58,17 +58,17 @@
   name: extended-capacity N2 survival box
   description: A small box containing a breath mask, an extended-capacity emergency nitrogen tank, and an emergency medipen. Issued to nitrogen-breathing crew whose job responsibilities often take them to places with no atmosphere.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: ExtendedEmergencyNitrogenTankFilled
-        - id: EmergencyMedipen
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: nitrogentank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: ExtendedEmergencyNitrogenTankFilled
+            - id: EmergencyMedipen
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: nitrogentank
 
 - type: entity
   parent: BoxSurvival
@@ -76,13 +76,13 @@
   name: security O2 survival box
   description: A small box containing a gas mask, an emergency oxygen tank, and an emergency medipen. Issued to oxygen-breathing members of the security staff.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskGasSecurity
-        - id: EmergencyOxygenTankFilled
-        - id: EmergencyMedipen
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskGasSecurity
+            - id: EmergencyOxygenTankFilled
+            - id: EmergencyMedipen
 
 - type: entity
   parent: BoxSurvivalSecurity
@@ -90,17 +90,17 @@
   name: security N2 survival box
   description: A small box containing a gas mask, an emergency nitrogen tank, and an emergency medipen. Issued to nitrogen-breathing members of the security staff.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskGasSecurity
-        - id: EmergencyNitrogenTankFilled
-        - id: EmergencyMedipen
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: nitrogentank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskGasSecurity
+            - id: EmergencyNitrogenTankFilled
+            - id: EmergencyMedipen
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: nitrogentank
 
 - type: entity
   parent: BoxSurvival
@@ -108,13 +108,13 @@
   name: medical O2 survival box
   description: A small box containing a medical mask, an emergency oxygen tank, and an emergency medipen. Issued to oxygen-breathing members of the medical staff.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreathMedical
-        - id: EmergencyOxygenTankFilled
-        - id: EmergencyMedipen
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreathMedical
+            - id: EmergencyOxygenTankFilled
+            - id: EmergencyMedipen
 
 - type: entity
   parent: BoxSurvivalMedical
@@ -122,43 +122,43 @@
   name: medical N2 survival box
   description: A small box containing a medical mask, an emergency nitrogen tank, and an emergency medipen. Issued to nitrogen-breathing members of the medical staff.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreathMedical
-        - id: EmergencyNitrogenTankFilled
-        - id: EmergencyMedipen
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: nitrogentank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreathMedical
+            - id: EmergencyNitrogenTankFilled
+            - id: EmergencyMedipen
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: nitrogentank
 
 - type: entity
   parent: BoxHug
   id: BoxSurvivalHug
   suffix: Survival; O2
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: EmergencyFunnyOxygenTankFilled
-        - id: EmergencyMedipen
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: EmergencyFunnyOxygenTankFilled
+            - id: EmergencyMedipen
 
 - type: entity
   parent: BoxSurvivalHug
   id: BoxSurvivalHugNitrogen
   suffix: Survival; N2
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: EmergencyNitrogenTankFilled # This should probably be replaced by an equivalent to the funny emergency oxygen tank, once that exists
-        - id: EmergencyMedipen
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: EmergencyNitrogenTankFilled # This should probably be replaced by an equivalent to the funny emergency oxygen tank, once that exists
+            - id: EmergencyMedipen
 
 # Primarily intended for antagonists that spawn outside the station (e.g ninjas, wizards)
 # Contains food and water because, unlike normal crew, we don't want to force them to seek food mid-round.
@@ -169,20 +169,20 @@
   name: deluxe extended-capacity O2 survival box
   description: A deluxe survival box containing a breath mask, an extended-capacity emergency oxygen tank, an emergency medipen, an emergency flare, and a bit of food and water.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: ExtendedEmergencyOxygenTankFilled
-        - id: EmergencyMedipen
-        - id: Flare
-        - id: FoodSnackNutribrick
-        - id: DrinkWaterBottleFull
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: extendedtank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: ExtendedEmergencyOxygenTankFilled
+            - id: EmergencyMedipen
+            - id: Flare
+            - id: FoodSnackNutribrick
+            - id: DrinkWaterBottleFull
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: extendedtank
 
 - type: entity
   parent: BoxSurvivalDeluxeExtended
@@ -190,20 +190,20 @@
   name: deluxe extended-capacity N2 survival box
   description: A deluxe survival box containing a breath mask, an extended-capacity emergency oxygen tank, an emergency medipen, an emergency flare, and a bit of food and water.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskBreath
-        - id: ExtendedEmergencyNitrogenTankFilled
-        - id: EmergencyMedipen
-        - id: Flare
-        - id: FoodSnackNutribrick
-        - id: DrinkWaterBottleFull
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: nitrogentank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskBreath
+            - id: ExtendedEmergencyNitrogenTankFilled
+            - id: EmergencyMedipen
+            - id: Flare
+            - id: FoodSnackNutribrick
+            - id: DrinkWaterBottleFull
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: nitrogentank
 
 # Intended for nukies (or similar syndicate operatives).
 # Contains food because we don't want to force nukies to go get lunch in the middle of a mission.
@@ -214,19 +214,19 @@
   name: syndicate O2 survival box
   description: A Syndicate-designed survival box containing a syndicate gas mask, an extended-capacity emergency oxygen tank, an emergency medipen, an emergency flare, and a bit of food.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskGasSyndicate
-        - id: ExtendedEmergencyOxygenTankFilled
-        - id: EmergencyMedipen
-        - id: Flare
-        - id: FoodSnackNutribrick
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: extendedtank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskGasSyndicate
+            - id: ExtendedEmergencyOxygenTankFilled
+            - id: EmergencyMedipen
+            - id: Flare
+            - id: FoodSnackNutribrick
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: extendedtank
 
 - type: entity
   parent: BoxSurvivalSyndicate
@@ -234,19 +234,19 @@
   name: syndicate N2 survival box
   description: A Syndicate-designed survival box containing a syndicate gas mask, an extended-capacity emergency nitrogen tank, an emergency medipen, an emergency flare, and a bit of food.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ClothingMaskGasSyndicate
-        - id: ExtendedEmergencyNitrogenTankFilled
-        - id: EmergencyMedipen
-        - id: Flare
-        - id: FoodSnackNutribrick
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: nitrogentank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingMaskGasSyndicate
+            - id: ExtendedEmergencyNitrogenTankFilled
+            - id: EmergencyMedipen
+            - id: Flare
+            - id: FoodSnackNutribrick
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: nitrogentank
 
 # Intended primarily for ERT/deathsquad.
 # Uses a 2x2 box mostly just because the 3x3 boxes don't fit into already-filled ERT backpacks.
@@ -257,17 +257,17 @@
   name: military O2 survival box
   description: A military-grade survival box containing a double-capacity emergency oxygen tank, an emergency medipen, and an emergency flare.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: DoubleEmergencyOxygenTankFilled
-        - id: EmergencyMedipen
-        - id: Flare
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: extendedtank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: DoubleEmergencyOxygenTankFilled
+            - id: EmergencyMedipen
+            - id: Flare
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: extendedtank
 
 - type: entity
   parent: BoxSurvivalMilitaryDouble
@@ -275,14 +275,14 @@
   name: military N2 survival box
   description: A military-grade survival box containing a double-capacity emergency nitrogen tank, an emergency medipen, and an emergency flare.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: DoubleEmergencyNitrogenTankFilled
-        - id: EmergencyMedipen
-        - id: Flare
-  - type: Sprite
-    layers:
-    - state: internals
-    - state: nitrogentank
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: DoubleEmergencyNitrogenTankFilled
+            - id: EmergencyMedipen
+            - id: Flare
+    - type: Sprite
+      layers:
+        - state: internals
+        - state: nitrogentank

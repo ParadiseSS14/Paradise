@@ -2,108 +2,107 @@
 - type: loadoutEffectGroup
   id: Command
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:DepartmentTimeRequirement
-      department: Command
-      time: 1h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:DepartmentTimeRequirement
+        department: Command
+        time: 1h
 
 # Flowers
 - type: loadout
   id: FlowerWreath
   storage:
     back:
-    - ClothingHeadHatFlowerWreath
+      - ClothingHeadHatFlowerWreath
 
 - type: loadout
   id: Hairflower
   storage:
     back:
-    - ClothingHeadHatHairflower
+      - ClothingHeadHatHairflower
 
 # Headphones
 - type: loadout
   id: Headphones
   storage:
     back:
-    - ClothingMultipleHeadphones
+      - ClothingMultipleHeadphones
 
 # Toys
 - type: loadout
   id: PlushieLizard
   storage:
     back:
-    - PlushieLizard
+      - PlushieLizard
 
 - type: loadout
   id: PlushieSpaceLizard
   storage:
     back:
-    - PlushieSpaceLizard
+      - PlushieSpaceLizard
 
 - type: loadout
   id: ThreeCandles
   dummyEntity: LoadoutDummyCandles
   storage:
     back:
-    - CandleRed
-    - CandleBlue
-    - CandleGreenSmall
+      - CandleRed
+      - CandleBlue
+      - CandleGreenSmall
 
 # Smokeables
 - type: loadout
   id: Lighter
   storage:
     back:
-    - Lighter
+      - Lighter
   groupBy: "smokeables"
 
 - type: loadout
   id: CigPackGreen
   storage:
     back:
-    - CigPackGreen
+      - CigPackGreen
   groupBy: "smokeables"
 
 - type: loadout
   id: CigPackRed
   storage:
     back:
-    - CigPackRed
+      - CigPackRed
   groupBy: "smokeables"
 
 - type: loadout
   id: CigPackBlue
   storage:
     back:
-    - CigPackBlue
+      - CigPackBlue
   groupBy: "smokeables"
 
 - type: loadout
   id: CigPackBlack
   storage:
     back:
-    - CigPackBlack
+      - CigPackBlack
   groupBy: "smokeables"
 
 - type: loadout
   id: CigarCase
   effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
+    - !type:GroupLoadoutEffect
+      proto: Command
   storage:
     back:
-    - CigarCase
+      - CigarCase
   groupBy: "smokeables"
 
 - type: loadout
   id: CigarGold
   effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
+    - !type:GroupLoadoutEffect
+      proto: Command
   storage:
     back:
-    - CigarGold
+      - CigarGold
   groupBy: "smokeables"
 
 # Folders
@@ -111,24 +110,24 @@
   id: BoxFolderBaseThreePapers
   storage:
     back:
-    - BoxFolderBaseThreePapers
+      - BoxFolderBaseThreePapers
   groupBy: "folders"
 
 - type: loadout
   id: BoxFolderPlasticClipboardThreePapers
   storage:
     back:
-    - BoxFolderPlasticClipboardThreePapers
+      - BoxFolderPlasticClipboardThreePapers
   groupBy: "folders"
 
 - type: loadout
   id: BoxFolderClipboardThreePapers
   effects:
-  - !type:GroupLoadoutEffect
-    proto: Command
+    - !type:GroupLoadoutEffect
+      proto: Command
   storage:
     back:
-    - BoxFolderClipboardThreePapers
+      - BoxFolderClipboardThreePapers
   groupBy: "folders"
 
 # Pins
@@ -136,126 +135,126 @@
   id: ClothingNeckLGBTPin
   storage:
     back:
-    - ClothingNeckLGBTPin
+      - ClothingNeckLGBTPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckAllyPin
   storage:
     back:
-    - ClothingNeckAllyPin
+      - ClothingNeckAllyPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckAromanticPin
   storage:
     back:
-    - ClothingNeckAromanticPin
+      - ClothingNeckAromanticPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckAsexualPin
   storage:
     back:
-    - ClothingNeckAsexualPin
+      - ClothingNeckAsexualPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckBisexualPin
   storage:
     back:
-    - ClothingNeckBisexualPin
+      - ClothingNeckBisexualPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckGayPin
   storage:
     back:
-    - ClothingNeckGayPin
+      - ClothingNeckGayPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckIntersexPin
   storage:
     back:
-    - ClothingNeckIntersexPin
+      - ClothingNeckIntersexPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckLesbianPin
   storage:
     back:
-    - ClothingNeckLesbianPin
+      - ClothingNeckLesbianPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckNonBinaryPin
   storage:
     back:
-    - ClothingNeckNonBinaryPin
+      - ClothingNeckNonBinaryPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckPansexualPin
   storage:
     back:
-    - ClothingNeckPansexualPin
+      - ClothingNeckPansexualPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckOmnisexualPin
   storage:
     back:
-    - ClothingNeckOmnisexualPin
+      - ClothingNeckOmnisexualPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckGenderqueerPin
   storage:
     back:
-    - ClothingNeckGenderqueerPin
+      - ClothingNeckGenderqueerPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckTransPin
   storage:
     back:
-    - ClothingNeckTransPin
+      - ClothingNeckTransPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckAutismPin
   storage:
     back:
-    - ClothingNeckAutismPin
+      - ClothingNeckAutismPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckGoldAutismPin
   storage:
     back:
-    - ClothingNeckGoldAutismPin
+      - ClothingNeckGoldAutismPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckAroacePin
   storage:
     back:
-    - ClothingNeckAroacePin
+      - ClothingNeckAroacePin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckPluralPin
   storage:
     back:
-    - ClothingNeckPluralPin
+      - ClothingNeckPluralPin
   groupBy: "pin"
 
 - type: loadout
   id: ClothingNeckGenderfluidPin
   storage:
     back:
-    - ClothingNeckGenderfluidPin
+      - ClothingNeckGenderfluidPin
   groupBy: "pin"
 
 # Towels
@@ -263,5 +262,5 @@
   id: TowelColorWhite
   storage:
     back:
-    - TowelColorWhite
+      - TowelColorWhite
   groupBy: "towels"

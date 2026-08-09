@@ -4,34 +4,34 @@
   name: stethoscope
   description: An outdated medical apparatus for listening to the sounds of the human body. It also makes you look like you know what you're doing.
   components:
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: Clothing/Neck/Misc/stethoscope.rsi
-    state: icon
-  - type: Clothing
-    sprite: Clothing/Neck/Misc/stethoscope.rsi
-    quickEquip: true
-    slots:
-    - neck
-  - type: Stethoscope
+    - type: Item
+      size: Small
+    - type: Sprite
+      sprite: Clothing/Neck/Misc/stethoscope.rsi
+      state: icon
+    - type: Clothing
+      sprite: Clothing/Neck/Misc/stethoscope.rsi
+      quickEquip: true
+      slots:
+        - neck
+    - type: Stethoscope
 
 - type: entity
   parent: BaseAction
   id: ActionStethoscope
   name: Listen with stethoscope
   components:
-  - type: Action
-    priority: -1
-    itemIconStyle: BigAction
-    checkCanInteract: false
-  - type: Sprite
-    sprite: Clothing/Neck/Misc/stethoscope.rsi
-    layers:
-    - state: icon
-  - type: TargetAction
-  - type: EntityTargetAction
-    event: !type:StethoscopeActionEvent
+    - type: Action
+      priority: -1
+      itemIconStyle: BigAction
+      checkCanInteract: false
+    - type: Sprite
+      sprite: Clothing/Neck/Misc/stethoscope.rsi
+      layers:
+        - state: icon
+    - type: TargetAction
+    - type: EntityTargetAction
+      event: !type:StethoscopeActionEvent
 
 - type: entity
   parent: ClothingNeckBase
@@ -39,12 +39,12 @@
   name: bling
   description: Damn, it feels good to be a gangster.
   components:
-  - type: Sprite
-    sprite: Clothing/Neck/Misc/bling.rsi
-  - type: Clothing
-    sprite: Clothing/Neck/Misc/bling.rsi
-  - type: Item
-    sprite: Clothing/Neck/Misc/bling.rsi
+    - type: Sprite
+      sprite: Clothing/Neck/Misc/bling.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Misc/bling.rsi
+    - type: Item
+      sprite: Clothing/Neck/Misc/bling.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -52,12 +52,12 @@
   name: lawyer badge
   description: A badge to show that the owner is a 'legitimate' lawyer who passed the NT bar exam required to practice law.
   components:
-  - type: Sprite
-    sprite: Clothing/Neck/Misc/lawyerbadge.rsi
-  - type: Clothing
-    sprite: Clothing/Neck/Misc/lawyerbadge.rsi
-  - type: TypingIndicatorClothing
-    proto: lawyer
+    - type: Sprite
+      sprite: Clothing/Neck/Misc/lawyerbadge.rsi
+    - type: Clothing
+      sprite: Clothing/Neck/Misc/lawyerbadge.rsi
+    - type: TypingIndicatorClothing
+      proto: lawyer
 
 - type: entity
   parent: ClothingNeckBase
@@ -65,12 +65,12 @@
   name: star sticker
   description: A dinky lil star for only the hardest working security officers! It's not even sticky anymore.
   components:
-  - type: Sprite
-    sprite: Clothing/Neck/Misc/dinkystar.rsi
-    state: icon
-  - type: Item
-    size: Tiny
-  - type: Tag
-    tags:
-    - Trash
-    - WhitelistChameleon
+    - type: Sprite
+      sprite: Clothing/Neck/Misc/dinkystar.rsi
+      state: icon
+    - type: Item
+      size: Tiny
+    - type: Tag
+      tags:
+        - Trash
+        - WhitelistChameleon

@@ -1,6 +1,7 @@
 # User interface
 comms-console-menu-title = Communications Console
 comms-console-menu-announcement-section-header = Manage Station
+comms-console-menu-shuttle-section-header = Manage Shuttle
 comms-console-menu-announcement-extras = Functions
 comms-console-menu-announcement-placeholder = Announcement text...
 comms-console-menu-announcement-button = Make Priority Announcement

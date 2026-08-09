@@ -12,8 +12,7 @@
     - type: Fixtures
       fixtures:
         fix1:
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.4,-0.4,0.4,0.4"
           density: 100
           mask:
@@ -43,10 +42,10 @@
       noRot: true
       sprite: Structures/Storage/closet.rsi
       layers:
-      - state: cardboard
-        map: ["enum.StorageVisualLayers.Base"]
-      - state: cardboard_open
-        map: ["enum.StorageVisualLayers.Door"]
+        - state: cardboard
+          map: ["enum.StorageVisualLayers.Base"]
+        - state: cardboard_open
+          map: ["enum.StorageVisualLayers.Door"]
     - type: Appearance
     - type: EntityStorageVisuals
       stateBaseClosed: cardboard
@@ -87,16 +86,14 @@
   id: BigBox
   parent: BaseBigBox
   components:
-  - type: InteractionOutline
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 15
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-
+    - type: InteractionOutline
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 15
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
 
 #For admin spawning only
 - type: entity
@@ -109,8 +106,7 @@
     - type: Fixtures
       fixtures:
         fix1:
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.4,-0.4,0.4,0.4"
           mask:
             - MobMask

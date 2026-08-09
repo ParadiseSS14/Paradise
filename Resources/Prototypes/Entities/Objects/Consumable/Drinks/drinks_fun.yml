@@ -1,23 +1,23 @@
 - type: entity
   abstract: true
-  parent: [ DrinkBaseMaterialPlastic, SolutionSmall, DrinkBase, DrinkBaseOpenable, DrinkVisualsAllFilled ]
+  parent: [DrinkBaseMaterialPlastic, SolutionSmall, DrinkBase, DrinkBaseOpenable, DrinkVisualsAllFilled]
   id: BaseSqueezeBottle
   components:
-  - type: Openable
-    sound:
-      collection: packetOpenSounds
-  - type: Sprite
-    layers:
-    - state: icon_empty
-      map: ["enum.OpenableVisuals.Layer"]
-    - state: fill-6
-      map: [ "enum.SolutionContainerLayers.Fill" ] # already has liquid, so no visible: false
-    - state: icon-front
-      map: [ "enum.SolutionContainerLayers.Overlay" ]
-  - type: SolutionContainerVisuals
-    maxFillLevels: 6
-  - type: TrashOnSolutionEmpty
-    solution: drink
+    - type: Openable
+      sound:
+        collection: packetOpenSounds
+    - type: Sprite
+      layers:
+        - state: icon_empty
+          map: ["enum.OpenableVisuals.Layer"]
+        - state: fill-6
+          map: ["enum.SolutionContainerLayers.Fill"] # already has liquid, so no visible: false
+        - state: icon-front
+          map: ["enum.SolutionContainerLayers.Overlay"]
+    - type: SolutionContainerVisuals
+      maxFillLevels: 6
+    - type: TrashOnSolutionEmpty
+      solution: drink
 
 - type: entity
   parent: BaseSqueezeBottle
@@ -25,14 +25,14 @@
   name: space glue tube
   description: High performance glue intended for maintenance of extremely complex mechanical equipment. DON'T DRINK!
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/glue-tube.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: SpaceGlue
-        Quantity: 60
-  - type: Glue
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/glue-tube.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: SpaceGlue
+            Quantity: 60
+    - type: Glue
 
 - type: entity
   parent: BaseSqueezeBottle
@@ -40,14 +40,14 @@
   name: space lube tube
   description: High performance lubricant intended for maintenance of extremely complex mechanical equipment.
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/lube-tube.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: SpaceLube
-        Quantity: 60
-  - type: Lube
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/lube-tube.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: SpaceLube
+            Quantity: 60
+    - type: Lube
 
 # Find your nearest clown and give them a gift :o)
 - type: entity
@@ -57,16 +57,16 @@
   suffix: DEBUG
   description: This anomalous beaker infinitely produces space lube and as such is to be closely guarded such that it doesn't fall in the wrong hands.
   components:
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: SpaceLube
-        Quantity: 960
-  - type: SolutionRegeneration
-    generated:
-      reagents:
-      - ReagentId: SpaceLube
-        Quantity: 240
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: SpaceLube
+            Quantity: 960
+    - type: SolutionRegeneration
+      generated:
+        reagents:
+          - ReagentId: SpaceLube
+            Quantity: 240
 
 - type: entity
   parent: [DrinkBaseMaterialGlass, DrinkBase]
@@ -74,69 +74,68 @@
   name: jar of something
   description: You can't really tell what this is.
   components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/jar_what.rsi
-  - type: FitsInDispenser
-    solution: drink
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 5
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlass:
-            min: 1
-            max: 1
-        transferForensics: true
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/jar_what.rsi
+    - type: FitsInDispenser
+      solution: drink
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 5
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardGlass:
+                  min: 1
+                  max: 1
+              transferForensics: true
 
 # Mopwata
 - type: weightedRandomFillSolution
   id: RandomFillMopwata
   fills:
-  - quantity: 10
-    weight: 5
-    reagents:
-    - Blood
-    - CopperBlood
-    - Slime
-    - Vomit
-  - quantity: 10
-    weight: 4
-    reagents:
-    - Coffee
-    - Tea
-    - Cola
-    - RootBeer
-    - DrGibb
-    - GrapeSoda
-    - Starkist
-    - SpaceUp
-    - SpaceMountainWind
-    - LemonLime
-    - LemonLimeCranberry
-    - PwrGame
-  - quantity: 10
-    weight: 3
-    reagents:
-    - Whiskey
-    - Vodka
-    - Beer
-    - Ale
-    - Rum
-    - Tequila
-    - Absinthe
-  - quantity: 10
-    weight: 1
-    reagents:
-    - SpaceDrugs
-    - Mold
-    - SpaceLube
-    - SpaceGlue
-    - SpaceCleaner
-    - MilkSpoiled
-    - FourteenLoko
+    - quantity: 10
+      weight: 5
+      reagents:
+        - Blood
+        - CopperBlood
+        - Slime
+        - Vomit
+    - quantity: 10
+      weight: 4
+      reagents:
+        - Coffee
+        - Tea
+        - Cola
+        - RootBeer
+        - DrGibb
+        - GrapeSoda
+        - Starkist
+        - SpaceUp
+        - SpaceMountainWind
+        - LemonLime
+        - LemonLimeCranberry
+        - PwrGame
+    - quantity: 10
+      weight: 3
+      reagents:
+        - Whiskey
+        - Vodka
+        - Beer
+        - Ale
+        - Rum
+        - Tequila
+        - Absinthe
+    - quantity: 10
+      weight: 1
+      reagents:
+        - SpaceDrugs
+        - Mold
+        - SpaceLube
+        - SpaceGlue
+        - SpaceCleaner
+        - MilkSpoiled
+        - FourteenLoko
 
 - type: entity
   parent: [DrinkVisualsAllFilled, DrinkBottleGlassSmallBaseFull]
@@ -144,13 +143,13 @@
   name: delicious mopwata
   description: A foggy brown bottle with a faded label depicting a mop. It comes full of murky... vintage.
   components:
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Mopwata
-        Quantity: 50 # Extra space for the random fill
-  - type: RandomFillSolution
-    solution: drink
-    weightedRandomId: RandomFillMopwata
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/mopwata.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Mopwata
+            Quantity: 50 # Extra space for the random fill
+    - type: RandomFillSolution
+      solution: drink
+      weightedRandomId: RandomFillMopwata
+    - type: Sprite
+      sprite: Objects/Consumable/Drinks/mopwata.rsi

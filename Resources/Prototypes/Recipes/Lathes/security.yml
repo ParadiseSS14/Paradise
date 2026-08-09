@@ -4,14 +4,14 @@
   abstract: true
   id: BaseShieldRecipe
   categories:
-  - Tools
+    - Tools
   completetime: 4
 
 - type: latheRecipe
   abstract: true
   id: BaseTargetRecipe
   categories:
-  - Tools
+    - Tools
   completetime: 5
   applyMaterialDiscount: false # ingredients dropped when destroyed
   materials:
@@ -21,7 +21,7 @@
   abstract: true
   id: BaseWeaponRecipe
   categories:
-  - Weapons
+    - Weapons
 
 - type: latheRecipe
   abstract: true
@@ -54,7 +54,7 @@
   id: ClothingBackpackElectropack
   result: ClothingBackpackElectropack
   categories:
-  - Clothing
+    - Clothing
   completetime: 4
   materials:
     Steel: 500
@@ -65,7 +65,7 @@
   id: ClothingEyesHudSecurity
   result: ClothingEyesHudSecurity
   categories:
-  - Clothing
+    - Clothing
   completetime: 2
   materials:
     Steel: 300
@@ -75,7 +75,7 @@
   id: PortableRecharger
   result: PortableRecharger
   categories:
-  - Clothing
+    - Clothing
   completetime: 15
   materials:
     Steel: 2000
@@ -88,7 +88,7 @@
   id: ClothingBackpackHarmpack
   result: ClothingBackpackHarmpack
   categories:
-  - Clothing
+    - Clothing
   completetime: 15
   materials:
     Steel: 2000

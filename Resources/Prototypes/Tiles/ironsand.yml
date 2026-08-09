@@ -4,7 +4,7 @@
   sprite: /Textures/Tiles/Asteroid/ironsand_tile.png
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
@@ -16,7 +16,7 @@
   variants: 4
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemIronsandConcrete
@@ -29,7 +29,7 @@
   variants: 4
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemIronsandConcreteMono
@@ -42,7 +42,7 @@
   variants: 4
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   footstepSounds:
     collection: FootstepTile
   itemDrop: FloorTileItemIronsandConcreteSmooth

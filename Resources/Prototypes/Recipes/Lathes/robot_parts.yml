@@ -4,7 +4,7 @@
   abstract: true
   id: BaseRoboticsRecipe
   categories:
-  - Robotics
+    - Robotics
   completetime: 3
 
 - type: latheRecipe
@@ -20,7 +20,7 @@
   abstract: true
   id: BaseRoboticsPartRecipe
   categories:
-  - Parts
+    - Parts
   completetime: 2
 
 ## Recipes

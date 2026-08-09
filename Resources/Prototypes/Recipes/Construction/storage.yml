@@ -5,7 +5,7 @@
   category: construction-category-storage
   placementMode: SnapgridCenter
   conditions:
-  - !type:TileNotBlocked
+    - !type:TileNotBlocked
 
 - type: construction
   abstract: true
@@ -14,7 +14,7 @@
   graph: Shelf
   canBuildInImpassable: true
   conditions:
-  - !type:WallmountCondition
+    - !type:WallmountCondition
 # endregion Base
 
 # region Bureaucracy

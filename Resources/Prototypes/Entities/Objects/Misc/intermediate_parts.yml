@@ -5,11 +5,11 @@
   name: moproach shoes
   description: Three pairs of tiny mopshoes, perfectly fit for a moproach.
   components:
-  - type: Sprite
-    sprite: Objects/Misc/moproach_shoes.rsi
-    state: mopshoes
-  - type: Construction
-    graph: MoproachShoes
-    node: shoes
-  - type: Item
-    size: Tiny
+    - type: Sprite
+      sprite: Objects/Misc/moproach_shoes.rsi
+      state: mopshoes
+    - type: Construction
+      graph: MoproachShoes
+      node: shoes
+    - type: Item
+      size: Tiny

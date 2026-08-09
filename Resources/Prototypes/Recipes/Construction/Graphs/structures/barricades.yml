@@ -37,14 +37,14 @@
     - node: woodWall
       entity: WallWood
       edges:
-      - to: barricadefull
-        completed:
-        - !type:GivePrototype
-          prototype: MaterialWoodPlank1
-          amount: 2
-        steps:
-        - tool: Prying
-          doAfter: 10
+        - to: barricadefull
+          completed:
+            - !type:GivePrototype
+              prototype: MaterialWoodPlank1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 10
 
 - type: constructionGraph
   id: BarricadeDirectional
@@ -92,7 +92,7 @@
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2 #returns 1 less as one breaks
-            - !type:DeleteEntity { }
+            - !type:DeleteEntity {}
           conditions:
             - !type:EntityAnchored
               anchored: true

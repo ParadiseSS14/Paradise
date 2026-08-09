@@ -5,121 +5,119 @@
   name: crystal
   description: A crystaline solid.
   components:
-  - type: Sprite
-    sprite: Structures/Decoration/crystal.rsi
-    state: crystal_grey
-    noRot: true
-  - type: Reflect
-    reflectProb: 0.5
-    reflects:
-    - Energy
-    spread: 75
-  - type: Anchorable
-    delay: 2
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.45
-        density: 60
-        mask:
-        - MachineMask
-        layer:
-        - MidImpassable
-        - LowImpassable
-        - BulletImpassable
-        - Opaque
-  - type: PointLight
-    radius: 3
-    energy: 3
-  - type: Damageable
-    damageModifierSet: Glass
-  - type: Injurable
-    damageContainer: StructuralInorganic
-  - type: Destructible
-    thresholds:
-    - trigger: &DamageTrigger20
-        !type:DamageTrigger
-        damage: 20
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: GlassBreak
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
+    - type: Sprite
+      sprite: Structures/Decoration/crystal.rsi
+      state: crystal_grey
+      noRot: true
+    - type: Reflect
+      reflectProb: 0.5
+      reflects:
+        - Energy
+      spread: 75
+    - type: Anchorable
+      delay: 2
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeCircle
+            radius: 0.45
+          density: 60
+          mask:
+            - MachineMask
+          layer:
+            - MidImpassable
+            - LowImpassable
+            - BulletImpassable
+            - Opaque
+    - type: PointLight
+      radius: 3
+      energy: 3
+    - type: Damageable
+      damageModifierSet: Glass
+    - type: Injurable
+      damageContainer: StructuralInorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger &DamageTrigger20
+            damage: 20
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
 
 - type: entity
   parent: BaseCrystalStalagmite
   id: CrystalGreen
   suffix: green
   components:
-  - type: Sprite
-    color: "#52ff39"
-  - type: PointLight
-    color: "#52ff39"
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger20
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardCrystalGreen: &Min1Max2
-            min: 1
-            max: 2
+    - type: Sprite
+      color: "#52ff39"
+    - type: PointLight
+      color: "#52ff39"
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalGreen: &Min1Max2
+                  min: 1
+                  max: 2
 
 - type: entity
   parent: BaseCrystalStalagmite
   id: CrystalPink
   suffix: pink
   components:
-  - type: Sprite
-    color: "#ff66cc"
-  - type: PointLight
-    color: "#ff66cc"
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger20
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardCrystalPink: *Min1Max2
+    - type: Sprite
+      color: "#ff66cc"
+    - type: PointLight
+      color: "#ff66cc"
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalPink: *Min1Max2
 
 - type: entity
   parent: BaseCrystalStalagmite
   id: CrystalGrey
   suffix: red
   components:
-  - type: Sprite
-    color: "#fb4747"
-  - type: PointLight
-    color: "#fb4747"
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger20
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardCrystalRed: *Min1Max2
+    - type: Sprite
+      color: "#fb4747"
+    - type: PointLight
+      color: "#fb4747"
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalRed: *Min1Max2
 
 - type: entity
   parent: BaseCrystalStalagmite
   id: CrystalOrange
   suffix: orange
   components:
-  - type: Sprite
-    color: "#ff8227"
-  - type: PointLight
-    color: "#ff8227"
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger20
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardCrystalOrange: *Min1Max2
+    - type: Sprite
+      color: "#ff8227"
+    - type: PointLight
+      color: "#ff8227"
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalOrange: *Min1Max2
 
 - type: entity
   parent: BaseCrystalStalagmite
@@ -132,59 +130,59 @@
       color: "#363636"
     - type: Destructible
       thresholds:
-      - trigger: *DamageTrigger20
-        behaviors:
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            ShardCrystalBlack: *Min1Max2
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalBlack: *Min1Max2
 
 - type: entity
   parent: BaseCrystalStalagmite
   id: CrystalBlue
   suffix: blue
   components:
-  - type: Sprite
-    color: "#39a1ff"
-  - type: PointLight
-    color: "#39a1ff"
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger20
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardCrystalBlue: *Min1Max2
+    - type: Sprite
+      color: "#39a1ff"
+    - type: PointLight
+      color: "#39a1ff"
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalBlue: *Min1Max2
 
 - type: entity
   parent: BaseCrystalStalagmite
   id: CrystalYellow
   suffix: yellow
   components:
-  - type: Sprite
-    color: "#ffde46"
-  - type: PointLight
-    color: "#ffde46"
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger20
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardCrystalYellow: *Min1Max2
+    - type: Sprite
+      color: "#ffde46"
+    - type: PointLight
+      color: "#ffde46"
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalYellow: *Min1Max2
 
 - type: entity
   parent: BaseCrystalStalagmite
   id: CrystalCyan
   suffix: cyan
   components:
-  - type: Sprite
-    color: "#47f8ff"
-  - type: PointLight
-    color: "#47f8ff"
-  - type: Destructible
-    thresholds:
-    - trigger: *DamageTrigger20
-      behaviors:
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardCrystalCyan: *Min1Max2
+    - type: Sprite
+      color: "#47f8ff"
+    - type: PointLight
+      color: "#47f8ff"
+    - type: Destructible
+      thresholds:
+        - trigger: *DamageTrigger20
+          behaviors:
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardCrystalCyan: *Min1Max2

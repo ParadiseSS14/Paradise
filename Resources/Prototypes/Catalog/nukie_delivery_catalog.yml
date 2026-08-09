@@ -12,8 +12,8 @@
   description: nukie-delivery-medicine-bundle-desc
   productEntity: ClothingBackpackDuffelSyndicateFilledMedicine
   categories:
-  - NukieDelivery
+    - NukieDelivery
   restockTime: 1200
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1

@@ -5,15 +5,15 @@
   setPreference: true
   objective: roles-antag-mothership-core-objective
   requirements:
-  - !type:RoleTimeRequirement
-    role: JobBorg
-    time: 18000  # 5 hrs
-  guides: [ Xenoborgs ]
+    - !type:RoleTimeRequirement
+      role: JobBorg
+      time: 18000 # 5 hrs
+  guides: [Xenoborgs]
 
 - type: antagSpecifier
   parent: RestrictedAntag
   id: MothershipCore
-  prefRoles: [ MothershipCore ]
+  prefRoles: [MothershipCore]
   spawnerPrototype: SpawnPointGhostRoleMothershipCore
 
 - type: antag
@@ -23,16 +23,16 @@
   setPreference: true
   objective: roles-antag-xenoborg-objective
   requirements:
-  - !type:RoleTimeRequirement
-    role: JobBorg
-    time: 18000  # 5 hrs
-  guides: [ Xenoborgs ]
+    - !type:RoleTimeRequirement
+      role: JobBorg
+      time: 18000 # 5 hrs
+  guides: [Xenoborgs]
 
 - type: antagSpecifier
   abstract: true
   parent: RestrictedAntag
   id: BaseXenoborg
-  prefRoles: [ Xenoborg ]
+  prefRoles: [Xenoborg]
   spawnerPrototype: SpawnPointGhostRoleXenoborg
 
 - type: antagSpecifier

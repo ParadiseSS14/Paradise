@@ -5,7 +5,7 @@
   id: BaseTileRecipe
   applyMaterialDiscount: false
   categories:
-  - Tiles
+    - Tiles
   completetime: 0.5
 
 - type: latheRecipe
@@ -13,8 +13,8 @@
   parent: BaseTileRecipe
   id: BaseSteelTileRecipe
   categories:
-  - Tiles
-  - Steel
+    - Tiles
+    - Steel
   materials:
     Steel: 25
 
@@ -23,32 +23,32 @@
   parent: BaseSteelTileRecipe
   id: BaseDarkTileRecipe
   categories:
-  - Tiles
-  - Dark
+    - Tiles
+    - Dark
 
 - type: latheRecipe
   abstract: true
   parent: BaseSteelTileRecipe
   id: BaseWhiteTileRecipe
   categories:
-  - Tiles
-  - White
+    - Tiles
+    - White
 
 - type: latheRecipe
   abstract: true
   parent: BaseSteelTileRecipe
   id: BaseMaintTileRecipe
   categories:
-  - Tiles
-  - Maints
+    - Tiles
+    - Maints
 
 - type: latheRecipe
   abstract: true
   parent: BaseSteelTileRecipe
   id: BaseIndustrialTileRecipe
   categories:
-  - Tiles
-  - Industrial
+    - Tiles
+    - Industrial
   materials:
     Steel: 50
 
@@ -57,16 +57,16 @@
   parent: BaseSteelTileRecipe
   id: BaseCircuitTileRecipe
   categories:
-  - Tiles
-  - Circuit
+    - Tiles
+    - Circuit
 
 - type: latheRecipe
   abstract: true
   parent: BaseTileRecipe
   id: BaseWoodTileRecipe
   categories:
-  - Tiles
-  - Wood
+    - Tiles
+    - Wood
   materials:
     Wood: 25
 
@@ -75,8 +75,8 @@
   parent: BaseTileRecipe
   id: BaseConcreteTileRecipe
   categories:
-  - Tiles
-  - Concrete
+    - Tiles
+    - Concrete
   materials:
     Steel: 25
     Plastic: 25
@@ -86,8 +86,8 @@
   parent: BaseTileRecipe
   id: BaseFauxTileRecipe
   categories:
-  - Tiles
-  - Faux
+    - Tiles
+    - Faux
   materials:
     Plastic: 100
 
@@ -96,8 +96,8 @@
   parent: BaseTileRecipe
   id: BaseMarbleTileRecipe
   categories:
-  - Tiles
-  - Marble
+    - Tiles
+    - Marble
   materials:
     Steel: 25
     Glass: 25
@@ -107,8 +107,8 @@
   parent: BaseTileRecipe
   id: BaseShuttleTileRecipe
   categories:
-  - Tiles
-  - Shuttle
+    - Tiles
+    - Shuttle
   completetime: 1
   materials:
     Plasteel: 25
@@ -118,8 +118,8 @@
   parent: BaseTileRecipe
   id: BasePlasticTileRecipe
   categories:
-  - Tiles
-  - Plastic
+    - Tiles
+    - Plastic
   materials:
     Plastic: 25
 
@@ -128,8 +128,8 @@
   parent: BaseTileRecipe
   id: BaseCarpetTileRecipe
   categories:
-  - Tiles
-  - Carpets
+    - Tiles
+    - Carpets
   materials:
     Cloth: 25
 
@@ -139,8 +139,8 @@
   id: BasePreciousTileRecipe
   applyMaterialDiscount: false
   categories:
-  - Tiles
-  - Precious
+    - Tiles
+    - Precious
 
 ## Recipes
 

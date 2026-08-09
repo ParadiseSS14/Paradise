@@ -1,6 +1,6 @@
 # Operations
 - type: rcd
-  id: Invalid   # Hidden prototype - do not add to RCDs
+  id: Invalid # Hidden prototype - do not add to RCDs
   mode: Invalid
 
 - type: rcd
@@ -13,7 +13,7 @@
   rotation: Camera
 
 - type: rcd
-  id: DeconstructLattice   # Hidden prototype - do not add to RCDs
+  id: DeconstructLattice # Hidden prototype - do not add to RCDs
   name: rcd-component-deconstruct
   mode: Deconstruct
   cost: 2
@@ -22,7 +22,7 @@
   fx: EffectRCDConstruct0
 
 - type: rcd
-  id: DeconstructTile      # Hidden prototype - do not add to RCDs
+  id: DeconstructTile # Hidden prototype - do not add to RCDs
   name: rcd-component-deconstruct
   mode: Deconstruct
   cost: 4
@@ -236,7 +236,7 @@
   cost: 1
   delay: 0
   rules:
-  - MustBuildOnSubfloor
+    - MustBuildOnSubfloor
   rotation: Fixed
   fx: EffectRCDConstruct0
 
@@ -249,7 +249,7 @@
   cost: 1
   delay: 0
   rules:
-  - MustBuildOnSubfloor
+    - MustBuildOnSubfloor
   rotation: Fixed
   fx: EffectRCDConstruct0
 
@@ -262,7 +262,7 @@
   cost: 1
   delay: 0
   rules:
-  - MustBuildOnSubfloor
+    - MustBuildOnSubfloor
   rotation: Fixed
   fx: EffectRCDConstruct0
 

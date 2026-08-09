@@ -1,13 +1,12 @@
 - type: entity
   id: TetherEntity
-  categories: [ HideSpawnMenu ]
+  categories: [HideSpawnMenu]
   components:
-  - type: Physics
-    bodyType: Dynamic
-    sleepingAllowed: false
-  - type: Fixtures
-    fixtures:
-      tether:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.35
+    - type: Physics
+      bodyType: Dynamic
+      sleepingAllowed: false
+    - type: Fixtures
+      fixtures:
+        tether:
+          shape: !type:PhysShapeCircle
+            radius: 0.35

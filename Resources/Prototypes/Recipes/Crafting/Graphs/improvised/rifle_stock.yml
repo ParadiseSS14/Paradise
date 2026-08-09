@@ -3,12 +3,12 @@
   id: RifleStockGraph
   start: start
   graph:
-  - node: start
-    edges:
-    - to: riflestock
-      steps:
-      - material: WoodPlank
-        amount: 5
-        doAfter: 4
-  - node: riflestock
-    entity: RifleStock
+    - node: start
+      edges:
+        - to: riflestock
+          steps:
+            - material: WoodPlank
+              amount: 5
+              doAfter: 4
+    - node: riflestock
+      entity: RifleStock

@@ -7,32 +7,32 @@
   name: figurine
   description: A small miniature.
   components:
-  - type: Sprite
-    sprite: Objects/Fun/figurines.rsi
-  - type: PhysicalComposition
-    materialComposition:
-      Plastic: 100
-  - type: StaticPrice
-    price: 75
-  - type: Tag
-    tags:
-    - Figurine
-  - type: UseDelay
-    delay: 5
-  - type: UseDelayOnTrigger
-  - type: UseDelayTriggerCondition # prevent spam
-  - type: TriggerOnActivate
-  - type: TriggerOnSignal
-  - type: Speech
-    speechSounds: Pai # it just sounds better
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: BasicDevice
-  - type: WirelessNetworkConnection
-    range: 200
-  - type: DeviceLinkSink
-    ports:
-    - Trigger
+    - type: Sprite
+      sprite: Objects/Fun/figurines.rsi
+    - type: PhysicalComposition
+      materialComposition:
+        Plastic: 100
+    - type: StaticPrice
+      price: 75
+    - type: Tag
+      tags:
+        - Figurine
+    - type: UseDelay
+      delay: 5
+    - type: UseDelayOnTrigger
+    - type: UseDelayTriggerCondition # prevent spam
+    - type: TriggerOnActivate
+    - type: TriggerOnSignal
+    - type: Speech
+      speechSounds: Pai # it just sounds better
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: BasicDevice
+    - type: WirelessNetworkConnection
+      range: 200
+    - type: DeviceLinkSink
+      ports:
+        - Trigger
 
 #HUMANOID FIGURINES
 
@@ -42,10 +42,10 @@
   name: head of personnel figure
   description: A figurine depicting the glorious head of all personnel, away from their office as usual.
   components:
-  - type: Sprite
-    state: hop
-  - type: SpeakOnTrigger
-    pack: FigurinesHoP
+    - type: Sprite
+      state: hop
+    - type: SpeakOnTrigger
+      pack: FigurinesHoP
 
 - type: entity
   parent: BaseFigurine
@@ -53,10 +53,10 @@
   name: passenger figure
   description: A figurine depicting an every day, run-of-the-mill passenger. No funny business here.
   components:
-  - type: Sprite
-    state: passenger
-  - type: SpeakOnTrigger
-    pack: FigurinesPassenger
+    - type: Sprite
+      state: passenger
+    - type: SpeakOnTrigger
+      pack: FigurinesPassenger
 
 - type: entity
   parent: BaseFigurine
@@ -64,10 +64,10 @@
   name: greytider figure
   description: A figurine depicting a dubious-looking passenger. Greytide worldwide!
   components:
-  - type: Sprite
-    state: passenger_greytide
-  - type: SpeakOnTrigger
-    pack: FigurinesGreytider
+    - type: Sprite
+      state: passenger_greytide
+    - type: SpeakOnTrigger
+      pack: FigurinesGreytider
 
 - type: entity
   parent: BaseFigurine
@@ -75,10 +75,10 @@
   name: clown figure
   description: A figurine depicting a clown. You shudder to think of what people have probably done to this figurine before.
   components:
-  - type: Sprite
-    state: clown
-  - type: SpeakOnTrigger
-    pack: FigurinesClown
+    - type: Sprite
+      state: clown
+    - type: SpeakOnTrigger
+      pack: FigurinesClown
 
 - type: entity
   parent: BaseFigurine
@@ -86,10 +86,10 @@
   name: holoclown figure
   description: A figurine depicting a holoclown. Even more annoying than a clown and no less real.
   components:
-  - type: Sprite
-    state: holoclown
-  - type: SpeakOnTrigger
-    pack: FigurinesHoloClown
+    - type: Sprite
+      state: holoclown
+    - type: SpeakOnTrigger
+      pack: FigurinesHoloClown
 
 - type: entity
   parent: BaseFigurine
@@ -97,10 +97,10 @@
   name: mime figure
   description: A figurine depicting that silent bastard you are all too familiar with.
   components:
-  - type: Sprite
-    state: mime
-  - type: SpeakOnTrigger
-    pack: FigurinesMime
+    - type: Sprite
+      state: mime
+    - type: SpeakOnTrigger
+      pack: FigurinesMime
 
 - type: entity
   parent: BaseFigurine
@@ -108,10 +108,10 @@
   name: musician figure
   description: A figurine depicting a Musician, his music was electrifying.
   components:
-  - type: Sprite
-    state: musician
-  - type: SpeakOnTrigger
-    pack: FigurinesMusician
+    - type: Sprite
+      state: musician
+    - type: SpeakOnTrigger
+      pack: FigurinesMusician
 
 - type: entity
   parent: BaseFigurine
@@ -119,10 +119,10 @@
   name: boxer figure
   description: A figurine depicting a Boxer holding their red gloves.
   components:
-  - type: Sprite
-    state: boxer
-  - type: SpeakOnTrigger
-    pack: FigurinesBoxer
+    - type: Sprite
+      state: boxer
+    - type: SpeakOnTrigger
+      pack: FigurinesBoxer
 
 - type: entity
   parent: BaseFigurine
@@ -130,10 +130,10 @@
   name: captain figure
   description: A figurine depicting the standard outfit of a captain belonging to a civilian-sector Nanotrasen vessel.
   components:
-  - type: Sprite
-    state: captain
-  - type: SpeakOnTrigger
-    pack: FigurinesCaptain
+    - type: Sprite
+      state: captain
+    - type: SpeakOnTrigger
+      pack: FigurinesCaptain
 
 - type: entity
   parent: BaseFigurine
@@ -141,10 +141,10 @@
   name: head of security figure
   description: A figurine depicting the glorious head of the Security department.
   components:
-  - type: Sprite
-    state: hos
-  - type: SpeakOnTrigger
-    pack: FigurinesHoS
+    - type: Sprite
+      state: hos
+    - type: SpeakOnTrigger
+      pack: FigurinesHoS
 
 - type: entity
   parent: BaseFigurine
@@ -152,10 +152,10 @@
   name: warden figure
   description: A figurine depicting a Warden, ready to jail someone at any moment.
   components:
-  - type: Sprite
-    state: warden
-  - type: SpeakOnTrigger
-    pack: FigurinesWarden
+    - type: Sprite
+      state: warden
+    - type: SpeakOnTrigger
+      pack: FigurinesWarden
 
 - type: entity
   parent: BaseFigurine
@@ -163,10 +163,10 @@
   name: detective figure
   description: A figurine depicting a Detective wearing their iconic trench coat.
   components:
-  - type: Sprite
-    state: detective
-  - type: SpeakOnTrigger
-    pack: FigurinesDetective
+    - type: Sprite
+      state: detective
+    - type: SpeakOnTrigger
+      pack: FigurinesDetective
 
 - type: entity
   parent: BaseFigurine
@@ -174,10 +174,10 @@
   name: security officer figure
   description: A figurine depicting a Security Officer holding a stunbaton, ready to defend the station.
   components:
-  - type: Sprite
-    state: security
-  - type: SpeakOnTrigger
-    pack: FigurinesSecurity
+    - type: Sprite
+      state: security
+    - type: SpeakOnTrigger
+      pack: FigurinesSecurity
 
 - type: entity
   parent: BaseFigurine
@@ -185,10 +185,10 @@
   name: lawyer figure
   description: A figurine depicting a Lawyer sporting a freshly tailored suit.
   components:
-  - type: Sprite
-    state: lawyer
-  - type: SpeakOnTrigger
-    pack: FigurinesLawyer
+    - type: Sprite
+      state: lawyer
+    - type: SpeakOnTrigger
+      pack: FigurinesLawyer
 
 - type: entity
   parent: BaseFigurine
@@ -196,10 +196,10 @@
   name: cargo technican figure
   description: A figurine depicting a reptillian Cargo Technican.
   components:
-  - type: Sprite
-    state: cargotech
-  - type: SpeakOnTrigger
-    pack: FigurinesCargoTech
+    - type: Sprite
+      state: cargotech
+    - type: SpeakOnTrigger
+      pack: FigurinesCargoTech
 
 - type: entity
   parent: BaseFigurine
@@ -207,10 +207,10 @@
   name: salvage specialist figure
   description: A figurine depicting a Salvage Specialist holding a survival knife.
   components:
-  - type: Sprite
-    state: salvage
-  - type: SpeakOnTrigger
-    pack: FigurinesSalvage
+    - type: Sprite
+      state: salvage
+    - type: SpeakOnTrigger
+      pack: FigurinesSalvage
 
 - type: entity
   parent: BaseFigurine
@@ -218,10 +218,10 @@
   name: quartermaster figure
   description: A figurine depicting the glorious head of the Cargo department.
   components:
-  - type: Sprite
-    state: qm
-  - type: SpeakOnTrigger
-    pack: FigurinesQM
+    - type: Sprite
+      state: qm
+    - type: SpeakOnTrigger
+      pack: FigurinesQM
 
 - type: entity
   parent: BaseFigurine
@@ -229,10 +229,10 @@
   name: chief engineer figure
   description: A figurine depicting the glorious head of the Engineering department.
   components:
-  - type: Sprite
-    state: ce
-  - type: SpeakOnTrigger
-    pack: FigurinesCE
+    - type: Sprite
+      state: ce
+    - type: SpeakOnTrigger
+      pack: FigurinesCE
 
 - type: entity
   parent: BaseFigurine
@@ -240,10 +240,10 @@
   name: station engineer figure
   description: A figurine depicting a Station Engineer holding a crowbar at-ready.
   components:
-  - type: Sprite
-    state: engineer
-  - type: SpeakOnTrigger
-    pack: FigurinesEngineer
+    - type: Sprite
+      state: engineer
+    - type: SpeakOnTrigger
+      pack: FigurinesEngineer
 
 - type: entity
   parent: BaseFigurine
@@ -251,10 +251,10 @@
   name: atmospheric technician figure
   description: A figurine depicting an Atmos Tech holding an unlit welder.
   components:
-  - type: Sprite
-    state: atmos
-  - type: SpeakOnTrigger
-    pack: FigurinesAtmosTech
+    - type: Sprite
+      state: atmos
+    - type: SpeakOnTrigger
+      pack: FigurinesAtmosTech
 
 - type: entity
   parent: BaseFigurine
@@ -262,10 +262,10 @@
   name: research director figure
   description: A figurine depicting the glorious head of the Science department.
   components:
-  - type: Sprite
-    state: rd
-  - type: SpeakOnTrigger
-    pack: FigurinesRD
+    - type: Sprite
+      state: rd
+    - type: SpeakOnTrigger
+      pack: FigurinesRD
 
 - type: entity
   parent: BaseFigurine
@@ -273,10 +273,10 @@
   name: scientist figurine
   description: A figurine depicting a Scientist donning a labcoat.
   components:
-  - type: Sprite
-    state: scientist
-  - type: SpeakOnTrigger
-    pack: FigurinesScientist
+    - type: Sprite
+      state: scientist
+    - type: SpeakOnTrigger
+      pack: FigurinesScientist
 
 - type: entity
   parent: BaseFigurine
@@ -284,10 +284,10 @@
   name: chief medical officer figure
   description: A figurine depicting the glorious head of the Medical department.
   components:
-  - type: Sprite
-    state: cmo
-  - type: SpeakOnTrigger
-    pack: FigurinesCMO
+    - type: Sprite
+      state: cmo
+    - type: SpeakOnTrigger
+      pack: FigurinesCMO
 
 - type: entity
   parent: BaseFigurine
@@ -295,10 +295,10 @@
   name: chemist figure
   description: A figurine depicting a Chemist probably planning to make meth.
   components:
-  - type: Sprite
-    state: chemist
-  - type: SpeakOnTrigger
-    pack: FigurinesChemist
+    - type: Sprite
+      state: chemist
+    - type: SpeakOnTrigger
+      pack: FigurinesChemist
 
 - type: entity
   parent: BaseFigurine
@@ -306,10 +306,10 @@
   name: paramedic figure
   description: A figurine depicting a Paramedic wearing their void suit.
   components:
-  - type: Sprite
-    state: paramedic
-  - type: SpeakOnTrigger
-    pack: FigurinesParamedic
+    - type: Sprite
+      state: paramedic
+    - type: SpeakOnTrigger
+      pack: FigurinesParamedic
 
 - type: entity
   parent: BaseFigurine
@@ -317,10 +317,10 @@
   name: medical doctor figure
   description: A figurine depicting a Medical Doctor, donning a labcoat & syringe.
   components:
-  - type: Sprite
-    state: medical
-  - type: SpeakOnTrigger
-    pack: FigurinesDoctor
+    - type: Sprite
+      state: medical
+    - type: SpeakOnTrigger
+      pack: FigurinesDoctor
 
 - type: entity
   parent: BaseFigurine
@@ -328,10 +328,10 @@
   name: librarian figure
   description: A figurine depicting the one-and-only librarian.
   components:
-  - type: Sprite
-    state: librarian
-  - type: SpeakOnTrigger
-    pack: FigurinesLibrarian
+    - type: Sprite
+      state: librarian
+    - type: SpeakOnTrigger
+      pack: FigurinesLibrarian
 
 - type: entity
   parent: BaseFigurine
@@ -339,10 +339,10 @@
   name: chaplain figure
   description: A figurine depicting a Chaplain hopefully praying for good things.
   components:
-  - type: Sprite
-    state: chaplain
-  - type: SpeakOnTrigger
-    pack: FigurinesChaplain
+    - type: Sprite
+      state: chaplain
+    - type: SpeakOnTrigger
+      pack: FigurinesChaplain
 
 - type: entity
   parent: BaseFigurine
@@ -350,10 +350,10 @@
   name: chef figure
   description: A figurine depicting a chef, master of the culinary arts!.. most of the time.
   components:
-  - type: Sprite
-    state: chef
-  - type: SpeakOnTrigger
-    pack: FigurinesChef
+    - type: Sprite
+      state: chef
+    - type: SpeakOnTrigger
+      pack: FigurinesChef
 
 - type: entity
   parent: BaseFigurine
@@ -361,10 +361,10 @@
   name: bartender figure
   description: A figurine depicting a Bartender looking stylish with their rockin shades and tophat.
   components:
-  - type: Sprite
-    state: bartender
-  - type: SpeakOnTrigger
-    pack: FigurinesBartender
+    - type: Sprite
+      state: bartender
+    - type: SpeakOnTrigger
+      pack: FigurinesBartender
 
 - type: entity
   parent: BaseFigurine
@@ -372,10 +372,10 @@
   name: botanist figure
   description: A figurine depicting a Botanist that surely won't let kudzu get out of control.
   components:
-  - type: Sprite
-    state: botanist
-  - type: SpeakOnTrigger
-    pack: FigurinesBotanist
+    - type: Sprite
+      state: botanist
+    - type: SpeakOnTrigger
+      pack: FigurinesBotanist
 
 - type: entity
   parent: BaseFigurine
@@ -383,10 +383,10 @@
   name: janitor figure
   description: A figurine depicting a Janitor with their galoshes.
   components:
-  - type: Sprite
-    state: janitor
-  - type: SpeakOnTrigger
-    pack: FigurinesJanitor
+    - type: Sprite
+      state: janitor
+    - type: SpeakOnTrigger
+      pack: FigurinesJanitor
 
 - type: entity
   parent: BaseFigurine
@@ -394,10 +394,10 @@
   name: syndicate operative figure
   description: A figurine depicting someone in a blood-red hardsuit, similar to what someone on a nuclear operative team might wear.
   components:
-  - type: Sprite
-    state: nukie
-  - type: SpeakOnTrigger
-    pack: FigurinesNukie
+    - type: Sprite
+      state: nukie
+    - type: SpeakOnTrigger
+      pack: FigurinesNukie
 
 - type: entity
   parent: BaseFigurine
@@ -405,10 +405,10 @@
   name: elite syndicate operative figure
   description: A figurine depicting someone in an elite blood-red hardsuit, similar to what someone on a nuclear operative team might wear.
   components:
-  - type: Sprite
-    state: nukie_elite
-  - type: SpeakOnTrigger
-    pack: FigurinesNukieElite
+    - type: Sprite
+      state: nukie_elite
+    - type: SpeakOnTrigger
+      pack: FigurinesNukieElite
 
 - type: entity
   parent: BaseFigurine
@@ -416,10 +416,10 @@
   name: syndicate operative commander figure
   description: A figurine depicting someone in a beefed-up blood-red hardsuit, similar to what the commander of a nuclear operative team might wear.
   components:
-  - type: Sprite
-    state: nukie_commander
-  - type: SpeakOnTrigger
-    pack: FigurinesNukieCommander
+    - type: Sprite
+      state: nukie_commander
+    - type: SpeakOnTrigger
+      pack: FigurinesNukieCommander
 
 - type: entity
   parent: BaseFigurine
@@ -427,10 +427,10 @@
   name: syndicate footsoldier figure
   description: A figurine depicting the outfit of a syndicate footsoldier.
   components:
-  - type: Sprite
-    state: footsoldier
-  - type: SpeakOnTrigger
-    pack: FigurinesFootsoldier
+    - type: Sprite
+      state: footsoldier
+    - type: SpeakOnTrigger
+      pack: FigurinesFootsoldier
 
 - type: entity
   parent: BaseFigurine
@@ -438,10 +438,10 @@
   name: wizard figure
   description: A figurine depicting someone with a long, silky beard wearing a wizard outfit. Warlocks wish they had anything on this.
   components:
-  - type: Sprite
-    state: wizard
-  - type: SpeakOnTrigger
-    pack: FigurinesWizard
+    - type: Sprite
+      state: wizard
+    - type: SpeakOnTrigger
+      pack: FigurinesWizard
 
 - type: entity
   parent: BaseFigurine
@@ -449,10 +449,10 @@
   name: fake wizard figure
   description: A figurine depicting someone in a fake-ass wizard costume. What a ripoff!
   components:
-  - type: Sprite
-    state: wizard_fake
-  - type: SpeakOnTrigger
-    pack: FigurinesWizard
+    - type: Sprite
+      state: wizard_fake
+    - type: SpeakOnTrigger
+      pack: FigurinesWizard
 
 - type: entity
   parent: BaseFigurine
@@ -460,10 +460,10 @@
   name: griffin figure
   description: A figurine depicting 'The Griffin', criminal mastermind.
   components:
-  - type: Sprite
-    state: griffin
-  - type: SpeakOnTrigger
-    pack: FigurinesGriffin
+    - type: Sprite
+      state: griffin
+    - type: SpeakOnTrigger
+      pack: FigurinesGriffin
 
 - type: entity
   parent: BaseFigurine
@@ -471,10 +471,10 @@
   name: owlman figure
   description: A figurine depicting 'Owlman', the defender of justice.
   components:
-  - type: Sprite
-    state: owlman
-  - type: SpeakOnTrigger
-    pack: FigurinesOwlman
+    - type: Sprite
+      state: owlman
+    - type: SpeakOnTrigger
+      pack: FigurinesOwlman
 
 - type: entity
   parent: BaseFigurine
@@ -482,10 +482,10 @@
   name: skeleton figure
   description: A figurine depicting a spooky scary skeleton.
   components:
-  - type: Sprite
-    state: skeleton
-  - type: SpeakOnTrigger
-    pack: FigurinesSkeleton
+    - type: Sprite
+      state: skeleton
+    - type: SpeakOnTrigger
+      pack: FigurinesSkeleton
 
 - type: entity
   parent: BaseFigurine
@@ -493,10 +493,10 @@
   name: thief figure
   description: A figurine depicting a kleptomaniac that hides in the shadows.
   components:
-  - type: Sprite
-    state: thief
-  - type: SpeakOnTrigger
-    pack: FigurinesThief
+    - type: Sprite
+      state: thief
+    - type: SpeakOnTrigger
+      pack: FigurinesThief
 
 #Nonhuman Figurines
 
@@ -506,30 +506,30 @@
   name: nuke toy
   description: A plastic model of a Nuclear Fission Explosive. No uranium included... probably.
   components:
-  - type: Sprite
-    sprite: Objects/Fun/toy_nuke.rsi
-    state: icon
-  - type: Clothing
-    quickEquip: false
-    sprite: Objects/Fun/toy_nuke.rsi
-    slots:
-    - HEAD
-    clothingVisuals:
-      head:
-      - state: equipped-HELMET
-        offset: "0, 0.12"
-  - type: Tag
-    tags:
-    - Figurine
-    - Payload
-  - type: UseDelay
-    delay: 180.0
-  - type: EmitSoundOnTrigger
-    sound:
-      path: /Audio/Machines/Nuke/nuke_alarm.ogg
-      params:
-        volume: -5
-        maxDistance: 10
+    - type: Sprite
+      sprite: Objects/Fun/toy_nuke.rsi
+      state: icon
+    - type: Clothing
+      quickEquip: false
+      sprite: Objects/Fun/toy_nuke.rsi
+      slots:
+        - HEAD
+      clothingVisuals:
+        head:
+          - state: equipped-HELMET
+            offset: "0, 0.12"
+    - type: Tag
+      tags:
+        - Figurine
+        - Payload
+    - type: UseDelay
+      delay: 180.0
+    - type: EmitSoundOnTrigger
+      sound:
+        path: /Audio/Machines/Nuke/nuke_alarm.ogg
+        params:
+          volume: -5
+          maxDistance: 10
 
 - type: entity
   parent: BaseFigurine
@@ -537,10 +537,10 @@
   name: space dragon figure
   description: A large figurine depicting a space dragon, its red eyes on gazing on its prey.
   components:
-  - type: Sprite
-    state: spacedragon
-  - type: SpeakOnTrigger
-    pack: FigurinesSpaceDragon
+    - type: Sprite
+      state: spacedragon
+    - type: SpeakOnTrigger
+      pack: FigurinesSpaceDragon
 
 - type: entity
   parent: BaseFigurine
@@ -548,10 +548,10 @@
   name: xeno queen figure
   description: A large figurine depicting a xeno queen, ready to attack.
   components:
-  - type: Sprite
-    state: queen
-  - type: SpeakOnTrigger
-    pack: FigurinesQueen
+    - type: Sprite
+      state: queen
+    - type: SpeakOnTrigger
+      pack: FigurinesQueen
 
 - type: entity
   parent: BaseFigurine
@@ -559,10 +559,10 @@
   name: rat king figure
   description: A large figurine depicting a rat king, prepared to make its nest.
   components:
-  - type: Sprite
-    state: ratking
-  - type: SpeakOnTrigger
-    pack: FigurinesRatKing
+    - type: Sprite
+      state: ratking
+    - type: SpeakOnTrigger
+      pack: FigurinesRatKing
 
 - type: entity
   parent: BaseFigurine
@@ -570,10 +570,10 @@
   name: rat servant figure
   description: A figurine depicting a rat serving the king of rats!
   components:
-  - type: Sprite
-    state: ratservant
-  - type: SpeakOnTrigger
-    pack: FigurinesRatServant
+    - type: Sprite
+      state: ratservant
+    - type: SpeakOnTrigger
+      pack: FigurinesRatServant
 
 - type: entity
   parent: BaseFigurine
@@ -581,10 +581,10 @@
   name: mouse figure
   description: A figurine depicting a mouse scuttling away to the nearest piece of food.
   components:
-  - type: Sprite
-    state: mouse
-  - type: SpeakOnTrigger
-    pack: FigurinesMouse
+    - type: Sprite
+      state: mouse
+    - type: SpeakOnTrigger
+      pack: FigurinesMouse
 
 - type: entity
   parent: BaseFigurine
@@ -592,10 +592,10 @@
   name: slime figure
   description: A figurine depicting a translucent blue slime.
   components:
-  - type: Sprite
-    state: slime
-  - type: SpeakOnTrigger
-    pack: FigurinesSlime
+    - type: Sprite
+      state: slime
+    - type: SpeakOnTrigger
+      pack: FigurinesSlime
 
 - type: entity
   parent: BaseFigurine
@@ -603,10 +603,10 @@
   name: hamlet figure
   description: A figurine depicting Hamlet, microwave not included.
   components:
-  - type: Sprite
-    state: hamlet
-  - type: SpeakOnTrigger
-    pack: FigurinesHamlet
+    - type: Sprite
+      state: hamlet
+    - type: SpeakOnTrigger
+      pack: FigurinesHamlet
 
 - type: entity
   parent: BaseFigurine
@@ -614,17 +614,17 @@
   name: AI toy
   description: A scaled-down toy AI core.
   components:
-  - type: Sprite
-    sprite: Objects/Fun/AI.rsi
-    state: icon
-  - type: Clothing
-    quickEquip: false
-    sprite: Objects/Fun/AI.rsi
-    slots:
-    - HEAD
-    clothingVisuals:
-      head:
-      - state: equipped-HELMET
-        offset: "0, 0.06"
-  - type: SpeakOnTrigger
-    pack: FigurinesAI
+    - type: Sprite
+      sprite: Objects/Fun/AI.rsi
+      state: icon
+    - type: Clothing
+      quickEquip: false
+      sprite: Objects/Fun/AI.rsi
+      slots:
+        - HEAD
+      clothingVisuals:
+        head:
+          - state: equipped-HELMET
+            offset: "0, 0.06"
+    - type: SpeakOnTrigger
+      pack: FigurinesAI

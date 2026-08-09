@@ -5,43 +5,41 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: Anchorable
-    flags:
-    - Anchorable
-  - type: Rotatable
-  - type: Sprite
-    sprite: Structures/plastic_flaps.rsi
-    state: plasticflaps
-    drawdepth: Mobs
-  - type: Physics
-    bodyType: Static
-  - type: Transform
-    anchored: true
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,0.49"
-        density: 100
-        mask:
-        - Impassable
-        layer:
-        - MidImpassable
-  - type: Damageable
-    damageModifierSet: Metallic
-  - type: Injurable
-    damageContainer: StructuralInorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 100
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: StaticPrice
-    price: 100
+    - type: Anchorable
+      flags:
+        - Anchorable
+    - type: Rotatable
+    - type: Sprite
+      sprite: Structures/plastic_flaps.rsi
+      state: plasticflaps
+      drawdepth: Mobs
+    - type: Physics
+      bodyType: Static
+    - type: Transform
+      anchored: true
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.49,-0.49,0.49,0.49"
+          density: 100
+          mask:
+            - Impassable
+          layer:
+            - MidImpassable
+    - type: Damageable
+      damageModifierSet: Metallic
+    - type: Injurable
+      damageContainer: StructuralInorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: StaticPrice
+      price: 100
 
 - type: entity
   id: PlasticFlapsClear
@@ -50,9 +48,9 @@
   suffix: Clear
   description: Heavy duty, plastic flaps. Definitely can't get past those. No way.
   components:
-  - type: Construction
-    graph: PlasticFlapsGraph
-    node: plasticFlaps
+    - type: Construction
+      graph: PlasticFlapsGraph
+      node: plasticFlaps
 
 - type: entity
   id: PlasticFlapsOpaque
@@ -61,22 +59,21 @@
   suffix: Opaque
   description: Heavy duty, plastic flaps. Definitely can't get past those. No way.
   components:
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.49,-0.49,0.49,0.49"
-        density: 100
-        mask:
-        - Impassable
-        layer:
-        - Opaque
-        - MidImpassable
-  - type: Occluder
-  - type: Construction
-    graph: PlasticFlapsGraph
-    node: opaqueFlaps
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.49,-0.49,0.49,0.49"
+          density: 100
+          mask:
+            - Impassable
+          layer:
+            - Opaque
+            - MidImpassable
+    - type: Occluder
+    - type: Construction
+      graph: PlasticFlapsGraph
+      node: opaqueFlaps
 
 - type: entity
   id: PlasticFlapsAirtightClear
@@ -85,9 +82,9 @@
   suffix: Airtight, Clear
   description: Heavy duty, slightly stronger, airtight plastic flaps. Definitely can't get past those. No way.
   components:
-  - type: Airtight
-  - type: StaticPrice
-    price: 100
+    - type: Airtight
+    - type: StaticPrice
+      price: 100
 
 - type: entity
   id: PlasticFlapsAirtightOpaque
@@ -96,6 +93,6 @@
   suffix: Airtight, Opaque
   description: Heavy duty, slightly stronger, airtight plastic flaps. Definitely can't get past those. No way.
   components:
-  - type: Airtight
-  - type: StaticPrice
-    price: 100
+    - type: Airtight
+    - type: StaticPrice
+      price: 100

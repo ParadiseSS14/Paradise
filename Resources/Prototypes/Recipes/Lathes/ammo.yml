@@ -4,7 +4,7 @@
   abstract: true
   id: BaseAmmoRecipe
   categories:
-  - Ammo
+    - Ammo
   completetime: 5
 
 - type: latheRecipe
@@ -12,14 +12,14 @@
   parent: BaseAmmoRecipe
   id: BaseAmmoBoxRecipe
   categories:
-  - Ammo
-  - Boxes
+    - Ammo
+    - Boxes
 
 - type: latheRecipe
   abstract: true
   id: BaseEmptyAmmoRecipe
   categories:
-  - Magazines
+    - Magazines
   completetime: 1
 
 ## Recipes
@@ -473,7 +473,7 @@
   id: MagazineGrenadeEmpty
   result: MagazineGrenadeEmpty
   categories:
-  - Magazines
+    - Magazines
   completetime: 3
   materials:
     Steel: 150
@@ -483,7 +483,7 @@
   id: GrenadeEMP
   result: GrenadeEMP
   categories:
-  - Ammo
+    - Ammo
   completetime: 3
   materials:
     Steel: 150
@@ -494,7 +494,7 @@
   id: GrenadeBlast
   result: GrenadeBlast
   categories:
-  - Ammo
+    - Ammo
   completetime: 3
   materials:
     Steel: 450
@@ -505,7 +505,7 @@
   id: GrenadeFlash
   result: GrenadeFlash
   categories:
-  - Ammo
+    - Ammo
   completetime: 3
   materials:
     Steel: 150

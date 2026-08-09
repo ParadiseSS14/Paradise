@@ -9,8 +9,8 @@
 - type: entity
   id: StandardNukieOutpost
   parent:
-  - BaseStation
-  - BaseStationSyndicate
-  categories: [ HideSpawnMenu ]
+    - BaseStation
+    - BaseStationSyndicate
+  categories: [HideSpawnMenu]
   components:
     - type: Transform

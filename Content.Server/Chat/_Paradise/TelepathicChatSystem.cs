@@ -291,7 +291,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         if (TryComp<TelepathicChatComponent>(receiver, out var _)) // Check if the receiver is a telepath
         {
-            messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message", ("sender", sender), ("message", message));
+            messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-telepath", ("sender", sender), ("message", message));
             sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-telepath", ("receiver", receiver));
             offerMessageWrap = Loc.GetString("chat-manager-telepathic-chat-telepath", ("sender", sender));
         }

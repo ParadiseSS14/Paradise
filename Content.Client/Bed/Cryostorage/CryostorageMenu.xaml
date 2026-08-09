@@ -15,10 +15,14 @@
             VerticalExpand="True"
             HorizontalExpand="True"
             Margin="15"
-            StyleClasses="PanelDark">
+            StyleClasses="SurfacePrimary">
             <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
                 <Control>
-                    <Label Text="{Loc 'cryostorage-ui-label-no-bodies'}" Name="EmptyLabel" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Text="{Loc 'cryostorage-ui-label-no-bodies'}"
+                           Name="EmptyLabel"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"
+                           Margin="10"/>
                     <BoxContainer Name="EntriesContainer"
                                   Orientation="Vertical"
                                   Margin="10"

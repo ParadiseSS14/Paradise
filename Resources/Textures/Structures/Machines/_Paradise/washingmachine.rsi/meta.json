@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "license": "CC0-1.0",
+    "copyright": "",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "closed"
+        },
+        {
+            "name": "open"
+        },
+        {
+            "name": "filled"
+        },
+        {
+            "name": "panelopen"
+        },
+        {
+            "name": "running",
+            "delays": [
+                [0.2, 0.2, 0.2, 0.2, 0.2]
+            ]
+        }
+    ]
+}

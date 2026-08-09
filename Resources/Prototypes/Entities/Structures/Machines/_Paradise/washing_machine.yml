@@ -1,0 +1,41 @@
+﻿- type: entity
+  id: WashingMachine
+  parent: [ BaseMachinePowered, ConstructibleMachine, BaseConstructibleMachineDestructible ]
+  name: washing machine
+  desc: Gets rid of those pesky bloodstains, or your money back!
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/_Paradise/washingmachine.rsi
+    layers:
+    - state: base
+    - state: filled
+      map: ["filled"]
+      visible: false
+    - state: running
+      map: ["running"]
+      visible: false
+    - state: closed
+      map: ["door"]
+    - state: panelopen
+      map: ["panel"]
+      visible: false
+  - type: GenericVisualizer
+    visuals:
+      enum.WashingMachineVisual.State:
+        door:
+          Open: { state: open}
+          Closed: { state: closed}
+      enum.WashingMachineVisual.Filled:
+        filled:
+          True: { state: filled, visible: true}
+          False: { visible: false }
+      enum.WashingMachineVisual.Running:
+        running:
+          True: { state: running, visible: true}
+          False: { visible: false }
+      enum.WashingMachineVisual.Panel:
+        panel:
+          True: { state: panelopen, visible: true}
+          False: { visible: false }
+  - type: WashingMachine
+  - type: Appearance

@@ -8,10 +8,10 @@
     },
     "states": [
         {
-            "name": "telepathy_mindscan"
+            "name": "scan_mind"
         },
         {
-            "name": "telepathy_project"
+            "name": "project_mind"
         }
     ]
 }

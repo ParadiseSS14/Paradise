@@ -7,11 +7,14 @@
     Orientation="Vertical"
     HorizontalExpand="True"
     Margin="0 0 0 5">
-    <PanelContainer StyleClasses="PanelDark">
+    <PanelContainer StyleClasses="SurfacePrimary">
         <Collapsible Name="Collapsible">
-            <CollapsibleHeading Name="Heading" MinHeight="35"/>
-            <CollapsibleBody Name="Body">
-                <BoxContainer Name="ItemsContainer" Orientation="Vertical" HorizontalExpand="True"/>
+            <CollapsibleHeading Name="Heading" MinHeight="35" StyleClasses="PanelDark"/>
+            <CollapsibleBody Name="Body" StyleClasses="SurfacePrimary">
+                <BoxContainer Name="ItemsContainer"
+                 Orientation="Vertical"
+                 HorizontalExpand="True"
+                 StyleClasses="SurfacePrimary"/>
             </CollapsibleBody>
         </Collapsible>
     </PanelContainer>

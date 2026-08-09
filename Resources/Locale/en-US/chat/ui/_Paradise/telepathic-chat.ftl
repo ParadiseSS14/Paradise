@@ -1,5 +1,5 @@
 chat-manager-receive-telepathic-chat-wrap-message = You hear {$sender}'s voice: "{$message}"
-chat-manager-receive-telepathic-chat-wrap-message-admin = {$sender}: Telepathically said "{$message}" to {$receiver}
+chat-manager-receive-telepathic-chat-wrap-message-admin = {$sender}: Telepathically said "{$message}"
 
 chat-manager-send-telepathic-chat-wrap-message = You project your mind into {$receiver}:
 chat-manager-send-telepathic-chat-wrap-message-offer = You offer your mind to {$receiver};

@@ -60,7 +60,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         telepath.Comp.TargetsList = ChooseTargets(telepath.Owner, telepath.Comp.Range);
         if (telepath.Comp.TargetsList.Count == 0)
         {
-            _popup.PopupEntity(Loc.GetString("telepathic-chat-no-targets"), telepath.Owner);
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-no-targets"), telepath.Owner, telepath.Owner);
             return;
         }
 
@@ -114,7 +114,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         {
             telepath.Comp.Reset();
             Dirty(telepath);
-            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), telepath.Owner);
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), telepath.Owner, telepath.Owner);
             return;
         }
 
@@ -148,7 +148,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         {
             telepathComp.Reset();
             Dirty(telepath, telepathComp);
-            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), target);
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), target, target);
             return;
         }
 

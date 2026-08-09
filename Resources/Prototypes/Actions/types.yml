@@ -639,7 +639,7 @@
     - type: Sprite
       sprite: Interface/Actions/_Paradise/telepathy.rsi
       layers:
-        - state: telepathy_project
+        - state: project_mind
     - type: InstantAction
       event: !type:SendTelepathyEvent
         obscuredMessage: "You hear a voice that seems to echo around the room:"
@@ -654,6 +654,6 @@
     - type: Sprite
       sprite: Interface/Actions/_Paradise/telepathy.rsi
       layers:
-        - state: telepathy_mindscan
+        - state: scan_mind
       event: !type:OfferTelepathyEvent
         obscuredMessage: "You hear a voice that seems to echo around the room:"

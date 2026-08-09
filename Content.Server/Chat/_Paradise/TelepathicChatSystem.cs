@@ -39,8 +39,8 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<TelepathicChatComponent, ProjectMindEvent>(OnSendEvent);
-        SubscribeLocalEvent<TelepathicChatComponent, ScanMindEvent>(OnReceiveEvent);
+        SubscribeLocalEvent<TelepathicChatComponent, SendTelepathyEvent>(OnSendEvent);
+        SubscribeLocalEvent<TelepathicChatComponent, OfferTelepathyEvent>(OnOfferEvent);
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTargetSelectedMsg>(OnTargetChosen);
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTextEnteredMsg>(OnTextEntered);
     }
@@ -68,19 +68,21 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (action == telepath.Comp.ReceiveActionEntity)
         {
             uiKey = TelepathicChatUiKey.Receive;
-            telepath.Comp.IsScan = true;
+            telepath.Comp.IsOffer = true;
         }
 
         Dirty(telepath);
         _ui.OpenUi((telepath, userInterfaceComp), uiKey, performer);
     }
-    private void OnSendEvent(Entity<TelepathicChatComponent> telepath, ref ProjectMindEvent args)
+    private void OnSendEvent(Entity<TelepathicChatComponent> telepath, ref SendTelepathyEvent args)
     {
+        telepath.Comp.ObscuredMessage = args.ObscuredMessage;
         OnEvent(telepath, args.Performer, args.Action);
     }
 
-    private void OnReceiveEvent(Entity<TelepathicChatComponent> telepath, ref ScanMindEvent args)
+    private void OnOfferEvent(Entity<TelepathicChatComponent> telepath, ref OfferTelepathyEvent args)
     {
+        telepath.Comp.ObscuredMessage = args.ObscuredMessage;
         OnEvent(telepath, args.Performer, args.Action);
     }
 
@@ -96,9 +98,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         telepath.Comp.Receiver = args.Target;
         Dirty(telepath);
 
-        if (telepath.Comp.IsScan)
+        if (telepath.Comp.IsOffer)
         {
-            SendTelepathicChat(telepath, string.Empty, false, telepath.Comp.IsScan);
+            SendTelepathicChat(telepath, string.Empty, false, telepath.Comp.IsOffer);
             return;
         }
 
@@ -121,11 +123,11 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     private void OnTextEntered(Entity<TelepathicChatComponent> telepath, ref TelepathicTextEnteredMsg args)
     {
         var message = args.Message;
-        SendTelepathicChat(telepath, message, false, telepath.Comp.IsScan);
+        SendTelepathicChat(telepath, message, false, telepath.Comp.IsOffer);
     }
 
     /// <summary>
-    /// This method handles the response of ScanMind targets
+    /// This method handles the response of Offer targets
     /// </summary>
     public void OpenComposeFor(EntityUid target, NetEntity telepathNet, EntityUid telepath)
     {
@@ -214,6 +216,16 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             .Select(p => p.Channel);
     }
 
+    private INetChannel? GetSenderClients(EntityUid sender)
+    {
+        if (_playerManager.TryGetSessionByEntity(sender, out var session))
+        {
+            return session.Channel;
+        }
+
+        return null;
+    }
+
     private INetChannel? GetReceiverClients(EntityUid receiver)
     {
         if (_playerManager.TryGetSessionByEntity(receiver, out var session))
@@ -245,7 +257,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// Commit: 10d41858d88d3ba9d36fdd9c98595d89701f1cbb
     /// Content.Server/Chat/TelepathicChatSystem.cs
     /// </remarks>
-    public void SendTelepathicChat(Entity<TelepathicChatComponent> telepath, string message, bool hideChat, bool replyWrap = false)
+    public void SendTelepathicChat(Entity<TelepathicChatComponent> telepath, string message, bool hideChat, bool offerWrap = false)
     {
 
         if (GetEntity(telepath.Comp.Sender) is not { } sender || GetEntity(telepath.Comp.Receiver) is not { } receiver)
@@ -262,25 +274,29 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         }
 
         var rxClient = GetReceiverClients(receiver);
+        var txClient = GetSenderClients(sender);
         var admins = GetAdminClients();
-        string replyMessage;
-        string messageWrap;
-        string adminMessageWrap;
 
-        replyMessage = $"{Loc.GetString("chat-manager-telepathic-chat-scan")}";
-        messageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message",
-            ("sender", sender), ("message", message));
-        adminMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-admin",
-            ("sender", sender), ("message", message));
+        var messageWrap = $"{telepath.Comp.ObscuredMessage}";
+        var sendMessageWrap = $"{Loc.GetString("chat-manager-send-telepathic-chat-wrap-message")}";
+        var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-offer")}";
+        var adminMessageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-admin", ("sender", sender), ("message", message));
 
-        if (replyWrap)
+        if (TryComp<TelepathicChatComponent>(receiver, out var _)) // Check if the receiver is a telepath
+        {
+            offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-telepath")}";
+            messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message", ("sender", sender), ("message", message));
+        }
+
+        if (offerWrap)
         {
             var token = Guid.NewGuid();
             telepath.Comp.ReplyToken = token;
-            messageWrap = $"{replyMessage} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-reply")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
+            sendMessageWrap = $"{Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-offer")}";
+            messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
         }
 
-        if (rxClient is null)
+        if (rxClient is null || txClient is null)
         {
             _popup.PopupEntity(Loc.GetString("telepathic-chat-target-unreachable"), sender, sender);
         }
@@ -288,6 +304,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         {
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message} {messageWrap}");
             _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);
+            _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, sendMessageWrap, sender, hideChat, txClient, Color.DarkMagenta);
             _chatManager.ChatMessageToMany(ChatChannel.Hivemind, message, adminMessageWrap, sender, hideChat, true, admins, Color.DarkMagenta);
         }
 

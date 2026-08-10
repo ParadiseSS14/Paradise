@@ -4,7 +4,7 @@
                       Title="{Loc telepathic-chat-ui-compose-window-title}"
                       HideIcon="True"
                       Resizable="False"
-                      MinWidth="150"
+                      MinWidth="200"
                       MinHeight="80">
     <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="8" MinWidth="150">
         <LineEdit Name="TextLine" />

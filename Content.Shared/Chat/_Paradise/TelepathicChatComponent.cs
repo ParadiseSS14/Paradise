@@ -7,7 +7,7 @@ namespace Content.Shared.Chat._Paradise;
 /// <summary>
 ///   Telepathic chat component
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(raiseAfterAutoHandleState: true)]
 public sealed partial class TelepathicChatComponent : Component
 {
     /// <summary>
@@ -26,19 +26,20 @@ public sealed partial class TelepathicChatComponent : Component
     public bool IsOffer;
 
     /// <summary>
+    /// Unique Guid and timestamp for Offer replies
+    /// </summary>
+    public List<(Guid token, TimeSpan timestamp)> ReplyToken;
+
+    /// <summary>
     /// Message to use when the sender is obscured
     /// </summary>
     public string ObscuredMessage;
 
     /// <summary>
-    /// A token to handle command expiry
+    /// List of available targets for BUI state
     /// </summary>
-    public Guid? ReplyToken;
-
-    /// <summary>
-    /// Timestamp for the reply token
-    /// </summary>
-    public TimeSpan? ReplyTokenExpiry;
+    [AutoNetworkedField]
+    public List<(NetEntity Uid, string Name)> TargetsList = new();
 
     /// <summary>
     /// The action prototype that allows you send messages
@@ -53,30 +54,31 @@ public sealed partial class TelepathicChatComponent : Component
     public EntProtoId? ReceiveAction;
 
     /// <summary>
-    /// Entities to hold the action prototypes
+    /// Entity to hold the send action prototype
     /// </summary>
     [DataField]
     public EntityUid? SendActionEntity;
 
+    /// <summary>
+    /// Entity to hold the receive action prototype
+    /// </summary>
     [DataField]
     public EntityUid? ReceiveActionEntity;
 
+    /// <summary>
+    /// Send range float
+    /// </summary>
     [DataField]
-    public float Range;
+    public float Range = 14f;
 
     /// <summary>
-    /// List of available targets for BUI state
+    /// Resets component state
     /// </summary>
-    [DataField, AutoNetworkedField]
-    public List<(NetEntity Uid, string Name)> TargetsList = new();
-
     public void Reset()
     {
         Sender = null;
         Receiver = null;
         IsOffer = false;
-        ReplyToken = null;
-        ReplyTokenExpiry = null;
     }
 }
 

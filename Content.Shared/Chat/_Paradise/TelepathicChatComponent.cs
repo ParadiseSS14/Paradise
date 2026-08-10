@@ -36,6 +36,11 @@ public sealed partial class TelepathicChatComponent : Component
     public Guid? ReplyToken;
 
     /// <summary>
+    /// Timestamp for the reply token
+    /// </summary>
+    public TimeSpan? ReplyTokenExpiry;
+
+    /// <summary>
     /// The action prototype that allows you send messages
     /// </summary>
     [DataField]
@@ -70,6 +75,8 @@ public sealed partial class TelepathicChatComponent : Component
         Sender = null;
         Receiver = null;
         IsOffer = false;
+        ReplyToken = null;
+        ReplyTokenExpiry = null;
     }
 }
 

@@ -5,7 +5,7 @@
   abstract: true
   components:
     - type: WallMount
-      arc: 360
+      arc: 180
     - type: Rotatable
     - type: Destructible
       thresholds:

@@ -240,28 +240,26 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// <summary>
     ///  Handles telepathic token expiry and prevents replay
     /// </summary>
-    public bool TryToken(EntityUid telepath, Guid token)
+    public bool TryToken(EntityUid telepath, EntityUid target, Guid token)
     {
         if (!TryComp<TelepathicChatComponent>(telepath, out var comp))
         {
             return false;
         }
 
-        var sentToken = comp.ReplyToken.FirstOrDefault(t => t.token == token);
-
-        if (sentToken.token == Guid.Empty) // In case the token is default somehow
+        if (!comp.ReplyToken.TryGetValue(target, out var sentToken))
         {
             return false;
         }
 
         if (_timing.CurTime >= sentToken.timestamp)
         {
-            comp.ReplyToken.Remove(sentToken);
+            comp.ReplyToken.Remove(target);
             Dirty(telepath, comp);
             return false;
         }
 
-        comp.ReplyToken.Remove(sentToken);
+        comp.ReplyToken.Remove(target);
         Dirty(telepath, comp);
         return true;
     }
@@ -299,15 +297,20 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         var txClient = GetSenderClients(sender);
         var admins = GetAdminClients();
 
+        // default wraps
         var messageWrap = $"{telepath.Comp.ObscuredMessage} \"{message}\"";
         var sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message", ("receiver", receiver));
         var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-offer")}";
         var adminMessageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-admin", ("sender", sender), ("message", message));
 
-        if (TryComp<TelepathicChatComponent>(receiver, out var _)) // Check if the receiver is a telepath
+        if (TryComp<TelepathicChatComponent>(sender, out var _)) // wraps for a telepath sender
+        {
+            sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-telepath", ("receiver", receiver));
+        }
+
+        if (TryComp<TelepathicChatComponent>(receiver, out var _)) // wraps for a telepath receiver
         {
             messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-telepath", ("sender", sender), ("message", message));
-            sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-telepath", ("receiver", receiver));
             offerMessageWrap = Loc.GetString("chat-manager-telepathic-chat-telepath", ("sender", sender));
         }
 
@@ -319,18 +322,19 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         if (offerWrap)
         {
-            telepath.Comp.ReplyToken.Add((Guid.NewGuid(), _timing.CurTime + TimeSpan.FromSeconds(10f))); //Token with 10 second token expiry
+            var token = Guid.NewGuid();
+            telepath.Comp.ReplyToken.Add(receiver, (token, _timing.CurTime + TimeSpan.FromSeconds(10f))); //Token with 10 second token expiry
             sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-offer", ("receiver", receiver));
             messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
         }
         else //Not logging the linksend
         {
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message}");
-            _chatManager.ChatMessageToMany(ChatChannel.Admin, message, adminMessageWrap, sender, hideChat, true, admins);
+            _chatManager.ChatMessageToMany(ChatChannel.Admin, message, adminMessageWrap, sender, hideChat, true, admins); // message to active admins
         }
 
-        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta);
-        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, sendMessageWrap, sender, hideChat, txClient, Color.DarkMagenta);
+        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta); // message to receiver
+        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, sendMessageWrap, sender, hideChat, txClient, Color.DarkMagenta); // message to sender
 
 
         telepath.Comp.Reset();

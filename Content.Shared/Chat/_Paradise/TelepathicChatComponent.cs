@@ -26,9 +26,9 @@ public sealed partial class TelepathicChatComponent : Component
     public bool IsOffer;
 
     /// <summary>
-    /// Unique Guid and timestamp for Offer replies
+    /// Token of Offer Target and timeout timestamp
     /// </summary>
-    public List<(EntityUid receiver, Guid token)> ReplyToken = new();
+    public List<(EntityUid entity, TimeSpan timeout)> ReplyTokens = new();
 
     /// <summary>
     /// Message to use when the sender is obscured

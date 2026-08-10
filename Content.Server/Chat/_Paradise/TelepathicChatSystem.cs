@@ -48,6 +48,42 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTextEnteredMsg>(OnTextEntered);
     }
 
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var curTime = _timing.CurTime;
+        var query = EntityQueryEnumerator<TelepathicChatComponent>();
+        var expiryMessage = $"{Loc.GetString("chat-manager-telepathic-chat-expiry")}";
+
+        while (query.MoveNext(out var uid, out var telepathComp))
+        {
+
+            if (telepathComp.ReplyTokens.Count == 0)
+            {
+                continue;
+            }
+
+            for (var i = telepathComp.ReplyTokens.Count - 1; i >= 0; i--)
+            {
+                var (entity, timeout) = telepathComp.ReplyTokens[i];
+                if (curTime < timeout)
+                {
+                    continue;
+                }
+
+                telepathComp.ReplyTokens.RemoveAt(i);
+
+                if (GetClient(entity) is { } session)
+                {
+                    _chatManager.ChatMessageToOne(ChatChannel.Hivemind, expiryMessage, expiryMessage, entity, false, session);
+                }
+            }
+
+            Dirty(uid, telepathComp);
+        }
+    }
+
     private void OnEvent(Entity<TelepathicChatComponent> telepath, EntityUid performer, Entity<ActionComponent> action)
     {
         if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
@@ -151,32 +187,32 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// <summary>
     /// This method handles the response of Offer targets
     /// </summary>
-    public void OpenComposeFor(EntityUid target, NetEntity telepathNet, EntityUid telepath)
+    public void OpenComposeFor(EntityUid receiver, NetEntity senderNet, EntityUid sender)
     {
-        if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
+        if (!TryComp<TelepathicChatComponent>(sender, out var senderComp))
         {
             return;
         }
 
-        if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
+        if (!TryComp<UserInterfaceComponent>(sender, out var userInterfaceComp))
         {
             return;
         }
 
         // In case the telepath leaves PVS range before the link is clicked
-        if (!CheckRange(telepath, target))
+        if (!CheckRange(sender, receiver))
         {
-            telepathComp.Reset();
-            Dirty(telepath, telepathComp);
-            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), target, target);
+            senderComp.Reset();
+            Dirty(sender, senderComp);
+            _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), receiver, receiver);
             return;
         }
 
-        telepathComp.Sender = GetNetEntity(target);
-        telepathComp.Receiver = telepathNet;
-        Dirty(telepath, telepathComp);
+        senderComp.Sender = GetNetEntity(receiver);
+        senderComp.Receiver = senderNet;
+        Dirty(sender, senderComp);
 
-        _ui.OpenUi((telepath, userInterfaceComp), TelepathicChatUiKey.Compose, target);
+        _ui.OpenUi((sender, userInterfaceComp), TelepathicChatUiKey.Compose, receiver);
     }
 
     private List<(NetEntity Uid, string Name)> ChooseTargets(EntityUid telepath, float range)
@@ -237,19 +273,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             .Select(p => p.Channel);
     }
 
-    private INetChannel? GetSenderClients(EntityUid sender)
+    private INetChannel? GetClient(EntityUid player)
     {
-        if (_playerManager.TryGetSessionByEntity(sender, out var session))
-        {
-            return session.Channel;
-        }
-
-        return null;
-    }
-
-    private INetChannel? GetReceiverClients(EntityUid receiver)
-    {
-        if (_playerManager.TryGetSessionByEntity(receiver, out var session))
+        if (_playerManager.TryGetSessionByEntity(player, out var session))
         {
             return session.Channel;
         }
@@ -258,21 +284,22 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     }
 
     /// <summary>
-    ///  Handles telepathic token expiry and prevents replay
+    ///  Tries the token used by TelepathicChatReplyCommand
     /// </summary>
-    public bool TryToken(EntityUid telepath, EntityUid target, Guid token)
+    public bool CheckOfferValid(EntityUid telepath, EntityUid target)
     {
-        if (!TryComp<TelepathicChatComponent>(telepath, out var comp))
+        if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
         {
             return false;
         }
 
-        if (!comp.ReplyToken.Remove((target, token)))
+        if (!telepathComp.ReplyTokens.Exists(t => t.entity == target))
         {
             return false;
         }
 
-        Dirty(telepath, comp);
+        telepathComp.ReplyTokens.RemoveAll(t => t.entity == target);
+        Dirty(telepath, telepathComp);
         return true;
     }
 
@@ -311,13 +338,12 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         }
 
         var admins = GetAdminClients();
-        var rxClient = GetReceiverClients(receiver);
-        var txClient = GetSenderClients(sender);
+        var rxClient = GetClient(receiver);
+        var txClient = GetClient(sender);
 
         // default wraps
         var messageWrap = $"{telepathComp.ObscuredMessage} \"{message}\"";
         var sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message", ("receiver", receiver));
-        var expiryMessage = $"{Loc.GetString("chat-manager-telepathic-chat-expiry")}";
         var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-offer")}";
         var adminMessageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-admin", ("sender", sender), ("message", message));
 
@@ -340,17 +366,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         if (offerWrap)
         {
-            var token = Guid.NewGuid();
-            telepathComp.ReplyToken.Add((receiver, token)); //Token with 10 second token expiry
-
-            Timer.Spawn(TimeSpan.FromSeconds(10), () =>
-            {
-                telepathComp.ReplyToken.Remove((receiver, token));
-                _chatManager.ChatMessageToOne(ChatChannel.Hivemind, expiryMessage, expiryMessage, receiver, hideChat, rxClient, Color.DarkMagenta);
-            });
-
+            telepathComp.ReplyTokens.Add((receiver, _timing.CurTime + TimeSpan.FromSeconds(10))); // Receiver and expiry of 10 seconds
             sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message-offer", ("receiver", receiver));
-            messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
+            messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)}\" /] ";
         }
         else //Not logging the linksend
         {
@@ -358,8 +376,8 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             _chatManager.ChatMessageToMany(ChatChannel.Admin, message, adminMessageWrap, sender, hideChat, true, admins); // message to active admins
         }
 
-        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta); // message to receiver
-        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, sendMessage, sendMessage, sender, hideChat, txClient, Color.DarkMagenta); // message to sender
+        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient); // message to receiver
+        _chatManager.ChatMessageToOne(ChatChannel.Hivemind, sendMessage, sendMessage, sender, hideChat, txClient); // message to sender
 
         telepathComp.Reset();
         Dirty(telepath);

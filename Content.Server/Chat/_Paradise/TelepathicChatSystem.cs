@@ -79,18 +79,33 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     }
     private void OnSendEvent(Entity<TelepathicChatComponent> telepath, ref SendTelepathyEvent args)
     {
+        if (telepath.Comp.LifeStage == ComponentLifeStage.Deleted)
+        {
+            return;
+        }
+
         telepath.Comp.ObscuredMessage = args.ObscuredMessage;
         OnEvent(telepath, args.Performer, args.Action);
     }
 
     private void OnOfferEvent(Entity<TelepathicChatComponent> telepath, ref OfferTelepathyEvent args)
     {
+        if (telepath.Comp.LifeStage == ComponentLifeStage.Deleted)
+        {
+            return;
+        }
+
         telepath.Comp.ObscuredMessage = args.ObscuredMessage;
         OnEvent(telepath, args.Performer, args.Action);
     }
 
     private void OnTargetChosen(Entity<TelepathicChatComponent> telepath, ref TelepathicTargetSelectedMsg args)
     {
+        if (telepath.Comp.LifeStage == ComponentLifeStage.Deleted)
+        {
+            return;
+        }
+
         if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
         {
             return;
@@ -124,6 +139,11 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
     private void OnTextEntered(Entity<TelepathicChatComponent> telepath, ref TelepathicTextEnteredMsg args)
     {
+        if (telepath.Comp.LifeStage == ComponentLifeStage.Deleted)
+        {
+            return;
+        }
+
         var message = args.Message;
         SendTelepathicChat(telepath, message, false, telepath.Comp.IsOffer);
     }
@@ -266,12 +286,17 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// </remarks>
     public void SendTelepathicChat(Entity<TelepathicChatComponent> telepath, string message, bool hideChat, bool offerWrap = false)
     {
-        if (GetEntity(telepath.Comp.Sender) is not { } sender || GetEntity(telepath.Comp.Receiver) is not { } receiver)
+        if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
         {
             return;
         }
 
-        if (TryComp<MimePowersComponent>(sender, out var comp) && comp.VowBroken == false) // Mime Check
+        if (GetEntity(telepathComp.Sender) is not { } sender || GetEntity(telepathComp.Receiver) is not { } receiver)
+        {
+            return;
+        }
+
+        if (TryComp<MimePowersComponent>(sender, out var mime) && mime.VowBroken == false) // Mime Check
         {
             _popup.PopupEntity(Loc.GetString("mime-cant-speak"), sender, sender);
             return;
@@ -280,7 +305,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (!CheckRange(sender, receiver))
         {
             _popup.PopupEntity(Loc.GetString("telepathic-chat-target-left-range"), sender, sender);
-            telepath.Comp.Reset();
+            telepathComp.Reset();
             Dirty(telepath);
             return;
         }
@@ -290,7 +315,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         var txClient = GetSenderClients(sender);
 
         // default wraps
-        var messageWrap = $"{telepath.Comp.ObscuredMessage} \"{message}\"";
+        var messageWrap = $"{telepathComp.ObscuredMessage} \"{message}\"";
         var sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message", ("receiver", receiver));
         var expiryMessage = $"{Loc.GetString("chat-manager-telepathic-chat-expiry")}";
         var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-offer")}";
@@ -316,11 +341,11 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (offerWrap)
         {
             var token = Guid.NewGuid();
-            telepath.Comp.ReplyToken.Add((receiver, token)); //Token with 10 second token expiry
+            telepathComp.ReplyToken.Add((receiver, token)); //Token with 10 second token expiry
 
             Timer.Spawn(TimeSpan.FromSeconds(10), () =>
             {
-                telepath.Comp.ReplyToken.Remove((receiver, token));
+                telepathComp.ReplyToken.Remove((receiver, token));
                 _chatManager.ChatMessageToOne(ChatChannel.Hivemind, expiryMessage, expiryMessage, receiver, hideChat, rxClient, Color.DarkMagenta);
             });
 
@@ -336,7 +361,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         _chatManager.ChatMessageToOne(ChatChannel.Hivemind, message, messageWrap, sender, hideChat, rxClient, Color.DarkMagenta); // message to receiver
         _chatManager.ChatMessageToOne(ChatChannel.Hivemind, sendMessage, sendMessage, sender, hideChat, txClient, Color.DarkMagenta); // message to sender
 
-        telepath.Comp.Reset();
+        telepathComp.Reset();
         Dirty(telepath);
     }
 }

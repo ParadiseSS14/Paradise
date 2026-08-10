@@ -17,34 +17,30 @@ internal sealed partial class TelepathicChatReplyCommand : LocalizedEntityComman
 
     public override void Execute(IConsoleShell shell, string argStr, string[] args)
     {
-        if (!NetEntity.TryParse(args[0], out var telepathNet))
-        {
-            return;
-        }
-        if (!Guid.TryParse(args[1], out var token))
+        if (!NetEntity.TryParse(args[0], out var senderNet))
         {
             return;
         }
 
-        var telepath = _entMan.GetEntity(telepathNet);
+        var sender = _entMan.GetEntity(senderNet);
 
-        if (!_entMan.HasComponent<TelepathicChatComponent>(telepath))
+        if (!_entMan.HasComponent<TelepathicChatComponent>(sender))
         {
             return;
         }
 
-        if (args.Length != 2 || shell.Player?.AttachedEntity is not { } target)
+        if (args.Length != 1 || shell.Player?.AttachedEntity is not { } receiver)
         {
             return;
         }
 
         // Using a simple token to prevent command spam
-        if (!_telepathic.TryToken(telepath, target, token))
+        if (!_telepathic.CheckOfferValid(sender, receiver))
         {
-            shell.WriteLine($"{target}: {Loc.GetString("telepathic-chat-token-invalid")}");
+            shell.WriteLine($"{receiver}: {Loc.GetString("telepathic-chat-token-invalid")}");
             return;
         }
 
-        _telepathic.OpenComposeFor(target, telepathNet, telepath);
+        _telepathic.OpenComposeFor(receiver, senderNet, sender);
     }
 }

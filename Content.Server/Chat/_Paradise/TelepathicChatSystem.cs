@@ -15,6 +15,7 @@ using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
+using Robust.Shared.Timing;
 using System.Linq;
 
 namespace Content.Server.Chat._Paradise;
@@ -24,11 +25,12 @@ namespace Content.Server.Chat._Paradise;
 /// </summary>
 public sealed partial class TelepathicChatSystem : EntitySystem
 {
+    [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private IAdminLogManager _adminLogger = default!;
     [Dependency] private IAdminManager _adminManager = default!;
     [Dependency] private IChatManager _chatManager = default!;
     [Dependency] private IConfigurationManager _configManager = default!;
-    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private IGameTiming _timing = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private MobStateSystem _mobStateSystem = default!;
     [Dependency] private SharedInteractionSystem _interaction = default!;
@@ -238,14 +240,23 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     }
 
     /// <summary>
-    ///  Handle a taken to prevent command replay
+    ///  Handles telepathic token expiry and prevents replay
     /// </summary>
     public bool TryToken(EntityUid telepath, Guid token)
     {
         if (!TryComp<TelepathicChatComponent>(telepath, out var comp) || comp.ReplyToken != token)
             return false;
 
+        if (comp.ReplyTokenExpiry is not { } timestamp || _timing.CurTime >= timestamp)
+        {
+            comp.ReplyToken = null;
+            comp.ReplyTokenExpiry = null;
+            Dirty(telepath, comp);
+            return false;
+        }
+
         comp.ReplyToken = null;
+        comp.ReplyTokenExpiry = null;
         Dirty(telepath, comp);
         return true;
     }
@@ -306,6 +317,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         {
             var token = Guid.NewGuid();
             telepath.Comp.ReplyToken = token;
+            telepath.Comp.ReplyTokenExpiry = _timing.CurTime + TimeSpan.FromSeconds(10); //10 second token expiry
             sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-offer", ("receiver", receiver));
             messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
         }

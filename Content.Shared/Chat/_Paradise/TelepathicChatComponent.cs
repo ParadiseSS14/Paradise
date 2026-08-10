@@ -28,7 +28,7 @@ public sealed partial class TelepathicChatComponent : Component
     /// <summary>
     /// Unique Guid and timestamp for Offer replies
     /// </summary>
-    public Dictionary<EntityUid, (Guid token, TimeSpan timestamp)> ReplyToken = new();
+    public List<(EntityUid receiver, Guid token)> ReplyToken = new();
 
     /// <summary>
     /// Message to use when the sender is obscured

@@ -5,6 +5,7 @@ chat-manager-send-telepathic-chat-wrap-message = You fill the space with your th
 chat-manager-send-telepathic-chat-wrap-message-telepath = You project your mind into {$receiver}.
 chat-manager-send-telepathic-chat-wrap-message-offer = You offer your mind to {$receiver}.
 
+chat-manager-telepathic-chat-expiry = You feel the sensation fade.
 chat-manager-telepathic-chat-link = (Click to send a message)
 chat-manager-telepathic-chat-offer = You feel your mind expand briefly...
 chat-manager-telepathic-chat-telepath = You feel {$sender} request a response from you...

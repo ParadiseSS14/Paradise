@@ -44,13 +44,13 @@ public sealed partial class TelepathicChatComponent : Component
     /// The action prototype that allows you send messages
     /// </summary>
     [DataField]
-    public EntProtoId SendAction = "ActionProjectMind";
+    public EntProtoId? SendAction;
 
     /// <summary>
     /// The action prototype that allows you to receive messages
     /// </summary>
     [DataField]
-    public EntProtoId ReceiveAction = "ActionScanMind";
+    public EntProtoId? ReceiveAction;
 
     /// <summary>
     /// Entities to hold the action prototypes

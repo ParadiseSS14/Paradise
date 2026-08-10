@@ -91,7 +91,6 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
     private void OnTargetChosen(Entity<TelepathicChatComponent> telepath, ref TelepathicTargetSelectedMsg args)
     {
-
         if (!TryComp<UserInterfaceComponent>(telepath, out var userInterfaceComp))
         {
             return;
@@ -134,7 +133,6 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// </summary>
     public void OpenComposeFor(EntityUid target, NetEntity telepathNet, EntityUid telepath)
     {
-
         if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
         {
             return;
@@ -244,19 +242,26 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// </summary>
     public bool TryToken(EntityUid telepath, Guid token)
     {
-        if (!TryComp<TelepathicChatComponent>(telepath, out var comp) || comp.ReplyToken != token)
-            return false;
-
-        if (comp.ReplyTokenExpiry is not { } timestamp || _timing.CurTime >= timestamp)
+        if (!TryComp<TelepathicChatComponent>(telepath, out var comp))
         {
-            comp.ReplyToken = null;
-            comp.ReplyTokenExpiry = null;
+            return false;
+        }
+
+        var sentToken = comp.ReplyToken.FirstOrDefault(t => t.token == token);
+
+        if (sentToken.token == Guid.Empty) // In case the token is default somehow
+        {
+            return false;
+        }
+
+        if (_timing.CurTime >= sentToken.timestamp)
+        {
+            comp.ReplyToken.Remove(sentToken);
             Dirty(telepath, comp);
             return false;
         }
 
-        comp.ReplyToken = null;
-        comp.ReplyTokenExpiry = null;
+        comp.ReplyToken.Remove(sentToken);
         Dirty(telepath, comp);
         return true;
     }
@@ -271,7 +276,6 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// </remarks>
     public void SendTelepathicChat(Entity<TelepathicChatComponent> telepath, string message, bool hideChat, bool offerWrap = false)
     {
-
         if (GetEntity(telepath.Comp.Sender) is not { } sender || GetEntity(telepath.Comp.Receiver) is not { } receiver)
         {
             return;
@@ -315,9 +319,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         if (offerWrap)
         {
-            var token = Guid.NewGuid();
-            telepath.Comp.ReplyToken = token;
-            telepath.Comp.ReplyTokenExpiry = _timing.CurTime + TimeSpan.FromSeconds(10); //10 second token expiry
+            telepath.Comp.ReplyToken.Add((Guid.NewGuid(), _timing.CurTime + TimeSpan.FromSeconds(10f))); //Token with 10 second token expiry
             sendMessageWrap = Loc.GetString("chat-manager-send-telepathic-chat-wrap-message-offer", ("receiver", receiver));
             messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)} {token}\" /] ";
         }

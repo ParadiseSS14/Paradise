@@ -38,8 +38,6 @@ ipintel_enabled = false
 ipintel_contact_email = ""
 # IPIntel score to reject connections.
 ipintel_bad_rating = 0.95
-defaultpreset = "Greenshift"
-role_timers = false
 
 [ic]
 # Allows visibility and editing of flavor text (character descriptions)

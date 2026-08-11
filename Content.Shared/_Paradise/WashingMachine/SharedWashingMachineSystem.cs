@@ -105,7 +105,6 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
             };
             args.Verbs.Add(emptycontentsverb);
         }
-
     }
 
     // Start our wash cycle, handled in server-side WashingMachineSystem

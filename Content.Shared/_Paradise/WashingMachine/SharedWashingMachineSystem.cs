@@ -106,7 +106,6 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
             };
             args.Verbs.Add(emptycontentsverb);
         }
-
     }
 
 

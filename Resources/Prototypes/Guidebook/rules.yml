@@ -1,13 +1,6 @@
 ﻿# Only one of those rulesets will appear on the server at any given time.
 # They all have a priority of 10 so they appear 2nd by default (after priority 0 and before priority 20)
 
-- type: guideEntry # Default for forks and stuff. Should not be listed anywhere if the server is using a custom ruleset.
-  id: DefaultRuleset
-  name: guide-entry-rules
-  ruleEntry: true
-  priority: 10
-  text: "/ServerInfo/Guidebook/ServerRules/DefaultRules.xml"
-
 - type: guideEntry
   id: CoreRuleset
   name: guide-entry-rules
@@ -37,13 +30,6 @@
   ruleEntry: true
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/ParadiseBans.xml"
-
-- type: guideEntry
-  id: IndividualRules
-  name: guide-entry-rules-individual
-  ruleEntry: true
-  priority: 10
-  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule0.xml"
 
 - type: guideEntry
   id: Rule0

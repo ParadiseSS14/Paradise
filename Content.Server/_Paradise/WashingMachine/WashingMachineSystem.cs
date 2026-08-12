@@ -15,7 +15,7 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
     {
         entity.Comp.PlayingStream = _audioSystem.PlayPvs(entity.Comp.RunningSound, entity.Owner, AudioParams.Default.WithLoop(true).WithMaxDistance(2f))?.Entity;
         entity.Comp.WashEndTime = _timing.CurTime + entity.Comp.WashDuration;
-        _appearanceSystem.SetData(entity.Owner, WashingMachineVisualLayers.Running, true);
+        SetState(entity, WashingMachineVisualState.Running);
     }
 
     public override void Update(float frameTime)
@@ -25,7 +25,7 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
         var query = EntityQueryEnumerator<WashingMachineComponent>();
         while (query.MoveNext(out var uid, out var comp))
         {
-            if (!comp.IsRunning)
+            if (comp.State != WashingMachineVisualState.Running)
                 continue;
 
             if (_timing.CurTime <= comp.WashEndTime)
@@ -33,8 +33,7 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
 
             // Ideally there'd be some code in here to wash the items inside, but we don't HAVE blood staining mechanics!! (yet)
             // Set our running state to false, update our appearance, and play a little ding.
-            comp.IsRunning = false;
-            _appearanceSystem.SetData(uid, WashingMachineVisualLayers.Running, false);
+            SetState((uid, comp), WashingMachineVisualState.Closed);
             _audioSystem.Stop(comp.PlayingStream);
             comp.PlayingStream = null;
             _audioSystem.PlayPvs(comp.FinishSound, uid, AudioParams.Default.WithVolume(-5f).WithMaxDistance(2f));

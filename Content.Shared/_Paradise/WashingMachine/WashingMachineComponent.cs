@@ -15,10 +15,6 @@ public sealed partial class WashingMachineComponent : Component
     [DataField]
     public WashingMachineVisualState State = WashingMachineVisualState.Closed;
 
-    // Are we currently running
-    [DataField]
-    public bool IsRunning = false;
-
     // Sound for opening our door
     [DataField]
     public SoundSpecifier DoorSound = new SoundPathSpecifier("/Audio/Machines/machine_switch.ogg");

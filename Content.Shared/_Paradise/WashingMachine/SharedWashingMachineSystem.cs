@@ -38,7 +38,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     private void OnInteractHand(Entity<WashingMachineComponent> entity, ref InteractHandEvent args)
     {
         // If we're running, don't do anything.
-        if (entity.Comp.IsRunning)
+        if (entity.Comp.State == WashingMachineVisualState.Running)
             return;
 
         // If our state is closed, set it to open and vice versa.
@@ -55,7 +55,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     private void OnInteractUsing(Entity<WashingMachineComponent> entity, ref InteractUsingEvent args)
     {
         // If we're running or our doors closed, return.
-        if (entity.Comp.IsRunning || entity.Comp.State == WashingMachineVisualState.Closed)
+        if (entity.Comp.State == WashingMachineVisualState.Running || entity.Comp.State == WashingMachineVisualState.Closed)
             return;
 
         // If we're already full, return and popup message
@@ -80,7 +80,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     private void AddVerbs(Entity<WashingMachineComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
     {
         // If we're not running, not open, nor empty, show startwashverb.
-        if (!entity.Comp.IsRunning && entity.Comp.State == WashingMachineVisualState.Closed && entity.Comp.Storage.Count >= 0)
+        if (entity.Comp.State != WashingMachineVisualState.Running && entity.Comp.State == WashingMachineVisualState.Closed && entity.Comp.Storage.Count >= 0)
         {
             AlternativeVerb startwashverb = new()
             {
@@ -97,7 +97,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
         {
             AlternativeVerb emptycontentsverb = new()
             {
-                Text = Loc.GetString("washing-cyle-emptycontents"),
+                Text = Loc.GetString("washing-empty-container"),
                 Act = () =>
                 {
                     _container.EmptyContainer(entity.Comp.Storage);

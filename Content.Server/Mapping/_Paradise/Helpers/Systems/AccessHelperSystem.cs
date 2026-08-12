@@ -1,22 +1,20 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Content.Server._Paradise.GameObjects.GatherTargets;
-using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Doors.Components;
 using Content.Shared.Tag;
-using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server._Paradise.AccessHelper
 {
     public sealed partial class AccessHelperSystem : EntitySystem
     {
-        [Dependency] private SharedContainerSystem _containerSystem = default!;
         [Dependency] private AccessReaderSystem _accessReaderSystem = default!;
         [Dependency] private TagSystem _tagSystem = default!;
 
         private static readonly ProtoId<TagPrototype> TagWindoor = "Windoor";
         private static readonly ProtoId<TagPrototype> TagWindoorHelper = "WindoorHelper";
+        private readonly List<(EntityUid helper, Entity<AirlockComponent> door) > _pending = new();
 
         public override void Initialize()
         {
@@ -43,9 +41,9 @@ namespace Content.Server._Paradise.AccessHelper
             }
 
             // Does our door have an AccessComponent inside it?
-            if (!GetAccessComponent(door.Value.Owner, out var accessReader))
+            if (!_accessReaderSystem.GetMainAccessReader(door.Value.Owner, out var accessReader))
             {
-                Log.Warning($"Access Helper (Uid {entity.Owner}) was placed on top of {door.Value.Owner} at {Transform(entity.Owner).Coordinates} which has no AccessReader inside it.");
+                Log.Warning($"Access Helper (Uid {entity.Owner}) was placed on top of an airlock (Uid {door.Value.Owner}) at {Transform(entity.Owner).Coordinates} which has no AccessReader inside it.");
                 QueueDel(entity.Owner);
                 return;
             }
@@ -58,9 +56,44 @@ namespace Content.Server._Paradise.AccessHelper
                 return;
             }
 
+            if (accessReader.Value.Owner == door.Value.Owner)
+            {
+                _pending.Add((entity.Owner, door.Value));
+                return;
+            }
+
+            Log.Warning($"Access Helper (Uid {entity.Owner}) attempted to add access {entity.Comp.Access} to access reader {accessReader} of entity {entity.Owner}");
             _accessReaderSystem.TryAddAccess(accessReader.Value, entity.Comp.Access.Value);
             QueueDel(entity.Owner);
         }
+
+        public override void Update(float frameTime)
+        {
+            for (var i = _pending.Count - 1; i >= 0; i--)
+            {
+                var (helperUid, door) = _pending[i];
+
+                if (!TryComp<AccessHelperComponent>(helperUid, out var helperComponent) || helperComponent.Access is null)
+                {
+                    _pending.RemoveAt(i);
+                    continue;
+                }
+
+                if (!_accessReaderSystem.GetMainAccessReader(door.Owner, out var accessReader))
+                {
+                    _pending.RemoveAt(i);
+                    continue;
+                }
+
+                if (accessReader.Value.Owner == door.Owner)
+                    continue;
+
+                _accessReaderSystem.TryAddAccess(accessReader.Value, helperComponent.Access.Value);
+                QueueDel(helperUid);
+                _pending.RemoveAt(i);
+            }
+        }
+
 
         // Do we have a door on our grid?
         private bool FindDoor(IEnumerable<EntityUid> tileEntities, Angle helperAngle, bool isWindoorHelper, [NotNullWhen(true)] out Entity<AirlockComponent>? door)
@@ -73,7 +106,6 @@ namespace Content.Server._Paradise.AccessHelper
                 // Checks if the door has airlockcomponent, returns false if not found
                 if (!TryComp<AirlockComponent>(entityUid, out var airlockComp))
                 {
-                    Log.Warning("Failed to find component!");
                     continue;
                 }
 
@@ -108,25 +140,5 @@ namespace Content.Server._Paradise.AccessHelper
             return true;
         }
 
-        // Get the access component from inside the door
-        private bool GetAccessComponent(EntityUid doorUid, [NotNullWhen(true)] out Entity<AccessReaderComponent>? accessReader)
-        {
-            accessReader = null;
-            // Checks if the door has a container, returns true if found
-            if (!_containerSystem.TryGetContainer(doorUid, "board", out var container))
-                return false;
-            /* Searches every entityUid in the door's container. When it finds an entity with the AccessReaderComponent, it stops
-               and combines the entityUid and component in a tuple.*/
-            foreach (var entityUid in container.ContainedEntities)
-            {
-                if (TryComp<AccessReaderComponent>(entityUid, out var reader))
-                {
-                    accessReader = (entityUid, reader);
-                    return true;
-                }
-            }
-
-            return false;
-        }
     }
 }

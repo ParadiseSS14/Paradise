@@ -86,6 +86,7 @@ public sealed partial class TelepathyState
     public NetEntity? Sender;
     public NetEntity? Receiver;
     public bool IsOffer;
+    public TimeSpan Timeout;
     [DataField]
     public List<(NetEntity Uid, string Name)> TargetsList = new();
 }

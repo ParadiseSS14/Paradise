@@ -1,6 +1,5 @@
 using Content.Shared.Eye.Blinding.Systems;
 using Content.Shared.Flash._Paradise.Components;
-using Content.Shared.Inventory;
 
 namespace Content.Shared.Flash._Paradise;
 
@@ -11,7 +10,6 @@ namespace Content.Shared.Flash._Paradise;
 public sealed partial class BlindedByFlashingSystem : EntitySystem
 {
     [Dependency] private BlindableSystem _blindable = default!;
-    [Dependency] private InventorySystem _inventory = default!;
 
     public override void Initialize()
     {

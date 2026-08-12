@@ -1,0 +1,27 @@
+﻿{
+    "version": 1,
+    "size":
+    {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Ported from Paradise SS13, NCT flag by LetXxx at commit e832a114812b457fdf3ce20b02917d7711aeaa72",
+    "states":
+    [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "icon-rolled"
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        }
+    ]
+}

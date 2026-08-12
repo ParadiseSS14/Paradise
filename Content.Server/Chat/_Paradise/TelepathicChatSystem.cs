@@ -98,7 +98,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
                 dirty = true;
             }
 
-            // Clearing stale Sessions
+            // Clearing stale Sessions after 30 seconds
             foreach (var (sessionID, state) in telepathComp.Sessions.ToArray())
             {
                 if (curTime < state.Timeout)
@@ -387,7 +387,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     }
 
     /// <summary>
-    /// Send Telepathic chats to Telepathic channel, logs, active admins
+    /// Send Telepathic chats to the Hivemind channel, logs, active admins
     /// </summary>
     /// <remarks>
     /// Much of this has been sourced/referenced from Simple-Station/Einstein-Engine

@@ -69,7 +69,6 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
             return;
 
         var actor = EntMan.GetNetEntity(_player.LocalSession?.AttachedEntity); // Pull the actor from the client session
-
         var uiSession = telepathComp.UiKeySession.Find(x => x.UiKey == key && x.Actor == actor);
 
         if (uiSession == default)

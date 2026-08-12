@@ -69,7 +69,7 @@
 
 - type: guideEntry
   id: Rule6
-  name: guide-entry-rules6
+  name: guide-entry-rules-6
   ruleEntry: true
   text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule6.xml"
 

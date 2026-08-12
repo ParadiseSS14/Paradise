@@ -24,9 +24,6 @@ public sealed class TelepathicTextEnteredMsg : BoundUserInterfaceMessage
 }
 
 [Serializable, NetSerializable]
-public sealed class TelepathicCloseButtonMsg : BoundUserInterfaceMessage;
-
-[Serializable, NetSerializable]
 public enum TelepathicChatUiKey : byte
 {
     Send,

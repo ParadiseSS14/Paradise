@@ -48,10 +48,17 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         SubscribeLocalEvent<TelepathicChatComponent, TelepathicTextEnteredMsg>(OnTextEntered);
     }
 
+    private float _delayUpdate = 0f;
+    private const float DelayInterval = 0.5f; // Only run Update twice a second
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
 
+        _delayUpdate += frameTime;
+        if (_delayUpdate < DelayInterval)
+            return;
+
+        _delayUpdate = 0f;
         var curTime = _timing.CurTime;
         var query = EntityQueryEnumerator<TelepathicChatComponent>();
         var expiryMessage = $"{Loc.GetString("chat-manager-telepathic-chat-expiry")}";
@@ -59,7 +66,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         while (query.MoveNext(out var uid, out var telepathComp))
         {
             var dirty = false;
-
+            // Clearing out ReplyTokens after 10 seconds
             if (telepathComp.ReplyTokens.Count > 0)
             {
                 for (var i = telepathComp.ReplyTokens.Count - 1; i >= 0; i--)
@@ -75,14 +82,10 @@ public sealed partial class TelepathicChatSystem : EntitySystem
                 }
             }
 
-            foreach (var session in telepathComp.Sessions.ToArray())
+            // Clearing stale uiKeySessions with no UIs open
+            foreach (var uiSession in telepathComp.UiKeySession.ToArray())
             {
-                var uiSession = telepathComp.UiKeySession.Find(x => x.SessionID == session.Key);
-
-                if (uiSession is null)
-                    continue;
-
-                if (uiSession.UiKey is not TelepathicChatUiKey)
+                if (uiSession.UiKey is not { } key)
                     continue;
 
                 if (GetEntity(uiSession.Actor) is not { } actor)
@@ -92,6 +95,17 @@ public sealed partial class TelepathicChatSystem : EntitySystem
                     continue;
 
                 telepathComp.UiKeySession.Remove(uiSession);
+                dirty = true;
+            }
+
+            // Clearing stale Sessions
+            foreach (var (sessionID, state) in telepathComp.Sessions.ToArray())
+            {
+                if (curTime < state.Timeout)
+                    continue;
+
+                telepathComp.Sessions.Remove(sessionID);
+                telepathComp.UiKeySession.RemoveAll(x => x.SessionID == sessionID);
                 dirty = true;
             }
 
@@ -107,7 +121,13 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         var sessionID = Guid.NewGuid();
         var validTargets = ChooseTargets(telepath.Owner, telepath.Comp.Range);
-        telepath.Comp.Sessions[sessionID] = new TelepathyState { Sender = null, Receiver = null, IsOffer = false };
+        telepath.Comp.Sessions[sessionID] = new TelepathyState
+        {
+            Sender = null,
+            Receiver = null,
+            IsOffer = false,
+            Timeout = _timing.CurTime + TimeSpan.FromSeconds(30)
+        };
 
         if (validTargets.Count == 0)
         {
@@ -182,11 +202,14 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (!TryGetUiSession(telepath.Comp, key, GetNetEntity(args.Actor), out var session))
             return;
 
-        var actor = GetNetEntity(args.Actor);
         var sessionID = session.SessionID;
 
-        telepath.Comp.Sessions[sessionID].Sender = GetNetEntity(telepath.Owner);
-        telepath.Comp.Sessions[sessionID].Receiver = target;
+        if (!telepath.Comp.Sessions.TryGetValue(sessionID, out var compSession))
+            return;
+
+        compSession.Sender = GetNetEntity(telepath.Owner);
+        compSession.Receiver = target;
+        compSession.Timeout = _timing.CurTime + TimeSpan.FromSeconds(30);
         Dirty(telepath);
 
         if (telepath.Comp.Sessions[sessionID].IsOffer)
@@ -254,7 +277,13 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         // Oh boy, a new session of my very own!
         var sessionID = Guid.NewGuid();
-        senderComp.Sessions[sessionID] = new TelepathyState { Sender = null, Receiver = null, IsOffer = false };
+        senderComp.Sessions[sessionID] = new TelepathyState
+        {
+            Sender = null,
+            Receiver = null,
+            IsOffer = false,
+            Timeout = _timing.CurTime + TimeSpan.FromSeconds(30)
+        };
         senderComp.Sessions[sessionID].Sender = GetNetEntity(receiver);
         senderComp.Sessions[sessionID].Receiver = senderNet;
         Dirty(sender, senderComp);
@@ -370,9 +399,12 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
             return;
 
-        var senderNull = telepathComp.Sessions[sessionID].Sender;
-        var receiverNull = telepathComp.Sessions[sessionID].Receiver;
-        var offerWrap = telepathComp.Sessions[sessionID].IsOffer;
+        if (!telepath.Comp.Sessions.TryGetValue(sessionID, out var compSession))
+            return;
+
+        var senderNull = compSession.Sender;
+        var receiverNull = compSession.Receiver;
+        var offerWrap = compSession.IsOffer;
 
         if (GetEntity(senderNull) is not { } sender || GetEntity(receiverNull) is not { } receiver)
         {

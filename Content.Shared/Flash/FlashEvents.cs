@@ -18,7 +18,11 @@ public record struct FlashAttemptEvent(EntityUid Target, EntityUid? User, Entity
 /// The Melee parameter is used to check for rev conversion.
 /// </summary>
 [ByRefEvent]
-public record struct AfterFlashedEvent(EntityUid Target, EntityUid? User, EntityUid? Used, bool Melee);
+public record struct AfterFlashedEvent(EntityUid Target, EntityUid? User, EntityUid? Used, bool Melee)
+{
+    // Has this flash event been handled? Prevents extra flash damage.
+    public bool Handled;
+}
 
 /// <summary>
 /// Raised once on the flash entity when it was used, regardless of the flashed status being applied or not.

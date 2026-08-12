@@ -242,7 +242,7 @@ public abstract partial class SharedFlashSystem : EntitySystem
         var ev = new AfterFlashedEvent(target, user, used, melee);
         RaiseLocalEvent(target, ref ev);
 
-        if (user != null)
+        if (user != null && user != target)
             RaiseLocalEvent(user.Value, ref ev);
         if (used != null)
             RaiseLocalEvent(used.Value, ref ev);

@@ -14,12 +14,18 @@ public sealed partial class BlindedByFlashingSystem : EntitySystem
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<BlindedByFlashingComponent, AfterFlashedEvent>(OnFlashAttempt);
+        SubscribeLocalEvent<BlindedByFlashingComponent, AfterFlashedEvent>(OnAfterFlashed);
     }
 
-    private void OnFlashAttempt(Entity<BlindedByFlashingComponent> ent, ref AfterFlashedEvent args)
+    private void OnAfterFlashed(Entity<BlindedByFlashingComponent> ent, ref AfterFlashedEvent args)
     {
+        if (args.Handled)
+            return;
+
         if (args.Target == ent.Owner)
+        {
             _blindable.AdjustEyeDamage(ent.Owner, ent.Comp.EyeDamage);
+            args.Handled = true;
+        }
     }
 }

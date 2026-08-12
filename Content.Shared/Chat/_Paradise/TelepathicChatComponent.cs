@@ -1,66 +1,59 @@
 using Content.Shared.Actions;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared.Chat._Paradise;
 
 /// <summary>
 ///   Telepathic chat component
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(raiseAfterAutoHandleState: true)]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState(true)]
 public sealed partial class TelepathicChatComponent : Component
 {
     /// <summary>
-    /// Storage of the message sender
-    /// </summary>
-    public NetEntity? Sender;
-
-    /// <summary>
-    /// Storage of the message receiver
-    /// </summary>
-    public NetEntity? Receiver;
-
-    /// <summary>
-    /// Is this an OfferCompose?
-    /// </summary>
-    public bool IsOffer;
-
-    /// <summary>
-    /// Token of Offer Target and timeout timestamp
-    /// </summary>
-    public List<(EntityUid entity, TimeSpan timeout)> ReplyTokens = new();
-
-    /// <summary>
-    /// Message to use when the sender is obscured
+    /// String message to use when the sender is obscured
     /// </summary>
     public string ObscuredMessage;
 
     /// <summary>
-    /// List of available targets for BUI state
+    /// Token list of Offer Target and timeout timestamp
     /// </summary>
-    [AutoNetworkedField]
-    public List<(NetEntity Uid, string Name)> TargetsList = new();
+    public List<(EntityUid entity, TimeSpan timeout)> ReplyTokens = new();
+
 
     /// <summary>
-    /// The action prototype that allows you send messages
+    /// Dict for storage of data per action use, keyed on a "session" Guid
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public Dictionary<Guid, TelepathyState> Sessions = new();
+
+    /// <summary>
+    /// Tuples of telepathy session ID and UiKey, used by the BUI
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public List<TelepathyUiState> UiKeySession = new();
+
+    /// <summary>
+    /// ID of the action prototype that allows you send messages
     /// </summary>
     [DataField]
     public EntProtoId? SendAction;
 
     /// <summary>
-    /// The action prototype that allows you to receive messages
+    /// ID of action prototype that allows you to receive messages
     /// </summary>
     [DataField]
     public EntProtoId? ReceiveAction;
 
     /// <summary>
-    /// Entity to hold the send action prototype
+    /// Entity of the send action prototype
     /// </summary>
     [DataField]
     public EntityUid? SendActionEntity;
 
     /// <summary>
-    /// Entity to hold the receive action prototype
+    /// Entity of the receive action prototype
     /// </summary>
     [DataField]
     public EntityUid? ReceiveActionEntity;
@@ -70,16 +63,6 @@ public sealed partial class TelepathicChatComponent : Component
     /// </summary>
     [DataField]
     public float Range = 14f;
-
-    /// <summary>
-    /// Resets component state
-    /// </summary>
-    public void Reset()
-    {
-        Sender = null;
-        Receiver = null;
-        IsOffer = false;
-    }
 }
 
 public sealed partial class SendTelepathyEvent : InstantActionEvent
@@ -92,4 +75,31 @@ public sealed partial class OfferTelepathyEvent : InstantActionEvent
 {
     [DataField, AutoNetworkedField]
     public string ObscuredMessage;
+}
+
+/// <summary>
+/// Stores values that should be unique to each use of an Action
+/// </summary>
+[Serializable, NetSerializable, DataDefinition]
+public sealed partial class TelepathyState
+{
+    public NetEntity? Sender;
+    public NetEntity? Receiver;
+    public bool IsOffer;
+    [DataField]
+    public List<(NetEntity Uid, string Name)> TargetsList = new();
+}
+
+/// <summary>
+/// Need a way to identify unique UI instances beyond key
+/// </summary>
+[Serializable, NetSerializable, DataDefinition]
+public sealed partial class TelepathyUiState
+{
+    [DataField]
+    public TelepathicChatUiKey? UiKey;
+    [DataField]
+    public NetEntity? Actor;
+    [DataField]
+    public Guid SessionID;
 }

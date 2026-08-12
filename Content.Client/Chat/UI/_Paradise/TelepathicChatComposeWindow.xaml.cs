@@ -16,7 +16,6 @@ public sealed partial class TelepathicChatComposeWindow : FancyWindow
         IoCManager.InjectDependencies(this);
 
         TextLine.OnTextEntered += EnteredText;
-
     }
 
     private void EnteredText(LineEdit.LineEditEventArgs args)

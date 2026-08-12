@@ -20,8 +20,10 @@ public record struct FlashAttemptEvent(EntityUid Target, EntityUid? User, Entity
 [ByRefEvent]
 public record struct AfterFlashedEvent(EntityUid Target, EntityUid? User, EntityUid? Used, bool Melee)
 {
-    // Has this flash event been handled? Prevents extra flash damage.
-    public bool Handled;
+    /// <summary>
+    /// Has this flash event been handled? Prevents extra flash damage.
+    /// </summary>
+    public bool Handled; // Paradise Change
 }
 
 /// <summary>

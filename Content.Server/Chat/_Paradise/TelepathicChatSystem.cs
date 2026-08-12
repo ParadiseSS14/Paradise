@@ -212,7 +212,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         compSession.Timeout = _timing.CurTime + TimeSpan.FromSeconds(30);
         Dirty(telepath);
 
-        if (telepath.Comp.Sessions[sessionID].IsOffer)
+        if (compSession.IsOffer)
         {
             SendTelepathicChat(telepath, sessionID, string.Empty, false);
             return;

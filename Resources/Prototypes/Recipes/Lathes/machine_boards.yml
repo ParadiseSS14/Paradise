@@ -262,10 +262,12 @@
   id: SmartFridgeCircuitboard
   result: SmartFridgeCircuitboard
 
+# Paradise Content Start - Washing Machine
 - type: latheRecipe
   parent: [BaseCircuitboardRecipe]
   id: WashingMachineCircuitboard
   result: WashingMachineCircuitboard
+# Paradise Content End
 
 # Bar
 - type: latheRecipe

@@ -1383,6 +1383,7 @@
           amount: 2
           defaultPrototype: Beaker
 
+# Paradise Content Start - Washing Machine
 - type: entity
   parent: BaseMachineCircuitboard
   id: WashingMachineCircuitboard
@@ -1396,3 +1397,4 @@
       stackRequirements:
         Glass: 2
         Manipulator: 1
+# Paradise Content End

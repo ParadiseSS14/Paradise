@@ -16,6 +16,8 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     [Dependency] private SharedPopupSystem _popupSystem = default!;
     [Dependency] private SharedItemSystem _itemSystem = default!;
 
+    public const string WashingmachineContainer = "washingmachine_storage";
+
     public override void Initialize()
     {
         base.Initialize();
@@ -24,12 +26,13 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
         SubscribeLocalEvent<WashingMachineComponent, InteractHandEvent>(OnInteractHand);
         SubscribeLocalEvent<WashingMachineComponent, InteractUsingEvent>(OnInteractUsing);
         SubscribeLocalEvent<WashingMachineComponent, GetVerbsEvent<AlternativeVerb>>(AddVerbs);
+
     }
 
     private void OnCompInit(Entity<WashingMachineComponent> entity, ref ComponentInit args)
     {
         // Gives our washing machine a container.
-        entity.Comp.Storage = _container.EnsureContainer<Container>(entity.Owner, "washingmachine_storage");
+        entity.Comp.Storage = _container.EnsureContainer<Container>(entity.Owner, WashingmachineContainer);
     }
 
     private void OnInteractHand(Entity<WashingMachineComponent> entity, ref InteractHandEvent args)
@@ -39,12 +42,12 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
             return;
 
         // If our state is closed, set it to open and vice versa.
-        entity.Comp.State = entity.Comp.State == WashingMachineVisualState.Closed
+        var doorstate = entity.Comp.State == WashingMachineVisualState.Closed
             ? WashingMachineVisualState.Open
             : WashingMachineVisualState.Closed;
 
         // Update our appearance to our new state and play a sound.
-        _appearanceSystem.SetData(entity.Owner, WashingMachineVisual.State, entity.Comp.State);
+        SetState(entity, doorstate);
         _audioSystem.PlayPvs(entity.Comp.DoorSound, entity.Owner, AudioParams.Default.WithVolume(-5f).WithMaxDistance(2f));
         args.Handled = true;
     }
@@ -56,21 +59,20 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
             return;
 
         // If we're already full, return and popup message
-        if (entity.Comp.Storage.Count >= entity.Comp.MaxItems)
+        if (entity.Comp.Storage.Count >= entity.Comp.MaxItemCapacity)
         {
-            _popupSystem.PopupEntity("It's full!", entity.Owner, args.User);
+            _popupSystem.PopupEntity(Loc.GetString("washing-container-full"), entity.Owner, args.User);
             return;
         }
 
         if (!TryComp<ItemComponent>(args.Used, out var itemComp) || _itemSystem.GetItemSizeWeight(itemComp.Size) >= _itemSystem.GetItemSizeWeight(entity.Comp.MaxItemSize))
         {
-            _popupSystem.PopupEntity("It wont fit in there.", entity.Owner, args.User);
+            _popupSystem.PopupEntity(Loc.GetString("washing-item-oversized"), entity.Owner, args.User);
             return;
         }
 
         // Put the used item into our storage, then change our sprite.
         _container.Insert(args.Used, entity.Comp.Storage);
-        entity.Comp.Filled = true;
         _appearanceSystem.SetData(entity.Owner, WashingMachineVisual.Filled, true);
         args.Handled = true;
     }
@@ -78,11 +80,11 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
     private void AddVerbs(Entity<WashingMachineComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
     {
         // If we're not running, not open, nor empty, show startwashverb.
-        if (!entity.Comp.IsRunning && entity.Comp.State == WashingMachineVisualState.Closed && entity.Comp.Filled)
+        if (!entity.Comp.IsRunning && entity.Comp.State == WashingMachineVisualState.Closed && entity.Comp.Storage.Count >= 0)
         {
             AlternativeVerb startwashverb = new()
             {
-                Text = "Start",
+                Text = Loc.GetString("washing-cyle-start"),
                 Act = () =>
                 {
                     StartWash(entity);
@@ -95,11 +97,10 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
         {
             AlternativeVerb emptycontentsverb = new()
             {
-                Text = "Empty Contents",
+                Text = Loc.GetString("washing-cyle-emptycontents"),
                 Act = () =>
                 {
                     _container.EmptyContainer(entity.Comp.Storage);
-                    entity.Comp.Filled = false;
                     _appearanceSystem.SetData(entity.Owner, WashingMachineVisual.Filled, false);
                 },
             };
@@ -108,8 +109,13 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
 
     }
 
+
     // Start our wash cycle, handled in server-side WashingMachineSystem
     protected virtual void StartWash(Entity<WashingMachineComponent> entity)
+    {
+    }
+
+    protected virtual void SetState(Entity<WashingMachineComponent> entity, WashingMachineVisualState state)
     {
     }
 }

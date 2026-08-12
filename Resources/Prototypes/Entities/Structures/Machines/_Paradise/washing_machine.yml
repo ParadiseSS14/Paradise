@@ -8,30 +8,45 @@
       sprite: Structures/Machines/_Paradise/washingmachine.rsi
       layers:
         - state: base
+
         - state: filled
-          map: ["filled"]
+          map: ["enum.WashingMachineVisualLayers.Filled"]
           visible: false
         - state: running
-          map: ["running"]
+          map: ["enum.WashingMachineVisualLayers.Running"]
           visible: false
         - state: closed
-          map: ["door"]
+          map: ["enum.WashingMachineVisualLayers.Door"]
         - state: panelopen
           map: ["enum.WiresVisualLayers.MaintenancePanel"]
     - type: GenericVisualizer
       visuals:
-        enum.WashingMachineVisual.State:
-          door:
-            Open: { state: open }
-            Closed: { state: closed }
-        enum.WashingMachineVisual.Filled:
-          filled:
-            True: { state: filled, visible: true }
-            False: { visible: false }
-        enum.WashingMachineVisual.Running:
-          running:
-            True: { state: running, visible: true }
-            False: { visible: false }
+        enum.WashingMachineVisuals.State:
+          enum.WashingMachineVisualLayers.Door:
+            Open:
+              state: open
+              visible: true
+            Closed:
+              state: closed
+              visible: true
+            Running:
+              visible: false
+
+          enum.WashingMachineVisualLayers.Running:
+            Open:
+              visible: false
+            Closed:
+              visible: false
+            Running:
+              state: running
+              visible: true
+
+        enum.WashingMachineVisuals.Filled:
+          enum.WashingMachineVisualLayers.Filled:
+            True:
+              visible: true
+            False:
+              visible: false
     - type: WashingMachine
     - type: Appearance
     - type: WiresVisuals

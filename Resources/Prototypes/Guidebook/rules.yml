@@ -14,6 +14,15 @@
   ruleEntry: true
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/ParadiseRules.xml"
+  children:
+    - Rule0
+    - Rule1
+    - Rule2
+    - Rule3
+    - Rule4
+    - Rule5
+    - Rule6
+    - Rule7
 
 - type: guideEntry
   id: ExtendedRules
@@ -21,3 +30,65 @@
   ruleEntry: true
   priority: 10
   text: "/ServerInfo/Guidebook/ServerRules/ParadiseRulesExtended.xml"
+
+- type: guideEntry
+  id: ParadiseBans
+  name: guide-entry-rules-bans
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/ServerRules/ParadiseBans.xml"
+
+- type: guideEntry
+  id: IndividualRules
+  name: guide-entry-rules-individual
+  ruleEntry: true
+  priority: 10
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule0.xml"
+
+- type: guideEntry
+  id: Rule0
+  name: guide-entry-rules-0
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule0.xml"
+
+- type: guideEntry
+  id: Rule1
+  name: guide-entry-rules-1
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule1.xml"
+
+- type: guideEntry
+  id: Rule2
+  name: guide-entry-rules-2
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule2.xml"
+
+- type: guideEntry
+  id: Rule3
+  name: guide-entry-rules-3
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule3.xml"
+
+- type: guideEntry
+  id: Rule4
+  name: guide-entry-rules-4
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule4.xml"
+
+- type: guideEntry
+  id: Rule5
+  name: guide-entry-rules-5
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule5.xml"
+
+- type: guideEntry
+  id: Rule6
+  name: guide-entry-rulesc6
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule6.xml"
+
+- type: guideEntry
+  id: Rule7
+  name: guide-entry-rules-7
+  ruleEntry: true
+  text: "/ServerInfo/Guidebook/ServerRules/Rules/Rule7.xml"

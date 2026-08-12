@@ -27,15 +27,14 @@ public sealed partial class TelepathicChatMenu : FancyWindow
         var item = TargetsList[obj.ItemIndex].Metadata;
 
         if (item is NetEntity netEntity)
-        {
             OnTargetSelected?.Invoke(netEntity);
-        }
     }
 
     private void OnItemDeselected(ItemList.ItemListDeselectedEventArgs obj)
     {
         OnTargetDeselected?.Invoke();
     }
+
     public void BuildList(List<(NetEntity Uid, string Name)> targets)
     {
 

@@ -15,13 +15,16 @@ public sealed class TelepathicTargetSelectedMsg : BoundUserInterfaceMessage
 [Serializable, NetSerializable]
 public sealed class TelepathicTextEnteredMsg : BoundUserInterfaceMessage
 {
-    public readonly String Message;
+    public readonly string Message;
 
-    public TelepathicTextEnteredMsg(String message)
+    public TelepathicTextEnteredMsg(string message)
     {
         Message = message;
     }
 }
+
+[Serializable, NetSerializable]
+public sealed class TelepathicCloseButtonMsg : BoundUserInterfaceMessage;
 
 [Serializable, NetSerializable]
 public enum TelepathicChatUiKey : byte

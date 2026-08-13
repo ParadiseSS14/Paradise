@@ -14,7 +14,8 @@ namespace Content.Server._Paradise.AccessHelper
 
         private static readonly ProtoId<TagPrototype> TagWindoor = "Windoor";
         private static readonly ProtoId<TagPrototype> TagWindoorHelper = "WindoorHelper";
-        private readonly List<(EntityUid helper, Entity<AirlockComponent> door) > _pending = new();
+        private readonly List<(EntityUid helper, Entity<AirlockComponent> door, int attempts) > _pending = new();
+        private const int MaxUpdateAttempts = 100;
 
         public override void Initialize()
         {
@@ -58,7 +59,8 @@ namespace Content.Server._Paradise.AccessHelper
 
             if (accessReader.Value.Owner == door.Value.Owner)
             {
-                _pending.Add((entity.Owner, door.Value));
+
+                _pending.Add((entity.Owner, door.Value, 0));
                 return;
             }
 
@@ -67,26 +69,35 @@ namespace Content.Server._Paradise.AccessHelper
             QueueDel(entity.Owner);
         }
 
+        // Update our helpers until they find an accessreader (incase we initialize before it)
         public override void Update(float frameTime)
         {
+
             for (var i = _pending.Count - 1; i >= 0; i--)
             {
-                var (helperUid, door) = _pending[i];
-
+                var (helperUid, door, attempts) = _pending[i];
                 if (!TryComp<AccessHelperComponent>(helperUid, out var helperComponent) || helperComponent.Access is null)
                 {
                     _pending.RemoveAt(i);
                     continue;
                 }
-
                 if (!_accessReaderSystem.GetMainAccessReader(door.Owner, out var accessReader))
                 {
                     _pending.RemoveAt(i);
                     continue;
                 }
-
                 if (accessReader.Value.Owner == door.Owner)
+                {
+                    if (attempts + 1 >= MaxUpdateAttempts)
+                    {
+                        Log.Warning($"Access Reader {accessReader.Value.Owner} failed to add an access after 100 ticks. Deleting...");
+                        QueueDel(helperUid);
+                        _pending.RemoveAt(i);
+                        continue;
+                    }
+                    _pending[i] = (helperUid, door, attempts + 1);
                     continue;
+                }
 
                 _accessReaderSystem.TryAddAccess(accessReader.Value, helperComponent.Access.Value);
                 QueueDel(helperUid);

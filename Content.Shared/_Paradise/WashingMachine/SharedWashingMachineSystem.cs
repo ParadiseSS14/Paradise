@@ -26,7 +26,6 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
         SubscribeLocalEvent<WashingMachineComponent, InteractHandEvent>(OnInteractHand);
         SubscribeLocalEvent<WashingMachineComponent, InteractUsingEvent>(OnInteractUsing);
         SubscribeLocalEvent<WashingMachineComponent, GetVerbsEvent<AlternativeVerb>>(AddVerbs);
-
     }
 
     private void OnCompInit(Entity<WashingMachineComponent> entity, ref ComponentInit args)

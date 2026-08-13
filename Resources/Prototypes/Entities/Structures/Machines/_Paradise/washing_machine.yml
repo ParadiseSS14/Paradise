@@ -71,3 +71,4 @@
             - MachineMask
           layer:
             - MachineLayer
+    - type: ApcPowerReceiver

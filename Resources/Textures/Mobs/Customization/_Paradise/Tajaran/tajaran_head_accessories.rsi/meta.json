@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "ears from https://github.com/Baystation12/Baystation12/commit/6e337a9f2967f24edee456ab2695bfb0f246126a",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "ears_plain_s",
+            "directions": 4
+        }
+    ]
+}

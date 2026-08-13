@@ -829,6 +829,7 @@
       size: Tiny
     - type: Tag
       tags:
+        - Butterfly
         - Trash
     - type: Bloodstream
       bloodReferenceSolution:
@@ -2434,6 +2435,9 @@
       interactSuccessSpawn: EffectHearts
       interactSuccessSound:
         path: /Audio/Animals/parrot_raught.ogg
+    - type: Tag
+      tags:
+        - Parrot
     - type: Bloodstream
       bloodReferenceSolution:
         reagents:

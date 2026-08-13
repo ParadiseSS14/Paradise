@@ -1,6 +1,7 @@
 ﻿using Content.Shared.Interaction;
 using Content.Shared.Item;
 using Content.Shared.Popups;
+using Content.Shared.Power;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
@@ -26,6 +27,7 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
         SubscribeLocalEvent<WashingMachineComponent, InteractHandEvent>(OnInteractHand);
         SubscribeLocalEvent<WashingMachineComponent, InteractUsingEvent>(OnInteractUsing);
         SubscribeLocalEvent<WashingMachineComponent, GetVerbsEvent<AlternativeVerb>>(AddVerbs);
+        SubscribeLocalEvent<WashingMachineComponent, PowerChangedEvent>(OnPowerChange);
     }
 
     private void OnCompInit(Entity<WashingMachineComponent> entity, ref ComponentInit args)
@@ -105,6 +107,16 @@ public abstract partial class SharedWashingMachineSystem : EntitySystem
             };
             args.Verbs.Add(emptycontentsverb);
         }
+    }
+
+    // When power is lost/gained
+    private void OnPowerChange(Entity<WashingMachineComponent> entity, ref PowerChangedEvent args)
+    {
+        // If our visual is anything besides open, set us to closed sprite.
+        if(entity.Comp.State !=  WashingMachineVisualState.Open)
+            SetState(entity, WashingMachineVisualState.Closed);
+        _audioSystem.Stop(entity.Comp.PlayingStream);
+        entity.Comp.PlayingStream = null;
     }
 
 

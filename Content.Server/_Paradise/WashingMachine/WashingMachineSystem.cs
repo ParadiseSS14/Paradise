@@ -30,13 +30,7 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
         {
             if (comp.State != WashingMachineVisualState.Running)
                 continue;
-            if (TryComp<ApcPowerReceiverComponent>(uid, out var apc) && !apc.Powered)
-            {
-                SetState((uid, comp), WashingMachineVisualState.Closed);
-                _audioSystem.Stop(comp.PlayingStream);
-                comp.PlayingStream = null;
-                continue;
-            }
+
             if (_timing.CurTime <= comp.WashEndTime)
                 continue;
             // Ideally there'd be some code in here to wash the items inside, but we don't HAVE blood staining mechanics!! (yet)
@@ -48,11 +42,14 @@ public sealed partial class WashingMachineSystem : SharedWashingMachineSystem
         }
     }
 
+    // Method to set our sprite state easier
     protected override void SetState(Entity<WashingMachineComponent> entity, WashingMachineVisualState state)
     {
+        // If we're already the state we want to be, return.
         if (entity.Comp.State == state)
             return;
 
+        // Set our visual state to new state
         entity.Comp.State = state;
         _appearanceSystem.SetData(
             entity.Owner,

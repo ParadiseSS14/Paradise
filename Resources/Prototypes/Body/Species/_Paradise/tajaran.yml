@@ -1,0 +1,289 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Tajaran
+  limits: # TODO: Confirm/Build Markers
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      onlyGroupWhitelisted: true
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [TajaranEar]
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: true
+      default: [TajaranSnout]
+    enum.HumanoidVisualLayers.SnoutCover:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [TajaranTailTajaran]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentTop:
+      limit: 1
+      required: false
+      nudityDefault: [UndergarmentTopTanktopTajaran]
+    enum.HumanoidVisualLayers.UndergarmentBottom:
+      limit: 1
+      required: false
+      nudityDefault: [UndergarmentBottomBoxersTajaran]
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceTajaran
+  categories: [HideSpawnMenu]
+  name: tajaran appearance
+  components:
+    - type: InitialBody
+      organs:
+        Torso: OrganTajaranTorso
+        Head: OrganTajaranHead
+        ArmLeft: OrganTajaranArmLeft
+        ArmRight: OrganTajaranArmRight
+        HandRight: OrganTajaranHandRight
+        HandLeft: OrganTajaranHandLeft
+        LegLeft: OrganTajaranLegLeft
+        LegRight: OrganTajaranLegRight
+        FootLeft: OrganTajaranFootLeft
+        FootRight: OrganTajaranFootRight
+        Brain: OrganTajaranBrain
+        Eyes: OrganTajaranEyes
+        Tongue: OrganTajaranTongue
+        Appendix: OrganTajaranAppendix
+        Ears: OrganTajaranEars
+        Lungs: OrganTajaranLungs
+        Heart: OrganTajaranHeart
+        Stomach: OrganTajaranStomach
+        Liver: OrganTajaranLiver
+        Kidneys: OrganTajaranKidneys
+    - type: HumanoidProfile
+      species: Tajaran
+
+- type: entity
+  parent:
+    - AppearanceTajaran
+    - BaseSpeciesMobOrganic
+    - MobNightVision
+  id: MobTajaran
+  name: Urist McMeow
+  components:
+    - type: DamageVisuals
+      damageOverlayGroups:
+        Brute:
+          sprite: Mobs/Effects/brute_damage.rsi
+          color: "#ccac1f"
+        Burn:
+          sprite: Mobs/Effects/burn_damage.rsi
+    - type: MessyDrinker
+      spillChance: 0.33
+    - type: Speech
+      speechSounds: Tajaran #TODO what are these
+      speechVerb: Tajaran
+      allowedEmotes: ["Bark", "Snarl", "Whine", "Howl", "Growl"] # TODO check emotes
+    - type: Vocal
+      emoteSounds: MaleTajaran # TODO What are these
+    - type: Damageable
+      damageModifierSet: Tajaran #TODO What is this
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Weapons/pierce.ogg
+      animation: WeaponArcClaw
+      damage:
+        types:
+          Piercing: 2
+          Slash: 3
+    - type: NightVision
+      prioritized: false
+      lightingColor: "#FFFFFF05" # Darkened from the base color
+    - type: TemperatureDamage
+      heatDamageThreshold: 320
+      coldDamageThreshold: 240
+      coldDamage:
+        types:
+          Cold: 0.05 # Per second, scales with temperature & other constants
+      heatDamage:
+        types:
+          Heat: 2.5 # Per second, scales with temperature & other constants
+    - type: Wagging
+      action: ActionToggleWaggingTajaran # TODO Make Action
+    - type: Bloodstream # TODO Make blood type
+      bloodReferenceSolution:
+        reagents:
+          - ReagentId: Blood # Tajarans have regular blood
+            Quantity: 600
+    - type: CreamPied
+      sprite:
+        sprite: Effects/creampie.rsi
+        state: creampie_tajaran # TODO uh...
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganTajaran
+  abstract: true
+  suffix: tajaran
+
+- type: entity
+  id: OrganTajaranMetabolizer
+  abstract: true
+  components:
+    - type: Metabolizer
+      metabolizerTypes: [Animal]
+
+- type: entity
+  parent: OrganTajaran
+  id: OrganTajaranInternal
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/_Paradise/Tajaran/organs.rsi
+
+- type: entity
+  id: OrganTajaranVisual
+  abstract: true
+  components:
+    - type: VisualOrgan
+      data:
+        sprite: Mobs/Species/_Paradise/Tajaran/parts.rsi
+    - type: VisualOrganMarkings
+      markingData:
+        group: Tajaran
+
+- type: entity
+  parent: [OrganTajaran, OrganTajaranVisual]
+  id: OrganTajaranExternal
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/_Paradise/Tajaran/parts.rsi
+
+- type: entity
+  parent: [OrganBaseTorsoSexed, OrganBaseTorso, OrganTajaranExternal]
+  id: OrganTajaranTorso
+
+- type: entity
+  parent: [OrganBaseHead, OrganTajaranExternal]
+  id: OrganTajaranHead
+  components:
+    - type: VisualOrganMarkings
+      hideableLayers:
+        - enum.HumanoidVisualLayers.Snout
+        - enum.HumanoidVisualLayers.HeadTop
+        - enum.HumanoidVisualLayers.HeadSide
+        - enum.HumanoidVisualLayers.Hair
+        - enum.HumanoidVisualLayers.FacialHair
+      dependentHidingLayers:
+        enum.HumanoidVisualLayers.Snout:
+          - enum.HumanoidVisualLayers.SnoutCover
+
+- type: entity
+  parent: [OrganBaseArmLeft, OrganTajaranExternal]
+  id: OrganTajaranArmLeft
+
+- type: entity
+  parent: [OrganBaseArmRight, OrganTajaranExternal]
+  id: OrganTajaranArmRight
+
+- type: entity
+  parent: [OrganBaseHandLeft, OrganTajaranExternal]
+  id: OrganTajaranHandLeft
+
+- type: entity
+  parent: [OrganBaseHandRight, OrganTajaranExternal]
+  id: OrganTajaranHandRight
+
+- type: entity
+  parent: [OrganBaseLegLeft, OrganTajaranExternal]
+  id: OrganTajaranLegLeft
+
+- type: entity
+  parent: [OrganBaseLegRight, OrganTajaranExternal]
+  id: OrganTajaranLegRight
+
+- type: entity
+  parent: [OrganBaseFootLeft, OrganTajaranExternal]
+  id: OrganTajaranFootLeft
+
+- type: entity
+  parent: [OrganBaseFootRight, OrganTajaranExternal]
+  id: OrganTajaranFootRight
+
+- type: entity
+  parent: [OrganBaseBrain, OrganSpriteHumanInternal, OrganTajaranInternal]
+  id: OrganTajaranBrain
+
+- type: entity
+  parent: [OrganTajaranVisual, OrganBaseEyes, OrganTajaranInternal]
+  id: OrganTajaranEyes
+
+- type: entity
+  parent: [OrganBaseTongue, OrganTajaranInternal]
+  id: OrganTajaranTongue
+
+- type: entity
+  parent: [OrganBaseAppendix, OrganTajaranInternal]
+  id: OrganTajaranAppendix
+
+- type: entity
+  parent: [OrganBaseEars, OrganTajaranInternal]
+  id: OrganTajaranEars
+
+- type: entity
+  parent: [OrganBaseLungs, OrganTajaranInternal, OrganTajaranMetabolizer]
+  id: OrganTajaranLungs
+
+- type: entity
+  parent: [OrganBaseHeart, OrganTajaranInternal, OrganTajaranMetabolizer]
+  id: OrganTajaranHeart
+
+- type: entity
+  parent: [OrganBaseStomach, OrganTajaranInternal, OrganTajaranMetabolizer]
+  id: OrganTajaranStomach
+  components:
+    - type: Stomach
+      specialDigestible:
+        tags:
+          - Mouse
+          - Butterfly
+          - Parrot
+          - Bee
+          - Hamster
+
+- type: entity
+  parent: [OrganBaseLiver, OrganTajaranInternal, OrganTajaranMetabolizer]
+  id: OrganTajaranLiver
+
+- type: entity
+  parent: [OrganBaseKidneys, OrganTajaranInternal, OrganTajaranMetabolizer]
+  id: OrganTajaranKidneys

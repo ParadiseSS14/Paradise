@@ -1,0 +1,58 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Organs by Quantum-M and mmi_dead by DGamer on ParadiseStation",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "brain2"
+        },
+        {
+            "name": "heart-off"
+        },
+        {
+            "name": "heart-on",
+            "delays": [
+                [
+                    0.6,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "kidneys"
+        },
+        {
+            "name": "liver"
+        },
+        {
+            "name": "lungs"
+        },
+        {
+            "name": "eyes"
+        },
+        {
+            "name": "mmi_full",
+            "delays": [
+                [
+                    3,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "mmi_sdd"
+        },
+        {
+            "name": "mmi_dead"
+        }
+    ]
+}

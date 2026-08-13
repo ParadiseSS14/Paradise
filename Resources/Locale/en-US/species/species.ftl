@@ -12,6 +12,10 @@ species-name-vox = Vox
 species-name-gingerbread = delicious baked good
 species-name-vulpkanin = Vulpkanin
 
+# Paradise Content
+species-name-tajaran = Tajaran
+
+
 ## Misc species things
 
 snail-hurt-by-salt-popup = The salty solution burns like acid!

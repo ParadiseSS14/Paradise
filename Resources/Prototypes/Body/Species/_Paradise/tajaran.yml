@@ -141,7 +141,7 @@
     - type: Bloodstream
       bloodReferenceSolution:
         reagents:
-          - ReagentId: Blood # Tajarans have regular blood
+          - ReagentId: Blood # Tajara have regular blood
             Quantity: 600
 
 - type: entity

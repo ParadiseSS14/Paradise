@@ -112,6 +112,8 @@ public sealed partial class WashingMachineSystem : EntitySystem
 
     private void ContentUpdate(EntityUid uid, WashingMachineComponent component, ContainerModifiedMessage args)
     {
+        if (component.Storage != args.Container)
+            return;
         _appearanceSystem.SetData(uid, WashingMachineVisual.Filled, component.Storage.Count > 0);
     }
 

@@ -290,7 +290,7 @@
         path: /Audio/Ambience/Objects/light_hum.ogg
 
 - type: entity
-  id: PoweredLedFloorLight
+  id: PoweredFloorLightLed
   name: floor light
   suffix: LED
   parent: PoweredFloorLight
@@ -310,7 +310,7 @@
       popupText: powered-light-component-burn-hand
 
 - type: entity
-  id: PoweredWarmFloorLight
+  id: PoweredFloorLightWarm
   name: floor light
   suffix: Warm
   parent: PoweredFloorLight
@@ -325,7 +325,7 @@
       hasLampOnSpawn: WarmLightBulb
 
 - type: entity
-  id: PoweredDimFloorLight
+  id: PoweredFloorLightDim
   name: floor light
   suffix: Dim
   parent: PoweredFloorLight

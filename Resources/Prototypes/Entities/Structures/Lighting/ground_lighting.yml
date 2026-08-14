@@ -288,11 +288,6 @@
       range: 3
       sound:
         path: /Audio/Ambience/Objects/light_hum.ogg
-    - type: DamageOnInteract
-      damage:
-        types:
-          Heat: 2
-      popupText: powered-light-component-burn-hand
 
 - type: entity
   id: PoweredLedFloorLight
@@ -328,11 +323,6 @@
       color: "#FF8A0C"
     - type: PoweredLight
       hasLampOnSpawn: WarmLightBulb
-    - type: DamageOnInteract
-      damage:
-        types:
-          Heat: 2
-      popupText: powered-light-component-burn-hand
 
 - type: entity
   id: PoweredDimFloorLight

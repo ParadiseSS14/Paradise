@@ -1,0 +1,23 @@
+- type: marking
+  id: TajaranNose
+  bodyPart: Snout
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_snout_markings.rsi
+      state: nose_s
+
+- type: marking
+  id: TajaranMuzzle
+  bodyPart: SnoutCover
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_snout_markings.rsi
+      state: muzzle_s
+
+- type: marking
+  id: TajaranMuzzle2
+  bodyPart: SnoutCover
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_snout_markings.rsi
+      state: muzzle2_s

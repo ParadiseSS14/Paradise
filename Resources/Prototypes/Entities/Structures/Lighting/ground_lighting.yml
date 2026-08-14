@@ -279,7 +279,7 @@
     - type: Sprite
       state: base
     - type: PointLight
-      enabled: true`
+      enabled: true
     - type: PoweredLight
       hasLampOnSpawn: LightBulb
     - type: AmbientOnPowered

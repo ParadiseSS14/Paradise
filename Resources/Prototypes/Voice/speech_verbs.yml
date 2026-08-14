@@ -197,3 +197,11 @@
     - chat-speech-verb-wawa-2
     - chat-speech-verb-wawa-3
     - chat-speech-verb-wawa-4
+
+# Paradise Content
+- type: speechVerb
+  id: Tajaran
+  name: chat-speech-verb-tajaran
+  speechVerbStrings:
+    - chat-speech-verb-tajaran-1
+    - chat-speech-verb-tajaran-2

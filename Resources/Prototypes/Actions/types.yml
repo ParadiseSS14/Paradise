@@ -627,3 +627,16 @@
       sprite: Interface/Actions/voice-mask.rsi
       layers:
         - state: icon
+
+# Paradise Content
+- type: entity
+  parent: ActionToggleWagging
+  id: ActionToggleWaggingTajaran
+  components:
+    - type: Action
+      itemIconStyle: NoItem
+      useDelay: 1 # Prevents Emote Spam
+    - type: Sprite
+      sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      layers:
+        - state: default_wingler_s

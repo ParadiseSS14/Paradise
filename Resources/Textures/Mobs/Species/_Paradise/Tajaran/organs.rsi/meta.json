@@ -53,6 +53,36 @@
         },
         {
             "name": "mmi_dead"
+        },
+        {
+            "name": "ears"
+        },
+        {
+            "name": "eyeball-l"
+        },
+        {
+            "name": "eyeball-r"
+        },
+        {
+            "name": "kidney-l"
+        },
+        {
+            "name": "kidney-r"
+        },
+        {
+            "name": "lung-l"
+        },
+        {
+            "name": "lung-r"
+        },
+        {
+            "name": "stomach"
+        },
+        {
+            "name": "tongue"
+        },
+        {
+            "name": "appendix"
         }
     ]
 }

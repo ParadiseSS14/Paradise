@@ -114,8 +114,7 @@ public sealed partial class WashingMachineSystem : EntitySystem
     {
         if (component.Storage != args.Container)
             return;
-
-_appearanceSystem.SetData(uid, WashingMachineVisual.Filled, component.Storage.Count);
+        _appearanceSystem.SetData(uid, WashingMachineVisual.Filled, component.Storage.Count);
     }
 
     private void StartWash(Entity<WashingMachineComponent> entity)

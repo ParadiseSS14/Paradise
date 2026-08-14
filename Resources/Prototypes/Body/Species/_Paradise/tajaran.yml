@@ -1,9 +1,10 @@
 - type: markingsGroup
   parent: Undergarments
   id: Tajaran
-  limits: # TODO: Confirm/Build Markers
+  limits:
     enum.HumanoidVisualLayers.Hair:
       limit: 1
+      onlyGroupWhitelisted: true
       required: false
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
@@ -19,14 +20,14 @@
     enum.HumanoidVisualLayers.Snout:
       limit: 1
       required: true
-      default: [TajaranSnout]
+      default: [TajaranNose]
     enum.HumanoidVisualLayers.SnoutCover:
       limit: 3
       required: false
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [TajaranTailTajaran]
+      default: [TajaranTailWingler]
     enum.HumanoidVisualLayers.LArm:
       limit: 2
       required: false
@@ -54,11 +55,9 @@
     enum.HumanoidVisualLayers.UndergarmentTop:
       limit: 1
       required: false
-      nudityDefault: [UndergarmentTopTanktopTajaran]
     enum.HumanoidVisualLayers.UndergarmentBottom:
       limit: 1
       required: false
-      nudityDefault: [UndergarmentBottomBoxersTajaran]
 
 - type: entity
   parent: BaseSpeciesAppearance
@@ -109,13 +108,10 @@
     - type: MessyDrinker
       spillChance: 0.33
     - type: Speech
-      speechSounds: Tajaran #TODO what are these
       speechVerb: Tajaran
-      allowedEmotes: ["Bark", "Snarl", "Whine", "Howl", "Growl"] # TODO check emotes
+      allowedEmotes: ["Hiss"]
     - type: Vocal
-      emoteSounds: MaleTajaran # TODO What are these
-    - type: Damageable
-      damageModifierSet: Tajaran #TODO What is this
+      emoteSounds: MaleTajaran
     - type: MeleeWeapon
       soundHit:
         path: /Audio/Weapons/pierce.ogg
@@ -137,16 +133,12 @@
         types:
           Heat: 2.5 # Per second, scales with temperature & other constants
     - type: Wagging
-      action: ActionToggleWaggingTajaran # TODO Make Action
-    - type: Bloodstream # TODO Make blood type
+      action: ActionToggleWaggingTajaran
+    - type: Bloodstream
       bloodReferenceSolution:
         reagents:
           - ReagentId: Blood # Tajarans have regular blood
             Quantity: 600
-    - type: CreamPied
-      sprite:
-        sprite: Effects/creampie.rsi
-        state: creampie_tajaran # TODO uh...
 
 - type: entity
   parent: OrganBaseOrganic
@@ -193,7 +185,7 @@
   id: OrganTajaranTorso
 
 - type: entity
-  parent: [OrganBaseHead, OrganTajaranExternal]
+  parent: [OrganBaseHeadSexed, OrganBaseHead, OrganTajaranExternal]
   id: OrganTajaranHead
   components:
     - type: VisualOrganMarkings

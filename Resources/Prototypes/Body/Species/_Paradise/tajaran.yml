@@ -99,7 +99,7 @@
     - BaseSpeciesMobOrganic
     - MobNightVision
   id: MobTajaran
-  name: Urist McMeow
+  name: Urist McHairball
   components:
     - type: DamageVisuals
       damageOverlayGroups:
@@ -108,8 +108,6 @@
           color: "#ccac1f"
         Burn:
           sprite: Mobs/Effects/burn_damage.rsi
-    - type: MessyDrinker
-      spillChance: 0.33
     - type: Speech
       speechVerb: Tajaran
       suffixSpeechVerbs:

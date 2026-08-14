@@ -205,3 +205,15 @@
   speechVerbStrings:
     - chat-speech-verb-tajaran-1
     - chat-speech-verb-tajaran-2
+
+- type: speechVerb
+  id: TajaranQuestion
+  name: chat-speech-verb-name-exclamation
+  speechVerbStrings:
+    - chat-speech-verb-tajaran-1
+
+- type: speechVerb
+  id: TajaranExclamation
+  name: chat-speech-verb-name-exclamation
+  speechVerbStrings:
+    - chat-speech-verb-tajaran-2

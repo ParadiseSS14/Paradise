@@ -27,7 +27,10 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [TajaranTailWingler]
+      default: [TajaranTail]
+    enum.HumanoidVisualLayers.TailOverlay:
+      limit: 1
+      required: false
     enum.HumanoidVisualLayers.LArm:
       limit: 2
       required: false
@@ -109,6 +112,9 @@
       spillChance: 0.33
     - type: Speech
       speechVerb: Tajaran
+      suffixSpeechVerbs:
+        chat-speech-verb-suffix-exclamation: TajaranExclamation
+        chat-speech-verb-suffix-question: TajaranQuestion
       allowedEmotes: ["Hiss"]
     - type: Vocal
       emoteSounds: MaleTajaran

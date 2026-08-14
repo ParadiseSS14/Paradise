@@ -1,0 +1,55 @@
+# Facial Hairs
+- type: marking
+  id: TajaranGoateeFaded
+  bodyPart: FacialHair
+  groupWhitelist: [Tajaran]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
+    state: facial_goatee_faded_s
+
+- type: marking
+  id: TajaranGoatee
+  bodyPart: FacialHair
+  groupWhitelist: [Tajaran]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
+    state: facial_goatee_s
+
+- type: marking
+  id: TajaranMoustache
+  bodyPart: FacialHair
+  groupWhitelist: [Tajaran]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
+    state: facial_moustache_s
+
+- type: marking
+  id: TajaranMutton
+  bodyPart: FacialHair
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
+    state: facial_mutton_s
+
+- type: marking
+  id: TajaranPencilStache
+  bodyPart: FacialHair
+  groupWhitelist: [Tajaran]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
+    state: facial_pencilstashe_s
+
+- type: marking
+  id: TajaranSideburns
+  bodyPart: FacialHair
+  groupWhitelist: [Tajaran]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
+    state: facial_sideburns_s
+
+- type: marking
+  id: TajaranSmallStache
+  bodyPart: FacialHair
+  groupWhitelist: [Tajaran]
+  sprites:
+  - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
+    state: facial_smallstache_s

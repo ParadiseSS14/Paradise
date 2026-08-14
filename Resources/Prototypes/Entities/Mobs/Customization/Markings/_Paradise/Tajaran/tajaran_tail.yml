@@ -1,0 +1,17 @@
+# Tail Markings
+- type: marking
+  id: TajaranTailWingler
+  bodyPart: Tail
+  groupWhitelist: [Vulpkanin]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: default_wingler_s
+
+# Animated
+- type: marking
+  id: TajaranTailWinglerAnimated
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: default_winglerw_s

@@ -72,7 +72,8 @@
             "directions": 4
         },
         {
-            "name": "eyes"
+            "name": "eyes",
+            "directions": 4
         }
     ]
 }

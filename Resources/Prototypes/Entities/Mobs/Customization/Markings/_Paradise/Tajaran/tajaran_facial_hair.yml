@@ -36,7 +36,7 @@
   groupWhitelist: [Tajaran]
   sprites:
     - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_facial_hair.rsi
-      state: facial_pencilstashe_s
+      state: facial_pencilstache_s
 
 - type: marking
   id: TajaranSideburns

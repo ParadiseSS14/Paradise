@@ -639,4 +639,4 @@
     - type: Sprite
       sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
       layers:
-        - state: default_wingler_s
+        - state: tajtail_s

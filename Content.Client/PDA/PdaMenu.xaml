@@ -74,11 +74,6 @@
                                 <ContainerButton Name="StationAlertLevelButton">
                                     <RichTextLabel Name="StationAlertLevelLabel" Access="Public" />
                                 </ContainerButton>
-                                <!-- Begin DeltaV changes -->
-                                <ContainerButton Name="CurrentDateButton">
-                                    <RichTextLabel Name="CurrentDateLabel" Access="Public" />
-                                </ContainerButton>
-                                <!-- End DeltaV changes -->
                                 <ContainerButton Name="StationAlertLevelInstructionsButton">
                                     <RichTextLabel Name="StationAlertLevelInstructions" Access="Public" />
                                 </ContainerButton>
@@ -114,12 +109,6 @@
                                            Access="Public"
                                            Text="{Loc 'comp-pda-ui-ringtone-button'}"
                                            Description="{Loc 'comp-pda-ui-ringtone-button-description'}" />
-                    <!-- Begin DeltaV Additions: Pagers -->
-                    <pda:PdaSettingsButton Name="LinkedDevicesButton"
-                                           Access="Public"
-                                           Text="{Loc 'comp-pda-ui-linked-devices-button'}"
-                                           Description="{Loc 'comp-pda-ui-linked-devices-description'}" />
-                    <!-- End DeltaV Additions: Pagers -->
                     <pda:PdaSettingsButton Name="ActivateMusicButton"
                                            Access="Public"
                                            Visible="False"
@@ -143,13 +132,6 @@
                           HorizontalExpand="True"
                           Name="ProgramView"
                           Access="Public">
-                <!-- Begin DeltaV Additions: Pagers -->
-                <BoxContainer Orientation="Vertical"
-                              VerticalExpand="True"
-                              HorizontalExpand="True"
-                              Name="LinkedDeviceList"
-                              Visible="False" />
-                <!-- End DeltaV Additions: Pagers -->
             </BoxContainer>
         </BoxContainer>
     </ScrollContainer>

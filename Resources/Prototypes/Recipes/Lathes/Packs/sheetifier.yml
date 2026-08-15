@@ -3,6 +3,6 @@
 - type: latheRecipePack
   id: SheetifierStatic
   recipes:
-  - MaterialSheetMeat
-  - SheetPaper
-  - MaterialClothCotton
+    - MaterialSheetMeat
+    - SheetPaper
+    - MaterialClothCotton

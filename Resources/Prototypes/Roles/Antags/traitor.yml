@@ -4,10 +4,10 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-syndicate-agent-objective
-  guides: [ Traitors ]
+  guides: [Traitors]
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 1h
+    - !type:OverallPlaytimeRequirement
+      time: 1h
 
 - type: antagSpecifier
   abstract: true
@@ -18,12 +18,12 @@
   parent: BaseTraitor
   id: Traitor
   prefRoles:
-  - Traitor
+    - Traitor
   blacklist:
     components:
-    - AntagImmune
+      - AntagImmune
   mindRoles:
-  - MindRoleTraitor
+    - MindRoleTraitor
 
 - type: antag
   id: TraitorSleeper
@@ -31,27 +31,27 @@
   antagonist: true
   setPreference: true
   objective: roles-antag-syndicate-agent-sleeper-objective
-  guides: [ Traitors ]
+  guides: [Traitors]
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 1h
+    - !type:OverallPlaytimeRequirement
+      time: 1h
 
 - type: antagSpecifier
   parent: BaseTraitor
   id: TraitorSleeper
   prefRoles:
-  - TraitorSleeper
+    - TraitorSleeper
   mindRoles:
-  - MindRoleTraitorSleeper
+    - MindRoleTraitorSleeper
 
 - type: antagSpecifier
   parent: BaseTraitor
   id: TraitorReinforcement
   prefRoles:
-  - Traitor
-  - GenericTeamAntagonist # Matters for Antag bans.
+    - Traitor
+    - GenericTeamAntagonist # Matters for Antag bans.
   mindRoles:
-  - MindRoleTraitorReinforcement
+    - MindRoleTraitorReinforcement
 
 # Syndicate Operative Outfit - Monkey
 - type: startingGear
@@ -71,9 +71,9 @@
     gloves: ClothingHandsGlovesColorBlack
   storage:
     back:
-    - WeaponPistolViper
-    - PinpointerSyndicateNuclear
-    - DeathAcidifierImplanter
+      - WeaponPistolViper
+      - PinpointerSyndicateNuclear
+      - DeathAcidifierImplanter
 
 - type: startingGear
   id: SyndicateOperativeClothing
@@ -101,14 +101,14 @@
     - MedkitCombatFilled
   storage:
     back:
-    - Defibrillator
-    - CigPackSyndicate
-    - UniformScrubsColorPurple
-    - ChemistryBottleToxin
-    - WeaponPistolViper
-    - Syringe
-    - Syringe
-    
+      - Defibrillator
+      - CigPackSyndicate
+      - UniformScrubsColorPurple
+      - ChemistryBottleToxin
+      - WeaponPistolViper
+      - Syringe
+      - Syringe
+
 - type: startingGear
   id: SyndicateReinforcementSpy
   equipment:
@@ -130,8 +130,8 @@
     - ToolboxSyndicateFilled
   storage:
     back:
-    - SyndicateJawsOfLife
-    - CameraBug
+      - SyndicateJawsOfLife
+      - CameraBug
 
 #Syndicate Operative Outfit - Basic
 - type: startingGear

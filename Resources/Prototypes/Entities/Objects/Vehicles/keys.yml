@@ -4,10 +4,10 @@
   name: janicart keys
   description: Interesting design.
   components:
-  - type: Sprite
-    sprite: Objects/Vehicles/janicart.rsi
-    state: keys
-  - type: Item
-    size: Small
-  - type: Tag
-    tags: [ JanicartKeys ]
+    - type: Sprite
+      sprite: Objects/Vehicles/janicart.rsi
+      state: keys
+    - type: Item
+      size: Small
+    - type: Tag
+      tags: [JanicartKeys]

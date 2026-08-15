@@ -140,3 +140,28 @@
   id: Sharpness
   kind: source
   path: "/Textures/Shaders/sharpness.swsl"
+
+- type: shader
+  id: UIShaderSDF
+  kind: source
+  path: "/Textures/Shaders/uiSDF.swsl"
+
+- type: shader
+  id: UIShaderRadialKnobProgress
+  kind: source
+  path: "/Textures/Shaders/uiSDFRadialKnobProgressBar.swsl"
+
+- type: shader
+  id: UIShaderSDFTexture
+  kind: source
+  path: "/Textures/Shaders/uiSDFTexture.swsl"
+
+- type: shader
+  id: UIShaderIconBox
+  kind: source
+  path: "/Textures/Shaders/uiIconBox.swsl"
+
+- type: shader
+  id: UIColorSweep
+  kind: source
+  path: "/Textures/Shaders/uiColorSweep.swsl"

@@ -3,13 +3,13 @@
   id: CookedPatty
   start: start
   graph:
-  - node: start
-    edges:
-    - to: cooked meat patty
-      completed:
-      - !type:PlaySound
-        sound: /Audio/Effects/sizzle.ogg
-      steps:
-      - minTemperature: 335
-  - node: cooked meat patty
-    entity: FoodMeatPattyCooked
+    - node: start
+      edges:
+        - to: cooked meat patty
+          completed:
+            - !type:PlaySound
+              sound: /Audio/Effects/sizzle.ogg
+          steps:
+            - minTemperature: 335
+    - node: cooked meat patty
+      entity: FoodMeatPattyCooked

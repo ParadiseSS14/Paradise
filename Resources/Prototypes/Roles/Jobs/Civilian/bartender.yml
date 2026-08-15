@@ -11,12 +11,12 @@
   icon: "JobIconBartender"
   supervisors: job-supervisors-hop
   access:
-  - Service
-  - Maintenance
-  - Bar
+    - Service
+    - Maintenance
+    - Bar
   extendedAccess:
-  - Kitchen
-  - Hydroponics
+    - Kitchen
+    - Hydroponics
 
 - type: startingGear
   id: BartenderGear
@@ -25,8 +25,8 @@
     id: BartenderPDA
     ears: ClothingHeadsetService
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: BartenderChameleonOutfit
@@ -38,4 +38,3 @@
     neck: ClothingNeckScarfStripedBlack
     outerClothing: ClothingOuterArmorBasicSlim
     gloves: ClothingHandsGlovesColorBlack
-

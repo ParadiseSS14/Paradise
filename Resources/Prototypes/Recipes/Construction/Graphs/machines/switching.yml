@@ -3,32 +3,32 @@
   id: LeverGraph
   start: start
   graph:
-  - node: start
-    actions:
-      - !type:SpawnPrototype
-        prototype: SheetSteel1
-        amount: 2
-      - !type:SpawnPrototype
-        prototype: CableApcStack1
-        amount: 1
-      - !type:DeleteEntity {}
-    edges:
-      - to: LeverNode
-        completed:
-          - !type:SnapToGrid {}
-        steps:
-          - material: Steel
-            amount: 2
-            doAfter: 1
-          - material: Cable
-            amount: 1
-  - node: LeverNode
-    entity: TwoWayLever
-    edges:
-      - to: start
-        steps:
-          - tool: Anchoring
-            doAfter: 1
+    - node: start
+      actions:
+        - !type:SpawnPrototype
+          prototype: SheetSteel1
+          amount: 2
+        - !type:SpawnPrototype
+          prototype: CableApcStack1
+          amount: 1
+        - !type:DeleteEntity {}
+      edges:
+        - to: LeverNode
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+            - material: Cable
+              amount: 1
+    - node: LeverNode
+      entity: TwoWayLever
+      edges:
+        - to: start
+          steps:
+            - tool: Anchoring
+              doAfter: 1
 
 # Switches
 - type: constructionGraph

@@ -1,16 +1,26 @@
 
 <controls:FancyWindow xmlns="https://spacestation14.io"
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:uiControls="clr-namespace:Content.Client.UIControls"
                       MouseFilter="Stop"
                       MinWidth="200" MinHeight="150">
     <PanelContainer StyleClasses="BackgroundPanel" />
 
+
+    <TextureRect
+        TexturePath="/Textures/Interface/Nano/BG_NTLogo.png"
+        Stretch="KeepAspectCentered"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        Modulate="#00000055"
+        Name="BackgroundIcon"/>
+
     <BoxContainer Orientation="Vertical">
         <Control>
-            <PanelContainer StyleClasses="WindowHeadingBackground" Name="WindowHeader" />
-            <BoxContainer Margin="4 2 4 0" Orientation="Horizontal">
+            <PanelContainer StyleClasses="windowHeader" Name="WindowHeader" />
+            <BoxContainer Orientation="Horizontal">
                 <Label Name="WindowTitle"
-                       HorizontalExpand="True" VAlign="Center" StyleClasses="FancyWindowTitle" ClipText="true" />
+                       HorizontalExpand="True" VAlign="Center" StyleClasses="FancyWindowTitle" ClipText="true" Margin="8 8 8 4" />
                 <TextureButton Name="HelpButton" StyleClasses="windowHelpButton" VerticalAlignment="Center" Disabled="True" Visible="False" Access="Public" />
                 <TextureButton Name="CloseButton" StyleClasses="windowCloseButton"
                                VerticalAlignment="Center" />

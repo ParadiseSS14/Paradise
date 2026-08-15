@@ -1,0 +1,49 @@
+name: YAML formatting
+
+on:
+  pull_request:
+    paths:
+      - "Resources/Prototypes/**/*.yml"
+      - "Resources/Prototypes/**/*.yaml"
+      - "Tools/prettier/package.json"
+      - "Tools/prettier/package-lock.json"
+      - ".github/workflows/yaml-formatr.yaml"
+
+  push:
+    branches:
+      - master
+    paths:
+      - "Resources/Prototypes/**/*.yml"
+      - "Resources/Prototypes/**/*.yaml"
+      - "Tools/prettier/package.json"
+      - "Tools/prettier/package-lock.json"
+      - ".github/workflows/yaml-formatr.yaml"
+
+permissions:
+  contents: read
+
+jobs:
+  prettier:
+    name: Check YAML formatting
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: Tools/prettier/package-lock.json
+      - name: Install formatting tools
+        run: npm ci
+        working-directory: Tools/prettier
+
+      - name: Check formatting
+        run: npm run prettier:check -- ../../Resources/Prototypes
+        working-directory: Tools/prettier
+

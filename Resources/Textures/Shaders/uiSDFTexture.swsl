@@ -1,0 +1,53 @@
+uniform highp vec2 size;
+uniform highp vec2 texSize;
+uniform highp float tiling;
+uniform highp vec4 radius;
+
+uniform sampler2D mainTex;
+uniform lowp vec4 colMod;
+
+const highp float aa = 0.5;
+
+// not that i understand this but shadertoy has plenty of them
+highp float roundedBoxSDF(
+    highp vec2 p,
+    highp vec2 b,
+    highp vec4 r)
+{
+    if (p.x > 0.0)
+    {
+        r.xy = r.zw;
+    }
+
+    r.x = (p.y > 0.0) ? r.x : r.y;
+
+    highp vec2 q = abs(p) - b + r.x;
+    return min(max(q.x, q.y), 0.0)
+         + length(max(q, 0.0))
+         - r.x;
+}
+
+void fragment()
+{
+    highp vec2 p = (UV - 0.5) * (size + 0.5);
+
+    highp vec2 halfSize = size * 0.5;
+    highp vec4 r = min(
+        radius,
+        vec4(min(halfSize.x, halfSize.y))
+    );
+
+    highp vec4 tex = texture(mainTex, fract(UV * (size / texSize) * tiling));
+
+    highp float d = roundedBoxSDF(p, halfSize, r);
+
+    highp float fill = 1.0 - smoothstep(-aa, aa, d);
+
+    highp float gradientVertical = UV.y;
+
+    highp vec3 col = tex.xyz * colMod.xyz;
+
+    highp float alpha = tex.a * fill * colMod.w;
+
+    COLOR = vec4(col, alpha);
+}

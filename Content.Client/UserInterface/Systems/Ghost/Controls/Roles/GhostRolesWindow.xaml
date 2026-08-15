@@ -1,7 +1,8 @@
-<DefaultWindow xmlns="https://spacestation14.io"
-            Title="{Loc 'ghost-roles-window-title'}"
-            MinSize="490 400"
-            SetSize="490 500">
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                                    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                                    Title="{Loc 'ghost-roles-window-title'}"
+             MinSize="490 400"
+             SetSize="490 500">
     <Label Name="NoRolesMessage"
            Text="{Loc 'ghost-roles-window-no-roles-available-label'}"
            VerticalAlignment="Top" />
@@ -13,4 +14,4 @@
             <!-- Ghost role entries are added here by code -->
         </BoxContainer>
     </ScrollContainer>
-</DefaultWindow>
+</controls:FancyWindow>

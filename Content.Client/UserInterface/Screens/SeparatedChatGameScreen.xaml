@@ -10,6 +10,7 @@
     xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:inventory="clr-namespace:Content.Client.UserInterface.Systems.Inventory.Widgets"
+    xmlns:ui="clr-namespace:Content.Client.UserInterface.Systems.InspectionHud.UI"
     Name="SeparatedChatHud"
     VerticalExpand="False"
     VerticalAlignment="Bottom"
@@ -25,15 +26,17 @@
                 <BoxContainer Name="VoteMenu" Access="Public" Orientation="Vertical"/>
             </BoxContainer>
             <alerts:AlertsUI Name="Alerts" Access="Protected" />
+            <ui:InspectionUI Name="Inspection" Access="Protected" HorizontalExpand="True" MinWidth="600"/>
         </LayoutContainer>
-        <PanelContainer Name="SeparatedChatPanel" MinWidth="300">
-            <PanelContainer.PanelOverride>
-                <graphics:StyleBoxFlat BackgroundColor="#2B2C3B" />
-            </PanelContainer.PanelOverride>
+        <PanelContainer Name="SeparatedChatPanel" MinWidth="300" StyleClasses="ChatboxDarkenedBackground">
+
 
             <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="10" Margin="10">
                 <menuBar:GameTopMenuBar Name="TopBar" HorizontalExpand="True" Access="Public" />
-                <chat:ChatBox StyleClasses="ChatOutput" VerticalExpand="True" HorizontalExpand="True" Name="Chat" Access="Protected" MinSize="0 0"/>
+                <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" SizeFlagsStretchRatio="0.35">
+                    <Label Text="TOJO: Please Add Round Info here. UI exists for a reason. Not everything should be diagetic." MaxWidth="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </BoxContainer>
+                <chat:ChatBox VerticalExpand="True" HorizontalExpand="True" Name="Chat" Access="Protected" MinSize="0 0"/>
             </BoxContainer>
         </PanelContainer>
     </SplitContainer>

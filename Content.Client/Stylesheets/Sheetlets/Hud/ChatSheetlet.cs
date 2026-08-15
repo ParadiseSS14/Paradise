@@ -1,4 +1,5 @@
-﻿using Content.Client.Stylesheets.SheetletConfigs;
+﻿using System.Numerics;
+using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;
 using Content.Client.UserInterface.Systems.Chat.Controls;
 using Robust.Client.Graphics;
@@ -15,16 +16,13 @@ public sealed class ChatSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet, I
     {
         IButtonConfig btnCfg = sheet;
 
-        var chatColor = sheet.SecondaryPalette.Background.WithAlpha(221.0f / 255.0f);
-        var chatBg = new StyleBoxFlat(chatColor);
+        var chatBg = new StyleBoxSDFBox(sheet.PanelPalette.PanelPrimary);
 
-        var chatChannelButtonTex =
-            sheet.GetTextureOr(btnCfg.RoundedButtonBorderedPath, NanotrasenStylesheet.TextureRoot);
-        var chatChannelButton = new StyleBoxTexture
+        var chatChannelButton = new StyleBoxSDFBox()
         {
-            Texture = chatChannelButtonTex,
+            CornerRadius = new Vector4(5f),
+            BackgroundColor = sheet.PrimaryPalette.Base,
         };
-        chatChannelButton.SetPatchMargin(StyleBox.Margin.All, 5);
         chatChannelButton.SetPadding(StyleBox.Margin.All, 2);
 
         var chatFilterButtonTex =
@@ -38,14 +36,12 @@ public sealed class ChatSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet, I
 
         return
         [
-            E<PanelContainer>()
-                .Class(ChatInputBox.StyleClassChatPanel)
-                .Panel(chatBg),
             E<LineEdit>()
                 .Class(ChatInputBox.StyleClassChatLineEdit)
                 .Prop(LineEdit.StylePropertyStyleBox, new StyleBoxEmpty()),
-            E<Button>().Class(ChatInputBox.StyleClassChatFilterOptionButton).Box(chatChannelButton),
+            E<Button>().Class(ChannelSelectorItemButton.StyleClassChatSelectorOptionButton).Box(chatChannelButton),
             E<ContainerButton>().Class(ChatInputBox.StyleClassChatFilterOptionButton).Box(chatFilterButton),
+
         ];
     }
 }

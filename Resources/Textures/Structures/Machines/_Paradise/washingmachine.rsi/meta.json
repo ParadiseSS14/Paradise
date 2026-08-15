@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "license": "CC0-1.0",
+    "copyright": "Ported from Paradise 13, Sprites by S34NW at commit 24fe327e683e2785ab9ad18d01b27a1319111b63",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "closed"
+        },
+        {
+            "name": "open"
+        },
+        {
+            "name": "filled"
+        },
+        {
+            "name": "panelopen"
+        },
+        {
+            "name": "running",
+            "delays": [
+                [0.2, 0.2, 0.2, 0.2, 0.2]
+            ]
+        }
+    ]
+}

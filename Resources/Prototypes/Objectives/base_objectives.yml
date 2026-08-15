@@ -13,7 +13,7 @@
   abstract: true
   id: BaseObjective
   components:
-  - type: Objective
+    - type: Objective
 
 # requires that the player not have a die objective
 - type: entity
@@ -21,10 +21,10 @@
   parent: BaseObjective
   id: BaseLivingObjective
   components:
-  - type: ObjectiveBlacklistRequirement
-    blacklist:
-      components:
-      - DieCondition
+    - type: ObjectiveBlacklistRequirement
+      blacklist:
+        components:
+          - DieCondition
 
 # objective that targets a player
 # final prototype must specify the title locale id in TargetObjective
@@ -33,7 +33,7 @@
   parent: BaseObjective
   id: BaseTargetObjective
   components:
-  - type: TargetObjective
+    - type: TargetObjective
 
 # requires that the player kill someone
 # disables social objectives and is disabled by social objectives
@@ -42,30 +42,30 @@
   parent: BaseTargetObjective
   id: BaseKillObjective
   components:
-  - type: Objective
-    unique: false
-    icon:
-      sprite: Objects/Weapons/Guns/Pistols/viper.rsi
-      state: icon
-  - type: ObjectiveBlacklistRequirement
-    blacklist:
-      components:
-      - SocialObjective
-  - type: KillPersonCondition
+    - type: Objective
+      unique: false
+      icon:
+        sprite: Objects/Weapons/Guns/Pistols/viper.rsi
+        state: icon
+    - type: ObjectiveBlacklistRequirement
+      blacklist:
+        components:
+          - SocialObjective
+    - type: KillPersonCondition
 
 - type: entity
   abstract: true
   parent: BaseKillObjective
   id: BaseKillRandomObjective
   components:
-  - type: PickRandomPerson
-    conditions:
-    # Can't have multiple objectives to kill the same person.
-    - !type:ObjectiveTargetCondition
-      inverted: true
-      whitelist:
-        components:
-        - KillPersonCondition
+    - type: PickRandomPerson
+      conditions:
+        # Can't have multiple objectives to kill the same person.
+        - !type:ObjectiveTargetCondition
+          inverted: true
+          whitelist:
+            components:
+              - KillPersonCondition
 
 # requires that the player interact socially with someone
 # disables kill objectives and is disabled by kill objectives
@@ -74,13 +74,13 @@
   parent: BaseTargetObjective
   id: BaseSocialObjective
   components:
-  - type: Objective
-    unique: false
-  - type: ObjectiveBlacklistRequirement
-    blacklist:
-      components:
-      - KillPersonCondition
-  - type: SocialObjective
+    - type: Objective
+      unique: false
+    - type: ObjectiveBlacklistRequirement
+      blacklist:
+        components:
+          - KillPersonCondition
+    - type: SocialObjective
 
 # requires that the target survives the round
 - type: entity
@@ -88,7 +88,7 @@
   parent: BaseSocialObjective
   id: BaseKeepAliveObjective
   components:
-  - type: KeepAliveCondition
+    - type: KeepAliveCondition
 
 # requires that the target completes at least 50% of their objectives
 - type: entity
@@ -96,7 +96,7 @@
   parent: BaseSocialObjective
   id: BaseHelpProgressObjective
   components:
-  - type: HelpProgressCondition
+    - type: HelpProgressCondition
 
 # requires that the player steal an item specified in the final prototype
 - type: entity
@@ -104,11 +104,11 @@
   parent: BaseLivingObjective
   id: BaseStealObjective
   components:
-  - type: StealCondition
-    objectiveNoOwnerText: objective-condition-steal-title-no-owner
-    objectiveText: objective-condition-steal-title
-    descriptionText: objective-condition-steal-description
-    descriptionMultiplyText: objective-condition-thief-multiply-description
+    - type: StealCondition
+      objectiveNoOwnerText: objective-condition-steal-title-no-owner
+      objectiveText: objective-condition-steal-title
+      descriptionText: objective-condition-steal-description
+      descriptionMultiplyText: objective-condition-thief-multiply-description
 
 # requires that the player not die, ignores being on emergency shuttle or cuffed
 - type: entity
@@ -116,7 +116,7 @@
   parent: BaseObjective
   id: BaseSurviveObjective
   components:
-  - type: SurviveCondition
+    - type: SurviveCondition
 
 # objective progress is controlled by a system and not the objective itself
 - type: entity
@@ -124,7 +124,7 @@
   parent: BaseObjective
   id: BaseCodeObjective
   components:
-  - type: CodeCondition
+    - type: CodeCondition
 
 # a free objective, which is a free greentext
 - type: entity
@@ -132,7 +132,7 @@
   parent: BaseObjective
   id: BaseFreeObjective
   components:
-  - type: FreeObjective
+    - type: FreeObjective
 
 # requires the player to perform some action a certain number of times
 - type: entity
@@ -140,5 +140,5 @@
   parent: BaseObjective
   id: BaseCounterObjective
   components:
-  - type: CounterCondition
-  - type: NumberObjective # min and max to be set in the inheritor
+    - type: CounterCondition
+    - type: NumberObjective # min and max to be set in the inheritor

@@ -1,37 +1,65 @@
-<DefaultWindow xmlns="https://spacestation14.io"
-            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-            xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-            MinSize="200 200" Title="Gas Mixer">
-    <BoxContainer Orientation="Vertical" Margin="5 5 5 5" SeparationOverride="10">
-        <controls:SwitchButton
-            Name="ToggleStatusButton"
-            HorizontalAlignment="Left"
-            Pressed="True" />
-        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-            <Label Text="{Loc comp-gas-mixer-ui-mixer-output-pressure}"/>
-            <Control MinSize="5 0" />
-            <LineEdit Name="MixerPressureOutputInput" MinSize="70 0" />
-            <Control MinSize="5 0" />
-            <Button Name="SetMaxPressureButton" Text="{Loc comp-gas-mixer-ui-mixer-max}" />
-            <Control MinSize="5 0" />
-            <Control HorizontalExpand="True" />
-            <Button Name="SetOutputPressureButton" Text="{Loc comp-gas-mixer-ui-mixer-set}" HorizontalAlignment="Right" Disabled="True"/>
-            <Control MinSize="0 5" />
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-            <Control MinSize="0 5" />
-            <Label Text="{Loc comp-gas-mixer-ui-mixer-node-primary}"/>
-            <Control MinSize="5 0" />
-            <LineEdit Name="MixerNodeOneInput" MinSize="60 0" />
-            <Label Text=" %"/>
-            <Control MinSize="5 0" />
-            <Label Text="{Loc comp-gas-mixer-ui-mixer-node-side}"/>
-            <Control MinSize="5 0" />
-            <LineEdit Name="MixerNodeTwoInput" MinSize="60 0" />
-            <Label Text=" %"/>
-        </BoxContainer>
-        <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-            <Button Name="SetMixerPercentageButton" Text="{Loc comp-gas-mixer-ui-mixer-set}" HorizontalAlignment="Right" Disabled="True"/>
-        </BoxContainer>
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      MinSize="200 200" Title="Gas Mixer">
+    <BoxContainer Orientation="Vertical" Margin="8 8 8 16" SeparationOverride="10" HorizontalExpand="True"
+                  VerticalExpand="True">
+        <PanelContainer StyleClasses="SurfacePrimary">
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True" Margin="8">
+                <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True"
+                              SeparationOverride="8">
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                        <Label Text="{Loc 'comp-gas-mixer-ui-mixer-status'}" HorizontalExpand="True" />
+                        <Button
+                            Name="ToggleStatusButton"
+                            HorizontalAlignment="Left">
+                            <BoxContainer Orientation="Horizontal">
+                                <TextureRect VerticalAlignment="Center"
+                                             HorizontalAlignment="Center"
+                                             SetSize="14 14"
+                                             Stretch="KeepAspectCentered"
+                                             TexturePath="/Textures/Interface/power-off-solid.svg.64dpi.png"/>
+
+                                <Label Name="ToggleStatusLabel" Margin="4 0 2 0"/>
+
+                            </BoxContainer>
+                        </Button>
+                        </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                        <Label Text="{Loc comp-gas-mixer-ui-mixer-output-pressure}" HorizontalExpand="True" />
+                        <LineEdit Name="MixerPressureOutputInput" MinSize="70 0" />
+                        <Button Name="SetMaxPressureButton">
+                            <BoxContainer Orientation="Horizontal">
+                                <TextureRect VerticalAlignment="Center"
+                                             HorizontalAlignment="Center"
+                                             SetSize="14 14"
+                                             Stretch="KeepAspectCentered"
+                                             TexturePath="/Textures/Interface/plus-solid.svg.64dpi.png"/>
+
+                                <Label Text="{Loc comp-gas-mixer-ui-mixer-max}" Margin="4 0 2 0"/>
+
+                            </BoxContainer>
+                        </Button>
+                        <Control MinSize="0 5" />
+                    </BoxContainer>
+                    <PanelContainer StyleClasses="SurfaceSecondary">
+                        <BoxContainer Orientation="Vertical" Margin="8">
+                            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                                <Label Text="{Loc comp-gas-mixer-ui-mixer-node-primary}" HorizontalExpand="True" />
+                                <Control MinSize="5 0" />
+                                <LineEdit Name="MixerNodeOneInput" MinSize="60 0" />
+                            </BoxContainer>
+                            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                                <Label Text="{Loc comp-gas-mixer-ui-mixer-node-side}" HorizontalExpand="True" />
+                                <Control MinSize="5 0" />
+                                <LineEdit Name="MixerNodeTwoInput" MinSize="60 0" />
+                            </BoxContainer>
+                        </BoxContainer>
+                    </PanelContainer>
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                    </BoxContainer>
+                </BoxContainer>
+            </BoxContainer>
+        </PanelContainer>
     </BoxContainer>
-</DefaultWindow>
+</controls:FancyWindow>

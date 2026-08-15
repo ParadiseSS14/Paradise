@@ -1,4 +1,5 @@
 ﻿<DefaultWindow xmlns="https://spacestation14.io"
+               xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                Title="{Loc 'palette-color-picker-window-title'}"
                MinSize="250 500"
                SetSize="250 500">
@@ -6,7 +7,7 @@
         <ItemList Name="PaletteList" VerticalExpand="True" Access="Public"/>
         <BoxContainer Orientation="Horizontal">
             <Label Text="Palette"/>
-            <OptionButton Name="Palettes"/>
+            <controls:TguiOptionButton Name="Palettes"/>
         </BoxContainer>
     </BoxContainer>
 </DefaultWindow>

@@ -594,7 +594,7 @@
     Leporazine:
       amount: 2
   products:
-      Aloxadone: 4
+    Aloxadone: 4
 
 - type: reaction
   id: Psicodine
@@ -607,7 +607,7 @@
     Water:
       amount: 2
   products:
-      Psicodine: 4
+    Psicodine: 4
 
 - type: reaction
   id: Lipolicide

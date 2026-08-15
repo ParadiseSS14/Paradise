@@ -11,16 +11,16 @@
   icon: "JobIconScientist"
   supervisors: job-supervisors-rd
   access:
-  - Research
-  - Maintenance
+    - Research
+    - Maintenance
 
 - type: startingGear
   id: ScientistGear
   equipment:
     ears: ClothingHeadsetScience
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: ScientistChameleonOutfit

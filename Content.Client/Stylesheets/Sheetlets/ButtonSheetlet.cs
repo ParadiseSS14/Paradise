@@ -1,10 +1,15 @@
 using System.Numerics;
+using Content.Client.Lathe.UI;
+using Content.Client.Resources;
+using Content.Client.Stylesheets.Colorspace;
 using Content.Client.Stylesheets.Palette;
 using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;
+using Content.Client.UIControls;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
+using Robust.Shared.Utility;
 using static Content.Client.Stylesheets.StylesheetHelpers;
 
 namespace Content.Client.Stylesheets.Sheetlets;
@@ -17,27 +22,38 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
         IButtonConfig buttonCfg = sheet;
         IIconConfig iconCfg = sheet;
 
-        var crossTex = sheet.GetTextureOr(iconCfg.CrossIconPath, NanotrasenStylesheet.TextureRoot);
+        var crossTex = (sheet.ResCache.GetTexture("/Textures/Interface/Default/cross_ui.png"));
         var refreshTex = sheet.GetTextureOr(iconCfg.RefreshIconPath, NanotrasenStylesheet.TextureRoot);
-        var helpTex = sheet.GetTextureOr(iconCfg.HelpIconPath, NanotrasenStylesheet.TextureRoot);
+
+        var roundedButton = new StyleBoxSDFBox()
+        {
+            CornerRadius = new Vector4(2f),
+            BackgroundColor = sheet.PrimaryPalette.Base,
+            ContentMarginTopOverride = 2,
+            ContentMarginBottomOverride = 2,
+            ContentMarginLeftOverride = 4,
+            ContentMarginRightOverride = 4,
+        };
+
+        var transparentButton = new StyleBoxSDFBox()
+        {
+            CornerRadius = new Vector4(5f),
+            BackgroundColor = Color.Transparent,
+        };
+
+        var closeButtonStyleBox = new StyleBoxIconBox(crossTex)
+        {
+            HighlightColor = sheet.PositivePalette.Element,
+            UnhighlitColor = sheet.PanelPalette.Background,
+            BackgroundColor = sheet.PanelPalette.Background,
+        };
 
         var rules = new List<StyleRule>
         {
             // Set textures for the kinds of buttons
+
             CButton()
-                .Box(StyleBoxHelpers.BaseStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonOpenLeft)
-                .Box(StyleBoxHelpers.OpenLeftStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonOpenRight)
-                .Box(StyleBoxHelpers.OpenRightStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonOpenBoth)
-                .Box(StyleBoxHelpers.SquareStyleBox(sheet)),
-            CButton()
-                .Class(StyleClass.ButtonSquare)
-                .Box(StyleBoxHelpers.SquareStyleBox(sheet)),
+                .Box(roundedButton),
             CButton()
                 .Class(StyleClass.ButtonSmall)
                 .Box(StyleBoxHelpers.SmallStyleBox(sheet)),
@@ -45,7 +61,7 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
                 .Class(StyleClass.ButtonSmall)
                 .ParentOf(E<Label>())
                 .Font(sheet.BaseFont.GetFont(8)),
-            CButton().Class(StyleClass.ButtonBig).ParentOf(E<Label>()).Font(sheet.BaseFont.GetFont(16)),
+            CButton().Class(StyleClass.ButtonBig).ParentOf(E<Label>()).Font(sheet.BaseFont.GetFont(14)),
 
             // Cross Button (Red)
             E<TextureButton>()
@@ -57,16 +73,20 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
                 .Class(StyleClass.RefreshButton)
                 .Prop(TextureButton.StylePropertyTexture, refreshTex),
 
-            // Help button
-            E<TextureButton>()
-                .Class(StyleClass.HelpButton)
-                .Prop(TextureButton.StylePropertyTexture, helpTex),
-
             // Ensure labels in buttons are aligned.
             E<Label>()
                 // ReSharper disable once AccessToStaticMemberViaDerivedType
                 .Class(Button.StyleClassButton)
                 .AlignMode(Label.AlignMode.Center),
+
+            CButton().Class("transparentButton").Box(transparentButton),
+            CButton().Class("transparentButton").PseudoHovered().Box(roundedButton),
+
+            E<CloseContainerButton>().Class("closeButton").ForkedBox(closeButtonStyleBox),
+            E<CloseContainerButton>().Class("closeButton").Pseudo(ContainerButton.StylePseudoClassNormal)
+                .Prop(Control.StylePropertyModulateSelf, Color.White),
+            E<CloseContainerButton>().Class("closeButton").Pseudo(ContainerButton.StylePseudoClassHover)
+                .Prop(Control.StylePropertyModulateSelf, Color.White),
 
             // Have disabled button's text be faded
             CButton().PseudoDisabled().ParentOf(E<Label>()).FontColor(Color.FromHex("#E5E5E581")),
@@ -76,9 +96,9 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
         MakeButtonRules<TextureButton>(rules, Palettes.AlphaModulate, null);
         MakeButtonRules<TextureButton>(rules, sheet.NegativePalette, StyleClass.CrossButtonRed);
 
-        MakeButtonRules(rules, buttonCfg.ButtonPalette, null);
-        MakeButtonRules(rules, buttonCfg.PositiveButtonPalette, StyleClass.Positive);
-        MakeButtonRules(rules, buttonCfg.NegativeButtonPalette, StyleClass.Negative);
+        MakeButtonRules(rules, sheet.PrimaryPalette, null);
+        MakeButtonRules(rules, sheet.PrimaryPalette, StyleClass.Positive);
+        MakeButtonRules(rules, sheet.PrimaryPalette, StyleClass.Negative);
 
         return rules.ToArray();
     }
@@ -90,37 +110,26 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
         where TC : Control
     {
         rules.AddRange([
-            E<TC>().MaybeClass(styleclass).PseudoNormal().Modulate(palette.Element),
-            E<TC>().MaybeClass(styleclass).PseudoHovered().Modulate(palette.HoveredElement),
-            E<TC>().MaybeClass(styleclass).PseudoPressed().Modulate(palette.PressedElement),
-            E<TC>().MaybeClass(styleclass).PseudoDisabled().Modulate(palette.DisabledElement),
+            E<TC>().MaybeClass(styleclass).PseudoNormal().Modulate(Color.White),
+            E<TC>().MaybeClass(styleclass).PseudoHovered().Modulate(Color.White.NudgeLightness(0.125f)),
+            E<TC>().MaybeClass(styleclass).PseudoPressed().Modulate(Color.White.NudgeLightness(-0.2f)),
+            E<TC>().MaybeClass(styleclass).PseudoDisabled().Modulate(Color.White.NudgeLightness(-0.35f)),
         ]);
     }
 
-    public static void MakeButtonRules(
+    private static void MakeButtonRules(
         List<StyleRule> rules,
         ColorPalette palette,
         string? styleclass)
     {
         rules.AddRange([
-            CButton()
-                .MaybeClass(styleclass)
-                .PseudoNormal()
-                .Prop(Control.StylePropertyModulateSelf, palette.Element),
-            CButton()
-                .MaybeClass(styleclass)
-                .PseudoHovered()
-                .Prop(Control.StylePropertyModulateSelf, palette.HoveredElement),
-            CButton()
-                .MaybeClass(styleclass)
-                .PseudoPressed()
-                .Prop(Control.StylePropertyModulateSelf, palette.PressedElement),
-            CButton()
-                .MaybeClass(styleclass)
-                .PseudoDisabled()
-                .Prop(Control.StylePropertyModulateSelf, palette.DisabledElement),
+            E().MaybeClass(styleclass).PseudoNormal().Modulate(Color.White),
+            E().MaybeClass(styleclass).PseudoHovered().Modulate(Color.White.NudgeLightness(0.125f)),
+            E().MaybeClass(styleclass).PseudoPressed().Modulate(Color.White.NudgeLightness(-0.2f)),
+            E().MaybeClass(styleclass).PseudoDisabled().Modulate(Color.White.NudgeLightness(-0.35f)),
         ]);
     }
+
 
     private static MutableSelectorElement CButton()
     {

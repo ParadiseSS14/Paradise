@@ -1,4 +1,5 @@
 using Content.Client.Resources;
+using Content.Client.Stylesheets.Colorspace;
 using Content.Client.Stylesheets.Fonts;
 using Content.Client.Stylesheets.Palette;
 using Robust.Client.UserInterface;
@@ -16,32 +17,33 @@ public sealed class LabelSheetlet : Sheetlet<PalettedStylesheet>
         var robotoMonoBold12 = ResCache.GetFont("/Fonts/RobotoMono/RobotoMono-Bold.ttf", size: 12);
         var robotoMonoBold14 = ResCache.GetFont("/Fonts/RobotoMono/RobotoMono-Bold.ttf", size: 14);
 
+        var pixellari32 = ResCache.GetFont("/Fonts/Pixellari.ttf", size: 32);
+
         return
         [
             E<Label>()
                 .Class(StyleClass.LabelHeading)
-                .Font(sheet.BaseFont.GetFont(16, FontKind.Bold))
-                .FontColor(sheet.HighlightPalette.Text),
-            E<Label>()
-                .Class(StyleClass.LabelHeadingBigger)
-                .Font(sheet.BaseFont.GetFont(20, FontKind.Bold))
-                .FontColor(sheet.HighlightPalette.Text),
-            E<Label>()
-                .Class(StyleClass.LabelSubHeading)
-                .Font(sheet.BaseFont.GetFont(14, FontKind.Italic))
-                .FontColor(sheet.HighlightPalette.TextDark),
-            E<Label>()
-                .Class(StyleClass.LabelSubText)
-                .Font(sheet.BaseFont.GetFont(10))
-                .FontColor(Color.DarkGray),
-            E<Label>()
-                .Class(StyleClass.LabelKeyText)
                 .Font(sheet.BaseFont.GetFont(12, FontKind.Bold))
                 .FontColor(sheet.HighlightPalette.Text),
             E<Label>()
+                .Class(StyleClass.LabelHeadingBigger)
+                .Font(sheet.BaseFont.GetFont(13, FontKind.Bold))
+                .FontColor(sheet.HighlightPalette.Text),
+            E<Label>()
+                .Class(StyleClass.LabelSubText)
+                .Font(sheet.BaseFont.GetFont(10))
+                .FontColor(sheet.PanelPalette.Text),
+            E<Label>()
+                .Class(StyleClass.LabelSmallText)
+                .Font(sheet.BaseFont.GetFont(10))
+                .FontColor(sheet.HighlightPalette.Text),
+            E<Label>()
+                .Class(StyleClass.LabelKeyText)
+                .Font(sheet.BaseFont.GetFont(11, FontKind.Bold))
+                .FontColor(sheet.HighlightPalette.Text),
+            E<Label>()
                 .Class(StyleClass.LabelWeak)
-                .FontColor(Color.DarkGray), // TODO: you know the drill by now
-
+                .FontColor(sheet.PanelPalette.Text.NudgeLightness(-0.1f)),
             E<Label>()
                 .Class(StyleClass.Positive)
                 .FontColor(sheet.PositivePalette.Text),
@@ -51,6 +53,11 @@ public sealed class LabelSheetlet : Sheetlet<PalettedStylesheet>
             E<Label>()
                 .Class(StyleClass.Highlight)
                 .FontColor(sheet.HighlightPalette.Text),
+
+
+            E<Button>().ParentOf(E<Label>()).Margin(new Thickness(8f, 2f)),
+            E<OptionButton>().ParentOf(E<BoxContainer>()).ParentOf(E<Label>()).Margin(new Thickness(16f, 2f)),
+
 
             E<Label>()
                 .Class(StyleClass.StatusGood)
@@ -78,6 +85,8 @@ public sealed class LabelSheetlet : Sheetlet<PalettedStylesheet>
             E<Label>()
                 .Class(StyleClass.LabelMonospaceHeading)
                 .Prop(Label.StylePropertyFont, robotoMonoBold14),
+
+            E<Label>().Class("InspectionUILabel").Prop(Label.StylePropertyFont, pixellari32),
         ];
     }
 }

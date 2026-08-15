@@ -4,21 +4,21 @@
   description: job-description-atmostech
   playTimeTracker: JobAtmosphericTechnician
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Engineering
-    time: 2.5h
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 2.5h
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-ce
   access:
-  - Maintenance
-  - Engineering
-  - External
-  - Atmospherics
+    - Maintenance
+    - Engineering
+    - External
+    - Atmospherics
   special:
-  - !type:GiveItemOnHolidaySpecial
-    holiday: FirefighterDay
-    prototype: FireAxe
+    - !type:GiveItemOnHolidaySpecial
+      holiday: FirefighterDay
+      prototype: FireAxe
 
 - type: startingGear
   id: AtmosphericTechnicianGear
@@ -28,8 +28,8 @@
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: AtmosphericTechnicianChameleonOutfit

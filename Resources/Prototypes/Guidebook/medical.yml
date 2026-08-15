@@ -3,10 +3,10 @@
   name: guide-entry-medical
   text: "/ServerInfo/Guidebook/Medical/Medical.xml"
   children:
-  - MedicalDoctor
-  - Chemist
-  - Cloning
-  - Cryogenics
+    - MedicalDoctor
+    - Chemist
+    - Cloning
+    - Cryogenics
 
 - type: guideEntry
   id: MedicalDoctor
@@ -28,11 +28,11 @@
   name: guide-entry-chemist
   text: "/ServerInfo/Guidebook/Medical/Chemist.xml"
   children:
-  # - Medicine
-  # Duplicate guide entries are currently not supported
-  # TODO GUIDEBOOK Maybe allow duplicate entries?
-  - Botanicals
-  - AdvancedBrute
+    # - Medicine
+    # Duplicate guide entries are currently not supported
+    # TODO GUIDEBOOK Maybe allow duplicate entries?
+    - Botanicals
+    - AdvancedBrute
 
 - type: guideEntry
   id: Medicine

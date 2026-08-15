@@ -3,9 +3,9 @@
   name: room spawner
   parent: MarkerBase
   components:
-  - type: RoomFill
-  - type: Sprite
-    layers:
-      - state: red
-      - sprite: Mobs/Aliens/elemental.rsi
-        state: alive
+    - type: RoomFill
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Mobs/Aliens/elemental.rsi
+          state: alive

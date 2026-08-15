@@ -6,9 +6,9 @@
       edges:
         - to: assembly
           steps:
-           - material: Steel
-             amount: 2
-             doAfter: 1
+            - material: Steel
+              amount: 2
+              doAfter: 1
     - node: assembly
       entity: AirSensorAssembly
       edges:

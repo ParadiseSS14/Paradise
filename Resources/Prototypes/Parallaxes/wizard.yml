@@ -1,13 +1,11 @@
 - type: parallax
   id: Wizard
   layers:
-    - texture:
-        !type:ImageParallaxTextureSource
+    - texture: !type:ImageParallaxTextureSource
         path: "/Textures/Parallaxes/purple_nebula.png"
       slowness: 0.98
       scale: 1,1
-    - texture:
-        !type:ImageParallaxTextureSource
+    - texture: !type:ImageParallaxTextureSource
         path: "/Textures/Parallaxes/KettleParallaxNeb.png"
       slowness: 0.95
       scale: "1.5, 1.5"

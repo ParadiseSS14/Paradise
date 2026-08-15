@@ -7,17 +7,17 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_old
-        color: "#a6161d"
-      - state: decor_bottom
-        color: "#6e1022"
-      - state: decor_wingette
-        color: "#4a101b"
-      - state: icon_pentagramm
-        color: "#911129"
-      - state: detail_bookmark
-        color: red 
+        - state: paper
+        - state: cover_old
+          color: "#a6161d"
+        - state: decor_bottom
+          color: "#6e1022"
+        - state: decor_wingette
+          color: "#4a101b"
+        - state: icon_pentagramm
+          color: "#911129"
+        - state: detail_bookmark
+          color: red
     - type: Paper
       content: book-text-narsielegend
 
@@ -30,16 +30,16 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_strong
-        color: "#c9752a"
-      - state: decor_diagonal
-        color: "#cf792d"
-      - state: decor_wingette_circle
-        color: gold
-      - state: icon_question
-      - state: detail_bookmark
-        color: "#cf792d"
+        - state: paper
+        - state: cover_strong
+          color: "#c9752a"
+        - state: decor_diagonal
+          color: "#cf792d"
+        - state: decor_wingette_circle
+          color: gold
+        - state: icon_question
+        - state: detail_bookmark
+          color: "#cf792d"
     - type: Paper
       content: book-text-truth
 
@@ -52,13 +52,13 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#215e9e"
-      - state: icon_planet
-      - state: icon_text
-      - state: detail_bookmark
-        color: "#2dab24"
+        - state: paper
+        - state: cover_base
+          color: "#215e9e"
+        - state: icon_planet
+        - state: icon_text
+        - state: detail_bookmark
+          color: "#2dab24"
     - type: Paper
       content: book-text-world
 
@@ -71,14 +71,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#5779c9"
-      - state: icon_stars2
-      - state: decor_bottom
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#5779c9"
+        - state: icon_stars2
+        - state: decor_bottom
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-antarctica
 
@@ -91,16 +91,16 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#e838b9"
-      - state: decor_wingette
-        color: "#ab22ba"
-      - state: decor_spine
-        color: "#f7cc2f"
-      - state: icon_banana
-      - state: detail_bookmark
-        color: "#f7cc2f"
+        - state: paper
+        - state: cover_base
+          color: "#e838b9"
+        - state: decor_wingette
+          color: "#ab22ba"
+        - state: decor_spine
+          color: "#f7cc2f"
+        - state: icon_banana
+        - state: detail_bookmark
+          color: "#f7cc2f"
     - type: Paper
       content: book-text-sloth-clown-sss
 
@@ -113,16 +113,16 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#f7cc2f"
-      - state: decor_wingette
-        color: "#ab22ba"
-      - state: decor_spine
-        color: "#e838b9"
-      - state: icon_banana
-      - state: detail_bookmark
-        color: "#ab22ba"
+        - state: paper
+        - state: cover_base
+          color: "#f7cc2f"
+        - state: decor_wingette
+          color: "#ab22ba"
+        - state: decor_spine
+          color: "#e838b9"
+        - state: icon_banana
+        - state: detail_bookmark
+          color: "#ab22ba"
     - type: Paper
       content: book-text-sloth-clown-pz
 
@@ -135,16 +135,16 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#e838b9"
-      - state: decor_wingette
-        color: "#ab22ba"
-      - state: decor_spine
-        color: "#f7cc2f"
-      - state: icon_scmmd
-      - state: detail_bookmark
-        color: "#ab22ba"
+        - state: paper
+        - state: cover_base
+          color: "#e838b9"
+        - state: decor_wingette
+          color: "#ab22ba"
+        - state: decor_spine
+          color: "#f7cc2f"
+        - state: icon_scmmd
+        - state: detail_bookmark
+          color: "#ab22ba"
     - type: Paper
       content: book-text-sloth-clown-mmd
 
@@ -157,19 +157,19 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_strong
-        color: "#2c384d"
-      - state: decor_wingette
-        color: "#3a4a66"
-      - state: decor_wingette_circle
-        color: "#6d7c9c"
-      - state: icon_glow
-        color: "#f7bb2f"
-      - state: icon_lightning
-        color: "#f7bb2f"
-      - state: detail_bookmark
-        color: "#f7bb2f"
+        - state: paper
+        - state: cover_strong
+          color: "#2c384d"
+        - state: decor_wingette
+          color: "#3a4a66"
+        - state: decor_wingette_circle
+          color: "#6d7c9c"
+        - state: icon_glow
+          color: "#f7bb2f"
+        - state: icon_lightning
+          color: "#f7bb2f"
+        - state: detail_bookmark
+          color: "#f7bb2f"
     - type: Paper
       content: book-text-struck
 
@@ -182,18 +182,18 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#255c8a"
-      - state: decor_bottom
-        color: "#2d2e12"
-      - state: icon_glow
-        color: "#f7bb2f"
-      - state: icon_cabbage
-      - state: detail_bookmark
-        color: "#f7bb2f"
-      - state: detail_rivets
-        color: "#f7bb2f"
+        - state: paper
+        - state: cover_base
+          color: "#255c8a"
+        - state: decor_bottom
+          color: "#2d2e12"
+        - state: icon_glow
+          color: "#f7bb2f"
+        - state: icon_cabbage
+        - state: detail_bookmark
+          color: "#f7bb2f"
+        - state: detail_rivets
+          color: "#f7bb2f"
     - type: Paper
       content: book-text-sun
 
@@ -206,13 +206,13 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_old
-        color: "#a3bfae"
-      - state: icon_possum
-      - state: detail_bookmark
-        color: "#2b593d"
-      - state: overlay_blood
+        - state: paper
+        - state: cover_old
+          color: "#a3bfae"
+        - state: icon_possum
+        - state: detail_bookmark
+          color: "#2b593d"
+        - state: overlay_blood
     - type: Paper
       content: book-text-possum
 
@@ -225,12 +225,12 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_strong
-        color: "#e8ab6d"
-      - state: icon_possum
-      - state: detail_bookmark
-        color: "#2b593d"
+        - state: paper
+        - state: cover_strong
+          color: "#e8ab6d"
+        - state: icon_possum
+        - state: detail_bookmark
+          color: "#2b593d"
     - type: Paper
       content: book-text-cafe
 
@@ -243,15 +243,15 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_strong
-        color: "#abebed"
-      - state: decor_wingette
-        color: "#a081cc"
-      - state: icon_atmos
-      - state: icon_magic
-      - state: detail_bookmark
-        color: "#7396f5"
+        - state: paper
+        - state: cover_strong
+          color: "#abebed"
+        - state: decor_wingette
+          color: "#a081cc"
+        - state: icon_atmos
+        - state: icon_magic
+        - state: detail_bookmark
+          color: "#7396f5"
     - type: Paper
       content: book-text-feather
 
@@ -264,14 +264,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#3a9e57"
-      - state: decor_bottom
-        color: "#1c6330"
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#3a9e57"
+        - state: decor_bottom
+          color: "#1c6330"
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-wolfpup
 
@@ -284,14 +284,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#ccab64"
-      - state: decor_bottom
-        color: "#946e38"
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#ccab64"
+        - state: decor_bottom
+          color: "#946e38"
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-ranch
 
@@ -304,14 +304,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#567cd6"
-      - state: decor_bottom
-        color: "#272782"
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#567cd6"
+        - state: decor_bottom
+          color: "#272782"
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-ocean
 
@@ -324,13 +324,13 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#86b4d9"
-      - state: icon_mount
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#86b4d9"
+        - state: icon_mount
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-mountain
 
@@ -343,14 +343,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#9a9b9c"
-      - state: decor_bottom
-        color: "#5f6061"
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#9a9b9c"
+        - state: decor_bottom
+          color: "#5f6061"
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-city
 
@@ -365,14 +365,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#5779c9"
-      - state: icon_stars2
-      - state: decor_bottom
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#5779c9"
+        - state: icon_stars2
+        - state: decor_bottom
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-arctic
 
@@ -385,14 +385,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#507bad"
-      - state: decor_bottom
-        color: "#bd9a55"
-      - state: icon_ian
-      - state: detail_bookmark
-        color: "#ab5e24"
+        - state: paper
+        - state: cover_base
+          color: "#507bad"
+        - state: decor_bottom
+          color: "#bd9a55"
+        - state: icon_ian
+        - state: detail_bookmark
+          color: "#ab5e24"
     - type: Paper
       content: book-text-ian-desert
 
@@ -405,13 +405,13 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#8c8c8c"
-      - state: decor_wingette_circle
-      - state: icon_letter_N
-      - state: detail_bookmark
-      - state: overlay_dirt
+        - state: paper
+        - state: cover_base
+          color: "#8c8c8c"
+        - state: decor_wingette_circle
+        - state: icon_letter_N
+        - state: detail_bookmark
+        - state: overlay_dirt
     - type: Paper
       content: book-text-names
 
@@ -424,17 +424,17 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_strong
-        color: "#0f204f"
-      - state: decor_wingette_circle
-        color: "#2c5491"
-      - state: decor_vertical_middle
-        color: "#3c6ab0"
-      - state: icon_planet
-      - state: icon_text3
-      - state: detail_bookmark
-        color: "#2c5491"
+        - state: paper
+        - state: cover_strong
+          color: "#0f204f"
+        - state: decor_wingette_circle
+          color: "#2c5491"
+        - state: decor_vertical_middle
+          color: "#3c6ab0"
+        - state: icon_planet
+        - state: icon_text3
+        - state: detail_bookmark
+          color: "#2c5491"
     - type: Paper
       content: book-text-earth
 
@@ -447,19 +447,19 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#0f204f"
-      - state: decor_vertical_middle
-        color: "#3c6ab0" 
-      - state: decor_spine
-        color: "#3c6ab0" 
-      - state: icon_stars2
-      - state: icon_aurora
-      - state: detail_bookmark
-        color: "#2c5491"
-      - state: detail_rivets
-        color: "#799dd4"
+        - state: paper
+        - state: cover_base
+          color: "#0f204f"
+        - state: decor_vertical_middle
+          color: "#3c6ab0"
+        - state: decor_spine
+          color: "#3c6ab0"
+        - state: icon_stars2
+        - state: icon_aurora
+        - state: detail_bookmark
+          color: "#2c5491"
+        - state: detail_rivets
+          color: "#799dd4"
     - type: Paper
       content: book-text-aurora
 
@@ -472,16 +472,16 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#542e80"
-      - state: decor_vertical_middle
-        color: "#39205e"
-      - state: decor_wingette_circle
-        color: "#914fb8"
-      - state: icon_temple
-      - state: detail_bookmark
-        color: "#bfbfbf"
+        - state: paper
+        - state: cover_base
+          color: "#542e80"
+        - state: decor_vertical_middle
+          color: "#39205e"
+        - state: decor_wingette_circle
+          color: "#914fb8"
+        - state: icon_temple
+        - state: detail_bookmark
+          color: "#bfbfbf"
     - type: Paper
       content: book-text-temple
 
@@ -494,16 +494,16 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#611e10"
-      - state: overlay_dirt
-        color: "#4f1206"
-      - state: decor_wingette_circle
-        color: "#241e1d"
-      - state: icon_eye
-      - state: detail_bookmark
-        color: "#bfbfbf"
+        - state: paper
+        - state: cover_base
+          color: "#611e10"
+        - state: overlay_dirt
+          color: "#4f1206"
+        - state: decor_wingette_circle
+          color: "#241e1d"
+        - state: icon_eye
+        - state: detail_bookmark
+          color: "#bfbfbf"
     - type: Paper
       content: book-text-watched
 
@@ -516,15 +516,15 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#d7dadb"
-      - state: decor_wingette_circle
-        color: "#55b0d4"
-      - state: icon_medical_cross
-        color: "#55b0d4"
-      - state: detail_bookmark
-        color: "#55b0d4"
+        - state: paper
+        - state: cover_base
+          color: "#d7dadb"
+        - state: decor_wingette_circle
+          color: "#55b0d4"
+        - state: icon_medical_cross
+          color: "#55b0d4"
+        - state: detail_bookmark
+          color: "#55b0d4"
     - type: Paper
       content: book-text-medical-officer
 
@@ -537,14 +537,14 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_old
-        color: "#d7dadb"
-      - state: icon_text2
-        color: "#61363d"
-      - state: overlay_dirt
-      - state: detail_bookmark
-        color: "#61363d"
+        - state: paper
+        - state: cover_old
+          color: "#d7dadb"
+        - state: icon_text2
+          color: "#61363d"
+        - state: overlay_dirt
+        - state: detail_bookmark
+          color: "#61363d"
     - type: Paper
       content: book-text-morgue
 
@@ -557,19 +557,19 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#6597c9"
-      - state: decor_bottom
-        color: "#113a63"
-      - state: decor_diagonal
-        color: "#113a63"
-      - state: icon_text3
-        color: "#ffde7d"
-      - state: detail_bookmark
-        color: "#61363d"
-      - state: detail_rivets
-        color: "#ffde7d"
+        - state: paper
+        - state: cover_base
+          color: "#6597c9"
+        - state: decor_bottom
+          color: "#113a63"
+        - state: decor_diagonal
+          color: "#113a63"
+        - state: icon_text3
+          color: "#ffde7d"
+        - state: detail_bookmark
+          color: "#61363d"
+        - state: detail_rivets
+          color: "#ffde7d"
     - type: Paper
       content: book-text-rufus
 
@@ -582,17 +582,17 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#56c463"
-      - state: icon_briefcase
-      - state: decor_wingette
-        color: "#298033"
-      - state: icon_briefcase
-      - state: detail_bookmark
-        color: "#61363d"
-      - state: detail_rivets
-        color: "#ffde7d"
+        - state: paper
+        - state: cover_base
+          color: "#56c463"
+        - state: icon_briefcase
+        - state: decor_wingette
+          color: "#298033"
+        - state: icon_briefcase
+        - state: detail_bookmark
+          color: "#61363d"
+        - state: detail_rivets
+          color: "#ffde7d"
     - type: Paper
       content: book-text-map
 
@@ -605,15 +605,15 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#9bc1c9"
-      - state: icon_briefcase
-      - state: icon_mount
-      - state: detail_bookmark
-        color: "#61363d"
-      - state: detail_rivets
-        color: "#ffde7d"
+        - state: paper
+        - state: cover_base
+          color: "#9bc1c9"
+        - state: icon_briefcase
+        - state: icon_mount
+        - state: detail_bookmark
+          color: "#61363d"
+        - state: detail_rivets
+          color: "#ffde7d"
     - type: Paper
       content: book-text-journ-mount
 
@@ -626,16 +626,16 @@
     - type: Sprite
       sprite: Objects/Misc/books.rsi
       layers:
-      - state: paper
-      - state: cover_base
-        color: "#1d662c"
-      - state: decor_spine
-        color: "#2a8c58"
-      - state: icon_glow
-        color: "#b9edc4"
-      - state: icon_tree
-      - state: detail_bookmark
-        color: "#61363d"
+        - state: paper
+        - state: cover_base
+          color: "#1d662c"
+        - state: decor_spine
+          color: "#2a8c58"
+        - state: icon_glow
+          color: "#b9edc4"
+        - state: icon_tree
+        - state: detail_bookmark
+          color: "#61363d"
     - type: Paper
       content: book-text-inspiration
 
@@ -643,19 +643,18 @@
   parent: BookBase
   id: BookJanitorTale
   name: the tales of a tired janitor
-  description: A clean looking book, smelling vaguely of soap and bleach. 
+  description: A clean looking book, smelling vaguely of soap and bleach.
   components:
-  - type: Sprite
-    sprite: Objects/Misc/books.rsi
-    layers:
-    - state: paper
-    - state: cover_old
-      color: "#c526de"
-    - state: decor_wingette
-    - state: icon_bucket
-    - state: detail_bookmark
-      color: "#61363d"
-    - state: overlay_dirt
-  - type: Paper
-    content: book-text-janitor
-
+    - type: Sprite
+      sprite: Objects/Misc/books.rsi
+      layers:
+        - state: paper
+        - state: cover_old
+          color: "#c526de"
+        - state: decor_wingette
+        - state: icon_bucket
+        - state: detail_bookmark
+          color: "#61363d"
+        - state: overlay_dirt
+    - type: Paper
+      content: book-text-janitor

@@ -10,8 +10,8 @@
   parent: InventoryBase
   id: StripableInventoryBase
   components:
-  - type: Strippable
-  - type: UserInterface
-    interfaces:
-      enum.StrippingUiKey.Key:
-        type: StrippableBoundUserInterface
+    - type: Strippable
+    - type: UserInterface
+      interfaces:
+        enum.StrippingUiKey.Key:
+          type: StrippableBoundUserInterface

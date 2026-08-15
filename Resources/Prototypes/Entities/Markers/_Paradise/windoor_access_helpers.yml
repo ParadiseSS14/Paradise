@@ -1,0 +1,395 @@
+﻿- type: entity
+  abstract: true
+  name: Access Windoor Helper
+  id: AccessWindoorHelper
+  description: "Base Access Windoor Helper"
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      sprite: Markers/_Paradise/access_helper.rsi
+      layers:
+        - state: access_windoor
+          shader: unshaded
+    - type: AccessHelper
+    - type: LocalGatherTargets
+    - type: Tag
+      tags:
+        - WindoorHelper
+
+# region Command Access Windoor Helpers
+
+- type: entity
+  abstract: true
+  name: Command Access Windoor Helper
+  id: CommandBaseAccessWindoorHelper
+  description: "Command Windoor Access Windoor Helper"
+  parent: AccessWindoorHelper
+  components:
+    - type: Sprite
+      layers:
+        - state: access_windoor_command
+
+- type: entity
+  id: CaptainAccessWindoorHelper
+  suffix: "Captain"
+  parent: CommandBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Captain
+
+- type: entity
+  id: HeadOfPersonnelAccessWindoorHelper
+  suffix: "Head of Personnel"
+  parent: CommandBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: HeadOfPersonnel
+
+- type: entity
+  id: CommandAccessWindoorHelper
+  suffix: "Command"
+  parent: CommandBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Command
+# endregion
+
+# region Engineering Access Windoor Helpers
+
+- type: entity
+  abstract: true
+  name: Engineering Access Windoor Helper
+  id: EngineeringBaseAccessWindoorHelper
+  description: "Engineering Windoor Access Windoor Helper"
+  parent: AccessWindoorHelper
+  components:
+    - type: Sprite
+      layers:
+        - state: access_windoor_engineer
+
+- type: entity
+  id: ChiefEngineerAccessWindoorHelper
+  suffix: "Chief Engineer"
+  parent: EngineeringBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: ChiefEngineer
+
+- type: entity
+  id: EngineeringAccessWindoorHelper
+  suffix: "Engineering"
+  parent: EngineeringBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Engineering
+
+- type: entity
+  id: AtmosphericsAccessWindoorHelper
+  suffix: "Atmospherics"
+  parent: EngineeringBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Atmospherics
+
+- type: entity
+  id: ExternalAccessWindoorHelper
+  suffix: "External"
+  parent: EngineeringBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: External
+
+- type: entity
+  id: MaintenanceAccessWindoorHelper
+  suffix: "Maintenance"
+  parent: EngineeringBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Maintenance
+# endregion
+
+# region Medical Access Windoor Helpers
+
+- type: entity
+  abstract: true
+  name: Medical Access Windoor Helper
+  id: MedicalBaseAccessWindoorHelper
+  description: "Medical Windoor Access Windoor Helper"
+  parent: AccessWindoorHelper
+  components:
+    - type: Sprite
+      layers:
+        - state: access_windoor_medical
+
+- type: entity
+  id: ChiefMedicalOfficerAccessWindoorHelper
+  suffix: "Chief Medical Officer"
+  parent: MedicalBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: ChiefMedicalOfficer
+
+- type: entity
+  id: MedicalAccessWindoorHelper
+  suffix: "Medical"
+  parent: MedicalBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Medical
+
+- type: entity
+  id: ChemistryAccessWindoorHelper
+  suffix: "Chemistry"
+  parent: MedicalBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Chemistry
+
+- type: entity
+  id: ParamedicAccessWindoorHelper
+  suffix: "Paramedic"
+  parent: MedicalBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Paramedic
+
+- type: entity
+  id: MorgueAccessWindoorHelper
+  suffix: "Morgue"
+  parent: MedicalBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Morgue
+# endregion
+
+# region Science Access Windoor Helpers
+
+- type: entity
+  abstract: true
+  name: Science Access Windoor Helper
+  id: ScienceBaseAccessWindoorHelper
+  description: "Science Windoor Access Windoor Helper"
+  parent: AccessWindoorHelper
+  components:
+    - type: Sprite
+      layers:
+        - state: access_windoor_science
+
+- type: entity
+  id: ResearchDirectorAccessWindoorHelper
+  suffix: "Research Director"
+  parent: ScienceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: ResearchDirector
+
+- type: entity
+  id: ResearchAccessWindoorHelper
+  suffix: "Research"
+  parent: ScienceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Research
+# endregion
+
+# region Security Access Windoor Helpers
+
+- type: entity
+  abstract: true
+  name: Security Access Windoor Helper
+  id: SecurityBaseAccessWindoorHelper
+  description: "Security Windoor Access Windoor Helper"
+  parent: AccessWindoorHelper
+  components:
+    - type: Sprite
+      layers:
+        - state: access_windoor_security
+
+- type: entity
+  id: HeadOfSecurityAccessWindoorHelper
+  suffix: "Head of Security"
+  parent: SecurityBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: HeadOfSecurity
+
+- type: entity
+  id: SecurityAccessWindoorHelper
+  suffix: "Security"
+  parent: SecurityBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Security
+
+- type: entity
+  id: BrigAccessWindoorHelper
+  suffix: "Brig"
+  parent: SecurityBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Brig
+
+- type: entity
+  id: DetectiveAccessWindoorHelper
+  suffix: "Detective"
+  parent: SecurityBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Detective
+
+- type: entity
+  id: ArmoryAccessWindoorHelper
+  suffix: "Armory"
+  parent: SecurityBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Armory
+
+- type: entity
+  id: GenpopEnterAccessWindoorHelper
+  suffix: "Enter Genpop"
+  parent: SecurityBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: GenpopEnter
+
+- type: entity
+  id: GenpopLeaveAccessWindoorHelper
+  suffix: "Leave Genpop"
+  parent: SecurityBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: GenpopLeave
+# endregion
+
+# region Service Access Windoor Helpers
+
+- type: entity
+  abstract: true
+  name: Service Access Windoor Helper
+  id: ServiceBaseAccessWindoorHelper
+  description: "Service Windoor Access Windoor Helper"
+  parent: AccessWindoorHelper
+  components:
+    - type: Sprite
+      layers:
+        - state: access_windoor_service
+
+- type: entity
+  id: ServiceAccessWindoorHelper
+  suffix: "Service"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Service
+
+- type: entity
+  id: BarAccessWindoorHelper
+  suffix: "Bar"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Bar
+
+- type: entity
+  id: ChapelAccessWindoorHelper
+  suffix: "Chapel"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Chapel
+
+- type: entity
+  id: JanitorAccessWindoorHelper
+  suffix: "Janitor"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Janitor
+
+- type: entity
+  id: KitchenAccessWindoorHelper
+  suffix: "Kitchen"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Kitchen
+
+- type: entity
+  id: HydroponicsAccessWindoorHelper
+  suffix: "Hydroponics"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Hydroponics
+
+- type: entity
+  id: LawyerAccessWindoorHelper
+  suffix: "Lawyer"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Lawyer
+
+- type: entity
+  id: TheatreAccessWindoorHelper
+  suffix: "Theatre"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Theatre
+
+- type: entity
+  id: ClownAccessWindoorHelper
+  suffix: "Clown"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Clown
+
+- type: entity
+  id: MimeAccessWindoorHelper
+  suffix: "Mime"
+  parent: ServiceBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Mime
+# endregion
+
+# region Cargo Access Windoor Helpers
+
+- type: entity
+  abstract: true
+  name: Cargo Access Windoor Helper
+  id: CargoBaseAccessWindoorHelper
+  description: "Cargo Windoor Access Windoor Helper"
+  parent: AccessWindoorHelper
+  components:
+    - type: Sprite
+      layers:
+        - state: access_windoor_cargo
+
+- type: entity
+  id: CargoAccessWindoorHelper
+  suffix: "Cargo"
+  parent: CargoBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Cargo
+
+- type: entity
+  id: QuartermasterAccessWindoorHelper
+  suffix: "Quartermaster"
+  parent: CargoBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Quartermaster
+
+- type: entity
+  id: SalvageAccessWindoorHelper
+  suffix: "Salvage"
+  parent: CargoBaseAccessWindoorHelper
+  components:
+    - type: AccessHelper
+      access: Salvage
+# endregion

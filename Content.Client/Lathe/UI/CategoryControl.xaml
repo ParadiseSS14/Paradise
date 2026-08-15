@@ -1,0 +1,11 @@
+<Control xmlns="https://spacestation14.io" StyleClasses="RecipeControl">
+    <Button
+        Name="Button"
+        HorizontalExpand="True"
+        Margin="0"
+        StyleClasses="latheCategoryButton">
+        <BoxContainer Orientation="Horizontal">
+            <Label Name="CategoryName" HorizontalExpand="True" />
+        </BoxContainer>
+    </Button>
+</Control>

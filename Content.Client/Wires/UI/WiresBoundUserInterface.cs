@@ -7,7 +7,7 @@ namespace Content.Client.Wires.UI
     public sealed class WiresBoundUserInterface : BoundUserInterface
     {
         [ViewVariables]
-        private WiresMenu? _menu;
+        private WiresMenuUI? _menu;
 
         public WiresBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey)
         {
@@ -16,7 +16,7 @@ namespace Content.Client.Wires.UI
         protected override void Open()
         {
             base.Open();
-            _menu = this.CreateWindow<WiresMenu>();
+            _menu = this.CreateWindow<WiresMenuUI>();
             _menu.OnAction += PerformAction;
         }
 

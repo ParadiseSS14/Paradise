@@ -11,7 +11,7 @@ general-station-record-console-record-fingerprint = Fingerprint: {$fingerprint}
 general-station-record-console-record-dna = DNA: {$dna}
 
 general-station-record-for-filter-line-placeholder = Input text and press "Enter"
-general-station-record-name-filter = Name of person
+general-station-record-name-filter = Name
 general-station-record-job-filter = Job
 general-station-record-species-filter = Species
 general-station-record-prints-filter = Fingerprints

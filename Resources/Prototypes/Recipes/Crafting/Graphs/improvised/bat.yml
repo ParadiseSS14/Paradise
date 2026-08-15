@@ -9,7 +9,7 @@
             - material: WoodPlank
               amount: 5
               doAfter: 4
-        
+
     - node: incompleteBat
       entity: IncompleteBaseBallBat
       edges:
@@ -24,12 +24,12 @@
               doAfter: 1
         - to: bat
           completed:
-          - !type:AdminLog
-            message: "Construction"
-            impact: High
+            - !type:AdminLog
+              message: "Construction"
+              impact: High
           steps:
             - tool: Slicing
               doAfter: 4
-        
+
     - node: bat
       entity: BaseBallBat

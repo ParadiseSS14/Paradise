@@ -4,7 +4,7 @@
   name: Decal Spawner
   abstract: true
   components:
-  - type: Sprite
-    layers:
-    - state: green
-    - state: decal
+    - type: Sprite
+      layers:
+        - state: green
+        - state: decal

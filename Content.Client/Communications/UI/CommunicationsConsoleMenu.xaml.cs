@@ -95,7 +95,7 @@ namespace Content.Client.Communications.UI
             if (!AlertLevelSelectable)
             {
                 // selection is locked, only show the current alert
-                var name = _loc.GetString($"alert-level-{CurrentAlertLevel}");
+                var name = _loc.GetString($"alert-level-{CurrentAlertLevel.ToString()?.ToLower()}");
                 AlertLevelButton.AddItem(name);
                 AlertLevelButton.SetItemMetadata(AlertLevelButton.ItemCount - 1, CurrentAlertLevel);
             }
@@ -103,7 +103,7 @@ namespace Content.Client.Communications.UI
             {
                 foreach (var alert in SelectableAlertLevels)
                 {
-                    var name = _loc.GetString($"alert-level-{alert}");
+                    var name = _loc.GetString($"alert-level-{alert.ToString().ToLower()}");
                     AlertLevelButton.AddItem(name);
                     AlertLevelButton.SetItemMetadata(AlertLevelButton.ItemCount - 1, alert);
                     if (alert == CurrentAlertLevel)

@@ -6,6 +6,6 @@
   description: Even space isn't safe from junk mail.
   parent: Paper
   components:
-  - type: Paper
-  - type: RandomPaperContent
-    dataset: DeliverySpamLetters
+    - type: Paper
+    - type: RandomPaperContent
+      dataset: DeliverySpamLetters

@@ -7,6 +7,7 @@ research-console-menu-server-selection-button = Server list
 research-console-menu-server-sync-button = Sync
 research-console-menu-server-research-button = Research
 research-console-available-text = Researchable Technologies
+research-console-index-text = Researchable Index
 research-console-unlocked-text = Unlocked Technologies
 research-console-tier-discipline-info = Tier {$tier}, [color={$color}]{$discipline}[/color]
 research-console-tier-info-small = : Tier {$tier}

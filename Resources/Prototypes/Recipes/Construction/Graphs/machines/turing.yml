@@ -74,22 +74,19 @@
       actions:
         # Carry 0
         - !type:ConditionalAction
-          condition:
-            !type:AllConditions
+          condition: !type:AllConditions
             conditions:
               - !type:ContainerNotEmpty
                 container: a0
               - !type:ContainerNotEmpty
                 container: b0
-          action:
-            !type:SpawnPrototypeAtContainer
+          action: !type:SpawnPrototypeAtContainer
             prototype: SheetSteel1
             container: ca0
 
         # Output bit 0
         - !type:ConditionalAction
-          condition:
-            !type:AnyConditions
+          condition: !type:AnyConditions
             conditions:
               - !type:AllConditions
                 conditions:
@@ -103,15 +100,13 @@
                     container: a0
                   - !type:ContainerEmpty
                     container: b0
-          action:
-            !type:SpawnPrototypeAtContainer
+          action: !type:SpawnPrototypeAtContainer
             prototype: SheetSteel1
             container: c0
 
         # Temp bit 0
         - !type:ConditionalAction
-          condition:
-            !type:AnyConditions
+          condition: !type:AnyConditions
             conditions:
               - !type:AllConditions
                 conditions:
@@ -125,15 +120,13 @@
                     container: a1
                   - !type:ContainerEmpty
                     container: b1
-          action:
-            !type:SpawnPrototypeAtContainer
+          action: !type:SpawnPrototypeAtContainer
             prototype: SheetSteel1
             container: t0
 
         # Output bit 1
         - !type:ConditionalAction
-          condition:
-            !type:AnyConditions
+          condition: !type:AnyConditions
             conditions:
               - !type:AllConditions
                 conditions:
@@ -147,125 +140,97 @@
                     container: t0
                   - !type:ContainerEmpty
                     container: ca0
-          action:
-            !type:SpawnPrototypeAtContainer
+          action: !type:SpawnPrototypeAtContainer
             prototype: SheetSteel1
             container: c1
 
         # Temp bit 1
         - !type:ConditionalAction
-          condition:
-            !type:AllConditions
+          condition: !type:AllConditions
             conditions:
               - !type:ContainerNotEmpty
                 container: a1
               - !type:ContainerNotEmpty
                 container: b1
-          action:
-            !type:SpawnPrototypeAtContainer
+          action: !type:SpawnPrototypeAtContainer
             prototype: SheetSteel1
             container: t1
 
         # Temp bit 2
         - !type:ConditionalAction
-          condition:
-            !type:AllConditions
+          condition: !type:AllConditions
             conditions:
               - !type:ContainerNotEmpty
                 container: t0
               - !type:ContainerNotEmpty
                 container: ca0
-          action:
-            !type:SpawnPrototypeAtContainer
+          action: !type:SpawnPrototypeAtContainer
             prototype: SheetSteel1
             container: t2
 
         # Output bit 2
         - !type:ConditionalAction
-          condition:
-            !type:AnyConditions
+          condition: !type:AnyConditions
             conditions:
               - !type:ContainerNotEmpty
                 container: t1
               - !type:ContainerNotEmpty
                 container: t2
-          action:
-            !type:SpawnPrototypeAtContainer
+          action: !type:SpawnPrototypeAtContainer
             prototype: SheetSteel1
             container: c2
 
         # Print the result!
         - !type:ConditionalAction
-          condition:
-            !type:ContainerEmpty
+          condition: !type:ContainerEmpty
             container: c0
           # If c0 == 0...
-          action:
-            !type:ConditionalAction
-            condition:
-              !type:ContainerEmpty
+          action: !type:ConditionalAction
+            condition: !type:ContainerEmpty
               container: c1
             # If c1 == 0...
-            action:
-              !type:ConditionalAction
-              condition:
-                !type:ContainerEmpty
+            action: !type:ConditionalAction
+              condition: !type:ContainerEmpty
                 container: c2
               # If c2 == 0...
-              action:
-                !type:PopupEveryone
+              action: !type:PopupEveryone
                 text: "Result: 0"
               # If c2 == 1...
-              else:
-                !type:PopupEveryone
+              else: !type:PopupEveryone
                 text: "Result: 4"
             # If c1 == 1...
-            else:
-              !type:ConditionalAction
-              condition:
-                !type:ContainerEmpty
+            else: !type:ConditionalAction
+              condition: !type:ContainerEmpty
                 container: c2
               # If c2 == 0...
-              action:
-                !type:PopupEveryone
+              action: !type:PopupEveryone
                 text: "Result: 2"
               # If c2 == 1...
-              else:
-                !type:PopupEveryone
+              else: !type:PopupEveryone
                 text: "Result: 6"
           # If c0 == 1...
-          else:
-            !type:ConditionalAction
-            condition:
-              !type:ContainerEmpty
+          else: !type:ConditionalAction
+            condition: !type:ContainerEmpty
               container: c1
             # If c1 == 0...
-            action:
-              !type:ConditionalAction
-              condition:
-                !type:ContainerEmpty
+            action: !type:ConditionalAction
+              condition: !type:ContainerEmpty
                 container: c2
               # If c2 == 0...
-              action:
-                !type:PopupEveryone
+              action: !type:PopupEveryone
                 text: "Result: 1"
               # If c2 == 1...
-              else:
-                !type:PopupEveryone
+              else: !type:PopupEveryone
                 text: "Result: 5"
             # If c1 == 1...
-            else:
-              !type:ConditionalAction
-              condition:
-                !type:ContainerEmpty
+            else: !type:ConditionalAction
+              condition: !type:ContainerEmpty
                 container: c2
               # If c2 == 0...
-              action:
-                !type:PopupEveryone
+              action: !type:PopupEveryone
                 text: "Result: 3"
               # If c2 == 1...
-              else:
-                !type:PopupEveryone
+              else: !type:PopupEveryone
                 text: "Result: 7"
       edges:
         - to: a0

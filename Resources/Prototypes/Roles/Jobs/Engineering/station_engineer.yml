@@ -11,11 +11,11 @@
   icon: "JobIconStationEngineer"
   supervisors: job-supervisors-ce
   access:
-  - Maintenance
-  - Engineering
-  - External
+    - Maintenance
+    - Engineering
+    - External
   extendedAccess:
-  - Atmospherics
+    - Atmospherics
 
 - type: startingGear
   id: StationEngineerGear
@@ -24,8 +24,8 @@
     belt: ClothingBeltUtilityEngineering
     ears: ClothingHeadsetEngineering
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: StationEngineerChameleonOutfit

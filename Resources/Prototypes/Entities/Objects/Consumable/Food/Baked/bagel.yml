@@ -7,19 +7,19 @@
   id: FoodBagelBase
   description: A delicious bagel.
   components:
-  - type: Item
-    size: Tiny
-  - type: FlavorProfile
-    flavors:
-      - bread
-  - type: Sprite
-    sprite: Objects/Consumable/Food/Baked/bagel.rsi
-    state: bagel
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 10
+    - type: Item
+      size: Tiny
+    - type: FlavorProfile
+      flavors:
+        - bread
+    - type: Sprite
+      sprite: Objects/Consumable/Food/Baked/bagel.rsi
+      state: bagel
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 10
 
 - type: entity
   parent: FoodBagelBase
@@ -32,19 +32,19 @@
   name: poppy seed bagel
   description: A delicious bagel topped with bicaridine-infused poppy seeds.
   components:
-  - type: FlavorProfile
-    flavors:
-      - bread
-      - medicine
-  - type: Sprite
-    state: bagel-poppy
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Bicaridine
-        Quantity: 5
-      - ReagentId: Nutriment
-        Quantity: 10
+    - type: FlavorProfile
+      flavors:
+        - bread
+        - medicine
+    - type: Sprite
+      state: bagel-poppy
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Bicaridine
+            Quantity: 5
+          - ReagentId: Nutriment
+            Quantity: 10
 
 - type: entity
   parent: FoodBagelBase
@@ -52,21 +52,21 @@
   name: cotton bagel
   description: A delicious bagel made with cotton dough.
   components:
-  - type: FlavorProfile
-    flavors:
-    - bread
-    - cotton
-  - type: Sprite
-    state: bagel-cottondough
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: Tag
-    tags:
-    - ClothMade
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Fiber
-        Quantity: 5
+    - type: FlavorProfile
+      flavors:
+        - bread
+        - cotton
+    - type: Sprite
+      state: bagel-cottondough
+    - type: Edible
+      requiresSpecialDigestion: true
+    - type: Tag
+      tags:
+        - ClothMade
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Fiber
+            Quantity: 5

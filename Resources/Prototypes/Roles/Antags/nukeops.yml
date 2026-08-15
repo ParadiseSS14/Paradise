@@ -5,9 +5,9 @@
   setPreference: true
   objective: roles-antag-nuclear-operative-objective
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 5h
-  guides: [ NuclearOperatives ]
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+  guides: [NuclearOperatives]
 
 - type: antag
   id: NukeopsMedic
@@ -16,12 +16,12 @@
   setPreference: true
   objective: roles-antag-nuclear-operative-agent-objective
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 5h
-  - !type:RoleTimeRequirement
-    role: JobChemist
-    time: 3h
-  guides: [ NuclearOperatives ]
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+    - !type:RoleTimeRequirement
+      role: JobChemist
+      time: 3h
+  guides: [NuclearOperatives]
 
 - type: antag
   id: NukeopsCommander
@@ -30,72 +30,72 @@
   setPreference: true
   objective: roles-antag-nuclear-operative-commander-objective
   requirements:
-  - !type:OverallPlaytimeRequirement
-    time: 5h
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 5h
+    - !type:OverallPlaytimeRequirement
+      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 5h
   # should be changed to nukie playtime when thats tracked (wyci)
-  guides: [ NuclearOperatives ]
+  guides: [NuclearOperatives]
 
 - type: antagSpecifier
   abstract: true
   parent: RestrictedAntag
   id: BaseNukeops
   prefRoles:
-  - GenericTeamAntagonist # For antag ban purposes
+    - GenericTeamAntagonist # For antag ban purposes
   roleLoadout:
-  - RoleSurvivalNukie
+    - RoleSurvivalNukie
   components:
-  - type: NukeOperative
-  - type: NpcFactionMember
-    factions:
-    - Syndicate
+    - type: NukeOperative
+    - type: NpcFactionMember
+      factions:
+        - Syndicate
 
 - type: antagSpecifier
   parent: BaseNukeops
   id: NukeopsCommander
   prefRoles:
-  - NukeopsCommander
+    - NukeopsCommander
   spawnerPrototype: SpawnPointNukeopsCommander
   startingGear: SyndicateCommanderGearFull
   components:
-  - type: RandomMetadata
-    nameSegments:
-    - NamesSyndicateElite
-    nameFormat: name-format-nukie-commander
+    - type: RandomMetadata
+      nameSegments:
+        - NamesSyndicateElite
+      nameFormat: name-format-nukie-commander
   mindRoles:
-  - MindRoleNukeopsCommander
+    - MindRoleNukeopsCommander
 
 - type: antagSpecifier
   parent: BaseNukeops
   id: NukeopsMedic
   prefRoles:
-  - NukeopsMedic
+    - NukeopsMedic
   spawnerPrototype: SpawnPointNukeopsMedic
   startingGear: SyndicateOperativeMedicFull
   components:
-  - type: RandomMetadata
-    nameSegments:
-    - NamesSyndicateNormal
-    nameFormat: name-format-nukie-agent
+    - type: RandomMetadata
+      nameSegments:
+        - NamesSyndicateNormal
+      nameFormat: name-format-nukie-agent
   mindRoles:
-  - MindRoleNukeopsMedic
+    - MindRoleNukeopsMedic
 
 - type: antagSpecifier
   parent: BaseNukeops
   id: NukeopsOperative
   prefRoles:
-  - Nukeops
+    - Nukeops
   spawnerPrototype: SpawnPointNukeopsOperative
   startingGear: SyndicateOperativeGearFull
   components:
-  - type: RandomMetadata
-    nameSegments:
-    - NamesSyndicateNormal
-    nameFormat: name-format-nukie-operator
+    - type: RandomMetadata
+      nameSegments:
+        - NamesSyndicateNormal
+      nameFormat: name-format-nukie-operator
   mindRoles:
-  - MindRoleNukeops
+    - MindRoleNukeops
 
 - type: antagSpecifier
   parent: BaseNukeops
@@ -104,13 +104,13 @@
   pickPlayer: false
   startingGear: SyndicateLoneOperativeGearFull
   components:
-  - type: RandomMetadata
-    nameSegments:
-    - NamesSyndicatePrefix
-    - NamesSyndicateNormal
-    nameFormat: name-format-nukie-generic
+    - type: RandomMetadata
+      nameSegments:
+        - NamesSyndicatePrefix
+        - NamesSyndicateNormal
+      nameFormat: name-format-nukie-generic
   mindRoles:
-  - MindRoleLoneops
+    - MindRoleLoneops
 
 - type: startingGear
   id: SyndicateOperativeGearFullNoUplink
@@ -128,9 +128,9 @@
     belt: ClothingBeltMilitaryWebbing
   storage:
     back:
-    - WeaponPistolViper
-    - PinpointerSyndicateNuclear
-    - DeathAcidifierImplanter
+      - WeaponPistolViper
+      - PinpointerSyndicateNuclear
+      - DeathAcidifierImplanter
 
 #Nuclear Operative Gear
 - type: startingGear
@@ -157,7 +157,7 @@
     neck: SyndicateWhistle
     outerClothing: ClothingOuterHardsuitSyndieCommander
   inhand:
-  - NukeOpsDeclarationOfWar
+    - NukeOpsDeclarationOfWar
 
 - type: chameleonOutfit
   id: NukeopsCommanderOutfit
@@ -180,15 +180,15 @@
     belt: ClothingBeltMilitaryWebbingMedFilled
   storage:
     back:
-    - SyndiHypo
-    - SawAdvanced
-    - Cautery
-    - CombatKnife
-    - WeaponPistolViper
-    - PinpointerSyndicateNuclear
-    - HandheldHealthAnalyzer
-    - CombatMedipen
-    - DeathAcidifierImplanter
+      - SyndiHypo
+      - SawAdvanced
+      - Cautery
+      - CombatKnife
+      - WeaponPistolViper
+      - PinpointerSyndicateNuclear
+      - HandheldHealthAnalyzer
+      - CombatMedipen
+      - DeathAcidifierImplanter
 
 - type: chameleonOutfit
   id: NukeopsMedicOutfit

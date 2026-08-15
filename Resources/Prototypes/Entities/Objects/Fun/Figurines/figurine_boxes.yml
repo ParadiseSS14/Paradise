@@ -4,16 +4,16 @@
   name: unfolded cardboard box
   description: A small, unfolded cardboard toy box.
   components:
-  - type: PhysicalComposition
-    materialComposition:
-      Cardboard: 50
-  - type: Sprite
-    sprite: Objects/Fun/figurines.rsi
-    state: fig_box_unfolded
-  - type: Tag
-    tags:
-    - Trash
-  - type: SpaceGarbage
+    - type: PhysicalComposition
+      materialComposition:
+        Cardboard: 50
+    - type: Sprite
+      sprite: Objects/Fun/figurines.rsi
+      state: fig_box_unfolded
+    - type: Tag
+      tags:
+        - Trash
+    - type: SpaceGarbage
 
 - type: entity
   parent: BaseItem
@@ -21,24 +21,24 @@
   name: mystery spacemen minifigure box
   description: A box containing a mystery minifigure. The side of the box depicts a few blacked-out 'rare' figures, including one with a large, non-humanoid shilouette.
   components:
-  - type: Sprite
-    sprite: Objects/Fun/figurines.rsi
-    layers:
-      - state: fig_box
-  - type: TriggerOnActivate
-  - type: DeleteOnTrigger
-  - type: EmitSoundOnTrigger
-    positional: true
-    predicted: true
-    sound:
-      path: /Audio/Effects/unwrap.ogg
-  - type: SpawnEntityTableOnTrigger
-    useMapCoords: true
-    table: !type:AllSelector
-      children:
-      - id: MysteryFigureBoxTrash
-      - !type:NestedSelector
-        tableId: AllFigurinesTable
+    - type: Sprite
+      sprite: Objects/Fun/figurines.rsi
+      layers:
+        - state: fig_box
+    - type: TriggerOnActivate
+    - type: DeleteOnTrigger
+    - type: EmitSoundOnTrigger
+      positional: true
+      predicted: true
+      sound:
+        path: /Audio/Effects/unwrap.ogg
+    - type: SpawnEntityTableOnTrigger
+      useMapCoords: true
+      table: !type:AllSelector
+        children:
+          - id: MysteryFigureBoxTrash
+          - !type:NestedSelector
+            tableId: AllFigurinesTable
 
 - type: entity
   parent: BaseItem
@@ -47,54 +47,54 @@
   suffix: Filled
   description: A box of discontinued promotional lighters, many of which have since been declared "contraband".
   components:
-  - type: Sprite
-    sprite: Objects/Fun/figurines.rsi
-    layers:
-    - state: fig_box
-  - type: SpawnItemsOnUse
-    items:
-      - id: MysteryFigureBoxTrash
-      - id: CybersunFlippo
-        orGroup: Lighterbox
-        weight: 0.15
-      - id: InterdyneFlippo
-        orGroup: Lighterbox
-        weight: 0.15
-      - id: NanotrasenFlippo
-        orGroup: Lighterbox
-        weight: 0.25
-      - id: WaffleCoFlippo
-        orGroup: Lighterbox
-        weight: 0.35
-      - id: HonkCoFlippo
-        orGroup: Lighterbox
-      - id: GorlexMatchbox
-        orGroup: Lighterbox
-        weight: 0.15
-      - id: DonkcoLighter
-        orGroup: Lighterbox
-        weight: 0.25
-      - id: SyndicateFlippo
-        orGroup: Lighterbox
-        weight: 0.15
+    - type: Sprite
+      sprite: Objects/Fun/figurines.rsi
+      layers:
+        - state: fig_box
+    - type: SpawnItemsOnUse
+      items:
+        - id: MysteryFigureBoxTrash
+        - id: CybersunFlippo
+          orGroup: Lighterbox
+          weight: 0.15
+        - id: InterdyneFlippo
+          orGroup: Lighterbox
+          weight: 0.15
+        - id: NanotrasenFlippo
+          orGroup: Lighterbox
+          weight: 0.25
+        - id: WaffleCoFlippo
+          orGroup: Lighterbox
+          weight: 0.35
+        - id: HonkCoFlippo
+          orGroup: Lighterbox
+        - id: GorlexMatchbox
+          orGroup: Lighterbox
+          weight: 0.15
+        - id: DonkcoLighter
+          orGroup: Lighterbox
+          weight: 0.25
+        - id: SyndicateFlippo
+          orGroup: Lighterbox
+          weight: 0.15
 
 - type: entity
   parent: MysteryLighterBox
   id: UplinkLighterBox
   suffix: Uplink
   components:
-  - type: SpawnItemsOnUse
-    items:
-      - id: MysteryFigureBoxTrash
-      - id: CybersunFlippo
-        orGroup: Lighterbox
-      - id: InterdyneFlippo
-        orGroup: Lighterbox
-      - id: WaffleCoFlippo
-        orGroup: Lighterbox
-      - id: GorlexMatchbox
-        orGroup: Lighterbox
-      - id: DonkcoLighter
-        orGroup: Lighterbox
-      - id: SyndicateFlippo
-        orGroup: Lighterbox
+    - type: SpawnItemsOnUse
+      items:
+        - id: MysteryFigureBoxTrash
+        - id: CybersunFlippo
+          orGroup: Lighterbox
+        - id: InterdyneFlippo
+          orGroup: Lighterbox
+        - id: WaffleCoFlippo
+          orGroup: Lighterbox
+        - id: GorlexMatchbox
+          orGroup: Lighterbox
+        - id: DonkcoLighter
+          orGroup: Lighterbox
+        - id: SyndicateFlippo
+          orGroup: Lighterbox

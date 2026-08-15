@@ -4,14 +4,14 @@
   abstract: true
   id: BaseXenoborgRecipe
   categories:
-  - Robotics
+    - Robotics
   completetime: 10
 
 - type: latheRecipe
   abstract: true
   id: BaseXenoborgModulesRecipe
   categories:
-  - Modules
+    - Modules
   completetime: 2
 
 # xenoborgs

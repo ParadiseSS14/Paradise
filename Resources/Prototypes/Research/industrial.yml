@@ -10,11 +10,11 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - MiningDrill
-  - MineralScannerEmpty
-  - OreProcessorIndustrialMachineCircuitboard
-  - ClothingMaskWeldingGas
-  - ClothingShoesBootsJump
+    - MiningDrill
+    - MineralScannerEmpty
+    - OreProcessorIndustrialMachineCircuitboard
+    - ClothingMaskWeldingGas
+    - ClothingShoesBootsJump
 
 - type: technology
   id: SpaceScanning
@@ -26,8 +26,8 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - RadarConsoleCircuitboard
-  - HandHeldMassScanner
+    - RadarConsoleCircuitboard
+    - HandHeldMassScanner
 
 - type: technology
   id: AdvancedPowercells
@@ -39,9 +39,9 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - PowerCellHigh
-  - TurboItemRechargerCircuitboard
-  - SMESAdvancedMachineCircuitboard
+    - PowerCellHigh
+    - TurboItemRechargerCircuitboard
+    - SMESAdvancedMachineCircuitboard
 
 - type: technology
   id: MechanicalCompression
@@ -53,7 +53,7 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - FlatpackerMachineCircuitboard
+    - FlatpackerMachineCircuitboard
 
 - type: technology
   id: IndustrialEngineering
@@ -65,10 +65,10 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - AutolatheHyperConvectionMachineCircuitboard
-  - ProtolatheHyperConvectionMachineCircuitboard
-  - CircuitImprinterHyperConvectionMachineCircuitboard
-  - SheetifierMachineCircuitboard
+    - AutolatheHyperConvectionMachineCircuitboard
+    - ProtolatheHyperConvectionMachineCircuitboard
+    - CircuitImprinterHyperConvectionMachineCircuitboard
+    - SheetifierMachineCircuitboard
 
 - type: technology
   id: PowerGeneration
@@ -80,12 +80,12 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - PortableGeneratorPacmanMachineCircuitboard
-  - PortableGeneratorSuperPacmanMachineCircuitboard
-  - PortableGeneratorJrPacmanMachineCircuitboard
-  - SolarControlComputerCircuitboard
-  - SolarTrackerElectronics
-  - EmitterCircuitboard
+    - PortableGeneratorPacmanMachineCircuitboard
+    - PortableGeneratorSuperPacmanMachineCircuitboard
+    - PortableGeneratorJrPacmanMachineCircuitboard
+    - SolarControlComputerCircuitboard
+    - SolarTrackerElectronics
+    - EmitterCircuitboard
 
 - type: technology
   id: AtmosphericTech
@@ -97,8 +97,8 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - ThermomachineFreezerMachineCircuitBoard
-  - GasRecyclerMachineCircuitboard
+    - ThermomachineFreezerMachineCircuitBoard
+    - GasRecyclerMachineCircuitboard
 
 - type: technology
   id: RipleyAPLU
@@ -110,14 +110,14 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - RipleyHarness
-  - RipleyLArm
-  - RipleyRArm
-  - RipleyLLeg
-  - RipleyRLeg
-  - RipleyCentralElectronics
-  - RipleyPeripheralsElectronics
-  - MechEquipmentGrabber
+    - RipleyHarness
+    - RipleyLArm
+    - RipleyRArm
+    - RipleyLLeg
+    - RipleyRLeg
+    - RipleyCentralElectronics
+    - RipleyPeripheralsElectronics
+    - MechEquipmentGrabber
 
 # Tier 2
 
@@ -131,10 +131,10 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - ShuttleConsoleCircuitboard
-  - ThrusterMachineCircuitboard
-  - GyroscopeMachineCircuitboard
-  - MiniGravityGeneratorCircuitboard
+    - ShuttleConsoleCircuitboard
+    - ThrusterMachineCircuitboard
+    - GyroscopeMachineCircuitboard
+    - MiniGravityGeneratorCircuitboard
 
 - type: technology
   id: AdvancedAtmospherics
@@ -146,11 +146,11 @@
   tier: 2
   cost: 7500
   recipeUnlocks:
-  - HellfireFreezerMachineCircuitBoard
-  - PortableScrubberMachineCircuitBoard
-  - HolofanProjector
+    - HellfireFreezerMachineCircuitBoard
+    - PortableScrubberMachineCircuitBoard
+    - HolofanProjector
   technologyPrerequisites:
-  - AtmosphericTech
+    - AtmosphericTech
 
 - type: technology
   id: AdvancedToolsTechnology
@@ -196,9 +196,9 @@
   tier: 3
   cost: 15000
   recipeUnlocks:
-  - ClothingBackpackHolding
-  - ClothingBackpackSatchelHolding
-  - ClothingBackpackDuffelHolding
+    - ClothingBackpackHolding
+    - ClothingBackpackSatchelHolding
+    - ClothingBackpackDuffelHolding
 
 - type: technology
   id: OptimizedMicrogalvanism
@@ -210,7 +210,7 @@
   tier: 3
   cost: 10000
   recipeUnlocks:
-  - PowerCellMicroreactor
-  - PowerCellHyper
+    - PowerCellMicroreactor
+    - PowerCellHyper
   technologyPrerequisites:
-  - AdvancedPowercells
+    - AdvancedPowercells

@@ -1,9 +1,12 @@
 # User interface
 comms-console-menu-title = Communications Console
+comms-console-menu-announcement-section-header = Manage Station
+comms-console-menu-shuttle-section-header = Manage Shuttle
+comms-console-menu-announcement-extras = Functions
 comms-console-menu-announcement-placeholder = Announcement text...
-comms-console-menu-announcement-button = Announce
+comms-console-menu-announcement-button = Make Priority Announcement
 comms-console-menu-announcement-button-tooltip = Send your message as a station-wide radio announcement.
-comms-console-menu-broadcast-button = Broadcast
+comms-console-menu-broadcast-button = Display Broadcast
 comms-console-menu-broadcast-button-tooltip = Broadcast your message to wall-mounted screens around the station. Note: They fit only ten characters!
 comms-console-menu-alert-level-button-tooltip = Change the station alert level. Applies immediately on selecting.
 comms-console-menu-call-shuttle = Call emergency shuttle

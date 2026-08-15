@@ -1,4 +1,5 @@
-﻿using Content.Client.Examine;
+﻿using System.Numerics;
+using Content.Client.Examine;
 using Content.Client.Stylesheets.Fonts;
 using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;
@@ -17,9 +18,17 @@ public sealed class TooltipSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet
     {
         ITooltipConfig tooltipCfg = sheet;
 
-        var tooltipBox = sheet.GetTextureOr(tooltipCfg.TooltipBoxPath, NanotrasenStylesheet.TextureRoot)
-            .IntoPatch(StyleBox.Margin.All, 2);
-        tooltipBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 7);
+        var tooltipBox = new StyleBoxSDFBox()
+        {
+            BackgroundColor = sheet.PanelPalette.PanelPrimary.WithAlpha(0.9f),
+            BorderThickness = sheet.PanelPalette.PanelBorderThickness,
+            BorderColor = sheet.PanelPalette.PanelBorderColor,
+            CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius),
+            ContentMarginBottomOverride = 8,
+            ContentMarginLeftOverride = 8,
+            ContentMarginRightOverride = 8,
+            ContentMarginTopOverride = 8,
+        };
 
         var whisperBox = sheet.GetTextureOr(tooltipCfg.WhisperBoxPath, NanotrasenStylesheet.TextureRoot)
             .IntoPatch(StyleBox.Margin.All, 2);
@@ -28,8 +37,7 @@ public sealed class TooltipSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet
         return
         [
             E<PanelContainer>()
-                .Class(StyleClass.TooltipPanel)
-                .Modulate(Color.Gray.WithAlpha(0.9f)) // TODO: you know the drill by now
+                .Class(StyleClass.TooltipPanel) // TODO: you know the drill by now
                 .Panel(tooltipBox),
             E<RichTextLabel>()
                 .Class(StyleClass.TooltipTitle)

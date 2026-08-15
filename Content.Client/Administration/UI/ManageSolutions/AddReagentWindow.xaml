@@ -1,7 +1,8 @@
-<DefaultWindow
+<controls:FancyWindow
     SetSize="250 300"
     Margin="4 0"
-    xmlns="https://spacestation14.io">
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls">
     <BoxContainer Orientation="Vertical">
         <BoxContainer Name="QuantityBox" Orientation="Horizontal" Margin ="0 4">
             <Label Text="{Loc 'admin-add-reagent-window-amount-label'}" Margin="0 0 10 0"/>
@@ -10,4 +11,4 @@
         <ItemList Name="ReagentList" SelectMode="Single" VerticalExpand="True"  Margin ="0 4"/>
         <Button Name="AddButton" HorizontalExpand="True" Margin ="0 4" />
     </BoxContainer>
-</DefaultWindow>
+</controls:FancyWindow>

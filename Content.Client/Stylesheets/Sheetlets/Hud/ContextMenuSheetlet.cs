@@ -1,3 +1,4 @@
+using System.Numerics;
 using Content.Client.ContextMenu.UI;
 using Content.Client.Resources;
 using Content.Client.Stylesheets.Fonts;
@@ -29,12 +30,23 @@ public sealed class ContextMenuSheetlet<T> : Sheetlet<T>
     {
         IWindowConfig windowCfg = sheet;
 
-        var borderedWindowBackground = new StyleBoxTexture
+        var borderedWindowBackground = new StyleBoxSDFBox()
         {
-            Texture = sheet.GetTextureOr(windowCfg.WindowBackgroundBorderedPath, NanotrasenStylesheet.TextureRoot),
+            BackgroundColor = sheet.PanelPalette.PanelPrimary.WithAlpha(0.9f),
+            BorderThickness = sheet.PanelPalette.PanelBorderThickness,
+            BorderColor = sheet.PanelPalette.PanelBorderColor,
+            CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius),
+            ContentMarginBottomOverride = 8,
+            ContentMarginLeftOverride = 8,
+            ContentMarginRightOverride = 8,
+            ContentMarginTopOverride = 8,
         };
-        borderedWindowBackground.SetPatchMargin(StyleBox.Margin.All, ContextMenuElement.ElementMargin);
-        var buttonContext = new StyleBoxTexture { Texture = Texture.White };
+        var buttonContext = new StyleBoxFlat(Color.Transparent);
+        var hoveredButtonContext = new StyleBoxSDFBox()
+        {
+            BackgroundColor = sheet.PrimaryPalette.Element,
+            CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius)
+        };
         var contextMenuExpansionTexture = ResCache.GetTexture("/Textures/Interface/VerbIcons/group.svg.192dpi.png");
         var verbMenuConfirmationTexture = ResCache.GetTexture("/Textures/Interface/VerbIcons/group.svg.192dpi.png");
 
@@ -49,6 +61,11 @@ public sealed class ContextMenuSheetlet<T> : Sheetlet<T>
             E<ContextMenuElement>()
                 .Class(ContextMenuElement.StyleClassContextMenuButton)
                 .Prop(ContainerButton.StylePropertyStyleBox, buttonContext),
+
+            // Context menu buttons
+            E<ContextMenuElement>()
+                .Class(ContextMenuElement.StyleClassContextMenuButton).PseudoHovered()
+                .Prop(ContainerButton.StylePropertyStyleBox, hoveredButtonContext),
 
             // Context Menu Labels
             E<RichTextLabel>()

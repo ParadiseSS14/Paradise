@@ -11,7 +11,7 @@
           mapNameTemplate: "Meteor Arena"
         - type: StationJobs
           availableJobs:
-            Passenger: [ -1, -1 ]
+            Passenger: [-1, -1]
 - type: gameMap
   id: dm01-entryway
   mapName: DM01 Entryway
@@ -25,4 +25,4 @@
           mapNameTemplate: "DM01 Entryway"
         - type: StationJobs
           availableJobs:
-            Passenger: [ -1, -1 ]
+            Passenger: [-1, -1]

@@ -31,19 +31,19 @@
     - tasks:
         - !type:HTNCompoundTask
           task: IdleCompound
-          
+
 - type: htnCompound
   id: MoproachCompound
   branches:
-  - tasks:
-    - !type:HTNCompoundTask
-      task: FoodCompound
-  - tasks:
-    - !type:HTNCompoundTask
-      task: BufferNearbyPuddlesCompound
-  - tasks:
-    - !type:HTNCompoundTask
-      task: IdleCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FoodCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: BufferNearbyPuddlesCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
 
 - type: htnCompound
   id: GlockroachCompound
@@ -61,25 +61,25 @@
 - type: htnCompound
   id: RuminantCompound
   branches:
-  - tasks:
-    - !type:HTNCompoundTask
-      task: FoodCompound
-  - tasks:
-    - !type:HTNCompoundTask
-      task: IdleCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FoodCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
 
 - type: htnCompound
   id: RuminantHostileCompound
   branches:
-  - tasks:
-    - !type:HTNCompoundTask
-      task: MeleeCombatCompound
-  - tasks:
-    - !type:HTNCompoundTask
-      task: FoodCompound
-  - tasks:
-    - !type:HTNCompoundTask
-      task: IdleCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: MeleeCombatCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: FoodCompound
+    - tasks:
+        - !type:HTNCompoundTask
+          task: IdleCompound
 
 - type: htnCompound
   id: DragonCarpCompound

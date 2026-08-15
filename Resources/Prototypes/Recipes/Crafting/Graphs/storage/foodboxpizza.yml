@@ -10,6 +10,5 @@
               amount: 1
               doAfter: 4
 
-
     - node: foodboxpizza
       entity: FoodBoxPizza

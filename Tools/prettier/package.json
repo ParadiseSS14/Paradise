@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "prettier": "3.9.6"
+  },
+  "scripts": {
+    "prettier:check": "prettier --check --end-of-line auto",
+    "prettier:write": "prettier --write --end-of-line auto"
+  }
+}

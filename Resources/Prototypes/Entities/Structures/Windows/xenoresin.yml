@@ -4,9 +4,9 @@
   name: resin window
   description: Transparent and hardened, yet slightly sticky to the touch.
   components:
-  - type: Sprite
-    sprite: Structures/Windows/xeno_resin.rsi
-  - type: Icon
-    sprite: Structures/Windows/xeno_resin.rsi
-  - type: IconSmooth
-    base: xwindow
+    - type: Sprite
+      sprite: Structures/Windows/xeno_resin.rsi
+    - type: Icon
+      sprite: Structures/Windows/xeno_resin.rsi
+    - type: IconSmooth
+      base: xwindow

@@ -2,29 +2,28 @@
   id: BaseMechPart
   abstract: true
   components:
-  - type: Clickable
-  - type: InteractionOutline
-  - type: CollisionWake
-  - type: TileFrictionModifier
-    modifier: 0.5
-  - type: Physics
-    bodyType: Dynamic
-    fixedRotation: false
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.25,-0.25,0.25,0.25"
-        density: 100
-        mask:
-        - ItemMask
-        restitution: 0.3  # fite me
-        friction: 0.2
-  - type: Pullable
-  - type: GuideHelp
-    guides:
-    - Robotics
+    - type: Clickable
+    - type: InteractionOutline
+    - type: CollisionWake
+    - type: TileFrictionModifier
+      modifier: 0.5
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: false
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 100
+          mask:
+            - ItemMask
+          restitution: 0.3 # fite me
+          friction: 0.2
+    - type: Pullable
+    - type: GuideHelp
+      guides:
+        - Robotics
 
 # Ripley APLU
 
@@ -33,18 +32,18 @@
   parent: BaseMechPart
   abstract: true
   components:
-  - type: Sprite
-    drawdepth: Items
-    noRot: false
-    sprite: Objects/Specific/Mech/ripley_construction.rsi
+    - type: Sprite
+      drawdepth: Items
+      noRot: false
+      sprite: Objects/Specific/Mech/ripley_construction.rsi
 
 - type: entity
   id: BaseRipleyPartItem
   parent: BaseRipleyPart
   abstract: true
   components:
-  - type: Item
-    size: Ginormous
+    - type: Item
+      size: Ginormous
 
 - type: entity
   parent: BaseRipleyPart
@@ -52,46 +51,46 @@
   name: ripley harness
   description: The core of the Ripley APLU.
   components:
-  - type: Appearance
-  - type: ItemMapper
-    mapLayers:
-      ripley_l_arm+o:
-        whitelist:
-          tags:
+    - type: Appearance
+    - type: ItemMapper
+      mapLayers:
+        ripley_l_arm+o:
+          whitelist:
+            tags:
+              - RipleyLArm
+        ripley_r_arm+o:
+          whitelist:
+            tags:
+              - RipleyRArm
+        ripley_l_leg+o:
+          whitelist:
+            tags:
+              - RipleyLLeg
+        ripley_r_leg+o:
+          whitelist:
+            tags:
+              - RipleyRLeg
+      sprite: Objects/Specific/Mech/ripley_construction.rsi
+    - type: ContainerContainer
+      containers:
+        mech-assembly-container: !type:Container
+        battery-container: !type:Container
+    - type: MechAssemblyVisuals
+      statePrefix: ripley
+    - type: Sprite
+      state: ripley_harness+o
+      noRot: true
+    - type: PartAssembly
+      parts:
+        Ripley:
           - RipleyLArm
-      ripley_r_arm+o:
-        whitelist:
-          tags:
           - RipleyRArm
-      ripley_l_leg+o:
-        whitelist:
-          tags:
           - RipleyLLeg
-      ripley_r_leg+o:
-        whitelist:
-          tags:
           - RipleyRLeg
-    sprite: Objects/Specific/Mech/ripley_construction.rsi
-  - type: ContainerContainer
-    containers:
-      mech-assembly-container: !type:Container
-      battery-container: !type:Container
-  - type: MechAssemblyVisuals
-    statePrefix: ripley
-  - type: Sprite
-    state: ripley_harness+o
-    noRot: true
-  - type: PartAssembly
-    parts:
-      Ripley:
-      - RipleyLArm
-      - RipleyRArm
-      - RipleyLLeg
-      - RipleyRLeg
-    containerId: mech-assembly-container
-  - type: Construction
-    graph: Ripley
-    node: start
+      containerId: mech-assembly-container
+    - type: Construction
+      graph: Ripley
+      node: start
 
 - type: entity
   parent: BaseRipleyPartItem
@@ -99,11 +98,11 @@
   name: ripley left arm
   description: The left arm of the Ripley APLU. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: ripley_l_arm
-  - type: Tag
-    tags:
-    - RipleyLArm
+    - type: Sprite
+      state: ripley_l_arm
+    - type: Tag
+      tags:
+        - RipleyLArm
 
 - type: entity
   parent: BaseRipleyPartItem
@@ -111,11 +110,11 @@
   name: ripley left leg
   description: The left leg of the Ripley APLU. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: ripley_l_leg
-  - type: Tag
-    tags:
-    - RipleyLLeg
+    - type: Sprite
+      state: ripley_l_leg
+    - type: Tag
+      tags:
+        - RipleyLLeg
 
 - type: entity
   parent: BaseRipleyPartItem
@@ -123,11 +122,11 @@
   name: ripley right leg
   description: The right leg of the Ripley APLU. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: ripley_r_leg
-  - type: Tag
-    tags:
-    - RipleyRLeg
+    - type: Sprite
+      state: ripley_r_leg
+    - type: Tag
+      tags:
+        - RipleyRLeg
 
 - type: entity
   parent: BaseRipleyPartItem
@@ -135,11 +134,11 @@
   name: ripley right arm
   description: The right arm of the Ripley APLU. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: ripley_r_arm
-  - type: Tag
-    tags:
-    - RipleyRArm
+    - type: Sprite
+      state: ripley_r_arm
+    - type: Tag
+      tags:
+        - RipleyRArm
 
 # H.O.N.K.
 
@@ -148,18 +147,18 @@
   id: BaseHonkerPart
   abstract: true
   components:
-  - type: Sprite
-    drawdepth: Items
-    noRot: false
-    sprite: Objects/Specific/Mech/honker_construction.rsi
+    - type: Sprite
+      drawdepth: Items
+      noRot: false
+      sprite: Objects/Specific/Mech/honker_construction.rsi
 
 - type: entity
   id: BaseHonkerPartItem
   parent: BaseHonkerPart
   abstract: true
   components:
-  - type: Item
-    size: Ginormous
+    - type: Item
+      size: Ginormous
 
 - type: entity
   parent: BaseHonkerPart
@@ -167,46 +166,46 @@
   name: H.O.N.K. harness
   description: The core of the H.O.N.K. mech
   components:
-  - type: Appearance
-  - type: ItemMapper
-    mapLayers:
-      honker_l_arm+o:
-        whitelist:
-          tags:
+    - type: Appearance
+    - type: ItemMapper
+      mapLayers:
+        honker_l_arm+o:
+          whitelist:
+            tags:
+              - HonkerLArm
+        honker_r_arm+o:
+          whitelist:
+            tags:
+              - HonkerRArm
+        honker_l_leg+o:
+          whitelist:
+            tags:
+              - HonkerLLeg
+        honker_r_leg+o:
+          whitelist:
+            tags:
+              - HonkerRLeg
+      sprite: Objects/Specific/Mech/honker_construction.rsi
+    - type: ContainerContainer
+      containers:
+        mech-assembly-container: !type:Container
+        battery-container: !type:Container
+    - type: MechAssemblyVisuals
+      statePrefix: honker
+    - type: Sprite
+      state: honker_harness+o
+      noRot: true
+    - type: PartAssembly
+      parts:
+        Honker:
           - HonkerLArm
-      honker_r_arm+o:
-        whitelist:
-          tags:
           - HonkerRArm
-      honker_l_leg+o:
-        whitelist:
-          tags:
           - HonkerLLeg
-      honker_r_leg+o:
-        whitelist:
-          tags:
           - HonkerRLeg
-    sprite: Objects/Specific/Mech/honker_construction.rsi
-  - type: ContainerContainer
-    containers:
-      mech-assembly-container: !type:Container
-      battery-container: !type:Container
-  - type: MechAssemblyVisuals
-    statePrefix: honker
-  - type: Sprite
-    state: honker_harness+o
-    noRot: true
-  - type: PartAssembly
-    parts:
-      Honker:
-      - HonkerLArm
-      - HonkerRArm
-      - HonkerLLeg
-      - HonkerRLeg
-    containerId: mech-assembly-container
-  - type: Construction
-    graph: Honker
-    node: start
+      containerId: mech-assembly-container
+    - type: Construction
+      graph: Honker
+      node: start
 
 - type: entity
   parent: BaseHonkerPartItem
@@ -214,11 +213,11 @@
   name: H.O.N.K. left arm
   description: A H.O.N.K. left arm, with unique sockets that accept odd weaponry designed by clown scientists.
   components:
-  - type: Sprite
-    state: honker_l_arm
-  - type: Tag
-    tags:
-    - HonkerLArm
+    - type: Sprite
+      state: honker_l_arm
+    - type: Tag
+      tags:
+        - HonkerLArm
 
 - type: entity
   parent: BaseHonkerPartItem
@@ -226,11 +225,11 @@
   name: H.O.N.K. left leg
   description: A H.O.N.K. left leg. The foot appears just large enough to fully accommodate a clown shoe.
   components:
-  - type: Sprite
-    state: honker_l_leg
-  - type: Tag
-    tags:
-    - HonkerLLeg
+    - type: Sprite
+      state: honker_l_leg
+    - type: Tag
+      tags:
+        - HonkerLLeg
 
 - type: entity
   parent: BaseHonkerPartItem
@@ -238,11 +237,11 @@
   name: H.O.N.K. right leg
   description: A H.O.N.K. right leg. The foot appears just large enough to fully accommodate a clown shoe.
   components:
-  - type: Sprite
-    state: honker_r_leg
-  - type: Tag
-    tags:
-    - HonkerRLeg
+    - type: Sprite
+      state: honker_r_leg
+    - type: Tag
+      tags:
+        - HonkerRLeg
 
 - type: entity
   parent: BaseHonkerPartItem
@@ -250,11 +249,11 @@
   name: H.O.N.K. right arm
   description: A H.O.N.K. right arm, with unique sockets that accept odd weaponry designed by clown scientists.
   components:
-  - type: Sprite
-    state: honker_r_arm
-  - type: Tag
-    tags:
-    - HonkerRArm
+    - type: Sprite
+      state: honker_r_arm
+    - type: Tag
+      tags:
+        - HonkerRArm
 
 # H.A.M.T.R.
 
@@ -263,18 +262,18 @@
   parent: BaseMechPart
   abstract: true
   components:
-  - type: Sprite
-    drawdepth: Items
-    noRot: false
-    sprite: Objects/Specific/Mech/hamtr_construction.rsi
+    - type: Sprite
+      drawdepth: Items
+      noRot: false
+      sprite: Objects/Specific/Mech/hamtr_construction.rsi
 
 - type: entity
   id: BaseHamtrPartItem
   parent: BaseHamtrPart
   abstract: true
   components:
-  - type: Item
-    size: Huge
+    - type: Item
+      size: Huge
 
 - type: entity
   parent: BaseHamtrPart
@@ -282,46 +281,46 @@
   name: HAMTR harness
   description: The core of the HAMTR.
   components:
-  - type: Appearance
-  - type: ItemMapper
-    mapLayers:
-      hamtr_l_arm+o:
-        whitelist:
-          tags:
+    - type: Appearance
+    - type: ItemMapper
+      mapLayers:
+        hamtr_l_arm+o:
+          whitelist:
+            tags:
+              - HamtrLArm
+        hamtr_r_arm+o:
+          whitelist:
+            tags:
+              - HamtrRArm
+        hamtr_l_leg+o:
+          whitelist:
+            tags:
+              - HamtrLLeg
+        hamtr_r_leg+o:
+          whitelist:
+            tags:
+              - HamtrRLeg
+      sprite: Objects/Specific/Mech/hamtr_construction.rsi
+    - type: ContainerContainer
+      containers:
+        mech-assembly-container: !type:Container
+        battery-container: !type:Container
+    - type: MechAssemblyVisuals
+      statePrefix: hamtr
+    - type: Sprite
+      state: hamtr_harness+o
+      noRot: true
+    - type: PartAssembly
+      parts:
+        Hamtr:
           - HamtrLArm
-      hamtr_r_arm+o:
-        whitelist:
-          tags:
           - HamtrRArm
-      hamtr_l_leg+o:
-        whitelist:
-          tags:
           - HamtrLLeg
-      hamtr_r_leg+o:
-        whitelist:
-          tags:
           - HamtrRLeg
-    sprite: Objects/Specific/Mech/hamtr_construction.rsi
-  - type: ContainerContainer
-    containers:
-      mech-assembly-container: !type:Container
-      battery-container: !type:Container
-  - type: MechAssemblyVisuals
-    statePrefix: hamtr
-  - type: Sprite
-    state: hamtr_harness+o
-    noRot: true
-  - type: PartAssembly
-    parts:
-      Hamtr:
-      - HamtrLArm
-      - HamtrRArm
-      - HamtrLLeg
-      - HamtrRLeg
-    containerId: mech-assembly-container
-  - type: Construction
-    graph: Hamtr
-    node: start
+      containerId: mech-assembly-container
+    - type: Construction
+      graph: Hamtr
+      node: start
 
 - type: entity
   parent: BaseHamtrPartItem
@@ -329,11 +328,11 @@
   name: HAMTR left arm
   description: The left arm of the HAMTR. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: hamtr_l_arm
-  - type: Tag
-    tags:
-    - HamtrLArm
+    - type: Sprite
+      state: hamtr_l_arm
+    - type: Tag
+      tags:
+        - HamtrLArm
 
 - type: entity
   parent: BaseHamtrPartItem
@@ -341,11 +340,11 @@
   name: HAMTR left leg
   description: The left leg of the HAMTR. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: hamtr_l_leg
-  - type: Tag
-    tags:
-    - HamtrLLeg
+    - type: Sprite
+      state: hamtr_l_leg
+    - type: Tag
+      tags:
+        - HamtrLLeg
 
 - type: entity
   parent: BaseHamtrPartItem
@@ -353,11 +352,11 @@
   name: HAMTR right leg
   description: The right leg of the HAMTR. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: hamtr_r_leg
-  - type: Tag
-    tags:
-    - HamtrRLeg
+    - type: Sprite
+      state: hamtr_r_leg
+    - type: Tag
+      tags:
+        - HamtrRLeg
 
 - type: entity
   parent: BaseHamtrPartItem
@@ -365,11 +364,11 @@
   name: HAMTR right arm
   description: The right arm of the HAMTR. It belongs on the chassis of the mech.
   components:
-  - type: Sprite
-    state: hamtr_r_arm
-  - type: Tag
-    tags:
-    - HamtrRArm
+    - type: Sprite
+      state: hamtr_r_arm
+    - type: Tag
+      tags:
+        - HamtrRArm
 
 # Vim!!!!!!
 
@@ -378,18 +377,18 @@
   id: BaseVimPart
   abstract: true
   components:
-  - type: Sprite
-    drawdepth: Items
-    noRot: false
-    sprite: Objects/Specific/Mech/vim_construction.rsi
+    - type: Sprite
+      drawdepth: Items
+      noRot: false
+      sprite: Objects/Specific/Mech/vim_construction.rsi
 
 - type: entity
   parent: BaseVimPart
   id: BaseVimPartItem
   abstract: true
   components:
-  - type: Item
-    size: Small
+    - type: Item
+      size: Small
 
 - type: entity
   parent: BaseVimPartItem
@@ -397,37 +396,37 @@
   name: vim harness
   description: A small mounting bracket for vim parts.
   components:
-  - type: Appearance
-  - type: ItemMapper
-    mapLayers:
-      helmet:
-        whitelist:
-          tags:
+    - type: Appearance
+    - type: ItemMapper
+      mapLayers:
+        helmet:
+          whitelist:
+            tags:
+              - HelmetEVA
+        left_leg:
+          whitelist:
+            tags:
+              - BorgLeg
+        right_leg:
+          whitelist:
+            tags:
+              - BorgLeg
+      sprite: Objects/Specific/Mech/vim_construction.rsi
+    - type: ContainerContainer
+      containers:
+        mech-assembly-container: !type:Container
+        battery-container: !type:Container
+    - type: PartAssembly
+      parts:
+        Vim:
           - HelmetEVA
-      left_leg:
-        whitelist:
-          tags:
           - BorgLeg
-      right_leg:
-        whitelist:
-          tags:
           - BorgLeg
-    sprite: Objects/Specific/Mech/vim_construction.rsi
-  - type: ContainerContainer
-    containers:
-      mech-assembly-container: !type:Container
-      battery-container: !type:Container
-  - type: PartAssembly
-    parts:
-      Vim:
-      - HelmetEVA
-      - BorgLeg
-      - BorgLeg
-    containerId: mech-assembly-container
-  - type: Sprite
-    state: harness
-    noRot: true
-  - type: Construction
-    graph: Vim
-    node: start
-    defaultTarget: vim
+      containerId: mech-assembly-container
+    - type: Sprite
+      state: harness
+      noRot: true
+    - type: Construction
+      graph: Vim
+      node: start
+      defaultTarget: vim

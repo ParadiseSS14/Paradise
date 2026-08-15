@@ -33,8 +33,7 @@
     # Pick a new idle spot near the follow target
     - tasks:
         - !type:HTNPrimitiveTask
-          operator: !type:PickAccessibleOperator
-            # originKey: FollowTarget
+          operator: !type:PickAccessibleOperator # originKey: FollowTarget
             rangeKey: FollowCloseRange
             targetCoordinates: FollowIdleTarget
 

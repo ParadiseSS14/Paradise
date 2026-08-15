@@ -22,7 +22,7 @@ namespace Content.Shared.Whitelist;
 ///   - FirelockElectronics
 ///   components:
 ///   - Buckle
-///   - AsteroidRock
+///   - BaseRock
 ///   sizes:
 ///   - Tiny
 ///   - Large

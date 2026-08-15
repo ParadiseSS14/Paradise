@@ -1,7 +1,8 @@
-<Control xmlns="https://spacestation14.io">
+<Control xmlns="https://spacestation14.io"
+         xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls">
     <BoxContainer Orientation="Horizontal" >
         <LineEdit Name="DayLineEdit" PlaceHolder="{Loc 'datepicker-day'}" Margin="4 4" MinWidth="38" />
-        <OptionButton Name="MonthOptionButton" Margin="4 4" MinWidth="120" />
+        <controls:TguiOptionButton Name="MonthOptionButton" Margin="4 4" MinWidth="120" />
         <LineEdit Name="YearLineEdit" PlaceHolder="{Loc 'datepicker-year'}" Margin="4 4" MinWidth="55" />
     </BoxContainer>
 </Control>

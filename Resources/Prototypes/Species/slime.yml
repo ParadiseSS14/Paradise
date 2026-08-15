@@ -7,9 +7,9 @@
   dollPrototype: AppearanceSlimePerson
   skinColoration: Hues
   defaultSoundsBySex:
-  - MaleSlime
-  - FemaleSlime
-  - MaleSlime
+    - MaleSlime
+    - FemaleSlime
+    - MaleSlime
   voices:
-  - MaleSlime
-  - FemaleSlime
+    - MaleSlime
+    - FemaleSlime

@@ -57,7 +57,6 @@ public sealed partial class SprayPainterGroup : BoxContainer
         box.AddChild(protoView);
         box.AddChild(label);
         button.AddChild(box);
-        button.AddStyleClass(ListContainer.StyleClassListContainerButton);
         button.OnPressed += _ => OnButtonPressed?.Invoke(spriteListData);
 
         if (spriteListData.SelectedIndex == button.Index)

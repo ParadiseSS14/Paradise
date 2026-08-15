@@ -5,28 +5,27 @@
   name: storage tank
   description: A liquids storage tank.
   components:
-  - type: Animateable
-  - type: Sprite
-    noRot: true
-  - type: InteractionOutline
-  - type: Physics
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.4,-0.4,0.4,0.4"
-        density: 155
-        mask:
-        - MachineMask
-        layer:
-        - MachineLayer
-        - InteractImpassable
-  - type: DrainableSolution
-    solution: tank
-  - type: ReagentTank
-  - type: Transform
-    noRot: true
+    - type: Animateable
+    - type: Sprite
+      noRot: true
+    - type: InteractionOutline
+    - type: Physics
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.4,-0.4,0.4,0.4"
+          density: 155
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+            - InteractImpassable
+    - type: DrainableSolution
+      solution: tank
+    - type: ReagentTank
+    - type: Transform
+      noRot: true
 
 - type: entity
   abstract: true
@@ -35,37 +34,34 @@
   name: storage tank
   description: A liquids storage tank.
   components:
-  - type: Damageable
-    damageModifierSet: Metallic
-  - type: Injurable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Heat
-        damage: 5
-      behaviors:
-      - !type:SolutionExplosionBehavior
-        solution: tank
-    - trigger:
-        !type:DamageTypeTrigger
-        damageType: Piercing
-        damage: 5
-      behaviors:
-      - !type:SolutionExplosionBehavior
-        solution: tank
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:SpillBehavior
-        solution: tank
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
+    - type: Damageable
+      damageModifierSet: Metallic
+    - type: Injurable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTypeTrigger
+            damageType: Heat
+            damage: 5
+          behaviors:
+            - !type:SolutionExplosionBehavior
+              solution: tank
+        - trigger: !type:DamageTypeTrigger
+            damageType: Piercing
+            damage: 5
+          behaviors:
+            - !type:SolutionExplosionBehavior
+              solution: tank
+        - trigger: !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:SpillBehavior
+              solution: tank
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
 
 # For highcap tanks
 - type: entity
@@ -73,14 +69,13 @@
   parent: [SolutionTank, Solution3840, StorageTank]
   id: StorageTankBig
   components:
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.4,-0.4,0.4,0.4"
-        density: 455 #very heavy, they store 10k units of reagents after all.
-        mask:
-        - MachineMask
-        layer:
-        - WallLayer
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.4,-0.4,0.4,0.4"
+          density: 455 #very heavy, they store 10k units of reagents after all.
+          mask:
+            - MachineMask
+          layer:
+            - WallLayer

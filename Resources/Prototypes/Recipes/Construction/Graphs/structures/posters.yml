@@ -2,25 +2,25 @@
   id: PosterGraph
   start: start
   graph:
-  - node: start
-    edges:
-    - to: tornPoster
-      steps:
-      - tool: Brushing
-        doAfter: 2
-      completed:
-      - !type:PlaySound
-        sound:
-          path: /Audio/Effects/poster_broken.ogg
+    - node: start
+      edges:
+        - to: tornPoster
+          steps:
+            - tool: Brushing
+              doAfter: 2
+          completed:
+            - !type:PlaySound
+              sound:
+                path: /Audio/Effects/poster_broken.ogg
 
-  - node: tornPoster
-    entity: PosterBroken
-    edges:
-    - to: removed
-      steps:
-      - tool: Brushing
-        doAfter: 2
+    - node: tornPoster
+      entity: PosterBroken
+      edges:
+        - to: removed
+          steps:
+            - tool: Brushing
+              doAfter: 2
 
-  - node: removed
-    actions:
-    - !type:DestroyEntity {}
+    - node: removed
+      actions:
+        - !type:DestroyEntity {}

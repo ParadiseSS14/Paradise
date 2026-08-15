@@ -2,28 +2,28 @@
   id: BaseStationTile
   abstract: true
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   footstepSounds:
     collection: FootstepFloor
   heatCapacity: 10000
   baseTurf: Plating
   baseWhitelist:
-  - PlatingBrass
-  - FloorAsteroidIronsand
-  - FloorAsteroidSand
-  - FloorAsteroidSandBorderless
-  - FloorAsteroidIronsandBorderless
-  - FloorAsteroidSandRedBorderless
-  - PlatingAsteroid
-  - PlatingSnow
-  - FloorPlanetDirt
-  - FloorDesert
-  - FloorLowDesert
-  - FloorPlanetGrass
-  - FloorSnow
-  - FloorDirt
-  - PlatingRCD
-  - FloorHullReinforced
+    - PlatingBrass
+    - FloorAsteroidIronsand
+    - FloorAsteroidSand
+    - FloorAsteroidSandBorderless
+    - FloorAsteroidIronsandBorderless
+    - FloorAsteroidSandRedBorderless
+    - PlatingAsteroid
+    - PlatingSnow
+    - FloorPlanetDirt
+    - FloorDesert
+    - FloorLowDesert
+    - FloorPlanetGrass
+    - FloorSnow
+    - FloorDirt
+    - PlatingRCD
+    - FloorHullReinforced
 
 - type: tile
   id: FloorSteel
@@ -860,7 +860,6 @@
   variants: 4
   itemDrop: FloorTileItemShuttleRed
 
-
 # Materials
 - type: tile
   id: FloorGold
@@ -1018,19 +1017,19 @@
   sprite: /Textures/Tiles/Asteroid/asteroid.png
   variants: 13
   placementVariants:
-  - 0.8
-  - 0.0166 #Should be roughly 20%.... I think??? I don't know dude, I'm just a YAML monkey.
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0116
-  - 0.0116
+    - 0.8
+    - 0.0166 #Should be roughly 20%.... I think??? I don't know dude, I'm just a YAML monkey.
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0116
+    - 0.0116
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1085,19 +1084,19 @@
   sprite: /Textures/Tiles/Asteroid/asteroid_red.png
   variants: 13
   placementVariants:
-  - 0.8
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0166
-  - 0.0116
-  - 0.0116
+    - 0.8
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0166
+    - 0.0116
+    - 0.0116
   baseTurf: Space
   isSubfloor: true
   footstepSounds:
@@ -1126,7 +1125,7 @@
   sprite: /Textures/Tiles/Asteroid/asteroid_tile.png
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   footstepSounds:
     collection: FootstepAsteroid
   heatCapacity: 10000
@@ -1348,25 +1347,25 @@
     East: /Textures/Tiles/Planet/Grass/double_edge.png
     North: /Textures/Tiles/Planet/Grass/double_edge.png
     West: /Textures/Tiles/Planet/Grass/double_edge.png
-  deconstructTools: [ Cutting ]
+  deconstructTools: [Cutting]
   footstepSounds:
     collection: FootstepGrass
   itemDrop: FloorTileItemAstroGrass
 
 - type: tile
   id: FloorMowedAstroGrass
-  parent: [ BaseStationTile, FloorGrass ]
+  parent: [BaseStationTile, FloorGrass]
   name: tiles-mowed-astro-grass
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [Cutting]
   itemDrop: FloorTileItemMowedAstroGrass
 
 - type: tile
   id: FloorJungleAstroGrass
-  parent: [ BaseStationTile, FloorGrassJungle ]
+  parent: [BaseStationTile, FloorGrassJungle]
   name: tiles-jungle-astro-grass
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [Cutting]
   itemDrop: FloorTileItemJungleAstroGrass
 
 - type: tile
@@ -1375,7 +1374,7 @@
   name: tiles-dark-astro-grass
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [Cutting]
   itemDrop: FloorTileItemDarkAstroGrass
 
 - type: tile
@@ -1384,7 +1383,7 @@
   name: tiles-light-astro-grass
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Cutting ]
+  deconstructTools: [Cutting]
   itemDrop: FloorTileItemLightAstroGrass
 
 # Ice
@@ -1400,28 +1399,28 @@
 
 - type: tile
   id: FloorAstroSnow
-  parent: [ BaseStationTile, FloorSnow ]
+  parent: [BaseStationTile, FloorSnow]
   name: tiles-astro-snow
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   itemDrop: FloorTileItemAstroSnow
 
 # Asteroid Sand
 - type: tile
   id: FloorAstroAsteroidSand
-  parent: [ BaseStationTile, FloorAsteroidSand ]
+  parent: [BaseStationTile, FloorAsteroidSand]
   name: tiles-astro-asteroid-sand
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   itemDrop: FloorTileItemAstroAsteroidSand
   weather: false
 
 - type: tile
   id: FloorAstroAsteroidSandBorderless
-  parent: [ BaseStationTile, FloorAsteroidSandBorderless ]
+  parent: [BaseStationTile, FloorAsteroidSandBorderless]
   name: tiles-astro-asteroid-sand-borderless
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   itemDrop: FloorTileItemAstroAsteroidSand
   weather: false
 
@@ -1431,7 +1430,7 @@
   name: tiles-desert-astro-sand
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   itemDrop: FloorTileItemDesertAstroSand
   weather: false
 
@@ -1441,7 +1440,7 @@
   parent: FloorAsteroidIronsand
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   itemDrop: FloorTileItemAstroIronsand
   weather: false
 
@@ -1451,7 +1450,7 @@
   parent: FloorAsteroidIronsandBorderless
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   itemDrop: FloorTileItemAstroIronsandBorderless
   weather: false
 
@@ -1473,7 +1472,7 @@
   sprite: /Textures/Tiles/exoborg.png
   baseTurf: Plating
   isSubfloor: false
-  deconstructTools: [ Prying ]
+  deconstructTools: [Prying]
   footstepSounds:
     collection: FootstepHull
   itemDrop: FloorTileItemXenoborg

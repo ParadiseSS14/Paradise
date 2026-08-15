@@ -9,33 +9,19 @@ namespace Content.Client.PDA;
 [GenerateTypedNameReferences]
 public sealed partial class PdaProgramItem : ContainerButton
 {
-    public const string StylePropertyBgColor = "backgroundColor";
-    public const string NormalBgColor = "#313138";
-    public const string HoverColor = "#3E6C45";
-
     private Entity<CartridgeComponent> _cartridge;
 
     public event Action<EntityUid>? OnProgramItemPressed;
     public event Action<EntityUid>? OnUninstallButtonPressed;
     public event Action<EntityUid>? OnInstallButtonPressed;
 
-    private readonly StyleBoxFlat _styleBox = new()
-    {
-        BackgroundColor = Color.FromHex("#25252a"),
-    };
 
-    public Color BackgroundColor
-    {
-        get => _styleBox.BackgroundColor;
-        set => _styleBox.BackgroundColor = value;
-    }
 
     public PdaProgramItem(Entity<CartridgeComponent> program)
     {
         RobustXamlLoader.Load(this);
 
         SetCartridge(program);
-        Panel.PanelOverride = _styleBox;
 
         OnPressed += OnSelfPressed;
         InstallButton.OnPressed += OnInstallPressed;
@@ -68,14 +54,12 @@ public sealed partial class PdaProgramItem : ContainerButton
     {
         base.Draw(handle);
 
-        if (TryGetStyleProperty<Color>(StylePropertyBgColor, out var bgColor))
-            BackgroundColor = bgColor;
     }
 
     public void SetCartridge(Entity<CartridgeComponent> program)
     {
-        if (program.Comp.Icon is { } icon)
-            Icon.SetFromSpriteSpecifier(icon);
+        // if (program.Comp.Icon is { } icon)
+        //     Icon.SetFromSpriteSpecifier(icon);
 
         _cartridge = program;
         ProgramName.Text = Loc.GetString(program.Comp.ProgramName);

@@ -24,40 +24,40 @@
   icon: "JobIconHeadOfPersonnel"
   supervisors: job-supervisors-captain
   access:
-  - Command
-  - HeadOfPersonnel
-  - Bar
-  - Service
-  - Maintenance
-  - Janitor
-  - Theatre
-  - Kitchen
-  - Chapel
-  - Hydroponics
-  - External
-  - Cryogenics
-  # I mean they'll give themselves the rest of the access levels *anyways*.
-  # As of 15/03/23 they can't do that so here's MOST of the rest of the access levels.
-  # Head level access that isn't their own was deliberately left out, get AA from the captain instead.
-  - Chemistry
-  - Engineering
-  - Research
-  - Detective
-  - Salvage
-  - Security
-  - Brig
-  - Lawyer
-  - Cargo
-  - Atmospherics
-  - Medical
-  - GenpopEnter
-  - GenpopLeave
+    - Command
+    - HeadOfPersonnel
+    - Bar
+    - Service
+    - Maintenance
+    - Janitor
+    - Theatre
+    - Kitchen
+    - Chapel
+    - Hydroponics
+    - External
+    - Cryogenics
+    # I mean they'll give themselves the rest of the access levels *anyways*.
+    # As of 15/03/23 they can't do that so here's MOST of the rest of the access levels.
+    # Head level access that isn't their own was deliberately left out, get AA from the captain instead.
+    - Chemistry
+    - Engineering
+    - Research
+    - Detective
+    - Salvage
+    - Security
+    - Brig
+    - Lawyer
+    - Cargo
+    - Atmospherics
+    - Medical
+    - GenpopEnter
+    - GenpopLeave
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
-  - !type:AddComponentSpecial
-    components:
-      - type: CommandStaff
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
+    - !type:AddComponentSpecial
+      components:
+        - type: CommandStaff
 
 - type: startingGear
   id: HoPGear
@@ -70,7 +70,7 @@
     eyes: ClothingEyesHudCommand
   storage:
     back:
-    - Flash
+      - Flash
 
 - type: chameleonOutfit
   id: HeadOfPersonnelChameleonOutfit
@@ -82,4 +82,3 @@
     mask: ClothingMaskNeckGaiterRed
     neck: ClothingNeckCloakHop
     outerClothing: ClothingOuterWinterHoP
-

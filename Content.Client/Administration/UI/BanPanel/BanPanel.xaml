@@ -1,6 +1,7 @@
-<DefaultWindow
+<controls:FancyWindow
     xmlns="https://spacestation14.io"
     xmlns:cc="clr-namespace:Content.Client.Administration.UI.CustomControls"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Title="{Loc ban-panel-title}" MinSize="410 500">
     <BoxContainer Orientation="Vertical">
         <TabContainer Name="Tabs" VerticalExpand="True">
@@ -25,15 +26,15 @@
                 <CheckBox Name="EraseCheckbox" Margin="2" Text="{Loc ban-panel-erase}" Pressed="False" />
                 <BoxContainer Orientation="Horizontal" Margin="2">
                     <LineEdit Name="TimeLine" MaxWidth="150" MinWidth="70" PlaceHolder="0" />
-                    <OptionButton Name="MultiplierOption" />
+                    <controls:TguiOptionButton Name="MultiplierOption" />
                     <Control MinWidth="50" />
                     <Label Name="ExpiresLabel" />
                 </BoxContainer>
                 <BoxContainer Orientation="Horizontal" Margin="4">
-                    <OptionButton Name="TypeOption" />
+                    <controls:TguiOptionButton Name="TypeOption" />
                     <Control MinWidth="30" />
                     <Label Text="{Loc ban-panel-severity}" />
-                    <OptionButton Name="SeverityOption" />
+                    <controls:TguiOptionButton Name="SeverityOption" />
                 </BoxContainer>
                 <cc:HSeparator Margin="1"/>
                 <TextEdit Name="ReasonTextEdit" MinHeight="100" VerticalExpand="True" HorizontalExpand="True" />
@@ -47,4 +48,4 @@
         </TabContainer>
         <Button Name="SubmitButton" Text="{Loc ban-panel-submit}" HorizontalExpand="True" />
     </BoxContainer>
-</DefaultWindow>
+</controls:FancyWindow>

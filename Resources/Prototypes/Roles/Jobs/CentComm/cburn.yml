@@ -8,12 +8,12 @@
   icon: "JobIconCBURN"
   supervisors: job-supervisors-centcom
   accessGroups:
-  - AllAccess
+    - AllAccess
   access:
-  - CentralCommand
+    - CentralCommand
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant, DeathRattleImplantCentcomm]
 
 - type: startingGear
   id: CBURNGear
@@ -32,11 +32,11 @@
     belt: ClothingBeltBandolier
   storage:
     back:
-    - WeaponShotgunDoubleBarreled
-    - BoxShotgunIncendiary
-    - GrenadeFlashBang
-    - PillAmbuzolPlus
-    - PillAmbuzol
+      - WeaponShotgunDoubleBarreled
+      - BoxShotgunIncendiary
+      - GrenadeFlashBang
+      - PillAmbuzolPlus
+      - PillAmbuzol
 
 - type: chameleonOutfit
   id: CBURNChameleonOutfit

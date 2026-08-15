@@ -7,16 +7,16 @@
   id: LeavesCannabis
   description: "Recently legalized in most galaxies."
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/cannabis.rsi
-  - type: Produce
-    plantId: CannabisPlants
-  - type: Edible # Precursor to the one true edible
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: THC
-        Quantity: 15
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cannabis.rsi
+    - type: Produce
+      plantId: CannabisPlants
+    - type: Edible # Precursor to the one true edible
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: THC
+            Quantity: 15
 
 - type: entity
   name: dried cannabis leaves
@@ -24,12 +24,12 @@
   id: LeavesCannabisDried
   description: "Dried cannabis leaves, ready to be ground."
   components:
-  - type: Stack
-    stackType: LeavesCannabisDried
-    count: 1
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/tobacco.rsi
-    state: dried
+    - type: Stack
+      stackType: LeavesCannabisDried
+      count: 1
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/tobacco.rsi
+      state: dried
 
 - type: entity
   name: ground cannabis
@@ -37,26 +37,26 @@
   id: GroundCannabis
   description: "Ground cannabis, ready to take you on a trip."
   components:
-  - type: Stack
-    stackType: GroundCannabis
-    count: 1
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: THC
-        Quantity: 30 # Takes 2 dried leaves to make one ground cannabis.
-  - type: Sprite
-    sprite: Objects/Misc/reagent_fillings.rsi
-    state: powderpile
-    color: darkgreen
-  - type: Construction
-    graph: smokeableGroundCannabis
-    node: ground
-  - type: Tag
-    tags:
-      - Smokable
-  - type: Item
-    size: Tiny
+    - type: Stack
+      stackType: GroundCannabis
+      count: 1
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: THC
+            Quantity: 30 # Takes 2 dried leaves to make one ground cannabis.
+    - type: Sprite
+      sprite: Objects/Misc/reagent_fillings.rsi
+      state: powderpile
+      color: darkgreen
+    - type: Construction
+      graph: smokeableGroundCannabis
+      node: ground
+    - type: Tag
+      tags:
+        - Smokable
+    - type: Item
+      size: Tiny
 
 - type: entity
   name: rainbow cannabis leaves
@@ -64,34 +64,34 @@
   id: LeavesCannabisRainbow
   description: "Is it supposed to be glowing like that...?"
   components:
-  - type: Sprite
-    layers:
-    - sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
-      state: produce
-      shader: unshaded
-  - type: Produce
-    plantId: RainbowCannabisPlants
-  # disabled because 50 morbillion point lights still break the lighting engine
-  #- type: PointLight
-  #  radius: 1.5
-  #  energy: 2
-  #- type: RgbLightController
-  #  cycleRate: 0.6
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: SpaceDrugs
-        Quantity: 6
-      - ReagentId: Lipolicide
-        Quantity: 3
-      - ReagentId: MindbreakerToxin
-        Quantity: 2
-      - ReagentId: Happiness
-        Quantity: 2
-#       - ReagentId: ColorfulReagent
-#         Quantity: 1
-      - ReagentId: Psicodine
-        Quantity: 1
+    - type: Sprite
+      layers:
+        - sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+          state: produce
+          shader: unshaded
+    - type: Produce
+      plantId: RainbowCannabisPlants
+    # disabled because 50 morbillion point lights still break the lighting engine
+    #- type: PointLight
+    #  radius: 1.5
+    #  energy: 2
+    #- type: RgbLightController
+    #  cycleRate: 0.6
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: SpaceDrugs
+            Quantity: 6
+          - ReagentId: Lipolicide
+            Quantity: 3
+          - ReagentId: MindbreakerToxin
+            Quantity: 2
+          - ReagentId: Happiness
+            Quantity: 2
+          #       - ReagentId: ColorfulReagent
+          #         Quantity: 1
+          - ReagentId: Psicodine
+            Quantity: 1
 
 - type: entity
   name: dried rainbow cannabis leaves
@@ -99,12 +99,12 @@
   id: LeavesCannabisRainbowDried
   description: "Dried rainbow cannabis leaves, ready to be ground."
   components:
-  - type: Stack
-    stackType: LeavesCannabisRainbowDried
-    count: 1
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
-    state: dried
+    - type: Stack
+      stackType: LeavesCannabisRainbowDried
+      count: 1
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+      state: dried
 
 - type: entity
   name: ground rainbow cannabis
@@ -112,31 +112,31 @@
   id: GroundCannabisRainbow
   description: "Ground rainbow cannabis, ready to take you on a trip."
   components:
-  - type: Stack
-    stackType: GroundCannabisRainbow
-    count: 1
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: SpaceDrugs
-        Quantity: 12
-      - ReagentId: Lipolicide
-        Quantity: 6
-      - ReagentId: MindbreakerToxin
-        Quantity: 4
-      - ReagentId: Happiness
-        Quantity: 4
-#       - ReagentId: ColorfulReagent
-#         Quantity: 2
-      - ReagentId: Psicodine
-        Quantity: 2
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
-    state: powderpile_rainbow
-    color: white
-  - type: Construction
-    graph: smokeableGroundCannabisRainbow
-    node: groundRainbow
+    - type: Stack
+      stackType: GroundCannabisRainbow
+      count: 1
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: SpaceDrugs
+            Quantity: 12
+          - ReagentId: Lipolicide
+            Quantity: 6
+          - ReagentId: MindbreakerToxin
+            Quantity: 4
+          - ReagentId: Happiness
+            Quantity: 4
+          #       - ReagentId: ColorfulReagent
+          #         Quantity: 2
+          - ReagentId: Psicodine
+            Quantity: 2
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/rainbow_cannabis.rsi
+      state: powderpile_rainbow
+      color: white
+    - type: Construction
+      graph: smokeableGroundCannabisRainbow
+      node: groundRainbow
 
 - type: entity
   name: tea leaves
@@ -144,15 +144,15 @@
   id: LeavesTea
   description: "Can be dried out to make tea."
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/tea_plant.rsi
-  - type: Produce
-    plantId: TeaPlantPlants
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Vitamin
-        Quantity: 15
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/tea_plant.rsi
+    - type: Produce
+      plantId: TeaPlantPlants
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Vitamin
+            Quantity: 15
 
 - type: entity
   name: dried tea leaves
@@ -160,16 +160,16 @@
   id: LeavesTeaDried
   description: "Dried tea leaves, ready to be ground."
   components:
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Vitamin
-        Quantity: 10
-      - ReagentId: TeaPowder # Convert some of the Vitamin to Tea
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/tea_plant.rsi
-    state: dried
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Vitamin
+            Quantity: 10
+          - ReagentId: TeaPowder # Convert some of the Vitamin to Tea
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/tea_plant.rsi
+      state: dried
 
 - type: entity
   name: tobacco leaves
@@ -177,15 +177,15 @@
   id: LeavesTobacco
   description: "Dry them out to make some smokes."
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/tobacco.rsi
-  - type: Produce
-    plantId: TobaccoPlants
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nicotine
-        Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/tobacco.rsi
+    - type: Produce
+      plantId: TobaccoPlants
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nicotine
+            Quantity: 5
 
 - type: entity
   name: dried tobacco leaves
@@ -193,12 +193,12 @@
   id: LeavesTobaccoDried
   description: "Dried tobacco leaves, ready to be ground."
   components:
-  - type: Stack
-    stackType: LeavesTobaccoDried
-    count: 1
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/tobacco.rsi
-    state: dried
+    - type: Stack
+      stackType: LeavesTobaccoDried
+      count: 1
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/tobacco.rsi
+      state: dried
 
 - type: entity
   name: ground tobacco
@@ -206,23 +206,23 @@
   id: GroundTobacco
   description: "Ground tobacco, perfect for hand-rolled cigarettes."
   components:
-  - type: Stack
-    stackType: GroundTobacco
-    count: 1
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nicotine
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Misc/reagent_fillings.rsi
-    state: powderpile
-    color: brown
-  - type: Construction
-    graph: smokeableGroundTobacco
-    node: ground
-  - type: Tag
-    tags:
-      - Smokable
-  - type: Item
-    size: Tiny
+    - type: Stack
+      stackType: GroundTobacco
+      count: 1
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nicotine
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Misc/reagent_fillings.rsi
+      state: powderpile
+      color: brown
+    - type: Construction
+      graph: smokeableGroundTobacco
+      node: ground
+    - type: Tag
+      tags:
+        - Smokable
+    - type: Item
+      size: Tiny

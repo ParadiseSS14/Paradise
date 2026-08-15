@@ -6,32 +6,32 @@
   parent: [SolutionFood, SolutionTiny, BaseItem] # Produce should be less efficient volume wise
   id: ProduceBase
   components:
-  - type: Sprite
-    state: produce
-  - type: Produce
-  - type: PotencyVisuals
-  - type: Appearance
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 10
-      - ReagentId: Vitamin
-        Quantity: 5
-  - type: Extractable
-    grindableSolutionName: food
+    - type: Sprite
+      state: produce
+    - type: Produce
+    - type: PotencyVisuals
+    - type: Appearance
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 5
+    - type: Extractable
+      grindableSolutionName: food
 
 - type: entity
   abstract: true
   parent: ProduceBase
   id: ProduceBaseRuminant
   components:
-  # let cows eat raw produce like wheat and oats
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: Tag
-    tags:
-    - Ruminant
+    # let cows eat raw produce like wheat and oats
+    - type: Edible
+      requiresSpecialDigestion: true
+    - type: Tag
+      tags:
+        - Ruminant
 
 # For produce that can be immediately eaten
 
@@ -40,13 +40,13 @@
   id: FoodProduceBase
   abstract: true
   components:
-  - type: Sprite
-    state: produce
-  - type: Produce
-  - type: PotencyVisuals
-  - type: Appearance
-  - type: Extractable
-    grindableSolutionName: food
+    - type: Sprite
+      state: produce
+    - type: Produce
+    - type: PotencyVisuals
+    - type: Appearance
+    - type: Extractable
+      grindableSolutionName: food
 
 # Subclasses
 
@@ -56,21 +56,21 @@
   name: wheat bushel
   description: Sigh... wheat... a-grain?
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/wheat.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Flour
-        Quantity: 15
-  - type: Produce
-    plantId: WheatPlants
-  - type: Tag
-    tags:
-    - Wheat
-    - Ruminant
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/wheat.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Flour
+            Quantity: 15
+    - type: Produce
+      plantId: WheatPlants
+    - type: Tag
+      tags:
+        - Wheat
+        - Ruminant
 
 - type: entity
   parent: ProduceBaseRuminant
@@ -78,22 +78,22 @@
   name: meatwheat bushel
   description: Some blood-drenched wheat stalks. You can crush them into what passes for meat if you squint hard enough.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/meatwheat.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: UncookedAnimalProteins
-        Quantity: 15
-  - type: SpawnItemsOnUse
-    items:
-      - id: FoodMeatWheat
-    sound:
-      path: /Audio/Voice/Slime/slime_squish.ogg
-  - type: Produce
-    plantId: MeatWheatPlants
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/meatwheat.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: UncookedAnimalProteins
+            Quantity: 15
+    - type: SpawnItemsOnUse
+      items:
+        - id: FoodMeatWheat
+      sound:
+        path: /Audio/Voice/Slime/slime_squish.ogg
+    - type: Produce
+      plantId: MeatWheatPlants
 
 - type: entity
   parent: ProduceBaseRuminant
@@ -101,22 +101,22 @@
   name: oat bushel
   description: Eat oats, do squats.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/oat.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Oats
-        Quantity: 15
-  - type: Produce
-    plantId: OatPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MilkOat
-        Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/oat.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Oats
+            Quantity: 15
+    - type: Produce
+      plantId: OatPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: MilkOat
+            Quantity: 5
 
 - type: entity
   parent: ProduceBaseRuminant
@@ -124,17 +124,17 @@
   name: sugarcane
   description: Sickly sweet.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/sugarcane.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Sugar
-        Quantity: 15
-  - type: Produce
-    plantId: SugarcanePlants
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/sugarcane.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Sugar
+            Quantity: 15
+    - type: Produce
+      plantId: SugarcanePlants
 
 - type: entity
   parent: [ProduceBase, BaseSlicingRefinable]
@@ -142,16 +142,16 @@
   name: papercane roll
   description: Why do we even need to grow paper?
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/papercane.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: PapercanePlants
-  - type: ToolRefinable
-    refineResult:
-    - id: SheetPaper1
-      amount: 2
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/papercane.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: PapercanePlants
+    - type: ToolRefinable
+      refineResult:
+        - id: SheetPaper1
+          amount: 2
 
 - type: entity
   parent: FoodProduceBase
@@ -159,33 +159,33 @@
   name: laughin' pea pod
   description: The clown's favorite plant.
   components:
-  - type: FlavorProfile
-    flavors:
-      - peas
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Sugar
-        Quantity: 5
-      - ReagentId: Laughter
-        Quantity: 5
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: LaughinSyrup
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: LaughinPeaPlants
-  - type: Tag
-    tags:
-    - Vegetable
-    - Ruminant
+    - type: FlavorProfile
+      flavors:
+        - peas
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Sugar
+            Quantity: 5
+          - ReagentId: Laughter
+            Quantity: 5
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: LaughinSyrup
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/laughin_pea.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: LaughinPeaPlants
+    - type: Tag
+      tags:
+        - Vegetable
+        - Ruminant
 
 - type: entity
   parent: [ProduceBase, BaseSlicingRefinable]
@@ -193,21 +193,21 @@
   name: tower-cap log
   description: It's better than bad, it's good!
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/towercap.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 10
-  - type: Produce
-    plantId: TowercapPlants
-  - type: ToolRefinable
-    qualityNeeded: Sawing
-    refineResult:
-    - id: MaterialWoodPlank1
-      amount: 2
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/towercap.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 10
+    - type: Produce
+      plantId: TowercapPlants
+    - type: ToolRefinable
+      qualityNeeded: Sawing
+      refineResult:
+        - id: MaterialWoodPlank1
+          amount: 2
 
 - type: entity
   parent: [ProduceBase, BaseSlicingRefinable]
@@ -215,20 +215,20 @@
   name: steel-cap log
   description: Steel doesn't grow on trees! It grows on mushrooms, of course.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/steelcap.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: MeleeWeapon
-    damage:
-      types:
-        Blunt: 12
-  - type: Produce
-    plantId: SteelcapPlants
-  - type: ToolRefinable
-    qualityNeeded: Sawing
-    refineResult:
-    - id: SheetSteel1
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/steelcap.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 12
+    - type: Produce
+      plantId: SteelcapPlants
+    - type: ToolRefinable
+      qualityNeeded: Sawing
+      refineResult:
+        - id: SheetSteel1
 
 - type: entity
   parent: ProduceBaseRuminant
@@ -236,96 +236,95 @@
   name: nettle
   description: Stingy little prick.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/nettle.rsi
-  - type: Item
-    size: Small
-    sprite: Objects/Specific/Hydroponics/nettle.rsi
-    heldPrefix: produce
-  - type: MeleeWeapon
-    damage:
-      types:
-        Heat: 10
-  - type: Solution
-    solution:
-      maxVol: 6
-      reagents:
-      - ReagentId: Histamine
-        Quantity: 3
-  - type: Produce
-    plantId: NettlePlants
-  - type: MeleeChemicalInjector
-    transferAmount: 3 #TODO someone you would need 2 nettles and about 6-7 hits, the DOT is likely to crit them if they are running away with almost no health
-    solution: food
-    pierceArmor: false
-  - type: Extractable
-    grindableSolutionName: food
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/nettle.rsi
+    - type: Item
+      size: Small
+      sprite: Objects/Specific/Hydroponics/nettle.rsi
+      heldPrefix: produce
+    - type: MeleeWeapon
+      damage:
+        types:
+          Heat: 10
+    - type: Solution
+      solution:
+        maxVol: 6
+        reagents:
+          - ReagentId: Histamine
+            Quantity: 3
+    - type: Produce
+      plantId: NettlePlants
+    - type: MeleeChemicalInjector
+      transferAmount: 3 #TODO someone you would need 2 nettles and about 6-7 hits, the DOT is likely to crit them if they are running away with almost no health
+      solution: food
+      pierceArmor: false
+    - type: Extractable
+      grindableSolutionName: food
 
 - type: entity
-  parent: [ ProduceBase, BaseMajorContraband ]
+  parent: [ProduceBase, BaseMajorContraband]
   id: DeathNettle
   name: death nettle
   description: This nettle's out for blood.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/death_nettle.rsi
-  - type: Item
-    size: Small
-    sprite: Objects/Specific/Hydroponics/death_nettle.rsi
-    heldPrefix: produce
-  - type: MeleeWeapon
-    damage:
-      types:
-        Heat: 8
-        Caustic: 8
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: SulfuricAcid
-        Quantity: 7.5
-      - ReagentId: FluorosulfuricAcid
-        Quantity: 7.5
-  - type: Produce
-    plantId: DeathNettlePlants
-  - type: MeleeChemicalInjector
-    transferAmount: 5
-    solution: food
-    pierceArmor: true
-  - type: Extractable
-    grindableSolutionName: food
-  - type: DamageOnInteract
-    damage:
-      types:
-        Heat: 4
-        Caustic: 4
-    throw: true
-    throwSpeed: 3
-    interactTimer: 2 # Stop the player from spam clicking the entity
-    ignoreResistances: false
-    popupText: powered-light-component-burn-hand
-    interactSound: /Audio/Effects/lightburn.ogg
-    stunChance: 0.10
-    stunSeconds: 1.5
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 25
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Voice/Diona/diona_salute.ogg
-          params:
-            volume: -5
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: DamageOnHit
-    damage:
-      types:
-        Blunt: 5 # The nettle will "wilt" after 5 hits.
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/death_nettle.rsi
+    - type: Item
+      size: Small
+      sprite: Objects/Specific/Hydroponics/death_nettle.rsi
+      heldPrefix: produce
+    - type: MeleeWeapon
+      damage:
+        types:
+          Heat: 8
+          Caustic: 8
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: SulfuricAcid
+            Quantity: 7.5
+          - ReagentId: FluorosulfuricAcid
+            Quantity: 7.5
+    - type: Produce
+      plantId: DeathNettlePlants
+    - type: MeleeChemicalInjector
+      transferAmount: 5
+      solution: food
+      pierceArmor: true
+    - type: Extractable
+      grindableSolutionName: food
+    - type: DamageOnInteract
+      damage:
+        types:
+          Heat: 4
+          Caustic: 4
+      throw: true
+      throwSpeed: 3
+      interactTimer: 2 # Stop the player from spam clicking the entity
+      ignoreResistances: false
+      popupText: powered-light-component-burn-hand
+      interactSound: /Audio/Effects/lightburn.ogg
+      stunChance: 0.10
+      stunSeconds: 1.5
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 25
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                path: /Audio/Voice/Diona/diona_salute.ogg
+                params:
+                  volume: -5
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: DamageOnHit
+      damage:
+        types:
+          Blunt: 5 # The nettle will "wilt" after 5 hits.
 
 - type: entity
   name: banana
@@ -333,43 +332,43 @@
   id: FoodBanana
   description: Rich in potassium.
   components:
-  - type: FlavorProfile
-    flavors:
-      - banana
-  - type: Edible
-    trash:
-    - TrashBananaPeel
-  - type: ToolRefinable
-    refineResult:
-    - id: TrashBananaPeel
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 8
-      - ReagentId: Vitamin
-        Quantity: 2
-      - ReagentId: JuiceBanana
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: BananaPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBanana
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-    - Banana
-  - type: FoodSequenceElement
-    entries:
-      Burger: Banana
-      Taco: Banana
+    - type: FlavorProfile
+      flavors:
+        - banana
+    - type: Edible
+      trash:
+        - TrashBananaPeel
+    - type: ToolRefinable
+      refineResult:
+        - id: TrashBananaPeel
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 8
+          - ReagentId: Vitamin
+            Quantity: 2
+          - ReagentId: JuiceBanana
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: BananaPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceBanana
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+        - Banana
+    - type: FoodSequenceElement
+      entries:
+        Burger: Banana
+        Taco: Banana
 
 - type: entity
   name: mimana
@@ -377,165 +376,163 @@
   id: FoodMimana
   description: Mime's favorite.
   components:
-  - type: FlavorProfile
-    flavors:
-      - banana
-      - nothing
-  - type: Edible
-    trash:
-    - TrashMimanaPeel
-  - type: ToolRefinable
-    refineResult:
-    - id: TrashMimanaPeel
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 8
-      - ReagentId: Vitamin
-        Quantity: 2
-      - ReagentId: MuteToxin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/mimana.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: MimanaPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBanana
-        Quantity: 5
-      - ReagentId: Nothing
-        Quantity: 5
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: Mimana
-      Taco: Mimana
+    - type: FlavorProfile
+      flavors:
+        - banana
+        - nothing
+    - type: Edible
+      trash:
+        - TrashMimanaPeel
+    - type: ToolRefinable
+      refineResult:
+        - id: TrashMimanaPeel
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 8
+          - ReagentId: Vitamin
+            Quantity: 2
+          - ReagentId: MuteToxin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/mimana.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: MimanaPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceBanana
+            Quantity: 5
+          - ReagentId: Nothing
+            Quantity: 5
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: Mimana
+        Taco: Mimana
 
 - type: entity
   parent: [SolutionFood, SolutionVeryTiny, BaseItem]
   id: TrashBananaPeel
   name: banana peel
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    state: peel
-  - type: Item
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    heldPrefix: peel
-  - type: Slippery
-  - type: StepTrigger
-    intersectRatio: 0.2
-  - type: CollisionWake
-    enabled: false
-  - type: Physics
-    bodyType: Dynamic
-  - type: Fixtures
-    fixtures:
-      slips:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        hard: false
-        layer:
-        - SlipLayer
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.2,-0.2,0.2,0.2"
-        density: 30
-        mask:
-        - ItemMask
-  - type: Tag
-    tags:
-    - Recyclable
-    - Trash
-    - BananaPeel
-    - Ruminant
-    - WhitelistChameleon
-    - HamsterWearable
-  - type: Solution
-    solution:
-      maxVol: 7.5
-      reagents:
-      - ReagentId: PulpedBananaPeel
-        Quantity: 4
-  - type: Extractable
-    grindableSolutionName: food
-  - type: SpaceGarbage
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: Clothing
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    equippedPrefix: peel
-    slots:
-    - HEAD
-    quickEquip: false
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      state: peel
+    - type: Item
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      heldPrefix: peel
+    - type: Slippery
+    - type: StepTrigger
+      intersectRatio: 0.2
+    - type: CollisionWake
+      enabled: false
+    - type: Physics
+      bodyType: Dynamic
+    - type: Fixtures
+      fixtures:
+        slips:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          hard: false
+          layer:
+            - SlipLayer
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.2"
+          density: 30
+          mask:
+            - ItemMask
+    - type: Tag
+      tags:
+        - Recyclable
+        - Trash
+        - BananaPeel
+        - Ruminant
+        - WhitelistChameleon
+        - HamsterWearable
+    - type: Solution
+      solution:
+        maxVol: 7.5
+        reagents:
+          - ReagentId: PulpedBananaPeel
+            Quantity: 4
+    - type: Extractable
+      grindableSolutionName: food
+    - type: SpaceGarbage
+    - type: Edible
+      requiresSpecialDigestion: true
+    - type: Clothing
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      equippedPrefix: peel
+      slots:
+        - HEAD
+      quickEquip: false
 
 - type: entity
   parent: TrashBananaPeel
   id: TrashBakedBananaPeel
   name: baked banana peel
   components:
-  - type: Clothing
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    equippedPrefix: baked-peel
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    state: baked-peel
-  - type: Item
-    sprite: Objects/Specific/Hydroponics/banana.rsi
-    heldPrefix: baked-peel
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: PulpedBananaPeel
-        Quantity: 1
-      - ReagentId: Bananadine
-        Quantity: 1
-      - ReagentId: Carbon
-        Quantity: 2
+    - type: Clothing
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      equippedPrefix: baked-peel
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      state: baked-peel
+    - type: Item
+      sprite: Objects/Specific/Hydroponics/banana.rsi
+      heldPrefix: baked-peel
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: PulpedBananaPeel
+            Quantity: 1
+          - ReagentId: Bananadine
+            Quantity: 1
+          - ReagentId: Carbon
+            Quantity: 2
 
 - type: entity
   parent: TrashBananaPeel
   id: TrashMimanaPeel
   name: mimana peel
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/mimana.rsi
-    state: peel
-  - type: Item
-    sprite: Objects/Specific/Hydroponics/mimana.rsi
-    heldPrefix: peel
-  - type: Clothing
-    sprite: Objects/Specific/Hydroponics/mimana.rsi
-    equippedPrefix: peel
-  - type: Slippery
-    slipSound:
-      path: /Audio/Effects/slip.ogg
-      params:
-        volume: -100
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/mimana.rsi
+      state: peel
+    - type: Item
+      sprite: Objects/Specific/Hydroponics/mimana.rsi
+      heldPrefix: peel
+    - type: Clothing
+      sprite: Objects/Specific/Hydroponics/mimana.rsi
+      equippedPrefix: peel
+    - type: Slippery
+      slipSound:
+        path: /Audio/Effects/slip.ogg
+        params:
+          volume: -100
 
 - type: entity
   parent: TrashBananaPeel
   id: TrashBananiumPeel
   name: bananium peel
   components:
-  - type: Sprite
-    sprite: Objects/Materials/materials.rsi
-    state: peel
-  - type: Item
-    sprite: Objects/Materials/materials.rsi
-    heldPrefix: peel
-  - type: Slippery
-  - type: Clothing
-    sprite: Objects/Materials/materials.rsi
-    equippedPrefix: peel
+    - type: Sprite
+      sprite: Objects/Materials/materials.rsi
+      state: peel
+    - type: Item
+      sprite: Objects/Materials/materials.rsi
+      heldPrefix: peel
+    - type: Slippery
+    - type: Clothing
+      sprite: Objects/Materials/materials.rsi
+      equippedPrefix: peel
 
 - type: entity
   name: carrot
@@ -543,39 +540,39 @@
   id: FoodCarrot
   description: It's good for the eyes!
   components:
-  - type: FlavorProfile
-    flavors:
-      - carrot
-  - type: Tag
-    tags:
-    - Carrot
-    - Vegetable
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: JuiceCarrot
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 7
-      - ReagentId: Oculine
-        Quantity: 3
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/carrot.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: CarrotPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceCarrot
-        Quantity: 10
-      - ReagentId: Oculine
-        Quantity: 2
-  - type: FoodSequenceElement
-    entries:
-      Burger: CarrotBurger
-      Taco: Carrot
+    - type: FlavorProfile
+      flavors:
+        - carrot
+    - type: Tag
+      tags:
+        - Carrot
+        - Vegetable
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: JuiceCarrot
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 7
+          - ReagentId: Oculine
+            Quantity: 3
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/carrot.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: CarrotPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceCarrot
+            Quantity: 10
+          - ReagentId: Oculine
+            Quantity: 2
+    - type: FoodSequenceElement
+      entries:
+        Burger: CarrotBurger
+        Taco: Carrot
 
 - type: entity
   name: cabbage
@@ -583,31 +580,31 @@
   id: FoodCabbage
   description: Ewwwwwwwwww. Cabbage.
   components:
-  - type: FlavorProfile
-    flavors:
-      - cabbage
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: Water
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/cabbage.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: CabbagePlants
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Burger: CabbageBurger
-      Taco: Cabbage
+    - type: FlavorProfile
+      flavors:
+        - cabbage
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: Water
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cabbage.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: CabbagePlants
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Burger: CabbageBurger
+        Taco: Cabbage
 
 - type: entity
   name: garlic
@@ -615,29 +612,29 @@
   id: FoodGarlic
   description: Delicious, but with a potentially overwhelming odor.
   components:
-  - type: FlavorProfile
-    flavors:
-      - garlic
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 6
-      - ReagentId: Vitamin
-        Quantity: 4
-      - ReagentId: Allicin
-        Quantity: 4
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/garlic.rsi
-  - type: Produce
-    plantId: GarlicPlants
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Burger: GarlicBurger
-      Taco: Garlic
+    - type: FlavorProfile
+      flavors:
+        - garlic
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 6
+          - ReagentId: Vitamin
+            Quantity: 4
+          - ReagentId: Allicin
+            Quantity: 4
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/garlic.rsi
+    - type: Produce
+      plantId: GarlicPlants
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Burger: GarlicBurger
+        Taco: Garlic
 
 - type: entity
   name: lemon
@@ -645,37 +642,37 @@
   id: FoodLemon
   description: When life gives you lemons, be grateful they aren't limes.
   components:
-  - type: FlavorProfile
-    flavors:
-      - sour
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: JuiceLemon
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/lemon.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: LemonPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceLemon
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Lemon
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: Lemon
-      Taco: Lemon
+    - type: FlavorProfile
+      flavors:
+        - sour
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: JuiceLemon
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/lemon.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: LemonPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceLemon
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Lemon
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: Lemon
+        Taco: Lemon
 
 - type: entity
   name: lemoon
@@ -683,34 +680,34 @@
   id: FoodLemoon
   description: People says Moon is made out of cheese, but Moon is actually made out of milk and laurel!
   components:
-  - type: FlavorProfile
-    flavors:
-      - lemoon
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: Milk
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/lemoon.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: LemoonPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Sake #the best drink while watching moon
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: Lemoon
-      Taco: Lemoon
+    - type: FlavorProfile
+      flavors:
+        - lemoon
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: Milk
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/lemoon.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: LemoonPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: Sake #the best drink while watching moon
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: Lemoon
+        Taco: Lemoon
 
 - type: entity
   name: lime
@@ -718,37 +715,37 @@
   id: FoodLime
   description: Cures Space Scurvy, allows you to act like a Space Pirate.
   components:
-  - type: FlavorProfile
-    flavors:
-      - sour
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: JuiceLime
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/lime.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: LimePlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceLime
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Lime
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: Lime
-      Taco: Lime
+    - type: FlavorProfile
+      flavors:
+        - sour
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: JuiceLime
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/lime.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: LimePlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceLime
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Lime
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: Lime
+        Taco: Lime
 
 - type: entity
   name: orange
@@ -756,36 +753,36 @@
   id: FoodOrange
   description: Healthy, very orange.
   components:
-  - type: FlavorProfile
-    flavors:
-      - orange
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: JuiceOrange
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/orange.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: OrangePlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceOrange
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: Orange
-      Taco: Orange
+    - type: FlavorProfile
+      flavors:
+        - orange
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: JuiceOrange
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/orange.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: OrangePlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceOrange
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: Orange
+        Taco: Orange
 
 - type: entity
   name: extradimensional orange
@@ -793,40 +790,40 @@
   id: FoodExtradimensionalOrange
   description: You can hardly wrap your head around this thing.
   components:
-  - type: FlavorProfile
-    flavors:
-      - truenature
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Haloperidol
-        Quantity: 5
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/extradimensional_orange.rsi
-    scale: 0.5,0.5
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: ExtradimensionalOrangePlants
-  - type: PotencyVisuals
-    minimumScale: 0.5 # reduce this in size because the sprite is way too big
-    maximumScale: 1
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceOrange
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: ExtradimensionalOrangeBurger
-      Taco: ExtradimensionalOrange
+    - type: FlavorProfile
+      flavors:
+        - truenature
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Haloperidol
+            Quantity: 5
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/extradimensional_orange.rsi
+      scale: 0.5,0.5
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: ExtradimensionalOrangePlants
+    - type: PotencyVisuals
+      minimumScale: 0.5 # reduce this in size because the sprite is way too big
+      maximumScale: 1
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceOrange
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: ExtradimensionalOrangeBurger
+        Taco: ExtradimensionalOrange
 
 - type: entity
   name: pineapple
@@ -834,36 +831,36 @@
   id: FoodPineapple
   description: Mmm, tropical.
   components:
-  - type: FlavorProfile
-    flavors:
-      - pineapple
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 8
-      - ReagentId: Vitamin
-        Quantity: 2
-      - ReagentId: JuicePineapple
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/pineapple.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: PineapplePlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuicePineapple
-        Quantity: 10
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodPineappleSlice
-      amount: 5
-  - type: Tag
-    tags:
-    - Fruit
+    - type: FlavorProfile
+      flavors:
+        - pineapple
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 8
+          - ReagentId: Vitamin
+            Quantity: 2
+          - ReagentId: JuicePineapple
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/pineapple.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: PineapplePlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuicePineapple
+            Quantity: 10
+    - type: ToolRefinable
+      refineResult:
+        - id: FoodPineappleSlice
+          amount: 5
+    - type: Tag
+      tags:
+        - Fruit
 
 - type: entity
   name: potato
@@ -871,23 +868,23 @@
   id: FoodPotato
   description: The space Irish starved to death after their potato crops died. Sadly they were unable to fish for space carp due to it being the queen's space. Bringing this up to any space IRA member will drive them insane with anger.
   components:
-  - type: FlavorProfile
-    flavors:
-      - potatoes
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/potato.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: PotatoPlants
-  - type: Tag
-    tags:
-    - Potato
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Burger: Potato
-      Taco: Potato
+    - type: FlavorProfile
+      flavors:
+        - potatoes
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/potato.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: PotatoPlants
+    - type: Tag
+      tags:
+        - Potato
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Burger: Potato
+        Taco: Potato
 
 - type: entity
   name: tomato
@@ -895,60 +892,59 @@
   id: FoodTomato
   description: I say to-mah-to, you say tom-mae-to.
   components:
-  - type: FlavorProfile
-    flavors:
-      - tomato
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 7
-      - ReagentId: Vitamin
-        Quantity: 3
-      - ReagentId: Water
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/tomato.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: TomatoPlants
-  - type: Extractable
-    grindableSolutionName: food
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceTomato
-        Quantity: 10
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Biological
-  - type: DamageOnHighSpeedImpact
-    minimumSpeed: 0.1
-    damage:
-      types:
-        Blunt: 1
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Tag
-    tags:
-    - Fruit
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Skewer: TomatoSkewer
-      Burger: Tomato
-      Taco: Tomato
+    - type: FlavorProfile
+      flavors:
+        - tomato
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 7
+          - ReagentId: Vitamin
+            Quantity: 3
+          - ReagentId: Water
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/tomato.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: TomatoPlants
+    - type: Extractable
+      grindableSolutionName: food
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceTomato
+            Quantity: 10
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Biological
+    - type: DamageOnHighSpeedImpact
+      minimumSpeed: 0.1
+      damage:
+        types:
+          Blunt: 1
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 1
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: desecration
+            - !type:SpillBehavior
+              solution: food
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Tag
+      tags:
+        - Fruit
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Skewer: TomatoSkewer
+        Burger: Tomato
+        Taco: Tomato
 
 - type: entity
   name: blue tomato
@@ -956,48 +952,47 @@
   id: FoodBlueTomato
   description: This one is blue.
   components:
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: SpaceLube
-        Quantity: 15
-      - ReagentId: Vitamin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/blue_tomato.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: BlueTomatoPlants
-  - type: Extractable
-    grindableSolutionName: food
-    juiceSolution:
-      reagents:
-      - ReagentId: SpaceLube
-        Quantity: 10
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Tag
-    tags:
-    - Fruit
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Burger: BlueTomato
-      Taco: BlueTomato
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: SpaceLube
+            Quantity: 15
+          - ReagentId: Vitamin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/blue_tomato.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: BlueTomatoPlants
+    - type: Extractable
+      grindableSolutionName: food
+      juiceSolution:
+        reagents:
+          - ReagentId: SpaceLube
+            Quantity: 10
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 1
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: desecration
+            - !type:SpillBehavior
+              solution: food
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Tag
+      tags:
+        - Fruit
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Burger: BlueTomato
+        Taco: BlueTomato
 
 - type: entity
   name: blood tomato
@@ -1005,47 +1000,46 @@
   id: FoodBloodTomato
   description: Wait, that's not ketchup...
   components:
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Blood
-        Quantity: 10
-      - ReagentId: Vitamin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/blood_tomato.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: BloodTomatoPlants
-  - type: Extractable
-    grindableSolutionName: food
-    juiceSolution:
-      reagents:
-      - ReagentId: Blood
-        Quantity: 10
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Tag
-    tags:
-    - Fruit # Fuck you they're a fruit
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Skewer: TomatoSkewer
-      Burger: BloodTomato
-      Taco: BloodTomato
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Blood
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/blood_tomato.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: BloodTomatoPlants
+    - type: Extractable
+      grindableSolutionName: food
+      juiceSolution:
+        reagents:
+          - ReagentId: Blood
+            Quantity: 10
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 1
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: desecration
+            - !type:SpillBehavior
+              solution: food
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Tag
+      tags:
+        - Fruit # Fuck you they're a fruit
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Skewer: TomatoSkewer
+        Burger: BloodTomato
+        Taco: BloodTomato
 
 - type: entity
   name: eggplant
@@ -1053,19 +1047,19 @@
   id: FoodEggplant
   description: Maybe there's a chicken inside?
   components:
-  - type: FlavorProfile
-    flavors:
-      - eggplant
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/eggplant.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: EggplantPlants
-  - type: Tag
-    tags:
-    - Fruit
-    - Vegetable
+    - type: FlavorProfile
+      flavors:
+        - eggplant
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/eggplant.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: EggplantPlants
+    - type: Tag
+      tags:
+        - Fruit
+        - Vegetable
 
 - type: entity
   name: apple
@@ -1073,36 +1067,36 @@
   id: FoodApple
   description: It's a little piece of Eden.
   components:
-  - type: FlavorProfile
-    flavors:
-      - apple
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: JuiceApple
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/apple.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: ApplePlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceApple
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: Apple
-      Taco: Apple
+    - type: FlavorProfile
+      flavors:
+        - apple
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: JuiceApple
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/apple.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: ApplePlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceApple
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: Apple
+        Taco: Apple
 
 - type: entity
   name: golden apple
@@ -1110,39 +1104,39 @@
   id: FoodGoldenApple
   description: It should be shaped like a cube, shouldn't it?
   components:
-  - type: FlavorProfile
-    flavors:
-      - apple
-      - metallic
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 10
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: DoctorsDelight
-        Quantity: 15
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/golden_apple.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: GoldenApplePlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceApple
-        Quantity: 10
-      - ReagentId: Gold
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Burger: GoldenApple
-      Taco: GoldenApple
+    - type: FlavorProfile
+      flavors:
+        - apple
+        - metallic
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: DoctorsDelight
+            Quantity: 15
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/golden_apple.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: GoldenApplePlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceApple
+            Quantity: 10
+          - ReagentId: Gold
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Burger: GoldenApple
+        Taco: GoldenApple
 
 - type: entity
   name: cocoa pod
@@ -1150,30 +1144,30 @@
   id: FoodCocoaPod
   description: You can never have too much chocolate!
   components:
-  - type: FlavorProfile
-    flavors:
-      - chocolate
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 6
-      - ReagentId: Vitamin
-        Quantity: 3
-      - ReagentId: CocoaPowder
-        Quantity: 6
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/cocoa.rsi
-  - type: Produce
-    plantId: CocoaPlants
-  - type: SpawnItemsOnUse
-    items:
-      - id: FoodCocoaBeans
-    sound:
-      path: /Audio/Effects/packetrip.ogg
-  - type: Tag
-    tags:
-    - Fruit
+    - type: FlavorProfile
+      flavors:
+        - chocolate
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 6
+          - ReagentId: Vitamin
+            Quantity: 3
+          - ReagentId: CocoaPowder
+            Quantity: 6
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cocoa.rsi
+    - type: Produce
+      plantId: CocoaPlants
+    - type: SpawnItemsOnUse
+      items:
+        - id: FoodCocoaBeans
+      sound:
+        path: /Audio/Effects/packetrip.ogg
+    - type: Tag
+      tags:
+        - Fruit
 
 - type: entity
   name: ear of corn
@@ -1181,43 +1175,43 @@
   id: FoodCorn
   description: Needs some butter! And some cooking...
   components:
-  - type: FlavorProfile
-    flavors:
-      - corn
-  - type: Edible
-    trash:
-    - FoodCornTrash
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodCornTrash #no idea why you'd ever do this, but it's just here for consistency
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Cornmeal
-        Quantity: 15
-      - ReagentId: Nutriment
-        Quantity: 5
-  - type: Tag
-    tags:
-    - Corn
-    - Vegetable
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/corn.rsi
-  - type: Produce
-    plantId: CornPlants
-  - type: Extractable
-    grindableSolutionName: food
-    juiceSolution:
-      reagents:
-      - ReagentId: Cornoil
-        Quantity: 3
-      - ReagentId: Enzyme
-        Quantity: 2
-  - type: FoodSequenceElement
-    entries:
-      Burger: Corn
-      Taco: Corn
-      Skewer: CornSkewer
+    - type: FlavorProfile
+      flavors:
+        - corn
+    - type: Edible
+      trash:
+        - FoodCornTrash
+    - type: ToolRefinable
+      refineResult:
+        - id: FoodCornTrash #no idea why you'd ever do this, but it's just here for consistency
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Cornmeal
+            Quantity: 15
+          - ReagentId: Nutriment
+            Quantity: 5
+    - type: Tag
+      tags:
+        - Corn
+        - Vegetable
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/corn.rsi
+    - type: Produce
+      plantId: CornPlants
+    - type: Extractable
+      grindableSolutionName: food
+      juiceSolution:
+        reagents:
+          - ReagentId: Cornoil
+            Quantity: 3
+          - ReagentId: Enzyme
+            Quantity: 2
+    - type: FoodSequenceElement
+      entries:
+        Burger: Corn
+        Taco: Corn
+        Skewer: CornSkewer
 
 - type: entity
   name: corn cob
@@ -1225,19 +1219,19 @@
   id: FoodCornTrash
   description: Not a dang kernel left.
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/corn.rsi
-    state: cob
-  - type: Item
-    size: Tiny
-  - type: Tag
-    tags:
-      - Trash
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Cornmeal
-        Quantity: 15
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/corn.rsi
+      state: cob
+    - type: Item
+      size: Tiny
+    - type: Tag
+      tags:
+        - Trash
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Cornmeal
+            Quantity: 15
 
 - type: entity
   name: onion
@@ -1245,31 +1239,31 @@
   id: FoodOnion
   description: Nothing to cry over.
   components:
-  - type: FlavorProfile
-    flavors:
-      - onion
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: Allicin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/onion.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: OnionPlants
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodOnionSlice
-      amount: 5
-  - type: Tag
-    tags:
-    - Vegetable
+    - type: FlavorProfile
+      flavors:
+        - onion
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: Allicin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/onion.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: OnionPlants
+    - type: ToolRefinable
+      refineResult:
+        - id: FoodOnionSlice
+          amount: 5
+    - type: Tag
+      tags:
+        - Vegetable
 
 - type: entity
   name: red onion
@@ -1277,31 +1271,31 @@
   id: FoodOnionRed
   description: Purple despite the name.
   components:
-  - type: FlavorProfile
-    flavors:
-      - onion
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: Allicin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/onion_red.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: OnionRedPlants
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodOnionRedSlice
-      amount: 5
-  - type: Tag
-    tags:
-    - Vegetable
+    - type: FlavorProfile
+      flavors:
+        - onion
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: Allicin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/onion_red.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: OnionRedPlants
+    - type: ToolRefinable
+      refineResult:
+        - id: FoodOnionRedSlice
+          amount: 5
+    - type: Tag
+      tags:
+        - Vegetable
 
 - type: entity
   name: chanterelle cluster
@@ -1309,23 +1303,23 @@
   id: FoodMushroom
   description: "Cantharellus Cibarius: These jolly yellow little shrooms sure look tasty!"
   components:
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 12
-      - ReagentId: Vitamin
-        Quantity: 8
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/chanterelle.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: ChanterellePlants
-  - type: Tag
-    tags:
-    - Vegetable
-    - Mushroom
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 12
+          - ReagentId: Vitamin
+            Quantity: 8
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/chanterelle.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: ChanterellePlants
+    - type: Tag
+      tags:
+        - Vegetable
+        - Mushroom
 
 # Slices
 
@@ -1334,21 +1328,21 @@
   id: ProduceSliceBase
   abstract: true
   components:
-  - type: Solution
-    solution:
-      maxVol: 7.5
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 2
-      - ReagentId: Vitamin
-        Quantity: 1
-  - type: Sprite
-    state: slice
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Tag
-    tags:
-    - Slice
+    - type: Solution
+      solution:
+        maxVol: 7.5
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 2
+          - ReagentId: Vitamin
+            Quantity: 1
+    - type: Sprite
+      state: slice
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Tag
+      tags:
+        - Slice
 
 - type: entity
   name: pineapple slice
@@ -1356,24 +1350,24 @@
   id: FoodPineappleSlice
   description: Mmm, tropical.
   components:
-  - type: FlavorProfile
-    flavors:
-      - pineapple
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/pineapple.rsi
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuicePineapple
-        Quantity: 2
-  - type: Tag
-    tags:
-    - Fruit
-    - Slice
-  - type: FoodSequenceElement
-    entries:
-      Burger: PineappleSliceBurger
-      Taco: PineappleSlice
+    - type: FlavorProfile
+      flavors:
+        - pineapple
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/pineapple.rsi
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuicePineapple
+            Quantity: 2
+    - type: Tag
+      tags:
+        - Fruit
+        - Slice
+    - type: FoodSequenceElement
+      entries:
+        Burger: PineappleSliceBurger
+        Taco: PineappleSlice
 
 - type: entity
   name: onion slice
@@ -1381,28 +1375,28 @@
   id: FoodOnionSlice
   description: Nothing to cry over.
   components:
-  - type: FlavorProfile
-    flavors:
-      - onion
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/onion.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 1
-      - ReagentId: Allicin
-        Quantity: 1
-      - ReagentId: Vitamin
-        Quantity: 1
-  - type: Tag
-    tags:
-    - Vegetable
-    - Slice
-  - type: FoodSequenceElement
-    entries:
-      Burger: OnionSliceBurger
-      Taco: OnionSlice
+    - type: FlavorProfile
+      flavors:
+        - onion
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/onion.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 1
+          - ReagentId: Allicin
+            Quantity: 1
+          - ReagentId: Vitamin
+            Quantity: 1
+    - type: Tag
+      tags:
+        - Vegetable
+        - Slice
+    - type: FoodSequenceElement
+      entries:
+        Burger: OnionSliceBurger
+        Taco: OnionSlice
 
 - type: entity
   name: red onion slice
@@ -1410,28 +1404,28 @@
   id: FoodOnionRedSlice
   description: Purple despite the name.
   components:
-  - type: FlavorProfile
-    flavors:
-      - onion
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/onion_red.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 1
-      - ReagentId: Allicin
-        Quantity: 1
-      - ReagentId: Vitamin
-        Quantity: 1
-  - type: Tag
-    tags:
-    - Vegetable
-    - Slice
-  - type: FoodSequenceElement
-    entries:
-      Burger: OnionRedSliceBurger
-      Taco: OnionRedSlice
+    - type: FlavorProfile
+      flavors:
+        - onion
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/onion_red.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 1
+          - ReagentId: Allicin
+            Quantity: 1
+          - ReagentId: Vitamin
+            Quantity: 1
+    - type: Tag
+      tags:
+        - Vegetable
+        - Slice
+    - type: FoodSequenceElement
+      entries:
+        Burger: OnionRedSliceBurger
+        Taco: OnionRedSlice
 
 - type: entity
   name: chili pepper
@@ -1439,32 +1433,32 @@
   id: FoodChiliPepper
   description: Spicy, best not touch your eyes.
   components:
-  - type: FlavorProfile
-    flavors:
-      - spicy
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 2
-      - ReagentId: CapsaicinOil
-        Quantity: 10
-      - ReagentId: Vitamin
-        Quantity: 3
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/chili.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: ChiliPlants
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Taco: ChiliPepper
-      Burger: ChiliPepper
-      Skewer: ChiliPepperSkewer
+    - type: FlavorProfile
+      flavors:
+        - spicy
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 2
+          - ReagentId: CapsaicinOil
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 3
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/chili.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: ChiliPlants
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Taco: ChiliPepper
+        Burger: ChiliPepper
+        Skewer: ChiliPepperSkewer
 
 - type: entity
   name: chilly pepper
@@ -1472,30 +1466,30 @@
   id: FoodChillyPepper
   description: Icy hot.
   components:
-  - type: FlavorProfile
-    flavors:
-      - spicy
-      - cold
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 4
-      - ReagentId: FrostOil
-        Quantity: 10
-      - ReagentId: Vitamin
-        Quantity: 4
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/chilly.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: ChillyPlants
-  - type: FoodSequenceElement
-    entries:
-      Taco: ChillyPepper
-      Burger: ChillyPepper
-      Skewer: ChillyPepperSkewer
+    - type: FlavorProfile
+      flavors:
+        - spicy
+        - cold
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 4
+          - ReagentId: FrostOil
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 4
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/chilly.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: ChillyPlants
+    - type: FoodSequenceElement
+      entries:
+        Taco: ChillyPepper
+        Burger: ChillyPepper
+        Skewer: ChillyPepperSkewer
 
 - type: entity
   name: aloe
@@ -1503,31 +1497,31 @@
   id: FoodAloe
   description: A fragrant plant with soothing properties.
   components:
-  - type: FlavorProfile
-    flavors:
-      - medicine
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Aloe
-        Quantity: 10
-      - ReagentId: Dermaline
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/aloe.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: AloePlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Taco: Aloe
-      Burger: Aloe
+    - type: FlavorProfile
+      flavors:
+        - medicine
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Aloe
+            Quantity: 10
+          - ReagentId: Dermaline
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/aloe.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: AloePlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Taco: Aloe
+        Burger: Aloe
 
 - type: entity
   name: poppy
@@ -1535,33 +1529,33 @@
   id: FoodPoppy
   description: A flower with extracts often used in the production of medicine.
   components:
-  - type: Clothing
-    slots:
-    - HEAD
-    quickEquip: false
-  - type: FlavorProfile
-    flavors:
-      - medicine
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Bicaridine
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/poppy.rsi
-  - type: Produce
-    plantId: PoppyPlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Tag
-    tags:
-    - Flower # TODO add "RedFlower" or "Poppy" tag, when other color flowers will be
-  - type: FoodSequenceElement
-    entries:
-      Taco: Poppy
-      Burger: Poppy
+    - type: Clothing
+      slots:
+        - HEAD
+      quickEquip: false
+    - type: FlavorProfile
+      flavors:
+        - medicine
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Bicaridine
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/poppy.rsi
+    - type: Produce
+      plantId: PoppyPlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Tag
+      tags:
+        - Flower # TODO add "RedFlower" or "Poppy" tag, when other color flowers will be
+    - type: FoodSequenceElement
+      entries:
+        Taco: Poppy
+        Burger: Poppy
 
 - type: entity
   name: lily
@@ -1569,29 +1563,29 @@
   id: FoodLily
   description: A beautiful orange flower.
   components:
-  - type: FlavorProfile
-    flavors:
-      - medicine
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Bicaridine
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/lily.rsi
-  - type: Produce
-    plantId: LilyPlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Tag
-    tags:
-    - Flower
-  - type: FoodSequenceElement
-    entries:
-      Taco: Lily
-      Burger: Lily
+    - type: FlavorProfile
+      flavors:
+        - medicine
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Bicaridine
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/lily.rsi
+    - type: Produce
+      plantId: LilyPlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Tag
+      tags:
+        - Flower
+    - type: FoodSequenceElement
+      entries:
+        Taco: Lily
+        Burger: Lily
 
 - type: entity
   name: lingzhi
@@ -1599,32 +1593,32 @@
   id: FoodLingzhi
   description: A potent medicinal mushroom. Don't go overboard.
   components:
-  - type: FlavorProfile
-    flavors:
-      - mushroom
-      - medicine
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Ultravasculine
-        Quantity: 20
-      - ReagentId: Epinephrine
-        Quantity: 20
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/lingzhi.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: LingzhiPlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: FoodSequenceElement
-    entries:
-      Taco: Lingzhi
-      Burger: Lingzhi
-  - type: Tag
-    tags:
-    - Mushroom
+    - type: FlavorProfile
+      flavors:
+        - mushroom
+        - medicine
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Ultravasculine
+            Quantity: 20
+          - ReagentId: Epinephrine
+            Quantity: 20
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/lingzhi.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: LingzhiPlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: FoodSequenceElement
+      entries:
+        Taco: Lingzhi
+        Burger: Lingzhi
+    - type: Tag
+      tags:
+        - Mushroom
 
 - type: entity
   name: ambrosia vulgaris
@@ -1632,40 +1626,40 @@
   id: FoodAmbrosiaVulgaris
   description: A medicinal plant. May make you feel a little funny.
   components:
-  - type: FlavorProfile
-    flavors:
-      - leafy
-      - medicine
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Bicaridine
-        Quantity: 5
-      - ReagentId: Kelotane
-        Quantity: 5
-      - ReagentId: Nutriment
-        Quantity: 3
-      - ReagentId: Vitamin
-        Quantity: 2
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: AmbrosiaVulgarisPlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Clothing
-    sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
-    slots:
-    - HEAD
-  - type: Tag
-    tags:
-    - Ambrosia
-  - type: FoodSequenceElement
-    entries:
-      Taco: AmbrosiaVulgaris
-      Burger: AmbrosiaVulgarisBurger
+    - type: FlavorProfile
+      flavors:
+        - leafy
+        - medicine
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Bicaridine
+            Quantity: 5
+          - ReagentId: Kelotane
+            Quantity: 5
+          - ReagentId: Nutriment
+            Quantity: 3
+          - ReagentId: Vitamin
+            Quantity: 2
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: AmbrosiaVulgarisPlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Clothing
+      sprite: Objects/Specific/Hydroponics/ambrosia_vulgaris.rsi
+      slots:
+        - HEAD
+    - type: Tag
+      tags:
+        - Ambrosia
+    - type: FoodSequenceElement
+      entries:
+        Taco: AmbrosiaVulgaris
+        Burger: AmbrosiaVulgarisBurger
 
 - type: entity
   name: ambrosia deus
@@ -1673,38 +1667,38 @@
   id: FoodAmbrosiaDeus
   description: An extremely sought-after medicinal plant. May have some funky side effects.
   components:
-  - type: FlavorProfile
-    flavors:
-      - leafy
-      - medicine
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Omnizine
-        Quantity: 3
-      - ReagentId: SpaceDrugs
-        Quantity: 10
-      - ReagentId: Nutriment
-        Quantity: 2
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: AmbrosiaDeusPlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Clothing
-    sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
-    slots:
-    - HEAD
-  - type: Tag
-    tags:
-    - Ambrosia
-  - type: FoodSequenceElement
-    entries:
-      Taco: AmbrosiaDeus
-      Burger: AmbrosiaDeusBurger
+    - type: FlavorProfile
+      flavors:
+        - leafy
+        - medicine
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Omnizine
+            Quantity: 3
+          - ReagentId: SpaceDrugs
+            Quantity: 10
+          - ReagentId: Nutriment
+            Quantity: 2
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: AmbrosiaDeusPlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Clothing
+      sprite: Objects/Specific/Hydroponics/ambrosia_deus.rsi
+      slots:
+        - HEAD
+    - type: Tag
+      tags:
+        - Ambrosia
+    - type: FoodSequenceElement
+      entries:
+        Taco: AmbrosiaDeus
+        Burger: AmbrosiaDeusBurger
 
 - type: entity
   name: galaxythistle
@@ -1712,30 +1706,30 @@
   id: FoodGalaxythistle
   description: A medicinal plant used for its antitoxin.
   components:
-  - type: FlavorProfile
-    flavors:
-      - medicine
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Stellibinin
-        Quantity: 30
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: GalaxythistlePlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Tag
-    tags:
-    - Galaxythistle
-    - Fruit # Probably?
-  - type: FoodSequenceElement
-    entries:
-      Taco: Galaxythistle
-      Burger: GalaxythistleBurger
+    - type: FlavorProfile
+      flavors:
+        - medicine
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Stellibinin
+            Quantity: 30
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/galaxythistle.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: GalaxythistlePlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Tag
+      tags:
+        - Galaxythistle
+        - Fruit # Probably?
+    - type: FoodSequenceElement
+      entries:
+        Taco: Galaxythistle
+        Burger: GalaxythistleBurger
 
 - type: entity
   name: glasstle
@@ -1743,68 +1737,67 @@
   id: FoodGlasstle
   description: A fragile crystal plant with lot of spiky thorns.
   components:
-  - type: Item
-    size: Small
-    sprite: Objects/Specific/Hydroponics/glasstle.rsi
-    heldPrefix: produce
-  - type: FlavorProfile
-    flavors:
-      - sharp
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Razorium
-        Quantity: 20
-      - ReagentId: Desoxyephedrine
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/glasstle.rsi
-  - type: Produce
-    plantId: GlasstlePlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Inorganic
-  - type: ToolRefinable
-    refineResult:
-    - id: SheetGlass1
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: GlassBreak
-          params:
-            volume: -4
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          ShardGlass:
-            min: 1
-            max: 1
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: DamageOnHit
-    damage:
-      types:
-        Blunt: 10
-  - type: MeleeWeapon
-    wideAnimationRotation: 60
-    damage:
-      types:
-        Slash: 15
-    soundHit:
+    - type: Item
+      size: Small
+      sprite: Objects/Specific/Hydroponics/glasstle.rsi
+      heldPrefix: produce
+    - type: FlavorProfile
+      flavors:
+        - sharp
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Razorium
+            Quantity: 20
+          - ReagentId: Desoxyephedrine
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/glasstle.rsi
+    - type: Produce
+      plantId: GlasstlePlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Inorganic
+    - type: ToolRefinable
+      refineResult:
+        - id: SheetGlass1
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 10
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+                params:
+                  volume: -4
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                ShardGlass:
+                  min: 1
+                  max: 1
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: DamageOnHit
+      damage:
+        types:
+          Blunt: 10
+    - type: MeleeWeapon
+      wideAnimationRotation: 60
+      damage:
+        types:
+          Slash: 15
+      soundHit:
         path: /Audio/Weapons/bladeslice.ogg
-  - type: Tag
-    tags:
-    - Galaxythistle
-  - type: FoodSequenceElement
-    entries:
-      Taco: Glasstle
-      Burger: GlasstleBurger
+    - type: Tag
+      tags:
+        - Galaxythistle
+    - type: FoodSequenceElement
+      entries:
+        Taco: Glasstle
+        Burger: GlasstleBurger
 
 - type: entity
   name: fly amanita
@@ -1812,68 +1805,68 @@
   id: FoodFlyAmanita
   description: A delicious-looking mushroom like you see in those cartoons.
   components:
-  - type: FlavorProfile
-    flavors:
-      - mushroom
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Amatoxin
-        Quantity: 10
-      - ReagentId: Nutriment
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/fly_amanita.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: FlyAmanitaPlants
-  - type: Extractable
-    grindableSolutionName: food
-  - type: BadFood
-  - type: FoodSequenceElement
-    entries:
-      Taco: FlyAmanita
-      Burger: FlyAmanita
-  - type: Tag
-    tags:
-    - Mushroom
+    - type: FlavorProfile
+      flavors:
+        - mushroom
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Amatoxin
+            Quantity: 10
+          - ReagentId: Nutriment
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/fly_amanita.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: FlyAmanitaPlants
+    - type: Extractable
+      grindableSolutionName: food
+    - type: BadFood
+    - type: FoodSequenceElement
+      entries:
+        Taco: FlyAmanita
+        Burger: FlyAmanita
+    - type: Tag
+      tags:
+        - Mushroom
 
 - type: entity
   name: gatfruit
-  parent: [ FoodProduceBase, BaseSyndicateContraband, BaseSlicingRefinable ]
+  parent: [FoodProduceBase, BaseSyndicateContraband, BaseSlicingRefinable]
   id: FoodGatfruit
   description: A delicious, gun-shaped fruit with a thick wooden stem.
   components:
-  - type: FlavorProfile
-    flavors:
-      - gunpowder
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Iron
-        Quantity: 5
-      - ReagentId: Sulfur
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/gatfruit.rsi
-  - type: Produce
-    plantId: GatfruitPlants
-  - type: Edible
-    trash:
-    - WeaponRevolverPython
-  - type: ToolRefinable
-    refineResult:
-    - id: WeaponRevolverPython
-  - type: Tag
-    tags:
-    - Fruit # It's in the name
-  - type: FoodSequenceElement
-    entries:
-      Taco: Gatfruit
-      Burger: GatfruitBurger
+    - type: FlavorProfile
+      flavors:
+        - gunpowder
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Iron
+            Quantity: 5
+          - ReagentId: Sulfur
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/gatfruit.rsi
+    - type: Produce
+      plantId: GatfruitPlants
+    - type: Edible
+      trash:
+        - WeaponRevolverPython
+    - type: ToolRefinable
+      refineResult:
+        - id: WeaponRevolverPython
+    - type: Tag
+      tags:
+        - Fruit # It's in the name
+    - type: FoodSequenceElement
+      entries:
+        Taco: Gatfruit
+        Burger: GatfruitBurger
 
 - type: entity
   name: capfruit
@@ -1881,37 +1874,37 @@
   id: FoodRealCapfruit
   description: A soft but smooth gun-shaped fruit.
   components:
-  - type: FlavorProfile
-    flavors:
-      - plastic
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Iron
-        Quantity: 5
-      - ReagentId: Sulfur
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/capfruit.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: RealCapfruitPlants
-  - type: Edible
-    trash:
-    - RevolverCapGun
-  - type: ToolRefinable
-    refineResult:
-    - id: RevolverCapGun
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Taco: Capfruit
-      Burger: CapfruitBurger
+    - type: FlavorProfile
+      flavors:
+        - plastic
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Iron
+            Quantity: 5
+          - ReagentId: Sulfur
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/capfruit.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: RealCapfruitPlants
+    - type: Edible
+      trash:
+        - RevolverCapGun
+    - type: ToolRefinable
+      refineResult:
+        - id: RevolverCapGun
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Taco: Capfruit
+        Burger: CapfruitBurger
 
 - type: entity
   name: capfruit
@@ -1919,14 +1912,14 @@
   id: FoodFakeCapfruit
   suffix: Fake
   components:
-  - type: Produce
-    plantId: FakeCapfruitPlants
-  - type: Edible
-    trash:
-    - RevolverCapGunFake
-  - type: ToolRefinable
-    refineResult:
-    - id: RevolverCapGunFake
+    - type: Produce
+      plantId: FakeCapfruitPlants
+    - type: Edible
+      trash:
+        - RevolverCapGunFake
+    - type: ToolRefinable
+      refineResult:
+        - id: RevolverCapGunFake
 
 - type: entity
   name: rice bushel
@@ -1934,17 +1927,17 @@
   id: RiceBushel
   parent: ProduceBaseRuminant
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/rice.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Rice
-        Quantity: 15
-  - type: Produce
-    plantId: RicePlants
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/rice.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Rice
+            Quantity: 15
+    - type: Produce
+      plantId: RicePlants
 
 - type: entity
   name: soybeans
@@ -1952,29 +1945,29 @@
   id: FoodSoybeans
   parent: ProduceBaseRuminant
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/soybeans.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Protein
-        Quantity: 12
-      - ReagentId: Nutriment
-        Quantity: 8
-  - type: Produce
-    plantId: SoybeanPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: MilkSoy
-        Quantity: 15
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Taco: Soybeans
-      Burger: SoybeansBurger
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/soybeans.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Protein
+            Quantity: 12
+          - ReagentId: Nutriment
+            Quantity: 8
+    - type: Produce
+      plantId: SoybeanPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: MilkSoy
+            Quantity: 15
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Taco: Soybeans
+        Burger: SoybeansBurger
 
 - type: entity
   name: spaceman's trumpet
@@ -1982,33 +1975,33 @@
   id: FoodSpacemansTrumpet
   parent: FoodProduceBase
   components:
-  - type: FlavorProfile
-    flavors:
-      - violets
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/spacemans_trumpet.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 2
-      - ReagentId: Cellulose
-        Quantity: 10
-      - ReagentId: PolypyryliumOligomers
-        Quantity: 3
-  - type: Produce
-    plantId: SpacemansTrumpetPlants
-  - type: Tag
-    tags:
-    - Flower
-  - type: Instrument #hehe trumpet
-    program: 56
-  - type: FoodSequenceElement
-    entries:
-      Taco: SpacemansTrumpet
-      Burger: SpacemansTrumpetBurger
+    - type: FlavorProfile
+      flavors:
+        - violets
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/spacemans_trumpet.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 2
+          - ReagentId: Cellulose
+            Quantity: 10
+          - ReagentId: PolypyryliumOligomers
+            Quantity: 3
+    - type: Produce
+      plantId: SpacemansTrumpetPlants
+    - type: Tag
+      tags:
+        - Flower
+    - type: Instrument #hehe trumpet
+      program: 56
+    - type: FoodSequenceElement
+      entries:
+        Taco: SpacemansTrumpet
+        Burger: SpacemansTrumpetBurger
 
 - type: entity
   name: koibean
@@ -2016,31 +2009,31 @@
   id: FoodKoibean
   parent: ProduceBaseRuminant
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/koibean.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Protein
-        Quantity: 12
-      - ReagentId: Nutriment
-        Quantity: 4
-      - ReagentId: CarpoToxin
-        Quantity: 4
-  - type: Produce
-    plantId: KoibeanPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: CarpoToxin
-        Quantity: 2
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Taco: Koibean
-      Burger: KoibeanBurger
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/koibean.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Protein
+            Quantity: 12
+          - ReagentId: Nutriment
+            Quantity: 4
+          - ReagentId: CarpoToxin
+            Quantity: 4
+    - type: Produce
+      plantId: KoibeanPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: CarpoToxin
+            Quantity: 2
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Taco: Koibean
+        Burger: KoibeanBurger
 
 - type: entity
   name: watermelon
@@ -2048,64 +2041,63 @@
   id: FoodWatermelon
   description: Round green object that you can slice and eat.
   components:
-  - type: Item
-    size: Normal
-    heldPrefix: produce
-  - type: FlavorProfile
-    flavors:
-      - watermelon
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 4
-      - ReagentId: Vitamin
-        Quantity: 4
-      - ReagentId: Sugar
-        Quantity: 4
-      - ReagentId: JuiceWatermelon
-        Quantity: 8
-      - ReagentId: Water
-        Quantity: 40
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/watermelon.rsi
-  - type: Produce
-    plantId: WatermelonPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceWatermelon
-        Quantity: 40
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Biological
-  - type: DamageOnHighSpeedImpact
-    minimumSpeed: 0.1
-    damage:
-      types:
-        Blunt: 1
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodWatermelonSlice
-      amount: 4
-    - id: ClothingHeadHatWatermelon
-      prob: 0.5
-  - type: Tag
-    tags:
-    - Fruit
+    - type: Item
+      size: Normal
+      heldPrefix: produce
+    - type: FlavorProfile
+      flavors:
+        - watermelon
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 4
+          - ReagentId: Vitamin
+            Quantity: 4
+          - ReagentId: Sugar
+            Quantity: 4
+          - ReagentId: JuiceWatermelon
+            Quantity: 8
+          - ReagentId: Water
+            Quantity: 40
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/watermelon.rsi
+    - type: Produce
+      plantId: WatermelonPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceWatermelon
+            Quantity: 40
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Biological
+    - type: DamageOnHighSpeedImpact
+      minimumSpeed: 0.1
+      damage:
+        types:
+          Blunt: 1
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 1
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: desecration
+            - !type:SpillBehavior
+              solution: food
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: ToolRefinable
+      refineResult:
+        - id: FoodWatermelonSlice
+          amount: 4
+        - id: ClothingHeadHatWatermelon
+          prob: 0.5
+    - type: Tag
+      tags:
+        - Fruit
 
 - type: entity
   name: watermelon slice
@@ -2113,40 +2105,40 @@
   id: FoodWatermelonSlice
   description: Juicy green and red slice.
   components:
-  - type: Item
-    size: Tiny
-  - type: FlavorProfile
-    flavors:
-      - watermelon
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/watermelon.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 1
-      - ReagentId: Vitamin
-        Quantity: 1
-      - ReagentId: Sugar
-        Quantity: 1
-      - ReagentId: JuiceWatermelon
-        Quantity: 2
-      - ReagentId: Water
-        Quantity: 10
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceWatermelon
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-    - Slice
-  - type: FoodSequenceElement
-    entries:
-      Burger: WatermelonSliceBurger
-      Taco: WatermelonSlice
-      Skewer: WatermelonSliceSkewer
+    - type: Item
+      size: Tiny
+    - type: FlavorProfile
+      flavors:
+        - watermelon
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/watermelon.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 1
+          - ReagentId: Vitamin
+            Quantity: 1
+          - ReagentId: Sugar
+            Quantity: 1
+          - ReagentId: JuiceWatermelon
+            Quantity: 2
+          - ReagentId: Water
+            Quantity: 10
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceWatermelon
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+        - Slice
+    - type: FoodSequenceElement
+      entries:
+        Burger: WatermelonSliceBurger
+        Taco: WatermelonSlice
+        Skewer: WatermelonSliceSkewer
 
 - type: entity
   name: holymelon
@@ -2154,63 +2146,62 @@
   id: FoodHolymelon
   description: The water within this melon has been blessed by some deity that's particularly fond of watermelon.
   components:
-  - type: Item
-    size: Normal
-    heldPrefix: produce
-  - type: FlavorProfile
-    flavors:
-      - holy
-      - watermelon
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 4
-      - ReagentId: Vitamin
-        Quantity: 4
-      - ReagentId: Sugar
-        Quantity: 4
-      - ReagentId: Holywater
-        Quantity: 48
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/holymelon.rsi
-  - type: Produce
-    plantId: WatermelonPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Wine
-        Quantity: 20
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Biological
-  - type: DamageOnHighSpeedImpact
-    minimumSpeed: 0.1
-    damage:
-      types:
-        Blunt: 1
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodHolymelonSlice
-      amount: 4
-    - id: ClothingHeadHatHolyWatermelon
-      prob: 0.5
-  - type: Tag
-    tags:
-    - Fruit
+    - type: Item
+      size: Normal
+      heldPrefix: produce
+    - type: FlavorProfile
+      flavors:
+        - holy
+        - watermelon
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 4
+          - ReagentId: Vitamin
+            Quantity: 4
+          - ReagentId: Sugar
+            Quantity: 4
+          - ReagentId: Holywater
+            Quantity: 48
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/holymelon.rsi
+    - type: Produce
+      plantId: WatermelonPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: Wine
+            Quantity: 20
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Biological
+    - type: DamageOnHighSpeedImpact
+      minimumSpeed: 0.1
+      damage:
+        types:
+          Blunt: 1
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 1
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: desecration
+            - !type:SpillBehavior
+              solution: food
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: ToolRefinable
+      refineResult:
+        - id: FoodHolymelonSlice
+          amount: 4
+        - id: ClothingHeadHatHolyWatermelon
+          prob: 0.5
+    - type: Tag
+      tags:
+        - Fruit
 
 - type: entity
   name: holymelon slice
@@ -2218,39 +2209,39 @@
   id: FoodHolymelonSlice
   description: Juicy golden and red slice.
   components:
-  - type: Item
-    size: Tiny
-  - type: FlavorProfile
-    flavors:
-      - holy
-      - watermelon
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/holymelon.rsi
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 1
-      - ReagentId: Vitamin
-        Quantity: 1
-      - ReagentId: Sugar
-        Quantity: 1
-      - ReagentId: Holywater
-        Quantity: 12
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: Wine
-        Quantity: 5
-  - type: Tag
-    tags:
-    - Fruit
-    - Slice
-  - type: FoodSequenceElement
-    entries:
-      Burger: HolymelonSliceBurger
-      Taco: HolymelonSlice
-      Skewer: HolymelonSliceSkewer
+    - type: Item
+      size: Tiny
+    - type: FlavorProfile
+      flavors:
+        - holy
+        - watermelon
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/holymelon.rsi
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 1
+          - ReagentId: Vitamin
+            Quantity: 1
+          - ReagentId: Sugar
+            Quantity: 1
+          - ReagentId: Holywater
+            Quantity: 12
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: Wine
+            Quantity: 5
+    - type: Tag
+      tags:
+        - Fruit
+        - Slice
+    - type: FoodSequenceElement
+      entries:
+        Burger: HolymelonSliceBurger
+        Taco: HolymelonSlice
+        Skewer: HolymelonSliceSkewer
 
 - type: entity
   name: grapes
@@ -2258,32 +2249,32 @@
   id: FoodGrape
   description: The food of emperors, Space France inhabitants (usually as wine) and soccer moms. One day it could be used in wine production for the bartender if he ever runs out.
   components:
-  - type: FlavorProfile
-    flavors:
-      - grape
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: JuiceGrape
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/grape.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: GrapePlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceGrape
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
+    - type: FlavorProfile
+      flavors:
+        - grape
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: JuiceGrape
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/grape.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: GrapePlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceGrape
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
 
 - type: entity
   name: berries
@@ -2291,36 +2282,36 @@
   id: FoodBerries
   description: A handful of various types of berries.
   components:
-  - type: FlavorProfile
-    flavors:
-      - berry
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: JuiceBerry
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/berries.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: BerryPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBerry
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Taco: Berries
-      Burger: BerriesBurger
+    - type: FlavorProfile
+      flavors:
+        - berry
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: JuiceBerry
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/berries.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: BerryPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceBerry
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Taco: Berries
+        Burger: BerriesBurger
 
 - type: entity
   name: bungo fruit
@@ -2328,65 +2319,65 @@
   id: FoodBungo
   description: The humble bungo fruit.
   components:
-  - type: FlavorProfile
-    flavors:
-      - bungo
-  - type: Edible
-    trash:
-    - FoodBungoPit
-  - type: ToolRefinable
-    refineResult:
-    - id: FoodBungoPit
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Enzyme
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/bungo.rsi
-  - type: Produce
-    plantId: BungoPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBungo
-        Quantity: 10
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Taco: Bungo
-      Burger: Bungo
+    - type: FlavorProfile
+      flavors:
+        - bungo
+    - type: Edible
+      trash:
+        - FoodBungoPit
+    - type: ToolRefinable
+      refineResult:
+        - id: FoodBungoPit
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Enzyme
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/bungo.rsi
+    - type: Produce
+      plantId: BungoPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceBungo
+            Quantity: 10
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Taco: Bungo
+        Burger: Bungo
 
 - type: entity
   name: bungo pit
   parent: FoodInjectableBase
   id: FoodBungoPit
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/bungo.rsi
-    state: pit
-  - type: Tag
-    tags:
-    - Recyclable
-    - Trash
-  - type: Solution
-    solution:
-      maxVol: 7.5
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 2
-      - ReagentId: Bungotoxin
-        Quantity: 5
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Seed
-    plantId: BungoPlants
-  - type: SpaceGarbage
-  - type: BadFood
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/bungo.rsi
+      state: pit
+    - type: Tag
+      tags:
+        - Recyclable
+        - Trash
+    - type: Solution
+      solution:
+        maxVol: 7.5
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 2
+          - ReagentId: Bungotoxin
+            Quantity: 5
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Seed
+      plantId: BungoPlants
+    - type: SpaceGarbage
+    - type: BadFood
 
 - type: entity
   parent: FoodProduceBase
@@ -2394,29 +2385,29 @@
   name: pea pod
   description: A duck's favorite treat!
   components:
-  - type: FlavorProfile
-    flavors:
-      - peas
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 10
-      - ReagentId: Vitamin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/pea.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: PeaPlants
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Taco: Pea
-      Burger: Pea
+    - type: FlavorProfile
+      flavors:
+        - peas
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/pea.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: PeaPlants
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Taco: Pea
+        Burger: Pea
 
 - type: entity
   parent: FoodProduceBase
@@ -2424,31 +2415,31 @@
   name: cluster of world peas
   description: It's rumored to bring peace to any who consume it.
   components:
-  - type: FlavorProfile
-    flavors:
-      - numbingtranquility
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Happiness
-        Quantity: 5
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Pax
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/world_pea.rsi
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: WorldPeaPlants
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: FoodSequenceElement
-    entries:
-      Taco: WorldPea
-      Burger: WorldPeaBurger
+    - type: FlavorProfile
+      flavors:
+        - numbingtranquility
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Happiness
+            Quantity: 5
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Pax
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/world_pea.rsi
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: WorldPeaPlants
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: FoodSequenceElement
+      entries:
+        Taco: WorldPea
+        Burger: WorldPeaBurger
 
 - type: entity
   name: pumpkin
@@ -2456,49 +2447,48 @@
   id: FoodPumpkin
   description: A large, orange... berry. Seriously.
   components:
-  - type: Item
-    size: Normal
-    heldPrefix: produce
-  - type: FlavorProfile
-    flavors:
-      - pumpkin
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: PumpkinFlesh # Mostly empty space
-        Quantity: 20
-      - ReagentId: Nutriment
-        Quantity: 5
-      - ReagentId: Vitamin
-        Quantity: 5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/pumpkin.rsi
-  - type: Produce
-    plantId: PumpkinPlants
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Biological
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 16
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: ToolRefinable
-    refineResult:
-    - id: CarvedPumpkin
-    - id: PumpkinSeeds
-  - type: Tag
-    tags:
-    - Fruit
-    - Vegetable
+    - type: Item
+      size: Normal
+      heldPrefix: produce
+    - type: FlavorProfile
+      flavors:
+        - pumpkin
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: PumpkinFlesh # Mostly empty space
+            Quantity: 20
+          - ReagentId: Nutriment
+            Quantity: 5
+          - ReagentId: Vitamin
+            Quantity: 5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/pumpkin.rsi
+    - type: Produce
+      plantId: PumpkinPlants
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Biological
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 16
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: desecration
+            - !type:SpillBehavior
+              solution: food
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: ToolRefinable
+      refineResult:
+        - id: CarvedPumpkin
+        - id: PumpkinSeeds
+    - type: Tag
+      tags:
+        - Fruit
+        - Vegetable
 
 - type: entity
   name: blue pumpkin
@@ -2506,53 +2496,52 @@
   id: FoodBluePumpkin
   description: A large, blue... berry. Seriously.
   components:
-  - type: Item
-    size: Small
-    heldPrefix: produce
-  - type: FlavorProfile
-    flavors:
-      - bluepumpkin
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: PumpkinFlesh # Mostly empty space
-        Quantity: 20
-      - ReagentId: Nutriment
-        Quantity: 10
-      - ReagentId: Ammonia
-        Quantity: 10
-      - ReagentId: Chlorine
-        Quantity: 10
-      - ReagentId: Vitamin
-        Quantity: 10
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBluePumpkin
-        Quantity: 10
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/blue_pumpkin.rsi
-  - type: Produce
-    plantId: BluePumpkinPlants
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Biological
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 16
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: desecration
-      - !type:SpillBehavior
-        solution: food
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: Tag
-    tags:
-    - Fruit
+    - type: Item
+      size: Small
+      heldPrefix: produce
+    - type: FlavorProfile
+      flavors:
+        - bluepumpkin
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: PumpkinFlesh # Mostly empty space
+            Quantity: 20
+          - ReagentId: Nutriment
+            Quantity: 10
+          - ReagentId: Ammonia
+            Quantity: 10
+          - ReagentId: Chlorine
+            Quantity: 10
+          - ReagentId: Vitamin
+            Quantity: 10
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceBluePumpkin
+            Quantity: 10
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/blue_pumpkin.rsi
+    - type: Produce
+      plantId: BluePumpkinPlants
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Biological
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 16
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: desecration
+            - !type:SpillBehavior
+              solution: food
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Tag
+      tags:
+        - Fruit
 
 - type: entity
   name: cotton boll
@@ -2560,33 +2549,33 @@
   id: CottonBol
   parent: [FoodProduceBase, BaseSlicingRefinableFood]
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/cotton.rsi
-  - type: FlavorProfile
-    flavors:
-      - cotton
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Fiber
-        Quantity: 5
-      - ReagentId: Cellulose
-        Quantity: 10
-  - type: ToolRefinable
-    refineResult:
-    - id: MaterialCotton1
-      amount: 2
-  - type: Produce
-    plantId: CottonPlants
-  - type: Tag
-    tags:
-    - ClothMade
-    - CottonBoll
-  - type: FoodSequenceElement
-    entries:
-      CottonBurger: CottonBol
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cotton.rsi
+    - type: FlavorProfile
+      flavors:
+        - cotton
+    - type: Edible
+      requiresSpecialDigestion: true
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Fiber
+            Quantity: 5
+          - ReagentId: Cellulose
+            Quantity: 10
+    - type: ToolRefinable
+      refineResult:
+        - id: MaterialCotton1
+          amount: 2
+    - type: Produce
+      plantId: CottonPlants
+    - type: Tag
+      tags:
+        - ClothMade
+        - CottonBoll
+    - type: FoodSequenceElement
+      entries:
+        CottonBurger: CottonBol
 
 - type: entity
   name: pyrotton boll
@@ -2594,37 +2583,37 @@
   id: PyrottonBol
   parent: [FoodProduceBase, BaseSlicingRefinableFood]
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/pyrotton.rsi
-  - type: FlavorProfile
-    flavors:
-      - pyrotton
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Fiber
-        Quantity: 5
-      - ReagentId: Phlogiston
-        Quantity: 5
-      - ReagentId: Cellulose
-        Quantity: 5
-  - type: ToolRefinable
-    refineResult:
-    - id: MaterialPyrotton1
-      amount: 2
-  - type: Produce
-    plantId: PyrottonPlants
-  - type: Tag
-    tags:
-    - ClothMade
-    - CottonBoll
-  - type: Extractable
-    grindableSolutionName: food
-  - type: FoodSequenceElement
-    entries:
-      CottonBurger: PyrottonBol
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/pyrotton.rsi
+    - type: FlavorProfile
+      flavors:
+        - pyrotton
+    - type: Edible
+      requiresSpecialDigestion: true
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Fiber
+            Quantity: 5
+          - ReagentId: Phlogiston
+            Quantity: 5
+          - ReagentId: Cellulose
+            Quantity: 5
+    - type: ToolRefinable
+      refineResult:
+        - id: MaterialPyrotton1
+          amount: 2
+    - type: Produce
+      plantId: PyrottonPlants
+    - type: Tag
+      tags:
+        - ClothMade
+        - CottonBoll
+    - type: Extractable
+      grindableSolutionName: food
+    - type: FoodSequenceElement
+      entries:
+        CottonBurger: PyrottonBol
 
 - type: entity
   name: cherry
@@ -2632,68 +2621,68 @@
   id: FoodCherry
   description: Juicy red cherry with a pit inside.
   components:
-  - type: FlavorProfile
-    flavors:
-      - cherry
-  - type: Edible
-    trash:
-    - TrashCherryPit
-  - type: ToolRefinable
-    refineResult:
-    - id: TrashCherryPit
-  - type: Solution
-    solution:
-      maxVol: 15
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 3.5
-      - ReagentId: Vitamin
-        Quantity: 3.5
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/cherry.rsi
-  - type: Produce
-    plantId: CherryPlants
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceCherry
-        Quantity: 5
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Taco: Cherry
-      Burger: Cherry
+    - type: FlavorProfile
+      flavors:
+        - cherry
+    - type: Edible
+      trash:
+        - TrashCherryPit
+    - type: ToolRefinable
+      refineResult:
+        - id: TrashCherryPit
+    - type: Solution
+      solution:
+        maxVol: 15
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 3.5
+          - ReagentId: Vitamin
+            Quantity: 3.5
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cherry.rsi
+    - type: Produce
+      plantId: CherryPlants
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceCherry
+            Quantity: 5
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Taco: Cherry
+        Burger: Cherry
 
 - type: entity
   name: cherry pit
   parent: FoodInjectableBase
   id: TrashCherryPit
   components:
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/cherry.rsi
-    state: pit
-  - type: Item
-    sprite: Objects/Specific/Hydroponics/cherry.rsi
-    heldPrefix: pit
-    size: Tiny
-  - type: Tag
-    tags:
-    - Recyclable
-    - Trash
-  - type: Solution
-    solution:
-      maxVol: 1
-      reagents:
-      - ReagentId: Toxin
-        Quantity: 1
-  - type: Extractable
-    grindableSolutionName: food
-  - type: Seed
-    plantId: CherryPlants
-  - type: SpaceGarbage
-  - type: BadFood
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/cherry.rsi
+      state: pit
+    - type: Item
+      sprite: Objects/Specific/Hydroponics/cherry.rsi
+      heldPrefix: pit
+      size: Tiny
+    - type: Tag
+      tags:
+        - Recyclable
+        - Trash
+    - type: Solution
+      solution:
+        maxVol: 1
+        reagents:
+          - ReagentId: Toxin
+            Quantity: 1
+    - type: Extractable
+      grindableSolutionName: food
+    - type: Seed
+      plantId: CherryPlants
+    - type: SpaceGarbage
+    - type: BadFood
 
 - type: entity
   parent: [SolutionNormal, FoodProduceBase] # Anomalously large
@@ -2701,42 +2690,42 @@
   name: anomaly berry
   description: A strange blue fruit. Something about it doesn't seem right.
   components:
-  - type: FlavorProfile
-    flavors:
-      - strange
-  - type: Sprite
-    sprite: Objects/Specific/Hydroponics/anomaly_berry.rsi
-    state: produce
-  - type: Item
-    heldPrefix: produce
-  - type: Produce
-    plantId: AnomalyBerryPlants
-  - type: Edible
-    trash:
-    - EffectAnomalyFloraBulb # Random loot
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Nutriment
-        Quantity: 20
-      - ReagentId: Vitamin
-        Quantity: 20
-      - ReagentId: JuiceBerry
-        Quantity: 20
-      - ReagentId: Artifexium
-        Quantity: 1
-  - type: Extractable
-    juiceSolution:
-      reagents:
-      - ReagentId: JuiceBerry
-        Quantity: 30
-  - type: Tag
-    tags:
-    - Fruit
-  - type: FoodSequenceElement
-    entries:
-      Taco: AnomalyBerry
-      Burger: AnomalyBerryBurger
+    - type: FlavorProfile
+      flavors:
+        - strange
+    - type: Sprite
+      sprite: Objects/Specific/Hydroponics/anomaly_berry.rsi
+      state: produce
+    - type: Item
+      heldPrefix: produce
+    - type: Produce
+      plantId: AnomalyBerryPlants
+    - type: Edible
+      trash:
+        - EffectAnomalyFloraBulb # Random loot
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Nutriment
+            Quantity: 20
+          - ReagentId: Vitamin
+            Quantity: 20
+          - ReagentId: JuiceBerry
+            Quantity: 20
+          - ReagentId: Artifexium
+            Quantity: 1
+    - type: Extractable
+      juiceSolution:
+        reagents:
+          - ReagentId: JuiceBerry
+            Quantity: 30
+    - type: Tag
+      tags:
+        - Fruit
+    - type: FoodSequenceElement
+      entries:
+        Taco: AnomalyBerry
+        Burger: AnomalyBerryBurger
 
 - type: entity
   name: bloonion bulb
@@ -2744,68 +2733,66 @@
   parent: [SolutionCryo, BaseStructureDynamic, ProduceBase]
   id: FoodBloonion
   components:
-  - type: Appearance
-  - type: Sprite
-    drawdepth: Items
-    noRot: true
-    sprite: Objects/Specific/Hydroponics/bloonion.rsi
-    state: produce
-  - type: Item
-    sprite: Objects/Specific/Hydroponics/bloonion.rsi
-    heldPrefix: produce
-  - type: Produce
-    plantId: BloonionPlants
-  - type: Tag
-    tags:
-    - Vegetable
-  - type: PotencyVisuals
-  - type: FlavorProfile
-    flavors:
-    - onion
-    - strange
-  - type: Solution
-    solution:
-      reagents:
-      - ReagentId: Potassium
-        Quantity: 1
-      - ReagentId: Phosphorus
-        Quantity: 1
-      - ReagentId: Sugar
-        Quantity: 3
-      - ReagentId: Vitamin
-        Quantity: 5
-      - ReagentId: Allicin
-        Quantity: 5
-  - type: ExplodeOnTrigger
-  - type: Explosive
-    explosionType: Default
-    maxIntensity: 0.001
-    intensitySlope: 1
-    totalIntensity: 0.1
-  - type: Damageable
-  - type: Injurable
-    damageContainer: Biological
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1
-      behaviors:
-      - !type:SpillBehavior
-        solution: food
-      - !type:TriggerBehavior
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: InteractionOutline
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.20
-          position: 0, 0.35
-        density: 80
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
+    - type: Appearance
+    - type: Sprite
+      drawdepth: Items
+      noRot: true
+      sprite: Objects/Specific/Hydroponics/bloonion.rsi
+      state: produce
+    - type: Item
+      sprite: Objects/Specific/Hydroponics/bloonion.rsi
+      heldPrefix: produce
+    - type: Produce
+      plantId: BloonionPlants
+    - type: Tag
+      tags:
+        - Vegetable
+    - type: PotencyVisuals
+    - type: FlavorProfile
+      flavors:
+        - onion
+        - strange
+    - type: Solution
+      solution:
+        reagents:
+          - ReagentId: Potassium
+            Quantity: 1
+          - ReagentId: Phosphorus
+            Quantity: 1
+          - ReagentId: Sugar
+            Quantity: 3
+          - ReagentId: Vitamin
+            Quantity: 5
+          - ReagentId: Allicin
+            Quantity: 5
+    - type: ExplodeOnTrigger
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 0.001
+      intensitySlope: 1
+      totalIntensity: 0.1
+    - type: Damageable
+    - type: Injurable
+      damageContainer: Biological
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 1
+          behaviors:
+            - !type:SpillBehavior
+              solution: food
+            - !type:TriggerBehavior
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: InteractionOutline
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeCircle
+            radius: 0.20
+            position: 0, 0.35
+          density: 80
+          mask:
+            - MobMask
+          layer:
+            - MobLayer

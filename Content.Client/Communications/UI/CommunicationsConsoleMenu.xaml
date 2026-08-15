@@ -1,62 +1,82 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
-    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-    Title="{Loc 'comms-console-menu-title'}"
-    MinSize="400 300">
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc 'comms-console-menu-title'}"
+                      MinSize="450 300">
 
     <!-- Main Container -->
     <BoxContainer Orientation="Vertical"
-        HorizontalExpand="False"
-        VerticalExpand="True"
-        Margin="6 6 6 5">
-
-        <TextEdit Name="MessageInput"
-            VerticalExpand="True"
-            HorizontalExpand="True"
-            VerticalAlignment="Stretch"
-            HorizontalAlignment="Stretch"
-            MinHeight="100"/>
+                  HorizontalExpand="True"
+                  VerticalExpand="True"
+                  Margin="6 6 6 5">
 
         <!-- ButtonsPart -->
         <BoxContainer Orientation="Vertical"
-            VerticalAlignment="Bottom"
-            SeparationOverride="4">
+                      HorizontalExpand="True"
+                      VerticalExpand="True"
+                      Margin="8 2">
+            <PanelContainer StyleClasses="SurfacePrimary">
+                <!-- AnnouncePart -->
+                <BoxContainer Orientation="Vertical"
+                              Margin="8" SeparationOverride="5">
 
-            <!-- AnnouncePart -->
-            <BoxContainer Orientation="Vertical"
-                Margin="0 2">
+                    <Label Text="{Loc 'comms-console-menu-announcement-section-header'}" StyleClasses="SectionHeader"
+                           Margin="0 4 0 0" />
 
-                <Button Name="AnnounceButton"
-                    Access="Public"
-                    Text="{Loc 'comms-console-menu-announcement-button'}"
-                    ToolTip="{Loc 'comms-console-menu-announcement-button-tooltip'}"
-                    StyleClasses="OpenLeft"
-                    Margin="0 0 1 0"
-                    Disabled="True"/>
+                    <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True"
+                                    Margin="0 0 0 2" />
 
-                <Button Name="BroadcastButton"
-                    Access="Public"
-                    Text="{Loc 'comms-console-menu-broadcast-button'}"
-                    ToolTip="{Loc 'comms-console-menu-broadcast-button-tooltip'}"
-                    StyleClasses="OpenBoth"/>
+                    <Button Name="AnnounceButton"
+                            Access="Public"
+                            Text="{Loc 'comms-console-menu-announcement-button'}"
+                            ToolTip="{Loc 'comms-console-menu-announcement-button-tooltip'}"
+                            StyleClasses="OpenLeft"
+                            Margin="0 0 0 0"
+                            Disabled="True" />
 
-                <OptionButton Name="AlertLevelButton"
-                    Access="Public"
-                    ToolTip="{Loc 'comms-console-menu-alert-level-button-tooltip'}"
-                    StyleClasses="OpenRight"/>
+                    <Button Name="BroadcastButton"
+                            Access="Public"
+                            Text="{Loc 'comms-console-menu-broadcast-button'}"
+                            ToolTip="{Loc 'comms-console-menu-broadcast-button-tooltip'}"
+                            StyleClasses="OpenBoth" />
 
-            </BoxContainer>
+                    <controls:TguiOptionButton Name="AlertLevelButton"
+                                               Access="Public"
+                                               ToolTip="{Loc 'comms-console-menu-alert-level-button-tooltip'}"
+                                               StyleClasses="OpenRight" />
 
+                </BoxContainer>
+            </PanelContainer>
+
+            <PanelContainer StyleClasses="ListView" VerticalExpand="True" HorizontalExpand="True" Margin="0 8">
+                <TextEdit Name="MessageInput"
+                          VerticalExpand="True"
+                          HorizontalExpand="True"
+                          MinHeight="125" Margin="8" />
+            </PanelContainer>
             <!-- EmergencyPart -->
-            <BoxContainer Orientation="Vertical"
-                SeparationOverride="6">
 
-                <RichTextLabel Name="CountdownLabel"/>
 
-                <Button Name="EmergencyShuttleButton"
-                    Access="Public" 
-                    Text="Placeholder Text"
-                    ToolTip="{Loc 'comms-console-menu-emergency-shuttle-button-tooltip'}"/>
-            </BoxContainer>
+            <PanelContainer StyleClasses="SurfacePrimary">
+                <BoxContainer Orientation="Vertical"
+                              HorizontalExpand="True"
+                              VerticalExpand="True"
+                              Margin="8">
+
+                    <Label Text="{Loc 'comms-console-menu-shuttle-section-header'}" StyleClasses="SectionHeader"
+                           Margin="0 4 8 0" />
+
+
+                    <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True" Margin="0 4" />
+
+
+                    <RichTextLabel Name="CountdownLabel" Margin="0 8" />
+
+                    <Button Name="EmergencyShuttleButton"
+                            Access="Public"
+                            Text="Placeholder Text"
+                            ToolTip="{Loc 'comms-console-menu-emergency-shuttle-button-tooltip'}" />
+                </BoxContainer>
+            </PanelContainer>
         </BoxContainer>
     </BoxContainer>
 </controls:FancyWindow>

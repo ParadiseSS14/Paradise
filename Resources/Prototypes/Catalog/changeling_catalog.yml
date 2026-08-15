@@ -8,10 +8,10 @@
   cost:
     ChangelingDNA: 30
   categories:
-  - ChangelingStoreCombat
+    - ChangelingStoreCombat
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionRetractableItemArmBlade
 
 - type: listing
@@ -22,24 +22,24 @@
   cost:
     ChangelingDNA: 20
   categories:
-  - ChangelingStoreStealth
+    - ChangelingStoreStealth
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productComponents: ChangelingFleshClothingAbilityStoreDummy
 
 - type: listing
   id: ChangelingVoiceMimic
   name: changeling-catalog-voice-mimic-name
   description: changeling-catalog-voice-mimic-desc
-  icon: { sprite: /Textures/Interface/Actions/changeling2.rsi, state: mimicry}
+  icon: { sprite: /Textures/Interface/Actions/changeling2.rsi, state: mimicry }
   cost:
     ChangelingDNA: 10
   categories:
-  - ChangelingStoreUtility
+    - ChangelingStoreUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productComponents: ChangelingVoiceMimicDummy
 
 - type: listing
@@ -51,10 +51,10 @@
   cost:
     ChangelingDNA: 10
   categories:
-  - ChangelingStoreUtility
+    - ChangelingStoreUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingBiodegrade
 
 - type: listing
@@ -65,10 +65,10 @@
   cost:
     ChangelingDNA: 10
   categories:
-  - ChangelingStoreStealth
+    - ChangelingStoreStealth
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingStingDna
 
 - type: listing
@@ -80,10 +80,10 @@
   cost:
     ChangelingDNA: 15
   categories:
-  - ChangelingStoreCombat
+    - ChangelingStoreCombat
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingStingBlind
 
 - type: listing
@@ -95,10 +95,10 @@
   cost:
     ChangelingDNA: 15
   categories:
-  - ChangelingStoreCombat
+    - ChangelingStoreCombat
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingStingCryogenic
 
 - type: listing
@@ -110,10 +110,10 @@
   cost:
     ChangelingDNA: 10
   categories:
-  - ChangelingStoreUtility
+    - ChangelingStoreUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingStingLead
 
 - type: listing
@@ -125,10 +125,10 @@
   cost:
     ChangelingDNA: 10
   categories:
-  - ChangelingStoreUtility
+    - ChangelingStoreUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingStingHallucinogenic
 
 - type: listing
@@ -139,10 +139,10 @@
   cost:
     ChangelingDNA: 20
   categories:
-  - ChangelingStoreUtility
+    - ChangelingStoreUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingLastResort
 
 - type: listing
@@ -154,10 +154,10 @@
   cost:
     ChangelingDNA: 5
   categories:
-  - ChangelingStoreUtility
+    - ChangelingStoreUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productComponents: ChangelingNightVisionDummy
 
 - type: listing
@@ -169,8 +169,8 @@
   cost:
     ChangelingDNA: 20
   categories:
-  - ChangelingStoreCombat
+    - ChangelingStoreCombat
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   productAction: ActionChangelingScreech

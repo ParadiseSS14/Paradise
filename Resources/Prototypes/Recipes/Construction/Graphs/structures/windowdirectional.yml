@@ -4,7 +4,6 @@
   graph:
     - node: start
       edges:
-
         - to: windowDirectional
           steps:
             - material: Glass

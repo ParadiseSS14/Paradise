@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+gitroot=$(git rev-parse --show-toplevel)
+cd "$gitroot"
+
+mapfile -t files < <(
+    git diff --cached --name-only --diff-filter=AM -- Resources/Prototypes |
+    grep -E '\.ya?ml$'
+)
+
+if (( ${#files[@]} != 0 )); then
+
+    if ! command -v npm >/dev/null 2>&1; then
+        echo "Node.js/npm is required to check YAML formatting. Install Node.js, then run: npm ci --prefix Tools/prettier"
+        exit 1
+    fi
+
+    if [[ ! -x Tools/prettier/node_modules/.bin/prettier && ! -f Tools/prettier/node_modules/.bin/prettier.cmd ]]; then
+        echo "Prettier is not installed. Run: npm ci --prefix Tools/prettier"
+        exit 1
+    fi
+
+    # Capture npm output so VS Code shows our actionable message first.
+    # `|| status=$?` prevents `set -e` from exiting before we can print it.
+    status=0
+    prettier_output=$(npm --prefix Tools/prettier run prettier:check -- "${files[@]/#/../../}" 2>&1) || status=$?
+
+    if (( status != 0 )); then
+        echo "YAML formatting check failed. Run: npm --prefix Tools/prettier run prettier:write -- ../../Resources/Prototypes"
+        echo "$prettier_output"
+        exit "$status"
+    fi
+
+    echo "$prettier_output"
+fi

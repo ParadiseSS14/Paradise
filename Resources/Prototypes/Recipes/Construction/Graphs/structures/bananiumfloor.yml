@@ -18,10 +18,10 @@
       edges:
         - to: start
           completed:
-          - !type:SpawnPrototype
-                prototype: MaterialBananium1
-                amount: 2
-          - !type:DeleteEntity {}
+            - !type:SpawnPrototype
+              prototype: MaterialBananium1
+              amount: 2
+            - !type:DeleteEntity {}
           steps:
             - tool: Screwing
               doAfter: 5

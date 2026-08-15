@@ -10,10 +10,10 @@
   femaleFirstNames: NamesVox
   naming: First
   sexes:
-  - Unsexed
+    - Unsexed
   defaultSoundsBySex:
-  - UnisexVox
-  - UnisexVox
-  - UnisexVox
+    - UnisexVox
+    - UnisexVox
+    - UnisexVox
   voices:
-  - UnisexVox
+    - UnisexVox

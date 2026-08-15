@@ -71,10 +71,7 @@
         </BoxContainer>
         <customControls:VSeparator StyleClasses="LowDivider" />
         <BoxContainer HorizontalExpand="True" VerticalExpand="True">
-            <PanelContainer Margin="10 10 10 10" HorizontalExpand="True" RectClipContent="True">
-                <PanelContainer.PanelOverride>
-                    <gfx:StyleBoxFlat BackgroundColor="#000000FF" />
-                </PanelContainer.PanelOverride>
+            <PanelContainer Margin="10 10 10 10" HorizontalExpand="True" RectClipContent="True" StyleClasses="SurfacePrimary">
                 <BoxContainer Margin="10 10 10 10" Orientation="Horizontal" HorizontalExpand="True" VerticalExpand="True">
                     <ui:XenoArtifactGraphControl Name="GraphControl" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
                         <Label Name="NoArtiLabel"

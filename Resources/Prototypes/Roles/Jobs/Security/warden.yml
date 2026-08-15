@@ -15,18 +15,18 @@
   icon: "JobIconWarden"
   supervisors: job-supervisors-hos
   access:
-  - Security
-  - Brig
-  - Armory
-  - Maintenance
-  - External
-  - Detective
-  - Cryogenics
-  - GenpopEnter
-  - GenpopLeave
+    - Security
+    - Brig
+    - Armory
+    - Maintenance
+    - External
+    - Detective
+    - Cryogenics
+    - GenpopEnter
+    - GenpopLeave
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+    - !type:AddImplantSpecial
+      implants: [MindShieldImplant]
 
 - type: startingGear
   id: WardenGear
@@ -37,8 +37,8 @@
     pocket1: WeaponPistolMk58
   storage:
     back:
-    - Flash
-    - MagazinePistol
+      - Flash
+      - MagazinePistol
 
 - type: chameleonOutfit
   id: WardenChameleonOutfit

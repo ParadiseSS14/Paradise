@@ -19,7 +19,7 @@
   id: DerelictCyborg
   pickPlayer: false
   prefRoles:
-  - GenericSiliconAntagonist
+    - GenericSiliconAntagonist
 
 - type: antagSpecifier
   parent: DerelictCyborg

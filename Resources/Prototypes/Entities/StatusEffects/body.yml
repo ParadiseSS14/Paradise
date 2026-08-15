@@ -3,58 +3,58 @@
   id: BloodstreamStatusEffectBase
   abstract: true
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - Bloodstream
+    - type: StatusEffect
+      whitelist:
+        components:
+          - Bloodstream
 
 - type: entity
   parent: BloodstreamStatusEffectBase
   id: BloodstreamStatusEffectDebuff
   abstract: true
   components:
-  - type: RejuvenateRemovedStatusEffect
+    - type: RejuvenateRemovedStatusEffect
 
 - type: entity
   parent: BloodstreamStatusEffectDebuff
   id: StatusEffectBloodloss
   name: bloodloss
   components:
-  - type: StutteringAccent
-  - type: DrunkStatusEffect
+    - type: StutteringAccent
+    - type: DrunkStatusEffect
 
 - type: entity
   abstract: true
   parent: MobStatusEffectBase
   id: PainNumbnessStatusEffectBase
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - MobState
-      - MobThresholds
-  - type: PainNumbnessStatusEffect
+    - type: StatusEffect
+      whitelist:
+        components:
+          - MobState
+          - MobThresholds
+    - type: PainNumbnessStatusEffect
 
 - type: entity
   parent: BloodstreamStatusEffectDebuff
   id: StatusEffectAnticoagulant # Decreases the amount of blood coagulation when bleeding.
   name: thin blood
   components:
-  - type: HemophiliaStatusEffect
-    bleedReductionMultiplier: 0.33
-    bleedAmountMultiplier: 1
+    - type: HemophiliaStatusEffect
+      bleedReductionMultiplier: 0.33
+      bleedAmountMultiplier: 1
 
 - type: entity
   parent: BloodstreamStatusEffectDebuff
   id: StatusEffectHemorrhage # Increases the amount of blood lost when bleeding.
   name: hemorrhage
   components:
-  - type: HemophiliaStatusEffect
-    bleedReductionMultiplier: 1 # We don't want it to also reduce coagulation, it would stack with Anticoagulant.
-    bleedAmountMultiplier: 1.33
+    - type: HemophiliaStatusEffect
+      bleedReductionMultiplier: 1 # We don't want it to also reduce coagulation, it would stack with Anticoagulant.
+      bleedAmountMultiplier: 1.33
 
 - type: entity
-  parent: [ PainNumbnessStatusEffectBase, MobStatusEffectDebuff ]
+  parent: [PainNumbnessStatusEffectBase, MobStatusEffectDebuff]
   id: StatusEffectPainNumbness
   name: pain numbness
 
@@ -62,11 +62,11 @@
   parent: MobStatusEffectBase
   id: StaminaModifierStatusEffect
   components:
-  - type: StatusEffect
-    whitelist:
-      components:
-      - Stamina
-  - type: StaminaModifierStatusEffect
+    - type: StatusEffect
+      whitelist:
+        components:
+          - Stamina
+    - type: StaminaModifierStatusEffect
 
 - type: entity
   parent: StaminaModifierStatusEffect
@@ -78,5 +78,5 @@
   id: StatusEffectStimulantsStamina
   name: 1.5x max stamina
   components:
-  - type: StaminaModifierStatusEffect
-    modifier: 1.5
+    - type: StaminaModifierStatusEffect
+      modifier: 1.5

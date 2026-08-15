@@ -41,8 +41,8 @@
   equipment:
     neck: ClothingNeckMantleCMO
   effects:
-  - !type:GroupLoadoutEffect
-    proto: MasterCMO
+    - !type:GroupLoadoutEffect
+      proto: MasterCMO
 
 # Outer clothing
 - type: loadout
@@ -54,4 +54,3 @@
   id: ChiefMedicalOfficerWintercoat
   equipment:
     outerClothing: ClothingOuterWinterCMO
-

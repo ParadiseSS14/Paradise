@@ -44,4 +44,3 @@
   components:
     - type: AutoLinkTransmitter
       channel: Windows
-

@@ -41,7 +41,7 @@ public sealed partial class AirAlarmWindow : FancyWindow
 
     private Dictionary<Gas, Label> _gasLabels = new();
 
-    private OptionButton _modes => CModeButton;
+    private TguiOptionButton _modes => CModeButton;
 
     private CheckBox _autoMode => AutoModeCheckBox;
 

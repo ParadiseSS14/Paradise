@@ -49,7 +49,7 @@ public abstract class CommonStylesheet : PalettedStylesheet, IButtonConfig, IWin
     ResPath IIconConfig.HelpIconPath => new("help.png");
     ResPath IIconConfig.CrossIconPath => new("cross.svg.png");
     ResPath IIconConfig.RefreshIconPath => new("circular_arrow.svg.96dpi.png");
-    ResPath IIconConfig.InvertedTriangleIconPath => new("inverted_triangle.svg.png");
+    ResPath IIconConfig.InvertedTriangleIconPath => new("chevron-down.png");
 
     ResPath IWindowConfig.WindowHeaderTexturePath => new("window_header.png");
     ResPath IWindowConfig.WindowHeaderAlertTexturePath => new("window_header_alert.png");

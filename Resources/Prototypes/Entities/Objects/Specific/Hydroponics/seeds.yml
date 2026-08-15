@@ -1,16 +1,16 @@
 - type: entity
-  parent: [ BaseItem, BasePaperLabelable ] #TODO: Add sprites for different types of paper, replace BasePaperLabelable with BasePaperLabelableVisualized
+  parent: [BaseItem, BasePaperLabelable] #TODO: Add sprites for different types of paper, replace BasePaperLabelable with BasePaperLabelableVisualized
   id: SeedBase
   abstract: true
   components:
     - type: Sprite
       sprite: Objects/Specific/Hydroponics/seeds.rsi
       layers:
-      - state: seed
-      - state: paper
-        visible: false
-        map: ["enum.PaperLabelVisuals.Layer"]
-        sprite: Objects/Specific/Hydroponics/seeds.rsi
+        - state: seed
+        - state: paper
+          visible: false
+          map: ["enum.PaperLabelVisuals.Layer"]
+          sprite: Objects/Specific/Hydroponics/seeds.rsi
     - type: Appearance
     - type: GenericVisualizer
       visuals:

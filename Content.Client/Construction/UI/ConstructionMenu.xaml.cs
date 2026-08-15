@@ -70,7 +70,7 @@ namespace Content.Client.Construction.UI
     }
 
     [GenerateTypedNameReferences]
-    public sealed partial class ConstructionMenu : DefaultWindow, IConstructionMenuView
+    public sealed partial class ConstructionMenu : FancyWindow, IConstructionMenuView
     {
         public bool BuildButtonPressed
         {

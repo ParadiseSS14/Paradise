@@ -12,7 +12,7 @@
       sprite: Objects/Weapons/Melee/shields.rsi
       size: Ginormous
       shape:
-      - 0,0,4,5
+        - 0,0,4,5
       heldPrefix: riot
     - type: Blocking
       passiveBlockModifier:
@@ -33,25 +33,24 @@
   abstract: true
   id: BaseShieldDestructible
   components:
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 125 #This is probably enough damage before it breaks
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-      - !type:SpawnEntitiesBehavior
-        spawn:
-          SheetSteel:
-            min: 2
-            max: 2
-          SheetGlass:
-            min: 2
-            max: 2
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 125 #This is probably enough damage before it breaks
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel:
+                  min: 2
+                  max: 2
+                SheetGlass:
+                  min: 2
+                  max: 2
 
 - type: entity
   name: base repairable shield
@@ -60,22 +59,22 @@
   description: A repairable shield!
   abstract: true
   components:
-  - type: Repairable # Negative values represent healing
-    damage:
-      types:
-        Blunt: -20
-        Slash: -20
-        Piercing: -20
-        Heat: -20
-    fuelCost: 10 # 1/2 of a Welder for a full repair
-    doAfterDelay: 5
-    allowSelfRepair: false
+    - type: Repairable # Negative values represent healing
+      damage:
+        types:
+          Blunt: -20
+          Slash: -20
+          Piercing: -20
+          Heat: -20
+      fuelCost: 10 # 1/2 of a Welder for a full repair
+      doAfterDelay: 5
+      allowSelfRepair: false
 
 #Security Shields
 
 - type: entity
   name: riot shield
-  parent: [ BaseRepairableShield, BaseShieldDestructible, BaseSecurityContraband ]
+  parent: [BaseRepairableShield, BaseShieldDestructible, BaseSecurityContraband]
   id: RiotShield
   description: A large tower shield. Good for controlling crowds.
   components:
@@ -91,7 +90,7 @@
 
 - type: entity
   name: laser shield
-  parent: [ BaseRepairableShield, BaseShieldDestructible, BaseSecurityContraband ]
+  parent: [BaseRepairableShield, BaseShieldDestructible, BaseSecurityContraband]
   id: RiotLaserShield
   description: A shield built for withstanding lasers, but not much else.
   components:
@@ -109,7 +108,7 @@
 
 - type: entity
   name: ballistic shield
-  parent: [ BaseRepairableShield, BaseShieldDestructible, BaseSecurityContraband ]
+  parent: [BaseRepairableShield, BaseShieldDestructible, BaseSecurityContraband]
   id: RiotBulletShield
   description: A shield built for protecting against ballistics, but not much else.
   components:
@@ -149,20 +148,19 @@
       node: woodenBuckler
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 75 #Weaker shield
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: WoodDestroy
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            MaterialWoodPlank:
-              min: 5
-              max: 5
+        - trigger: !type:DamageTrigger
+            damage: 75 #Weaker shield
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WoodDestroy
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MaterialWoodPlank:
+                  min: 5
+                  max: 5
     - type: StaticPrice
       price: 150
 
@@ -188,19 +186,18 @@
       node: cardShield
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 25 #Very very weak shield
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound: /Audio/Items/Toys/ToyFall2.ogg
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            MaterialCardboard:
-              min: 2
-              max: 4
+        - trigger: !type:DamageTrigger
+            damage: 25 #Very very weak shield
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound: /Audio/Items/Toys/ToyFall2.ogg
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MaterialCardboard:
+                  min: 2
+                  max: 4
     - type: StaticPrice
       price: 20
 
@@ -219,20 +216,19 @@
       node: makeshiftShield
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 75
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalBreak
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            SheetSteel:
-              min: 1
-              max: 2
+        - trigger: !type:DamageTrigger
+            damage: 75
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetSteel:
+                  min: 1
+                  max: 2
 
 - type: entity
   name: web shield
@@ -256,26 +252,25 @@
       node: shield
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 50
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            MaterialWebSilk:
-              min: 1
-              max: 1
-        - !type:PlaySoundBehavior
-          sound:
-            collection: WoodDestroy
+        - trigger: !type:DamageTrigger
+            damage: 50
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                MaterialWebSilk:
+                  min: 1
+                  max: 1
+            - !type:PlaySoundBehavior
+              sound:
+                collection: WoodDestroy
 
 #Magic/Cult Shields (give these to wizard for now)
 
 - type: entity
   name: clockwork shield
-  parent: [ BaseRepairableShield, BaseShieldDestructible ]
+  parent: [BaseRepairableShield, BaseShieldDestructible]
   id: ClockworkShield
   description: Ratvar oyrffrf lbh jvgu uvf cebgrpgvba.
   components:
@@ -287,7 +282,7 @@
 
 - type: entity
   name: mirror shield
-  parent: [ BaseShield, BaseMagicalContraband ]
+  parent: [BaseShield, BaseMagicalContraband]
   id: MirrorShield
   description: Eerily glows red... you hear the geometer whispering
   components:
@@ -312,20 +307,19 @@
         path: /Audio/Effects/glass_step.ogg
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 50
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: GlassBreak
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            SheetGlass:
-              min: 5
-              max: 5
+        - trigger: !type:DamageTrigger
+            damage: 50
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                SheetGlass:
+                  min: 5
+                  max: 5
 
 - type: entity
   name: energy shield
@@ -344,11 +338,11 @@
     - type: ItemToggleSize
       activatedSize: Huge
       activatedShape:
-      - 0,0,3,3
+        - 0,0,3,3
     - type: ComponentToggler
       components:
-      - type: DisarmMalus
-        malus: 0.6
+        - type: DisarmMalus
+          malus: 0.6
     - type: Sprite
       sprite: Objects/Weapons/Melee/e_shield.rsi
       layers:
@@ -357,7 +351,7 @@
           color: "#FFFFFF"
           visible: false
           shader: unshaded
-          map: [ "shield" ]
+          map: ["shield"]
     - type: Item
       size: Small
       sprite: Objects/Weapons/Melee/e_shield.rsi
@@ -401,20 +395,19 @@
       messages: EnergyShieldMessages
     - type: Destructible
       thresholds:
-      - trigger:
-          !type:DamageTrigger
-          damage: 125
-        behaviors:
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: GlassBreak
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            BrokenEnergyShield:
-              min: 1
-              max: 1
+        - trigger: !type:DamageTrigger
+            damage: 125
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+            - !type:PlaySoundBehavior
+              sound:
+                collection: GlassBreak
+            - !type:SpawnEntitiesBehavior
+              spawn:
+                BrokenEnergyShield:
+                  min: 1
+                  max: 1
     - type: StaticPrice
       price: 350
 
@@ -434,7 +427,7 @@
 
 - type: entity
   name: telescopic shield
-  parent: [ BaseRepairableShield, BaseShieldDestructible ]
+  parent: [BaseRepairableShield, BaseShieldDestructible]
   id: TelescopicShield
   description: An advanced riot shield made of lightweight materials that collapses for easy storage.
   components:
@@ -449,23 +442,23 @@
           volume: -5
     - type: ComponentToggler
       components:
-      - type: DisarmMalus
-        malus: 0.6
+        - type: DisarmMalus
+          malus: 0.6
     - type: ItemToggleSize
       activatedSize: Huge
       activatedShape:
-      - 0,0,3,3
+        - 0,0,3,3
     - type: Sprite
       sprite: Objects/Weapons/Melee/teleriot_shield.rsi
       layers:
         - state: teleriot-icon
         - state: teleriot-on
           visible: false
-          map: [ "shield" ]
+          map: ["shield"]
     - type: Item
       size: Small
       shape:
-      - 0,0,1,1
+        - 0,0,1,1
       sprite: Objects/Weapons/Melee/teleriot_shield.rsi
       heldPrefix: teleriot
     - type: UseDelay

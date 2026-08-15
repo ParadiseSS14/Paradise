@@ -155,14 +155,14 @@ public sealed partial class DecalPlacerWindow : DefaultWindow
             button.OnPressed += ButtonOnPressed;
             if (_selected == decal)
             {
-                var panelContainer = new PanelContainer
+                var panelContainer = new PanelContainer()
                 {
+                    StyleClasses = { Button.StyleClassButton },
                     Children =
                     {
-                        button
-                    }
+                        button,
+                    },
                 };
-                panelContainer.SetOnlyStyleClass(StyleClass.PanelLight);
                 Grid.AddChild(panelContainer);
             }
             else

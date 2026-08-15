@@ -6,36 +6,36 @@
   name: sabre sheath
   description: An ornate sheath designed to hold an officer's blade.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/sheath.rsi
-    state: sheath
-  - type: Clothing
-    sprite: Clothing/Belt/sheath.rsi
-  - type: Item
-    size: Ginormous
-    shape:
-    - 0,0,1,2
-    storedOffset: 0,-2
-    storedRotation: 45
-  - type: ItemSlots
-    slots:
-      item:
-        name: Sabre
-        insertVerbText: sheath-insert-verb
-        ejectVerbText: sheath-eject-verb
-        insertSound: /Audio/Items/sheath.ogg
-        ejectSound: /Audio/Items/unsheath.ogg
-        ejectOnBreak: true
-        whitelist:
-          tags:
-          - CaptainSabre
-  - type: ItemMapper
-    mapLayers:
-      sheath-sabre:
-        whitelist:
-          tags:
-          - CaptainSabre
-  - type: Appearance
+    - type: Sprite
+      sprite: Clothing/Belt/sheath.rsi
+      state: sheath
+    - type: Clothing
+      sprite: Clothing/Belt/sheath.rsi
+    - type: Item
+      size: Ginormous
+      shape:
+        - 0,0,1,2
+      storedOffset: 0,-2
+      storedRotation: 45
+    - type: ItemSlots
+      slots:
+        item:
+          name: Sabre
+          insertVerbText: sheath-insert-verb
+          ejectVerbText: sheath-eject-verb
+          insertSound: /Audio/Items/sheath.ogg
+          ejectSound: /Audio/Items/unsheath.ogg
+          ejectOnBreak: true
+          whitelist:
+            tags:
+              - CaptainSabre
+    - type: ItemMapper
+      mapLayers:
+        sheath-sabre:
+          whitelist:
+            tags:
+              - CaptainSabre
+    - type: Appearance
 
 - type: entity
   parent: ClothingBeltStorageBase
@@ -43,32 +43,32 @@
   name: quiver
   description: Can hold up to 16 arrows, and fits snug around your waist.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/quiver.rsi
-    layers:
-    - state: icon
-    - map: [ "enum.StorageContainerVisualLayers.Fill" ]
-      visible: false
-  - type: Clothing
-  - type: Storage
-    grid:
-    - 0,0,7,3
-    maxItemSize: Small
-    whitelist:
-      tags:
-      - Arrow
-      - Plunger
-  - type: Item
-    size: Ginormous
-    shape:
-    - 0,0,5,2
-  - type: Appearance
-  - type: StorageContainerVisuals
-    maxFillLevels: 3
-    fillBaseName: fill-
-  - type: Construction
-    graph: Quiver
-    node: Quiver
+    - type: Sprite
+      sprite: Clothing/Belt/quiver.rsi
+      layers:
+        - state: icon
+        - map: ["enum.StorageContainerVisualLayers.Fill"]
+          visible: false
+    - type: Clothing
+    - type: Storage
+      grid:
+        - 0,0,7,3
+      maxItemSize: Small
+      whitelist:
+        tags:
+          - Arrow
+          - Plunger
+    - type: Item
+      size: Ginormous
+      shape:
+        - 0,0,5,2
+    - type: Appearance
+    - type: StorageContainerVisuals
+      maxFillLevels: 3
+      fillBaseName: fill-
+    - type: Construction
+      graph: Quiver
+      node: Quiver
 
 ## Belts without visualizers
 
@@ -78,35 +78,35 @@
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/bandolier.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/bandolier.rsi
-  - type: Item
-    size: Huge
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-        - ShellShotgun
-    capacity: 14
+    - type: Sprite
+      sprite: Clothing/Belt/bandolier.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/bandolier.rsi
+    - type: Item
+      size: Huge
+    - type: BallisticAmmoProvider
+      whitelist:
+        tags:
+          - ShellShotgun
+      capacity: 14
 
 - type: entity
-  parent: [ ClothingBeltStorageBase, BaseMagicalContraband ]
+  parent: [ClothingBeltStorageBase, BaseMagicalContraband]
   id: ClothingBeltWand
   name: wand belt
   description: A belt designed to hold various rods of power. A veritable fanny pack of exotic magic.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/wand.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/wand.rsi
-  - type: Storage
-    grid:
-    - 0,0,15,1
-    whitelist:
-      tags:
-      - WizardWand
-      - WhitelistChameleon
+    - type: Sprite
+      sprite: Clothing/Belt/wand.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/wand.rsi
+    - type: Storage
+      grid:
+        - 0,0,15,1
+      whitelist:
+        tags:
+          - WizardWand
+          - WhitelistChameleon
 
 ## Holsters
 
@@ -114,19 +114,19 @@
   parent: ClothingBeltStorageBase
   id: ClothingBeltHolster
   name: shoulder holster
-  description: 'A holster to carry a handgun and ammo. WARNING: Badasses only.'
+  description: "A holster to carry a handgun and ammo. WARNING: Badasses only."
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/holster.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/holster.rsi
-  - type: Storage
-    grid:
-    - 0,0,3,1
-  - type: Item
-    size: Ginormous
-    shape:
-    - 0,0,4,1
+    - type: Sprite
+      sprite: Clothing/Belt/holster.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/holster.rsi
+    - type: Storage
+      grid:
+        - 0,0,3,1
+    - type: Item
+      size: Ginormous
+      shape:
+        - 0,0,4,1
 
 - type: entity
   parent: [ClothingBeltStorageBase, BaseSyndicateContraband]
@@ -134,25 +134,25 @@
   name: syndicate shoulder holster
   description: A deep shoulder holster capable of holding many types of ballistics.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/syndieholster.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/syndieholster.rsi
-  - type: Storage
-    maxItemSize: Huge
-    grid:
-    - 0,0,3,3
-    whitelist:
-      components:
-      - Gun
-      - BallisticAmmoProvider
-      - CartridgeAmmo
-  - type: Item
-    size: Ginormous
-    shape:
-    - 0,0,4,2
-  - type: StaticPrice
-    price: 500
+    - type: Sprite
+      sprite: Clothing/Belt/syndieholster.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/syndieholster.rsi
+    - type: Storage
+      maxItemSize: Huge
+      grid:
+        - 0,0,3,3
+      whitelist:
+        components:
+          - Gun
+          - BallisticAmmoProvider
+          - CartridgeAmmo
+    - type: Item
+      size: Ginormous
+      shape:
+        - 0,0,4,2
+    - type: StaticPrice
+      price: 500
 
 ## Webbing
 
@@ -164,21 +164,21 @@
   name: security carrier
   description: Unique and versatile chest rig, can hold security gear.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/securitywebbing.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/securitywebbing.rsi
+    - type: Sprite
+      sprite: Clothing/Belt/securitywebbing.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/securitywebbing.rsi
 
 - type: entity
-  parent: [ ClothingBeltStorageBase, BaseSecurityCargoContraband ]
+  parent: [ClothingBeltStorageBase, BaseSecurityCargoContraband]
   id: ClothingBeltMercWebbing
   name: mercenary webbing
   description: Ideal for storing everything from ammo to weapons and combat essentials.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/mercwebbing.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/mercwebbing.rsi
+    - type: Sprite
+      sprite: Clothing/Belt/mercwebbing.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/mercwebbing.rsi
 
 - type: entity
   parent: ClothingBeltStorageBase
@@ -186,10 +186,10 @@
   name: salvage rig
   description: Universal unloading system for work in space.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/salvagewebbing.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/salvagewebbing.rsi
+    - type: Sprite
+      sprite: Clothing/Belt/salvagewebbing.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/salvagewebbing.rsi
 
 - type: entity
   parent: [ClothingBeltStorageBase, ContentsExplosionResistanceBase, BaseSyndicateContraband]
@@ -197,14 +197,14 @@
   name: chest rig
   description: A set of tactical webbing worn by Syndicate boarding parties.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/militarywebbing.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/militarywebbing.rsi
-  - type: ExplosionResistance
-    damageCoefficient: 0.1
-  - type: StaticPrice
-    price: 500
+    - type: Sprite
+      sprite: Clothing/Belt/militarywebbing.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/militarywebbing.rsi
+    - type: ExplosionResistance
+      damageCoefficient: 0.1
+    - type: StaticPrice
+      price: 500
 
 - type: entity
   parent: ClothingBeltMilitaryWebbing
@@ -212,18 +212,18 @@
   name: medical chest rig
   description: A set of tactical webbing worn by Gorlex Marauder medic operatives.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/militarywebbingmed.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/militarywebbingmed.rsi
+    - type: Sprite
+      sprite: Clothing/Belt/militarywebbingmed.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/militarywebbingmed.rsi
 
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingBeltMilitaryWebbing ]
+  parent: [BaseCentcommContraband, ClothingBeltMilitaryWebbing]
   id: ClothingBeltMilitaryWebbingERT
   name: ERT chest rig
   description: A set of tactical webbing worn by Emergency Response Team operatives.
   components:
-  - type: Sprite
-    sprite: Clothing/Belt/militarywebbingert.rsi
-  - type: Clothing
-    sprite: Clothing/Belt/militarywebbingert.rsi
+    - type: Sprite
+      sprite: Clothing/Belt/militarywebbingert.rsi
+    - type: Clothing
+      sprite: Clothing/Belt/militarywebbingert.rsi

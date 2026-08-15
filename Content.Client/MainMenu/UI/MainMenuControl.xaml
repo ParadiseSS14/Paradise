@@ -17,7 +17,7 @@
                   SeparationOverride="24">
         <TextureRect Name="Logo"
                      Stretch="KeepCentered" />
-        <PanelContainer StyleClasses="BackgroundPanel">
+        <PanelContainer StyleClasses="SurfacePrimary">
             <BoxContainer Orientation="Vertical"
                           HorizontalAlignment="Center"
                           VerticalAlignment="Center"
@@ -25,8 +25,8 @@
                           VerticalExpand="True"
                           StyleIdentifier="mainMenuVBox"
                           MinWidth="320"
-                          Margin="0 4 0 12">
-                <GridContainer Columns="2" Margin="0 4">
+                          Margin="8">
+                <GridContainer Columns="2" Margin="4 8">
                     <Label Text="{Loc 'main-menu-username-label'}" />
                     <LineEdit Name="UsernameBox"
                               Access="Public"
@@ -39,6 +39,10 @@
                               PlaceHolder="server address:port"
                               HorizontalExpand="True" />
                 </GridContainer>
+
+                <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True" Margin="0 8 0 8" />
+
+                <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" SeparationOverride="4">
                 <Button Name="DirectConnectButton"
                         Access="Public"
                         Text="{Loc 'main-menu-direct-connect-button'}"
@@ -60,12 +64,9 @@
                         Access="Public"
                         Text="{Loc 'main-menu-quit-button'}"
                         TextAlign="Center"
-                        StyleIdentifier="mainMenu">
-                    <Control.StyleClasses>
-                        <system:String>negative</system:String>
-                        <system:String>OpenRight</system:String>
-                    </Control.StyleClasses>
-                </Button>
+                        StyleIdentifier="mainMenu"
+                        StyleClasses="negative OpenRight" />
+                </BoxContainer>
             </BoxContainer>
         </PanelContainer>
     </BoxContainer>

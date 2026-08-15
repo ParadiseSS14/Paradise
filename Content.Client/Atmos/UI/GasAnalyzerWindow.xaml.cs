@@ -1,5 +1,10 @@
 using System.Numerics;
+using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Controls;
+using Content.Client.UserInterface.Tweens;
+using Content.Client.UserInterface.Tweens.Builders;
+using Content.Client.UserInterface.Tweens.Easers;
+using Content.Client.UserInterface.Tweens.Extensions;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.EntitySystems;
@@ -15,15 +20,31 @@ using Direction = Robust.Shared.Maths.Direction;
 namespace Content.Client.Atmos.UI
 {
     [GenerateTypedNameReferences]
-    public sealed partial class GasAnalyzerWindow : DefaultWindow
+    public sealed partial class GasAnalyzerWindow : FancyWindow
     {
+        private readonly TweenManager? _tweenManager;
+        [Dependency] private IEntityManager _entity = default!;
         private readonly SharedAtmosphereSystem _atmosphere;
         private NetEntity _currentEntity = NetEntity.Invalid;
+
 
         public GasAnalyzerWindow()
         {
             RobustXamlLoader.Load(this);
             _atmosphere = IoCManager.Resolve<IEntityManager>().System<SharedAtmosphereSystem>();
+            _tweenManager = _entity.System<TweenManager>();
+            CTabContainer.SetTabVisible(0, false);
+            // replace text to loc
+            CTabContainer.SetTabTitle(0, "Device");
+            CTabContainer.SetTabTitle(1, "Environment");
+            CTabContainer.CurrentTab = 1;
+        }
+
+        protected override void EnteredTree()
+        {
+            base.EnteredTree();
+            CTabContainer.Modulate = Color.Transparent;
+            BootupGasInfo();
         }
 
         public void Populate(GasAnalyzerUserMessage msg)
@@ -43,11 +64,15 @@ namespace Content.Client.Atmos.UI
             // Environment Tab
             var envMix = msg.NodeGasMixes[0];
 
+            CTabContainer.SetTabVisible(1, true);
             CTabContainer.SetTabTitle(1, envMix.Name);
             CEnvironmentMix.RemoveAllChildren();
             GenerateGasDisplay(envMix, CEnvironmentMix);
 
             // Device Tab
+
+            CDeviceStack.RemoveAllChildren();
+
             if (msg.NodeGasMixes.Length > 1)
             {
                 if (_currentEntity != msg.DeviceUid)
@@ -58,121 +83,56 @@ namespace Content.Client.Atmos.UI
                 }
 
                 CTabContainer.SetTabVisible(0, true);
-                CTabContainer.SetTabTitle(0, Loc.GetString("gas-analyzer-window-tab-title-capitalized", ("title", msg.DeviceName)));
-                // Set up Grid
-                GridIcon.OverrideDirection = msg.NodeGasMixes.Length switch
+                CTabContainer.SetTabTitle(0,
+                    Loc.GetString("gas-analyzer-window-tab-title-capitalized", ("title", msg.DeviceName)));
+
+                var entity = IoCManager.Resolve<IEntityManager>().GetEntity(msg.DeviceUid);
+
+                if (msg.NodeGasMixes.Length == 0)
                 {
-                    // Unary layout
-                    2 => Direction.South,
-                    // Binary layout
-                    3 => Direction.East,
-                    // Trinary layout
-                    4 => Direction.East,
-                    _ => GridIcon.OverrideDirection
-                };
-
-                GridIcon.SetEntity(IoCManager.Resolve<IEntityManager>().GetEntity(msg.DeviceUid));
-                LeftPanel.RemoveAllChildren();
-                MiddlePanel.RemoveAllChildren();
-                RightPanel.RemoveAllChildren();
-                if (msg.NodeGasMixes.Length == 2)
-                {
-                    // Unary, use middle
-                    LeftPanelLabel.Text = string.Empty;
-                    MiddlePanelLabel.Text = Loc.GetString("gas-analyzer-window-tab-title-capitalized", ("title", msg.NodeGasMixes[1].Name));
-                    RightPanelLabel.Text = string.Empty;
-
-                    LeftPanel.Visible = false;
-                    MiddlePanel.Visible = true;
-                    RightPanel.Visible = false;
-
-                    GenerateGasDisplay(msg.NodeGasMixes[1], MiddlePanel);
-
-                    minSize = new Vector2(CDeviceGrid.DesiredSize.X + 40, MinSize.Y);
+                    // Hide device tab, no device selected
+                    CTabContainer.SetTabVisible(0, false);
+                    CTabContainer.CurrentTab = 1;
+                    minSize = new Vector2(CEnvironmentMix.DesiredSize.X + 40, MinSize.Y);
+                    _currentEntity = NetEntity.Invalid;
                 }
-                else if (msg.NodeGasMixes.Length == 3)
+
+                for (var i = 1; i < msg.NodeGasMixes.Length; i++)
                 {
-                    // Binary, use left and right
-                    LeftPanelLabel.Text = Loc.GetString("gas-analyzer-window-tab-title-capitalized", ("title", msg.NodeGasMixes[1].Name));
-                    MiddlePanelLabel.Text = string.Empty;
-                    RightPanelLabel.Text = Loc.GetString("gas-analyzer-window-tab-title-capitalized", ("title", msg.NodeGasMixes[2].Name));
-
-                    LeftPanel.Visible = true;
-                    MiddlePanel.Visible = false;
-                    RightPanel.Visible = true;
-
-                    GenerateGasDisplay(msg.NodeGasMixes[1], LeftPanel);
-                    GenerateGasDisplay(msg.NodeGasMixes[2], RightPanel);
-
-                    minSize = new Vector2(CDeviceGrid.DesiredSize.X + 40, MinSize.Y);
-                }
-                else if (msg.NodeGasMixes.Length == 4)
-                {
-                    // Trinary, use all three
-                    // Trinary can be flippable, which complicates how to display things currently
-                    LeftPanelLabel.Text = Loc.GetString("gas-analyzer-window-tab-title-capitalized",
-                        ("title", msg.DeviceFlipped ? msg.NodeGasMixes[1].Name : msg.NodeGasMixes[3].Name));
-                    MiddlePanelLabel.Text = Loc.GetString("gas-analyzer-window-tab-title-capitalized", ("title", msg.NodeGasMixes[2].Name));
-                    RightPanelLabel.Text = Loc.GetString("gas-analyzer-window-tab-title-capitalized",
-                        ("title", msg.DeviceFlipped ? msg.NodeGasMixes[3].Name : msg.NodeGasMixes[1].Name));
-
-                    LeftPanel.Visible = true;
-                    MiddlePanel.Visible = true;
-                    RightPanel.Visible = true;
-
-                    GenerateGasDisplay(msg.DeviceFlipped ? msg.NodeGasMixes[1] : msg.NodeGasMixes[3], LeftPanel);
-                    GenerateGasDisplay(msg.NodeGasMixes[2], MiddlePanel);
-                    GenerateGasDisplay(msg.DeviceFlipped ? msg.NodeGasMixes[3] : msg.NodeGasMixes[1], RightPanel);
-
-                    minSize = new Vector2(CDeviceGrid.DesiredSize.X + 40, MinSize.Y);
-                }
-                else
-                {
-                    // oh shit of fuck its more than 4 this ui isn't gonna look pretty anymore
-                    CDeviceMixes.RemoveAllChildren();
-                    for (var i = 1; i < msg.NodeGasMixes.Length; i++)
-                    {
-                        GenerateGasDisplay(msg.NodeGasMixes[i], CDeviceMixes);
-                    }
-                    LeftPanel.Visible = false;
-                    MiddlePanel.Visible = false;
-                    RightPanel.Visible = false;
-                    minSize = new Vector2(CDeviceMixes.DesiredSize.X + 40, MinSize.Y);
+                    AddGasEntry(entity, msg.NodeGasMixes[i]);
                 }
             }
-            else
-            {
-                // Hide device tab, no device selected
-                CTabContainer.SetTabVisible(0, false);
-                CTabContainer.CurrentTab = 1;
-                minSize = new Vector2(CEnvironmentMix.DesiredSize.X + 40, MinSize.Y);
-                _currentEntity = NetEntity.Invalid;
-            }
+        }
 
-            MinSize = minSize;
+        private void AddGasEntry(EntityUid entity, GasMixEntry gasMix)
+        {
+            var title = Loc.GetString(
+                "gas-analyzer-window-tab-title-capitalized",
+                ("title", gasMix.Name));
+
+            var entry = new GasAnalyzerEntry(entity, title);
+
+            CDeviceStack.AddChild(entry);
+            GenerateGasDisplay(gasMix, entry.Content);
         }
 
         private void GenerateGasDisplay(GasMixEntry gasMix, Control parent)
         {
-            var panel = new PanelContainer
+            var dataContainer = new BoxContainer
             {
-                VerticalExpand = true,
-                HorizontalExpand = true,
-                Margin = new Thickness(4),
-                PanelOverride = new StyleBoxFlat{BorderColor = Color.FromHex("#4f4f4f"), BorderThickness = new Thickness(1)}
+                Orientation = BoxContainer.LayoutOrientation.Vertical, VerticalExpand = true,
+                Margin = new Thickness(4)
             };
-            var dataContainer = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Vertical, VerticalExpand = true, Margin = new Thickness(4)};
 
-
-            parent.AddChild(panel);
-            panel.AddChild(dataContainer);
+            parent.AddChild(dataContainer);
 
             // Volume label
             var volBox = new BoxContainer { Orientation = BoxContainer.LayoutOrientation.Horizontal };
 
             volBox.AddChild(new Label
             {
-                Text = Loc.GetString("gas-analyzer-window-volume-text")
+                Text = Loc.GetString("gas-analyzer-window-volume-text"),
+                StyleClasses = { StyleClass.LabelSubText },
             });
             volBox.AddChild(new Control
             {
@@ -183,7 +143,7 @@ namespace Content.Client.Atmos.UI
             {
                 Text = Loc.GetString("gas-analyzer-window-volume-val-text", ("volume", $"{gasMix.Volume:0.##}")),
                 Align = Label.AlignMode.Right,
-                HorizontalExpand = true
+                HorizontalExpand = true,
             });
             dataContainer.AddChild(volBox);
 
@@ -192,7 +152,8 @@ namespace Content.Client.Atmos.UI
 
             presBox.AddChild(new Label
             {
-                Text = Loc.GetString("gas-analyzer-window-pressure-text")
+                Text = Loc.GetString("gas-analyzer-window-pressure-text"),
+                StyleClasses = { StyleClass.LabelSubText },
             });
             presBox.AddChild(new Control
             {
@@ -201,7 +162,8 @@ namespace Content.Client.Atmos.UI
             });
             presBox.AddChild(new Label
             {
-                Text = Loc.GetString("gas-analyzer-window-pressure-val-text", ("pressure", $"{gasMix.Pressure:0.00}")),
+                Text = Loc.GetString("gas-analyzer-window-pressure-val-text",
+                    ("pressure", $"{gasMix.Pressure:0.00}")),
                 Align = Label.AlignMode.Right,
                 HorizontalExpand = true
             });
@@ -215,7 +177,8 @@ namespace Content.Client.Atmos.UI
 
                 tempBox.AddChild(new Label
                 {
-                    Text = Loc.GetString("gas-analyzer-window-temperature-text")
+                    Text = Loc.GetString("gas-analyzer-window-temperature-text"),
+                    StyleClasses = { StyleClass.LabelSubText },
                 });
                 tempBox.AddChild(new Control
                 {
@@ -250,6 +213,7 @@ namespace Content.Client.Atmos.UI
                 // return, everything below is for the fancy gas display stuff
                 return;
             }
+
             // Separator
             dataContainer.AddChild(new Control
             {
@@ -314,9 +278,13 @@ namespace Content.Client.Atmos.UI
             tableKey.AddChild(new Label
                 { Text = Loc.GetString("gas-analyzer-window-gas-column-name"), Align = Label.AlignMode.Center });
             tableVal.AddChild(new Label
-                { Text = Loc.GetString("gas-analyzer-window-molarity-column-name"), Align = Label.AlignMode.Center });
+            {
+                Text = Loc.GetString("gas-analyzer-window-molarity-column-name"), Align = Label.AlignMode.Center
+            });
             tablePercent.AddChild(new Label
-                { Text = Loc.GetString("gas-analyzer-window-percentage-column-name"), Align = Label.AlignMode.Center });
+            {
+                Text = Loc.GetString("gas-analyzer-window-percentage-column-name"), Align = Label.AlignMode.Center
+            });
 
             tableKey.AddChild(new StripeBack());
             tableVal.AddChild(new StripeBack());
@@ -328,7 +296,9 @@ namespace Content.Client.Atmos.UI
                 var gasProto = _atmosphere.GetGas(gasEntry.Gas);
                 var localizedName = Loc.GetString(gasProto.Name);
 
+
                 // Add to the table
+
                 tableKey.AddChild(new Label
                 {
                     Text = localizedName
@@ -356,6 +326,27 @@ namespace Content.Client.Atmos.UI
             }
 
             dataContainer.AddChild(gasBar);
+            gasBar.SetPositionFirst();
+        }
+
+        private TweenInstance Fade(Color from, Color to)
+        {
+            return TweenExtensions.Tween(
+                    from,
+                    to,
+                    v => CTabContainer.Modulate = v,
+                    0.25f)
+                .SetEasing(Easing.OutQuint);
+        }
+
+        private void BootupGasInfo()
+        {
+            _tweenManager?.Play(
+                SequentialTweenInstanceBuilder.New()
+                    .Append(Fade(Color.White, Color.Transparent))
+                    .Append(Fade(Color.Transparent, Color.White))
+                    .Build()
+            );
         }
     }
 }

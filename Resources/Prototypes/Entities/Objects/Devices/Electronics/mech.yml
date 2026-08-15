@@ -13,10 +13,10 @@
       state: mainboard
     - type: Tag
       tags:
-      - RipleyCentralControlModule
+        - RipleyCentralControlModule
     - type: GuideHelp
       guides:
-      - Robotics
+        - Robotics
 
 - type: entity
   id: RipleyPeripheralsElectronics
@@ -29,10 +29,10 @@
       state: id_mod
     - type: Tag
       tags:
-      - RipleyPeripheralsControlModule
+        - RipleyPeripheralsControlModule
     - type: GuideHelp
       guides:
-      - Robotics
+        - Robotics
 
 # H.O.N.K.
 
@@ -49,10 +49,10 @@
       state: mainboard
     - type: Tag
       tags:
-      - HonkerCentralControlModule
+        - HonkerCentralControlModule
     - type: GuideHelp
       guides:
-      - Robotics
+        - Robotics
 
 - type: entity
   id: HonkerPeripheralsElectronics
@@ -65,10 +65,10 @@
       state: id_mod
     - type: Tag
       tags:
-      - HonkerPeripheralsControlModule
+        - HonkerPeripheralsControlModule
     - type: GuideHelp
       guides:
-      - Robotics
+        - Robotics
 
 - type: entity
   id: HonkerTargetingElectronics
@@ -81,10 +81,10 @@
       state: id_mod
     - type: Tag
       tags:
-      - HonkerTargetingControlModule
+        - HonkerTargetingControlModule
     - type: GuideHelp
       guides:
-      - Robotics
+        - Robotics
 
 # HAMTR
 
@@ -101,10 +101,10 @@
       state: mainboard
     - type: Tag
       tags:
-      - HamtrCentralControlModule
+        - HamtrCentralControlModule
     - type: GuideHelp
       guides:
-      - Robotics
+        - Robotics
 
 - type: entity
   id: HamtrPeripheralsElectronics
@@ -117,7 +117,7 @@
       state: id_mod
     - type: Tag
       tags:
-      - HamtrPeripheralsControlModule
+        - HamtrPeripheralsControlModule
     - type: GuideHelp
       guides:
-      - Robotics
+        - Robotics

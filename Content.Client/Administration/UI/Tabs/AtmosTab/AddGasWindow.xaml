@@ -1,10 +1,12 @@
 ﻿<DefaultWindow
-    xmlns="https://spacestation14.io" Title="{Loc admin-ui-atmos-add-gas}">
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Title="{Loc admin-ui-atmos-add-gas}">
     <BoxContainer Orientation="Vertical">
         <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc admin-ui-atmos-grid}" MinSize="100 0" />
             <Control MinSize="50 0" />
-            <OptionButton Name="GridOptions" MinSize="100 0" HorizontalExpand="True" />
+            <controls:TguiOptionButton Name="GridOptions" MinSize="100 0" HorizontalExpand="True" />
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc admin-ui-atmos-tile-x}" MinSize="100 0" />
@@ -19,7 +21,7 @@
         <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc admin-ui-atmos-gas}" MinSize="100 0" />
             <Control MinSize="50 0" />
-            <OptionButton Name="GasOptions" MinSize="100 0" HorizontalExpand="True" />
+            <controls:TguiOptionButton Name="GasOptions" MinSize="100 0" HorizontalExpand="True" />
         </BoxContainer>
         <BoxContainer Orientation="Horizontal">
             <Label Text="{Loc admin-ui-atmos-gas-amount}" MinSize="100 0" />

@@ -4,14 +4,14 @@
   name: armor crate
   description: Contains three standard-issue helmets and three bulletproof vests. Requires Security access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: ClothingHeadHelmetBasic
-          amount: 3
-        - id: ClothingOuterArmorBulletproof
-          amount: 3
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: ClothingHeadHelmetBasic
+              amount: 3
+            - id: ClothingOuterArmorBulletproof
+              amount: 3
 
 - type: entity
   parent: CrateSecgear
@@ -19,17 +19,17 @@
   name: nonlethals crate
   description: Contains a mix of disablers, stun batons, and flashes. Requires Security access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: WeaponDisabler
-          amount: 3
-        - id: Stunbaton
-          amount: 3
-        - id: BoxFlashbang
-        - id: Flash
-          amount: 3
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: WeaponDisabler
+              amount: 3
+            - id: Stunbaton
+              amount: 3
+            - id: BoxFlashbang
+            - id: Flash
+              amount: 3
 #        - Pepperspray
 #        - GrenadeTeargas
 
@@ -39,12 +39,12 @@
   name: security supplies crate
   description: Contains various supplies for the station's Security team. Requires Security access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: BoxHandcuff
-        - id: BoxSechud
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: BoxHandcuff
+            - id: BoxSechud
 #        - SecBelt
 #        - SecGasmask
 #        - SpacelawBook
@@ -55,14 +55,14 @@
   name: restraints crate
   description: Contains two boxes each of handcuffs and zipties. Requires Security access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: BoxHandcuff
-          amount: 2
-        - id: BoxZiptie
-          amount: 2
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: BoxHandcuff
+              amount: 2
+            - id: BoxZiptie
+              amount: 2
 
 - type: entity
   parent: CrateSecgear
@@ -70,15 +70,15 @@
   name: security bio suit crate
   description: Contains 2 biohazard suits to ensure that no disease will distract you from your duties. Requires Security access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - !type:NestedSelector
-          tableId: FillBiohazardGearSecurity
-          rolls: 2
-        - id: ClothingMaskSterile
-          amount: 2
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - !type:NestedSelector
+              tableId: FillBiohazardGearSecurity
+              rolls: 2
+            - id: ClothingMaskSterile
+              amount: 2
 
 - type: entity
   parent: CrateSecgear
@@ -86,14 +86,14 @@
   name: implanter crate
   description: Contains 4 MindShield implants and 4 tracking implant. Requires Security access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: MindShieldImplanter
-          amount: 4
-        - id: TrackingImplanter
-          amount: 4
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: MindShieldImplanter
+              amount: 4
+            - id: TrackingImplanter
+              amount: 4
 
 - type: entity
   parent: CrateSecgear
@@ -101,12 +101,12 @@
   name: nonlethal throwables crate
   description: Contains one box each of flashbangs, stingers, tear gas grenades, and four bolas. Requires Security access to open.
   components:
-  - type: EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: BoxFlashbang
-        - id: BoxStinger
-        - id: BoxTearGas
-        - id: Bola # replace with 4 e-bolas when added
-          amount: 4
+    - type: EntityTableContainerFill
+      containers:
+        entity_storage: !type:AllSelector
+          children:
+            - id: BoxFlashbang
+            - id: BoxStinger
+            - id: BoxTearGas
+            - id: Bola # replace with 4 e-bolas when added
+              amount: 4

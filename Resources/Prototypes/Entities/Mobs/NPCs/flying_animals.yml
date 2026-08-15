@@ -4,9 +4,9 @@
   id: FlyingMobBase
   abstract: true
   components:
-  - type: Physics
-    bodyStatus: InAir
-  - type: NoSlip
-  - type: MovementAlwaysTouching
-  - type: CanMoveInAir
-  - type: MovementSpeedModifier
+    - type: Physics
+      bodyStatus: InAir
+    - type: NoSlip
+    - type: MovementAlwaysTouching
+    - type: CanMoveInAir
+    - type: MovementSpeedModifier

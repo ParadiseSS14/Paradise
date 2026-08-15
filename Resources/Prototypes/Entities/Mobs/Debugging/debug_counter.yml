@@ -9,12 +9,9 @@
       rootTask:
         task: DebugCounterCompound
       blackboard:
-        MinimumIdleTime: !type:Single
-          0.5
-        MaximumIdleTime: !type:Single
-          0.5
-        Count: !type:Single
-          0
+        MinimumIdleTime: !type:Single 0.5
+        MaximumIdleTime: !type:Single 0.5
+        Count: !type:Single 0
 
 - type: entity
   parent: MobHuman
@@ -27,12 +24,9 @@
       rootTask:
         task: DebugRandomCounterCompound
       blackboard:
-        MinimumIdleTime: !type:Single
-          1
-        MaximumIdleTime: !type:Single
-          1
-        Count: !type:Single
-          0
+        MinimumIdleTime: !type:Single 1
+        MaximumIdleTime: !type:Single 1
+        Count: !type:Single 0
 
 - type: entity
   parent: MobHuman
@@ -45,9 +39,6 @@
       rootTask:
         task: DebugRandomLessCompound
       blackboard:
-        MinimumIdleTime: !type:Single
-          1
-        MaximumIdleTime: !type:Single
-          1
-        Count: !type:Single
-          0
+        MinimumIdleTime: !type:Single 1
+        MaximumIdleTime: !type:Single 1
+        Count: !type:Single 0

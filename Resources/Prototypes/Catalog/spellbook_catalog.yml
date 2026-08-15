@@ -8,10 +8,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookOffensive
+    - SpellbookOffensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookRodForm
@@ -21,10 +21,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookOffensive
+    - SpellbookOffensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookSmite
@@ -34,10 +34,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookOffensive
+    - SpellbookOffensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookCluwne
@@ -47,10 +47,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookOffensive
+    - SpellbookOffensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookSlip
@@ -60,10 +60,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookOffensive
+    - SpellbookOffensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookGuardianDeck
@@ -73,10 +73,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookOffensive
+    - SpellbookOffensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 # Defensive
 - type: listing
@@ -87,10 +87,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookDefensive
+    - SpellbookDefensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookRepulse
@@ -100,10 +100,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookDefensive
+    - SpellbookDefensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookSmoke
@@ -113,10 +113,10 @@
   cost:
     WizCoin: 1
   categories:
-  - SpellbookDefensive
+    - SpellbookDefensive
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 # Utility
 - type: listing
@@ -127,10 +127,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookBlink
@@ -140,10 +140,10 @@
   cost:
     WizCoin: 1
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 # Taking an Eldritch spell, good proof of concept and a way to celebrate everything magic.
 - type: listing
@@ -154,10 +154,10 @@
   cost:
     WizCoin: 1
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookKnock
@@ -167,10 +167,10 @@
   cost:
     WizCoin: 1
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookCharge
@@ -180,10 +180,10 @@
   cost:
     WizCoin: 1
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookJaunt
@@ -194,10 +194,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookMindSwap
@@ -207,10 +207,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 # Equipment
 - type: listing
@@ -221,10 +221,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookEquipment
+    - SpellbookEquipment
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookWandPolymorphCarp
@@ -234,10 +234,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookEquipment
+    - SpellbookEquipment
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookWandLocker
@@ -247,10 +247,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookEquipment
+    - SpellbookEquipment
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookHammerMjollnir
@@ -260,10 +260,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookEquipment
+    - SpellbookEquipment
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookHammerSingularity
@@ -273,10 +273,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookEquipment
+    - SpellbookEquipment
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookStaffAnimation
@@ -286,10 +286,10 @@
   cost:
     WizCoin: 3
   categories:
-  - SpellbookEquipment
+    - SpellbookEquipment
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 # Event
 - type: listing
@@ -300,10 +300,10 @@
   cost:
     WizCoin: 0
   categories:
-  - SpellbookEvents
+    - SpellbookEvents
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
 
 - type: listing
   id: SpellbookEventSummonGuns
@@ -313,10 +313,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookEvents
+    - SpellbookEvents
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   disableRefund: true
 
 - type: listing
@@ -327,10 +327,10 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookEvents
+    - SpellbookEvents
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1
   disableRefund: true
 
 # Upgrades
@@ -345,14 +345,14 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookOffensive
+    - SpellbookOffensive
   conditions:
-  - !type:BuyBeforeCondition
-    whitelist:
-      - SpellbookFireball
-  # manual for now
-  - !type:ListingLimitedStockCondition
-    stock: 2
+    - !type:BuyBeforeCondition
+      whitelist:
+        - SpellbookFireball
+    # manual for now
+    - !type:ListingLimitedStockCondition
+      stock: 2
 
 - type: listing
   id: SpellbookJauntUpgrade
@@ -365,13 +365,13 @@
   cost:
     WizCoin: 2
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:BuyBeforeCondition
-    whitelist:
-    - SpellbookJaunt
-  - !type:ListingLimitedStockCondition
-    stock: 2
+    - !type:BuyBeforeCondition
+      whitelist:
+        - SpellbookJaunt
+    - !type:ListingLimitedStockCondition
+      stock: 2
 
 - type: listing
   id: SpellbookItemRecallSwap
@@ -381,7 +381,7 @@
   cost:
     WizCoin: 1
   categories:
-  - SpellbookUtility
+    - SpellbookUtility
   conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+    - !type:ListingLimitedStockCondition
+      stock: 1

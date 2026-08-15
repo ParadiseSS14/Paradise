@@ -4,15 +4,15 @@
   name: Charge
   description: Adds a charge back to your wand
   components:
-  - type: Action
-    useDelay: 30
-    itemIconStyle: BigAction
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Basic/wands.rsi
-    layers:
-    - state: nothing
-  - type: InstantAction
-    event: !type:ChargeSpellEvent
-      charge: 1
-  - type: SpeakOnAction
-    sentence: action-speech-spell-charge
+    - type: Action
+      useDelay: 30
+      itemIconStyle: BigAction
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Basic/wands.rsi
+      layers:
+        - state: nothing
+    - type: InstantAction
+      event: !type:ChargeSpellEvent
+        charge: 1
+    - type: SpeakOnAction
+      sentence: action-speech-spell-charge

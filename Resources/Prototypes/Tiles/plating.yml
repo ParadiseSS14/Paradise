@@ -89,7 +89,7 @@
   sprite: /Textures/Tiles/lattice.png
   baseTurf: Space
   isSubfloor: true
-  deconstructTools: [ Cutting ]
+  deconstructTools: [Cutting]
   weather: true
   footstepSounds:
     collection: FootstepCatwalk

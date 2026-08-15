@@ -6,7 +6,7 @@
                 ToolTip=""
                 Access="Public"
                 VerticalExpand="False"
-                StyleClasses="OpenBoth" />
+                StyleClasses="transparentButton" />
 
         <!-- Icon & Name -->
         <BoxContainer Orientation="Horizontal"

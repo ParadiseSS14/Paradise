@@ -1,4 +1,6 @@
-﻿using Content.Client.Resources;
+﻿using System.Numerics;
+using Content.Client.Resources;
+using Content.Client.Stylesheets.Colorspace;
 using Content.Client.Stylesheets.Fonts;
 using Content.Client.Stylesheets.Palette;
 using Content.Client.Stylesheets.SheetletConfigs;
@@ -22,11 +24,9 @@ public sealed class WindowSheetlet<T> : Sheetlet<T>
         IWindowConfig windowCfg = sheet;
         IIconConfig iconCfg = sheet;
 
-        var headerStylebox = new StyleBoxTexture
+        var headerStylebox = new StyleBoxSDFBox()
         {
-            Texture = sheet.GetTextureOr(windowCfg.WindowHeaderTexturePath, NanotrasenStylesheet.TextureRoot),
-            PatchMarginBottom = 3,
-            ExpandMarginBottom = 3,
+            BackgroundColor = sheet.PanelPalette.Background.NudgeLightness(0.04f),
             ContentMarginBottomOverride = 0,
         };
         // TODO: This would probably be better palette-based but we can leave it for now.
@@ -37,12 +37,15 @@ public sealed class WindowSheetlet<T> : Sheetlet<T>
             ExpandMarginBottom = 3,
             ContentMarginBottomOverride = 0,
         };
-        var backgroundBox = new StyleBoxTexture()
+        var backgroundBox = new StyleBoxSDFBox()
         {
-            Texture = sheet.GetTextureOr(windowCfg.WindowBackgroundPath, NanotrasenStylesheet.TextureRoot),
+            BorderColor = sheet.PanelPalette.PanelBorderColor,
+            BorderThickness = sheet.PanelPalette.PanelBorderThickness,
+            CornerRadius = Vector4.Zero,
+            DoGradient = true,
+            BackgroundColor = sheet.PanelPalette.Background.NudgeLightness(0.00f),
+            GradientBottomColor = sheet.PanelPalette.Background.NudgeLightness(-0.06f),
         };
-        backgroundBox.SetPatchMargin(StyleBox.Margin.Horizontal | StyleBox.Margin.Bottom, 2);
-        backgroundBox.SetExpandMargin(StyleBox.Margin.Horizontal | StyleBox.Margin.Bottom, 2);
         var borderedBackgroundBox = new StyleBoxTexture
         {
             Texture = sheet.GetTextureOr(windowCfg.WindowBackgroundBorderedPath, NanotrasenStylesheet.TextureRoot),
@@ -57,18 +60,20 @@ public sealed class WindowSheetlet<T> : Sheetlet<T>
         return
         [
             // TODO: KILL DEFAULT WINDOW (in a bit)
+            // TOJO: i am father
             E<Label>()
                 .Class(DefaultWindow.StyleClassWindowTitle)
-                .FontColor(sheet.HighlightPalette.Text)
-                .Font(sheet.BaseFont.GetFont(14, FontKind.Bold)),
+                .FontColor(sheet.HighlightPalette.Text.WithLightness(0.75f))
+                .Font(sheet.BaseFont.GetFont(12, FontKind.Regular)),
             E<Label>()
                 .Class("windowTitleAlert")
-                .FontColor(Color.White)
-                .Font(sheet.BaseFont.GetFont(14, FontKind.Bold)),
+                .FontColor(Color.White.WithLightness(0.75f))
+                .Font(sheet.BaseFont.GetFont(12, FontKind.Regular)),
             // TODO: maybe also change everything here to `NanoWindow` or something
             E()
                 .Class(DefaultWindow.StyleClassWindowPanel)
                 .Panel(backgroundBox),
+
             E()
                 .Class(DefaultWindow.StyleClassWindowHeader)
                 .Panel(headerStylebox),
@@ -104,8 +109,10 @@ public sealed class WindowSheetlet<T> : Sheetlet<T>
             // Title
             E<Label>()
                 .Class("FancyWindowTitle") // TODO: hardcoding class name
-                .Font(ResCache.GetFont("/Fonts/Boxfont-round/Boxfont Round.ttf", 13)) // TODO: hardcoding font
-                .FontColor(sheet.HighlightPalette.Text),
+                .FontColor(sheet.HighlightPalette.Text.WithLightness(0.75f))
+                .Font(sheet.BaseFont.GetFont(14, FontKind.Regular)),
+
+            E().Class(StyleClass.BackgroundPanel).Panel(backgroundBox),
 
             // Help Button
             E<TextureButton>()

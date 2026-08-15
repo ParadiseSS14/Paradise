@@ -2,12 +2,12 @@
   id: Tortilla
   start: start
   graph:
-  - node: start
-    entity: FoodDoughTortillaSlice
-    edges:
-    - to: flat
-      steps:
-      - tool: Rolling
-        doAfter: 1
-  - node: flat
-    entity: FoodDoughTortillaFlat
+    - node: start
+      entity: FoodDoughTortillaSlice
+      edges:
+        - to: flat
+          steps:
+            - tool: Rolling
+              doAfter: 1
+    - node: flat
+      entity: FoodDoughTortillaFlat

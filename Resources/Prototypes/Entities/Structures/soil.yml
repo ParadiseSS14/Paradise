@@ -5,43 +5,42 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: Clickable
-  - type: InteractionOutline
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.1"
-        density: 190
-        hard: false
-        mask:
-        - FullTileMask
-        layer:
-        - FullTileMask
-  - type: Sprite
-    noRot: true
-  - type: PlantTray
-    drawWarnings: false
-  - type: Solution
-    id: soil
-  - type: RefillableSolution
-    solution: soil
-    maxRefill: 50
-  - type: Transform
-    anchored: true
-  - type: Reactive
-    reactions:
-    - reagents: [Water]
-      methods: [Touch, Ingestion, Injection]
-      effects:
-      - !type:AddReagentToSolution
-        reagent: Water
-        solution: soil
-  - type: Appearance
-  - type: PlantTrayVisuals
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Static
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.1"
+          density: 190
+          hard: false
+          mask:
+            - FullTileMask
+          layer:
+            - FullTileMask
+    - type: Sprite
+      noRot: true
+    - type: PlantTray
+      drawWarnings: false
+    - type: Solution
+      id: soil
+    - type: RefillableSolution
+      solution: soil
+      maxRefill: 50
+    - type: Transform
+      anchored: true
+    - type: Reactive
+      reactions:
+        - reagents: [Water]
+          methods: [Touch, Ingestion, Injection]
+          effects:
+            - !type:AddReagentToSolution
+              reagent: Water
+              solution: soil
+    - type: Appearance
+    - type: PlantTrayVisuals
 
 - type: entity
   parent: BaseHydroponicsSoil
@@ -49,21 +48,20 @@
   name: soil
   description: A mix of organic matter and minerals creating a soil to grow your plant in space. Seems to be dry.
   components:
-  - type: Damageable
-    damageModifierSet: Metallic
-  - type: Injurable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 50
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Sprite
-    sprite: Structures/Hydroponics/misc.rsi
-    state: soil
+    - type: Damageable
+      damageModifierSet: Metallic
+    - type: Injurable
+      damageContainer: Inorganic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 50
+          behaviors:
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Sprite
+      sprite: Structures/Hydroponics/misc.rsi
+      state: soil
 
 - type: entity
   parent: hydroponicsSoil
@@ -71,13 +69,13 @@
   name: fungal soil
   description: A mix of organic matter and fungal root creating a soil to grow your plant in space. Seems to be dry.
   components:
-  - type: Construction
-    graph: Soil
-    node: fungalSoil
-  - type: Sprite
-    sprite: Structures/Hydroponics/misc.rsi
-    state: fungal_soil
-    noRot: true
-  - type: PlantTray
-    waterLevel: 0
-    nutritionLevel: 0
+    - type: Construction
+      graph: Soil
+      node: fungalSoil
+    - type: Sprite
+      sprite: Structures/Hydroponics/misc.rsi
+      state: fungal_soil
+      noRot: true
+    - type: PlantTray
+      waterLevel: 0
+      nutritionLevel: 0

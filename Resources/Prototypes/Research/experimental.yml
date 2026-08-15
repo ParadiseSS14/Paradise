@@ -10,7 +10,7 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - ProximitySensor
+    - ProximitySensor
 
 - type: technology
   id: BasicAnomalousResearch
@@ -22,11 +22,11 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - AnomalyScanner
-  - AnomalyLocator
-  - AnomalyLocatorWide
-  - APECircuitboard
-  - AnomalyVesselCircuitboard
+    - AnomalyScanner
+    - AnomalyLocator
+    - AnomalyLocatorWide
+    - APECircuitboard
+    - AnomalyVesselCircuitboard
 
 - type: technology
   id: BasicXenoArcheology
@@ -38,9 +38,9 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - NodeScanner
-  - AnalysisComputerCircuitboard
-  - ArtifactAnalyzerMachineCircuitboard
+    - NodeScanner
+    - AnalysisComputerCircuitboard
+    - ArtifactAnalyzerMachineCircuitboard
 
 - type: technology
   id: AlternativeResearch
@@ -52,7 +52,7 @@
   tier: 1
   cost: 5000
   recipeUnlocks:
-  - TechDiskComputerCircuitboard
+    - TechDiskComputerCircuitboard
 
 - type: technology
   id: MagnetsTech
@@ -64,8 +64,8 @@
   tier: 1
   cost: 7500
   recipeUnlocks:
-  - ClothingShoesBootsMagSci
-  - ClothingShoesBootsMoon
+    - ClothingShoesBootsMagSci
+    - ClothingShoesBootsMoon
 
 - type: technology
   id: AnomalyCoreHarnessing
@@ -77,7 +77,7 @@
   tier: 1
   cost: 10000
   recipeUnlocks:
-  - WeaponGauntletGorilla
+    - WeaponGauntletGorilla
 
 # Tier 2
 
@@ -91,7 +91,7 @@
   tier: 2
   cost: 5000
   recipeUnlocks:
-  - ArtifactCrusherMachineCircuitboard
+    - ArtifactCrusherMachineCircuitboard
 
 - type: technology
   id: AdvancedAnomalyResearch
@@ -103,11 +103,11 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-  - WeaponPistolCHIMP
-  - AnomalySynchronizerCircuitboard
-  - AnomalyVesselExperimentalCircuitboard
+    - WeaponPistolCHIMP
+    - AnomalySynchronizerCircuitboard
+    - AnomalyVesselExperimentalCircuitboard
   technologyPrerequisites:
-  - BasicAnomalousResearch
+    - BasicAnomalousResearch
 
 - type: technology
   id: DeterrenceTechnologies
@@ -119,8 +119,8 @@
   tier: 2
   cost: 7500
   recipeUnlocks:
-  - WeaponParticleDecelerator
-  - HoloprojectorField
+    - WeaponParticleDecelerator
+    - HoloprojectorField
 
 - type: technology
   id: GravityManipulation
@@ -147,7 +147,7 @@
   tier: 3
   cost: 10000
   recipeUnlocks:
-  - DeviceQuantumSpinInverter
+    - DeviceQuantumSpinInverter
 
 - type: technology
   id: BluespaceTimeManipulation
@@ -159,7 +159,7 @@
   tier: 3
   cost: 10000
   recipeUnlocks:
-  - DeviceDesynchronizer
+    - DeviceDesynchronizer
 
 - type: technology
   id: TeleSci
@@ -171,6 +171,6 @@
   tier: 3
   cost: 10000
   recipeUnlocks:
-  - StationTeleportersControlCircuitboard
-  - StationTeleporterMachineCircuitboard
-  - TeleporterChipBlank
+    - StationTeleportersControlCircuitboard
+    - StationTeleporterMachineCircuitboard
+    - TeleporterChipBlank

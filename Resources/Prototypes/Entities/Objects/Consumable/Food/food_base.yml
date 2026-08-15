@@ -6,13 +6,13 @@
   parent: [BaseItem, SolutionFood, SolutionSmall]
   id: FoodBase
   components:
-  - type: FlavorProfile
-    flavors:
-      - food
-  - type: Edible
-  - type: Sprite
-  - type: StaticPrice
-    price: 0
+    - type: FlavorProfile
+      flavors:
+        - food
+    - type: Edible
+    - type: Sprite
+    - type: StaticPrice
+      price: 0
 
 #
 # Base component for consumable food
@@ -23,7 +23,7 @@
   parent: FoodBase
   id: FoodBaseTrash
   components:
-  - type: SpaceGarbage
+    - type: SpaceGarbage
 
 # This base type is used to cover all of the "obvious" things that should be doable to open-package food.
 # Practically this means injection.
@@ -34,10 +34,10 @@
   parent: FoodBaseTrash
   id: FoodInjectableBase
   components:
-  - type: InjectableSolution
-    solution: food
-  - type: RefillableSolution
-    solution: food
+    - type: InjectableSolution
+      solution: food
+    - type: RefillableSolution
+      solution: food
 
 # usable by any food that can be opened
 # handles appearance with states "icon" and "icon-open"
@@ -45,15 +45,15 @@
   abstract: true
   id: FoodOpenableBase
   components:
-  - type: Appearance
-  - type: Sprite
-    layers:
-    - state: icon
-      map: ["icon"]
-  - type: GenericVisualizer
-    visuals:
-      enum.OpenableVisuals.Opened:
-        icon:
-          True: {state: "icon-open"}
-          False: {state: "icon"}
-  - type: Openable
+    - type: Appearance
+    - type: Sprite
+      layers:
+        - state: icon
+          map: ["icon"]
+    - type: GenericVisualizer
+      visuals:
+        enum.OpenableVisuals.Opened:
+          icon:
+            True: { state: "icon-open" }
+            False: { state: "icon" }
+    - type: Openable

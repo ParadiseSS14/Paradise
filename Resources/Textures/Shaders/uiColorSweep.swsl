@@ -1,0 +1,57 @@
+uniform highp vec2 size;
+uniform highp float radius;
+uniform highp float borderWidth;
+
+uniform highp float val;
+uniform lowp int lockedAxis;
+
+highp vec3 hsv_to_rgb(highp vec4 c) {
+	vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+	highp vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+    vec3 o = c.a < 0.5 ? c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y) : vec3(c.rgb);
+	return o;
+}
+
+void fragment()
+{
+
+	highp vec4 hsv;
+    switch (lockedAxis)
+    {
+        case 1: // Hue
+            hsv = vec4(UV.x, 1.0, 1.0, 0.0 );
+            break;
+
+        case 2: // Saturation
+            hsv = vec4(val, UV.x, 1.0, 0.0);
+            break;
+
+        case 3: // Value
+            hsv = vec4(val, 1.0, UV.x, 0.0);
+            break;
+
+        case 4: // ColorSweep
+            hsv = vec4(val, UV.x, UV.y, 0.0);
+            break;
+
+        case 5: // Red
+            hsv = vec4(UV.x, 0.0, 0.0, 1.0 );
+            break;
+
+        case 6: // Green
+            hsv = vec4(0.0, UV.x, 0.0, 1.0);
+            break;
+
+        case 7: // Blue
+            hsv = vec4(0, 0, UV.x, 1.0);
+            break;
+
+        default:
+            hsv = vec4(val, UV.x, UV.y, 0.0);
+            break;
+    }
+
+	highp vec3 col = hsv_to_rgb(hsv);
+
+	COLOR = vec4(col, 1.0);
+}

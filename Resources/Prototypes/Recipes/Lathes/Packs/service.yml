@@ -3,67 +3,68 @@
 - type: latheRecipePack
   id: ServiceStatic
   recipes:
-  - Bucket
-  - Ashtray
-  - DrinkMug
-  - DrinkMugMetal
-  - DrinkGlass
-  - DrinkShotGlass
-  - DrinkGlassCoupeShaped
-  - CustomDrinkJug
-  - FoodPlate
-  - FoodPlateSmall
-  - FoodPlatePlastic
-  - FoodPlateSmallPlastic
-  - FoodBowlBig
-  - FoodPlateTin
-  - FoodPlateMuffinTin
-  - FoodKebabSkewer
-  - SprayBottle
-  - TrashBag
-  - LightReplacer
-  - MopItem
-  - Holoprojector
-  - WetFloorSign
-  - WireBrush
+    - Bucket
+    - Ashtray
+    - DrinkMug
+    - DrinkMugMetal
+    - DrinkGlass
+    - DrinkShotGlass
+    - DrinkGlassCoupeShaped
+    - CustomDrinkJug
+    - FoodPlate
+    - FoodPlateSmall
+    - FoodPlatePlastic
+    - FoodPlateSmallPlastic
+    - FoodBowlBig
+    - FoodPlateTin
+    - FoodPlateMuffinTin
+    - FoodKebabSkewer
+    - SprayBottle
+    - TrashBag
+    - LightReplacer
+    - MopItem
+    - Holoprojector
+    - WetFloorSign
+    - WireBrush
 
 - type: latheRecipePack
   id: ServiceBoardsStatic
   recipes:
-  - BiogeneratorMachineCircuitboard
-  - UniformPrinterMachineCircuitboard
-  - MicrowaveMachineCircuitboard
-  - ReagentGrinderMachineCircuitboard
-  - ElectricGrillMachineCircuitboard
-  - BoozeDispenserMachineCircuitboard
-  - SodaDispenserMachineCircuitboard
-  - SmartFridgeCircuitboard
+    - BiogeneratorMachineCircuitboard
+    - UniformPrinterMachineCircuitboard
+    - MicrowaveMachineCircuitboard
+    - ReagentGrinderMachineCircuitboard
+    - ElectricGrillMachineCircuitboard
+    - BoozeDispenserMachineCircuitboard
+    - SodaDispenserMachineCircuitboard
+    - SmartFridgeCircuitboard
+    - WashingMachineCircuitboard # Paradise Content - Washing Machine
 
 ## Dynamic
 
 - type: latheRecipePack
   id: Janitor
   recipes:
-  - AdvMopItem
-  - WeaponSprayNozzle
-  - ClothingBackpackWaterTank
-  - MegaSprayBottle
-  - TrashBagHolding
+    - AdvMopItem
+    - WeaponSprayNozzle
+    - ClothingBackpackWaterTank
+    - MegaSprayBottle
+    - TrashBagHolding
 
 - type: latheRecipePack
   id: Instruments
   recipes:
-  - SynthesizerInstrument
-  - PushHorn
+    - SynthesizerInstrument
+    - PushHorn
 
 - type: latheRecipePack
   id: ServiceBoards
   recipes:
-  - BiofabricatorMachineCircuitboard
-  - FatExtractorMachineCircuitboard
-  - HydroponicsTrayMachineCircuitboard # roundstart gear being unlocked roundstart when
-  - SeedExtractorMachineCircuitboard # ^
-  - MassMediaCircuitboard
-  - ReagentGrinderIndustrialMachineCircuitboard
-  - JukeboxCircuitBoard
-  - DawInstrumentMachineCircuitboard
+    - BiofabricatorMachineCircuitboard
+    - FatExtractorMachineCircuitboard
+    - HydroponicsTrayMachineCircuitboard # roundstart gear being unlocked roundstart when
+    - SeedExtractorMachineCircuitboard # ^
+    - MassMediaCircuitboard
+    - ReagentGrinderIndustrialMachineCircuitboard
+    - JukeboxCircuitBoard
+    - DawInstrumentMachineCircuitboard

@@ -1,11 +1,10 @@
 ﻿<BoxContainer xmlns="https://spacestation14.io"
               xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
-              Margin="10 10 10 0"
               HorizontalExpand="True"
               Visible="True">
-    <PanelContainer StyleClasses="BackgroundPanel" HorizontalExpand="True">
+    <PanelContainer StyleClasses="SurfaceTertiary" HorizontalExpand="True">
         <BoxContainer Orientation="Vertical"
-                      HorizontalExpand="True">
+                      HorizontalExpand="True" Margin="8">
             <BoxContainer Orientation="Horizontal">
                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                     <RichTextLabel Name="RewardLabel"/>
@@ -18,12 +17,15 @@
                                 Text="{Loc 'bounty-console-label-button-text'}"
                                 HorizontalExpand="False"
                                 HorizontalAlignment="Right"
-                                StyleClasses="OpenRight"/>
+                                StyleClasses="OpenRight"
+                                MinWidth="125"/>
+                        <Control Margin="4 4"/>
                         <Button Name="SkipButton"
                                 Text="{Loc 'bounty-console-skip-button-text'}"
                                 HorizontalExpand="False"
                                 HorizontalAlignment="Right"
-                                StyleClasses="OpenLeft"/>
+                                StyleClasses="OpenLeft"
+                                MinWidth="75"/>
                     </BoxContainer>
                     <RichTextLabel Name="IdLabel" HorizontalAlignment="Right" Margin="0 0 5 0"/>
                 </BoxContainer>

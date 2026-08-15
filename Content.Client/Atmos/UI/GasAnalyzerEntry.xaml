@@ -1,0 +1,13 @@
+<PanelContainer xmlns="https://spacestation14.io"
+                xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls" StyleClasses="SurfaceSecondary">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" Margin="4">
+        <BoxContainer HorizontalExpand="True">
+            <Label Align="Left" Name="Header"
+                   StyleClasses="LabelHeading" Margin="8 8 0 0" />
+        </BoxContainer>
+        <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True" Margin="0 8 0 2" />
+        <BoxContainer Name="Content" Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" Access="Public" >
+            <SpriteView Name="GridIcon"/>
+        </BoxContainer>
+    </BoxContainer>
+</PanelContainer>

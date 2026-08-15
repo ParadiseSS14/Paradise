@@ -20,12 +20,12 @@
     Plasma:
       amount: 1
   effects:
-  - !type:CreateGas
-    gas: Plasma
-  - !type:PopupMessage
-    visualType: LargeCaution
-    messages: [ "phlogiston-plasma-created" ]
-    type: Pvs
+    - !type:CreateGas
+      gas: Plasma
+    - !type:PopupMessage
+      visualType: LargeCaution
+      messages: ["phlogiston-plasma-created"]
+      type: Pvs
   products:
     Phlogiston: 3
 
@@ -39,16 +39,16 @@
     Fluorine:
       amount: 3
   effects:
-  - !type:Explosion
-    explosionType: Default # 15 damage per intensity.
-    maxIntensity: 200
-    intensityPerUnit: 5
-    intensitySlope: 5
-    maxTotalIntensity: 200
-  - !type:PopupMessage
-    messages: [ "clf3-explosion" ]
-    type: Pvs
-    visualType: LargeCaution
+    - !type:Explosion
+      explosionType: Default # 15 damage per intensity.
+      maxIntensity: 200
+      intensityPerUnit: 5
+      intensitySlope: 5
+      maxTotalIntensity: 200
+    - !type:PopupMessage
+      messages: ["clf3-explosion"]
+      type: Pvs
+      visualType: LargeCaution
   products:
     ChlorineTrifluoride: 4
 
@@ -65,7 +65,7 @@
   id: WeldingFuelBreakdown
   source: true
   requiredMixerCategories:
-  - Centrifuge
+    - Centrifuge
   reactants:
     WeldingFuel:
       amount: 10

@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Numerics;
 using Content.Client.Administration.UI.CustomControls;
+using Content.Client.UserInterface.Controls;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
 using Content.Shared.Database;
@@ -22,7 +23,7 @@ using Robust.Shared.Utility;
 namespace Content.Client.Administration.UI.BanPanel;
 
 [GenerateTypedNameReferences]
-public sealed partial class BanPanel : DefaultWindow
+public sealed partial class BanPanel : FancyWindow
 {
     public event Action<Ban>? BanSubmitted;
     public event Action<string>? PlayerChanged;

@@ -24,7 +24,7 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 - type: listing
   id: UplinkEmag
@@ -37,7 +37,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 - type: listing
   id: UplinkRadioJammer
@@ -50,7 +50,7 @@
   cost:
     Telecrystal: 3
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 - type: listing
   id: UplinkSyndicateWeaponModule
@@ -63,7 +63,7 @@
   cost:
     Telecrystal: 5
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 - type: listing
   id: UplinkDisposableTurret
@@ -76,12 +76,12 @@
   cost:
     Telecrystal: 4
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
   conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkSyndicateMartyrModule
@@ -105,7 +105,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 - type: listing
   id: UplinkSlipocalypseClusterSoap
@@ -116,7 +116,7 @@
   cost:
     Telecrystal: 1
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 - type: listing
   id: UplinkToolbox
@@ -129,7 +129,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 - type: listing
   id: UplinkSyndicateJawsOfLife
@@ -142,7 +142,7 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
 
 # Note: Removed for the time being until surgery/newmed is added. Considered bloat until then.
 # - type: listing
@@ -170,12 +170,12 @@
   cost:
     Telecrystal: 8
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
   conditions:
-  - !type:StoreWhitelistCondition
-     blacklist:
-       tags:
-       - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkAntimovCircuitBoard
@@ -188,12 +188,12 @@
   cost:
     Telecrystal: 24
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
 
 - type: listing
   id: UplinkSurplusBundle
@@ -203,16 +203,16 @@
   cost:
     Telecrystal: 20
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
   conditions:
-  - !type:StoreWhitelistCondition
-    blacklist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+    - !type:StoreWhitelistCondition
+      blacklist:
+        tags:
+          - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: UplinkStarterKit
@@ -222,16 +222,16 @@
   cost:
     Telecrystal: 40
   categories:
-  - UplinkDisruption
+    - UplinkDisruption
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
         tags:
-        - NukeOpsUplink
+          - NukeOpsUplink
     - !type:BuyerWhitelistCondition
       blacklist:
         components:
-        - SurplusBundle
+          - SurplusBundle
 
 - type: listing
   id: UplinkSingarityBeacon
@@ -246,14 +246,14 @@
   categories:
     - UplinkDisruption
   conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+          - SurplusBundle
 
 - type: listing
   id: UplinkCameraBug
@@ -266,4 +266,4 @@
   cost:
     Telecrystal: 2
   categories:
-  - UplinkDisruption
+    - UplinkDisruption

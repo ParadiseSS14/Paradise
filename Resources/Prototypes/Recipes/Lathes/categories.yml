@@ -1,3 +1,8 @@
+# All
+- type: latheCategory
+  id: AllCategory
+  name: lathe-category-all
+
 # Generic
 - type: latheCategory
   id: Circuitry

@@ -3,10 +3,10 @@
   name: guide-entry-science
   text: "/ServerInfo/Guidebook/Science/Science.xml"
   children:
-  - Technologies
-  - AnomalousResearch
-  - Xenoarchaeology
-  - Robotics
+    - Technologies
+    - AnomalousResearch
+    - Xenoarchaeology
+    - Robotics
 
 - type: guideEntry
   id: Technologies
@@ -19,8 +19,8 @@
   name: guide-entry-anomalous-research
   text: "/ServerInfo/Guidebook/Science/AnomalousResearch.xml"
   children:
-  - APE
-  - ScannersAndVessels
+    - APE
+    - ScannersAndVessels
 
 - type: guideEntry
   id: ScannersAndVessels
@@ -55,7 +55,7 @@
   name: guide-entry-robotics
   text: "/ServerInfo/Guidebook/Science/Robotics.xml"
   children:
-  - Cyborgs
+    - Cyborgs
 
 - type: guideEntry
   id: Cyborgs

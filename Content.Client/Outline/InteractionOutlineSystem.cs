@@ -1,6 +1,8 @@
 using Content.Client.ContextMenu.UI;
 using Content.Client.Gameplay;
 using Content.Client.Interactable.Components;
+using Content.Client.UserInterface.Systems.Actions.Widgets;
+using Content.Client.UserInterface.Systems.InspectionHud.UI;
 using Content.Client.Viewport;
 using Content.Shared.CCVar;
 using Content.Shared.Interaction;
@@ -35,6 +37,8 @@ public sealed partial class InteractionOutlineSystem : EntitySystem
     private bool _cvarEnabled = true;
 
     private EntityUid? _lastHoveredEntity;
+
+    public event Action<EntityUid?>? InteractionOutlineCandidateChanged;
 
     public override void Initialize()
     {
@@ -83,7 +87,7 @@ public sealed partial class InteractionOutlineSystem : EntitySystem
     {
         base.FrameUpdate(frameTime);
 
-        if (!_enabled || !_cvarEnabled)
+        if (!_enabled)
             return;
 
         // If there is no local player, there is no session, and therefore nothing to do here.
@@ -131,12 +135,17 @@ public sealed partial class InteractionOutlineSystem : EntitySystem
             renderScale = _eyeManager.MainViewport.GetRenderScale();
         }
 
+        InteractionOutlineCandidateChanged?.Invoke(entityToClick);
+
         var inRange = false;
         if (localSession.AttachedEntity != null && !Deleted(entityToClick))
         {
             inRange = _interactionSystem.InRangeUnobstructed(localSession.AttachedEntity.Value, entityToClick.Value);
         }
 
+
+        if (!_cvarEnabled)
+            return;
         InteractionOutlineComponent? outline;
 
         if (entityToClick == _lastHoveredEntity)
@@ -161,5 +170,7 @@ public sealed partial class InteractionOutlineSystem : EntitySystem
         {
             outline.OnMouseEnter(_lastHoveredEntity.Value, inRange, renderScale);
         }
+
+
     }
 }

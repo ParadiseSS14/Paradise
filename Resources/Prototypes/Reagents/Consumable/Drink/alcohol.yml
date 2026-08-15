@@ -1,4 +1,3 @@
-
 # Base Alcohol
 
 - type: reagent
@@ -20,24 +19,24 @@
       metabolites:
         Ethanol: 0.6
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        conditions:
-        - !type:ReagentCondition
-          reagent: Absinthe
-          min: 10
-        type: Add
-        time: 5
-      - !type:PopupMessage
-        type: Local
-        messages:
-        - absinthe-effect-hear-voice
-        - absinthe-effect-feel-tulips
-        probability: 0.02
-        conditions:
-        - !type:ReagentCondition
-          reagent: Absinthe
-          min: 10
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          conditions:
+            - !type:ReagentCondition
+              reagent: Absinthe
+              min: 10
+          type: Add
+          time: 5
+        - !type:PopupMessage
+          type: Local
+          messages:
+            - absinthe-effect-hear-voice
+            - absinthe-effect-feel-tulips
+          probability: 0.02
+          conditions:
+            - !type:ReagentCondition
+              reagent: Absinthe
+              min: 10
 
 - type: reagent
   id: Ale
@@ -145,49 +144,49 @@
     Metabolites:
       metabolismRate: 0.05
       effects:
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Ethanol
-          min: 15
-        - !type:MetabolizerTypeCondition
-          type: [ Dwarf ]
-          inverted: true
-        damage:
-          types:
-            Poison: 0.1
-      # dwarves take less toxin damage and heal a marginal amount of brute
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Ethanol
-          min: 15
-        - !type:MetabolizerTypeCondition
-          type: [ Dwarf ]
-        damage:
-          types:
-            Poison: 0.02
-      - !type:EvenHealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Ethanol
-          min: 15
-        - !type:MetabolizerTypeCondition
-          type: [ Dwarf ]
-        damage:
-          Brute: -0.1
-      - !type:Vomit
-        probability: 0.04
-        conditions:
-        - !type:ReagentCondition
-          reagent: Ethanol
-          min: 12
-        # dwarves immune to vomiting from alcohol
-        - !type:MetabolizerTypeCondition
-          type: [ Dwarf ]
-          inverted: true
-      - !type:Drunk
-        boozePower: 2
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Ethanol
+              min: 15
+            - !type:MetabolizerTypeCondition
+              type: [Dwarf]
+              inverted: true
+          damage:
+            types:
+              Poison: 0.1
+        # dwarves take less toxin damage and heal a marginal amount of brute
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Ethanol
+              min: 15
+            - !type:MetabolizerTypeCondition
+              type: [Dwarf]
+          damage:
+            types:
+              Poison: 0.02
+        - !type:EvenHealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Ethanol
+              min: 15
+            - !type:MetabolizerTypeCondition
+              type: [Dwarf]
+          damage:
+            Brute: -0.1
+        - !type:Vomit
+          probability: 0.04
+          conditions:
+            - !type:ReagentCondition
+              reagent: Ethanol
+              min: 12
+            # dwarves immune to vomiting from alcohol
+            - !type:MetabolizerTypeCondition
+              type: [Dwarf]
+              inverted: true
+        - !type:Drunk
+          boozePower: 2
 
 - type: reagent
   id: Gin
@@ -273,12 +272,12 @@
       metabolites:
         Ethanol: 0.1
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1
+        - !type:SatiateThirst
+          factor: 2
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
 
 - type: reagent
   id: Rum
@@ -429,8 +428,8 @@
       metabolites:
         Ethanol: 0.6
       effects:
-      - !type:SatiateThirst
-        factor: 3
+        - !type:SatiateThirst
+          factor: 3
   fizziness: 0.8
 
 # Mixed Alcohol
@@ -459,8 +458,8 @@
   flavor: alienbrainhemorrhage
   color: "#FFFDD0"
   metamorphicSprite:
-      sprite: Objects/Consumable/Drinks/alienbrainhemorrhage.rsi
-      state: icon_empty
+    sprite: Objects/Consumable/Drinks/alienbrainhemorrhage.rsi
+    state: icon_empty
   metamorphicMaxFillLevels: 5
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
@@ -686,7 +685,7 @@
   metamorphicChangeColor: true
 
 - type: reagent
-  id:  Booger
+  id: Booger
   name: reagent-name-booger
   parent: BaseAlcohol
   desc: reagent-desc-booger
@@ -872,16 +871,16 @@
       metabolites:
         Ethanol: 0.1
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:SatiateHunger
-        factor: -2
-      - !type:EvenHealthChange
-        damage:
-          Burn: -1
-          Brute: -1
-          Airloss: -1
-          Toxin: -1
+        - !type:SatiateThirst
+          factor: 2
+        - !type:SatiateHunger
+          factor: -2
+        - !type:EvenHealthChange
+          damage:
+            Burn: -1
+            Brute: -1
+            Airloss: -1
+            Toxin: -1
 
 - type: reagent
   id: DriestMartini
@@ -1367,12 +1366,12 @@
       metabolites:
         Ethanol: 0.5
       effects:
-      - !type:SatiateThirst
-        factor: 2
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 1
+        - !type:SatiateThirst
+          factor: 2
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 1
 
 - type: reagent
   id: Painkiller
@@ -1518,10 +1517,10 @@
       metabolites:
         Ethanol: 0.3
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectRatvarianLanguage
-      - !type:SatiateThirst
-        factor: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectRatvarianLanguage
+        - !type:SatiateThirst
+          factor: 2
 
 - type: reagent
   id: Silencer
@@ -1540,11 +1539,11 @@
   metabolisms:
     Digestion:
       effects:
-      - !type:GenericStatusEffect
-        key: Muted
-        component: Muted
-      - !type:SatiateThirst
-        factor: 2
+        - !type:GenericStatusEffect
+          key: Muted
+          component: Muted
+        - !type:SatiateThirst
+          factor: 2
 
 - type: reagent
   id: Singulo
@@ -2051,11 +2050,11 @@
       metabolites:
         Ethanol: 0.14
       effects:
-      - !type:GenericStatusEffect
-        key: Muted
-        component: Muted
-      - !type:SatiateThirst
-        factor: 2
+        - !type:GenericStatusEffect
+          key: Muted
+          component: Muted
+        - !type:SatiateThirst
+          factor: 2
 
 - type: reagent
   id: Mimosa
@@ -2095,18 +2094,18 @@
       metabolites:
         Ethanol: 0.15
       effects:
-      - !type:Vomit
-        conditions:
-        - !type:ReagentCondition
-          reagent: Mayojito
-          min: 5
-        probability: 0.5
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: .5
-      - !type:SatiateThirst
-        factor: 1
+        - !type:Vomit
+          conditions:
+            - !type:ReagentCondition
+              reagent: Mayojito
+              min: 5
+          probability: 0.5
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: .5
+        - !type:SatiateThirst
+          factor: 1
 
 - type: reagent
   id: DeathInTheAfternoon
@@ -2260,37 +2259,37 @@
       metabolites:
         Ethanol: 0.9
       effects:
-      - !type:SatiateThirst
-        factor: 3
-      - !type:Drunk
-        boozePower: 10
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: BacchusBlessing
-          min: 6
-        - !type:MetabolizerTypeCondition
-          type: [Dwarf]
-          inverted: true
-        damage:
-          types:
-            Poison: 0.2 # TODO: Figure out poison amount. Ethanol does 0.1, this does 0.2 but also metabolises almost 3 to 4 times as fast as ethanol. This would be more Liver damage when that time arrives.
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: BacchusBlessing
-          min: 6
-        - !type:MetabolizerTypeCondition
-          type: [Dwarf]
-        damage:
-          types:
-            Poison: 0.04 # TODO: Might increase this, even though it's just double of ethanol from 0.02 to 0.04
-      - !type:Vomit
-        probability: 0.1 #TODO: Tweak vomit probability, maybe make this more violent and poisonous but the body aggressively purges it...
-        conditions:
-        - !type:ReagentCondition
-          reagent: BacchusBlessing
-          min: 8
-        - !type:MetabolizerTypeCondition
-          type: [Dwarf]
-          inverted: true
+        - !type:SatiateThirst
+          factor: 3
+        - !type:Drunk
+          boozePower: 10
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: BacchusBlessing
+              min: 6
+            - !type:MetabolizerTypeCondition
+              type: [Dwarf]
+              inverted: true
+          damage:
+            types:
+              Poison: 0.2 # TODO: Figure out poison amount. Ethanol does 0.1, this does 0.2 but also metabolises almost 3 to 4 times as fast as ethanol. This would be more Liver damage when that time arrives.
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: BacchusBlessing
+              min: 6
+            - !type:MetabolizerTypeCondition
+              type: [Dwarf]
+          damage:
+            types:
+              Poison: 0.04 # TODO: Might increase this, even though it's just double of ethanol from 0.02 to 0.04
+        - !type:Vomit
+          probability: 0.1 #TODO: Tweak vomit probability, maybe make this more violent and poisonous but the body aggressively purges it...
+          conditions:
+            - !type:ReagentCondition
+              reagent: BacchusBlessing
+              min: 8
+            - !type:MetabolizerTypeCondition
+              type: [Dwarf]
+              inverted: true

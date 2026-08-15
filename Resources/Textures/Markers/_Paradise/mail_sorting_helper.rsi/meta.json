@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "Mail Sorting helpers by ostrkrs at commit 67f7253c9dc95f2a8f5ff8b902050adacafab1de04361284d8f805220aa82cd1",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "mail_sorting"
+        },
+        {
+            "name": "mail_sorting_medical"
+        },
+        {
+            "name": "mail_sorting_science"
+        },
+        {
+            "name": "mail_sorting_cargo"
+        },
+        {
+            "name": "mail_sorting_engineer"
+        },
+        {
+            "name": "mail_sorting_security"
+        },
+        {
+            "name": "mail_sorting_service"
+        },
+        {
+            "name": "mail_sorting_command"
+        }
+    ]
+}

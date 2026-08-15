@@ -5,9 +5,9 @@
   id: BlastDoorCentralCommand
   suffix: Central Command, Locked
   components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentralCommand ]
+    - type: ContainerFill
+      containers:
+        board: [DoorElectronicsCentralCommand]
 
 #Window shutters
 
@@ -16,8 +16,8 @@
   id: ShuttersWindowCentralCommand
   suffix: Central Command, Locked
   components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsCentralCommand ]
-  - type: AccessReader
-    containerAccessProvider: board
+    - type: ContainerFill
+      containers:
+        board: [DoorElectronicsCentralCommand]
+    - type: AccessReader
+      containerAccessProvider: board

@@ -3,22 +3,21 @@
   parent: StatusEffectBase
   id: TraitStatusEffectBase
   components:
-  - type: CloneableStatusEffect
+    - type: CloneableStatusEffect
 
 - type: entity
   abstract: true
   id: ChangelingStatusEffectBase # Used to whitelist specific status effects to be cloneable by the changeling. Primarily some traits.
   components:
-  - type: ChangelingCloneableStatusEffect
+    - type: ChangelingCloneableStatusEffect
 
 - type: entity
-  parent: [ BloodstreamStatusEffectBase, TraitStatusEffectBase, ChangelingStatusEffectBase ]
+  parent: [BloodstreamStatusEffectBase, TraitStatusEffectBase, ChangelingStatusEffectBase]
   id: TraitStatusEffectHemophilia
   components:
-  - type: HemophiliaStatusEffect
+    - type: HemophiliaStatusEffect
 
 - type: entity
-  parent: [ PainNumbnessStatusEffectBase, TraitStatusEffectBase ]
+  parent: [PainNumbnessStatusEffectBase, TraitStatusEffectBase]
   id: TraitStatusEffectPainNumbness
   name: pain numbness
-

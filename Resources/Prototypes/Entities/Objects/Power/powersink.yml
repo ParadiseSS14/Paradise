@@ -13,8 +13,7 @@
     - type: NodeContainer
       examinable: true
       nodes:
-        input:
-          !type:CableDeviceNode
+        input: !type:CableDeviceNode
           nodeGroupID: HVPower
     - type: Transform
       anchored: true
@@ -22,14 +21,13 @@
     - type: Fixtures
       fixtures:
         fix1:
-          shape:
-            !type:PhysShapeAabb
+          shape: !type:PhysShapeAabb
             bounds: "-0.40,-0.40,0.40,0.40"
           density: 90
           mask:
-          - MachineMask
+            - MachineMask
           layer:
-          - MachineLayer
+            - MachineLayer
     - type: PowerSink
     - type: Battery
       # Very important:
@@ -52,9 +50,9 @@
       price: 3000
     - type: Destructible
       thresholds:
-      - trigger: !type:DamageTrigger
-          damage: 175
-        behaviors:
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalBreak
+        - trigger: !type:DamageTrigger
+            damage: 175
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak

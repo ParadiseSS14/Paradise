@@ -10,7 +10,6 @@
               amount: 2
               doAfter: 2
 
-
     - node: TelescreenFrame
       entity: WallmountTelescreenFrame
       edges:
@@ -29,7 +28,6 @@
           steps:
             - tool: Welding
               doAfter: 2
-
 
     - node: Wired
       edges:
@@ -52,7 +50,6 @@
             - tool: Cutting
               doAfter: 2
 
-
     - node: Screen
       entity: WallmountTelescreenFrame
       edges:
@@ -72,7 +69,6 @@
           steps:
             - tool: Prying
               doAfter: 2
-
 
     - node: Telescreen
       entity: WallmountTelescreen
@@ -102,7 +98,6 @@
               amount: 2
               doAfter: 2
 
-
     - node: TelevisionFrame
       entity: WallmountTelevisionFrame
       edges:
@@ -121,7 +116,6 @@
           steps:
             - tool: Welding
               doAfter: 2
-
 
     - node: Wired
       edges:
@@ -144,7 +138,6 @@
             - tool: Cutting
               doAfter: 2
 
-
     - node: Screen
       entity: WallmountTelevisionFrame
       edges:
@@ -165,7 +158,6 @@
             - tool: Prying
               doAfter: 2
 
-
     - node: Television
       entity: WallmountTelevision
       edges:
@@ -179,4 +171,3 @@
               doAfter: 2
             - tool: Prying
               doAfter: 2
-

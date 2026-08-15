@@ -3,32 +3,30 @@
 - type: loadout
   id: JanitorGoldenPlunger
   effects:
-  - !type:GroupLoadoutEffect
-    proto: SeniorJanitorial
+    - !type:GroupLoadoutEffect
+      proto: SeniorJanitorial
   storage:
     back:
-    - GoldenPlunger
+      - GoldenPlunger
 
 - type: loadout
   id: FlowerWaterClown
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobClown
-      time: 4h
+    - !type:JobRequirementLoadoutEffect
+      requirement: !type:RoleTimeRequirement
+        role: JobClown
+        time: 4h
   storage:
     back:
-    - SprayFlowerPin
+      - SprayFlowerPin
 
 - type: loadout
   id: SecStar
   effects:
     - !type:JobRequirementLoadoutEffect
-      requirement:
-        !type:DepartmentTimeRequirement
+      requirement: !type:DepartmentTimeRequirement
         department: Security
         time: 100h
   storage:
     back:
-    - Dinkystar
+      - Dinkystar

@@ -4,27 +4,27 @@
   name: View Laws
   description: View the laws that you must follow.
   components:
-  - type: Action
-    itemIconStyle: NoItem
-    useDelay: 0.5
-  - type: Sprite
-    sprite: Interface/Actions/actions_borg.rsi
-    layers:
-    - state: state-laws
-  - type: InstantAction
-    event: !type:ToggleLawsScreenEvent
+    - type: Action
+      itemIconStyle: NoItem
+      useDelay: 0.5
+    - type: Sprite
+      sprite: Interface/Actions/actions_borg.rsi
+      layers:
+        - state: state-laws
+    - type: InstantAction
+      event: !type:ToggleLawsScreenEvent
 
 - type: entity
   parent: BaseAction
   id: ActionSelectBorgType
   name: Select Cyborg Type
   components:
-  - type: Action
-    itemIconStyle: NoItem
-    useDelay: 0.5
-  - type: Sprite
-    sprite: Interface/Actions/actions_borg.rsi
-    layers:
-    - state: select-type
-  - type: InstantAction
-    event: !type:BorgToggleSelectTypeEvent
+    - type: Action
+      itemIconStyle: NoItem
+      useDelay: 0.5
+    - type: Sprite
+      sprite: Interface/Actions/actions_borg.rsi
+      layers:
+        - state: select-type
+    - type: InstantAction
+      event: !type:BorgToggleSelectTypeEvent

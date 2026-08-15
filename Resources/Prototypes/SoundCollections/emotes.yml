@@ -21,7 +21,6 @@
     - /Audio/Voice/Human/female_cough_1.ogg
     - /Audio/Voice/Human/female_cough_2.ogg
 
-
 - type: soundCollection
   id: Claps
   files:
@@ -33,7 +32,7 @@
 - type: soundCollection
   id: ClapSingle
   files:
-  - /Audio/Effects/Emotes/clap-single.ogg
+    - /Audio/Effects/Emotes/clap-single.ogg
 
 - type: soundCollection
   id: Snaps
@@ -96,52 +95,52 @@
 - type: soundCollection
   id: Weh
   files:
-  - /Audio/Items/Toys/weh.ogg
+    - /Audio/Items/Toys/weh.ogg
 
 - type: soundCollection
   id: Hew
   files:
-  - /Audio/Items/Toys/hew.ogg
+    - /Audio/Items/Toys/hew.ogg
 
 - type: soundCollection
   id: XenoborgScream
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_scream.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_scream.ogg
 
 - type: soundCollection
   id: XenoborgLaugh
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_laugh_1.ogg
-  - /Audio/Voice/Xenoborg/xenoborg_laugh_2.ogg
-  - /Audio/Voice/Xenoborg/xenoborg_laugh_3.ogg
-  - /Audio/Voice/Xenoborg/xenoborg_laugh_4.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_laugh_1.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_laugh_2.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_laugh_3.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_laugh_4.ogg
 
 - type: soundCollection
   id: XenoborgBeep
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_twobeep.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_twobeep.ogg
 
 - type: soundCollection
   id: XenoborgChime
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_chime.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_chime.ogg
 
 - type: soundCollection
   id: XenoborgBuzz
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_buzz-sigh.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_buzz-sigh.ogg
 
 - type: soundCollection
   id: XenoborgBuzzTwo
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_buzz-two.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_buzz-two.ogg
 
 - type: soundCollection
   id: XenoborgBikeHorn
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_bikehorn.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_bikehorn.ogg
 
 - type: soundCollection
   id: XenoborgPing
   files:
-  - /Audio/Voice/Xenoborg/xenoborg_ping.ogg
+    - /Audio/Voice/Xenoborg/xenoborg_ping.ogg

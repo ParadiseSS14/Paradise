@@ -8,7 +8,7 @@
       edges:
         - to: noticeBoard
           completed:
-            - !type:SnapToGrid { }
+            - !type:SnapToGrid {}
           steps:
             - material: WoodPlank
               amount: 3

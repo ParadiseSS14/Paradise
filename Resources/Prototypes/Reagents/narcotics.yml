@@ -7,63 +7,63 @@
   contrabandSeverity: Minor
   flavor: bitter
   color: "#FAFAFA"
-  boilingPoint: 212.0  # Dexosyephedrine vape when?
+  boilingPoint: 212.0 # Dexosyephedrine vape when?
   meltingPoint: 170.0
   metabolisms:
     Bloodstream:
       # Main effects
       effects:
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 0.55
-            Blunt: 1.1 # meant to be slightly more than tricordrazine heals
-      # OD
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Desoxyephedrine
-          min: 16
-        damage:
-          types:
-            Poison: 3 # this is added to the base damage of the meth.
-            Asphyxiation: 2
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 0.55
+              Blunt: 1.1 # meant to be slightly more than tricordrazine heals
+        # OD
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Desoxyephedrine
+              min: 16
+          damage:
+            types:
+              Poison: 3 # this is added to the base damage of the meth.
+              Asphyxiation: 2
 
-      # Main effects
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 1.20
-        sprintSpeedModifier: 1.20
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectDesoxyStamina # You are on meth. You keep going.
-        time: 3
-      - !type:GenericStatusEffect
-        key: Adrenaline
-        component: IgnoreSlowOnDamage
-        time: 3
-      # Side effects
-      - !type:Jitter
-      - !type:GenericStatusEffect
-        key: Stutter
-        component: StutteringAccent
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectPainNumbness
-        time: 2
-      # Interactions
-      - !type:ModifyStatusEffect
-        conditions:
-        - !type:ReagentCondition
-          reagent: Haloperidol
-          max: 0.01
-        effectProto: StatusEffectDrowsiness
-        time: 10
-        type: Remove
+        # Main effects
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 1.20
+          sprintSpeedModifier: 1.20
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectDesoxyStamina # You are on meth. You keep going.
+          time: 3
+        - !type:GenericStatusEffect
+          key: Adrenaline
+          component: IgnoreSlowOnDamage
+          time: 3
+        # Side effects
+        - !type:Jitter
+        - !type:GenericStatusEffect
+          key: Stutter
+          component: StutteringAccent
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectPainNumbness
+          time: 2
+        # Interactions
+        - !type:ModifyStatusEffect
+          conditions:
+            - !type:ReagentCondition
+              reagent: Haloperidol
+              max: 0.01
+          effectProto: StatusEffectDrowsiness
+          time: 10
+          type: Remove
 
-      # Side effects
-      - !type:ResetNarcolepsy
-        conditions:
-        - !type:ReagentCondition
-          reagent: Desoxyephedrine
-          min: 5
+        # Side effects
+        - !type:ResetNarcolepsy
+          conditions:
+            - !type:ReagentCondition
+              reagent: Desoxyephedrine
+              min: 5
 
 - type: reagent
   id: Ephedrine
@@ -78,49 +78,49 @@
   metabolisms:
     Bloodstream:
       effects:
-      # Main effects
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 1.15
-        sprintSpeedModifier: 1.15
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectStunned
-        time: 1
-        type: Remove
-      - !type:ModifyKnockdown
-        time: 1
-        type: Remove
-      # Side effects
-      - !type:Jitter
-      - !type:PopupMessage
-        visualType: Medium
-        messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
-        type: Local
-        probability: 0.05
-      # OD
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Ephedrine
-          min: 20
-        damage:
-          types:
-            Poison: 2
-            Asphyxiation: 2
-      # Interactions
-      - !type:ModifyStatusEffect
-        conditions:
-        - !type:ReagentCondition
-          reagent: Haloperidol
-          max: 0.01
-        effectProto: StatusEffectDrowsiness
-        time: 10
-        type: Remove
-      # Side effects
-      - !type:ResetNarcolepsy
-        conditions:
-        - !type:ReagentCondition
-          reagent: Ephedrine
-          min: 15
+        # Main effects
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 1.15
+          sprintSpeedModifier: 1.15
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectStunned
+          time: 1
+          type: Remove
+        - !type:ModifyKnockdown
+          time: 1
+          type: Remove
+        # Side effects
+        - !type:Jitter
+        - !type:PopupMessage
+          visualType: Medium
+          messages: ["ephedrine-effect-tight-pain", "ephedrine-effect-heart-pounds"]
+          type: Local
+          probability: 0.05
+        # OD
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Ephedrine
+              min: 20
+          damage:
+            types:
+              Poison: 2
+              Asphyxiation: 2
+        # Interactions
+        - !type:ModifyStatusEffect
+          conditions:
+            - !type:ReagentCondition
+              reagent: Haloperidol
+              max: 0.01
+          effectProto: StatusEffectDrowsiness
+          time: 10
+          type: Remove
+        # Side effects
+        - !type:ResetNarcolepsy
+          conditions:
+            - !type:ReagentCondition
+              reagent: Ephedrine
+              min: 15
 
 - type: reagent
   id: Stimulants
@@ -136,78 +136,78 @@
   metabolisms:
     Bloodstream:
       effects:
-      # Main effects
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 1.25
-        sprintSpeedModifier: 1.25
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectStimulantsStamina # You are on meth. You keep going.
-        time: 3
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectStunned
-        time: 3.5
-        type: Remove
-      - !type:ModifyKnockdown
-        time: 3.5
-        type: Remove
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectForcedSleeping
-        time: 3
-        type: Remove
-      - !type:GenericStatusEffect
-        key: Adrenaline
-        component: IgnoreSlowOnDamage
-        time: 3
-      # Side effects
-      - !type:Jitter
-      # OD
-      - !type:HealthChange
-        conditions:
-        - !type:ReagentCondition
-          reagent: Stimulants
-          min: 45
-        damage:
-          types:
-            Poison: 3
-      # Interactions
-      - !type:ModifyStatusEffect
-        conditions:
-        - !type:ReagentCondition
-          reagent: Haloperidol
-          max: 0.01
-        effectProto: StatusEffectDrowsiness
-        time: 10
-        type: Remove
-      - !type:AdjustReagent
-        conditions:
-        - !type:ReagentCondition
+        # Main effects
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 1.25
+          sprintSpeedModifier: 1.25
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectStimulantsStamina # You are on meth. You keep going.
+          time: 3
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectStunned
+          time: 3.5
+          type: Remove
+        - !type:ModifyKnockdown
+          time: 3.5
+          type: Remove
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectForcedSleeping
+          time: 3
+          type: Remove
+        - !type:GenericStatusEffect
+          key: Adrenaline
+          component: IgnoreSlowOnDamage
+          time: 3
+        # Side effects
+        - !type:Jitter
+        # OD
+        - !type:HealthChange
+          conditions:
+            - !type:ReagentCondition
+              reagent: Stimulants
+              min: 45
+          damage:
+            types:
+              Poison: 3
+        # Interactions
+        - !type:ModifyStatusEffect
+          conditions:
+            - !type:ReagentCondition
+              reagent: Haloperidol
+              max: 0.01
+          effectProto: StatusEffectDrowsiness
+          time: 10
+          type: Remove
+        - !type:AdjustReagent
+          conditions:
+            - !type:ReagentCondition
+              reagent: ChloralHydrate
+              min: 1
           reagent: ChloralHydrate
-          min: 1
-        reagent: ChloralHydrate
-        amount: -10
-      # Main effects
-      - !type:ModifyBleed
-        amount: -1.5
-      - !type:EvenHealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Critical
-        damage: # Doesn't heal poison because if you OD'd I'm not giving you a safety net
-          Burn: -0.5
-          Brute: -0.5
-      - !type:HealthChange
-        conditions:
-        - !type:MobStateCondition
-          mobstate: Critical
-        damage:
-          types:
-            Asphyxiation: -2
-      # Side effects
-      - !type:ResetNarcolepsy
-      - !type:SatiateHunger
-        factor: 1
-      - !type:SatiateThirst
-        factor: 1
+          amount: -10
+        # Main effects
+        - !type:ModifyBleed
+          amount: -1.5
+        - !type:EvenHealthChange
+          conditions:
+            - !type:MobStateCondition
+              mobstate: Critical
+          damage: # Doesn't heal poison because if you OD'd I'm not giving you a safety net
+            Burn: -0.5
+            Brute: -0.5
+        - !type:HealthChange
+          conditions:
+            - !type:MobStateCondition
+              mobstate: Critical
+          damage:
+            types:
+              Asphyxiation: -2
+        # Side effects
+        - !type:ResetNarcolepsy
+        - !type:SatiateHunger
+          factor: 1
+        - !type:SatiateThirst
+          factor: 1
 
 - type: reagent
   id: THC
@@ -219,17 +219,17 @@
   color: "#808080"
   physicalDesc: reagent-physical-desc-crystalline
   plantMetabolism:
-  - !type:PlantAdjustNutrition
-    amount: -5
-  - !type:PlantAdjustHealth
-    amount: -1
+    - !type:PlantAdjustNutrition
+      amount: -5
+    - !type:PlantAdjustHealth
+      amount: -1
   metabolisms:
     Bloodstream:
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        time: 16
-        type: Add
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          time: 16
+          type: Add
 
 - type: reagent
   id: Nicotine
@@ -240,8 +240,8 @@
   color: "#C0C0C0"
   physicalDesc: reagent-physical-desc-strong-smelling
   plantMetabolism:
-  - !type:PlantAdjustHealth
-    amount: -5
+    - !type:PlantAdjustHealth
+      amount: -5
 
 # TODO: Replace these nonstandardized effects with generic brain damage
 - type: reagent
@@ -256,21 +256,21 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 0.65
-        sprintSpeedModifier: 0.65
-      - !type:HealthChange
-        damage:
-          types:
-            Poison: 2
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        time: 10
-        type: Add
-      - !type:Vomit # Vomiting is a symptom of brain damage
-        probability: 0.05
-      - !type:Drunk # Headaches and slurring are major symptoms of brain damage, this is close enough
-        boozePower: 5
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 0.65
+          sprintSpeedModifier: 0.65
+        - !type:HealthChange
+          damage:
+            types:
+              Poison: 2
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          time: 10
+          type: Add
+        - !type:Vomit # Vomiting is a symptom of brain damage
+          probability: 0.05
+        - !type:Drunk # Headaches and slurring are major symptoms of brain damage, this is close enough
+          boozePower: 5
 
 - type: reagent
   id: SpaceDrugs
@@ -283,10 +283,10 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        type: Add
-        time: 5
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          type: Add
+          time: 5
 
 - type: reagent
   id: Bananadine
@@ -299,10 +299,10 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        type: Add
-        time: 5
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          type: Add
+          time: 5
 
 # Probably replace this one with sleeping chem when putting someone in a comatose state is easier
 - type: reagent
@@ -318,17 +318,17 @@
   metabolisms:
     Bloodstream:
       effects: # It would be nice to have speech slurred or mumbly, but accents are a bit iffy atm. Same for distortion effects.
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 0.65
-        sprintSpeedModifier: 0.65
-      - !type:ModifyStatusEffect
-        conditions:
-        - !type:ReagentCondition
-          reagent: Nocturine
-          min: 8
-        effectProto: StatusEffectForcedSleeping
-        time: 9
-        delay: 5
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 0.65
+          sprintSpeedModifier: 0.65
+        - !type:ModifyStatusEffect
+          conditions:
+            - !type:ReagentCondition
+              reagent: Nocturine
+              min: 8
+          effectProto: StatusEffectForcedSleeping
+          time: 9
+          delay: 5
 
 - type: reagent
   id: MuteToxin
@@ -343,11 +343,11 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:GenericStatusEffect
-        key: Muted
-        component: Muted
-        type: Add
-        time: 10
+        - !type:GenericStatusEffect
+          key: Muted
+          component: Muted
+          type: Add
+          time: 10
 
 - type: reagent
   id: NorepinephricAcid
@@ -363,38 +363,38 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:PopupMessage
-        type: Local
-        messages:
-        - generic-reagent-effect-burning-eyes
-        - generic-reagent-effect-burning-eyes-a-bit
-        - generic-reagent-effect-tearing-up
-        - norepinephricacid-effect-eyelids
-        - norepinephricacid-effect-eyes-itch
-        - norepinephricacid-effect-vision-fade
-        - norepinephricacid-effect-vision-fail
-        probability: 0.08
-      - !type:PopupMessage
-        visualType: MediumCaution
-        type: Local
-        messages:
-        - norepinephricacid-effect-eye-disconnect
-        - norepinephricacid-effect-eye-pain
-        - norepinephricacid-effect-darkness
-        - norepinephricacid-effect-blindness
-        conditions:
-        - !type:ReagentCondition
-          reagent: NorepinephricAcid
-          min: 20
-        probability: 0.03
-        #If anyone wants to add a light dimming or grayscale effect when under 20u, be my guest
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectBlindness
-        type: Add
-        conditions:
-        - !type:ReagentCondition
-          reagent: NorepinephricAcid
-          min: 20
+        - !type:PopupMessage
+          type: Local
+          messages:
+            - generic-reagent-effect-burning-eyes
+            - generic-reagent-effect-burning-eyes-a-bit
+            - generic-reagent-effect-tearing-up
+            - norepinephricacid-effect-eyelids
+            - norepinephricacid-effect-eyes-itch
+            - norepinephricacid-effect-vision-fade
+            - norepinephricacid-effect-vision-fail
+          probability: 0.08
+        - !type:PopupMessage
+          visualType: MediumCaution
+          type: Local
+          messages:
+            - norepinephricacid-effect-eye-disconnect
+            - norepinephricacid-effect-eye-pain
+            - norepinephricacid-effect-darkness
+            - norepinephricacid-effect-blindness
+          conditions:
+            - !type:ReagentCondition
+              reagent: NorepinephricAcid
+              min: 20
+          probability: 0.03
+          #If anyone wants to add a light dimming or grayscale effect when under 20u, be my guest
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectBlindness
+          type: Add
+          conditions:
+            - !type:ReagentCondition
+              reagent: NorepinephricAcid
+              min: 20
 
 - type: reagent
   id: TearGas
@@ -403,7 +403,7 @@
   desc: reagent-desc-tear-gas
   physicalDesc: reagent-physical-desc-milky
   allowedDepartments:
-  - Security
+    - Security
   flavor: salty
   color: "#ffffff4d"
   boilingPoint: 255.0
@@ -411,51 +411,51 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:PopupMessage
-        type: Local
-        probability: 0.08
-        messages:
-        - generic-reagent-effect-burning-eyes
-        - generic-reagent-effect-burning-eyes-a-bit
-        - generic-reagent-effect-tearing-up
-        - norepinephricacid-effect-eyelids
-        - norepinephricacid-effect-eyes-itch
-        - norepinephricacid-effect-vision-fade
-        - norepinephricacid-effect-vision-fail
-      - !type:PopupMessage
-        type: Local
-        visualType: MediumCaution
-        probability: 0.03
-        messages:
-        - norepinephricacid-effect-eye-disconnect
-        - norepinephricacid-effect-eye-pain
-        - norepinephricacid-effect-darkness
-        - norepinephricacid-effect-blindness
-      - !type:Emote
-        emote: Scream
-        probability: 0.08
-        conditions:
-        - !type:ReagentCondition
-          reagent: TearGas
-          min: 4
-      - !type:Emote
-        emote: Cough
-        probability: 0.08
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectBlindness
-        type: Add
-        conditions:
-        - !type:ReagentCondition
-          reagent: TearGas
-          min: 4
-      - !type:MovementSpeedModifier
-        walkSpeedModifier: 0.65
-        sprintSpeedModifier: 0.65
-        time: 1.5
-        conditions: # because of the remainding after effect, threshold is given so the effects ends simultaniously
-        - !type:ReagentCondition
-          reagent: TearGas
-          min: 4
+        - !type:PopupMessage
+          type: Local
+          probability: 0.08
+          messages:
+            - generic-reagent-effect-burning-eyes
+            - generic-reagent-effect-burning-eyes-a-bit
+            - generic-reagent-effect-tearing-up
+            - norepinephricacid-effect-eyelids
+            - norepinephricacid-effect-eyes-itch
+            - norepinephricacid-effect-vision-fade
+            - norepinephricacid-effect-vision-fail
+        - !type:PopupMessage
+          type: Local
+          visualType: MediumCaution
+          probability: 0.03
+          messages:
+            - norepinephricacid-effect-eye-disconnect
+            - norepinephricacid-effect-eye-pain
+            - norepinephricacid-effect-darkness
+            - norepinephricacid-effect-blindness
+        - !type:Emote
+          emote: Scream
+          probability: 0.08
+          conditions:
+            - !type:ReagentCondition
+              reagent: TearGas
+              min: 4
+        - !type:Emote
+          emote: Cough
+          probability: 0.08
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectBlindness
+          type: Add
+          conditions:
+            - !type:ReagentCondition
+              reagent: TearGas
+              min: 4
+        - !type:MovementSpeedModifier
+          walkSpeedModifier: 0.65
+          sprintSpeedModifier: 0.65
+          time: 1.5
+          conditions: # because of the remainding after effect, threshold is given so the effects ends simultaniously
+            - !type:ReagentCondition
+              reagent: TearGas
+              min: 4
 
 - type: reagent
   id: Happiness
@@ -468,43 +468,43 @@
   metabolisms:
     Bloodstream:
       effects:
-      - !type:Emote
-        emote: Laugh
-        showInChat: true
-        probability: 0.1
-        conditions:
-        - !type:ReagentCondition
-          reagent: Happiness
-          max: 20
-      - !type:Emote
-        emote: Whistle
-        showInChat: true
-        probability: 0.1
-        conditions:
-        - !type:ReagentCondition
-          reagent: Happiness
-          max: 20
-      - !type:Emote
-        emote: Crying
-        showInChat: true
-        probability: 0.1
-        conditions:
-        - !type:ReagentCondition
-          reagent: Happiness
-          min: 20
-      - !type:PopupMessage # we dont have sanity/mood so this will have to do
-        type: Local
-        visualType: Medium
-        messages:
-        - "psicodine-effect-fearless"
-        - "psicodine-effect-anxieties-wash-away"
-        - "psicodine-effect-at-peace"
-        probability: 0.2
-        conditions:
-        - !type:ReagentCondition
-          reagent: Happiness
-          max: 20
-      - !type:ModifyStatusEffect
-        effectProto: StatusEffectSeeingRainbow
-        type: Add
-        time: 5
+        - !type:Emote
+          emote: Laugh
+          showInChat: true
+          probability: 0.1
+          conditions:
+            - !type:ReagentCondition
+              reagent: Happiness
+              max: 20
+        - !type:Emote
+          emote: Whistle
+          showInChat: true
+          probability: 0.1
+          conditions:
+            - !type:ReagentCondition
+              reagent: Happiness
+              max: 20
+        - !type:Emote
+          emote: Crying
+          showInChat: true
+          probability: 0.1
+          conditions:
+            - !type:ReagentCondition
+              reagent: Happiness
+              min: 20
+        - !type:PopupMessage # we dont have sanity/mood so this will have to do
+          type: Local
+          visualType: Medium
+          messages:
+            - "psicodine-effect-fearless"
+            - "psicodine-effect-anxieties-wash-away"
+            - "psicodine-effect-at-peace"
+          probability: 0.2
+          conditions:
+            - !type:ReagentCondition
+              reagent: Happiness
+              max: 20
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectSeeingRainbow
+          type: Add
+          time: 5

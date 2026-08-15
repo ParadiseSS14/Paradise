@@ -4,13 +4,13 @@
   name: Spider Web
   description: Spawns a web that slows your prey down.
   components:
-  - type: Action
-    useDelay: 25
-  - type: Sprite
-    layers:
-    - texture: Interface/Actions/web.png
-  - type: InstantAction
-    event: !type:SpiderWebActionEvent
+    - type: Action
+      useDelay: 25
+    - type: Sprite
+      layers:
+        - texture: Interface/Actions/web.png
+    - type: InstantAction
+      event: !type:SpiderWebActionEvent
 
 - type: entity
   parent: BaseAction
@@ -18,10 +18,10 @@
   name: Weave silk
   description: Weave a bit of silk for use in arts and crafts.
   components:
-  - type: Action
-    useDelay: 1
-  - type: Sprite
-    layers:
-    - texture: Interface/Actions/web.png
-  - type: InstantAction
-    event: !type:SericultureActionEvent
+    - type: Action
+      useDelay: 1
+    - type: Sprite
+      layers:
+        - texture: Interface/Actions/web.png
+    - type: InstantAction
+      event: !type:SericultureActionEvent

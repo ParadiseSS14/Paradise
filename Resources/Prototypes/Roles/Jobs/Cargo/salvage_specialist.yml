@@ -11,10 +11,10 @@
   startingGear: SalvageSpecialistGear
   supervisors: job-supervisors-qm
   access:
-  - Cargo
-  - Salvage
-  - Maintenance
-  - External
+    - Cargo
+    - Salvage
+    - Maintenance
+    - External
 
 - type: startingGear
   id: SalvageSpecialistGear
@@ -23,8 +23,8 @@
     id: SalvagePDA
     ears: ClothingHeadsetCargo
   #storage:
-    #back:
-    #- Stuff
+  #back:
+  #- Stuff
 
 - type: chameleonOutfit
   id: SalvageSpecialistChameleonOutfit
@@ -36,4 +36,3 @@
     outerClothing: ClothingOuterWinterMiner
     neck: ClothingNeckScarfStripedBrown
     gloves: ClothingHandsGlovesColorBlack
-

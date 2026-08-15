@@ -1,0 +1,27 @@
+﻿{
+    "version": 1,
+    "size":
+    {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Ported from Paradise SS13, Skkulakin flag by AVeryReluctantSpider at commit e7dd08d33afbd975d46a67a0c5e059efb2842f2f",
+    "states":
+    [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "icon-rolled"
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        }
+    ]
+}

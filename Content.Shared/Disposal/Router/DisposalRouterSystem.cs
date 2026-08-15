@@ -75,4 +75,11 @@ public sealed partial class DisposalRouterSystem : EntitySystem
             _audio.PlayPredicted(ent.Comp.ClickSound, ent, msg.Actor, AudioParams.Default.WithVolume(-2f));
         }
     }
+// Paradise Content - Mail Sorters
+    public void SetTags(Entity<DisposalRouterComponent> router, HashSet<string> tags)
+    {
+        router.Comp.Tags.Clear();
+        router.Comp.Tags.UnionWith(tags);
+        Dirty(router);
+    }
 }

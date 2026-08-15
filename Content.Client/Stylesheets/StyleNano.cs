@@ -213,16 +213,6 @@ namespace Content.Client.Stylesheets
                 ExpandMarginBottom = 3,
                 ContentMarginBottomOverride = 0
             };
-            // Begin DeltaV - Curator Chat
-            var windowHeaderCuratorTex = resCache.GetTexture("/Textures/_DV/Interface/Nano/window_header_curator.png");
-            var windowHeaderCurator = new StyleBoxTexture
-            {
-                Texture = windowHeaderCuratorTex,
-                PatchMarginBottom = 3,
-                ExpandMarginBottom = 3,
-                ContentMarginBottomOverride = 0
-            };
-            // End DeltaV - Curator Chat
             var windowBackgroundTex = resCache.GetTexture("/Textures/Interface/Nano/window_background.png");
             var windowBackground = new StyleBoxTexture
             {
@@ -633,14 +623,6 @@ namespace Content.Client.Stylesheets
                     new[]
                     {
                         new StyleProperty(PanelContainer.StylePropertyPanel, windowHeaderAlert),
-                    }),
-
-                // DeltaV - Curator (purple) window header.
-                new StyleRule(
-                    new SelectorElement(typeof(PanelContainer), new[] {"windowHeaderCurator"}, null, null),
-                    new[]
-                    {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, windowHeaderCurator),
                     }),
 
                 // Shapes for the buttons.

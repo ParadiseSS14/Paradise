@@ -21,6 +21,17 @@ if (( ${#files[@]} != 0 )); then
         echo "Prettier is not installed. Run: npm ci --prefix Tools/prettier"
         exit 1
     fi
-fi
 
-npm --prefix Tools/prettier run prettier:check -- "${files[@]/#/../../}"
+    # Capture npm output so VS Code shows our actionable message first.
+    # `|| status=$?` prevents `set -e` from exiting before we can print it.
+    status=0
+    prettier_output=$(npm --prefix Tools/prettier run prettier:check -- "${files[@]/#/../../}" 2>&1) || status=$?
+
+    if (( status != 0 )); then
+        echo "YAML formatting check failed. Run: npm --prefix Tools/prettier run prettier:write -- ../../Resources/Prototypes"
+        echo "$prettier_output"
+        exit "$status"
+    fi
+
+    echo "$prettier_output"
+fi

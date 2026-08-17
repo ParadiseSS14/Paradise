@@ -22,13 +22,13 @@ public sealed partial class SharedTelepathicChatSystem : EntitySystem
             return;
 
         _actions.AddAction(entity, ref entity.Comp.SendActionEntity, entity.Comp.SendAction, component: comp);
-        _actions.AddAction(entity, ref entity.Comp.ReceiveActionEntity, entity.Comp.ReceiveAction, component: comp);
+        _actions.AddAction(entity, ref entity.Comp.OfferActionEntity, entity.Comp.OfferAction, component: comp);
     }
 
     private void OnShutdown(Entity<TelepathicChatComponent> entity, ref ComponentShutdown args)
     {
         _actions.RemoveAction(entity.Owner, entity.Comp.SendActionEntity);
-        _actions.RemoveAction(entity.Owner, entity.Comp.ReceiveActionEntity);
+        _actions.RemoveAction(entity.Owner, entity.Comp.OfferActionEntity);
     }
 
     private void OnClone(Entity<TelepathicChatComponent> ent, ref CloningEvent args)
@@ -39,7 +39,7 @@ public sealed partial class SharedTelepathicChatSystem : EntitySystem
         // Make sure to set the datafields before adding the component so that the correct action gets spawned on map init.
         var targetComp = Factory.GetComponent<TelepathicChatComponent>();
         targetComp.SendAction = ent.Comp.SendAction;
-        targetComp.ReceiveAction = ent.Comp.ReceiveAction;
+        targetComp.OfferAction = ent.Comp.OfferAction;
         AddComp(args.CloneUid, targetComp, true);
     }
 }

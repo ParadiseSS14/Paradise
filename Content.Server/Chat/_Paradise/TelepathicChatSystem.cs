@@ -139,9 +139,9 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         var uiKey = TelepathicChatUiKey.Send;
 
-        if (action == telepath.Comp.ReceiveActionEntity) // Is this an offer?
+        if (action == telepath.Comp.OfferActionEntity) // Is this an offer?
         {
-            uiKey = TelepathicChatUiKey.Receive;
+            uiKey = TelepathicChatUiKey.Offer;
             telepath.Comp.Sessions[sessionID].IsOffer = true;
         }
 

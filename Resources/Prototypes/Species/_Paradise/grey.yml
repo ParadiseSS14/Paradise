@@ -1,0 +1,8 @@
+- type: species
+  id: Grey
+  name: species-name-grey
+  roundStart: true
+  prototype: MobGrey
+  defaultSkinTone: "#a598ad"
+  dollPrototype: AppearanceGrey
+  skinColoration: Hues

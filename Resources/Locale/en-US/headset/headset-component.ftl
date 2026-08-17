@@ -21,3 +21,6 @@ chat-radio-handheld = Handheld
 chat-radio-binary = Binary
 chat-radio-xenoborg = Xenoborg
 chat-radio-mothership = Mothership
+
+# Paradise Content
+chat-radio-greymind = Hivemind

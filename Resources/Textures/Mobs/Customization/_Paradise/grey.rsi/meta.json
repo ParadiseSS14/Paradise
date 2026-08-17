@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "tattoo_heart_arm_r",
+            "directions": 4
+        },
+        {
+            "name": "tattoo_hive_chest",
+            "directions": 4
+        },
+        {
+            "name": "tattoo_nightling",
+            "directions": 4
+        },
+        {
+            "name": "tattoo_tiger",
+            "directions": 4
+        },
+        {
+            "name": "tattoo_sparta",
+            "directions": 4
+        },
+        {
+            "name": "tattoo_enthralled_eye_r",
+            "directions": 4
+        },
+        {
+            "name": "tattoo_flared_face",
+            "directions": 4
+        },
+        {
+            "name": "tattoo_imp_face",
+            "directions": 4
+        }
+    ]
+}

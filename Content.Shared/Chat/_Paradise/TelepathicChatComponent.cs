@@ -29,7 +29,7 @@ public sealed partial class TelepathicChatComponent : Component
     public Dictionary<Guid, TelepathyState> Sessions = new();
 
     /// <summary>
-    /// Tuples of telepathy session ID and UiKey, used by the BUI
+    /// List of TelepathyUIStates (sessions) used by the BUI
     /// </summary>
     [DataField, AutoNetworkedField]
     public List<TelepathyUiState> UiKeySession = new();
@@ -92,7 +92,7 @@ public sealed partial class TelepathyState
 }
 
 /// <summary>
-/// Need a way to identify unique UI instances beyond key
+/// Helps identify unique UI sessions without the Session ID
 /// </summary>
 [Serializable, NetSerializable, DataDefinition]
 public sealed partial class TelepathyUiState

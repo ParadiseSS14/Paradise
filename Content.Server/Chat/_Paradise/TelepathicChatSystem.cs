@@ -139,7 +139,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
         var uiKey = TelepathicChatUiKey.Send;
 
-        if (action == telepath.Comp.ReceiveActionEntity)
+        if (action == telepath.Comp.ReceiveActionEntity) // Is this an offer?
         {
             uiKey = TelepathicChatUiKey.Receive;
             telepath.Comp.Sessions[sessionID].IsOffer = true;
@@ -335,8 +335,10 @@ public sealed partial class TelepathicChatSystem : EntitySystem
 
     /// <summary>
     /// Check if telepath is outside max PVS range to enforce range limits and prevent OpenUI failure
-    /// true = in range, false = outside range
     /// </summary>
+    /// <remarks>
+    ///  True = in range, false = outside range
+    /// </remarks>
     private bool CheckRange(EntityUid telepath, EntityUid target)
     {
         var maxRange = _configManager.GetCVar(CVars.NetMaxUpdateRange);
@@ -387,6 +389,40 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     }
 
     /// <summary>
+    /// Conditional build for message wraps
+    /// </summary>
+    private (string messageWrap, string sendMessage, string adminMessageWrap) BuildMessageWraps(
+        TelepathicChatComponent telepathComp,
+        EntityUid sender,
+        EntityUid receiver,
+        string message,
+        bool isOffer)
+    {
+        // default wraps
+        var messageWrap = $"{telepathComp.ObscuredMessage} \"{message}\"";
+        var sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message", ("receiver", receiver));
+        var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-offer")}";
+        var adminMessageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-admin", ("sender", sender), ("message", message));
+
+        if (HasComp<TelepathicChatComponent>(sender)) // wraps for a telepath sender
+            sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message-telepath", ("receiver", receiver));
+
+        if (HasComp<TelepathicChatComponent>(receiver)) // wraps for a telepath receiver
+        {
+            messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-telepath", ("sender", sender), ("message", message));
+            offerMessageWrap = Loc.GetString("chat-manager-telepathic-chat-telepath", ("sender", sender));
+        }
+
+        if (isOffer) // wraps for an offer message
+        {
+            sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message-offer", ("receiver", receiver));
+            messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)}\" /] ";
+        }
+
+        return (messageWrap, sendMessage, adminMessageWrap);
+    }
+
+    /// <summary>
     /// Send Telepathic chats to the Hivemind channel, logs, active admins
     /// </summary>
     /// <remarks>
@@ -399,14 +435,12 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         if (!TryComp<TelepathicChatComponent>(telepath, out var telepathComp))
             return;
 
-        if (!telepath.Comp.Sessions.TryGetValue(sessionID, out var compSession))
+        if (!telepathComp.Sessions.TryGetValue(sessionID, out var compSession))
             return;
 
-        var senderNull = compSession.Sender;
-        var receiverNull = compSession.Receiver;
-        var offerWrap = compSession.IsOffer;
+        var isOffer = compSession.IsOffer;
 
-        if (GetEntity(senderNull) is not { } sender || GetEntity(receiverNull) is not { } receiver)
+        if (GetEntity(compSession.Sender) is not { } sender || GetEntity(compSession.Receiver) is not { } receiver)
         {
             telepathComp.Sessions.Remove(sessionID);
             Dirty(telepath);
@@ -433,36 +467,19 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         var rxClient = GetClient(receiver);
         var txClient = GetClient(sender);
 
-        // default wraps
-        var messageWrap = $"{telepathComp.ObscuredMessage} \"{message}\"";
-        var sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message", ("receiver", receiver));
-        var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathic-chat-offer")}";
-        var adminMessageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-admin", ("sender", sender), ("message", message));
-
-        if (TryComp<TelepathicChatComponent>(sender, out var _)) // wraps for a telepath sender
-            sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message-telepath", ("receiver", receiver));
-
-        if (TryComp<TelepathicChatComponent>(receiver, out var _)) // wraps for a telepath receiver
-        {
-            messageWrap = Loc.GetString("chat-manager-receive-telepathic-chat-wrap-message-telepath", ("sender", sender), ("message", message));
-            offerMessageWrap = Loc.GetString("chat-manager-telepathic-chat-telepath", ("sender", sender));
-        }
-
-        if (rxClient is null || txClient is null)
+        if (rxClient is null || txClient is null) // Did they disconnect?
         {
             _popup.PopupEntity(Loc.GetString("telepathic-chat-target-unreachable"), sender, sender);
             return;
         }
 
-        if (offerWrap)
-        {
+        var (messageWrap, sendMessage, adminMessageWrap) = BuildMessageWraps(telepathComp, sender, receiver, message, isOffer);
+
+        if (isOffer)
             telepathComp.ReplyTokens.Add((receiver, _timing.CurTime + TimeSpan.FromSeconds(10))); // Receiver and expiry of 10 seconds
-            sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message-offer", ("receiver", receiver));
-            messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathic-chat-link")}\" command=\"{TelepathicChatReplyCommand.CommandName} {GetNetEntity(sender)}\" /] ";
-        }
         else //Not logging the linksend
         {
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message}");
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Telepathic chat from {ToPrettyString(sender):Player}: {message}"); // admin log
             _chatManager.ChatMessageToMany(ChatChannel.Admin, message, adminMessageWrap, sender, hideChat, true, admins); // message to active admins
         }
 

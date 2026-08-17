@@ -41,7 +41,7 @@ public sealed partial class TelepathicChatComponent : Component
     public EntProtoId? SendAction;
 
     /// <summary>
-    /// ID of action prototype that allows you to receive messages
+    /// ID of action prototype that allows you to offer messages
     /// </summary>
     [DataField]
     public EntProtoId? OfferAction;
@@ -53,7 +53,7 @@ public sealed partial class TelepathicChatComponent : Component
     public EntityUid? SendActionEntity;
 
     /// <summary>
-    /// Entity of the receive action prototype
+    /// Entity of the offer action prototype
     /// </summary>
     [DataField]
     public EntityUid? OfferActionEntity;

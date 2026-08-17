@@ -20,7 +20,7 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
     {
         base.Open();
 
-        if (UiKey.Equals(TelepathicChatUiKey.Send) || UiKey.Equals(TelepathicChatUiKey.Receive))
+        if (UiKey.Equals(TelepathicChatUiKey.Send) || UiKey.Equals(TelepathicChatUiKey.Offer))
         {
             _menu = this.CreateWindow<TelepathicChatMenu>();
             Reload();

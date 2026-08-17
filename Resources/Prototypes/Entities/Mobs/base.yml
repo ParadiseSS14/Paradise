@@ -292,7 +292,7 @@
       interfaces:
         enum.TelepathicChatUiKey.Send:
           type: TelepathicChatBoundUserInterface
-        enum.TelepathicChatUiKey.Receive:
+        enum.TelepathicChatUiKey.Offer:
           type: TelepathicChatBoundUserInterface
         enum.TelepathicChatUiKey.Compose:
           type: TelepathicChatBoundUserInterface

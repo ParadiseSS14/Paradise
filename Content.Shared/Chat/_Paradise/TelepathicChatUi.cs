@@ -27,6 +27,6 @@ public sealed class TelepathicTextEnteredMsg : BoundUserInterfaceMessage
 public enum TelepathicChatUiKey : byte
 {
     Send,
-    Receive,
+    Offer,
     Compose
 }

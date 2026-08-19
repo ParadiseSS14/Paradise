@@ -17,6 +17,10 @@ namespace Content.Shared.Construction.Components
         [DataField]
         public bool Snap { get; private set; } = true;
 
+        // Paradise Content - Whether it can be anchored to a diagonal.
+        [DataField]
+        public bool DiagonalAnchoring = false;
+
         /// <summary>
         /// Base delay to use for anchoring.
         /// </summary>

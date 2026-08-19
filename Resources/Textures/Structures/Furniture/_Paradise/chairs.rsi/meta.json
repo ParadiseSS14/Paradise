@@ -1,0 +1,123 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "sofaend_right",
+            "directions": 4
+        },
+        {
+            "name": "sofaend_right_armrest",
+            "directions": 4
+        },
+        {
+            "name": "sofaend_left",
+            "directions": 4
+        },
+        {
+            "name": "sofaend_left_armrest",
+            "directions": 4
+        },
+        {
+            "name": "sofacorner",
+            "directions": 8
+        },
+        {
+            "name": "sofacorner_armrest",
+            "directions": 8
+        },
+        {
+            "name": "sofamiddle",
+            "directions": 4
+        },
+        {
+            "name": "pewmiddle",
+            "directions": 4
+        },
+        {
+            "name": "pewend_left",
+            "directions": 4
+        },
+        {
+            "name": "pewend_left_armrest",
+            "directions": 4
+        },
+        {
+            "name": "pewend_right",
+            "directions": 4
+        },
+        {
+            "name": "pewend_right_armrest",
+            "directions": 4
+        },
+        {
+            "name": "corp_sofaend_right",
+            "directions": 4
+        },
+        {
+            "name": "corp_sofaend_right_armrest",
+            "directions": 4
+        },
+        {
+            "name": "corp_sofaend_left",
+            "directions": 4
+        },
+        {
+            "name": "corp_sofaend_left_armrest",
+            "directions": 4
+        },
+        {
+            "name": "corp_sofacorner",
+            "directions": 8
+        },
+        {
+            "name": "corp_sofacorner_armrest",
+            "directions": 8
+        },
+        {
+            "name": "corp_sofamiddle",
+            "directions": 4
+        },
+        {
+            "name": "bench_middle",
+            "directions": 4
+        },
+        {
+            "name": "bench_middle_armrest",
+            "directions": 4
+        },
+        {
+            "name": "bench_middle_cover",
+            "directions": 4
+        },
+        {
+            "name": "bench_left",
+            "directions": 4
+        },
+        {
+            "name": "bench_left_armrest",
+            "directions": 4
+        },
+        {
+            "name": "bench_left_cover",
+            "directions": 4
+        },
+        {
+            "name": "bench_right",
+            "directions": 4
+        },
+        {
+            "name": "bench_right_armrest",
+            "directions": 4
+        },
+        {
+            "name": "bench_right_cover",
+            "directions": 4
+        }
+    ]
+}

@@ -477,3 +477,60 @@
   components:
     - type: Sprite
       state: xeno-chair
+# region Paradise Content - Sofas
+
+- type: entity
+  parent: ChairBase
+  id: SofaMiddle
+  name: sofa
+  components:
+    - type: Sprite
+      sprite: Structures/Furniture/_Paradise/chairs.rsi
+      state: sofamiddle
+
+- type: entity
+  parent: ChairBase
+  id: SofaEndLeft
+  name: sofa end
+  components:
+    - type: Sprite
+      sprite: Structures/Furniture/_Paradise/chairs.rsi
+      state: sofaend_left
+
+- type: entity
+  parent: ChairBase
+  id: SofaEndRight
+  name: sofa end
+  components:
+    - type: Sprite
+      sprite: Structures/Furniture/_Paradise/chairs.rsi
+      state: sofaend_right
+
+- type: entity
+  parent: ChairBase
+  id: SofaCorner
+  name: sofa corner
+  components:
+    - type: Sprite
+      sprite: Structures/Furniture/_Paradise/chairs.rsi
+      state: sofacorner
+    - type: Rotatable
+      increment: 45
+    - type: Anchorable
+      diagonalAnchoring: true
+    - type: ChairArmrest
+      armrestOverlay: sofacorner_armrest
+# region Sofa "Overlays"
+
+- type: entity
+  id: SofaArmrestOverlay
+  components:
+    - type: Sprite
+      sprite: Structures/Furniture/_Paradise/chairs.rsi
+      visible: true
+      drawdepth: Overlays
+      layers:
+        - state: sofacorner_armrest # placeholder, gets overwritten in ChairArmrestSystem
+# endregion Sofa "Overlays"
+
+# endregion Paradise Content - Sofas

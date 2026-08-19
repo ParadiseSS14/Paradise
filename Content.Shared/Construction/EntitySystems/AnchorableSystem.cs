@@ -160,9 +160,12 @@ public sealed partial class AnchorableSystem : EntitySystem
             return;
         }
 
-        // Snap rotation to cardinal (multiple of 90)
+        // Paradise Edit Start - Snap rotation to nearest 90 degrees, or 45 degrees
         var rot = xform.LocalRotation;
-        xform.LocalRotation = Math.Round(rot / (Math.PI / 2)) * (Math.PI / 2);
+        xform.LocalRotation = component.DiagonalAnchoring
+            ? Math.Round(rot / (Math.PI / 4)) * (Math.PI / 4)
+            : Math.Round(rot / (Math.PI / 2)) * (Math.PI / 2);
+        // Paradise Edit Stop
 
         if (TryComp<PullableComponent>(uid, out var pullable) && pullable.Puller != null)
         {

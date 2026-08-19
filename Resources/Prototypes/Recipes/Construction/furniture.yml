@@ -130,6 +130,10 @@
   targetNode: blueComfBench
 # endregion Chairs
 
+# region Paradise Content - Sofas
+
+# endregion Paradise Content - Sofas
+
 # region Tables
 - type: construction
   parent: BaseTable

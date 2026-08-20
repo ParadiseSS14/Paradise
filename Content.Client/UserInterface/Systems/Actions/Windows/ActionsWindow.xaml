@@ -7,7 +7,7 @@
     Title="{Loc ui-actionmenu-title}"
     VerticalExpand="True"
     Resizable="True"
-    MinHeight="3-0"
+    MinHeight="300"
     MinWidth="325"
     SetSize="325 400">
     <PanelContainer StyleClasses="SurfacePrimary">

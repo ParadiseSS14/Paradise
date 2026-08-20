@@ -1,6 +1,7 @@
 ﻿<windows:ActionsWindow
     xmlns="https://spacestation14.io"
     xmlns:windows="clr-namespace:Content.Client.UserInterface.Systems.Actions.Windows"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Name="ActionsList"
     HorizontalExpand="True"
     Title="{Loc ui-actionmenu-title}"
@@ -8,16 +9,22 @@
     Resizable="True"
     MinHeight="300"
     MinWidth="300"
->
-    <BoxContainer Orientation="Vertical">
-        <BoxContainer Name="SearchContainer" Orientation="Horizontal">
-            <LineEdit Name="SearchBar" Access="Public" StyleClasses="actionSearchBox" HorizontalExpand="True"
-                      PlaceHolder="{Loc ui-actionmenu-search-bar-placeholder-text}"/>
+    SetSize="300 400">
+    <PanelContainer StyleClasses="SurfacePrimary">
+        <BoxContainer Orientation="Vertical" Margin="8">
+            <controls:TguiHeader HeaderText="{Loc 'ui-actionmenu-title'}" />
+
+            <BoxContainer Name="SearchContainer" Orientation="Horizontal" Margin="0 4">
+                <LineEdit Name="SearchBar" Access="Public" StyleClasses="actionSearchBox" HorizontalExpand="True"
+                          PlaceHolder="{Loc ui-actionmenu-search-bar-placeholder-text}" />
+            </BoxContainer>
+
+            <PanelContainer StyleClasses="ListView" HorizontalExpand="True" VerticalExpand="True">
+                <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                    <GridContainer Name="ResultsGrid" Access="Public" MaxGridWidth="300" />
+                </ScrollContainer>
+            </PanelContainer>
+            <Label Name="FilterLabel" Access="Public"  HorizontalAlignment="Right" Margin="0 4"/>
         </BoxContainer>
-        <Button Name="ClearButton" Access="Public" Text="{Loc ui-actionmenu-clear-button}"/>
-        <Label Name="FilterLabel" Access="Public"/>
-        <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
-            <GridContainer Name="ResultsGrid" Access="Public" MaxGridWidth="300"/>
-        </ScrollContainer>
-    </BoxContainer>
+    </PanelContainer>
 </windows:ActionsWindow>

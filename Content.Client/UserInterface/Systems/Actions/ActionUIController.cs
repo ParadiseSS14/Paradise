@@ -484,17 +484,6 @@ public sealed partial class ActionUIController : UIController, IOnStateChanged<G
         _menuDragHelper.EndDrag();
     }
 
-    private void OnClearPressed(ButtonEventArgs args)
-    {
-        if (_window == null)
-            return;
-
-        _window.SearchBar.Clear();
-        _window.FilterButton.DeselectAll();
-        UpdateFilterLabel();
-        QueueWindowUpdate();
-    }
-
     private void OnSearchChanged(LineEditEventArgs args)
     {
         QueueWindowUpdate();
@@ -648,7 +637,6 @@ public sealed partial class ActionUIController : UIController, IOnStateChanged<G
         {
             _window.OnOpen -= OnWindowOpened;
             _window.OnClose -= OnWindowClosed;
-            _window.ClearButton.OnPressed -= OnClearPressed;
             _window.SearchBar.OnTextChanged -= OnSearchChanged;
             _window.FilterButton.OnItemSelected -= OnFilterSelected;
 
@@ -665,7 +653,6 @@ public sealed partial class ActionUIController : UIController, IOnStateChanged<G
 
         _window.OnOpen += OnWindowOpened;
         _window.OnClose += OnWindowClosed;
-        _window.ClearButton.OnPressed += OnClearPressed;
         _window.SearchBar.OnTextChanged += OnSearchChanged;
         _window.FilterButton.OnItemSelected += OnFilterSelected;
 

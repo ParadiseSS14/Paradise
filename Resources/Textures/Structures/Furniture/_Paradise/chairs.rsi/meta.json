@@ -1,7 +1,7 @@
 {
     "version": 1,
-    "license": null,
-    "copyright": null,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Comfy Chairs and Comfy Chair Armrest Sprites by Alecksohs at commit 9779e473a93217eafb99c3ae358afc1040078cac; Office Chair Armrest sprites by Alecksohs at commit 6274d7a1250c80bf590728630a28f3e8c496370f; Regular Sofa sprites and Sofa Armrest sprites by S34NW at commit 10d0e2f230beb24443840099ef7263445140ee9b; Corporate Sofa/Pew sprites and Corporate Sofa/Pew Armrests by S34NW at commit 14004ce2f21376ee2e62d45f6f8bb8639ea698e8; Shuttle Chair Armrest sprites by mvanalphen at commit f56854292a0170d6176541bb50fb31a80491adf4; ",
     "size": {
         "x": 32,
         "y": 32
@@ -84,39 +84,31 @@
             "directions": 4
         },
         {
-            "name": "bench_middle",
+            "name": "comfychair_armrest",
             "directions": 4
         },
         {
-            "name": "bench_middle_armrest",
+            "name": "wheelchair_overlay",
             "directions": 4
         },
         {
-            "name": "bench_middle_cover",
+            "name": "shuttle_chair_armrest",
             "directions": 4
         },
         {
-            "name": "bench_left",
+            "name": "comfychair_corp",
             "directions": 4
         },
         {
-            "name": "bench_left_armrest",
+            "name": "comfychair_corp_armrest",
             "directions": 4
         },
         {
-            "name": "bench_left_cover",
+            "name": "officechair_white_armrest",
             "directions": 4
         },
         {
-            "name": "bench_right",
-            "directions": 4
-        },
-        {
-            "name": "bench_right_armrest",
-            "directions": 4
-        },
-        {
-            "name": "bench_right_cover",
+            "name": "officechair_dark_armrest",
             "directions": 4
         }
     ]

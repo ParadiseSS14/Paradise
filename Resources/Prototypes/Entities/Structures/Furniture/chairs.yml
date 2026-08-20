@@ -175,6 +175,11 @@
     - type: Construction
       graph: Seat
       node: chairOffice
+    - type: ChairArmrest
+      armrestOverlay: officechair_white_armrest
+      armrestNoRot: true
+    - type: Strap
+      modifyBuckleDrawDepth: false
 
 - type: entity
   name: dark office chair
@@ -186,6 +191,9 @@
     - type: Construction
       graph: Seat
       node: chairOfficeDark
+    - type: ChairArmrest
+      armrestOverlay: officechair_dark_armrest
+      armrestNoRot: true
 
 - type: entity
   name: comfy chair
@@ -208,6 +216,22 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalBreak
+    - type: ChairArmrest
+      armrestOverlay: comfychair_armrest
+
+# Paradise Content - Corporate Comfy Chair
+- type: entity
+  id: ComfyChairCorporate
+  parent: ComfyChair
+  components:
+    - type: Sprite
+      sprite: Structures/Furniture/_Paradise/chairs.rsi
+      state: comfychair_corp
+    - type: Construction
+      graph: Seat
+      node: chairComfyCorporate
+    - type: ChairArmrest
+      armrestOverlay: comfychair_corp_armrest
 
 - type: entity
   name: pilot seat
@@ -230,6 +254,8 @@
             - !type:PlaySoundBehavior
               sound:
                 collection: MetalBreak
+    - type: ChairArmrest
+      armrestOverlay: shuttle_chair_armrest
 
 - type: entity
   name: wooden chair
@@ -477,42 +503,47 @@
   components:
     - type: Sprite
       state: xeno-chair
-# region Paradise Content - Sofas
+# region Paradise Content - Connected Chairs
 
+# region Sofas
 - type: entity
   parent: ChairBase
   id: SofaMiddle
   name: sofa
+  description: Soft and cushy.
   components:
     - type: Sprite
       sprite: Structures/Furniture/_Paradise/chairs.rsi
       state: sofamiddle
+    - type: Rotatable
+      rotateWhilePulling: false
 
 - type: entity
-  parent: ChairBase
+  parent: SofaMiddle
   id: SofaEndLeft
-  name: sofa end
+  name: sofa
   components:
     - type: Sprite
-      sprite: Structures/Furniture/_Paradise/chairs.rsi
       state: sofaend_left
+    - type: ChairArmrest
+      armrestOverlay: sofaend_left_armrest
 
 - type: entity
-  parent: ChairBase
+  parent: SofaEndLeft
   id: SofaEndRight
-  name: sofa end
+  name: sofa
   components:
     - type: Sprite
-      sprite: Structures/Furniture/_Paradise/chairs.rsi
       state: sofaend_right
+    - type: ChairArmrest
+      armrestOverlay: sofaend_right_armrest
 
 - type: entity
-  parent: ChairBase
+  parent: SofaEndLeft
   id: SofaCorner
-  name: sofa corner
+  name: sofa
   components:
     - type: Sprite
-      sprite: Structures/Furniture/_Paradise/chairs.rsi
       state: sofacorner
     - type: Rotatable
       increment: 45
@@ -520,17 +551,89 @@
       diagonalAnchoring: true
     - type: ChairArmrest
       armrestOverlay: sofacorner_armrest
-# region Sofa "Overlays"
+    - type: Strap
+      modifyBuckleDrawDepth: false
 
 - type: entity
-  id: SofaArmrestOverlay
+  parent: SofaMiddle
+  id: SofaMiddleCorporate
+  name: sofa
+  description: Soft and cushy.
+  components:
+    - type: Sprite
+      state: corp_sofamiddle
+
+- type: entity
+  parent: SofaEndLeft
+  id: SofaEndLeftCorporate
+  name: sofa
+  components:
+    - type: Sprite
+      state: corp_sofaend_left
+    - type: ChairArmrest
+      armrestOverlay: corp_sofaend_left_armrest
+
+- type: entity
+  parent: SofaEndRight
+  id: SofaEndRightCorporate
+  name: sofa
+  components:
+    - type: Sprite
+      state: corp_sofaend_right
+    - type: ChairArmrest
+      armrestOverlay: corp_sofaend_right_armrest
+
+- type: entity
+  parent: SofaCorner
+  id: SofaCornerCorporate
+  name: sofa
+  components:
+    - type: Sprite
+      state: corp_sofacorner
+    - type: ChairArmrest
+      armrestOverlay: corp_sofacorner_armrest
+# endregion Sofas
+
+- type: entity
+  parent: SofaMiddle
+  id: PewMiddle
+  name: pew
+  description: Soft and cushy.
+  components:
+    - type: Sprite
+      state: pewmiddle
+
+- type: entity
+  parent: SofaEndLeft
+  id: PewEndLeft
+  name: pew
+  components:
+    - type: Sprite
+      state: pewend_left
+    - type: ChairArmrest
+      armrestOverlay: pewend_left_armrest
+
+- type: entity
+  parent: SofaEndRight
+  id: PewEndRight
+  name: pew
+  components:
+    - type: Sprite
+      state: pewend_right
+    - type: ChairArmrest
+      armrestOverlay: pewend_right_armrest
+
+- type: entity
+  id: ChairArmrestOverlay
+  categories: [HideSpawnMenu]
   components:
     - type: Sprite
       sprite: Structures/Furniture/_Paradise/chairs.rsi
-      visible: true
-      drawdepth: Overlays
+      visible: false
+      drawdepth: OverMobs
       layers:
-        - state: sofacorner_armrest # placeholder, gets overwritten in ChairArmrestSystem
-# endregion Sofa "Overlays"
-
-# endregion Paradise Content - Sofas
+        - state: sofacorner_armrest # Placeholder, will be overwritten in ChairArmrestSystem
+    - type: Tag
+      tags:
+        - HideContextMenu
+# endregion Paradise Content - Connected Chairs

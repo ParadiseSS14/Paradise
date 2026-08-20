@@ -59,7 +59,9 @@ public sealed partial class ChairArmrestSystem : EntitySystem
 
     private void OnRemoved(EntityUid uid, ChairArmrestComponent component, ComponentShutdown args)
     {
-        if(Exists(component.OverlayEntity))
-            QueueDel(component.OverlayEntity);
+        if (!Exists(component.OverlayEntity))
+            return;
+
+        QueueDel(component.OverlayEntity);
     }
 }

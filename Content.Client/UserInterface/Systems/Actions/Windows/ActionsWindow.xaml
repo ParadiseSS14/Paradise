@@ -7,9 +7,9 @@
     Title="{Loc ui-actionmenu-title}"
     VerticalExpand="True"
     Resizable="True"
-    MinHeight="300"
-    MinWidth="300"
-    SetSize="300 400">
+    MinHeight="3-0"
+    MinWidth="325"
+    SetSize="325 400">
     <PanelContainer StyleClasses="SurfacePrimary">
         <BoxContainer Orientation="Vertical" Margin="8">
             <controls:TguiHeader HeaderText="{Loc 'ui-actionmenu-title'}" />
@@ -19,7 +19,7 @@
                           PlaceHolder="{Loc ui-actionmenu-search-bar-placeholder-text}" />
             </BoxContainer>
 
-            <PanelContainer StyleClasses="ListView" HorizontalExpand="True" VerticalExpand="True">
+            <PanelContainer StyleClasses="ListView" HorizontalExpand="True" VerticalExpand="True" Margin="4">
                 <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
                     <GridContainer Name="ResultsGrid" Access="Public" MaxGridWidth="300" />
                 </ScrollContainer>

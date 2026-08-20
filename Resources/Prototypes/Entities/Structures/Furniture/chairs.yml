@@ -517,6 +517,9 @@
       state: sofamiddle
     - type: Rotatable
       rotateWhilePulling: false
+    - type: Construction
+      graph: Seat
+      node: sofaMiddle
 
 - type: entity
   parent: SofaMiddle
@@ -527,6 +530,9 @@
       state: sofaend_left
     - type: ChairArmrest
       armrestOverlay: sofaend_left_armrest
+    - type: Construction
+      graph: Seat
+      node: sofaEndLeft
 
 - type: entity
   parent: SofaEndLeft
@@ -537,6 +543,9 @@
       state: sofaend_right
     - type: ChairArmrest
       armrestOverlay: sofaend_right_armrest
+    - type: Construction
+      graph: Seat
+      node: sofaEndRight
 
 - type: entity
   parent: SofaEndLeft
@@ -553,6 +562,9 @@
       armrestOverlay: sofacorner_armrest
     - type: Strap
       modifyBuckleDrawDepth: false
+    - type: Construction
+      graph: Seat
+      node: sofaCorner
 
 - type: entity
   parent: SofaMiddle
@@ -562,6 +574,9 @@
   components:
     - type: Sprite
       state: corp_sofamiddle
+    - type: Construction
+      graph: Seat
+      node: sofaMiddleCorporate
 
 - type: entity
   parent: SofaEndLeft
@@ -572,6 +587,9 @@
       state: corp_sofaend_left
     - type: ChairArmrest
       armrestOverlay: corp_sofaend_left_armrest
+    - type: Construction
+      graph: Seat
+      node: sofaEndLeftCorporate
 
 - type: entity
   parent: SofaEndRight
@@ -582,6 +600,9 @@
       state: corp_sofaend_right
     - type: ChairArmrest
       armrestOverlay: corp_sofaend_right_armrest
+    - type: Construction
+      graph: Seat
+      node: sofaEndRightCorporate
 
 - type: entity
   parent: SofaCorner
@@ -592,6 +613,9 @@
       state: corp_sofacorner
     - type: ChairArmrest
       armrestOverlay: corp_sofacorner_armrest
+    - type: Construction
+      graph: Seat
+      node: sofaCornerCorporate
 # endregion Sofas
 
 - type: entity
@@ -602,6 +626,9 @@
   components:
     - type: Sprite
       state: pewmiddle
+    - type: Construction
+      graph: Seat
+      node: pewMiddle
 
 - type: entity
   parent: SofaEndLeft
@@ -612,6 +639,9 @@
       state: pewend_left
     - type: ChairArmrest
       armrestOverlay: pewend_left_armrest
+    - type: Construction
+      graph: Seat
+      node: pewEndLeft
 
 - type: entity
   parent: SofaEndRight
@@ -622,6 +652,9 @@
       state: pewend_right
     - type: ChairArmrest
       armrestOverlay: pewend_right_armrest
+    - type: Construction
+      graph: Seat
+      node: pewEndRight
 
 - type: entity
   id: ChairArmrestOverlay

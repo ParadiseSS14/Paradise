@@ -15,6 +15,7 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
     private TelepathicChatMenu? _menu;
     private TelepathicChatComposeWindow? _composeWindow;
     private NetEntity? _targetEntity;
+    private List<(NetEntity Uid, string Name)>? _targetsList;
 
     protected override void Open()
     {
@@ -23,7 +24,6 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
         if (UiKey.Equals(TelepathicChatUiKey.Send) || UiKey.Equals(TelepathicChatUiKey.Offer))
         {
             _menu = this.CreateWindow<TelepathicChatMenu>();
-            Reload();
         }
 
         if (UiKey.Equals(TelepathicChatUiKey.Compose))
@@ -33,6 +33,17 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
         _menu?.OnTargetSelected += OnSelectTarget;
         _menu?.OnTargetDeselected += OnDeselectTarget;
         _composeWindow?.OnTextEntered += OnEnteredText;
+    }
+
+    protected override void UpdateState(BoundUserInterfaceState state)
+    {
+        base.UpdateState(state);
+
+        if (state is not TelepathicTargetUIState targetState)
+            return;
+
+        _targetsList = targetState.TargetsList;
+        Reload();
     }
 
     private void OnPressedSelect()
@@ -62,24 +73,12 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
 
     public void Reload()
     {
-        if (!EntMan.TryGetComponent<TelepathicChatComponent>(_owner, out var telepathComp))
+        if (_uiKey is not TelepathicChatUiKey)
             return;
 
-        if (_uiKey is not TelepathicChatUiKey key)
+        if (_targetsList is not { } targets || targets.Count == 0)
             return;
 
-        var actor = EntMan.GetNetEntity(_player.LocalSession?.AttachedEntity); // Pull the actor from the client session
-        var uiSession = telepathComp.UiKeySession.Find(x => x.UiKey == key && x.Actor == actor);
-
-        if (uiSession == default)
-            return;
-
-        if (!telepathComp.Sessions.TryGetValue(uiSession.SessionID, out var state))
-            return;
-
-        if (state.TargetsList.Count == 0)
-            return;
-
-        _menu?.BuildList(state.TargetsList);
+        _menu?.BuildList(targets);
     }
 }

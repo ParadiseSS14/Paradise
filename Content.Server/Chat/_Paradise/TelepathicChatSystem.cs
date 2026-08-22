@@ -152,11 +152,13 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             SessionID = sessionID
         };
 
-        telepath.Comp.Sessions[sessionID].TargetsList = validTargets;
         telepath.Comp.UiKeySession.Add(uiKeySession);
         Dirty(telepath);
 
+        var targetsList = new TelepathicTargetUIState(validTargets);
+
         _ui.OpenUi((telepath, userInterfaceComp), uiKey, performer);
+        _ui.SetUiState((telepath, userInterfaceComp), uiKey, targetsList);
     }
 
     private void OnSendEvent(Entity<TelepathicChatComponent> telepath, ref SendTelepathyEvent args)

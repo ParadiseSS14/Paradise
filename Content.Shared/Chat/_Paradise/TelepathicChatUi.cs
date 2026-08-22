@@ -24,6 +24,17 @@ public sealed class TelepathicTextEnteredMsg : BoundUserInterfaceMessage
 }
 
 [Serializable, NetSerializable]
+public sealed class TelepathicTargetUIState : BoundUserInterfaceState
+{
+    public readonly List<(NetEntity Uid, string Name)> TargetsList;
+
+    public TelepathicTargetUIState(List<(NetEntity Uid, string Name)> targetsList)
+    {
+        TargetsList = targetsList;
+    }
+}
+
+[Serializable, NetSerializable]
 public enum TelepathicChatUiKey : byte
 {
     Send,

@@ -16,6 +16,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
+using Robust.Shared.Utility;
 using System.Linq;
 
 namespace Content.Server.Chat._Paradise;
@@ -397,9 +398,11 @@ public sealed partial class TelepathicChatSystem : EntitySystem
         TelepathicChatComponent telepathComp,
         EntityUid sender,
         EntityUid receiver,
-        string message,
+        string rawMessage,
         bool isOffer)
     {
+        var message = FormattedMessage.EscapeText(rawMessage);
+
         // default wraps
         var messageWrap = $"{telepathComp.ObscuredMessage} \"{message}\"";
         var sendMessage = Loc.GetString("chat-manager-send-telepathic-chat-message", ("receiver", receiver));
@@ -474,6 +477,10 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             _popup.PopupEntity(Loc.GetString("telepathic-chat-target-unreachable"), sender, sender);
             return;
         }
+
+        // Get the sender's net session to make sure the message is within length limits
+        if (TryComp<ActorComponent>(sender, out var actor) && _chatManager.MessageCharacterLimit(actor.PlayerSession, message))
+            return;
 
         var (messageWrap, sendMessage, adminMessageWrap) = BuildMessageWraps(telepathComp, sender, receiver, message, isOffer);
 

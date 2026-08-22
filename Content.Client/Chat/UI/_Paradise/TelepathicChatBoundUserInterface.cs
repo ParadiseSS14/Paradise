@@ -1,16 +1,12 @@
 using Content.Shared.Chat._Paradise;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
-using Robust.Client.Player;
 
 namespace Content.Client.Chat.UI._Paradise;
 [UsedImplicitly]
 public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
 {
-    [Dependency] private IPlayerManager _player = default!;
-
     [ViewVariables]
-    private readonly EntityUid _owner = owner;
     private readonly Enum _uiKey = uiKey;
     private TelepathicChatMenu? _menu;
     private TelepathicChatComposeWindow? _composeWindow;

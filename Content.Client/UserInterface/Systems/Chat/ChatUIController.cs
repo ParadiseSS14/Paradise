@@ -900,9 +900,6 @@ public sealed partial class ChatUIController : UIController
                 if (_config.GetCVar(CCVars.LoocAboveHeadShow))
                     AddSpeechBubble(msg, SpeechBubble.SpeechType.Looc);
                 break;
-
-            case ChatChannel.Hivemind: // Paradise Content
-                break; // No Speechbubble here
         }
     }
 

@@ -78,6 +78,18 @@
       usesApcPower: true
     - type: WiresPanel
     - type: WiresVisuals
+    # PARADISE EDIT START - Physical Parameters
+    - type: PhysicalParameters
+    - type: Item
+      size: Ginormous
+    - type: HeldSpeedModifier
+      walkModifier: 0.4
+      sprintModifier: 0.2
+      affectedByParameters: true
+    - type: ItemExtension
+      minimalStrengthToPickUp: 3
+      strengthRequirementToBeUsed: 4
+    # PARADISE EDIT END
     - type: Wires
       boardName: wires-board-name-computer
       layoutId: Computer

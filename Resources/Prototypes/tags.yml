@@ -633,6 +633,9 @@
   id: GasScrubber # Used by AtmosAlarmableComponent for syncing devices.
 
 - type: Tag
+  id: GasTank
+
+- type: Tag
   id: GasVent # Used by AtmosAlarmableComponent for syncing devices.
 
 - type: Tag

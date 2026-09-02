@@ -1,0 +1,13 @@
+- type: roleLoadout
+  id: JobRoboticist
+  groups:
+    - ScientistNeck
+    - RoboticistJumpsuit
+    - RoboticistOuterClothing
+    - ScientistGloves
+    - ScientistBackpack
+    - ScientistShoes
+    - RoboticistPDA
+    - Survival
+    - GroupSpeciesBreathTool
+    - Trinkets

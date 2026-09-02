@@ -1,7 +1,9 @@
-﻿using Content.Server.Mind;
+using Content.Server.Mind;
 using Content.Server.Roles;
 using Content.Server.Roles.Jobs;
 using Content.Shared.CharacterInfo;
+using Content.Shared.Mind;
+using Content.Shared.Mind.Components;
 using Content.Shared.Objectives;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Objectives.Systems;
@@ -61,6 +63,18 @@ public sealed partial class CharacterInfoSystem : EntitySystem
             // Get briefing
             briefing = _roles.MindGetBriefing(mindId);
         }
+
+        // PARADISE EDIT START - Visiting mind overhaul
+        if (TryComp<VisitingMindComponent>(entity, out var visitingComp))
+        {
+            if (visitingComp.MindId is not { Valid: true } mindIdValid ||
+                !TryComp<MindComponent>(mindIdValid, out var mindComp) ||
+                mindComp.OwnedEntity is not { Valid: true } ownedEntValid)
+                return;
+
+            entity = ownedEntValid;
+        }
+        // PARADISE EDIT END
 
         RaiseNetworkEvent(new CharacterInfoEvent(GetNetEntity(entity), jobTitle, objectives, briefing), args.SenderSession);
     }

@@ -191,9 +191,8 @@ namespace Content.Shared.ActionBlocker
         {
             // If target is in a container can we attack
             if (target != null && _container.IsEntityInContainer(target.Value))
-            {
                 return false;
-            }
+
 
             _container.TryGetOuterContainer(uid, Transform(uid), out var outerContainer);
 

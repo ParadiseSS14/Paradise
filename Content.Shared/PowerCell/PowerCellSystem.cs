@@ -1,10 +1,11 @@
 using Content.Shared.Containers.ItemSlots;
-using Content.Shared.PowerCell.Components;
 using Content.Shared.Examine;
 using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
+using Content.Shared.PowerCell.Components;
+using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 
@@ -17,6 +18,9 @@ public sealed partial class PowerCellSystem : EntitySystem
     [Dependency] private SharedAppearanceSystem _appearance = default!;
     [Dependency] private SharedBatterySystem _battery = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
+    // PARADISE EDIT START - <mech overhaul>
+    [Dependency] private EntityWhitelistSystem _whitelist = default!;
+    // PARADISE EDIT END
 
     public override void Initialize()
     {
@@ -45,8 +49,9 @@ public sealed partial class PowerCellSystem : EntitySystem
         if (args.Container.ID != ent.Comp.CellSlotId)
             return;
 
-        // TODO: Can't this just use the ItemSlot's whitelist?
-        if (!HasComp<PowerCellComponent>(args.EntityUid))
+        // PARADISE EDIT START - <mech overhaul>
+        if (!_whitelist.IsWhitelistPassOrNull(ent.Comp.CellSlotWhitelist, args.EntityUid))
+        // PARADISE EDIT END
             args.Cancel();
     }
 

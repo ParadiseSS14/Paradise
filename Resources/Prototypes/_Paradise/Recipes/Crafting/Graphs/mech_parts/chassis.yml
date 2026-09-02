@@ -1,0 +1,121 @@
+- type: constructionGraph
+  id: MechChassis
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: hydraulicchassisframe
+          steps:
+            - material: Steel
+              amount: 30
+              doAfter: 30
+              store: part-container
+    - node: hydraulicchassisframe
+      entity: BasicHydraulicChassisFrame
+      edges:
+        - to: basichydraulicchassis
+          steps:
+            - material: Steel
+              amount: 30
+              doAfter: 30
+              store: part-container
+            - tool: Welding
+              doAfter: 15
+            - material: Cable
+              amount: 30
+              doAfter: 15
+              store: part-container
+            - tag: PowerSupplyUnitLarge
+              name: construction-graph-tag-power-supply-unit-large
+              icon:
+                sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+                state: large_psu
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - tag: HydraulicsControlElectronics
+              name: construction-graph-tag-hydraulic-control-electronics
+              icon:
+                sprite: Objects/Misc/module.rsi
+                state: id_mod
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - material: Cable
+              amount: 15
+              doAfter: 10
+              store: part-container
+            - tool: Screwing
+              doAfter: 15
+            - tag: HydraulicPiston
+              name: construction-graph-tag-hydraulic-piston-large
+              icon:
+                sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+                state: hydraulic_piston_black
+              doAfter: 5
+              store: part-container
+            - tool: Anchoring
+              doAfter: 5
+            - material: Cable
+              amount: 5
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - tag: HydraulicPiston
+              name: construction-graph-tag-hydraulic-piston-large
+              icon:
+                sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+                state: hydraulic_piston_black
+              doAfter: 5
+              store: part-container
+            - tool: Anchoring
+              doAfter: 5
+            - material: Cable
+              amount: 5
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - tag: HydraulicPiston
+              name: construction-graph-tag-hydraulic-piston-large
+              icon:
+                sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+                state: hydraulic_piston_black
+              doAfter: 5
+              store: part-container
+            - tool: Anchoring
+              doAfter: 5
+            - material: Cable
+              amount: 5
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - tag: HydraulicPiston
+              name: construction-graph-tag-hydraulic-piston-large
+              icon:
+                sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+                state: hydraulic_piston_black
+              doAfter: 5
+              store: part-container
+            - tool: Anchoring
+              doAfter: 5
+            - material: Cable
+              amount: 5
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+              doAfter: 10
+              store: part-container
+            - tool: Welding
+              doAfter: 10
+            - tool: Screwing
+              doAfter: 15
+    - node: basichydraulicchassis
+      entity: PowerloaderChassis

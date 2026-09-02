@@ -1,4 +1,3 @@
-﻿using System.Diagnostics.CodeAnalysis;
 using Content.Server._Paradise.GameObjects.GatherTargets;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
@@ -6,6 +5,7 @@ using Content.Shared.Doors.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Content.Server._Paradise.AccessHelper
 {

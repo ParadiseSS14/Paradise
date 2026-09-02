@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by PorteRianes https://github.com/PorteRianes",
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "basichydraulic"
+        },
+        {
+            "name": "basichydrauliccolor"
+        },
+        {
+            "name": "hydraulicdrill"
+        },
+        {
+            "name": "hydraulicdrillcolor"
+        }
+    ]
+}

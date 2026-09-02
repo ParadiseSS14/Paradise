@@ -43,4 +43,9 @@ public sealed partial class HeldSpeedModifierComponent : Component
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
     public bool MirrorClothingModifier = true;
+
+    // PARADISE EDIT START - Physical parameters
+    [DataField]
+    public bool AffectedByParameters = false;
+    // PARADISE EDIT END
 }

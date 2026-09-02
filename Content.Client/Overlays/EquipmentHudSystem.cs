@@ -1,7 +1,11 @@
+using Content.Shared._Paradise.RelayHUDLogic;
 using Content.Shared.GameTicking;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
+using Content.Shared.Mech.Components;
+using Content.Shared.Paradise.Mech.Components;
 using Robust.Client.Player;
+using Robust.Shared.Containers;
 using Robust.Shared.Player;
 
 namespace Content.Client.Overlays;
@@ -13,6 +17,7 @@ namespace Content.Client.Overlays;
 public abstract partial class EquipmentHudSystem<T> : EntitySystem where T : IComponent
 {
     [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private SharedContainerSystem _container = default!; // PARADISE EDIT - Mech overhaul
 
     [ViewVariables]
     public bool IsActive { get; private set; }
@@ -27,6 +32,11 @@ public abstract partial class EquipmentHudSystem<T> : EntitySystem where T : ICo
 
         SubscribeLocalEvent<LocalPlayerAttachedEvent>(OnPlayerAttached);
         SubscribeLocalEvent<LocalPlayerDetachedEvent>(OnPlayerDetached);
+
+        // PARADISE EDIT START - Mech overhaul
+        SubscribeLocalEvent<T, EntGotInsertedIntoContainerMessage>(OnCompEquip);
+        SubscribeLocalEvent<T, EntGotRemovedFromContainerMessage>(OnCompUnequip);
+        // PARADISE EDIT END
 
         SubscribeLocalEvent<T, GotEquippedEvent>(OnCompEquip);
         SubscribeLocalEvent<T, GotUnequippedEvent>(OnCompUnequip);
@@ -55,6 +65,20 @@ public abstract partial class EquipmentHudSystem<T> : EntitySystem where T : ICo
     protected virtual void UpdateInternal(RefreshEquipmentHudEvent<T> args) { }
 
     protected virtual void DeactivateInternal() { }
+
+    // PARADISE EDIT START - Mech overhaul
+    private void OnCompEquip(Entity<T> ent, ref EntGotInsertedIntoContainerMessage args)
+    {
+        if (TryComp<AltMechComponent>(args.Container.Owner, out var _))
+            RefreshOverlay();
+    }
+
+    private void OnCompUnequip(Entity<T> ent, ref EntGotRemovedFromContainerMessage args)
+    {
+        if (TryComp<AltMechComponent>(args.Container.Owner, out var _))
+            RefreshOverlay();
+    }
+    // PARADISE EDIT END
 
     private void OnStartup(Entity<T> ent, ref ComponentStartup args)
     {
@@ -110,6 +134,20 @@ public abstract partial class EquipmentHudSystem<T> : EntitySystem where T : ICo
 
         var ev = new RefreshEquipmentHudEvent<T>(TargetSlots);
         RaiseLocalEvent(entity, ref ev);
+
+        // PARADISE EDIT START - Mech overhaul
+        if (TryComp<RelayHUDLogicToContainersComponent>(entity, out var relayHUDComp))
+        {
+            foreach (var id in relayHUDComp.ContainerIDs)
+            {
+                if (!_container.TryGetContainer(entity, id, out var container))
+                    continue;
+
+                foreach (var ent in container.ContainedEntities)
+                    RaiseLocalEvent(ent, ref ev);
+            }
+        }
+        // PARADISE EDIT END
 
         if (ev.Active)
             Update(ev);

@@ -1,0 +1,27 @@
+- type: entity
+  parent: [ClothingShoesBase, BaseToggleClothing]
+  id: ClothingShoesBootsMagExo
+  name: exosuit integrated magboots
+  description: Integrated boots with magpads. They are much better than common ones because of access to exosuit's battery and electronics.
+  components:
+    - type: Sprite
+      sprite: _Paradise/Clothing/Shoes/exomagboots.rsi
+      state: icon
+    - type: Clothing
+      sprite: _Paradise/Clothing/Shoes/exomagboots.rsi
+    - type: ClothingSpeedModifier
+      walkModifier: 1
+      sprintModifier: 0.9
+    - type: FootstepModifier
+      footstepSoundCollection:
+        path: /Audio/Effects/stealthoff.ogg
+    - type: ToggleClothing
+      action: ActionToggleMagboots
+      mustEquip: false
+    - type: ComponentToggler
+      components:
+        - type: NoSlip
+    - type: Magboots
+    - type: Tag
+      tags:
+        - WhitelistChameleon

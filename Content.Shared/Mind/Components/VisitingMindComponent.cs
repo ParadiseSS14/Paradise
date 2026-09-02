@@ -5,9 +5,34 @@ namespace Content.Shared.Mind.Components
     {
         [ViewVariables]
         public EntityUid? MindId;
+
+        // PARADISE EDIT START - Visiting mind overhaul
+        [ViewVariables]
+        public bool RedirectChatMessages = true;
+        // PARADISE EDIT END
     }
 
-    public sealed class MindUnvisitedMessage : EntityEventArgs
+    [ByRefEvent]
+    public readonly record struct EntityVisitedEvent(EntityUid MindEntity, MindComponent MindComp)
     {
+        public readonly EntityUid MindEntity = MindEntity;
+
+        public readonly MindComponent MindComp = MindComp;
+    }
+
+    [ByRefEvent]
+    public readonly record struct EntityUnvisitedEvent(EntityUid MindEntity, MindComponent MindComp)
+    {
+        public readonly EntityUid MindEntity = MindEntity;
+
+        public readonly MindComponent MindComp = MindComp;
+    }
+
+    [ByRefEvent]
+    public readonly record struct EntityGotUnvisitedEvent(EntityUid MindEntity, MindComponent MindComp)
+    {
+        public readonly EntityUid MindEntity = MindEntity;
+
+        public readonly MindComponent MindComp = MindComp;
     }
 }

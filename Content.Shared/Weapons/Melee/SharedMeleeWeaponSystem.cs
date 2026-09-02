@@ -548,6 +548,16 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
         var attackedEvent = new AttackedEvent(meleeUid, user, targetXform.Coordinates);
         RaiseLocalEvent(target.Value, attackedEvent);
 
+        // PARADISE EDIT START - physical parameter dependent melee weapons
+
+        var attackerEvent = new MeleeAttackerEvent(meleeUid, target.Value, damage);
+        RaiseLocalEvent(user, ref attackerEvent);
+
+        if (!attackerEvent.ModifiedDamage.Empty)
+            damage = attackerEvent.ModifiedDamage;
+
+        // PARADISE EDIT END
+
         var modifiedDamage = DamageSpecifier.ApplyModifierSets(damage + hitEvent.BonusDamage + attackedEvent.BonusDamage, hitEvent.ModifiersList);
 
         if (Damageable.TryChangeDamage(target.Value, modifiedDamage, out var damageResult, origin:user, ignoreResistances:resistanceBypass))
@@ -706,6 +716,17 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
 
             var attackedEvent = new AttackedEvent(meleeUid, user, GetCoordinates(ev.Coordinates));
             RaiseLocalEvent(entity, attackedEvent);
+
+            // PARADISE EDIT START - physical parameter dependent melee weapons
+
+            var attackerEvent = new MeleeAttackerEvent(meleeUid, entity, damage);
+            RaiseLocalEvent(user, ref attackerEvent);
+
+            if (attackerEvent.ModifiedDamage != new DamageSpecifier())
+                damage = attackerEvent.ModifiedDamage;
+
+            // PARADISE EDIT END
+
             var modifiedDamage = DamageSpecifier.ApplyModifierSets(damage + hitEvent.BonusDamage + attackedEvent.BonusDamage, hitEvent.ModifiersList);
 
             var damageResult = Damageable.ChangeDamage(entity, modifiedDamage, origin: user, ignoreResistances: resistanceBypass);

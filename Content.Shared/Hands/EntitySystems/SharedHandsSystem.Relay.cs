@@ -40,7 +40,9 @@ public abstract partial class SharedHandsSystem
 
     private HeldRelayedEvent<T> CoreRelayEvent<T>(Entity<HandsComponent> entity, ref T args)
     {
-        var ev = new HeldRelayedEvent<T>(args);
+        // PARADISE EDIT START - <mech overhaul>
+        var ev = new HeldRelayedEvent<T>(args, entity.Owner);
+        // PARADISE EDIT END
 
         foreach (var held in EnumerateHeld(entity.AsNullable()))
         {

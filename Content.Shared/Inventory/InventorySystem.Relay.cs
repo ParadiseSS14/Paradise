@@ -1,3 +1,4 @@
+using Content.Shared._Paradise.PhysicalParameters;
 using Content.Shared.Armor;
 using Content.Shared.Atmos;
 using Content.Shared.Chat;
@@ -90,6 +91,10 @@ public partial class InventorySystem
         SubscribeLocalEvent<InventoryComponent, RefreshNightVisionEvent>(RefRelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, GluedEffectAttemptEvent>(RefRelayInventoryEvent);
         SubscribeLocalEvent<InventoryComponent, LubedEffectAttemptEvent>(RefRelayInventoryEvent);
+        // PARADISE EDIT START - Physical parameters
+        SubscribeLocalEvent<InventoryComponent, ParametersUpdateEvent>(RefRelayInventoryEvent);
+        SubscribeLocalEvent<InventoryComponent, UserParametersChangedEvent>(RefRelayInventoryEvent);
+        // PARADISE EDIT ENS
 
         // Eye/vision events
         SubscribeLocalEvent<InventoryComponent, CanSeeAttemptEvent>(RelayInventoryEvent);

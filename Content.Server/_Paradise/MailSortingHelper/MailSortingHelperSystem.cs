@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Disposal.Components;
 using Content.Shared.Disposal.Router;
 using Content.Server._Paradise.GameObjects.GatherTargets;

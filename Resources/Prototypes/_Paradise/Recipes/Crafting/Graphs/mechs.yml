@@ -1,0 +1,73 @@
+- type: constructionGraph
+  id: PowerloaderFrame
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: powerloaderframe
+          steps:
+            - material: Steel
+              amount: 30
+              doAfter: 30
+              store: part-container
+    - node: powerloaderframe
+      entity: MechLoaderFrame
+      edges:
+        - to: powerloader
+          steps:
+            - material: Steel
+              amount: 30
+              doAfter: 30
+              store: part-container
+            - tool: Welding
+              doAfter: 15
+            - material: Cable
+              amount: 30
+              doAfter: 15
+              store: part-container
+            - tag: PowerSupplyUnitLarge
+              name: construction-graph-tag-power-supply-unit-large
+              icon:
+                sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+                state: large_psu
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - tag: DimensionalElectronics
+              name: construction-graph-tag-dimensional-electronics
+              icon:
+                sprite: Objects/Misc/module.rsi
+                state: mcontroller
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - tag: PowerSupplyElectronics
+              name: construction-graph-tag-power-supply-electronics
+              icon:
+                sprite: Objects/Misc/module.rsi
+                state: mainboard
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - tag: OpticalElectronics
+              name: construction-graph-tag-optical-electronics
+              icon:
+                sprite: Objects/Misc/module.rsi
+                state: std_mod
+              doAfter: 5
+              store: part-container
+            - tool: Screwing
+              doAfter: 5
+            - material: Steel
+              amount: 15
+              doAfter: 10
+              store: part-container
+            - tool: Welding
+              doAfter: 10
+            - tool: Screwing
+              doAfter: 15
+    - node: powerloader
+      entity: MechLoader

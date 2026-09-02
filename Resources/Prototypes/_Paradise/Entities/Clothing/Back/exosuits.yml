@@ -1,0 +1,25 @@
+- type: entity
+  parent: Clothing
+  id: ClothingBackpackExo
+  name: exosuit powerpack
+  description: This power module allows your exoskeleton to operate.
+  components:
+    - type: Sprite
+      sprite: _Paradise/Clothing/OuterClothing/Misc/industrial_exosuit_backpack.rsi
+      state: icon
+    - type: Item
+      size: Huge
+    - type: PowerCellSlot
+      cellSlotId: cell_slot
+    - type: ItemSlots
+      slots:
+        cell_slot:
+          name: power-cell-slot-component-slot-name-default
+          startingItem: PowerCellMedium
+    - type: Clothing
+      quickEquip: false
+      slots:
+        - back
+    - type: Tag
+      tags:
+        - WhitelistChameleon

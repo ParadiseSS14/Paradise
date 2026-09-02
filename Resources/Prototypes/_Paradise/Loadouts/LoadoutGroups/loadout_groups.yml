@@ -1,0 +1,14 @@
+- type: loadoutGroup
+  id: RoboticistJumpsuit
+  name: loadout-group-scientist-jumpsuit
+  loadouts:
+    - RoboticistJumpsuit
+    - RoboticistJumpskirt
+
+- type: loadoutGroup
+  id: RoboticistOuterClothing
+  name: loadout-group-scientist-outerclothing
+  minLimit: 0
+  loadouts:
+    - RegularLabCoat
+    - RoboticistLabCoat

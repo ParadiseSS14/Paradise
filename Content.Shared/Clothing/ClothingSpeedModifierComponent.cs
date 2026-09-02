@@ -1,4 +1,4 @@
-﻿using Robust.Shared.GameStates;
+using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Clothing;
@@ -29,6 +29,11 @@ public sealed partial class ClothingSpeedModifierComponent : Component
     /// </summary>
     [DataField]
     public bool? Standing;
+
+    // PARADISE EDIT START - Physical parameters
+    [DataField]
+    public bool AffectedByParameters = false;
+    // PARADISE EDIT END
 }
 
 [Serializable, NetSerializable]

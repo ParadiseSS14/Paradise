@@ -17,6 +17,27 @@
     <ProjectReference Include="..\Content.Shared.Database\Content.Shared.Database.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="_Paradise\Clothing\SpeciesRestrictedClothingSystem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="_Paradise\Clothing\SpeciesRestrictedClothingComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="_Paradise\Damageable\DamageTypeRestrictionComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="_Paradise\HUD\RelayHUDLogicToContainersComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="_Paradise\Weapons\Melee\Components\ItemExtensionMeleeWeaponComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="_Paradise\Weapons\Ranged\Components\ItemExtensionRangedWeaponComponent.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
   <Import Project="..\RobustToolbox\MSBuild\Robust.EntitySystemSubscriptionsGenerator.targets" />

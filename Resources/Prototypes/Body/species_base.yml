@@ -150,6 +150,13 @@
         - FootstepSound
         - DoorBumpOpener
         - AnomalyHost
+    # PARADISE EDIT START - Physical
+    - type: PhysicalParameters
+    - type: Item
+      size: Ginormous
+    - type: ItemExtension
+      minimalStrengthToPickUp: 3.5
+    # PARADISE EDIT END
 
 - type: entity
   abstract: true

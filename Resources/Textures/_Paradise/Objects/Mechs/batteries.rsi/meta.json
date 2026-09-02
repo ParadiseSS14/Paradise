@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created by PorteRianes https://github.com/PorteRianes",
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "small",
+            "directions": 4
+        },
+        {
+            "name": "large",
+            "directions": 4
+        },
+        {
+            "name": "nuclear",
+            "directions": 4
+        }
+    ]
+}

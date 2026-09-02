@@ -137,6 +137,18 @@
         - GasCanisters
     - type: Paintable
       group: Canisters
+    # PARADISE EDIT START - Physical Parameters
+    - type: PhysicalParameters
+    - type: Item
+      size: Ginormous
+    - type: HeldSpeedModifier
+      walkModifier: 0.4
+      sprintModifier: 0.2
+      affectedByParameters: true
+    - type: ItemExtension
+      minimalStrengthToPickUp: 2.7
+      strengthRequirementToBeUsed: 4
+    # PARADISE EDIT END
 
 - type: entity
   parent: GasCanister

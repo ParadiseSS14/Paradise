@@ -1,0 +1,278 @@
+- type: entity
+  id: MechLoaderFrame
+  name: Powerloader frame
+  description: Vast bulk of a simple-yet-reliable mech.
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: false
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 100
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+          restitution: 0.3
+          friction: 0.2
+    - type: Sprite
+      noRot: true
+      drawdepth: Items
+      sprite: _Paradise/Objects/Mechs/coresfinal.rsi
+      state: basicloader
+    - type: Appearance
+    - type: ContainerContainer
+      containers:
+        part-container: !type:Container
+    - type: Construction
+      graph: PowerloaderFrame
+      node: powerloaderframe
+      containers:
+        - part-container
+    - type: Pullable
+
+- type: entity
+  id: BasicHydraulicChassisFrame
+  name: hydraulic chassis frame
+  description: Frame of powerful hydraulic mech chassis
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: false
+    - type: Item
+      size: Ginormous
+    - type: HeldSpeedModifier
+      sprintModifier: 0.2
+      walkModifier: 0.4
+      affectedByParameters: true
+    - type: ItemExtension
+      minimalStrengthToPickUp: 3.5
+      strengthRequirementToBeUsed: 7
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 100
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+          restitution: 0.3
+          friction: 0.2
+    - type: Sprite
+      noRot: true
+      drawdepth: Items
+      sprite: _Paradise/Objects/Mechs/chassisfinal.rsi
+      state: basichydraulic
+    - type: Appearance
+    - type: ContainerContainer
+      containers:
+        part-container: !type:Container
+    - type: Construction
+      graph: MechChassis
+      node: basichydraulicchassis
+      containers:
+        - part-container
+    - type: Pullable
+
+- type: entity
+  id: MechRightArmBase
+  name: mech right arm base
+  description: A magnificently universal device - the connection port. All the possibilities begin here.
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: false
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 100
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+          restitution: 0.3
+          friction: 0.2
+    - type: Item
+      size: Large
+      inhandVisuals:
+        left:
+          - state: inhand-left-big
+        right:
+          - state: inhand-right-big
+    - type: Sprite
+      layers:
+        - map: ["enum.ColorableVisualLayer.CustomBase"]
+          sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+          state: mech_arm_port
+    - type: Appearance
+    - type: ContainerContainer
+      containers:
+        part-container: !type:Container
+    - type: Construction
+      graph: MechRightArm
+      node: rightarmbase
+      containers:
+        - part-container
+    - type: Pullable
+
+- type: entity
+  id: MechRightArmFrameHydraulic
+  name: mech right arm frame
+  description: A 'skeleton' of large arm of a machine. This one is fitted to use hydraulic pistons as drives.
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: false
+    - type: HeldSpeedModifier
+      sprintModifier: 0.2
+      walkModifier: 0.4
+      affectedByParameters: true
+    - type: ItemExtension
+      minimalStrengthToPickUp: 3.5
+      strengthRequirementToBeUsed: 7
+    - type: Item
+      size: Large
+      inhandVisuals:
+        left:
+          - state: inhand-left-big
+        right:
+          - state: inhand-right-big
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 100
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+          restitution: 0.3
+          friction: 0.2
+    - type: Sprite
+      layers:
+        - map: ["enum.ColorableVisualLayer.CustomBase"]
+          sprite: _Paradise/Objects/Mechs/mech_crafts_intermediate/intermediare_arms_right.rsi
+          state: hydraulic
+    - type: Appearance
+    - type: ContainerContainer
+      containers:
+        part-container: !type:Container
+    - type: Construction
+      graph: MechRightArm
+      node: rightarmframehydraulic
+      containers:
+        - part-container
+    - type: Pullable
+
+- type: entity
+  id: MechLeftArmBase
+  name: mech left arm base
+  description: A magnificently universal device - the connection port. All the possibilities begin here.
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: false
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 100
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+          restitution: 0.3
+          friction: 0.2
+    - type: Sprite
+      layers:
+        - map: ["enum.ColorableVisualLayer.CustomBase"]
+          sprite: _Paradise/Objects/Mechs/mech_components_machines.rsi
+          state: mech_arm_port
+    - type: Item
+      size: Large
+      inhandVisuals:
+        left:
+          - state: inhand-left-big
+        right:
+          - state: inhand-right-big
+    - type: Appearance
+    - type: ContainerContainer
+      containers:
+        part-container: !type:Container
+    - type: Construction
+      graph: MechLeftArm
+      node: leftarmbase
+      containers:
+        - part-container
+    - type: Pullable
+
+- type: entity
+  id: MechLeftArmFrameHydraulic
+  name: mech left arm frame
+  description: A 'skeleton' of large arm of a machine. This one is fitted to use hydraulic pistons as drives.
+  components:
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: false
+    - type: HeldSpeedModifier
+      sprintModifier: 0.2
+      walkModifier: 0.4
+      affectedByParameters: true
+    - type: ItemExtension
+      minimalStrengthToPickUp: 3.5
+      strengthRequirementToBeUsed: 7
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.25,0.25,0.25"
+          density: 100
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+          restitution: 0.3
+          friction: 0.2
+    - type: Item
+      size: Large
+      inhandVisuals:
+        left:
+          - state: inhand-left-big
+        right:
+          - state: inhand-right-big
+    - type: Sprite
+      layers:
+        - map: ["enum.ColorableVisualLayer.CustomBase"]
+          sprite: _Paradise/Objects/Mechs/mech_crafts_intermediate/intermediare_arms_left.rsi
+          state: hydraulic
+    - type: Appearance
+    - type: ContainerContainer
+      containers:
+        part-container: !type:Container
+    - type: Construction
+      graph: MechLeftArm
+      node: leftarmframehydraulic
+      containers:
+        - part-container
+    - type: Pullable

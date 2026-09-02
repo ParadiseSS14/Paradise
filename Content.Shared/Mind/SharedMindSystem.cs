@@ -258,7 +258,7 @@ public abstract partial class SharedMindSystem : EntitySystem
         return false;
     }
 
-    public virtual void Visit(EntityUid mindId, EntityUid entity, MindComponent? mind = null)
+    public virtual void Visit(EntityUid mindId, EntityUid entity, MindComponent? mind = null, bool redirectChat = false) // PARADISE EDIT - Visiting mind overhaul
     {
     }
 
@@ -300,7 +300,6 @@ public abstract partial class SharedMindSystem : EntitySystem
         }
 
         Dirty(mindId, mind);
-        RaiseLocalEvent(oldVisitingEnt, new MindUnvisitedMessage(), true);
     }
 
     public void WipeMind(ICommonSession player)

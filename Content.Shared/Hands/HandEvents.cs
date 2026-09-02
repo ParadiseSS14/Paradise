@@ -352,9 +352,15 @@ namespace Content.Shared.Hands
     {
         public TEvent Args;
 
-        public HeldRelayedEvent(TEvent args)
+        // PARADISE EDIT START - Hand overhaul
+        public EntityUid? Owner;
+
+        public HeldRelayedEvent(TEvent args, EntityUid? owner)
         {
             Args = args;
+
+            Owner = owner;
         }
+        // PARADISE EDIT END
     }
 }

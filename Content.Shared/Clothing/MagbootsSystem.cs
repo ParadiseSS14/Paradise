@@ -1,12 +1,10 @@
-using Content.Shared.Actions;
 using Content.Shared.Alert;
 using Content.Shared.Atmos.Components;
-using Content.Shared.Clothing.EntitySystems;
 using Content.Shared.Gravity;
 using Content.Shared.Inventory;
-using Content.Shared.Item;
 using Content.Shared.Item.ItemToggle;
 using Content.Shared.Item.ItemToggle.Components;
+using Content.Shared.Paradise.Mech.Systems;
 using Robust.Shared.Containers;
 
 namespace Content.Shared.Clothing;
@@ -27,6 +25,7 @@ public sealed partial class SharedMagbootsSystem : EntitySystem
         SubscribeLocalEvent<MagbootsComponent, ClothingGotUnequippedEvent>(OnGotUnequipped);
         SubscribeLocalEvent<MagbootsComponent, IsWeightlessEvent>(OnIsWeightless);
         SubscribeLocalEvent<MagbootsComponent, InventoryRelayedEvent<IsWeightlessEvent>>(OnIsWeightless);
+        SubscribeLocalEvent<MagbootsComponent, MechEquipmentRelayedEvent<IsWeightlessEvent>>(OnIsWeightless); // PARADISE EDIT - Mech overhaul
     }
 
     private void OnToggled(Entity<MagbootsComponent> ent, ref ItemToggledEvent args)
@@ -76,4 +75,11 @@ public sealed partial class SharedMagbootsSystem : EntitySystem
     {
         OnIsWeightless(ent, ref args.Args);
     }
+
+    // PARADISE EDIT START - Mech overhaul
+    private void OnIsWeightless(Entity<MagbootsComponent> ent, ref MechEquipmentRelayedEvent<IsWeightlessEvent> args)
+    {
+        OnIsWeightless(ent, ref args.Args);
+    }
+    // PARADISE EDIT END
 }

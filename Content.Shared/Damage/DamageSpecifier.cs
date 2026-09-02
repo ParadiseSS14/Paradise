@@ -26,6 +26,11 @@ namespace Content.Shared.Damage
         [DataField("types")]
         public Dictionary<ProtoId<DamageTypePrototype>, FixedPoint2> DamageDict { get; set; } = new();
 
+        // PARADISE EDIT START - Add armour piercing
+        [DataField]
+        public FixedPoint2 ArmourPiercing = 0;
+        // PARADISE EDIT END
+
         /// <summary>
         ///     Returns a sum of the damage values.
         /// </summary>
@@ -87,6 +92,8 @@ namespace Content.Shared.Damage
         public DamageSpecifier(DamageSpecifier damageSpec)
         {
             DamageDict = new(damageSpec.DamageDict);
+
+            ArmourPiercing = damageSpec.ArmourPiercing; // PARADISE EDIT - Add armour piercing
         }
 
         /// <summary>
@@ -131,6 +138,8 @@ namespace Content.Shared.Damage
             DamageSpecifier newDamage = new();
             newDamage.DamageDict.EnsureCapacity(damageSpec.DamageDict.Count);
 
+            var minCoefficient = 1f;// PARADISE EDIT - Add armour piercing
+
             foreach (var (key, value) in damageSpec.DamageDict)
             {
                 if (value == 0)
@@ -147,12 +156,23 @@ namespace Content.Shared.Damage
                 if (modifierSet.FlatReduction.TryGetValue(key, out var reduction))
                     newValue = Math.Max(0f, newValue - reduction); // flat reductions can't heal you
 
+                // PARADISE EDIT START - Add armour piercing
                 if (modifierSet.Coefficients.TryGetValue(key, out var coefficient))
-                    newValue *= coefficient; // coefficients can heal you, e.g. cauterizing bleeding
+                {
+                    var lowerCap = Math.Min(0f, coefficient);
+                    var upperCap = Math.Max(1f, coefficient);
+
+                    newValue *= Math.Clamp(coefficient + damageSpec.ArmourPiercing.Float() / 100f, lowerCap, upperCap);
+
+                    minCoefficient = Math.Min(minCoefficient, coefficient);
+                }
+                // PARADISE EDIT END
 
                 if (newValue != 0)
                     newDamage.DamageDict[key] = FixedPoint2.New(newValue);
             }
+
+            newDamage.ArmourPiercing = FixedPoint2.Max(FixedPoint2.Min(FixedPoint2.Zero, damageSpec.ArmourPiercing), damageSpec.ArmourPiercing - (1f - minCoefficient) * 100f); // PARADISE EDIT - Add armour piercing
 
             return newDamage;
         }
@@ -346,6 +366,7 @@ namespace Content.Shared.Damage
             {
                 newDamage.DamageDict.Add(entry.Key, entry.Value * factor);
             }
+            newDamage.ArmourPiercing = damageSpec.ArmourPiercing * factor; // PARADISE EDIT - Mech overhaul
             return newDamage;
         }
 
@@ -356,6 +377,7 @@ namespace Content.Shared.Damage
             {
                 newDamage.DamageDict.Add(entry.Key, entry.Value * factor);
             }
+            newDamage.ArmourPiercing = damageSpec.ArmourPiercing * factor;// PARADISE EDIT - Mech overhaul
             return newDamage;
         }
 
@@ -366,6 +388,7 @@ namespace Content.Shared.Damage
             {
                 newDamage.DamageDict.Add(entry.Key, entry.Value / factor);
             }
+            newDamage.ArmourPiercing = damageSpec.ArmourPiercing / factor;// PARADISE EDIT - Mech overhaul
             return newDamage;
         }
 
@@ -377,6 +400,7 @@ namespace Content.Shared.Damage
             {
                 newDamage.DamageDict.Add(entry.Key, entry.Value / factor);
             }
+            newDamage.ArmourPiercing = damageSpec.ArmourPiercing / factor;// PARADISE EDIT - Mech overhaul
             return newDamage;
         }
 
@@ -394,6 +418,7 @@ namespace Content.Shared.Damage
                     newDamage.DamageDict[entry.Key] += entry.Value;
                 }
             }
+            newDamage.ArmourPiercing = damageSpecA.ArmourPiercing + damageSpecB.ArmourPiercing;// PARADISE EDIT - Mech overhaul
             return newDamage;
         }
 
@@ -410,6 +435,7 @@ namespace Content.Shared.Damage
                     newDamage.DamageDict[entry.Key] -= entry.Value;
                 }
             }
+            newDamage.ArmourPiercing = damageSpecA.ArmourPiercing - damageSpecB.ArmourPiercing;// PARADISE EDIT - Mech overhaul
             return newDamage;
         }
 
@@ -431,6 +457,11 @@ namespace Content.Shared.Damage
                 if (!other.DamageDict.TryGetValue(key, out var otherValue) || value != otherValue)
                     return false;
             }
+
+            // PARADISE EDIT START - Mech overhaul
+            if (ArmourPiercing != other.ArmourPiercing)
+                return false;
+            // PARADISE EDIT END
 
             return true;
         }

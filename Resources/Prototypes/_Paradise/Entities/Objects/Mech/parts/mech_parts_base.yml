@@ -1,0 +1,178 @@
+- type: entity
+  id: MechPartBase
+  parent: BaseItem
+  abstract: true
+  components:
+    - type: Item
+      size: Ginormous
+    - type: MechPart
+    - type: HeldSpeedModifier
+      sprintModifier: 0.2
+      walkModifier: 0.4
+      affectedByParameters: true
+    - type: ItemExtension
+      minimalStrengthToPickUp: 3.5 #Gigantic weight, obviously
+      strengthRequirementToBeUsed: 7
+    - type: ArmorBlock
+    - type: ComplexRepairable
+      material: Steel
+      materialRepairTreshold: 10.0
+      doAfterModifier: 1.2
+    - type: DamageTypeRestriction
+      damageContainer: Inorganic
+    - type: Damageable
+      damageModifierSet: Metallic
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 150
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ChangeConstructionNodeBehavior
+              node: start
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  id: BaseMechChassis
+  parent: MechPartBase
+  abstract: true
+  components:
+    - type: MechPart
+      slot: chassis
+      ownMass: 200
+      integrity: 200
+      maxIntegrity: 200
+    - type: MechChassis
+      maximalMass: 550
+      baseMovementSpeed: 3.6
+      footstepSound: /Audio/Mecha/sound_mecha_powerloader_step.ogg
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 200
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ChangeConstructionNodeBehavior
+              node: start
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  id: BaseMechRightArm
+  parent: MechPartBase
+  abstract: true
+  components:
+    - type: MechPart
+      slot: RightArm
+      ownMass: 60
+      integrity: 150
+      maxIntegrity: 150
+    - type: MechArm
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 150
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ChangeConstructionNodeBehavior
+              node: start
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  id: BaseMechHead
+  parent: MechPartBase
+  abstract: true
+  components:
+    - type: MechOptics
+    - type: HeldSpeedModifier
+      sprintModifier: 1.0
+      walkModifier: 1.0
+    - type: ItemExtension
+      minimalStrengthToPickUp: 0.3
+      strengthRequirementToBeUsed: 0.4
+    - type: Sprite
+      layers:
+        - map: ["enum.ColorableVisualLayer.CustomColor"]
+          sprite: _Paradise/Objects/Mechs/items/mecha_parts.rsi
+          state: visor_basic
+    - type: MechPart
+      slot: head
+      ownMass: 25
+      integrity: 100
+      maxIntegrity: 100
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 100
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ChangeConstructionNodeBehavior
+              node: start
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  id: BaseMechLeftArm
+  parent: MechPartBase
+  abstract: true
+  components:
+    - type: MechPart
+      slot: LeftArm
+      ownMass: 60
+      integrity: 150
+      maxIntegrity: 150
+    - type: MechArm
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 150
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ChangeConstructionNodeBehavior
+              node: start
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+
+- type: entity
+  id: BaseMechPowerGrid
+  parent: MechPartBase
+  abstract: true
+  components:
+    - type: HeldSpeedModifier
+      sprintModifier: 0.7
+      walkModifier: 1.0
+    - type: ItemExtension
+      minimalStrengthToPickUp: 0.7
+      strengthRequirementToBeUsed: 1.0
+    - type: MechPart
+      slot: power
+      ownMass: 80
+    - type: Battery
+      maxCharge: 10800
+      startingCharge: 10800
+      pricePerJoule: 0.15
+    - type: Explosive
+      explosionType: Default
+      maxIntensity: 200
+      intensitySlope: 1.5
+    - type: SolutionContainerManager
+      solutions:
+        battery:
+          maxVol: 5
+    - type: Tag
+      tags:
+        - MechPowerGrid
+    - type: Appearance
+    - type: Riggable

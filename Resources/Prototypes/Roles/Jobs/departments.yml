@@ -120,6 +120,7 @@
     - ResearchDirector
     - Scientist
     - ResearchAssistant
+    - Roboticist # PARADISE EDIT - add roboticist
 
 - type: department
   id: Silicon

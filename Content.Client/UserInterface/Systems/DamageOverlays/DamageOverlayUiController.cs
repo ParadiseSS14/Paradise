@@ -21,9 +21,8 @@ public sealed partial class DamageOverlayUiController : UIController
     [Dependency] private IOverlayManager _overlayManager = default!;
     [Dependency] private IPlayerManager _playerManager = default!;
 
-    [UISystemDependency] private readonly MobThresholdSystem _mobThresholdSystem = default!;
-    [UISystemDependency] private readonly StatusEffectsSystem _statusEffects = default!;
-    [UISystemDependency] private readonly DamageableSystem _damageable = default!;
+    [UISystemDependency] private readonly DamageOverlayUiHandlerSystem _handler = default!; // PARADISE EDIT - Mech overhaul
+    
     private Overlays.DamageOverlay _overlay = default!;
 
     public override void Initialize()
@@ -79,74 +78,26 @@ public sealed partial class DamageOverlayUiController : UIController
     //TODO: Jezi: adjust oxygen and hp overlays to use appropriate systems once bodysim is implemented
     private void UpdateOverlays(EntityUid entity, MobStateComponent? mobState, DamageableComponent? damageable = null, MobThresholdsComponent? thresholds = null, InjurableComponent? injurable = null)
     {
-        if (mobState == null && !EntityManager.TryGetComponent(entity, out mobState) ||
-            thresholds == null && !EntityManager.TryGetComponent(entity, out thresholds) ||
-            damageable == null && !EntityManager.TryGetComponent(entity, out  damageable) ||
-            injurable == null && !EntityManager.TryGetComponent(entity, out injurable))
-            return;
-
-        if (!_mobThresholdSystem.TryGetIncapThreshold(entity, out var foundThreshold, thresholds))
-            return; //this entity cannot die or crit!!
-
-        if (!thresholds.ShowOverlays)
+        // PARADISE EDIT START - Mech overhaul
+        if (thresholds != null ||
+            EntityManager.TryGetComponent(entity, out thresholds) &&
+            !thresholds.ShowOverlays)
         {
             ClearOverlay();
-            return; //this entity intentionally has no overlays
+            return;
         }
 
-        var damagePerGroup = _damageable.GetDamagePerGroup((entity, damageable));
-        var critThreshold = foundThreshold.Value;
-        _overlay.State = mobState.CurrentState;
-
-        switch (mobState.CurrentState)
-        {
-            case MobState.Alive:
-            {
-                FixedPoint2 painLevel = 0;
-                _overlay.PainLevel = 0;
-
-                if (!_statusEffects.TryEffectsWithComp<PainNumbnessStatusEffectComponent>(entity, out _))
-                {
-                    foreach (var painDamageType in injurable.PainDamageGroups)
-                    {
-
-                        damagePerGroup.TryGetValue(painDamageType, out var painDamage);
-                        painLevel += painDamage;
-                    }
-                    _overlay.PainLevel = FixedPoint2.Min(1f, painLevel / critThreshold).Float();
-
-                    if (_overlay.PainLevel < 0.05f) // Don't show damage overlay if they're near enough to max.
-                    {
-                        _overlay.PainLevel = 0;
-                    }
-                }
-
-                if (damagePerGroup.TryGetValue("Airloss", out var oxyDamage))
-                {
-                    _overlay.OxygenLevel = FixedPoint2.Min(1f, oxyDamage / critThreshold).Float();
-                }
-
-                _overlay.CritLevel = 0;
-                _overlay.DeadLevel = 0;
-                break;
-            }
-            case MobState.Critical:
-            {
-                if (!_mobThresholdSystem.TryGetDeadPercentage(entity,
-                        FixedPoint2.Max(0.0, _damageable.GetTotalDamage((entity, damageable))), out var critLevel))
-                    return;
-                _overlay.CritLevel = critLevel.Value.Float();
-
-                _overlay.PainLevel = 0;
-                _overlay.DeadLevel = 0;
-                break;
-            }
-            case MobState.Dead:
-            {
-                _overlay.PainLevel = 0;
-                _overlay.CritLevel = 0;
-                break;
-            }
-        }
+        _handler.TryGetUpdatedOverlayParameters(
+            entity,
+            out _overlay.State,
+            out _overlay.DeadLevel,
+            out _overlay.CritLevel,
+            out _overlay.OxygenLevel,
+            out _overlay.PainLevel,
+            mobState,
+            damageable,
+            thresholds,
+            injurable);
+        // PARADISE EDIT END
     }
 }

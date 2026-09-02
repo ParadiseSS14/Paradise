@@ -88,9 +88,6 @@
           - RipleyLLeg
           - RipleyRLeg
       containerId: mech-assembly-container
-    - type: Construction
-      graph: Ripley
-      node: start
 
 - type: entity
   parent: BaseRipleyPartItem
@@ -203,9 +200,6 @@
           - HonkerLLeg
           - HonkerRLeg
       containerId: mech-assembly-container
-    - type: Construction
-      graph: Honker
-      node: start
 
 - type: entity
   parent: BaseHonkerPartItem
@@ -318,9 +312,6 @@
           - HamtrLLeg
           - HamtrRLeg
       containerId: mech-assembly-container
-    - type: Construction
-      graph: Hamtr
-      node: start
 
 - type: entity
   parent: BaseHamtrPartItem
@@ -426,7 +417,3 @@
     - type: Sprite
       state: harness
       noRot: true
-    - type: Construction
-      graph: Vim
-      node: start
-      defaultTarget: vim

@@ -1,4 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
+using System.Diagnostics.CodeAnalysis;
 using Robust.Shared.Map.Components;
 
 namespace Content.Server._Paradise.GameObjects.GatherTargets;

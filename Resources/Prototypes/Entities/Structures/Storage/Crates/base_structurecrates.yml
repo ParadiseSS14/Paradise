@@ -35,6 +35,13 @@
     - type: StaticPrice
       price: 75
     - type: RequireProjectileTarget
+    # PARADISE EDIT START - Mech Overhaul
+    - type: PhysicalParameters
+    - type: Item
+      size: Ginormous
+    - type: ItemExtension
+      minimalStrengthToPickUp: 3.5
+    # PARADISE EDIT END
 
 - type: entity
   parent: BaseCrate

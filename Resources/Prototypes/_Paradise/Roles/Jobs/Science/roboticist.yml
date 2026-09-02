@@ -1,0 +1,42 @@
+﻿- type: job
+  id: Roboticist
+  name: job-name-roboticist
+  description: job-description-roboticist
+  playTimeTracker: JobRoboticist
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 5h
+  startingGear: RoboticistGear
+  icon: "JobIconRoboticist"
+  supervisors: job-supervisors-rd
+  access:
+    - Research
+    - Maintenance
+  special:
+    - !type:AddImplantSpecial
+      implants: [NeuralInterfaceImplant]
+
+- type: startingGear
+  id: RoboticistGear
+  equipment:
+    ears: ClothingHeadsetScience
+
+- type: loadoutGroup
+  id: RoboticistPDA
+  name: loadout-group-scientist-id
+  loadouts:
+    - RoboticistPDA
+
+- type: loadout
+  id: RoboticistPDA
+  equipment:
+    id: RoboticistPDA
+
+- type: chameleonOutfit
+  id: RoboticistChameleonOutfit
+  job: Roboticist
+  hasMindShield: true
+  equipment:
+    outerClothing: ClothingOuterWinterRobo
+    gloves: ClothingHandsGlovesFingerless

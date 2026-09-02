@@ -5,6 +5,7 @@ using Content.Server.Roles;
 using Content.Shared.Database;
 using Content.Shared.Implants;
 using Content.Shared.Mindshield.Components;
+using Content.Shared.Paradise.MindShield;
 using Content.Shared.Revolutionary;
 using Content.Shared.Revolutionary.Components;
 using Content.Shared.Roles.Components;
@@ -35,6 +36,12 @@ public sealed partial class MindShieldSystem : EntitySystem
     private void OnImplantImplanted(Entity<MindShieldImplantComponent> ent, ref ImplantImplantedEvent ev)
     {
         EnsureComp<MindShieldComponent>(ev.Implanted);
+
+        // PARADISE EDIT START - Extend MindShield logic
+        var protectionGrantedEv = new MindshieldProtectionGrantedEvent(ent.Owner, ev.Implanted);
+        RaiseLocalEvent(ev.Implanted, ref protectionGrantedEv);
+        // PARADISE EDIT END
+
         MindShieldRemovalCheck(ev.Implanted, ev.Implant);
     }
 
@@ -59,6 +66,11 @@ public sealed partial class MindShieldSystem : EntitySystem
 
     private void OnImplantRemoved(Entity<MindShieldImplantComponent> ent, ref ImplantRemovedEvent args)
     {
+        // PARADISE EDIT START - Extend MindShield logic
+        var protectionGrantedEv = new MindshieldProtectionRemovedEvent(ent.Owner, args.Implanted);
+        RaiseLocalEvent(args.Implanted, ref protectionGrantedEv);
+        // PARADISE EDIT END
+
         RemComp<MindShieldComponent>(args.Implanted);
     }
 

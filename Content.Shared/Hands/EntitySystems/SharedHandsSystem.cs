@@ -1,17 +1,19 @@
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Logs;
+using Content.Shared.Damage;
 using Content.Shared.Hands.Components;
 using Content.Shared.Interaction;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.VirtualItem;
 using Content.Shared.Storage.EntitySystems;
+using Content.Shared.Weapons.Melee;
 using Content.Shared.Whitelist;
 using Robust.Shared.Containers;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 
 namespace Content.Shared.Hands.EntitySystems;
 
@@ -30,6 +32,8 @@ public abstract partial class SharedHandsSystem
     public event Action<Entity<HandsComponent>, string, HandLocation>? OnPlayerAddHand;
     public event Action<Entity<HandsComponent>, string>? OnPlayerRemoveHand;
     protected event Action<Entity<HandsComponent>?>? OnHandSetActive;
+
+    private DamageSpecifier NoHandDamage = new DamageSpecifier(); // PARADISE EDIT - Mech overhaul
 
     public override void Initialize()
     {
@@ -337,6 +341,46 @@ public abstract partial class SharedHandsSystem
 
         if (TryGetHeldItem(ent, handId, out var newHeld))
             RaiseLocalEvent(newHeld.Value, new HandSelectedEvent(ent));
+
+        // PARADISE EDIT START - Hand overhaul
+        if (TryComp<MeleeWeaponComponent>(ent.Owner, out var meleeComp) &&
+            ent.Comp.Hands.TryGetValue(handId, out var hand))//or we overrdie all hands or we don't do it at all
+        {
+            if (hand.HandOverride != null)
+            {
+                meleeComp.Damage = hand.HandOverride.Value.DamageOverride;
+
+                meleeComp.AttackRate = hand.HandOverride.Value.AttackRate;
+
+                meleeComp.AltDisarm = hand.HandOverride.Value.AltDisarm;
+
+                meleeComp.AutoAttack = hand.HandOverride.Value.AutoAttack;
+
+                meleeComp.Range = hand.HandOverride.Value.Range;
+
+                meleeComp.HitSound = hand.HandOverride.Value.HitSound;
+
+                Dirty(ent);
+                Dirty(ent.Owner, meleeComp);
+
+                return true;
+            }
+
+            meleeComp.Damage = NoHandDamage;
+
+            meleeComp.AttackRate = 1f;
+
+            meleeComp.AltDisarm = false;
+
+            meleeComp.AutoAttack = false;
+
+            meleeComp.Range = 1.5f;
+
+            meleeComp.HitSound = null;
+
+            Dirty(ent.Owner, meleeComp);
+        }
+        // PARADISE EDIT END
 
         Dirty(ent);
         return true;

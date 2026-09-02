@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by JustSmartgun, mech_arm_port and drill made by PorteRianes https://github.com/PorteRianes",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "hydraulic_clamp"
+        },
+        {
+            "name": "hydraulic_piston"
+        },
+        {
+            "name": "hydraulic_piston_black"
+        },
+        {
+            "name": "hydraulic_pump"
+        },
+        {
+            "name": "large_psu"
+        },
+        {
+            "name": "psu"
+        },
+        {
+            "name": "servo_large"
+        },
+        {
+            "name": "mech_arm_port"
+        },
+        {
+            "name": "drill"
+        }
+    ]
+}

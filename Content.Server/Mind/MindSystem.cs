@@ -106,7 +106,7 @@ public sealed partial class MindSystem : SharedMindSystem
         }
     }
 
-    public override void Visit(EntityUid mindId, EntityUid entity, MindComponent? mind = null)
+    public override void Visit(EntityUid mindId, EntityUid entity, MindComponent? mind = null, bool redirectChat = false) // PARADISE EDIT - Visiting mind overhaul
     {
         base.Visit(mindId, entity, mind);
 
@@ -130,11 +130,17 @@ public sealed partial class MindSystem : SharedMindSystem
         // EnsureComp instead of AddComp to deal with deferred deletions.
         var comp = EnsureComp<VisitingMindComponent>(entity);
         comp.MindId = mindId;
+        comp.RedirectChatMessages = redirectChat;// PARADISE EDIT - Visiting mind overhaul
 
         // Do this AFTER the entity changes above as this will fire off a player-detached event
         // which will run ghosting twice.
         if (_players.TryGetSessionById(mind.UserId, out var session))
             _players.SetAttachedEntity(session, entity);
+
+        // PARADISE EDIT START - Visiting mind overhaul
+        var ev = new EntityVisitedEvent(mindId, mind);
+        RaiseLocalEvent(entity, ref ev);
+        // PARADISE EDIT END
 
         Log.Info($"Session {session?.Name} visiting entity {entity}.");
     }
@@ -149,6 +155,8 @@ public sealed partial class MindSystem : SharedMindSystem
         if (mind.VisitingEntity == null)
             return;
 
+        var oldVisitingEnt = mind.VisitingEntity.Value; // PARADISE EDIT - Visiting mind overhaul
+
         RemoveVisitingEntity(mindId, mind);
 
         if (mind.UserId == null || !_players.TryGetSessionById(mind.UserId.Value, out var session))
@@ -157,8 +165,19 @@ public sealed partial class MindSystem : SharedMindSystem
         if (session.AttachedEntity == mind.VisitingEntity)
             return;
 
+        // PARADISE EDIT START - Visiting mind overhaul
         var owned = mind.OwnedEntity;
         _players.SetAttachedEntity(session, owned);
+
+        var oldEntEv = new EntityGotUnvisitedEvent(mindId, mind);
+        RaiseLocalEvent(oldVisitingEnt, ref oldEntEv);
+
+        if (mind.OwnedEntity is { Valid: true } ownedEntValid)
+        {
+            var ev = new EntityUnvisitedEvent(mindId, mind);
+            RaiseLocalEvent(ownedEntValid, ref ev);
+        }
+        // PARADISE EDIT END
 
         if (owned.HasValue)
         {

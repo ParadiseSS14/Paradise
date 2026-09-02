@@ -1,0 +1,102 @@
+- type: entity
+  id: PowerloaderChassis
+  parent: BaseMechChassis
+  name: powerloader hydraulic chassis
+  description: Low-tier hydraulic chassis, heavy and slow but also very powerfull and reliable
+  components:
+    - type: ArmorBlock
+    - type: AltArmor # Ah yes,my beloved СБЭУ
+      tresholdDict:
+        Radiation: 1000 # As always mechs do not care about radiation/poison/airloss/etc.
+        Poison: 1000
+        #Airloss: 1000
+        Caustic: 1000
+        Piercing: 12 #Numbers higher compared to a strikeproof shield, anything starting from intermediate caliber will easily pierce that
+        Blunt: 35
+        Heat: 20
+        Slash: 40
+        Shock: 30 # All the electronics is insulated from the frame BY DEFAULT(otherwise there would be an instant short-circuit) and the steel frame is not affected by it in any way
+      durabilityTresholdDict:
+        Radiation: 1000
+        Poison: 1000
+        #Airloss: 1000
+        Caustic: 1000
+        Piercing: 12
+        Blunt: 25
+        Heat: 15
+        Slash: 30
+        Shock: 30
+    - type: Sprite
+      layers:
+        - map: ["enum.ColorableVisualLayer.CustomBase"]
+          sprite: _Paradise/Objects/Mechs/chassisfinal.rsi
+          state: basichydraulic
+        - map: ["enum.ColorableVisualLayer.CustomColor"]
+          sprite: _Paradise/Objects/Mechs/chassisfinal.rsi
+          state: basichydrauliccolor
+    - type: CustomColorableLayer
+    - type: MechChassis
+      maximalMass: 900
+      baseMovementSpeed: 3.3
+      acceleration: 3
+      efficiency: 0.003
+    - type: MechPart
+      integrity: 250
+      maxIntegrity: 250
+      ownMass: 300
+      attachedSprite:
+        sprite: _Paradise/Objects/Mechs/chassisfinal.rsi
+        state: basichydraulic
+      attachedColoredSprite:
+        sprite: _Paradise/Objects/Mechs/chassisfinal.rsi
+        state: basichydrauliccolor
+    - type: Destructible
+      thresholds:
+        - trigger: !type:DamageTrigger
+            damage: 250
+          behaviors:
+            - !type:PlaySoundBehavior
+              sound:
+                collection: MetalBreak
+            - !type:ChangeConstructionNodeBehavior
+              node: start
+            - !type:DoActsBehavior
+              acts: ["Destruction"]
+    - type: Construction
+      graph: MechChassis
+      node: basichydraulicchassis
+      containers:
+        - part-container
+# - type: entity
+#   id: LightServoChassis
+#   parent: BaseMechChassis
+#   name: electric servo chassis
+#   description: Mech chassis made based on electro servos. It is lightweight, has low reaction time but won't be able to carry much weight
+#   components:
+#     - type: Sprite
+#       sprite: _Paradise/Objects/Mechs/chassis.rsi
+#       state: servo
+#     - type: MechChassis
+#       maximalMass: 500
+#       baseMovementSpeed: 4.8
+#       acceleration: 6
+#       efficiency: 0.005
+#     - type: MechPart
+#       integrity: 175
+#       maxIntegrity: 175
+#       ownMass: 100
+#       attachedSprite:
+#         sprite: _Paradise/Objects/Mechs/chassis.rsi
+#         state: servo
+#     - type: Destructible
+#       thresholds:
+#         - trigger: !type:DamageTrigger
+#             damage: 175
+#           behaviors:
+#             - !type:PlaySoundBehavior
+#               sound:
+#                 collection: MetalBreak
+#             - !type:ChangeConstructionNodeBehavior
+#               node: start
+#             - !type:DoActsBehavior
+#               acts: ["Destruction"]

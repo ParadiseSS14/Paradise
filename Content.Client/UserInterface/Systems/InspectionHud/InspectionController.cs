@@ -40,7 +40,7 @@ public sealed partial class InspectionController : UIController
 
     private void ChangeInspectionText(EntityUid? entity)
     {
-        if (inspectionUI == null || _lastInspectionEntity == null)
+        if (inspectionUI == null || (_lastInspectionEntity == null && entity == null))
             return;
 
         if (_lastInspectionEntity == entity)

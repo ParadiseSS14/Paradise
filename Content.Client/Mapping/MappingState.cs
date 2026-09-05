@@ -8,6 +8,7 @@ using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Client.Verbs;
 using Content.Shared.Administration;
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 using Content.Shared.Decals;
 using Content.Shared.Input;
 using Content.Shared.Maps;
@@ -574,7 +575,7 @@ public sealed partial class MappingState : GameplayStateBase
                 _placement.Clear();
 
                 _decal.SetActive(true);
-                _decal.UpdateDecalInfo(decal.ID, Color.White, 0, true, 0, false);
+                _decal.UpdateDecalInfo(decal.ID, Color.White, 0, true, 0, CleaningType.LightDecal); // Paradise Change - Cleaning
                 Screen.DecalContainer.Visible = true;
                 break;
             case ContentTileDefinition tile:

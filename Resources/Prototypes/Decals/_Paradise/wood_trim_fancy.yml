@@ -1,6 +1,7 @@
 ﻿- type: decal
   id: WoodTrimFancyBox
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: box
@@ -9,6 +10,7 @@
 - type: decal
   id: WoodTrimFancyEndNorth
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: end_north
@@ -16,6 +18,7 @@
 - type: decal
   id: WoodTrimFancyEndEast
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: end_east
@@ -23,6 +26,7 @@
 - type: decal
   id: WoodTrimFancyEndSouth
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: end_south
@@ -30,6 +34,7 @@
 - type: decal
   id: WoodTrimFancyEndWest
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: end_west
@@ -39,6 +44,7 @@
 - type: decal
   id: WoodTrimFancyInnerNw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: inner_nw
@@ -46,6 +52,7 @@
 - type: decal
   id: WoodTrimFancyInnerNe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: inner_ne
@@ -53,6 +60,7 @@
 - type: decal
   id: WoodTrimFancyInnerSw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: inner_sw
@@ -60,6 +68,7 @@
 - type: decal
   id: WoodTrimFancyInnerSe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: inner_se
@@ -69,6 +78,7 @@
 - type: decal
   id: WoodTrimFancyLineWest
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: line_west
@@ -76,6 +86,7 @@
 - type: decal
   id: WoodTrimFancyLineEast
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: line_east
@@ -83,6 +94,7 @@
 - type: decal
   id: WoodTrimFancyLineNorth
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: line_north
@@ -90,6 +102,7 @@
 - type: decal
   id: WoodTrimFancyLineSouth
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: line_south
@@ -99,6 +112,7 @@
 - type: decal
   id: WoodTrimFancyCornerNw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: corner_nw
@@ -106,6 +120,7 @@
 - type: decal
   id: WoodTrimFancyCornerNe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: corner_ne
@@ -113,6 +128,7 @@
 - type: decal
   id: WoodTrimFancyCornerSw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: corner_sw
@@ -120,6 +136,7 @@
 - type: decal
   id: WoodTrimFancyCornerSe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/_Paradise/wood_trim_fancy.rsi
     state: corner_se

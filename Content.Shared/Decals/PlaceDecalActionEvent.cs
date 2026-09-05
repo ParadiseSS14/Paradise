@@ -1,4 +1,5 @@
 ﻿using Content.Shared.Actions;
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.Decals;
@@ -21,5 +22,5 @@ public sealed partial class PlaceDecalActionEvent : WorldTargetActionEvent
     public int ZIndex;
 
     [DataField("cleanable")]
-    public bool Cleanable;
+    public CleaningType Cleanable; // Paradise Change - Cleaning
 }

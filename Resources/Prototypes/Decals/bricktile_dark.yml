@@ -1,6 +1,7 @@
 ﻿- type: decal
   id: BrickTileDarkBox
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_box
@@ -8,6 +9,7 @@
 - type: decal
   id: BrickTileDarkCornerNe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_corner_ne
@@ -15,6 +17,7 @@
 - type: decal
   id: BrickTileDarkCornerSe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_corner_se
@@ -22,6 +25,7 @@
 - type: decal
   id: BrickTileDarkCornerNw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_corner_nw
@@ -29,6 +33,7 @@
 - type: decal
   id: BrickTileDarkCornerSw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_corner_sw
@@ -36,6 +41,7 @@
 - type: decal
   id: BrickTileDarkInnerNe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_inner_ne
@@ -43,6 +49,7 @@
 - type: decal
   id: BrickTileDarkInnerSe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_inner_se
@@ -50,6 +57,7 @@
 - type: decal
   id: BrickTileDarkInnerNw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_inner_nw
@@ -57,6 +65,7 @@
 - type: decal
   id: BrickTileDarkInnerSw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_inner_sw
@@ -64,6 +73,7 @@
 - type: decal
   id: BrickTileDarkEndN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_end_n
@@ -71,6 +81,7 @@
 - type: decal
   id: BrickTileDarkEndE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_end_e
@@ -78,6 +89,7 @@
 - type: decal
   id: BrickTileDarkEndS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_end_s
@@ -85,6 +97,7 @@
 - type: decal
   id: BrickTileDarkEndW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_end_w
@@ -92,6 +105,7 @@
 - type: decal
   id: BrickTileDarkLineN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_line_n
@@ -99,6 +113,7 @@
 - type: decal
   id: BrickTileDarkLineE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_line_e
@@ -106,6 +121,7 @@
 - type: decal
   id: BrickTileDarkLineS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_line_s
@@ -113,6 +129,7 @@
 - type: decal
   id: BrickTileDarkLineW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/bricktile.rsi
     state: dark_line_w

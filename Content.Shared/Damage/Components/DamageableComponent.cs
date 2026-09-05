@@ -71,6 +71,15 @@ public sealed partial class DamageableComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<DisplacementDataPrototype>? Displacement;
+
+    // PARADISE EDIT START - Add armour piercing
+    /// <summary>
+    /// The minimum effective damage required for a projectile to penetrate this entity.
+    /// Effective damage is the projectile's damage of a required type plus its armor penetration.
+    /// </summary>
+    [DataField]
+    public FixedPoint2 PenetrationThreshold = 0;
+    // PARADISE EDIT END
 }
 
 [Serializable, NetSerializable]

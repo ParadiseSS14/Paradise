@@ -357,7 +357,7 @@
       state: icon
     - type: Cleaning
       cleaningStrength: Scrapeable
-      cleaningSpeed: 5
+      cleaningDuration: 5
       cleanSound:
         path: /Audio/Items/wirebrushing.ogg
     - type: Item

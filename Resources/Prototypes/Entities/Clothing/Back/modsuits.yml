@@ -1,0 +1,74 @@
+- type: entity
+  abstract: true
+  id: BaseModsuit
+  parent: ClothingBackpack
+  components:
+
+  - type: Sprite
+    sprite: Clothing/Back/Modsuits/standard.rsi
+    layers:
+      - state: icon-control
+        map: ["enum.ToggleableVisuals.Enabled"]
+
+  - type: Clothing
+    sprite: Clothing/Back/Modsuits/standard.rsi
+    slots:
+    - back
+    clothingVisuals:
+      back:
+      - state: equipped-control
+
+  - type: ToggleableVisuals
+    spriteLayer: enum.ToggleableVisuals.Layer
+    clothingVisuals:
+      back:
+      - state: equipped-control-sealed
+
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ModsuitVisuals.IconLayer:
+            True: {state: "icon-control-sealed"}
+            False: {state: "icon-control"}
+
+  - type: ContainerContainer
+    containers:
+      helmet: !type:ContainerSlot { }
+      chest: !type:ContainerSlot { }
+      gloves: !type:ContainerSlot { }
+      boots: !type:ContainerSlot { }
+
+      storedGloves: !type:ContainerSlot { }
+      storedBoots: !type:ContainerSlot { }
+
+  - type: Modsuit
+    parts:
+      Helmet: StandardModHelmet
+      Chest: StandardModChest
+      Gloves: StandardModGloves
+      Boots: StandardModBoots
+    actionEndpoints:
+      - ActionModsuitWheel
+      - ActionModsuitPower
+
+  - type: UserInterface
+    interfaces:
+      enum.ModsuitUiKey.Radial:
+        type: ModsuitMenuBoundUserInterface
+
+# Realisations of modsuits
+
+- type: entity
+  id: StandardModsuit
+  parent: BaseModsuit
+  name: Standard modsuit
+  description: This is standart NanoTraisen modsuit
+  components:
+  - type: Clothing
+    sprite: Clothing/Back/Modsuits/standard.rsi
+    slots:
+    - back
+    clothingVisuals:
+      back:
+      - state: equipped-control

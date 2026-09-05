@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
+using Content.Server.Atmos.Events;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
 using Content.Shared.Damage.Components;
@@ -10,7 +11,6 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Robust.Shared.Containers;
-
 namespace Content.Server.Atmos.EntitySystems
 {
     public sealed partial class BarotraumaSystem : EntitySystem
@@ -30,7 +30,6 @@ namespace Content.Server.Atmos.EntitySystems
             SubscribeLocalEvent<PressureProtectionComponent, GotUnequippedEvent>(OnPressureProtectionUnequipped);
             SubscribeLocalEvent<PressureProtectionComponent, ComponentInit>(OnUpdateResistance);
             SubscribeLocalEvent<PressureProtectionComponent, ComponentRemove>(OnUpdateResistance);
-
             SubscribeLocalEvent<PressureImmunityComponent, ComponentInit>(OnPressureImmuneInit);
             SubscribeLocalEvent<PressureImmunityComponent, ComponentRemove>(OnPressureImmuneRemove);
         }
@@ -289,5 +288,42 @@ namespace Content.Server.Atmos.EntitySystems
                 }
             }
         }
+        /// <summary>
+        /// PARADISE EDIT START - Function for modify clothing pressure protection paramets.
+        /// This feature was not originally provided by the Wizards.
+        /// </summary>
+        public void RefresPressureProtectionModifiers(Entity<PressureProtectionComponent> ent)
+        {
+            var comp = ent.Comp;
+            if (comp == null)
+                return;
+
+            if (!Resolve(ent, ref comp, false))
+                return;
+
+            ent.Comp = comp;
+
+            var ev = new RefreshPressureProtectiondModifiersEvent();
+            RaiseLocalEvent(ent, ev);
+
+            if (MathHelper.CloseTo(ev.LowPressureModifier, comp.LowPressureModifier) &&
+                MathHelper.CloseTo(ev.LowPressureMultiplier, comp.LowPressureMultiplier) &&
+                MathHelper.CloseTo(ev.HighPressureModifier, comp.HighPressureModifier) &&
+                MathHelper.CloseTo(ev.HighPressureMultiplier, comp.HighPressureMultiplier)
+                )
+                return;
+
+            comp.LowPressureModifier += ev.LowPressureModifier;
+            comp.LowPressureMultiplier *= ev.LowPressureMultiplier;
+            comp.HighPressureModifier += ev.HighPressureModifier;
+            comp.HighPressureMultiplier *= ev.HighPressureMultiplier;
+            if (TryComp<BarotraumaComponent>(ent, out var barotrauma))
+            {
+                UpdateCachedResistances(ent, barotrauma);
+            }
+        }
+        /// <summary>
+        /// PARADISE EDIT END
+        /// </summary>
     }
 }

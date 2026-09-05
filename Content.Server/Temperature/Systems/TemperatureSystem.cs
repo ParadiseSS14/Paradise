@@ -8,6 +8,7 @@ using Content.Shared.Projectiles;
 using Content.Shared.Temperature.Components;
 using Content.Shared.Temperature.HeatContainer;
 using Content.Shared.Temperature.Systems;
+using Content.Server.Temperature.Events;
 
 namespace Content.Server.Temperature.Systems;
 
@@ -96,4 +97,36 @@ public sealed partial class TemperatureSystem : SharedTemperatureSystem
     {
         ChangeHeat(args.Target, ent.Comp.Heat, ent.Comp.IgnoreHeatResistance);// adjust the temperature
     }
+
+    /// <summary>
+    /// PARADISE EDIT START - Function for modify clothing temprature protection paramets.
+    /// This feature was not originally provided by the Wizards.
+    /// </summary>
+    public void RefresTempratureProtectionModifiers(Entity<TemperatureProtectionComponent> ent)
+    {
+        var comp = ent.Comp;
+        if (comp == null)
+            return;
+
+        if (!Resolve(ent, ref comp, false))
+            return;
+
+        ent.Comp = comp;
+
+        var ev = new RefreshTempratureProtectiondModifiersEvent();
+        RaiseLocalEvent(ent, ev);
+
+        if (MathHelper.CloseTo(ev.CoefficientModofier, comp.Coefficient)
+            )
+            return;
+
+        comp.Coefficient += ev.CoefficientModofier;
+        if (comp.Coefficient > 1)
+            comp.Coefficient = 1;
+        if (comp.Coefficient < 0)
+            comp.Coefficient = 0;
+    }
+    /// <summary>
+    /// PARADISE EDIT END
+    /// </summary>
 }

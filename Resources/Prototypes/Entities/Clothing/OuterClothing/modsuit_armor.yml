@@ -1,0 +1,46 @@
+- type: entity
+  id: StandardModChest
+  parent: [ClothingOuterBase, AllowSuitStorageClothing]
+  name: standard MOD chestplate
+  components:
+    - type: Sprite
+      sprite: Clothing/Back/Modsuits/standard.rsi
+      layers:
+        - state: icon-chestplate
+          map: ["enum.ToggleableVisuals.Enabled"]
+
+    - type: Clothing
+      sprite: Clothing/Back/Modsuits/standard.rsi
+      slots:
+        - outerClothing
+      clothingVisuals:
+        outerClothing:
+          - state: equipped-chestplate
+
+    - type: PressureProtection
+      highPressureMultiplier: 1
+      lowPressureMultiplier: 1
+
+    - type: TemperatureProtection
+      coefficient: 0.8
+
+    - type: ModsuitClothing
+      lowPressureModifier: 0
+      lowPressureMultiplier: 1000
+      highPressureModifier: 0
+      highPressureMultiplier: 0.1
+      coefficientModifier: 0.8
+
+    - type: ToggleableVisuals
+      spriteLayer: enum.ToggleableVisuals.Layer
+      clothingVisuals:
+        outerClothing:
+          - state: equipped-chestplate-sealed
+
+    - type: Appearance
+    - type: GenericVisualizer
+      visuals:
+        enum.ToggleableVisuals.Enabled:
+          enum.ModsuitVisuals.IconLayer:
+            True: { state: "icon-chestplate-sealed" }
+            False: { state: "icon-chestplate" }

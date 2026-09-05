@@ -1,0 +1,89 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprites from Paradise 13 original build",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon-control-sealed",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "icon-control"
+        },
+        {
+            "name": "icon-helmet-sealed"
+        },
+        {
+            "name": "icon-helmet"
+        },
+        {
+            "name": "icon-chestplate-sealed"
+        },
+        {
+            "name": "icon-chestplate"
+        },
+        {
+            "name": "icon-gloves-sealed"
+        },
+        {
+            "name": "icon-gloves"
+        },
+        {
+            "name": "icon-boots-sealed"
+        },
+        {
+            "name": "icon-boots"
+        },
+        {
+            "name": "equipped-control-sealed",
+            "directions": 4
+        },
+        {
+            "name": "equipped-control",
+            "directions": 4
+        },
+        {
+            "name": "equipped-helmet-sealed",
+            "directions": 4
+        },
+        {
+            "name": "equipped-helmet",
+            "directions": 4
+        },
+        {
+            "name": "equipped-chestplate-sealed",
+            "directions": 4
+        },
+        {
+            "name": "equipped-chestplate",
+            "directions": 4
+        },
+        {
+            "name": "equipped-gloves-sealed",
+            "directions": 4
+        },
+        {
+            "name": "equipped-gloves",
+            "directions": 4
+        },
+        {
+            "name": "equipped-boots-sealed",
+            "directions": 4
+        },
+        {
+            "name": "equipped-boots",
+            "directions": 4
+        }
+    ]
+}

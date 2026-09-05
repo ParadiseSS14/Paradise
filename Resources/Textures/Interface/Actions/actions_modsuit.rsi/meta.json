@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprites from Paradise 13 original build with modifications by IWantSomeFish",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "deploy"
+        },
+        {
+            "name": "activate"
+        },
+        {
+            "name": "activate-ready"
+        },
+        {
+            "name": "panel"
+        },
+        {
+            "name": "module"
+        },
+        {
+            "name": "recall"
+        }
+    ]
+}

@@ -97,5 +97,4 @@
         - red
         - silver
         - yellow
-      cleanable: true
       deleteSpawnerAfterSpawn: true

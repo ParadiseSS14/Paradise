@@ -1,3 +1,4 @@
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array;
 using Robust.Shared.Utility;
@@ -21,7 +22,7 @@ namespace Content.Shared.Decals
         /// True if this decal is cleanable by default.
         /// </summary>
         [DataField]
-        public bool DefaultCleanable;
+        public CleaningType CleaningType; // Paradise Change - Cleaning
 
         /// <summary>
         /// True if this decal has custom colors applied by default

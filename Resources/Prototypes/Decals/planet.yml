@@ -3,6 +3,7 @@
   id: FlowersBROne
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_flowers.rsi
     state: flowersbr1
@@ -11,6 +12,7 @@
   id: FlowersBRTwo
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_flowers.rsi
     state: flowersbr2
@@ -19,6 +21,7 @@
   id: FlowersBRThree
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_flowers.rsi
     state: flowersbr3
@@ -28,6 +31,7 @@
   id: BushAOne
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: busha1
@@ -36,6 +40,7 @@
   id: BushATwo
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: busha2
@@ -44,6 +49,7 @@
   id: BushAThree
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: busha3
@@ -52,6 +58,7 @@
   id: BushCOne
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: bushc1
@@ -60,6 +67,7 @@
   id: BushCTwo
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: bushc2
@@ -68,6 +76,7 @@
   id: BushCThree
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: bushc3
@@ -76,6 +85,7 @@
   id: BushDOne
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: bushd1
@@ -84,6 +94,7 @@
   id: BushDTwo
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: bushd2
@@ -92,6 +103,7 @@
   id: BushDThree
   snapCardinals: true
   defaultSnap: false
+  cleaningType: Plant
   sprite:
     sprite: /Textures/Decals/Flora/flora_bushes.rsi
     state: bushd3

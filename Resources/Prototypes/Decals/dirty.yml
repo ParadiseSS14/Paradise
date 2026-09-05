@@ -3,7 +3,7 @@
 - type: decal
   id: Dirt
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirt
@@ -11,7 +11,7 @@
 - type: decal
   id: DirtLight
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtlight
@@ -19,7 +19,7 @@
 - type: decal
   id: DirtMedium
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtmedium
@@ -27,7 +27,7 @@
 - type: decal
   id: DirtHeavy
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtheavy
@@ -35,7 +35,7 @@
 - type: decal
   id: DirtHeavyMonotile
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtheavy-mono
@@ -43,7 +43,7 @@
 - type: decal
   id: DirtLightVerticalSlats
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtlight-vertical-slats
@@ -51,7 +51,7 @@
 - type: decal
   id: DirtHeavyVerticalSlats
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtheavy-vertical-slats
@@ -59,7 +59,7 @@
 - type: decal
   id: DirtLightHorizontalSlats
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtlight-horizontal-slats
@@ -67,7 +67,7 @@
 - type: decal
   id: DirtHeavyHorizontalSlats
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: dirtheavy-horizontal-slats
@@ -75,7 +75,7 @@
 - type: decal
   id: Damaged
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: damaged
@@ -83,7 +83,7 @@
 - type: decal
   id: Remains
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: remains
@@ -91,7 +91,7 @@
 - type: decal
   id: Rust
   tags: ["station", "dirty"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   sprite:
     sprite: Decals/dirty.rsi
     state: rust

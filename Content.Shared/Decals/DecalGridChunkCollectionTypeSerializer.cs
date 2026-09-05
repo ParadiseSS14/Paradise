@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
 using Robust.Shared.Serialization.Manager;
@@ -11,6 +12,7 @@ using Robust.Shared.Serialization.Markdown.Validation;
 using Robust.Shared.Serialization.Markdown.Value;
 using Robust.Shared.Serialization.TypeSerializers.Interfaces;
 using Robust.Shared.Utility;
+using Robust.Shared.Prototypes; // Paradise Change - Cleaning
 using static Content.Shared.Decals.DecalGridComponent;
 
 namespace Content.Shared.Decals
@@ -29,6 +31,8 @@ namespace Content.Shared.Decals
             IDependencyCollection dependencies, SerializationHookContext hookCtx, ISerializationContext? context = null,
             ISerializationManager.InstantiationDelegate<DecalGridChunkCollection>? _ = default)
         {
+            var prototypeManager = dependencies.Resolve<IPrototypeManager>(); // Paradise Change - Cleaning
+
             node.TryGetValue("version", out var versionNode);
             var version = ((ValueDataNode?) versionNode)?.AsInt() ?? 1;
             Dictionary<Vector2i, DecalChunk> dictionary;
@@ -44,7 +48,36 @@ namespace Content.Shared.Decals
                 foreach (var dNode in nodes)
                 {
                     var aNode = (MappingDataNode) dNode;
-                    var data = serializationManager.Read<DecalData>(aNode["node"], hookCtx, context);
+                    // Paradise Change START - Cleaning
+
+                    // Compatibility with old decal types.
+                    var dataNode = (MappingDataNode) aNode["node"];
+
+                    if (dataNode.TryGetValue("cleanable", out var cleanableNode) &&
+                        cleanableNode is ValueDataNode cleanableValue &&
+                        bool.TryParse(cleanableValue.Value, out var oldCleanable))
+                    {
+                        if (!oldCleanable)
+                        {
+                            dataNode["cleanable"] = new ValueDataNode(
+                                nameof(CleaningType.Uncleanable));
+                        }
+                        else if (dataNode.TryGetValue("id", out var idNode) &&
+                                 idNode is ValueDataNode idValue &&
+                                 prototypeManager.TryIndex<DecalPrototype>(idValue.Value, out var prototype))
+                        {
+                            dataNode["cleanable"] = new ValueDataNode(
+                                prototype.CleaningType.ToString());
+                        }
+                        else
+                        {
+                            // Legacy cleanable=True, but the prototype could not be found.
+                            dataNode["cleanable"] = new ValueDataNode(
+                                nameof(CleaningType.LightDecal));
+                        }
+                    }
+                    // Paradise Change END - Cleaning
+                    var data = serializationManager.Read<DecalData>(dataNode, hookCtx, context);
                     var deckNodes = (MappingDataNode) aNode["decals"];
 
                     foreach (var (decalUidNode, decalData) in deckNodes)
@@ -161,9 +194,10 @@ namespace Content.Shared.Decals
             public int ZIndex { get; init; }
 
             [DataField("cleanable")]
-            public bool Cleanable { get; init; }
+            public CleaningType Cleanable { get; init; } // Paradise Change - Cleaning
 
-            public DecalData(string id, Color? color, Angle angle, int zIndex, bool cleanable)
+            // Paradise Change - Cleaning
+            public DecalData(string id, Color? color, Angle angle, int zIndex, CleaningType cleanable)
             {
                 Id = id;
                 Color = color;
@@ -178,7 +212,7 @@ namespace Content.Shared.Decals
                 Color = decal.Color;
                 Angle = decal.Angle;
                 ZIndex = decal.ZIndex;
-                Cleanable = decal.Cleanable;
+                Cleanable = decal.CleanType; // Paradise Change - Cleaning
             }
 
             public bool Equals(DecalData other)

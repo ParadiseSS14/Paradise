@@ -3,6 +3,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Shared.Administration;
 using Content.Shared.Chunking;
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 using Content.Shared.Database;
 using Content.Shared.Decals;
 using Content.Shared.Maps;
@@ -36,7 +37,10 @@ namespace Content.Server.Decals
         [Dependency] private TurfSystem _turf = default!;
 
         private readonly Dictionary<NetEntity, HashSet<Vector2i>> _dirtyChunks = new();
-        private readonly Dictionary<ICommonSession, Dictionary<NetEntity, HashSet<Vector2i>>> _previousSentChunks = new();
+// Paradise Change START - Cleaning
+        private readonly Dictionary<ICommonSession, Dictionary<NetEntity, HashSet<Vector2i>>> _previousSentChunks =
+            new();
+// Paradise Change END - Cleaning
         private static readonly Vector2 _boundsMinExpansion = new(0.01f, 0.01f);
         private static readonly Vector2 _boundsMaxExpansion = new(1.01f, 1.01f);
 
@@ -46,11 +50,15 @@ namespace Content.Server.Decals
         // If this ever gets parallelised then you'll want to increase the pooled count.
         private ObjectPool<HashSet<Vector2i>> _chunkIndexPool =
             new DefaultObjectPool<HashSet<Vector2i>>(
-                new DefaultPooledObjectPolicy<HashSet<Vector2i>>(), 64);
+                // Paradise Change - Cleaning
+                new DefaultPooledObjectPolicy<HashSet<Vector2i>>(),
+                64);
 
+        // Paradise Change - Cleaning
         private ObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>> _chunkViewerPool =
             new DefaultObjectPool<Dictionary<NetEntity, HashSet<Vector2i>>>(
-                new DefaultPooledObjectPolicy<Dictionary<NetEntity, HashSet<Vector2i>>>(), 64);
+                new DefaultPooledObjectPolicy<Dictionary<NetEntity, HashSet<Vector2i>>>(),
+                64);
 
         public override void Initialize()
         {
@@ -111,7 +119,8 @@ namespace Content.Server.Decals
 
             while (enumerator.MoveNext(out var tile))
             {
-                var tilePos = (Vector2) tile.Value.GridIndices;
+                // Paradise Change - Cleaning
+                var tilePos = (Vector2)tile.Value.GridIndices;
                 var chunkIndices = GetChunkIndices(tilePos);
 
                 if (!oldChunkCollection.TryGetValue(chunkIndices, out var oldChunk))
@@ -230,12 +239,16 @@ namespace Content.Server.Decals
 
             if (eventArgs.SenderSession.AttachedEntity != null)
             {
-                _adminLogger.Add(LogType.CrayonDraw, LogImpact.Low,
+                // Paradise Change - Cleaning
+                _adminLogger.Add(LogType.CrayonDraw,
+                    LogImpact.Low,
                     $"{ToPrettyString(eventArgs.SenderSession.AttachedEntity.Value):actor} drew a {ev.Decal.Color} {ev.Decal.Id} at {ev.Coordinates}");
             }
             else
             {
-                _adminLogger.Add(LogType.CrayonDraw, LogImpact.Low,
+                // Paradise Change - Cleaning
+                _adminLogger.Add(LogType.CrayonDraw,
+                    LogImpact.Low,
                     $"{eventArgs.SenderSession.Name} drew a {ev.Decal.Color} {ev.Decal.Id} at {ev.Coordinates}");
             }
         }
@@ -264,12 +277,16 @@ namespace Content.Server.Decals
             {
                 if (eventArgs.SenderSession.AttachedEntity != null)
                 {
-                    _adminLogger.Add(LogType.CrayonDraw, LogImpact.Low,
+                    // Paradise Change - Cleaning
+                    _adminLogger.Add(LogType.CrayonDraw,
+                        LogImpact.Low,
                         $"{ToPrettyString(eventArgs.SenderSession.AttachedEntity.Value):actor} removed a {decal.Color} {decal.Id} at {ev.Coordinates}");
                 }
                 else
                 {
-                    _adminLogger.Add(LogType.CrayonDraw, LogImpact.Low,
+                    // Paradise Change - Cleaning
+                    _adminLogger.Add(LogType.CrayonDraw,
+                        LogImpact.Low,
                         $"{eventArgs.SenderSession.Name} removed a {decal.Color} {decal.Id} at {ev.Coordinates}");
                 }
 
@@ -281,19 +298,44 @@ namespace Content.Server.Decals
         {
             var id = GetNetEntity(uid);
             chunk.LastModified = _timing.CurTick;
-            if(!_dirtyChunks.ContainsKey(id))
+            if (!_dirtyChunks.ContainsKey(id))
                 _dirtyChunks[id] = new HashSet<Vector2i>();
             _dirtyChunks[id].Add(chunkIndices);
         }
-
-        public bool TryAddDecal(string id, EntityCoordinates coordinates, out uint decalId, Color? color = null, Angle? rotation = null, int zIndex = 0, bool cleanable = false)
+// Paradise Change START - Cleaning
+        public bool TryAddDecal(string id,
+            EntityCoordinates coordinates,
+            out uint decalId,
+            Color? color = null,
+            Angle? rotation = null,
+            int zIndex = 0,
+            CleaningType? cleanType = CleaningType.LightDecal)
         {
             rotation ??= Angle.Zero;
-            var decal = new Decal(coordinates.Position, id, color, rotation.Value, zIndex, cleanable);
+            var decal = new Decal(coordinates.Position, id, color, rotation.Value, zIndex, cleanType.GetValueOrDefault());
 
             return TryAddDecal(decal, coordinates, out decalId);
         }
 
+        public bool TryAddDecal(
+            string id,
+            EntityCoordinates coordinates,
+            out uint decalId,
+            Color? color = null,
+            Angle? rotation = null,
+            int zIndex = 0,
+            bool cleanable = true)
+        {
+            return TryAddDecal(
+                id,
+                coordinates,
+                out decalId,
+                color,
+                rotation,
+                zIndex,
+                cleanable ? CleaningType.LightDecal : CleaningType.Uncleanable);
+        }
+// Paradise Change END - Cleaning
         public bool TryAddDecal(Decal decal, EntityCoordinates coordinates, out uint decalId)
         {
             decalId = 0;
@@ -324,7 +366,11 @@ namespace Content.Server.Decals
         public override bool RemoveDecal(EntityUid gridId, uint decalId, DecalGridComponent? component = null)
             => RemoveDecalInternal(gridId, decalId, out _, component);
 
-        public override HashSet<(uint Index, Decal Decal)> GetDecalsInRange(EntityUid gridId, Vector2 position, float distance = 0.75f, Func<Decal, bool>? validDelegate = null)
+        // Paradise Change - Cleaning
+        public override HashSet<(uint Index, Decal Decal)> GetDecalsInRange(EntityUid gridId,
+            Vector2 position,
+            float distance = 0.75f,
+            Func<Decal, bool>? validDelegate = null)
         {
             var decalIds = new HashSet<(uint, Decal)>();
             var chunkCollection = ChunkCollection(gridId);
@@ -346,7 +392,10 @@ namespace Content.Server.Decals
             return decalIds;
         }
 
-        public HashSet<(uint Index, Decal Decal)> GetDecalsIntersecting(EntityUid gridUid, Box2 bounds, DecalGridComponent? component = null)
+        // Paradise Change - Cleaning
+        public HashSet<(uint Index, Decal Decal)> GetDecalsIntersecting(EntityUid gridUid,
+            Box2 bounds,
+            DecalGridComponent? component = null)
         {
             var decalIds = new HashSet<(uint, Decal)>();
             var chunkCollection = ChunkCollection(gridUid, component);
@@ -372,14 +421,17 @@ namespace Content.Server.Decals
 
             return decalIds;
         }
-
+        // Paradise Change - Cleaning
         /// <summary>
         ///     Changes a decals position. Note this will actually result in a new decal being created, possibly on a new grid or chunk.
         /// </summary>
         /// <remarks>
         ///     If the new position is invalid, this will result in the decal getting deleted.
         /// </remarks>
-        public bool SetDecalPosition(EntityUid gridId, uint decalId, EntityCoordinates coordinates, DecalGridComponent? comp = null)
+        public bool SetDecalPosition(EntityUid gridId,
+            uint decalId,
+            EntityCoordinates coordinates,
+            DecalGridComponent? comp = null)
         {
             if (!Resolve(gridId, ref comp))
                 return false;
@@ -390,7 +442,11 @@ namespace Content.Server.Decals
             return TryAddDecal(removed.WithCoordinates(coordinates.Position), coordinates, out _);
         }
 
-        private bool ModifyDecal(EntityUid gridId, uint decalId, Func<Decal, Decal> modifyDecal, DecalGridComponent? comp = null)
+        // Paradise Change - Cleaning
+        private bool ModifyDecal(EntityUid gridId,
+            uint decalId,
+            Func<Decal, Decal> modifyDecal,
+            DecalGridComponent? comp = null)
         {
             if (!Resolve(gridId, ref comp))
                 return false;
@@ -414,7 +470,11 @@ namespace Content.Server.Decals
         public bool SetDecalZIndex(EntityUid gridId, uint decalId, int value, DecalGridComponent? comp = null)
             => ModifyDecal(gridId, decalId, x => x.WithZIndex(value), comp);
 
-        public bool SetDecalCleanable(EntityUid gridId, uint decalId, bool value, DecalGridComponent? comp = null)
+        // Paradise Change - Cleaning
+        public bool SetDecalCleanable(EntityUid gridId,
+            uint decalId,
+            CleaningType value,
+            DecalGridComponent? comp = null)
             => ModifyDecal(gridId, decalId, x => x.WithCleanable(value), comp);
 
         public bool SetDecalId(EntityUid gridId, uint decalId, string id, DecalGridComponent? comp = null)
@@ -579,11 +639,13 @@ namespace Content.Server.Decals
                             ? chunk
                             : new());
                 }
+
                 updatedDecals[netGrid] = gridChunks;
             }
 
             if (updatedDecals.Count != 0 || staleChunks.Count != 0)
-                RaiseNetworkEvent(new DecalChunkUpdateEvent{Data = updatedDecals, RemovedChunks = staleChunks}, session);
+                RaiseNetworkEvent(new DecalChunkUpdateEvent { Data = updatedDecals, RemovedChunks = staleChunks },
+                    session); // Paradise Change - Cleaning
 
             ReturnToPool(updatedChunks);
             ReturnToPool(staleChunks);

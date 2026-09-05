@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Server.Administration;
 using Content.Shared.Administration;
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 using Robust.Shared.Console;
 using Robust.Shared.Map.Components;
 
@@ -142,13 +143,13 @@ Possible modes are:\n
                     return;
                 }
 
-                if (!bool.TryParse(args[3], out var cleanable))
+                if (!int.TryParse(args[3], out var cleanable)) // Paradise Change - Cleaning
                 {
                     shell.WriteError("Failed parsing cleanable.");
                     return;
                 }
 
-                if (!decalSystem.SetDecalCleanable(gridId.Value, uid, cleanable))
+                if (!decalSystem.SetDecalCleanable(gridId.Value, uid, (CleaningType)cleanable)) // Paradise Change - Cleaning
                 {
                     shell.WriteError("Failed changing decal cleanable flag.");
                 }

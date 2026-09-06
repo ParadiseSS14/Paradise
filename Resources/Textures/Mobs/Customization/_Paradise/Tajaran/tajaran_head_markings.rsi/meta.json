@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Most from https://github.com/Baystation12/Baystation12/commit/0ae9a43b497d46861f30fc5904cc0512e0521734, muzzle from https://github.com/ParadiseSS13/Paradise/commit/38717e3b034550b3c0a9f3c5f3c78a957dcad0d9",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "tiger_head_s",
+            "directions": 4
+        },
+        {
+            "name": "tiger_face_s",
+            "directions": 4
+        },
+        {
+            "name": "points_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_s",
+            "directions": 4
+        }
+    ]
+}

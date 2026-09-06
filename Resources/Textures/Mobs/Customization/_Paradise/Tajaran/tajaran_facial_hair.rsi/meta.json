@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Facial hair from https://github.com/Baystation12/Baystation12/commit/79b17d0c1d2bcf3bd02ac17df027efe3be43d169",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "facial_goatee_s",
+            "directions": 4
+        },
+        {
+            "name": "facial_goatee_faded_s",
+            "directions": 4
+        },
+        {
+            "name": "facial_moustache_s",
+            "directions": 4
+        },
+        {
+            "name": "facial_mutton_s",
+            "directions": 4
+        },
+        {
+            "name": "facial_pencilstache_s",
+            "directions": 4
+        },
+        {
+            "name": "facial_sideburns_s",
+            "directions": 4
+        },
+        {
+            "name": "facial_smallstache_s",
+            "directions": 4
+        }
+    ]
+}

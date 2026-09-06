@@ -1,0 +1,32 @@
+# Ears Markings
+- type: marking
+  id: TajaranEar
+  bodyPart: HeadTop
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_ear_markings.rsi
+      state: ears_plain_s
+
+- type: marking
+  id: TajaranInEars
+  bodyPart: HeadTop
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_ear_markings.rsi
+      state: inears_s
+
+- type: marking
+  id: TajaranMuzinEars
+  bodyPart: HeadTop
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_ear_markings.rsi
+      state: muzinears_s
+
+- type: marking
+  id: TajaranOutEars
+  bodyPart: HeadTop
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_ear_markings.rsi
+      state: outears_s

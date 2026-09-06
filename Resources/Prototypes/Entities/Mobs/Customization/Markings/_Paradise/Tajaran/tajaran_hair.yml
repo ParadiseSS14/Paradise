@@ -1,0 +1,296 @@
+# Hairs
+- type: marking
+  id: TajaranBangs
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: bangs_s
+
+- type: marking
+  id: TajaranBedhead
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: bedhead_s
+
+- type: marking
+  id: TajaranBob
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: bob_s
+
+- type: marking
+  id: TajaranBraidBeads
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: braid_beads_s
+
+- type: marking
+  id: TajaranBraid
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: braid_s
+
+- type: marking
+  id: TajaranClean
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: clean_s
+
+- type: marking
+  id: TajaranCombedback
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: combedback_s
+
+- type: marking
+  id: TajaranCurly
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: curly_s
+
+- type: marking
+  id: TajaranCuttail
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: cuttail_s
+
+- type: marking
+  id: TajaranDreadlocks
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: dreadlocks_s
+
+- type: marking
+  id: TajaranEarrings
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: earrings_s
+
+- type: marking
+  id: TajaranFingerwave
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: fingerwave_s
+
+- type: marking
+  id: TajaranHairbun
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: hairbun_s
+
+- type: marking
+  id: TajaranHairRibbons
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: hairribbons_s
+
+- type: marking
+  id: TajaranLadiesRetro
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: ladiesretro_s
+
+- type: marking
+  id: TajaranLong
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: long_s
+
+- type: marking
+  id: TajaranLongtail
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: longtail_s
+
+- type: marking
+  id: TajaranLynx
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: lynx_s
+
+- type: marking
+  id: TajaranMarmalade
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: marmalade_s
+
+- type: marking
+  id: TajaranMessy
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: messy_s
+
+- type: marking
+  id: TajaranMessylong
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: messylong_s
+
+- type: marking
+  id: TajaranMetal
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: metal_s
+
+- type: marking
+  id: TajaranMohawk
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: mohawk_s
+
+- type: marking
+  id: TajaranOvereye
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: overeye_s
+
+- type: marking
+  id: TajaranPlait
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: plait_s
+
+- type: marking
+  id: TajaranPonytail
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: ponytail_s
+
+- type: marking
+  id: TajaranPunk
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: punk_s
+
+- type: marking
+  id: TajaranRattail
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: rattail_s
+
+- type: marking
+  id: TajaranShaggy
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: shaggy_s
+
+- type: marking
+  id: TajaranShy
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: shy_s
+
+- type: marking
+  id: TajaranSideBraid
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: sidebraid_s
+
+- type: marking
+  id: TajaranSpikey
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: spikey_s
+
+- type: marking
+  id: TajaranStraight
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: straight_s
+
+- type: marking
+  id: TajaranTail
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: tail_s
+
+- type: marking
+  id: TajaranTailedBangs
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: tailedbangs_s
+
+- type: marking
+  id: TajaranTough
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: tough_s
+
+- type: marking
+  id: TajaranVictory
+  bodyPart: Hair
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_hair.rsi
+      state: victory_s

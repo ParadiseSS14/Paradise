@@ -1,0 +1,32 @@
+# Head Markings
+- type: marking
+  id: TajaranPatchHead
+  bodyPart: Head
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_head_markings.rsi
+      state: patch_s
+
+- type: marking
+  id: TajaranPointsHead
+  bodyPart: Head
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_head_markings.rsi
+      state: points_s
+
+- type: marking
+  id: TajaranTigerFace
+  bodyPart: Head
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_head_markings.rsi
+      state: tiger_face_s
+
+- type: marking
+  id: TajaranTigerHead
+  bodyPart: Head
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_head_markings.rsi
+      state: tiger_head_s

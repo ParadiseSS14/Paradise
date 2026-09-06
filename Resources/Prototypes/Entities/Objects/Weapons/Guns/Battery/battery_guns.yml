@@ -608,62 +608,6 @@
     - type: PacifismAllowedGun
 
 - type: entity
-  name: taser
-  parent: [BaseWeaponBatterySmall, BaseSecurityContraband]
-  id: WeaponTaser
-  description: A low-capacity, energy-based stun gun used by security teams to subdue targets at close range.
-  components:
-    - type: Tag
-      tags:
-        - Taser
-        - Sidearm
-    - type: Sprite
-      sprite: Objects/Weapons/Guns/Battery/taser.rsi
-      layers:
-        - state: base
-          map: ["enum.GunVisualLayers.Base"]
-        - state: mag-unshaded-0
-          map: ["enum.GunVisualLayers.MagUnshaded"]
-          shader: unshaded
-    - type: Item
-      heldPrefix: taser4
-    - type: Clothing
-      quickEquip: false
-      slots:
-        - Belt
-    - type: Gun
-      fireRate: 0.5
-      soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/taser.ogg
-      projectileSpeed: 25
-    - type: BatteryAmmoProvider
-      proto: BulletTaser
-      fireCost: 200
-    - type: MagazineVisuals
-      magState: mag
-      steps: 5
-      zeroVisible: true
-    - type: Appearance
-    - type: PacifismAllowedGun
-
-- type: entity
-  name: elite taser
-  parent: [BaseCentcommContraband, WeaponTaser]
-  id: WeaponTaserSuper
-  suffix: ADMEME
-  description: A low-capacity, energy-based stun gun used by elite security teams to disable even the toughest of targets.
-  components:
-    - type: Gun
-      fireRate: 0.5
-      soundGunshot:
-        path: /Audio/Effects/tesla_collapse.ogg # The wrath of god...
-        params:
-          volume: -6
-    - type: BatteryAmmoProvider
-      proto: BulletTaserSuper
-      fireCost: 200
-
-- type: entity
   name: antique laser pistol
   parent: [BaseWeaponBatterySmall, BaseGrandTheftContraband]
   id: WeaponAntiqueLaser
@@ -842,9 +786,9 @@
 
 - type: entity
   name: energy shotgun
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband, GasTankBase] #PARADISE EDIT - Weapon overhaul
   id: WeaponEnergyShotgun
-  description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
+  description: Basically a plasma cannon that throws EM-contained clouds of overheated gas. Has fairly short effective distance but that doesn't matter much on close ranges. Requires pure phorone to work. #PARADISE EDIT - Weapon overhaul
   components:
     - type: Sprite
       sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
@@ -858,23 +802,22 @@
       magState: mag
       steps: 5
       zeroVisible: false
+    #PARADISE EDIT START - Weapon overhaul
+    - type: GasWeapon
+      internalTank: true
+      gasUsage: 0.23
+    #PARADISE EDIT END
     - type: Appearance
     - type: Clothing
       sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
     - type: Gun
-      fireRate: 2
+      fireRate: 1 #PARADISE EDIT - Weapon overhaul
+      projectileSpeed: 30 #PARADISE EDIT - Weapon overhaul
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
     - type: BatteryAmmoProvider
       proto: BulletLaserSpreadNarrow
-      fireCost: 80
-    - type: BatteryWeaponFireModes
-      fireModes:
-        - proto: BulletLaserSpreadNarrow
-          fireCost: 80
-        - proto: BulletDisablerSmgSpread
-          fireCost: 48
-          pacifismAllowedMode: true
+      fireCost: 80 #PARADISE EDIT - Weapon overhaul
     - type: Item
       size: Large
       sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi

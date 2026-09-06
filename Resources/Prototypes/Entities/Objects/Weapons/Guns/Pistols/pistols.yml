@@ -32,8 +32,17 @@
       availableModes:
         - SemiAuto
         - FullAuto
+      #PARADISE EDIT START - Add aiming
+      minAngle: 9
+      maxAngle: 19
+      #PARADISE EDIT END
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable
+      minAngle: -5
+      maxAngle: -9
+    #PARADISE EDIT END
     - type: ChamberMagazineAmmoProvider
       soundRack:
         path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
@@ -136,6 +145,11 @@
       capacity: 10
       proto: CartridgePistol
       cycleable: false # No synthesizing ammo for your syndicate masters.
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable
+      minAngle: -5
+      maxAngle: -9
+    #PARADISE EDIT END
     - type: BallisticAmmoSelfRefiller
       autoRefillRate: 2s
       affectedByEmp: true
@@ -210,10 +224,19 @@
       storedOffset: 0,-2
     - type: Gun
       fireRate: 5
+      #PARADISE EDIT START - Add aiming
+      minAngle: 9
+      maxAngle: 18
+      #PARADISE EDIT END
       availableModes:
         - SemiAuto
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable
+      minAngle: -5
+      maxAngle: -9
+    #PARADISE EDIT END
     - type: StealTarget
       stealGroup: OfficerHandgun
 
@@ -232,10 +255,17 @@
           map: ["enum.GunVisualLayers.Mag"]
     - type: Clothing
       sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable
+      minAngle: -4
+      maxAngle: -10
+    #PARADISE EDIT END
     - type: Gun
-      minAngle: 1
-      maxAngle: 20
-      angleIncrease: 8
+      #PARADISE EDIT START - Add aiming
+      minAngle: 10
+      maxAngle: 24
+      angleIncrease: 5
+      #PARADISE EDIT END
       angleDecay: 9
       fireRate: 4
       availableModes:

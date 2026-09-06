@@ -3,6 +3,7 @@
   parent: BaseItem
   abstract: true
   components:
+    - type: GunAimable #PARADISE EDIT - Add aiming
     - type: Sprite
     - type: Item
       size: Huge
@@ -679,9 +680,19 @@
           shader: unshaded
     - type: Clothing
       sprite: Objects/Weapons/Guns/Battery/antiquelasergun.rsi
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable
+      minAngle: -6.5
+      maxAngle: -6
     - type: Gun
+      fireRate: 1.8
+      cameraRecoilScalar: 0 #Laser weapons have effectively no recoil
+      maxAngle: 15
+      minAngle: 9 #Very low values for the same reason
+      angleIncrease: 0.09 #Basically the force of a finger pulling the trigger
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    #PARADISE EDIT END
     - type: BatteryAmmoProvider
       proto: RedMediumLaser
       fireCost: 100
@@ -727,9 +738,19 @@
           shader: unshaded
     - type: Clothing
       sprite: Objects/Weapons/Guns/Battery/advancedlasergun.rsi
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable
+      minAngle: -6.5
+      maxAngle: -6
     - type: Gun
+      fireRate: 1.8
+      cameraRecoilScalar: 0
+      maxAngle: 15
+      minAngle: 9
+      angleIncrease: 0.09
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    #PARADISE EDIT END
     - type: BatteryAmmoProvider
       proto: RedMediumLaser
       fireCost: 100
@@ -771,11 +792,20 @@
       zeroVisible: false
     - type: Clothing
       sprite: Objects/Weapons/Guns/Revolvers/chimp.rsi
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable
+      minAngle: -6.5
+      maxAngle: -6
     - type: Gun
+      fireRate: 1.8
+      cameraRecoilScalar: 0
+      maxAngle: 15
+      minAngle: 9
+      angleIncrease: 0.09
       projectileSpeed: 10
-      fireRate: 1.5
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+    #PARADISE EDIT END
     - type: BatteryAmmoProvider
       proto: AnomalousParticleDeltaStrong
       fireCost: 100

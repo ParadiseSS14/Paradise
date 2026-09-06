@@ -1,5 +1,6 @@
 using Content.Shared.Atmos;
 using Content.Shared.Camera;
+using Content.Shared.CombatMode;
 using Content.Shared.Cuffs;
 using Content.Shared.Hands.Components;
 using Content.Shared.Movement.Systems;
@@ -25,6 +26,10 @@ public abstract partial class SharedHandsSystem
         SubscribeLocalEvent<HandsComponent, UnwieldAttemptEvent>(RefRelayEvent);
         SubscribeLocalEvent<HandsComponent, TargetHandcuffedEvent>(RefRelayEvent);
         SubscribeLocalEvent<HandsComponent, RefreshWeightlessModifiersEvent>(RefRelayEvent);
+        //PARADISE EDIT START - Combat mode logic extension
+        SubscribeLocalEvent<HandsComponent, CombatModeOnEvent>(RefRelayEvent);
+        SubscribeLocalEvent<HandsComponent, CombatModeOffEvent>(RefRelayEvent);
+        //PARADISE EDIT END
     }
 
     private void RelayEvent<T>(Entity<HandsComponent> entity, ref T args) where T : EntityEventArgs

@@ -1,4 +1,5 @@
 using Content.Shared.Actions;
+using Content.Shared.Inventory;
 using Content.Shared.Mind;
 using Content.Shared.MouseRotator;
 using Content.Shared.Movement.Components;
@@ -38,7 +39,7 @@ public abstract partial class SharedCombatModeSystem : EntitySystem
         SetMouseRotatorComponents(uid, false);
     }
 
-    private void OnActionPerform(EntityUid uid, CombatModeComponent component, ToggleCombatActionEvent args)
+    protected virtual void OnActionPerform(EntityUid uid, CombatModeComponent component, ToggleCombatActionEvent args)  // PARADISE EDIT - Add gun spread overlay
     {
         if (args.Handled)
             return;
@@ -82,6 +83,19 @@ public abstract partial class SharedCombatModeSystem : EntitySystem
             return;
 
         SetMouseRotatorComponents(entity, value);
+
+        //PARADISE EDIT START - Combat mode logic extension
+        if (component.IsInCombatMode)
+        {
+            var onEv = new CombatModeOnEvent();
+            RaiseLocalEvent(entity, ref onEv);
+
+            return;
+        }
+
+        var offEv = new CombatModeOffEvent();
+        RaiseLocalEvent(entity, ref offEv);
+        //PARADISE EDIT END
     }
 
     private void SetMouseRotatorComponents(EntityUid uid, bool value)
@@ -103,3 +117,17 @@ public sealed partial class ToggleCombatActionEvent : InstantActionEvent
 {
 
 }
+
+//PARADISE EDIT START - Combat mode logic extension
+[ByRefEvent]
+public record struct CombatModeOnEvent : IInventoryRelayEvent
+{
+    public SlotFlags TargetSlots { get; set; }
+}
+
+[ByRefEvent]
+public record struct CombatModeOffEvent : IInventoryRelayEvent
+{
+    public SlotFlags TargetSlots { get; set; }
+}
+//PARADISE EDIT END

@@ -99,12 +99,21 @@
       sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
     - type: Wieldable
       unwieldOnUse: false
+    #PARADISE EDIT START - Add aiming
     - type: GunWieldBonus
-      minAngle: -19
-      maxAngle: -16
+      minAngle: -5
+      maxAngle: -18
+      angleIncrease: -0.85
+    - type: GunAimable
+      minAngle: -7
+      maxAngle: -11
+      aimedSprintSpeedModifier: 0.65
     - type: Gun
-      minAngle: 21
-      maxAngle: 32
+      angleIncrease: 1.8
+      angleDecay: 6
+      minAngle: 15
+      maxAngle: 35
+      #PARADISE EDIT END
       shotsPerBurst: 5
       availableModes:
         - Burst
@@ -181,12 +190,18 @@
       sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
     - type: Wieldable
       unwieldOnUse: false
+    #PARADISE EDIT START - Add aiming
     - type: GunWieldBonus
-      minAngle: -19
-      maxAngle: -16
+      minAngle: -4
+      maxAngle: -14
+    - type: GunAimable
+      minAngle: -7
+      maxAngle: -8
     - type: Gun
-      minAngle: 21
-      maxAngle: 32
+      angleIncrease: 0.85
+      minAngle: 12
+      maxAngle: 29
+      #PARADISE EDIT END
       fireRate: 6
       burstFireRate: 18
       soundGunshot:
@@ -244,12 +259,22 @@
     - type: Clothing
       sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
     - type: ChamberMagazineAmmoProvider
-      boltClosed: null
+    #PARADISE EDIT START - Add aiming
+    - type: Wieldable
+      unwieldOnUse: false
+    - type: GunAimable
+      minAngle: -7
+      maxAngle: -4
+    - type: GunWieldBonus
+      minAngle: -2
+      maxAngle: -19
+      angleIncrease: 0.65
     - type: Gun
       fireRate: 5.5
-      minAngle: 1
-      maxAngle: 6
-      angleIncrease: 1.5
+      minAngle: 12
+      maxAngle: 30
+      angleIncrease: 1.3
+      #PARADISE EDIT END
       angleDecay: 6
       selectedMode: FullAuto
       shotsPerBurst: 5

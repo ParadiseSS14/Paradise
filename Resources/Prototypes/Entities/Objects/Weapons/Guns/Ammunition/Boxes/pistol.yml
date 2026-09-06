@@ -2,7 +2,7 @@
   abstract: true
   parent: BaseItem
   id: BaseMagazineBoxPistol
-  name: ammunition box (.35 auto)
+  name: ammunition box (9x20 auto) #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       mayTransfer: true
@@ -28,8 +28,8 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistol
-  name: ammunition box (.35 auto)
-  description: A cardboard box of .35 auto rounds. Intended to hold general-purpose kinetic ammunition.
+  name: ammunition box (9x20 auto) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 9x20 auto rounds. Intended to hold general-purpose kinetic ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistol
@@ -43,8 +43,8 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolPractice
-  name: ammunition box (.35 auto practice)
-  description: A cardboard box of .35 auto rounds. Intended to hold harmless practice ammunition.
+  name: ammunition box (9x20 auto practice) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 9x20 auto rounds. Intended to hold harmless practice ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistolPractice
@@ -59,8 +59,8 @@
 - type: entity
   id: MagazineBoxPistolIncendiary
   parent: BaseMagazineBoxPistol
-  name: ammunition box (.35 auto incendiary)
-  description: A cardboard box of .35 auto rounds. Intended to hold self-igniting incendiary ammunition.
+  name: ammunition box (9x20 auto incendiary) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 9x20 auto rounds. Intended to hold self-igniting incendiary ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistolIncendiary
@@ -75,8 +75,8 @@
 - type: entity
   parent: BaseMagazineBoxPistol
   id: MagazineBoxPistolUranium
-  name: ammunition box (.35 auto uranium)
-  description: A cardboard box of .35 auto rounds. Intended to hold exotic uranium-core ammunition.
+  name: ammunition box (9x20 auto uranium) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 9x20 auto rounds. Intended to hold exotic uranium-core ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgePistolUranium

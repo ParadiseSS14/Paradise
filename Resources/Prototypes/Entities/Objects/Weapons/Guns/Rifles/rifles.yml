@@ -54,7 +54,7 @@
       price: 500
 
 - type: entity
-  name: AKMS
+  name: AK-41 #PARADISE EDIT - WeaponOverhaul
   parent: [BaseWeaponRifle, BaseSecurityContraband]
   id: WeaponRifleAk
   description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
@@ -66,9 +66,22 @@
           map: ["enum.GunVisualLayers.Base"]
         - state: mag-0
           map: ["enum.GunVisualLayers.Mag"]
+    #PARADISE EDIT START - Add aiming
     - type: Gun
+      minAngle: 15
+      maxAngle: 36
+      angleIncrease: 2.50
+      angleDecay: 6.1
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+    - type: GunWieldBonus
+      minAngle: -4
+      maxAngle: -18
+      angleIncrease: -0.9
+    - type: GunAimable
+      minAngle: -10
+      maxAngle: -9
+    #PARADISE EDIT END
     - type: ChamberMagazineAmmoProvider
       soundRack:
         path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -115,9 +128,22 @@
           map: ["enum.GunVisualLayers.Mag"]
     - type: Clothing
       sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    #PARADISE EDIT START - Add aiming
     - type: Gun
+      minAngle: 13
+      maxAngle: 36
+      angleIncrease: 2.30
+      angleDecay: 6.3
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+    - type: GunWieldBonus
+      minAngle: -4
+      maxAngle: -22
+      angleIncrease: -1.2
+    - type: GunAimable
+      minAngle: -8
+      maxAngle: -7
+    #PARADISE EDIT END
     - type: ItemSlots
       slots:
         gun_magazine:
@@ -145,6 +171,74 @@
       steps: 5
       zeroVisible: true
     - type: Appearance
+
+#PARADISE EDIT START - Weapon overhaul
+- type: entity
+  name: C-20r assault rifle
+  parent: [BaseWeaponRifle, BaseSyndicateContraband]
+  id: WeaponSubMachineGunC20r
+  description: A well-known bullpup assault rifle featuring state-of-the-art recoil compensation system. Uses classic 6,3x47 intermediate cartridge.
+  components:
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-0
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/SMGs/c20r.rsi
+    - type: Wieldable
+      unwieldOnUse: false
+    - type: GunWieldBonus
+      minAngle: -5
+      maxAngle: -18
+      angleIncrease: -0.85
+    - type: GunAimable
+      minAngle: -7
+      maxAngle: -11
+      aimedSprintSpeedModifier: 0.65
+    - type: Gun
+      angleIncrease: 1.8
+      angleDecay: 6
+      minAngle: 15
+      maxAngle: 35
+      shotsPerBurst: 5
+      fireRate: 5.5
+      availableModes:
+        - Burst
+        - FullAuto
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
+    - type: ChamberMagazineAmmoProvider
+      autoEject: true
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: MagazineRifle
+          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - MagazineRifle
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          priority: 1
+          whitelist:
+            tags:
+              - CartridgeRifle
+    - type: MagazineVisuals
+      magState: mag
+      steps: 4
+      zeroVisible: true
+    - type: Appearance
+    - type: StaticPrice
+      price: 5000
+#PARADISE EDIT END
 
 - type: entity
   parent: WeaponRifleLecter
@@ -174,10 +268,10 @@
         - FullAuto
 
 - type: entity
-  name: Estoc DMR
+  name: MRCR-308 "Estoc" #PARADISE EDIT START - Weapon Overhaul
   parent: [BaseWeaponRifle, BaseSyndicateContraband]
   id: WeaponRifleEstoc
-  description: "A designated marksman rifle firing in 3-round bursts. The Estoc was designed as the Lecter’s long-range counterpart, equipped with an extended 20-inch barrel and telescopic sight.\nFeeds from .20 rifle magazines."
+  description: "A battle rifle chambered in 7,62x55. The Estoc was designed as the Lecter’s long-range counterpart, equipped with an extended 20-inch barrel and telescopic sight.\nFeeds from 7,62x55 rifle magazines." #PARADISE EDIT START - Weapon Overhaul
   components:
     - type: Sprite
       sprite: Objects/Weapons/Guns/Rifles/estoc.rsi
@@ -191,40 +285,45 @@
         - 0,0,4,2
     - type: Clothing
       sprite: Objects/Weapons/Guns/Rifles/estoc.rsi
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable #Everything else left untouched to be edited when I rechamber Estoc
+      minAngle: -8
+      maxAngle: -10
     - type: Gun
+      angleIncrease: 3
+      angleDecay: 3
+      fireRate: 3.3
       soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/estocshot.ogg
-      shotsPerBurst: 3
-      selectedMode: Burst
+        path: /Audio/Weapons/Guns/Gunshots/lmg.ogg
+      minAngle: 13
+      maxAngle: 42
+      selectedMode: FullAuto
       availableModes:
-        - Burst
+        - FullAuto
         - SemiAuto
-      burstFireRate: 14
+    - type: GunWieldBonus
+      minAngle: -4
+      maxAngle: -25
+      angleIncrease: -1.25
     - type: ItemSlots
       slots:
         gun_magazine:
           name: Magazine
-          startingItem: MagazineRifle
+          startingItem: MagazineFullRifleFMJ #PARADISE EDIT - WeaponOverhaul
           insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
           priority: 2
           whitelist:
             tags:
-              - MagazineRifle
+              - FullRifleMagazine #PARADISE EDIT - WeaponOverhaul
           whitelistFailPopup: gun-magazine-whitelist-fail
         gun_chamber:
           name: Chamber
           priority: 1
           whitelist:
             tags:
-              - CartridgeRifle
-    - type: CursorOffsetRequiresWield
-    - type: EyeCursorOffset
-      maxOffset: 2
-      pvsIncrease: 0.2
-    - type: SpeedModifiedOnWield
-      walkModifier: 0.9
-      sprintModifier: 0.9
+              - FullRifleCartridge
+    #PARADISE EDIT END
     - type: ContainerContainer
       containers:
         gun_magazine: !type:ContainerSlot

@@ -7,7 +7,8 @@
     - type: Projectile
       damage:
         types:
-          Piercing: 16
+          Piercing: 21 #PARADISE EDIT - Weapon overhaul
+        armorPenetration: 5 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBulletPractice
@@ -29,8 +30,12 @@
     - type: Projectile
       damage:
         types:
-          Piercing: 12
-          Heat: 4
+          Piercing: 16 #PARADISE EDIT - Weapon overhaul
+          Heat: 2 #PARADISE EDIT - Weapon overhaul
+    #PARADISE EDIT START - Weapon overhaul
+    - type: IgniteOnCollide
+      fireStacks: 0.07
+    #PARADISE EDIT END
 
 - type: entity
   parent: BaseBulletUranium
@@ -42,4 +47,5 @@
       damage:
         types:
           Radiation: 6
-          Piercing: 10
+          Piercing: 14 #PARADISE EDIT - Weapon overhaul
+        armourPiercing: 11 #PARADISE EDIT - Weapon overhaul

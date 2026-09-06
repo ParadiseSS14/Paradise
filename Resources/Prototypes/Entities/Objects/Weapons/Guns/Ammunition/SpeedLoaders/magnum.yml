@@ -2,7 +2,7 @@
   abstract: true
   parent: [BaseItem, BaseSecurityContraband]
   id: BaseSpeedLoaderMagnum
-  name: "speed loader (.45 magnum)"
+  name: "speed loader (11,5x32 magnum)" #PARADISE EDIT - Weapon overhaul
   components:
     - type: Tag
       tags:
@@ -22,8 +22,8 @@
 - type: entity
   parent: BaseSpeedLoaderMagnum
   id: SpeedLoaderMagnum
-  name: "speed loader (.45 magnum)"
-  description: Designed to quickly load up to six rounds of .45 magnum into an empty revolver. Intended to hold general-purpose kinetic ammunition.
+  name: "speed loader (11,5x32 magnum)" #PARADISE EDIT - Weapon overhaul
+  description: Designed to quickly load up to six rounds of 11,5x32 magnum into an empty revolver. Intended to hold general-purpose kinetic ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnum
@@ -51,9 +51,9 @@
 - type: entity
   parent: SpeedLoaderMagnum
   id: SpeedLoaderMagnumEmpty
-  name: "speed loader (.45 magnum any)"
+  name: "speed loader (11,5x32 magnum any)" #PARADISE EDIT - Weapon overhaul
   suffix: empty
-  description: Designed to quickly load up to six rounds of .45 magnum into an empty revolver.
+  description: Designed to quickly load up to six rounds of 11,5x32 magnum into an empty revolver. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: null
@@ -77,8 +77,8 @@
 - type: entity
   parent: SpeedLoaderMagnum
   id: SpeedLoaderMagnumIncendiary
-  name: "speed loader (.45 magnum incendiary)"
-  description: Designed to quickly load up to six rounds of .45 magnum into an empty revolver. Intended to hold self-igniting incendiary ammunition.
+  name: "speed loader (11,5x32 magnum incendiary)" #PARADISE EDIT - Weapon overhaul
+  description: Designed to quickly load up to six rounds of 11,5x32 magnum into an empty revolver. Intended to hold self-igniting incendiary ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumIncendiary
@@ -86,8 +86,8 @@
 - type: entity
   parent: BaseSpeedLoaderMagnum
   id: SpeedLoaderMagnumPractice
-  name: "speed loader (.45 magnum practice)"
-  description: Designed to quickly load up to six rounds of .45 magnum into an empty revolver. Intended to hold harmless practice ammunition.
+  name: "speed loader (11,5x32 magnum practice)" #PARADISE EDIT - Weapon overhaul
+  description: Designed to quickly load up to six rounds of 11,5x32 magnum into an empty revolver. Intended to hold harmless practice ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumPractice
@@ -119,8 +119,8 @@
 - type: entity
   parent: BaseSpeedLoaderMagnum
   id: SpeedLoaderMagnumAP
-  name: "speed loader (.45 magnum armor-piercing)"
-  description: Designed to quickly load up to six rounds of .45 magnum into an empty revolver. Intended to hold specialized armor-piercing ammunition.
+  name: "speed loader (11,5x32 magnum armor-piercing)" #PARADISE EDIT - Weapon overhaul
+  description: Designed to quickly load up to six rounds of 11,5x32 magnum into an empty revolver. Intended to hold specialized armor-piercing ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumAP
@@ -152,8 +152,8 @@
 - type: entity
   parent: BaseSpeedLoaderMagnum
   id: SpeedLoaderMagnumUranium
-  name: "speed loader (.45 magnum uranium)"
-  description: Designed to quickly load up to six rounds of .45 magnum into an empty revolver. Intended to hold exotic uranium-core ammunition.
+  name: "speed loader (11,5x32 magnum uranium)" #PARADISE EDIT - Weapon overhaul
+  description: Designed to quickly load up to six rounds of 11,5x32 magnum into an empty revolver. Intended to hold exotic uranium-core ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumUranium

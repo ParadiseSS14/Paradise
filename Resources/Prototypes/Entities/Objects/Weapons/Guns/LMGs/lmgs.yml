@@ -18,9 +18,15 @@
         - suitStorage
     - type: Wieldable
       unwieldOnUse: false
+    #PARADISE EDIT START - Add aiming
     - type: GunWieldBonus
-      minAngle: -20
-      maxAngle: -20
+      minAngle: -7
+      maxAngle: -26
+      angleIncrease: -1.1
+    - type: GunAimable
+      minAngle: -16
+      maxAngle: -8
+    #PARADISE EDIT END
     - type: Gun
       minAngle: 24
       maxAngle: 45

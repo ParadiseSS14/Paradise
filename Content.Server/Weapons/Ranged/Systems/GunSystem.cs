@@ -168,8 +168,10 @@ public sealed partial class GunSystem : SharedGunSystem
                 var spreadEvent = new GunGetAmmoSpreadEvent(ammoSpreadComp.Spread);
                 RaiseLocalEvent(gun, ref spreadEvent);
 
-                var angles = LinearSpread(mapAngle - spreadEvent.Spread / 2,
-                    mapAngle + spreadEvent.Spread / 2, ammoSpreadComp.Count);
+                //PARADISE EDIT START - Weapon Overhaul
+                var angles = LinearSpread(mapDirection.ToAngle() - spreadEvent.Spread / 2,
+                    mapDirection.ToAngle() + spreadEvent.Spread / 2, ammoSpreadComp.Count);
+                //PARADISE EDIT END
 
                 ShootOrThrow(ammoEnt, angles[0].ToVec(), gunVelocity, gun, user);
                 shotProjectiles.Add(ammoEnt);

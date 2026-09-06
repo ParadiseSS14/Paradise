@@ -27,8 +27,8 @@
 - type: entity
   parent: BaseMagazineBoxMagnum
   id: MagazineBoxMagnum
-  name: ammunition box (.45 magnum)
-  description: A cardboard box of .45 magnum rounds. Intended to hold general-purpose kinetic ammunition.
+  name: ammunition box (11,5x32 magnum) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 11,5x32 magnum rounds. Intended to hold general-purpose kinetic ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnum
@@ -42,8 +42,8 @@
 - type: entity
   parent: BaseMagazineBoxMagnum
   id: MagazineBoxMagnumPractice
-  name: ammunition box (.45 magnum practice)
-  description: A cardboard box of .45 magnum rounds. Intended to hold harmless practice ammunition.
+  name: ammunition box (11,5x32 magnum practice) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 11,5x32 magnum rounds. Intended to hold harmless practice ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumPractice
@@ -58,8 +58,8 @@
 - type: entity
   id: MagazineBoxMagnumIncendiary
   parent: BaseMagazineBoxMagnum
-  name: ammunition box (.45 magnum incendiary)
-  description: A cardboard box of .45 magnum rounds. Intended to hold self-igniting incendiary ammunition.
+  name: ammunition box (11,5x32 magnum incendiary) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 11,5x32 magnum rounds. Intended to hold self-igniting incendiary ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumIncendiary
@@ -74,8 +74,8 @@
 - type: entity
   id: MagazineBoxMagnumUranium
   parent: BaseMagazineBoxMagnum
-  name: ammunition box (.45 magnum uranium)
-  description: A cardboard box of .45 magnum rounds. Intended to hold exotic uranium-core ammunition.
+  name: ammunition box (11,5x32 magnum uranium) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 11,5x32 magnum rounds. Intended to hold exotic uranium-core ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumUranium
@@ -90,8 +90,8 @@
 - type: entity
   id: MagazineBoxMagnumAP
   parent: BaseMagazineBoxMagnum
-  name: ammunition box (.45 magnum armor-piercing)
-  description: A cardboard box of .45 magnum rounds. Intended to hold specialized armor-piercing ammunition.
+  name: ammunition box (11,5x32 magnum armor-piercing) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 11,5x32 magnum rounds. Intended to hold specialized armor-piercing ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeMagnumAP

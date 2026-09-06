@@ -184,6 +184,11 @@ binds:
 - function: ActivateItemInHand
   type: State
   key: Z
+#PARADISE EDIT START - WeaponOverhaul
+- function: ActivateGunInHand
+  type: State
+  key: R
+#PARADISE EDIT END
 - function: AltActivateItemInHand
   type: State
   key: Z

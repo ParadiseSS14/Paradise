@@ -1,7 +1,7 @@
 - type: entity
   parent: [BaseCartridge, BaseMajorContraband]
   id: CartridgeAntiMateriel
-  name: cartridge (.60 anti-materiel)
+  name: cartridge (15,24x140 anti-materiel) #PARADISE EDIT - Weapon overhaul
   description: A high-power cartridge used by high-precision rifles.
   components:
     - type: Tag

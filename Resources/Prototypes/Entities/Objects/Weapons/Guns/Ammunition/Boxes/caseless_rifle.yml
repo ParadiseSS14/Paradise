@@ -2,7 +2,7 @@
   abstract: true
   parent: BaseItem
   id: BaseMagazineBoxCaselessRifle
-  name: ammunition box (.25 caseless)
+  name: ammunition box (8x18 caseless) #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       mayTransfer: true
@@ -28,8 +28,8 @@
 - type: entity
   parent: BaseMagazineBoxCaselessRifle
   id: MagazineBoxCaselessRifle
-  name: ammunition box (.25 caseless)
-  description: A cardboard box of .25 caseless rounds. Intended to hold general-purpose kinetic ammunition.
+  name: ammunition box (8x18 caseless) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 8x18 caseless rounds. Intended to hold general-purpose kinetic ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeCaselessRifle
@@ -43,8 +43,8 @@
 - type: entity
   parent: BaseMagazineBoxCaselessRifle
   id: MagazineBoxCaselessRiflePractice
-  name: ammunition box (.25 caseless practice)
-  description: A cardboard box of .25 caseless rounds. Intended to hold harmless practice ammunition.
+  name: ammunition box (8x18 caseless practice) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 8x18 caseless rounds. Intended to hold harmless practice ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeCaselessRiflePractice

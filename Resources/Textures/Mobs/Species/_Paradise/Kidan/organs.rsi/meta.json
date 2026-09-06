@@ -1,0 +1,54 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "brain2"
+        },
+        {
+            "name": "heart-off"
+        },
+        {
+            "name": "heart-on",
+            "delays": [
+                [
+                    0.6,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "kidneys"
+        },
+        {
+            "name": "liver"
+        },
+        {
+            "name": "lungs"
+        },
+        {
+            "name": "lungs-l"
+        },
+        {
+            "name": "lung-r"
+        },
+        {
+            "name": "eye-l"
+        },
+        {
+            "name": "eye-r"
+        },
+        {
+            "name": "eyeballs_inhand_left"
+        },
+        {
+            "name": "eyeballs_inhand_right"
+        }
+    ]
+}

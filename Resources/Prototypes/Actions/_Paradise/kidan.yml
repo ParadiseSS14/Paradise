@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseMentalAction
+  id: ActionBioLight
+  name: Toggle Bioluminescence
+  description: Toggle your bioluminescent light.
+  components:
+  - type: Action
+    useDelay: 1
+  - type: Sprite
+    layers:
+    - texture: Interface/Actions/web.png
+  - type: InstantAction
+    event: !type:ToggleActionEvent

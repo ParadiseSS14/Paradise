@@ -329,3 +329,12 @@
   coefficients:
     Heat: 1.15
     Cold: 0.85
+
+# PARADISE CHANGES
+- type: damageModifierSet
+  id: Kidan
+  coefficients:
+  Blunt: 0.8
+  Slash: 0.8
+  Pierce: 0.8
+  Poison: 1.2

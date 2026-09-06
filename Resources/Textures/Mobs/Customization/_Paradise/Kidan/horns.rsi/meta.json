@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": null,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "tall_horns_s",
+            "directions": 4
+        },
+        {
+            "name": "broken_bull_horns_s",
+            "directions": 4
+        },
+        {
+            "name": "hawk_horn_s",
+            "directions": 4
+        },
+        {
+            "name": "bull_horns_s",
+            "directions": 4
+        },
+        {
+            "name": "curled_horns_s",
+            "directions": 4
+        },
+        {
+            "name": "hollow_horns_s",
+            "directions": 4
+        },
+        {
+            "name": "wide_horns_s",
+            "directions": 4
+        }
+    ]
+}

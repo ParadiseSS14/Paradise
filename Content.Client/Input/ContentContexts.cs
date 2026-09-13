@@ -28,6 +28,7 @@ namespace Content.Client.Input
             common.AddFunction(ContentKeyFunctions.ExamineEntity);
             common.AddFunction(ContentKeyFunctions.OpenAHelp);
             common.AddFunction(ContentKeyFunctions.TakeScreenshot);
+            common.AddFunction(ContentKeyFunctions.UseGunInHand); //PARADISE EDIT - Weapon Overhaul
             common.AddFunction(ContentKeyFunctions.TakeScreenshotNoUI);
             common.AddFunction(ContentKeyFunctions.ToggleFullscreen);
             common.AddFunction(ContentKeyFunctions.MoveStoredItem);

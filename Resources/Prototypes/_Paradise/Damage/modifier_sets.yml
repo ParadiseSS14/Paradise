@@ -1,0 +1,8 @@
+- type: damageModifierSet
+  id: DragonScale
+  coefficients:
+    Blunt: 0.4
+    Slash: 0.5
+    Piercing: 0.7
+    Heat: 0.3
+    Shock: 0.5

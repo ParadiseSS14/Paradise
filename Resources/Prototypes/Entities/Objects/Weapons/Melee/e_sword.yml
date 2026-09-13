@@ -42,8 +42,7 @@
           variation: 0.125
       activatedDamage:
         types:
-          Slash: 15
-          Heat: 15
+          Heat: 35 #PARADISE EDIT - weapon overhaul
           Structural: 20
     - type: MeleeWeapon
       wideAnimationRotation: -135
@@ -71,7 +70,6 @@
         right:
           - state: inhand-right-blade
             shader: unshaded
-    - type: Reflect
     - type: IgnitionSource
       temperature: 700
 
@@ -118,8 +116,7 @@
           variation: 0.250
       activatedDamage:
         types:
-          Slash: 10
-          Heat: 10
+          Heat: 20 #PARADISE EDIT - weapon overhaul
       deactivatedSecret: true
     - type: ItemToggleActiveSound
       activeSound:
@@ -190,8 +187,7 @@
           variation: 0.250
       activatedDamage:
         types:
-          Slash: 10
-          Heat: 10
+          Heat: 20 #PARADISE EDIT - weapon overhaul
       deactivatedSecret: true
     - type: ComponentToggler
       components:
@@ -270,8 +266,7 @@
     - type: ItemToggleMeleeWeapon
       activatedDamage:
         types:
-          Slash: 10
-          Heat: 12
+          Heat: 35 #PARADISE EDIT - weapon overhaul
       deactivatedSecret: true
     - type: Sprite
       sprite: Objects/Weapons/Melee/e_cutlass.rsi
@@ -310,8 +305,7 @@
           variation: 0.250
       activatedDamage:
         types:
-          Slash: 12
-          Heat: 12
+          Heat: 25 #PARADISE EDIT - weapon overhaul
           Structural: 15
     - type: ItemToggleActiveSound
       activeSound:

@@ -127,8 +127,11 @@
         path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
       damage:
         types:
-          Piercing: 15
-          Slash: 15
+          Slash: 50 #PARADISE EDIT - Weapon overhaul - dragon buff
+    #PARADISE EDIT START - Weapon overhaul - dragon buff
+    - type: Damageable
+      damageModifierSet: DragonScale
+    #PARADISE EDIT END
     - type: Devourer
       foodPreferenceWhitelist:
         components:

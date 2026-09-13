@@ -51,6 +51,13 @@
     - MagazineRifleEmpty
     - SpeedLoaderMagnum
     - SpeedLoaderMagnumEmpty
+    #PARADISE EDIT START - weapon overhaul
+    - TaserCartridge
+    - WeaponPowerCell
+    - MagazineFullRifleFMJ
+    - MagazineAntiMaterialFMJ
+    - MagazineBoxFullRifleFMJ
+    #PARADISE EDIT END
 
 - type: latheRecipePack
   id: SecurityWeaponsStatic
@@ -59,6 +66,7 @@
     - Stunbaton
     - CombatKnife
     - RiotShield
+    - WeaponTaser #PARADISE EDIT - weapon overhaul
 
 ## Dynamic recipes
 
@@ -101,7 +109,6 @@
   recipes:
     - BoxBeanbag
     - BoxShotgunIncendiary
-    - BoxShotgunUranium
     - BoxShellTranquilizer
     - MagazineBoxLightRifleIncendiary
     - MagazineBoxLightRifleUranium
@@ -114,15 +121,40 @@
     - MagazineLightRifleIncendiary
     - MagazineLightRifleUranium
     - MagazinePistolIncendiary
-    - MagazinePistolUranium
     - MagazinePistolSubMachineGunIncendiary
-    - MagazinePistolSubMachineGunUranium
     - MagazineRifleIncendiary
-    - MagazineRifleUranium
     - MagazineShotgunBeanbag
     - MagazineShotgunIncendiary
     - SpeedLoaderMagnumIncendiary
-    - SpeedLoaderMagnumUranium
+    #PARADISE EDIT START - weapon overhaul
+    - MagazineBoxAntiMaterielAP
+    - MagazineBoxAntiMaterielHP
+    - MagazineBoxLightRifleHP
+    - MagazineBoxMagnumHP
+    - MagazineBoxPistolHP
+    - MagazineBoxRifleHP
+    - MagazineLightRifleHP
+    - MagazinePistolHP
+    - MagazinePistolSubMachineGunHP
+    - MagazineRifleHP
+    - SpeedLoaderMagnumHP
+    - MagazineShotgunHP
+    - BoxShotgunHP
+    - MagazineShotgunHEI
+    - BoxShotgunHEI
+    - MagazineShotgunExplosive
+    - BoxShotgunHE
+    - MagazineBoxAntiMaterielHE
+    - MagazineAntiMaterialExplosive
+    - MagazineAntiMaterialHP
+    - MagazineAntiMaterialAP
+    - MagazineFullRifleAP
+    - MagazineFullRifleHP
+    - MagazineFullRifleIncendiary
+    - MagazineBoxFullRifleAP
+    - MagazineBoxFullRifleHP
+    - MagazineBoxFullRifleIncendiary
+    #PARADISE EDIT END
 
 - type: latheRecipePack
   id: SecurityWeapons

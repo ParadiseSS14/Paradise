@@ -70,7 +70,7 @@
     sprite: Objects/Materials/Sheets/other.rsi
     state: uranium
   discipline: Arsenal
-  tier: 1
+  tier: 2 #PARADISE EDIT - Weapon overhaul
   cost: 7500
   recipeUnlocks:
     - MagazineRifleUranium
@@ -82,7 +82,6 @@
     - MagazineBoxMagnumUranium
     - MagazineBoxLightRifleUranium
     - MagazineBoxRifleUranium
-    - BoxShotgunUranium
 
 - type: technology
   id: AdvancedRiotControl

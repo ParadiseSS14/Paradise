@@ -1,22 +1,19 @@
 #!/usr/bin/env python3
 
 import argparse
-import requests
 import os
 import subprocess
-from typing import Iterable
+from collections.abc import Iterable
+
+import requests
 
 PUBLISH_TOKEN = os.environ["PUBLISH_TOKEN"]
 VERSION = os.environ["GITHUB_SHA"]
 
-RELEASE_DIR = "release"
+ROBUST_CDN_URL = os.environ["PUBLISH_CDN_URL"]
+FORK_ID = os.environ["PUBLISH_FORK_ID"]
 
-#
-# CONFIGURATION PARAMETERS
-# Forks should change these to publish to their own infrastructure.
-#
-ROBUST_CDN_URL = "https://wizards.cdn.spacestation14.com/"
-FORK_ID = "wizards"
+RELEASE_DIR = "release"
 
 def main():
     parser = argparse.ArgumentParser()
@@ -26,9 +23,9 @@ def main():
     fork_id = args.fork_id
 
     session = requests.Session()
-    session.headers = {
+    session.headers.update({
         "Authorization": f"Bearer {PUBLISH_TOKEN}",
-    }
+    })
 
     print(f"Starting publish on Robust.Cdn for version {VERSION}")
 

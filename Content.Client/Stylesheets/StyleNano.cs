@@ -392,14 +392,6 @@ namespace Content.Client.Stylesheets
             };
             chatSubBg.SetContentMarginOverride(StyleBox.Margin.All, 2);
 
-            var actionSearchBoxTex = resCache.GetTexture("/Textures/Interface/Nano/black_panel_dark_thin_border.png");
-            var actionSearchBox = new StyleBoxTexture
-            {
-                Texture = actionSearchBoxTex,
-            };
-            actionSearchBox.SetPatchMargin(StyleBox.Margin.All, 3);
-            actionSearchBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 5);
-
             var tabContainerPanelTex = resCache.GetTexture("/Textures/Interface/Nano/tabcontainer_panel.png");
             var tabContainerPanel = new StyleBoxTexture
             {
@@ -869,13 +861,6 @@ namespace Content.Client.Stylesheets
                     new[]
                     {
                         new StyleProperty(LineEdit.StylePropertyStyleBox, new StyleBoxEmpty()),
-                    }),
-
-                // Action searchbox lineedit
-                new StyleRule(new SelectorElement(typeof(LineEdit), new[] {StyleClassActionSearchBox}, null, null),
-                    new[]
-                    {
-                        new StyleProperty(LineEdit.StylePropertyStyleBox, actionSearchBox),
                     }),
 
                 // TabContainer

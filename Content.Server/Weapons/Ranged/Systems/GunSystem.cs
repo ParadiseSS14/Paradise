@@ -1,22 +1,24 @@
-using System.Numerics;
 using Content.Server.Cargo.Systems;
 using Content.Server.Weapons.Ranged.Components;
+using Content.Shared._Paradise.Weapons.Components;
 using Content.Shared.Cargo;
 using Content.Shared.Damage;
 using Content.Shared.Projectiles;
+using Content.Shared.Standing;
+using Content.Shared.Weapons.Hitscan.Components;
+using Content.Shared.Weapons.Hitscan.Events;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Ranged;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
 using Content.Shared.Weapons.Ranged.Systems;
-using Content.Shared.Weapons.Hitscan.Components;
-using Content.Shared.Weapons.Hitscan.Events;
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Utility;
 using Robust.Shared.Random;
+using Robust.Shared.Utility;
+using System.Numerics;
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
@@ -24,6 +26,7 @@ public sealed partial class GunSystem : SharedGunSystem
 {
     [Dependency] private PricingSystem _pricing = default!;
     [Dependency] private SharedMapSystem _map = default!;
+    [Dependency] private StandingStateSystem _standing = default!;// PARADISE EDIT - Add aiming
 
     private const float DamagePitchVariation = 0.05f;
 
@@ -94,6 +97,15 @@ public sealed partial class GunSystem : SharedGunSystem
                 continue;
             }
 
+            //PARADISE EDIT START - MANUAL AIMING
+            bool isAimed = false;
+
+            if (TryComp<GunAimableComponent>(gun.Owner, out var aimableComp) &&
+                aimableComp.IsAimed ||
+                user is { Valid: true } userValid && _standing.IsDown(userValid))
+                isAimed = true;
+            //PARADISE EDIT END
+
             // TODO: Clean this up in a gun refactor at some point - too much copy pasting
             switch (shootable)
             {
@@ -103,6 +115,11 @@ public sealed partial class GunSystem : SharedGunSystem
                     {
                         var uid = Spawn(cartridge.Prototype, fromEnt);
                         CreateAndFireProjectiles(uid, cartridge);
+
+                        //PARADISE EDIT START - MANUAL AIMING
+                        if (isAimed)
+                            EnsureComp<AimedProjectileComponent>(uid);
+                        //PARADISE EDIT END
 
                         RaiseLocalEvent(ent!.Value, new AmmoShotEvent()
                         {
@@ -130,6 +147,10 @@ public sealed partial class GunSystem : SharedGunSystem
                 case AmmoComponent newAmmo:
                     if (ent == null)
                         break;
+                    //PARADISE EDIT START - MANUAL AIMING
+                    if (isAimed)
+                        EnsureComp<AimedProjectileComponent>(ent.Value);
+                    //PARADISE EDIT END
                     CreateAndFireProjectiles(ent.Value, newAmmo);
 
                     break;

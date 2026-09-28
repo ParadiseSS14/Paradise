@@ -25,19 +25,9 @@ public sealed class ActionSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet,
         };
         handSlotHighlight.SetPatchMargin(StyleBox.Margin.All, 2);
 
-        var actionSearchBoxTex =
-            sheet.GetTextureOr(panelCfg.BlackPanelDarkThinBorderPath, NanotrasenStylesheet.TextureRoot);
-        var actionSearchBox = new StyleBoxTexture
-        {
-            Texture = actionSearchBoxTex,
-        };
-        actionSearchBox.SetPatchMargin(StyleBox.Margin.All, 3);
-        actionSearchBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 5);
-
         return
         [
             E<PanelContainer>().Class(ActionButton.StyleClassActionHighlightRect).Panel(handSlotHighlight),
-            E<LineEdit>().Class(ActionsWindow.StyleClassActionSearchBox).Box(actionSearchBox),
         ];
     }
 }

@@ -21,9 +21,12 @@ public sealed partial class ActionsWindow : DefaultWindow
     {
         RobustXamlLoader.Load(this);
 
+        // Apparently you can't construct an argtype in XAML.
         SearchContainer.AddChild(FilterButton = new MultiselectOptionButton<Filters>
         {
-            Label = Loc.GetString("ui-actionmenu-filter-button")
+            Label = Loc.GetString("ui-actionmenu-filter-button"),
+            Margin = new Thickness(4, 0, 0, 0),
+            MinWidth = 75f,
         });
 
         foreach (var filter in Enum.GetValues<Filters>())

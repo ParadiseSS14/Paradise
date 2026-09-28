@@ -352,9 +352,12 @@ namespace Content.Shared.Hands
     {
         public TEvent Args;
 
-        public HeldRelayedEvent(TEvent args)
+        public EntityUid Owner; //PARADISE EDIT - tweak held relay
+
+        public HeldRelayedEvent(TEvent args, EntityUid owner) //PARADISE EDIT - tweak held relay
         {
             Args = args;
+            Owner = owner; //PARADISE EDIT - tweak held relay
         }
     }
 }

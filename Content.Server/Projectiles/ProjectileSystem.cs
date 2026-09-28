@@ -58,8 +58,10 @@ public sealed partial class ProjectileSystem : SharedProjectileSystem
         }
         var deleted = Deleted(target);
 
-        if (_damageableSystem.TryChangeDamage((target, damageableComponent), ev.Damage, out var damage, component.IgnoreResistances, origin: component.Shooter) && Exists(component.Shooter))
+        if (_damageableSystem.TryChangeDamage((target, damageableComponent), ev.Damage, out DamageSpecifier damage, component.IgnoreResistances, origin: component.Shooter) && Exists(component.Shooter)) // PARADISE EDIT - Add structure piercing
         {
+            component.Damage = damage; // PARADISE EDIT - Add structure piercing
+
             if (!deleted)
             {
                 _color.RaiseEffect(Color.Red, new List<EntityUid> { target }, Filter.Pvs(target, entityManager: EntityManager));
@@ -69,7 +71,7 @@ public sealed partial class ProjectileSystem : SharedProjectileSystem
                 LogImpact.Medium,
                 $"Projectile {ToPrettyString(uid):projectile} shot by {ToPrettyString(component.Shooter!.Value):user} hit {otherName:target} and dealt {damage:damage} damage");
 
-            component.ProjectileSpent = !TryPenetrate((uid, component), damage, damageRequired);
+            component.ProjectileSpent = !TryPenetrate((uid, component), damage, (target, damageableComponent)); // PARADISE EDIT - Add armour piercing
         }
         else
         {
@@ -93,40 +95,30 @@ public sealed partial class ProjectileSystem : SharedProjectileSystem
         }
     }
 
-    private bool TryPenetrate(Entity<ProjectileComponent> projectile, DamageSpecifier damage, FixedPoint2 damageRequired)
+    // PARADISE EDIT START - Add structure piercing
+    private bool TryPenetrate(Entity<ProjectileComponent> projectile, DamageSpecifier damage, Entity<DamageableComponent?> target)
     {
-        // If penetration is to be considered, we need to do some checks to see if the projectile should stop.
-        if (projectile.Comp.PenetrationThreshold == 0)
+        if (projectile.Comp.PenetrationDamageTypeRequirement == null || target.Comp == null)
             return false;
 
-        // If a damage type is required, stop the bullet if the hit entity doesn't have that type.
-        if (projectile.Comp.PenetrationDamageTypeRequirement != null)
+        foreach (var requiredDamageType in projectile.Comp.PenetrationDamageTypeRequirement)
         {
-            foreach (var requiredDamageType in projectile.Comp.PenetrationDamageTypeRequirement)
-            {
-                if (damage.DamageDict.Keys.Contains(requiredDamageType))
-                    continue;
-
+            if (!damage.DamageDict.Keys.Contains(requiredDamageType))
                 return false;
-            }
-        }
 
-        // If the object won't be destroyed, it "tanks" the penetration hit.
-        if (damage.GetTotal() < damageRequired)
-        {
-            return false;
-        }
+            FixedPoint2 targetThreshold = target.Comp.PenetrationThreshold;
 
-        if (!projectile.Comp.ProjectileSpent)
-        {
-            projectile.Comp.PenetrationAmount += damageRequired;
-            // The projectile has dealt enough damage to be spent.
-            if (projectile.Comp.PenetrationAmount >= projectile.Comp.PenetrationThreshold)
-            {
+            if (projectile.Comp.Damage[requiredDamageType] + projectile.Comp.Damage.ArmorPenetration < targetThreshold)
                 return false;
-            }
+
+            var leftToRemove = FixedPoint2.Max(FixedPoint2.Zero, targetThreshold - projectile.Comp.Damage.ArmorPenetration);
+
+            projectile.Comp.Damage.ArmorPenetration = FixedPoint2.Max(FixedPoint2.Zero, projectile.Comp.Damage.ArmorPenetration - targetThreshold);
+
+            projectile.Comp.Damage.DamageDict[requiredDamageType] = FixedPoint2.Max(projectile.Comp.Damage.DamageDict[requiredDamageType] - leftToRemove, FixedPoint2.Zero);
         }
 
         return true;
     }
+    // PARADISE EDIT END
 }

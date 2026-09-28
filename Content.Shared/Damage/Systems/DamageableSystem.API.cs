@@ -161,7 +161,7 @@ public sealed partial class DamageableSystem
 
         var evt = new DamageDealtEvent(damage, origin, interruptsDoAfters);
         RaiseLocalEvent(ent, ref evt);
-
+        
         return damage;
     }
 

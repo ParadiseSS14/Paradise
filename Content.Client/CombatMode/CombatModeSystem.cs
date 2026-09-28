@@ -1,4 +1,5 @@
 using Content.Client.Hands.Systems;
+using Content.Client.Weapons.Ranged.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.CombatMode;
 using Robust.Client.Graphics;
@@ -15,6 +16,7 @@ public sealed partial class CombatModeSystem : SharedCombatModeSystem
     [Dependency] private IConfigurationManager _cfg = default!;
     [Dependency] private IInputManager _inputManager = default!;
     [Dependency] private IEyeManager _eye = default!;
+    [Dependency] private GunSystem _gunSystem = default!;// PARADISE EDIT - Add gun spread overlay
 
     /// <summary>
     /// Raised whenever combat mode changes.
@@ -55,6 +57,7 @@ public sealed partial class CombatModeSystem : SharedCombatModeSystem
     public override void SetInCombatMode(EntityUid entity, bool value, CombatModeComponent? component = null)
     {
         base.SetInCombatMode(entity, value, component);
+        _gunSystem.SpreadOverlayInGame = value;// PARADISE EDIT - Add gun spread overlay
         UpdateHud(entity);
     }
 

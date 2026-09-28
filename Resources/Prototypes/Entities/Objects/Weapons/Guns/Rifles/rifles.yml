@@ -66,9 +66,22 @@
           map: ["enum.GunVisualLayers.Base"]
         - state: mag-0
           map: ["enum.GunVisualLayers.Mag"]
+    #PARADISE EDIT START - Add aiming
     - type: Gun
+      minAngle: 15
+      maxAngle: 36
+      angleIncrease: 2.50
+      angleDecay: 6.1
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+    - type: GunWieldBonus
+      minAngle: -4
+      maxAngle: -18
+      angleIncrease: -0.9
+    - type: GunAimable
+      minAngle: -10
+      maxAngle: -9
+    #PARADISE EDIT END
     - type: ChamberMagazineAmmoProvider
       soundRack:
         path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -115,9 +128,22 @@
           map: ["enum.GunVisualLayers.Mag"]
     - type: Clothing
       sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    #PARADISE EDIT START - Add aiming
     - type: Gun
+      minAngle: 13
+      maxAngle: 36
+      angleIncrease: 2.30
+      angleDecay: 6.3
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+    - type: GunWieldBonus
+      minAngle: -4
+      maxAngle: -22
+      angleIncrease: -1.2
+    - type: GunAimable
+      minAngle: -8
+      maxAngle: -7
+    #PARADISE EDIT END
     - type: ItemSlots
       slots:
         gun_magazine:
@@ -191,6 +217,11 @@
         - 0,0,4,2
     - type: Clothing
       sprite: Objects/Weapons/Guns/Rifles/estoc.rsi
+    #PARADISE EDIT START - Add aiming
+    - type: GunAimable #Everything else left untouched to be edited when I rechamber Estoc
+      minAngle: -8
+      maxAngle: -10
+    #PARADISE EDIT END
     - type: Gun
       soundGunshot:
         path: /Audio/Weapons/Guns/Gunshots/estocshot.ogg

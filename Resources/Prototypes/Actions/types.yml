@@ -627,3 +627,34 @@
       sprite: Interface/Actions/voice-mask.rsi
       layers:
         - state: icon
+
+  # Paradise Content
+- type: entity
+  id: ActionProjectMind
+  name: Project Mind
+  description: Make people understand your thoughts!
+  components:
+    - type: Action
+      useDelay: 0
+    - type: Sprite
+      sprite: Interface/Actions/_Paradise/telepathy.rsi
+      layers:
+        - state: project_mind
+    - type: InstantAction
+      event: !type:SendTelepathyEvent
+        obscuredMessage: "You hear a voice that seems to echo around the room:"
+
+- type: entity
+  id: ActionScanMind
+  name: Scan Mind
+  description: Offer people a chance to share their thoughts!
+  components:
+    - type: Action
+      useDelay: 0
+    - type: Sprite
+      sprite: Interface/Actions/_Paradise/telepathy.rsi
+      layers:
+        - state: scan_mind
+    - type: InstantAction
+      event: !type:OfferTelepathyEvent
+        obscuredMessage: "You hear a voice that seems to echo around the room:"

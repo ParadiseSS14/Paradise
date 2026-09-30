@@ -233,6 +233,12 @@
               - TrashBag
               - TrashBagHolding
           priority: 3 # Higher than drinking priority
+        pushbroom_slot:
+          name: janitorial-trolley-slot-component-slot-name-pushbroom
+          whitelist:
+            tags:
+              - PushBroom
+          priority: 2 # Higher than bucket slot
     - type: Fixtures
       fixtures:
         fix1:
@@ -331,6 +337,10 @@
           whitelist:
             tags:
               - MopAdv
+        cart_broom:
+          whitelist:
+            tags:
+              - PushBroom
       sprite: Objects/Specific/Janitorial/janitorial_cart.rsi
     - type: Appearance
     - type: SolutionContainerVisuals
@@ -360,6 +370,7 @@
         wetfloorsign_slot1: !type:ContainerSlot {}
         lightreplacer_slot: !type:ContainerSlot {}
         spraybottle_slot: !type:ContainerSlot {}
+        pushbroom_slot: !type:ContainerSlot {}
     - type: GuideHelp
       guides:
         - Janitorial

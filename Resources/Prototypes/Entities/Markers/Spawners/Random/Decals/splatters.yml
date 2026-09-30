@@ -13,7 +13,6 @@
       prob: 0.5
       zIndex: 5
       color: "#9900007F"
-      cleanable: true
       deleteSpawnerAfterSpawn: true
 
 - type: entity
@@ -98,5 +97,4 @@
         - red
         - silver
         - yellow
-      cleanable: true
       deleteSpawnerAfterSpawn: true

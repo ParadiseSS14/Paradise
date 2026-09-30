@@ -260,7 +260,7 @@ public sealed partial class DungeonSystem
                     decal.Color,
                     angle,
                     decal.ZIndex,
-                    decal.Cleanable);
+                    decal.CleanType); // Paradise Change - Cleaning
 
                 DebugTools.Assert(result);
             }

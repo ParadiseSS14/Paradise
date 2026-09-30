@@ -38,7 +38,11 @@
       size: Large
       sprite: Objects/Specific/Janitorial/mop.rsi
     - type: Absorbent
-      useAbsorberSolution: true
+      useAbsorberSolution: false
+      pickupAmount: 25
+    - type: Cleaning
+      cleaningStrength: Scrub
+      requiresCleaningSolution: true
     - type: UseDelay
       delay: 1
     - type: PhysicalComposition
@@ -87,7 +91,11 @@
     - type: Item
       sprite: Objects/Specific/Janitorial/advmop.rsi
     - type: Absorbent
-      pickupAmount: 100
+      pickupAmount: 50
+    - type: Cleaning
+      cleaningDuration: 0.5
+      cleaningStrength: Scrub
+      requiresCleaningSolution: true
     - type: SolutionRegeneration
       generated:
         reagents:
@@ -347,6 +355,11 @@
     - type: Sprite
       sprite: Objects/Specific/Janitorial/wirebrush.rsi
       state: icon
+    - type: Cleaning
+      cleaningStrength: Scrapeable
+      cleaningDuration: 5
+      cleanSound:
+        path: /Audio/Items/wirebrushing.ogg
     - type: Item
       storedSprite:
         sprite: Objects/Specific/Janitorial/wirebrush.rsi

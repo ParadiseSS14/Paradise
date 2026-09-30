@@ -40,6 +40,7 @@
   flavor: bitter
   color: "#c8ff69"
   recognizable: true
+  cleans: true
   boilingPoint: 147.0 # Made this up, loosely based on bleach
   meltingPoint: -11.0
   tileReactions:

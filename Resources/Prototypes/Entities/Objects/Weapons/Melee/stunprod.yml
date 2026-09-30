@@ -25,7 +25,8 @@
     - type: ItemToggleMeleeWeapon
       activatedDamage:
         types:
-          Shock: 5
+          Shock: 5 #PARADISE EDIT - Stun Overhaul
+          Blunt: 9 #PARADISE EDIT - Stun Overhaul
     - type: Stunbaton
       energyPerUse: 120
     - type: MeleeWeapon
@@ -35,13 +36,6 @@
           Blunt: 9
       angle: 60
       animation: WeaponArcThrust
-    - type: StaminaDamageOnHit
-      damage: 35
-      sound: /Audio/Weapons/egloves.ogg
-    - type: StaminaDamageOnCollide
-      damage: 35
-      sound: /Audio/Weapons/egloves.ogg
-    - type: LandAtCursor # it deals stamina damage when thrown
     - type: Battery
       maxCharge: 360
       startingCharge: 360

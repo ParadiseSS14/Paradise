@@ -2,7 +2,7 @@
   parent: BaseBullet
   id: BulletCaselessRifle
   categories: [HideSpawnMenu]
-  name: bullet (.25 caseless)
+  name: bullet (8x18 caseless) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
@@ -13,7 +13,7 @@
   parent: BaseBulletPractice
   id: BulletCaselessRiflePractice
   categories: [HideSpawnMenu]
-  name: bullet (.25 caseless practice)
+  name: bullet (8x18 caseless practice) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:

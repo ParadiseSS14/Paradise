@@ -181,3 +181,7 @@ chat-speech-verb-wawa-1 = intones
 chat-speech-verb-wawa-2 = states
 chat-speech-verb-wawa-3 = declares
 chat-speech-verb-wawa-4 = ponders
+
+# Paradise Content
+chat-speech-verb-tajaran-1 = mrowls
+chat-speech-verb-tajaran-2 = yowls

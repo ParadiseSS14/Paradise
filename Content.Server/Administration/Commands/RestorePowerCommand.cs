@@ -1,6 +1,7 @@
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
+using Content.Server.Station.Systems;
 using Content.Shared.Administration;
 using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
@@ -24,6 +25,7 @@ public sealed partial class RestorePowerCommand : LocalizedEntityCommands
     [Dependency] private ApcSystem _apc = default!;
     [Dependency] private ChatSystem _chat = default!;
     [Dependency] private SharedBatterySystem _battery = default!;
+    [Dependency] private StationSystem _station = default!;
 
     public override string Command => "restorepower";
 
@@ -37,10 +39,18 @@ public sealed partial class RestorePowerCommand : LocalizedEntityCommands
         }
 
         var count = 0;
+        var skipped = 0;
 
         var query = EntityManager.AllEntityQueryEnumerator<ApcComponent, PowerNetworkBatteryComponent, BatteryComponent>();
         while (query.MoveNext(out var uid, out var apc, out var netBattery, out var battery))
         {
+            // Only touch APCs that sit on a grid belonging to a station.
+            if (_station.GetOwningStation(uid) is null)
+            {
+                skipped++;
+                continue;
+            }
+
             _battery.SetCharge((uid, battery), battery.MaxCharge);
 
             if (!apc.MainBreakerEnabled)
@@ -56,6 +66,6 @@ public sealed partial class RestorePowerCommand : LocalizedEntityCommands
                 announcementSound: new SoundCollectionSpecifier(PowerOnSound, AudioParams.Default.AddVolume(-4f)));
         }
 
-        shell.WriteLine(Loc.GetString("cmd-restorepower-success", ("count", count)));
+        shell.WriteLine(Loc.GetString("cmd-restorepower-success", ("count", count), ("skipped", skipped)));
     }
 }

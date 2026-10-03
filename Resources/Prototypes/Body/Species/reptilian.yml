@@ -55,7 +55,7 @@
   parent: BaseSpeciesAppearance
   id: AppearanceReptilian
   categories: [HideSpawnMenu]
-  name: reptilian appearance
+  name: unathi appearance
   components:
     - type: Inventory
       speciesId: reptilian
@@ -124,6 +124,8 @@
       spawned:
         - id: FoodMeatLizard
           amount: 5
+        - id: MaterialLizardHide1
+          amount: 5
     - type: LizardAccent
     - type: Speech
       speechSounds: Lizard
@@ -164,12 +166,15 @@
         295: 0.8
         285: 0.7
     - type: Wagging
+    - type: Ignite
+      actionPrototype: UnathiIgniteAction
+      popupText: ignite-success
 
 - type: entity
   parent: OrganBaseOrganic
   id: OrganReptilian
   abstract: true
-  suffix: Reptilian
+  suffix: Unathi
 
 - type: entity
   id: OrganReptilianMetabolizer
@@ -261,6 +266,10 @@
     - type: VisualOrgan
       data:
         sprite: Mobs/Customization/eyes.rsi
+    - type: NightVision
+      relayOverlay: true
+      prioritized: false # let NVGs override organe based night vision
+      lightingColor: "#FFFFFF22"
 
 - type: entity
   parent: [OrganBaseTongue, OrganReptilianInternal]
@@ -289,7 +298,6 @@
     - type: Stomach
       specialDigestible:
         tags:
-          - Fruit
           - ReptilianFood
           - Meat
           - Pill

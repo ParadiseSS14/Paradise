@@ -150,3 +150,23 @@
       color: green
     - type: Matchstick
       duration: 30
+
+# Conjured by the Unathi Ignite action. Spawns already lit, burns out to nothing.
+- type: entity
+  parent: Matchstick
+  id: MatchstickUnathi
+  name: small flame
+  suffix: Unathi
+  description: A small flame, fierce enough to light a cigarette.
+  components:
+    - type: Sprite
+      layers:
+        - state: match_unathi
+    - type: Matchstick
+      duration: 10
+      deleteOnBurnout: true
+      igniteSound: null # it is spat out already burning, not struck
+    - type: BurnStateVisuals
+      unlitIcon: match_unathi
+      litIcon: match_unathi
+      burntIcon: match_unathi

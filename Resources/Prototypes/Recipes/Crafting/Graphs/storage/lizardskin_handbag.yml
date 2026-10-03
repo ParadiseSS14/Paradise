@@ -1,0 +1,13 @@
+- type: constructionGraph
+  id: LizardSkinHandBag
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: handbag
+          steps:
+            - material: LizardHide
+              amount: 5
+              doAfter: 5
+    - node: handbag
+      entity: ClothingBackpackSatchelLizard

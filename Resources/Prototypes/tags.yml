@@ -879,6 +879,9 @@
 - type: Tag
   id: Lime # CargoBounty: BountyLime
 
+- type: Tag
+  id: LizardHide # ConstructionGraph: LizardSkinHandBag
+
 ## M ##
 
 #region Magazine (Ammo)

@@ -12,3 +12,18 @@
         - state: match_unathi
     - type: InstantAction
       event: !type:IgniteEvent
+
+- type: entity
+  parent: BaseAction
+  id: UnathiTailwhipAction
+  name: Tailwhip
+  description: Whip your tail around and hit nearby foes.
+  components:
+    - type: Action
+      useDelay: 20
+    - type: Sprite
+      sprite: Effects/tailwhip.rsi
+      layers:
+        - state: tailwhip
+    - type: InstantAction
+      event: !type:TailwhipEvent

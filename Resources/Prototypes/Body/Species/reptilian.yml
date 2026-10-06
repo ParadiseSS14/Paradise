@@ -169,6 +169,9 @@
     - type: Ignite
       actionPrototype: UnathiIgniteAction
       popupText: ignite-success
+    - type: Tailwhip
+      actionPrototype: UnathiTailwhipAction
+      popupText: tailwhip-success
 
 - type: entity
   parent: OrganBaseOrganic

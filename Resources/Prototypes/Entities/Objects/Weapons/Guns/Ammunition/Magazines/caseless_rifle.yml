@@ -2,7 +2,7 @@
   abstract: true
   parent: [BaseItem, BaseSecurityContraband]
   id: BaseMagazinePistolCaselessRifle
-  name: "pistol magazine (.25 caseless)"
+  name: "pistol magazine (8x18 caseless)" #PARADISE EDIT - Weapon overhaul
   components:
     - type: Tag
       tags:
@@ -34,7 +34,7 @@
 - type: entity
   parent: BaseMagazinePistolCaselessRifle
   id: MagazinePistolCaselessRifle
-  name: "pistol magazine (.25 caseless)"
+  name: "pistol magazine (8x18 caseless)" #PARADISE EDIT - Weapon overhaul
   description: 10-round magazine for the Cobra pistol. Intended to hold general-purpose kinetic ammunition.
   components:
     - type: Item
@@ -48,7 +48,7 @@
 - type: entity
   parent: BaseMagazinePistolCaselessRifle
   id: MagazinePistolCaselessRiflePractice
-  name: "pistol magazine (.25 caseless practice)"
+  name: "pistol magazine (8x18 caseless practice)" #PARADISE EDIT - Weapon overhaul
   description: 10-round magazine for the Cobra pistol. Intended to hold harmless practice ammunition.
   components:
     - type: BallisticAmmoProvider

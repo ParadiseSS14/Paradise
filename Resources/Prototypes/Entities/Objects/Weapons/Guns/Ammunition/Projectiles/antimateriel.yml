@@ -2,15 +2,11 @@
   categories: [HideSpawnMenu]
   parent: BaseBullet
   id: BulletAntiMateriel
-  name: bullet (.60 anti-materiel)
+  name: bullet (15,24x140 anti-materiel) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
           Piercing: 75
-          Structural: 226
-      penetrationThreshold: 360
-      penetrationDamageTypeRequirement:
-        - Structural
-    - type: StaminaDamageOnCollide
-      damage: 60
+          Structural: 50 #PARADISE EDIT - Weapon overhaul
+        armorPenetration: 55 #PARADISE EDIT - Weapon overhaul

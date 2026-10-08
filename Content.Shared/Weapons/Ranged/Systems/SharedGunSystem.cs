@@ -1,5 +1,4 @@
-using System.Diagnostics.CodeAnalysis;
-using System.Numerics;
+using Content.Shared._Paradise.Weapons.Ranged;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
 using Content.Shared.Administration.Logs;
@@ -35,6 +34,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using System.Numerics;
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -69,7 +69,7 @@ public abstract partial class SharedGunSystem : EntitySystem
     /// <summary>
     /// Default projectile speed
     /// </summary>
-    public const float ProjectileSpeed = 40f;
+    public const float ProjectileSpeed = 75f; //PARADISE EDIT - Weapon Overhaul
 
     /// <summary>
     ///     Name of the container slot used as the gun's chamber
@@ -94,6 +94,7 @@ public abstract partial class SharedGunSystem : EntitySystem
     {
         SubscribeAllEvent<RequestShootEvent>(OnShootRequest);
         SubscribeAllEvent<RequestStopShootEvent>(OnStopShootRequest);
+        SubscribeAllEvent<GunCycleRequestEvent>(OnGunUsed);//PARADISE EDIT - Weapon Overhaul
         SubscribeLocalEvent<GunComponent, MeleeHitEvent>(OnGunMelee);
 
         // Ammo providers
@@ -128,6 +129,39 @@ public abstract partial class SharedGunSystem : EntitySystem
 
         RefreshModifiers((gun, gun));
     }
+
+    //PARADISE EDIT START - Weapon Overhaul
+    private void OnGunUsed(GunCycleRequestEvent args)
+    {
+        if (args.Handled)
+            return;
+
+        if (!TryGetEntity(args.User, out var localUser) || !TryGetEntity(args.Gun, out var localGun))
+            return;
+
+        if (localUser is not { Valid: true } user || localGun is not { Valid: true } gun)
+            return;
+
+        if (TryComp<ChamberMagazineAmmoProviderComponent>(localGun, out var chamberMagComp))
+        {
+            args.Handled = true;
+            if (chamberMagComp.CanRack)
+                UseChambered(gun, chamberMagComp, user);
+            else
+                ToggleBolt(gun, chamberMagComp, user);
+
+            return;
+        }
+
+        if (TryComp<BallisticAmmoProviderComponent>(gun, out var ballisticComp))
+        {
+            ManualCycle((gun, ballisticComp), TransformSystem.GetMapCoordinates(gun), user);
+            args.Handled = true;
+
+            return;
+        }
+    }
+    //PARADISE EDIT END
 
     private void OnGunMelee(Entity<GunComponent> ent, ref MeleeHitEvent args)
     {
@@ -535,6 +569,12 @@ public abstract partial class SharedGunSystem : EntitySystem
 
     protected void MuzzleFlash(EntityUid gun, AmmoComponent component, Angle worldAngle, EntityUid? user = null)
     {
+        //PARADISE EDIT START - Weapon Overhaul
+        if (TryComp<GunComponent>(gun, out var gunComponent) &&
+            gunComponent.MuzzleFlashSupressed)
+            return;
+        //PARADISE EDIT END
+
         var attemptEv = new GunMuzzleFlashAttemptEvent();
         RaiseLocalEvent(gun, ref attemptEv);
         if (attemptEv.Cancelled)

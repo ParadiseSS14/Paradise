@@ -49,6 +49,11 @@ public enum MessageType : byte
     /// Chat that is sent by automata, like when a vending machine thanks you for your unwise purchases.
     /// </summary>
     Background,
+    /// <summary>
+    /// Hidden chat that is sent by Telepathy actions.
+    /// This has minimal implementation, since it is only used by an action.
+    /// </summary>
+    Hivemind,  // Paradise Content
 
     #endregion
 }

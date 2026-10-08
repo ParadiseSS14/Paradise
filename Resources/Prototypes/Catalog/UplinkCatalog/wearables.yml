@@ -51,12 +51,12 @@
   id: UplinkClothingOuterVestWeb
   name: uplink-clothing-outer-vest-web-name
   description: uplink-clothing-outer-vest-web-desc
-  productEntity: ClothingOuterVestWeb
+  productEntity: ClothingOuterVestWebMerc #PARADISE EDIT - More armor
   discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 3
+  #PARADISE EDIT START - More armor
   cost:
-    Telecrystal: 5
+    Telecrystal: 2
+  #PARADISE EDIT END
   categories:
     - UplinkWearables
 
@@ -124,6 +124,22 @@
     Telecrystal: 7
   categories:
     - UplinkWearables
+
+#PARADISE EDIT START - More armor
+- type: listing
+  id: UplinkAssaultSuit
+  name: uplink-assault-syndie-name
+  description: uplink-assault-syndie-desc
+  icon: { sprite: _Paradise/Clothing/OuterClothing/Armor/syndie-assault.rsi, state: icon }
+  productEntity: ClothingBackpackDuffelSyndicateAssaultBundle
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+    - UplinkWearables
+#PARADISE EDIT END
 
 - type: listing
   id: UplinkClothingOuterArmorRaid

@@ -121,8 +121,6 @@ public abstract partial class SharedCreamPieSystem : EntitySystem
         if (!Exists(args.Thrown) || !TryComp<CreamPieComponent>(args.Thrown, out var creamPie))
             return;
 
-        _stunSystem.TryUpdateParalyzeDuration(creamPied.Owner, creamPie.ParalyzeTime);
-
         // Already creamed, no need to spam popups.
         if (creamPied.Comp.CreamPied)
             return;

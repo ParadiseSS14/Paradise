@@ -102,14 +102,13 @@ binds:
   mod1: Control
 - function: FocusChatInputWindow
   type: State
-  key: T
+  key: Period
 - function: FocusLocalChatWindow
   type: State
-  key: Period
+  key: T
 - function: FocusEmote
   type: State
-  mod1: Shift
-  key: Apostrophe
+  key: M
 - function: FocusWhisperChatWindow
   type: State
   key: Comma
@@ -118,11 +117,10 @@ binds:
   key: SemiColon
 - function: FocusLOOCWindow
   type: State
-  mod1: Shift
-  key: Num9
+  key: L
 - function: FocusOOCWindow
   type: State
-  key: LBracket
+  key: O
 - function: FocusAdminChatWindow
   type: State
   key: RBracket

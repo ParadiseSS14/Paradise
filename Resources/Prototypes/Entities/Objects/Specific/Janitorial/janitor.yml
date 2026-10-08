@@ -382,3 +382,44 @@
   components:
     - type: Tool
       speedModifier: 1.5
+
+# Push Broom
+- type: entity
+  parent: BaseItem
+  name: push broom
+  id: PushBroom
+  description: This is my BROOMSTICK! It can be used manually or braced with two hands to sweep items as you move.
+  components:
+    - type: Sprite
+      sprite: Objects/Specific/Janitorial/push_broom.rsi
+      state: broom0
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 10
+      soundHit:
+        collection: MetalThud
+    - type: Wieldable
+    - type: IncreaseDamageOnWield
+      damage:
+        types:
+          Blunt: 5
+    - type: SpeedModifiedOnWield
+      walkModifier: 0.5
+      sprintModifier: 0.33
+    - type: Item
+      size: Large
+      sprite: Objects/Specific/Janitorial/push_broom.rsi
+    - type: UseDelay
+      delay: 1
+    - type: PhysicalComposition
+      materialComposition:
+        Steel: 50
+    - type: Tag
+      tags:
+        - PushBroom
+    - type: GuideHelp
+      guides:
+        - Janitorial
+    - type: DnaSubstanceTrace
+    - type: PushBroom

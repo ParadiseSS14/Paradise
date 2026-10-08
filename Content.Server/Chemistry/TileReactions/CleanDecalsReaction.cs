@@ -6,6 +6,7 @@ using Content.Shared.FixedPoint;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using System.Numerics;
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 
 namespace Content.Server.Chemistry.TileReactions;
 
@@ -44,12 +45,16 @@ public sealed partial class CleanDecalsReaction : ITileReaction
 
         foreach (var decal in decals)
         {
-            if (!decal.Decal.Cleanable)
+            if (decal.Decal.CleanType == CleaningType.Uncleanable)
                 continue;
 
             if (amount + CleanCost > reactVolume)
                 break;
-
+            // Paradise Change START - Cleaning
+            //Refactor Opportunity, add per-reagant a different cleaning type.
+            if ((decal.Decal.CleanType & CleaningType.Wash) == 0)
+                continue;
+            // Paradise Change END - Cleaning
             decalSystem.RemoveDecal(tile.GridUid, decal.Index, decalGrid);
             amount += CleanCost;
         }

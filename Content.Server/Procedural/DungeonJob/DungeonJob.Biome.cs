@@ -48,7 +48,8 @@ public sealed partial class DungeonJob
             {
                 foreach (var decal in decals)
                 {
-                    _decals.TryAddDecal(decal.ID, new EntityCoordinates(_gridUid, decal.Position), out _);
+                    // Paradise Change - Cleaning
+                    _decals.TryAddDecal(decal.ID, new EntityCoordinates(_gridUid, decal.Position), out _, cleanable: true);
                 }
             }
 

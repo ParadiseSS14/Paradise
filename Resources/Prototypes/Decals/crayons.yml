@@ -1,7 +1,7 @@
 - type: decal
   id: 0
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -11,7 +11,7 @@
 - type: decal
   id: 1
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -21,7 +21,7 @@
 - type: decal
   id: 2
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -31,7 +31,7 @@
 - type: decal
   id: 3
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -41,7 +41,7 @@
 - type: decal
   id: 4
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -51,7 +51,7 @@
 - type: decal
   id: 5
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -61,7 +61,7 @@
 - type: decal
   id: 6
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -71,7 +71,7 @@
 - type: decal
   id: 7
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -81,7 +81,7 @@
 - type: decal
   id: 8
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -91,7 +91,7 @@
 - type: decal
   id: 9
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -101,7 +101,7 @@
 - type: decal
   id: Blasto
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -111,7 +111,7 @@
 - type: decal
   id: Clandestine
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -121,7 +121,7 @@
 - type: decal
   id: Cyber
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -131,7 +131,7 @@
 - type: decal
   id: Diablo
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -141,7 +141,7 @@
 - type: decal
   id: Donk
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -151,7 +151,7 @@
 - type: decal
   id: Gene
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -161,7 +161,7 @@
 - type: decal
   id: Gib
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -171,7 +171,7 @@
 - type: decal
   id: Max
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -181,7 +181,7 @@
 - type: decal
   id: Newton
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -191,7 +191,7 @@
 - type: decal
   id: North
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -201,7 +201,7 @@
 - type: decal
   id: Omni
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -211,7 +211,7 @@
 - type: decal
   id: Osiron
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -221,7 +221,7 @@
 - type: decal
   id: Prima
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -231,7 +231,7 @@
 - type: decal
   id: Psyke
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -241,7 +241,7 @@
 - type: decal
   id: Sirius
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -251,7 +251,7 @@
 - type: decal
   id: Tunnel
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -261,7 +261,7 @@
 - type: decal
   id: Waffle
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -271,7 +271,7 @@
 - type: decal
   id: ampersand
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -281,7 +281,7 @@
 - type: decal
   id: amyjon
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -291,7 +291,7 @@
 - type: decal
   id: arrow
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -301,7 +301,7 @@
 - type: decal
   id: beepsky
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -311,7 +311,7 @@
 - type: decal
   id: biohazard
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -321,7 +321,7 @@
 - type: decal
   id: blueprint
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -331,7 +331,7 @@
 - type: decal
   id: body
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -341,7 +341,7 @@
 - type: decal
   id: bottle
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -351,7 +351,7 @@
 - type: decal
   id: brush
   tags: ["crayon", "crayon-1-brushes"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -361,7 +361,7 @@
 - type: decal
   id: carp
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -371,7 +371,7 @@
 - type: decal
   id: cat
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -381,7 +381,7 @@
 - type: decal
   id: chevron
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -391,7 +391,7 @@
 - type: decal
   id: clawprint
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -401,7 +401,7 @@
 - type: decal
   id: clown
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -411,7 +411,7 @@
 - type: decal
   id: comma
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -421,7 +421,7 @@
 - type: decal
   id: corgi
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -431,7 +431,7 @@
 - type: decal
   id: credit
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -441,7 +441,7 @@
 - type: decal
   id: cyka
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -451,7 +451,7 @@
 - type: decal
   id: danger
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -461,7 +461,7 @@
 - type: decal
   id: disk
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -471,7 +471,7 @@
 - type: decal
   id: dot
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -481,7 +481,7 @@
 - type: decal
   id: dwarf
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -491,7 +491,7 @@
 - type: decal
   id: electricdanger
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -501,7 +501,7 @@
 - type: decal
   id: end
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -511,7 +511,7 @@
 - type: decal
   id: engie
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -521,7 +521,7 @@
 - type: decal
   id: equals
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -531,7 +531,7 @@
 - type: decal
   id: evac
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -541,7 +541,7 @@
 - type: decal
   id: exclamationmark
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -551,7 +551,7 @@
 - type: decal
   id: face
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -561,7 +561,7 @@
 - type: decal
   id: fireaxe
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -571,7 +571,7 @@
 - type: decal
   id: firedanger
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -581,7 +581,7 @@
 - type: decal
   id: food
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -591,7 +591,7 @@
 - type: decal
   id: footprint
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -601,7 +601,7 @@
 - type: decal
   id: ghost
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -611,7 +611,7 @@
 - type: decal
   id: guy
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -621,7 +621,7 @@
 - type: decal
   id: heart
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -631,7 +631,7 @@
 - type: decal
   id: largebrush
   tags: ["crayon", "crayon-1-brushes"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -641,7 +641,7 @@
 - type: decal
   id: like
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -651,7 +651,7 @@
 - type: decal
   id: line
   tags: ["crayon", "crayon-1-brushes"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -661,7 +661,7 @@
 - type: decal
   id: matt
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -671,7 +671,7 @@
 - type: decal
   id: med
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -681,7 +681,7 @@
 - type: decal
   id: minus
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -691,7 +691,7 @@
 - type: decal
   id: nay
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -701,7 +701,7 @@
 - type: decal
   id: pawprint
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -711,7 +711,7 @@
 - type: decal
   id: peace
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -721,7 +721,7 @@
 - type: decal
   id: percent
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -731,7 +731,7 @@
 - type: decal
   id: plus
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -741,7 +741,7 @@
 - type: decal
   id: pound
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -751,7 +751,7 @@
 - type: decal
   id: prolizard
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -761,7 +761,7 @@
 - type: decal
   id: questionmark
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -771,7 +771,7 @@
 - type: decal
   id: radiation
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -781,7 +781,7 @@
 - type: decal
   id: revolution
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -791,7 +791,7 @@
 - type: decal
   id: rune1
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -801,7 +801,7 @@
 - type: decal
   id: rune2
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -811,7 +811,7 @@
 - type: decal
   id: rune3
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -821,7 +821,7 @@
 - type: decal
   id: rune4
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -831,7 +831,7 @@
 - type: decal
   id: rune5
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -841,7 +841,7 @@
 - type: decal
   id: rune6
   tags: ["crayon", "crayon-5-graffiti"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -851,7 +851,7 @@
 - type: decal
   id: safe
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -861,7 +861,7 @@
 - type: decal
   id: scroll
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -871,7 +871,7 @@
 - type: decal
   id: shop
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -881,7 +881,7 @@
 - type: decal
   id: shortline
   tags: ["crayon", "crayon-1-brushes"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -891,7 +891,7 @@
 - type: decal
   id: shotgun
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -901,7 +901,7 @@
 - type: decal
   id: skull
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -911,7 +911,7 @@
 - type: decal
   id: slash
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -921,7 +921,7 @@
 - type: decal
   id: smallbrush
   tags: ["crayon", "crayon-1-brushes"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -931,7 +931,7 @@
 - type: decal
   id: snake
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -941,7 +941,7 @@
 - type: decal
   id: space
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -951,7 +951,7 @@
 - type: decal
   id: splatter
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -961,7 +961,7 @@
 - type: decal
   id: star
   tags: ["crayon", "crayon-3-symbols"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -971,7 +971,7 @@
 - type: decal
   id: stickman
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -981,7 +981,7 @@
 - type: decal
   id: taser
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -991,7 +991,7 @@
 - type: decal
   id: thinline
   tags: ["crayon", "crayon-1-brushes"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1001,7 +1001,7 @@
 - type: decal
   id: toilet
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1011,7 +1011,7 @@
 - type: decal
   id: toolbox
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1021,7 +1021,7 @@
 - type: decal
   id: trade
   tags: ["crayon", "crayon-4-info"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1031,7 +1031,7 @@
 - type: decal
   id: uboa
   tags: ["crayon"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1041,7 +1041,7 @@
 - type: decal
   id: a
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1051,7 +1051,7 @@
 - type: decal
   id: b
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1061,7 +1061,7 @@
 - type: decal
   id: c
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1071,7 +1071,7 @@
 - type: decal
   id: d
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1081,7 +1081,7 @@
 - type: decal
   id: e
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1091,7 +1091,7 @@
 - type: decal
   id: f
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1101,7 +1101,7 @@
 - type: decal
   id: g
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1111,7 +1111,7 @@
 - type: decal
   id: h
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1121,7 +1121,7 @@
 - type: decal
   id: i
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1131,7 +1131,7 @@
 - type: decal
   id: j
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1141,7 +1141,7 @@
 - type: decal
   id: k
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1151,7 +1151,7 @@
 - type: decal
   id: l
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1161,7 +1161,7 @@
 - type: decal
   id: m
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1171,7 +1171,7 @@
 - type: decal
   id: n
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1181,7 +1181,7 @@
 - type: decal
   id: o
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1191,7 +1191,7 @@
 - type: decal
   id: p
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1201,7 +1201,7 @@
 - type: decal
   id: q
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1211,7 +1211,7 @@
 - type: decal
   id: r
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1221,7 +1221,7 @@
 - type: decal
   id: s
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1231,7 +1231,7 @@
 - type: decal
   id: t
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1241,7 +1241,7 @@
 - type: decal
   id: u
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1251,7 +1251,7 @@
 - type: decal
   id: v
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1261,7 +1261,7 @@
 - type: decal
   id: w
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1271,7 +1271,7 @@
 - type: decal
   id: x
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1281,7 +1281,7 @@
 - type: decal
   id: y
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:
@@ -1291,7 +1291,7 @@
 - type: decal
   id: z
   tags: ["crayon", "crayon-2-alphanum"]
-  defaultCleanable: true
+  cleaningType: LightDecal
   defaultCustomColor: true
   defaultSnap: false
   sprite:

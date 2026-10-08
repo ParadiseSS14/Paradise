@@ -134,6 +134,37 @@
       color: "#FFFFFF80"
 
 - type: entity
+  id: WetFloorOverlay
+  name: wet floor overlay
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: TimedDespawn
+      lifetime: 10
+    - type: WetFloorOverlay
+    - type: Slippery
+    - type: Fixtures
+      fixtures:
+        slips:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.4,-0.3,0.4,0.3"
+          layer:
+            - SlipLayer
+          hard: false
+    - type: StepTrigger
+      intersectRatio: 0.2
+    - type: Physics
+    - type: Transform
+      noRot: true
+      anchored: true
+    - type: Sprite
+      layers:
+        - sprite: Fluids/wet_floor.rsi
+          state: wet_floor_static
+      drawdepth: Puddles
+      color: "#FFFFFFFF"
+
+- type: entity
   parent: SolutionTile
   id: Puddle
   name: puddle

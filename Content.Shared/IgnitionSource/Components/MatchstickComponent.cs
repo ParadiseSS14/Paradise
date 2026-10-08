@@ -31,4 +31,12 @@ public sealed partial class MatchstickComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? IgniteSound;
+
+    /// <summary>
+    ///     If true, the matchstick deletes itself when it burns out instead of
+    ///     going to <see cref="SmokableState.Burnt"/> and leaving a spent stick behind.
+    ///     For conjured flames that should not litter.
+    /// </summary>
+    [DataField]
+    public bool DeleteOnBurnout;
 }

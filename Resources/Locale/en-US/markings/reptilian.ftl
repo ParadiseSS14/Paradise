@@ -123,3 +123,67 @@ marking-LizardSnoutVisageSharp-visage_sharp = Lizard Visage (Sharp)
 
 marking-LizardSnoutVisageRound = Lizard Visage (Round)
 marking-LizardSnoutVisageRound-visage_round = Lizard Visage (Round)
+
+# Paradise Unathi port - head / face markings
+marking-LizardHeadBanded = Lizard Head (Banded)
+marking-LizardHeadBanded-head_banded = Lizard Head (Banded)
+marking-LizardHeadNarrow = Lizard Head (Narrow Mask)
+marking-LizardHeadNarrow-head_narrow = Lizard Head (Narrow Mask)
+marking-LizardHeadSharp = Lizard Head (Sharp Mask)
+marking-LizardHeadSharp-head_sharp = Lizard Head (Sharp Mask)
+marking-LizardHeadPoints = Lizard Head (Points)
+marking-LizardHeadPoints-head_points = Lizard Head (Points)
+marking-LizardHeadTigerSharp = Lizard Head (Tiger, Sharp)
+marking-LizardHeadTigerSharp-head_tiger_sharp = Lizard Head (Tiger, Sharp)
+marking-LizardHeadTigerFace = Lizard Head (Tiger Face)
+marking-LizardHeadTigerFace-head_tiger_face = Lizard Head (Tiger Face)
+
+# Paradise Unathi port - body markings
+marking-LizardChestPoints = Lizard Chest (Points)
+marking-LizardChestPoints-body_points = Lizard Chest (Points)
+marking-LizardChestStripe = Lizard Chest (Stripe)
+marking-LizardChestStripe-body_stripe = Lizard Chest (Stripe)
+
+# Paradise Unathi port - horns
+marking-LizardHornsAdorns = Lizard Horns (Adorns)
+marking-LizardHornsAdorns-horns_adorns = Lizard Horns (Adorns)
+marking-LizardHornsBig = Lizard Horns (Big)
+marking-LizardHornsBig-horns_big_s = Lizard Horns (Big)
+marking-LizardHornsChin = Lizard Horns (Chin)
+marking-LizardHornsChin-horns_chin = Lizard Horns (Chin)
+marking-LizardHornsDraconic = Lizard Horns (Draconic)
+marking-LizardHornsDraconic-horns_drac = Lizard Horns (Draconic)
+marking-LizardHornsSmall = Lizard Horns (Small)
+marking-LizardHornsSmall-horns_small = Lizard Horns (Small)
+marking-LizardHornsSpikes = Lizard Horns (Spikes)
+marking-LizardHornsSpikes-horns_spikes = Lizard Horns (Spikes)
+marking-LizardBraid = Lizard Braid
+marking-LizardBraid-hipbraid_s = Braid
+marking-LizardBraid-hipbraid_beads_s = Beads
+
+# Paradise Unathi port - frills
+marking-LizardFrillsCobraHood = Lizard Frills (Cobra Hood)
+marking-LizardFrillsCobraHood-cobrahood_s = Outer Hood
+marking-LizardFrillsCobraHood-cobrahood_webbing_s = Inner Hood
+marking-LizardFrillsLongSpines = Lizard Frills (Long Spines)
+marking-LizardFrillsLongSpines-longspines_s = Lizard Frills (Long Spines)
+marking-LizardFrillsShortSpines = Lizard Frills (Short Spines)
+marking-LizardFrillsShortSpines-shortspines_s = Lizard Frills (Short Spines)
+marking-LizardFrillsDraconic = Lizard Frills (Draconic)
+marking-LizardFrillsDraconic-dracfrills_s = Frills
+marking-LizardFrillsDraconic-dracfrills_webbing_s = Webbing
+marking-LizardFrillsDorsal = Lizard Frills (Dorsal)
+marking-LizardFrillsDorsal-dorsalfrills_s = Frills
+marking-LizardFrillsDorsal-dorsalfrills_webbing_s = Webbing
+marking-LizardFrillsSide = Lizard Frills (Side)
+marking-LizardFrillsSide-sidefrills_s = Frills
+marking-LizardFrillsSide-sidefrills_webbing_s = Webbing
+marking-LizardFrillsAquaticWebbed = Lizard Frills (Aquatic, Webbed)
+marking-LizardFrillsAquaticWebbed-frills_aquatic = Frills
+marking-LizardFrillsAquaticWebbed-aquaticfrills_webbing_s = Webbing
+marking-LizardFrillsBigWebbed = Lizard Frills (Big, Webbed)
+marking-LizardFrillsBigWebbed-frills_big = Frills
+marking-LizardFrillsBigWebbed-longfrills_webbing_s = Webbing
+marking-LizardFrillsShortWebbed = Lizard Frills (Short, Webbed)
+marking-LizardFrillsShortWebbed-frills_short = Frills
+marking-LizardFrillsShortWebbed-shortfrills_webbing_s = Webbing

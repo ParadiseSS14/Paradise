@@ -1,0 +1,26 @@
+<Document>
+  # Unathi
+
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceReptilian" Caption=""/>
+  </Box>
+
+  Unathi are a scaled species of reptilian beings from the desert world of Moghes. They are strict carnivores
+  and cannot digest plant matter at all. Raw meat does them no harm whatsoever.
+
+  Unathi tolerate [color=#ffa500]far more heat than humans[/color] before they start to cook.
+
+  However, the cold is another matter. They begin taking damage [color=#1e90ff]earlier than humans do[/color], take
+  [color=#1e90ff]30% more Cold damage[/color], and slow down noticeably as they chill.
+  a cold-blooded body does not keep itself warm. Being put in a cryo pod will hurt, so medical should use burn
+  medicine or leporazine to compensate.
+
+  Unathi eyes gather far more light than a human's, letting them see in the dark where others would be blind. 
+
+  Their unarmed attacks deal [color=#ffa500]Slash damage instead of Blunt[/color].
+
+  A thick, muscular tail lets them drag objects without using their hands, leaving both free for other work.
+
+  A Unathi who has drunk welding fuel can belch up a small flame into their own hand,
+  hot enough to light a cigarette. 
+</Document>

@@ -1,0 +1,29 @@
+- type: entity
+  parent: BaseAction
+  id: UnathiIgniteAction
+  name: Ignite
+  description: A fire forms in your mouth, fierce enough to... light a cigarette. Requires you to drink welding fuel beforehand.
+  components:
+    - type: Action
+      useDelay: 20 # Matches SS13 codebase
+    - type: Sprite
+      sprite: Objects/Tools/matches.rsi
+      layers:
+        - state: match_unathi
+    - type: InstantAction
+      event: !type:IgniteEvent
+
+- type: entity
+  parent: BaseAction
+  id: UnathiTailwhipAction
+  name: Tailwhip
+  description: Whip your tail around and hit nearby foes.
+  components:
+    - type: Action
+      useDelay: 20
+    - type: Sprite
+      sprite: Effects/tailwhip.rsi
+      layers:
+        - state: tailwhip
+    - type: InstantAction
+      event: !type:TailwhipEvent

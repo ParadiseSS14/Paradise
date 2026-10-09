@@ -6,6 +6,7 @@ cryo-pod-empty-beaker = It is empty!
 # Shown when a normal ejection through the eject verb is attempted on a locked pod.
 cryo-pod-locked = The ejection mechanism is unresponsive!
 
+cryo-pod-window-patient-missing = Patient missing!
 cryo-pod-window-product-name = Nanotrasen CRPX-229
 cryo-pod-window-product-subtitle = Cryogenic Restoration Pod
 cryo-pod-window-loading = Loading
@@ -30,6 +31,7 @@ cryo-pod-window-error-header = ERROR
 # Shown when the eject button is pressed on a locked pod.
 cryo-pod-window-eject-error = Ejection mechanism failed. Contact a Nanotrasen-certified engineer for support.
 
+cryo-pod-window-chems-title = Container
 cryo-pod-window-chems-no-beaker = No beaker inserted
 cryo-pod-window-chems-empty-beaker = Beaker is empty
 cryo-pod-window-chems-injecting-tooltip = Injecting {$quantity}u

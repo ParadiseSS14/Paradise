@@ -99,10 +99,21 @@ Build the server using `dotnet build`.
 [More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
 
 ## License
+<details>
+<summary><a href="#"><img src="https://img.shields.io/badge/licence-MIT-green?style=for-the-badge" alt="MIT license"></a></summary>
 
-All code for the content repository is licensed under the [MIT license](https://github.com/ParadiseSS14/Paradise/blob/master/LICENSE.TXT).
+>All code for the content repository is licensed under the [MIT license](https://github.com/ParadiseSS14/Paradise/blob/master/LICENSE.TXT).
+</details>
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+<details>
+<summary><a href="#"><img src="https://img.shields.io/badge/licence-CC_3.0_BY--NC--SA-blue?style=for-the-badge" alt="Creative Commons 3.0 BY-NC-SA" align="centre"></a></summary>
 
-> [!NOTE]
-> Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+>Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). Such files will be specified within their metadata file or folder. A list of attributions from contributors who have consented to having their content changed to this license can be found [here.](https://github.com/ParadiseSS14/Paradise/blob/master/Resources/asset_attributions.txt)
+</details>
+
+<details>
+<summary><a href="#"><img src="https://img.shields.io/badge/licence-CC_3.0_BY--SA-lightblue?style=for-the-badge" alt="Creative Commons 3.0 BY-SA"></a></summary>
+
+>All other non-code assets, including icons and sound files, are licensed under the [Creative Commons 3.0 BY-SA license](https://creativecommons.org/licenses/by-sa/3.0/), unless otherwise specified within the folder or file.
+</details>
+

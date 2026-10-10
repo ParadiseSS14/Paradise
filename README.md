@@ -108,7 +108,7 @@ Build the server using `dotnet build`.
 <details>
 <summary><a href="#"><img src="https://img.shields.io/badge/licence-CC_3.0_BY--NC--SA-blue?style=for-the-badge" alt="Creative Commons 3.0 BY-NC-SA" align="centre"></a></summary>
 
->Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). Such files will be specified within their metadata file or folder. A list of attributions from contributors who have consented to having their content changed to this license can be found [here.](https://github.com/ParadiseSS14/Paradise/blob/master/Resources/asset_attributions.txt)
+>Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/). Such files will be specified within their metadata file or folder.
 </details>
 
 <details>

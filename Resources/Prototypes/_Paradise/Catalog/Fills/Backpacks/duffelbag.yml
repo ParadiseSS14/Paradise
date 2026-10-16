@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateAssaultBundle
+  name: syndicate hardsuit bundle
+  description: "Contains a surplus military assault suit."
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingOuterVestWebHeavy
+            - !type:NestedSelector
+              tableId: SyndicateHardsuitExtrasEntityTable

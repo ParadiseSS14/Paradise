@@ -1,0 +1,14 @@
+- type: entity
+  id: TaserDart
+  name: taser dart
+  parent: BaseBullet
+  categories: [HideSpawnMenu]
+  components:
+    - type: Sprite
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+      layers:
+        - state: bullet
+    - type: Projectile
+      damage:
+        types:
+          Shock: 10

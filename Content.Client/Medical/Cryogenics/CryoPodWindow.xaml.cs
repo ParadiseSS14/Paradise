@@ -92,7 +92,9 @@ public sealed partial class CryoPodWindow : FancyWindow
 
         NoDamageText.Visible = (hasPatient && !hasDamage);
         HealthSection.Visible = hasPatient;
+
         EjectPatientButton.Disabled = !hasPatient;
+        MissingPatientLabel.Visible = !hasPatient;
 
         if (hasPatient)
             HealthAnalyzer.Populate(msg.Health);

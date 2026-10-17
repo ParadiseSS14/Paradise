@@ -51,6 +51,8 @@
         /// </summary>
         Admin = ChatChannel.AdminChat,
 
-        Console = ChatChannel.Unspecified
+        Console = ChatChannel.Unspecified,
+
+        Hivemind = ChatChannel.Hivemind // Paradise Content
     }
 }

@@ -24,7 +24,7 @@ You keep things clean, it's a rough job sometimes, but someone's gotta do it. Th
 <GuideEntityEmbed Entity="Holoprojector" Caption="holosign projector"/>
 <GuideEntityEmbed Entity="LightReplacer"/>
 <GuideEntityEmbed Entity="WireBrush"/>
-<GuideEntityEmbed Entity="Pushbroom"/>
+<GuideEntityEmbed Entity="PushBroom"/>
 </Box>
 <Box>
 <GuideEntityEmbed Entity="AdvMopItem" Caption="Advanced mop, ask in R&D"/>

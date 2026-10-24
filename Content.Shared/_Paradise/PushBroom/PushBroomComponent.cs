@@ -1,6 +1,4 @@
-using Content.Shared.Tag;
 using Robust.Shared.Audio;
-using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Paradise.PushBroom;
 
@@ -45,20 +43,6 @@ public sealed partial class PushBroomComponent : Component
     /// </summary>
     [DataField]
     public float SweepSlowdownStrength = 0.33f;
-
-    /// <summary>
-    /// Tags identifying something a swept item should be dumped into rather than
-    /// shoved past. Checked against loose bags on the floor and against bags sitting
-    /// in a trolley's item slots.
-    /// </summary>
-    [DataField]
-    public List<ProtoId<TagPrototype>> TrashBagTags = new() { "TrashBag", "TrashBagHolding" };
-
-    /// <summary>
-    /// Item slot on a trolley or cart that a trash bag lives in.
-    /// </summary>
-    [DataField]
-    public string TrashBagSlot = "trashbag_slot";
 
     /// <summary>
     /// The sound effect played every time the broom sweeps something.

@@ -239,6 +239,10 @@
             tags:
               - PushBroom
           priority: 2 # Higher than bucket slot
+    - type: SweepingReceptacle
+      relaySlots:
+        - trashbag_slot
+      priority: 10
     - type: Fixtures
       fixtures:
         fix1:

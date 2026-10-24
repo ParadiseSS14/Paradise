@@ -1,14 +1,8 @@
-using Content.Shared.Containers.ItemSlots;
-using Content.Shared.Disposal.Components;
-using Content.Shared.Disposal.Unit;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Item;
 using Content.Shared.Maps;
 using Content.Shared.Physics;
 using Content.Shared.Popups;
-using Content.Shared.Storage;
-using Content.Shared.Storage.EntitySystems;
-using Content.Shared.Tag;
 using Content.Shared.Throwing;
 using Content.Shared.Wieldable;
 using Robust.Shared.Audio.Systems;
@@ -29,10 +23,7 @@ public sealed partial class PushBroomSystem : EntitySystem
     [Dependency] private SharedMapSystem _map = default!;
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private TurfSystem _turf = default!;
-    [Dependency] private SharedStorageSystem _storage = default!;
-    [Dependency] private SharedDisposalUnitSystem _disposal = default!;
-    [Dependency] private ItemSlotsSystem _itemSlots = default!;
-    [Dependency] private TagSystem _tag = default!;
+    [Dependency] private SweepingReceptacleSystem _sweeping = default!;
     [Dependency] private SharedPopupSystem _popup = default!;
 
     /// <summary>
@@ -44,6 +35,15 @@ public sealed partial class PushBroomSystem : EntitySystem
     /// Separate buffer for scanning the destination tile, so we don't accidently iterate through stuff we're sweeping
     /// </summary>
     private readonly HashSet<EntityUid> _targetBuffer = new();
+
+    /// <summary>
+    /// Receptacles found on the destination tile by the last <see cref="FindReceptacles"/> call,
+    /// </summary>
+    private readonly List<Entity<SweepingReceptacleComponent>> _receptacleBuffer = new();
+
+    private static readonly Comparison<Entity<SweepingReceptacleComponent>> ByPriority =
+        (a, b) => b.Comp.Priority.CompareTo(a.Comp.Priority);
+
     [SubscribeLocalEvent]
     private void OnWielded(Entity<PushBroomComponent> ent, ref ItemWieldedEvent args)
     {
@@ -113,84 +113,37 @@ public sealed partial class PushBroomSystem : EntitySystem
     }
 
     /// <summary>
-    /// What a swept item should be put into, if anything, on the destination tile.
-    /// Both may be null, in which case items just get shoved onward.
+    /// Collects anything on the destination tile that swept items can be dumped into. Leaves the
+    /// buffer empty when there is nothing there, in which case rubbish just gets shoved onward.
     /// </summary>
-    /// <remarks>
-    /// one thing that makes this whole sweeping into receptables thing complicated is that we can sweep into both a disposals unit
-    /// AND a bag which are two very distinct components, so we have to bifurcate our logic every time and this struct helps make that cleaner.
-    /// </remarks>
-    private readonly record struct Receptacles(
-        EntityUid? TrashBag,
-        Entity<DisposalUnitComponent>? Disposal);
-
-    private bool IsTrashBag(EntityUid uid, PushBroomComponent broom) => _tag.HasAnyTag(uid, broom.TrashBagTags);
-
-    /// <summary>
-    /// Looks for somewhere on the destination tile to deposit swept items
-    /// </summary>
-    private Receptacles FindReceptacles(EntityUid gridUid, Vector2i destIndices, PushBroomComponent broom)
+    private void FindReceptacles(EntityUid gridUid, Vector2i destIndices)
     {
+        _receptacleBuffer.Clear();
         _targetBuffer.Clear();
         _lookup.GetLocalEntitiesIntersecting(gridUid, destIndices, _targetBuffer);
 
-        EntityUid? bag = null;
-        Entity<DisposalUnitComponent>? disposal = null;
-
-        // start looking through the entities on the tile we're sweeping into
         foreach (var candidate in _targetBuffer)
         {
-            // A disposal unit sitting on the tile.
-            if (disposal == null && TryComp<DisposalUnitComponent>(candidate, out var disposalComp))
-                disposal = (candidate, disposalComp);
-
-            // A trash bag lying loose on the floor.
-            if (bag == null && HasComp<StorageComponent>(candidate) && IsTrashBag(candidate, broom))
-            {
-                bag = candidate;
-                continue;
-            }
-
-            // Or a trash bag stowed in a trolley's slot.
-            if (bag == null
-                && HasComp<ItemSlotsComponent>(candidate)
-                && _itemSlots.TryGetSlot(candidate, broom.TrashBagSlot, out var slot)
-                && slot.Item is { } stowed
-                && IsTrashBag(stowed, broom))
-            {
-                bag = stowed;
-            }
+            if (TryComp<SweepingReceptacleComponent>(candidate, out var receptacle))
+                _receptacleBuffer.Add((candidate, receptacle));
         }
 
-        return new Receptacles(bag, disposal);
+        _receptacleBuffer.Sort(ByPriority);
     }
 
-
     /// <summary>
-    /// Tries to deposit a swept item into a bag or bin. Returns false if it should just
-    /// be shoved along the floor instead.
+    /// Attempts to sweep target item into each receptacle on the destination tile. Returns false if
+    /// none of the containers take it.
     /// </summary>
-    /// <param name="usedReceptacle">Which bag or bin actually took the item, for the popup.</param>
-    private bool TryDeposit(EntityUid item, EntityUid user, Receptacles into, out EntityUid usedReceptacle)
+    private bool TryDeposit(EntityUid item, EntityUid user, out EntityUid usedReceptacle)
     {
-        usedReceptacle = default;
-
-        // Bag first
-        if (into.TrashBag is { } bag && _storage.CanInsert(bag, item, out _))
+        foreach (var receptacle in _receptacleBuffer)
         {
-            if (_storage.Insert(bag, item, out _, user: user))
-            {
-                usedReceptacle = bag;
+            if (_sweeping.TryDeposit((receptacle.Owner, receptacle.Comp), item, user, out usedReceptacle))
                 return true;
-            }
         }
 
-        if (into.Disposal is { } bin && _disposal.TryInsert(bin, item, user))
-        {
-            usedReceptacle = bin.Owner;
-            return true;
-        }
-
+        usedReceptacle = default;
         return false;
     }
 
@@ -217,7 +170,7 @@ public sealed partial class PushBroomSystem : EntitySystem
 
 
         // Is there a bag or a bin waiting on the destination tile?
-        var receptacles = FindReceptacles(gridUid, destTile.GridIndices, broom.Comp);
+        FindReceptacles(gridUid, destTile.GridIndices);
 
         var stepVec = facing.ToVec();
         var destCentre = _turf.GetTileCenter(destTile).Position;
@@ -247,7 +200,7 @@ public sealed partial class PushBroomSystem : EntitySystem
 
             // Sweeping it into a bag or bin counts as sweeping it. Do this before any
             // of the direction maths, which is then wasted work.
-            if (TryDeposit(item.Owner, user.Owner, receptacles, out var usedReceptacle))
+            if (TryDeposit(item.Owner, user.Owner, out var usedReceptacle))
             {
                 swept++;
                 depositedInto ??= usedReceptacle;

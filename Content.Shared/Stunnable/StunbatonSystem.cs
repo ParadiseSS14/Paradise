@@ -6,6 +6,7 @@ using Content.Shared.Popups;
 using Content.Shared.Power;
 using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
+using Content.Shared.Weapons.Melee.Events;
 
 namespace Content.Shared.Stunnable;
 
@@ -20,13 +21,14 @@ public sealed partial class StunbatonSystem : EntitySystem
     /// Make sure the stunbaton is active and there's enough battery juice.
     /// </summary>
     [SubscribeLocalEvent]
-    private void OnStaminaHitAttempt(Entity<StunbatonComponent> entity, ref StaminaDamageOnHitAttemptEvent args)
+    //PARADISE EDIT START - Stun overhaul
+    private void OnMeleeHit(Entity<StunbatonComponent> entity, ref MeleeHitEvent args)
     {
-        if (_itemToggle.IsActivated(entity.Owner) && _battery.TryUseCharge(entity.Owner, entity.Comp.EnergyPerUse))
-            return;
-
-        args.Cancelled = true;
+        if (_itemToggle.IsActivated(entity.Owner) && TryComp<BatteryComponent>(entity.Owner, out var battery))
+            if (!_battery.TryUseCharge((entity.Owner, battery), entity.Comp.EnergyPerUse))
+                _itemToggle.TryDeactivate(entity.Owner, predicted: false);
     }
+    //PARADISE EDIT END
 
     /// <summary>
     /// Communicate the stunbaton's status and number of remaining uses.

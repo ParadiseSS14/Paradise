@@ -23,6 +23,7 @@
     - type: Gun
       fireRate: 2
       selectedMode: SemiAuto
+      angleIncrease: 7 #PARADISE EDIT START - Weapon overhaul
       availableModes:
         - SemiAuto
       soundGunshot:
@@ -46,6 +47,71 @@
           ents: []
     - type: StaticPrice
       price: 500
+
+#PARADISE EDIT START - ChamberMagazineExtension
+- type: entity
+  name: BaseWeaponShotgun
+  parent: BaseItem
+  id: BaseWeaponShotgunAlt
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+    - type: CustomSpriteAmmoCounter
+      loadedAmmoSprite: Interface/ItemStatus/Shotgun_Shells/not_spent.png
+      spentAmmoSprite: Interface/ItemStatus/Shotgun_Shells/spent.png
+    - type: Sprite
+      layers:
+        - state: icon
+          map: ["enum.GunVisualLayers.Base"]
+    - type: Item
+      size: Large
+      shape:
+        - 0,0,4,0
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
+      quickEquip: false
+      slots:
+        - Back
+        - suitStorage
+    - type: AmmoCounter
+    - type: Gun
+      fireRate: 2
+      angleIncrease: 7
+      selectedMode: SemiAuto
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/empty.ogg
+    - type: ChamberMagazineAmmoProvider
+      canBeLoadedManually: true
+      mustBeLoadedThroughChamber: false
+      soundRack:
+        path: /Audio/Weapons/Guns/Cock/m41_cock.ogg
+    - type: InternalMagazine
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: InternalMagazineShotgun
+          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+          priority: 2
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          priority: 1
+          whitelist:
+            tags:
+              - ShellShotgun
+    - type: ContainerContainer
+      containers:
+        gun_magazine: !type:ContainerSlot
+        gun_chamber: !type:ContainerSlot
+    - type: StaticPrice
+      price: 500
+#PARADISE EDIT END
 
 - type: entity
   name: Bulldog
@@ -74,7 +140,20 @@
       loadedAmmoSprite: Interface/ItemStatus/Shotgun_Shells/not_spent.png
       spentAmmoSprite: Interface/ItemStatus/Shotgun_Shells/spent.png
     - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+    #PARADISE EDIT START - ChamberMagazineExtension
+    - type: GunWieldBonus
+      minAngle: -5
+      maxAngle: -17
+      angleIncrease: -2.6
+    - type: GunAimable
+      minAngle: -8
+      maxAngle: -7
     - type: Gun
+      angleIncrease: 9
+      angleDecay: 6
+      minAngle: 15
+      maxAngle: 35
+      #PARADISE EDIT END
       fireRate: 2
       selectedMode: FullAuto
       availableModes:
@@ -95,11 +174,24 @@
           whitelistFailPopup: gun-magazine-whitelist-fail
           insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
           ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        #PARADISE EDIT START - ChamberMagazineExtension
+        gun_chamber:
+          name: Chamber
+          startingItem: ShellShotgun
+          priority: 1
+          whitelist:
+            tags:
+              - ShellShotgun
+        #PARADISE EDIT END
     - type: ContainerContainer
       containers:
         gun_magazine: !type:ContainerSlot
         gun_chamber: !type:ContainerSlot
-    - type: MagazineAmmoProvider
+    #PARADISE EDIT START - ChamberMagazineExtension
+    - type: ChamberMagazineAmmoProvider
+      soundRack:
+        path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+    #PARADISE EDIT END
     - type: MagazineVisuals
       magState: mag
       steps: 1
@@ -110,21 +202,69 @@
 
 - type: entity
   name: double-barreled shotgun
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityBartenderContraband]
+  parent: [BaseItem, BaseGunWieldable, BaseSecurityBartenderContraband] #PARADISE EDIT - WeaponOverhaul
   id: WeaponShotgunDoubleBarreled
   description: An immortal classic. Uses .50 shotgun shells.
   components:
+    #PARADISE EDIT START - WeaponOverhaul
+    - type: CustomSpriteAmmoCounter
+      loadedAmmoSprite: Interface/ItemStatus/Shotgun_Shells/not_spent.png
+      spentAmmoSprite: Interface/ItemStatus/Shotgun_Shells/spent.png
     - type: Sprite
+      layers:
+        - state: icon
+          map: ["enum.GunVisualLayers.Base"]
       sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
     - type: Item
       sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
+      size: Large
+      shape:
+        - 0,0,4,0
+    - type: Clothing
+      sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
+      quickEquip: false
+      slots:
+        - Back
+        - suitStorage
     - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+    - type: AmmoCounter
+    - type: GunWieldBonus
+      minAngle: -5
+      maxAngle: -21
+      angleIncrease: -6.2
+    - type: GunAimable
+      minAngle: -9
+      maxAngle: -8
     - type: Gun
+      angleIncrease: 8
+      angleDecay: 8
+      minAngle: 15
+      maxAngle: 35
       fireRate: 3
-    - type: GunSpreadModifier
-      spread: 0.6
-    - type: BallisticAmmoProvider
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/empty.ogg
+    - type: UseDelay
+      delay: 0.66
+    - type: ContainerContainer
+      containers:
+        revolver-ammo: !type:Container
+    - type: RevolverAmmoProvider
+      whitelist:
+        tags:
+          - ShellShotgun
+      proto: ShellShotgun
       capacity: 2
+      chambers: [True, True]
+      ammoSlots: [null, null]
+      soundEject:
+        path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+      soundInsert:
+        path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+    #PARADISE EDIT END
     - type: Construction
       graph: ShotgunSawn
       node: start
@@ -137,12 +277,24 @@
   description: An immortal classic. Uses .50 shotgun shells.
   suffix: Non-Lethal
   components:
-    - type: BallisticAmmoProvider
+    #PARADISE EDIT START - WeaponOverhaul
+    - type: RevolverAmmoProvider
+      whitelist:
+        tags:
+          - ShellShotgun
       proto: ShellShotgunBeanbag
+      capacity: 2
+      chambers: [True, True]
+      ammoSlots: [null, null]
+      soundEject:
+        path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+      soundInsert:
+        path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+    #PARADISE EDIT END
 
 - type: entity
   name: Enforcer
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponShotgunAlt, BaseGunWieldable, BaseSecurityContraband] #PARADISE EDIT - ChamberMagazineExtension
   id: WeaponShotgunEnforcer
   description: A premium semi-automatic shotgun, and the pride of all security forces. Uses .50 shotgun shells.
   components: # intend for Enforcer to have wider choke for semi-auto function
@@ -152,7 +304,21 @@
       sprite: Objects/Weapons/Guns/Shotguns/enforcer.rsi
     - type: Item
       sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
-    - type: BallisticAmmoProvider
+    #PARADISE EDIT START - WeaponOverhaul
+    - type: GunWieldBonus
+      minAngle: -5
+      maxAngle: -17
+      angleIncrease: -5.2
+    - type: GunAimable
+      minAngle: -8
+      maxAngle: -7
+    - type: Appearance
+    - type: Gun
+      angleIncrease: 7
+      angleDecay: 6
+      minAngle: 15
+      maxAngle: 35
+    #PARADISE EDIT END
     - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
 
 - type: entity
@@ -160,12 +326,27 @@
   id: WeaponShotgunEnforcerRubber
   suffix: Non-Lethal
   components:
-    - type: BallisticAmmoProvider
-      proto: ShellShotgunBeanbag
+    #PARADISE EDIT START - ChamberMagazineExtension
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: InternalMagazineShotgunLessLethal
+          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+          priority: 2
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          priority: 1
+          whitelist:
+            tags:
+              - ShellShotgun
+    #PARADISE EDIT END
 
 - type: entity
   name: Kammerer
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponShotgunAlt, BaseGunWieldable, BaseSecurityContraband] #PARADISE EDIT - ChamberMagazineExtension
   id: WeaponShotgunKammerer
   description: An old yet faithful design, and a favorite among irregular forces of many worlds. Uses .50 shotgun shells.
   components: # intend for Kammerer to have tighter choke for slower fire rate and/or manual cycling
@@ -176,35 +357,94 @@
     - type: Clothing
       sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
     - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+    #PARADISE EDIT START - WeaponOverhaul
+    - type: ChamberMagazineAmmoProvider
+      autoCycle: false
+      soundBoltOpened:
+        path: /Audio/Weapons/Guns/Cock/shotgun_open.ogg
+      soundBoltClosed:
+        path: /Audio/Weapons/Guns/Cock/shotgun_close.ogg
+    - type: Appearance
+    - type: GunWieldBonus
+      minAngle: -5
+      maxAngle: -21
+      angleIncrease: -6.2
+    - type: GunAimable
+      minAngle: -9
+      maxAngle: -8
     - type: Gun
+      angleIncrease: 8
+      angleDecay: 8
+      minAngle: 15
+      maxAngle: 35
+      #PARADISE EDIT END
       fireRate: 1
-    - type: GunSpreadModifier
-      spread: 0.6
     - type: Tag
       tags:
         - WeaponShotgunKammerer
 
 - type: entity
   name: sawn-off shotgun
-  parent: [BaseWeaponShotgun, BaseSecurityBartenderContraband]
+  parent: [BaseItem, BaseSecurityBartenderContraband] #PARADISE EDIT - WeaponOverhaul
   id: WeaponShotgunSawn
   description: Groovy! Uses .50 shotgun shells.
   components: # needs to be super inaccurate because you don't need to wield it
-    - type: Sprite
-      sprite: Objects/Weapons/Guns/Shotguns/sawn.rsi
+    #PARADISE EDIT START - WeaponOverhaul
     - type: Clothing
       sprite: Objects/Weapons/Guns/Shotguns/sawn.rsi
+      quickEquip: false
+      slots:
+        - Back
+        - suitStorage
     - type: Item
       size: Small
       shape:
         - 0,0,2,0
       sprite: Objects/Weapons/Guns/Shotguns/sawn_inhands_64x.rsi
+    - type: CustomSpriteAmmoCounter
+      loadedAmmoSprite: Interface/ItemStatus/Shotgun_Shells/not_spent.png
+      spentAmmoSprite: Interface/ItemStatus/Shotgun_Shells/spent.png
+    - type: Sprite
+      layers:
+        - state: icon
+          map: ["enum.GunVisualLayers.Base"]
+      sprite: Objects/Weapons/Guns/Shotguns/sawn.rsi
+    - type: AmmoCounter
+    - type: GunAimable
+      minAngle: -4
+      maxAngle: -6
     - type: Gun
-      fireRate: 3
+      fireRate: 5
+      angleIncrease: 8
+      angleDecay: 2
+      minAngle: 7
+      maxAngle: 18
+      availableModes:
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      soundEmpty:
+        path: /Audio/Weapons/Guns/Empty/empty.ogg
     - type: GunSpreadModifier
       spread: 1.4
-    - type: BallisticAmmoProvider
+    - type: UseDelay
+      delay: 0.66
+    - type: ContainerContainer
+      containers:
+        revolver-ammo: !type:Container
+    - type: RevolverAmmoProvider
+      whitelist:
+        tags:
+          - ShellShotgun
+      proto: ShellShotgun
       capacity: 2
+      chambers: [True, True]
+      ammoSlots: [null, null]
+      soundEject:
+        path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+      soundInsert:
+        path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+    #PARADISE EDIT END
     - type: Construction
       graph: ShotgunSawn
       node: shotgunsawn
@@ -217,8 +457,23 @@
   description: Groovy! Uses .50 shotgun shells.
   suffix: Empty
   components:
-    - type: BallisticAmmoProvider
+    #PARADISE EDIT START- Weapon overhaul
+    - type: CustomSpriteAmmoCounter
+      loadedAmmoSprite: Interface/ItemStatus/Shotgun_Shells/not_spent.png
+      spentAmmoSprite: Interface/ItemStatus/Shotgun_Shells/spent.png
+    - type: RevolverAmmoProvider
+      whitelist:
+        tags:
+          - ShellShotgun
       proto: null
+      capacity: 2
+      chambers: [True, True]
+      ammoSlots: [null, null]
+      soundEject:
+        path: /Audio/Weapons/Guns/MagOut/revolver_magout.ogg
+      soundInsert:
+        path: /Audio/Weapons/Guns/MagIn/revolver_magin.ogg
+    #PARADISE EDIT END
     - type: Construction
       graph: ShotgunSawn
       node: shotgunsawn
@@ -240,8 +495,18 @@
       sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
     - type: Clothing
       sprite: Objects/Weapons/Guns/Shotguns/hm_pistol.rsi
+    #PARADISE EDIT START - Weapon Overhaul
+    - type: GunAimable
+      minAngle: -4
+      maxAngle: -6
+    - type: GunSpreadModifier
+      spread: 1.7
     - type: Gun
-      fireRate: 4
+      angleIncrease: 10
+      angleDecay: 2
+      minAngle: 7
+      maxAngle: 35
+    #PARADISE EDIT END
     - type: BallisticAmmoProvider
       capacity: 1
     - type: Construction
@@ -281,8 +546,21 @@
     - type: Item
       sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun_inhands_64x.rsi
     - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+    #PARADISE EDIT START - Weapon Overhaul
+    - type: GunWieldBonus
+      minAngle: -5
+      maxAngle: -21
+      angleIncrease: -6.2
+    - type: GunAimable
+      minAngle: -9
+      maxAngle: -8
     - type: Gun
       fireRate: 4 #No reason to stifle the firerate since you have to manually reload every time anyways.
+      angleIncrease: 8
+      angleDecay: 8
+      minAngle: 15
+      maxAngle: 35
+    #PARADISE EDIT END
     - type: BallisticAmmoProvider
       capacity: 1
       proto: null
@@ -302,7 +580,7 @@
       proto: ShellShotgunImprovised
 
 - type: entity
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseWeaponShotgunAlt, BaseGunWieldable, BaseSecurityContraband] #PARADISE EDIT - ChamberMagazineExtension
   id: WeaponShotgunHushpup
   name: Hushpup
   description: An obscure modification of the Enforcer, fitted with an experimental muffler. Great for those with a strict moral code. Uses .50 shotgun shells.
@@ -315,14 +593,42 @@
       sprite: Objects/Weapons/Guns/Shotguns/hushpup.rsi
       shape:
         - 0,0,3,0 # smaller than BaseShotgun by 1 tile
-    - type: BallisticAmmoProvider
-      capacity: 4
     - type: GunRequiresWield
+    #PARADISE EDIT START - ChamberMagazineExtension
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: InternalMagazineShotgunShort
+          insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+          priority: 2
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          priority: 1
+          whitelist:
+            tags:
+              - ShellShotgun
+    - type: Appearance
+    - type: GunWieldBonus
+      minAngle: -5
+      maxAngle: -20
+      angleIncrease: -4
+    - type: GunAimable
+      minAngle: -5
+      maxAngle: -6
     - type: Gun
+      muzzleFlashSupressed: true
+      angleIncrease: 7
+      angleDecay: 6
+      minAngle: 15
+      maxAngle: 35
       soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/hushpup.ogg
+        path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg #What is the point of suppressor if it has it's own specific sound?
         params:
-          volume: -3
+          volume: -5
+          #PARADISE EDIT END
           rolloffFactor: 1.3
       fireRate: 2
     - type: GunSpreadModifier

@@ -39,7 +39,7 @@ public abstract partial class SharedCombatModeSystem : EntitySystem
         SetMouseRotatorComponents(uid, false);
     }
 
-    protected virtual void OnActionPerform(EntityUid uid, CombatModeComponent component, ToggleCombatActionEvent args)  // PARADISE EDIT - Add gun spread overlay
+    protected virtual void OnActionPerform(EntityUid uid, CombatModeComponent component, ToggleCombatActionEvent args) // PARADISE EDIT - Add gun spread overlay
     {
         if (args.Handled)
             return;

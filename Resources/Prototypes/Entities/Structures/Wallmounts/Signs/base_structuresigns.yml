@@ -5,7 +5,7 @@
   abstract: true
   components:
     - type: WallMount
-      arc: 360
+      arc: 180
     - type: Rotatable
     - type: Destructible
       thresholds:
@@ -16,7 +16,7 @@
               acts: ["Destruction"]
     - type: Sprite
       sprite: Structures/Wallmounts/signs.rsi
-      snapCardinals: true
+      snapCardinals: false
     - type: StaticPrice
       price: 20
     # Hacky wacky - It inherit anchorable from "BaseWallmount", none of the BaseSign children are designed to be anchorable

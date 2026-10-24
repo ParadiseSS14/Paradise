@@ -57,3 +57,10 @@
   name: stack-goliath-hide
   icon: { sprite: /Textures/Objects/Materials/hide.rsi, state: goliath_hide }
   spawn: MaterialGoliathHide1
+
+- type: stack
+  parent: BaseMediumStack
+  id: LizardHide
+  name: stack-lizard-hide
+  icon: { sprite: /Textures/Objects/Materials/hide.rsi, state: lizard_hide }
+  spawn: MaterialLizardHide1

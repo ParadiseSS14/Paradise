@@ -1,6 +1,7 @@
 ﻿- type: decal
   id: ConcreteTrimBox
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_box
@@ -8,6 +9,7 @@
 - type: decal
   id: ConcreteTrimCornerNe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_corner_ne
@@ -15,6 +17,7 @@
 - type: decal
   id: ConcreteTrimCornerSe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_corner_se
@@ -22,6 +25,7 @@
 - type: decal
   id: ConcreteTrimCornerNw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_corner_nw
@@ -29,6 +33,7 @@
 - type: decal
   id: ConcreteTrimCornerSw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_corner_sw
@@ -36,6 +41,7 @@
 - type: decal
   id: ConcreteTrimInnerNe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_inner_ne
@@ -43,6 +49,7 @@
 - type: decal
   id: ConcreteTrimInnerSe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_inner_se
@@ -50,6 +57,7 @@
 - type: decal
   id: ConcreteTrimInnerNw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_inner_nw
@@ -57,6 +65,7 @@
 - type: decal
   id: ConcreteTrimInnerSw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_inner_sw
@@ -64,6 +73,7 @@
 - type: decal
   id: ConcreteTrimEndN
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_end_n
@@ -71,6 +81,7 @@
 - type: decal
   id: ConcreteTrimEndE
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_end_e
@@ -78,6 +89,7 @@
 - type: decal
   id: ConcreteTrimEndS
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_end_s
@@ -85,6 +97,7 @@
 - type: decal
   id: ConcreteTrimEndW
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_end_w
@@ -92,6 +105,7 @@
 - type: decal
   id: ConcreteTrimLineN
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_line_n
@@ -99,6 +113,7 @@
 - type: decal
   id: ConcreteTrimLineE
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_line_e
@@ -106,6 +121,7 @@
 - type: decal
   id: ConcreteTrimLineS
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_line_s
@@ -113,6 +129,7 @@
 - type: decal
   id: ConcreteTrimLineW
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: concrete_line_w
@@ -120,6 +137,7 @@
 - type: decal
   id: GrayConcreteTrimBox
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_box
@@ -127,6 +145,7 @@
 - type: decal
   id: GrayConcreteTrimCornerNe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_corner_ne
@@ -134,6 +153,7 @@
 - type: decal
   id: GrayConcreteTrimCornerSe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_corner_se
@@ -141,6 +161,7 @@
 - type: decal
   id: GrayConcreteTrimCornerNw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_corner_nw
@@ -148,6 +169,7 @@
 - type: decal
   id: GrayConcreteTrimCornerSw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_corner_sw
@@ -155,6 +177,7 @@
 - type: decal
   id: GrayConcreteTrimInnerNe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_inner_ne
@@ -162,6 +185,7 @@
 - type: decal
   id: GrayConcreteTrimInnerSe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_inner_se
@@ -169,6 +193,7 @@
 - type: decal
   id: GrayConcreteTrimInnerNw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_inner_nw
@@ -176,6 +201,7 @@
 - type: decal
   id: GrayConcreteTrimInnerSw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_inner_sw
@@ -183,6 +209,7 @@
 - type: decal
   id: GrayConcreteTrimEndN
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_end_n
@@ -190,6 +217,7 @@
 - type: decal
   id: GrayConcreteTrimEndE
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_end_e
@@ -197,6 +225,7 @@
 - type: decal
   id: GrayConcreteTrimEndS
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_end_s
@@ -204,6 +233,7 @@
 - type: decal
   id: GrayConcreteTrimEndW
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_end_w
@@ -211,6 +241,7 @@
 - type: decal
   id: GrayConcreteTrimLineN
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_line_n
@@ -218,6 +249,7 @@
 - type: decal
   id: GrayConcreteTrimLineE
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_line_e
@@ -225,6 +257,7 @@
 - type: decal
   id: GrayConcreteTrimLineS
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_line_s
@@ -232,6 +265,7 @@
 - type: decal
   id: GrayConcreteTrimLineW
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: grayconcrete_line_w
@@ -239,6 +273,7 @@
 - type: decal
   id: OldConcreteTrimBox
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_box
@@ -246,6 +281,7 @@
 - type: decal
   id: OldConcreteTrimCornerNe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_corner_ne
@@ -253,6 +289,7 @@
 - type: decal
   id: OldConcreteTrimCornerSe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_corner_se
@@ -260,6 +297,7 @@
 - type: decal
   id: OldConcreteTrimCornerNw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_corner_nw
@@ -267,6 +305,7 @@
 - type: decal
   id: OldConcreteTrimCornerSw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_corner_sw
@@ -274,6 +313,7 @@
 - type: decal
   id: OldConcreteTrimInnerNe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_inner_ne
@@ -281,6 +321,7 @@
 - type: decal
   id: OldConcreteTrimInnerSe
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_inner_se
@@ -288,6 +329,7 @@
 - type: decal
   id: OldConcreteTrimInnerNw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_inner_nw
@@ -295,6 +337,7 @@
 - type: decal
   id: OldConcreteTrimInnerSw
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_inner_sw
@@ -302,6 +345,7 @@
 - type: decal
   id: OldConcreteTrimEndN
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_end_n
@@ -309,6 +353,7 @@
 - type: decal
   id: OldConcreteTrimEndE
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_end_e
@@ -316,6 +361,7 @@
 - type: decal
   id: OldConcreteTrimEndS
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_end_s
@@ -323,6 +369,7 @@
 - type: decal
   id: OldConcreteTrimEndW
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_end_w
@@ -330,6 +377,7 @@
 - type: decal
   id: OldConcreteTrimLineN
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_line_n
@@ -337,6 +385,7 @@
 - type: decal
   id: OldConcreteTrimLineE
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_line_e
@@ -344,6 +393,7 @@
 - type: decal
   id: OldConcreteTrimLineS
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_line_s
@@ -351,6 +401,7 @@
 - type: decal
   id: OldConcreteTrimLineW
   tags: ["planet", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/concretetrim.rsi
     state: oldconcrete_line_w

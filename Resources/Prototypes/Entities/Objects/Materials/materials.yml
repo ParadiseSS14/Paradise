@@ -750,3 +750,39 @@
   components:
     - type: Stack
       count: 1
+
+- type: entity
+  parent: MaterialBase
+  id: MaterialLizardHide
+  name: lizard skin
+  description: Pieces of a lizard's scaly hide. Sssssss...
+  suffix: Full
+  components:
+    - type: Sprite
+      sprite: Objects/Materials/hide.rsi
+      layers:
+        - state: lizard_hide
+          map: ["base"]
+    - type: StaticPrice
+      price: 0
+    - type: StackPrice
+      price: 5
+    - type: Appearance
+    - type: Stack
+      stackType: LizardHide
+      baseLayer: base
+    - type: Item
+      size: Large
+      shape:
+        - 0,0,2,2
+    - type: Tag
+      tags:
+        - LizardHide
+
+- type: entity
+  parent: MaterialLizardHide
+  id: MaterialLizardHide1
+  suffix: 1
+  components:
+    - type: Stack
+      count: 1

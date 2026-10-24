@@ -1,0 +1,74 @@
+﻿- type: entity
+  id: WashingMachine
+  parent: [BaseMachinePowered, ConstructibleMachine, BaseConstructibleMachineDestructible]
+  name: washing machine
+  description: Gets rid of those pesky bloodstains, or your money back!
+  components:
+    - type: Sprite
+      sprite: Structures/Machines/_Paradise/washingmachine.rsi
+      layers:
+        - state: base
+
+        - state: filled
+          map: ["enum.WashingMachineVisualLayers.Filled"]
+          visible: false
+        - state: running
+          map: ["enum.WashingMachineVisualLayers.Running"]
+          visible: false
+        - state: closed
+          map: ["enum.WashingMachineVisualLayers.Door"]
+        - state: panelopen
+          map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: GenericVisualizer
+      visuals:
+        enum.WashingMachineVisual.State:
+          enum.WashingMachineVisualLayers.Door:
+            Open:
+              state: open
+              visible: true
+            Closed:
+              state: closed
+              visible: true
+            Running:
+              visible: false
+          enum.WashingMachineVisualLayers.Running:
+            Open:
+              visible: false
+            Closed:
+              visible: false
+            Running:
+              state: running
+              visible: true
+        enum.WashingMachineVisual.Filled:
+          enum.WashingMachineVisualLayers.Filled:
+            True:
+              visible: true
+            False:
+              visible: false
+    - type: WashingMachine
+    - type: Appearance
+    - type: WiresVisuals
+    - type: WiresPanel
+    - type: Machine
+      board: WashingMachineCircuitboard
+    - type: Construction
+      graph: Machine
+      node: machine
+      containers:
+        - machine_board
+        - machine_parts
+    - type: ContainerContainer
+      containers:
+        machine_board: !type:Container
+        machine_parts: !type:Container
+        washingmachine_storage: !type:Container
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape: !type:PhysShapeAabb
+            bounds: "-0.25,-0.45,0.25,0.30"
+          mask:
+            - MachineMask
+          layer:
+            - MachineLayer
+    - type: ApcPowerReceiver

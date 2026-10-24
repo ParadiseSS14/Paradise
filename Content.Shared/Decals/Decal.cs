@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Shared.Cleaning;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Decals
@@ -13,25 +14,29 @@ namespace Content.Shared.Decals
         [DataField("color")] public  Color? Color;
         [DataField("angle")] public  Angle Angle = Angle.Zero;
         [DataField("zIndex")] public  int ZIndex;
-        [DataField("cleanable")] public  bool Cleanable;
+        // Paradise Change - Cleaning
+        [DataField("cleanType")] public  CleaningType CleanType = CleaningType.LightDecal;
 
         public Decal() {}
 
-        public Decal(Vector2 coordinates, string id, Color? color, Angle angle, int zIndex, bool cleanable)
+        // Paradise Change - Cleaning
+        public Decal(Vector2 coordinates, string id, Color? color, Angle angle, int zIndex, CleaningType cleanType)
         {
             Coordinates = coordinates;
             Id = id;
             Color = color;
             Angle = angle;
             ZIndex = zIndex;
-            Cleanable = cleanable;
+            CleanType = cleanType; // Paradise Change - Cleaning
         }
 
-        public Decal WithCoordinates(Vector2 coordinates) => new(coordinates, Id, Color, Angle, ZIndex, Cleanable);
-        public Decal WithId(string id) => new(Coordinates, id, Color, Angle, ZIndex, Cleanable);
-        public Decal WithColor(Color? color) => new(Coordinates, Id, color, Angle, ZIndex, Cleanable);
-        public Decal WithRotation(Angle angle) => new(Coordinates, Id, Color, angle, ZIndex, Cleanable);
-        public Decal WithZIndex(int zIndex) => new(Coordinates, Id, Color, Angle, zIndex, Cleanable);
-        public Decal WithCleanable(bool cleanable) => new(Coordinates, Id, Color, Angle, ZIndex, cleanable);
+        // Paradise Change START - Cleaning
+        public Decal WithCoordinates(Vector2 coordinates) => new(coordinates, Id, Color, Angle, ZIndex, CleanType);
+        public Decal WithId(string id) => new(Coordinates, id, Color, Angle, ZIndex, CleanType);
+        public Decal WithColor(Color? color) => new(Coordinates, Id, color, Angle, ZIndex, CleanType);
+        public Decal WithRotation(Angle angle) => new(Coordinates, Id, Color, angle, ZIndex, CleanType);
+        public Decal WithZIndex(int zIndex) => new(Coordinates, Id, Color, Angle, zIndex, CleanType);
+        public Decal WithCleanable(CleaningType cleaningType) => new(Coordinates, Id, Color, Angle, ZIndex, cleaningType);
+        // Paradise Change END - Cleaning
     }
 }

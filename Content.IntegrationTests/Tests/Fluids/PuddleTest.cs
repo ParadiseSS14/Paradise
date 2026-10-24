@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Content.IntegrationTests.Fixtures;
 using Content.Server.Fluids.EntitySystems;
 using Content.Shared.Chemistry.Components;
@@ -6,6 +7,7 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Fluids.Components;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Map;
+using Robust.Shared.Maths;
 
 namespace Content.IntegrationTests.Tests.Fluids
 {
@@ -51,11 +53,15 @@ namespace Content.IntegrationTests.Tests.Fluids
             // Remove all tiles
             await server.WaitPost(() =>
             {
-                var tiles = mapSystem.GetAllTiles(grid.Owner, grid.Comp);
-                foreach (var tile in tiles)
+                var tiles = new List<(Vector2i GridIndices, Tile Tile)>();
+                var tileEnumerator = mapSystem.GetAllTiles(grid.Owner, grid.Comp);
+
+                foreach (var tile in tileEnumerator)
                 {
-                    mapSystem.SetTile(grid, tile.GridIndices, Tile.Empty);
+                    tiles.Add((tile.GridIndices, Tile.Empty));
                 }
+
+                mapSystem.SetTiles(grid, tiles);
             });
 
             await pair.RunTicksSync(5);

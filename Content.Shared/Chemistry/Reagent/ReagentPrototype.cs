@@ -142,6 +142,14 @@ namespace Content.Shared.Chemistry.Reagent
         [DataField]
         public bool Absorbent = false;
 
+        // Paradise Change START - Cleaning
+        /// <summary>
+        /// If this reagent can initiate cleaning.
+        /// </summary>
+        [DataField]
+        public bool Cleans = false;
+    // Paradise Change End - Cleaning
+
         /// <summary>
         /// How easily this reagent becomes fizzy when aggitated.
         /// 0 - completely flat, 1 - fizzes up when nudged.

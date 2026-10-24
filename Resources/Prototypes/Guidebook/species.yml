@@ -8,8 +8,8 @@
     - Dwarf
     - Human
     - Moth
-    - Reptilian
     - SlimePerson
+    - Reptilian # displays as "Unathi"
     - Vox
     - Vulpkanin
 
@@ -40,8 +40,8 @@
 
 - type: guideEntry
   id: Reptilian
-  name: species-name-reptilian
-  text: "/ServerInfo/Guidebook/Mobs/Reptilian.xml"
+  name: species-name-unathi
+  text: "/ServerInfo/Guidebook/Mobs/Unathi.xml"
 
 - type: guideEntry
   id: SlimePerson

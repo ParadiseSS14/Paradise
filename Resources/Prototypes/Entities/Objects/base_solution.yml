@@ -111,6 +111,7 @@
   components:
     - type: Solution
       id: tank
+    - type: CleaningContainer
 
 - type: entity
   abstract: true

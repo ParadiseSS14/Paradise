@@ -19,7 +19,7 @@ public sealed partial class InfoUIController : UIController, IOnStateExited<Game
     private RulesPopup? _rulesPopup;
     private RulesAndInfoWindow? _infoWindow;
 
-    private static readonly ProtoId<GuideEntryPrototype> DefaultRuleset = "DefaultRuleset";
+    private static readonly ProtoId<GuideEntryPrototype> DefaultRuleset = "CoreRuleset";
 
     public ProtoId<GuideEntryPrototype> RulesEntryId = DefaultRuleset;
 
@@ -31,14 +31,6 @@ public sealed partial class InfoUIController : UIController, IOnStateExited<Game
 
         _netManager.RegisterNetMessage<RulesAcceptedMessage>();
         _netManager.RegisterNetMessage<SendRulesInformationMessage>(OnRulesInformationMessage);
-
-        _consoleHost.RegisterCommand("fuckrules",
-            "",
-            "",
-            (_, _, _) =>
-        {
-            OnAcceptPressed(true);
-        });
     }
 
     private void OnRulesInformationMessage(SendRulesInformationMessage message)

@@ -1,6 +1,7 @@
 ﻿- type: decal
   id: MiniTileWhiteBox
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_box
@@ -8,6 +9,7 @@
 - type: decal
   id: MiniTileWhiteCornerNe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_corner_ne
@@ -15,6 +17,7 @@
 - type: decal
   id: MiniTileWhiteCornerSe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_corner_se
@@ -22,6 +25,7 @@
 - type: decal
   id: MiniTileWhiteCornerNw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_corner_nw
@@ -29,6 +33,7 @@
 - type: decal
   id: MiniTileWhiteCornerSw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_corner_sw
@@ -36,6 +41,7 @@
 - type: decal
   id: MiniTileWhiteInnerNe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_inner_ne
@@ -43,6 +49,7 @@
 - type: decal
   id: MiniTileWhiteInnerSe
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_inner_se
@@ -50,6 +57,7 @@
 - type: decal
   id: MiniTileWhiteInnerNw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_inner_nw
@@ -57,6 +65,7 @@
 - type: decal
   id: MiniTileWhiteInnerSw
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_inner_sw
@@ -64,6 +73,7 @@
 - type: decal
   id: MiniTileWhiteEndN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_end_n
@@ -71,6 +81,7 @@
 - type: decal
   id: MiniTileWhiteEndE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_end_e
@@ -78,6 +89,7 @@
 - type: decal
   id: MiniTileWhiteEndS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_end_s
@@ -85,6 +97,7 @@
 - type: decal
   id: MiniTileWhiteEndW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_end_w
@@ -92,6 +105,7 @@
 - type: decal
   id: MiniTileWhiteLineN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_line_n
@@ -99,6 +113,7 @@
 - type: decal
   id: MiniTileWhiteLineE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_line_e
@@ -106,6 +121,7 @@
 - type: decal
   id: MiniTileWhiteLineS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_line_s
@@ -113,6 +129,7 @@
 - type: decal
   id: MiniTileWhiteLineW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/minitile.rsi
     state: white_line_w

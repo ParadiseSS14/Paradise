@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from ParadiseSS13 at commit ee9dcb306597f69f7024d3b86fa9936ff8e0213b. icon from icons/obj/storage.dmi (state satchel-lizard), equipped-BACKPACK from icons/mob/clothing/back.dmi (state satchel-lizard), inhand-left from icons/mob/inhands/clothing_lefthand.dmi and inhand-right from icons/mob/inhands/clothing_righthand.dmi (state satchel, shared by all satchels - Paradise has no lizard-specific in-hand sprite).",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-BACKPACK",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+    ]
+}

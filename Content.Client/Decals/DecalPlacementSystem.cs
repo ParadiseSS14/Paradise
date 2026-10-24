@@ -3,6 +3,7 @@ using Content.Client.Actions;
 using Content.Client.Decals.Overlays;
 using Content.Shared.Actions;
 using Content.Shared.Actions.Components;
+using Content.Shared.Cleaning;// Paradise Change - Cleaning
 using Content.Shared.Decals;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -33,7 +34,7 @@ public sealed partial class DecalPlacementSystem : EntitySystem
     private Angle _decalAngle = Angle.Zero;
     private bool _snap;
     private int _zIndex;
-    private bool _cleanable;
+    private CleaningType _cleanable; // Paradise Change - Cleaning
 
     private bool _active;
     private bool _placing;
@@ -176,7 +177,8 @@ public sealed partial class DecalPlacementSystem : EntitySystem
         CommandBinds.Unregister<DecalPlacementSystem>();
     }
 
-    public void UpdateDecalInfo(string id, Color color, float rotation, bool snap, int zIndex, bool cleanable)
+    // Paradise Change - Cleaning
+    public void UpdateDecalInfo(string id, Color color, float rotation, bool snap, int zIndex, CleaningType cleanable)
     {
         _decalId = id;
         _decalColor = color;

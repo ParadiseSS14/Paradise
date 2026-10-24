@@ -1,6 +1,7 @@
 - type: decal
   id: SteelSlatSingleN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_steel_n
@@ -8,6 +9,7 @@
 - type: decal
   id: SteelSlatSingleS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_steel_s
@@ -15,6 +17,7 @@
 - type: decal
   id: SteelSlatSingleE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_steel_e
@@ -22,6 +25,7 @@
 - type: decal
   id: SteelSlatSingleW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_steel_w
@@ -29,6 +33,7 @@
 - type: decal
   id: DarkSlatSingleN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_dark_n
@@ -36,6 +41,7 @@
 - type: decal
   id: DarkSlatSingleS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_dark_s
@@ -43,6 +49,7 @@
 - type: decal
   id: DarkSlatSingleE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_dark_e
@@ -50,6 +57,7 @@
 - type: decal
   id: DarkSlatSingleW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_dark_w
@@ -57,6 +65,7 @@
 - type: decal
   id: WhiteSlatSingleN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_white_n
@@ -64,6 +73,7 @@
 - type: decal
   id: WhiteSlatSingleS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_white_s
@@ -71,6 +81,7 @@
 - type: decal
   id: WhiteSlatSingleE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_white_e
@@ -78,6 +89,7 @@
 - type: decal
   id: WhiteSlatSingleW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: single_white_w
@@ -85,6 +97,7 @@
 - type: decal
   id: SteelSlatDoubleN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_steel_n
@@ -92,6 +105,7 @@
 - type: decal
   id: SteelSlatDoubleS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_steel_s
@@ -99,6 +113,7 @@
 - type: decal
   id: SteelSlatDoubleE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_steel_e
@@ -106,6 +121,7 @@
 - type: decal
   id: SteelSlatDoubleW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_steel_w
@@ -113,6 +129,7 @@
 - type: decal
   id: DarkSlatDoubleN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_dark_n
@@ -120,6 +137,7 @@
 - type: decal
   id: DarkSlatDoubleS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_dark_s
@@ -127,6 +145,7 @@
 - type: decal
   id: DarkSlatDoubleE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_dark_e
@@ -134,6 +153,7 @@
 - type: decal
   id: DarkSlatDoubleW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_dark_w
@@ -141,6 +161,7 @@
 - type: decal
   id: WhiteSlatDoubleN
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_white_n
@@ -148,6 +169,7 @@
 - type: decal
   id: WhiteSlatDoubleS
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_white_s
@@ -155,6 +177,7 @@
 - type: decal
   id: WhiteSlatDoubleE
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_white_e
@@ -162,6 +185,7 @@
 - type: decal
   id: WhiteSlatDoubleW
   tags: ["station", "markings"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/slats.rsi
     state: double_white_w

@@ -213,16 +213,6 @@ namespace Content.Client.Stylesheets
                 ExpandMarginBottom = 3,
                 ContentMarginBottomOverride = 0
             };
-            // Begin DeltaV - Curator Chat
-            var windowHeaderCuratorTex = resCache.GetTexture("/Textures/_DV/Interface/Nano/window_header_curator.png");
-            var windowHeaderCurator = new StyleBoxTexture
-            {
-                Texture = windowHeaderCuratorTex,
-                PatchMarginBottom = 3,
-                ExpandMarginBottom = 3,
-                ContentMarginBottomOverride = 0
-            };
-            // End DeltaV - Curator Chat
             var windowBackgroundTex = resCache.GetTexture("/Textures/Interface/Nano/window_background.png");
             var windowBackground = new StyleBoxTexture
             {
@@ -401,14 +391,6 @@ namespace Content.Client.Stylesheets
                 BackgroundColor = ChatBackgroundColor,
             };
             chatSubBg.SetContentMarginOverride(StyleBox.Margin.All, 2);
-
-            var actionSearchBoxTex = resCache.GetTexture("/Textures/Interface/Nano/black_panel_dark_thin_border.png");
-            var actionSearchBox = new StyleBoxTexture
-            {
-                Texture = actionSearchBoxTex,
-            };
-            actionSearchBox.SetPatchMargin(StyleBox.Margin.All, 3);
-            actionSearchBox.SetContentMarginOverride(StyleBox.Margin.Horizontal, 5);
 
             var tabContainerPanelTex = resCache.GetTexture("/Textures/Interface/Nano/tabcontainer_panel.png");
             var tabContainerPanel = new StyleBoxTexture
@@ -633,14 +615,6 @@ namespace Content.Client.Stylesheets
                     new[]
                     {
                         new StyleProperty(PanelContainer.StylePropertyPanel, windowHeaderAlert),
-                    }),
-
-                // DeltaV - Curator (purple) window header.
-                new StyleRule(
-                    new SelectorElement(typeof(PanelContainer), new[] {"windowHeaderCurator"}, null, null),
-                    new[]
-                    {
-                        new StyleProperty(PanelContainer.StylePropertyPanel, windowHeaderCurator),
                     }),
 
                 // Shapes for the buttons.
@@ -887,13 +861,6 @@ namespace Content.Client.Stylesheets
                     new[]
                     {
                         new StyleProperty(LineEdit.StylePropertyStyleBox, new StyleBoxEmpty()),
-                    }),
-
-                // Action searchbox lineedit
-                new StyleRule(new SelectorElement(typeof(LineEdit), new[] {StyleClassActionSearchBox}, null, null),
-                    new[]
-                    {
-                        new StyleProperty(LineEdit.StylePropertyStyleBox, actionSearchBox),
                     }),
 
                 // TabContainer

@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Server.Administration;
 using Content.Shared.Administration;
+using Content.Shared.Cleaning;
 using Content.Shared.Decals;
 using Content.Shared.Maps;
 using Robust.Server.GameObjects;
@@ -65,6 +66,9 @@ namespace Content.Server.Decals.Commands
             Color? color = null;
             var zIndex = 0;
             Angle? rotation = null;
+            // Paradise Change START - Cleaning
+            CleaningType? cleanType = null;
+            // Paradise Change END - Cleaning
             if (args.Length > 4)
             {
                 for (int i = 4; i < args.Length; i++)
@@ -93,6 +97,16 @@ namespace Content.Server.Decals.Commands
                                 return;
                             }
                             break;
+                        // Paradise Change START - Cleaning
+                        case "cleantype":
+                            if (!Enum.TryParse<CleaningType>(rawValue[1], true, out var cleanable))
+                            {
+                                shell.WriteError($"Failed parsing cleanable '{rawValue[1]}'.");
+                                return;
+                            }
+                            cleanType = cleanable;
+                            break;
+                        // Paradise Change END - Cleaning
                         case "color":
                             if (!Color.TryFromName(rawValue[1], out var colorRaw))
                             {
@@ -109,7 +123,7 @@ namespace Content.Server.Decals.Commands
                 }
             }
 
-            if (_entManager.System<DecalSystem>().TryAddDecal(args[0], coordinates, out var uid, color, rotation, zIndex))
+            if (_entManager.System<DecalSystem>().TryAddDecal(args[0], coordinates, out var uid, color, rotation, zIndex, cleanType))
             {
                 shell.WriteLine($"Successfully created decal {uid}.");
             }

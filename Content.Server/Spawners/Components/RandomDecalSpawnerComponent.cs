@@ -1,3 +1,4 @@
+using Content.Shared.Cleaning; // Paradise Change - Cleaning
 using Robust.Shared.Prototypes;
 using Content.Shared.Maps;
 using Content.Shared.Decals;
@@ -90,7 +91,7 @@ public sealed partial class RandomDecalSpawnerComponent : Component
     /// A null value will cause this to attempt to use the default value (DefaultCleanable) for the decal.
     /// </remarks>
     [DataField]
-    public bool? Cleanable = null;
+    public CleaningType? CleaningType = null; // Paradise Change - Cleaning
 
     /// <summary>
     /// A list of tile prototype IDs to only place decals on.

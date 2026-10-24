@@ -1,0 +1,11 @@
+<BoxContainer xmlns="https://spacestation14.io" Orientation="Vertical">
+
+    <BoxContainer HorizontalExpand="True">
+        <Label Align="Left" Name="Header"
+               StyleClasses="LabelHeading" Margin="8 8 0 0" />
+        <Control HorizontalExpand="True" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="4" Name="ContentsContainer" />
+    </BoxContainer>
+    <PanelContainer StyleClasses="SeperatorAccented" SetHeight="2" HorizontalExpand="True" Margin="0 8 0 2" />
+
+</BoxContainer>

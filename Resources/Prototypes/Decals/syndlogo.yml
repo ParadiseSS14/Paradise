@@ -1,6 +1,7 @@
 - type: decal
   id: syndlogo1
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo1
@@ -8,6 +9,7 @@
 - type: decal
   id: syndlogo2
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo2
@@ -15,6 +17,7 @@
 - type: decal
   id: syndlogo3
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo3
@@ -22,6 +25,7 @@
 - type: decal
   id: syndlogo4
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo4
@@ -29,6 +33,7 @@
 - type: decal
   id: syndlogo5
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo5
@@ -36,6 +41,7 @@
 - type: decal
   id: syndlogo6
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo6
@@ -43,6 +49,7 @@
 - type: decal
   id: syndlogo7
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo7
@@ -50,6 +57,7 @@
 - type: decal
   id: syndlogo8
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo8
@@ -57,6 +65,7 @@
 - type: decal
   id: syndlogo9
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo9
@@ -64,6 +73,7 @@
 - type: decal
   id: syndlogo10
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo10
@@ -71,6 +81,7 @@
 - type: decal
   id: syndlogo11
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo11
@@ -78,6 +89,7 @@
 - type: decal
   id: syndlogo12
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo12
@@ -85,6 +97,7 @@
 - type: decal
   id: syndlogo13
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo13
@@ -92,6 +105,7 @@
 - type: decal
   id: syndlogo14
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo14
@@ -99,6 +113,7 @@
 - type: decal
   id: syndlogo15
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo15
@@ -106,6 +121,7 @@
 - type: decal
   id: syndlogo16
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo16
@@ -113,6 +129,7 @@
 - type: decal
   id: syndlogo17
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo17
@@ -120,6 +137,7 @@
 - type: decal
   id: syndlogo18
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo18
@@ -127,6 +145,7 @@
 - type: decal
   id: syndlogo19
   tags: ["syndicate"]
+  cleaningType: Scrapeable
   sprite:
     sprite: Decals/syndlogo.rsi
     state: syndlogo19

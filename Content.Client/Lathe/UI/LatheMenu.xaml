@@ -146,12 +146,8 @@
                                     Text="✖"
                                     SetSize="38 32"
                                     HorizontalAlignment="Right"
-                                    ToolTip="{Loc 'lathe-menu-delete-fabricating-tooltip'}">
-                                    <Button.StyleClasses>
-                                        <system:String>Caution</system:String>
-                                        <system:String>OpenLeft</system:String>
-                                    </Button.StyleClasses>
-                                </Button>
+                                    ToolTip="{Loc 'lathe-menu-delete-fabricating-tooltip'}"
+                                    StyleClasses="negative OpenLeft" />
                             </PanelContainer>
                         </BoxContainer>
                         <ScrollContainer VerticalExpand="True" HScrollEnabled="False">
@@ -179,12 +175,6 @@
                         VerticalExpand="True"
                         HorizontalExpand="True">
                         <ui:MaterialStorageControl Name="MaterialsList" SizeFlagsStretchRatio="8" />
-                        <!-- Begin DeltaV Additions - Mining points -->
-                        <BoxContainer Orientation="Horizontal" Name="MiningPointsContainer" Visible="False">
-                            <Label Name="MiningPointsLabel" HorizontalExpand="True" />
-                            <Button Name="MiningPointsClaimButton" Text="{Loc 'lathe-menu-mining-points-claim-button'}" />
-                        </BoxContainer>
-                        <!-- End DeltaV Additions -->
                     </BoxContainer>
                 </BoxContainer>
             </PanelContainer>

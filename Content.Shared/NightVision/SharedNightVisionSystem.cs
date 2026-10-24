@@ -1,4 +1,5 @@
 using Content.Shared.Actions;
+using Content.Shared.Body;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Overlays;
@@ -12,6 +13,8 @@ namespace Content.Shared.NightVision;
 public abstract partial class SharedNightVisionSystem : EntitySystem
 {
     [Dependency] private SharedActionsSystem _actions = default!;
+
+    [Dependency] private BodySystem _body = default!;
 
     [SubscribeLocalEvent]
     private void OnStartup(Entity<NightVisionComponent> ent, ref MapInitEvent args)
@@ -65,6 +68,40 @@ public abstract partial class SharedNightVisionSystem : EntitySystem
             return;
 
         args.Entities.Add(ent);
+    }
+    
+    /// <summary>
+    /// Relays the refresh into the body's organs, so organs carrying a
+    /// <see cref="NightVisionComponent"/> (Unathi eyes) count as a source.
+    /// </summary>
+    [SubscribeLocalEvent]
+    private void OnRefreshBody(Entity<BodyComponent> ent, ref RefreshNightVisionEvent args)
+    {
+        _body.RelayEvent(ent, ref args);
+    }
+
+    [SubscribeLocalEvent]
+    protected virtual void OnRefreshOrganHud(Entity<NightVisionComponent> ent, ref BodyRelayedEvent<RefreshNightVisionEvent> args)
+    {
+        if (!ent.Comp.Enabled)
+            return;
+
+        args.Args.Entities.Add(ent);
+    }
+
+    // Organs can be added or cut out mid-round, so the overlay has to be re-evaluated
+    // when the body's contents change. Without these, losing your eyes keeps the effect
+    // until something else happens to trigger a refresh.
+    [SubscribeLocalEvent]
+    private void OnOrganInserted(Entity<BodyComponent> ent, ref OrganInsertedIntoEvent args)
+    {
+        RefreshOverlay(ent);
+    }
+
+    [SubscribeLocalEvent]
+    private void OnOrganRemoved(Entity<BodyComponent> ent, ref OrganRemovedFromEvent args)
+    {
+        RefreshOverlay(ent);
     }
 
     [SubscribeLocalEvent]

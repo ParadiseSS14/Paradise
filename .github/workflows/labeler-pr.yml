@@ -1,4 +1,4 @@
-﻿name: "Labels: PR"
+name: "Labels: PR"
 
 on:
 - pull_request_target
@@ -11,4 +11,4 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/labeler@v5
+    - uses: actions/labeler@v7

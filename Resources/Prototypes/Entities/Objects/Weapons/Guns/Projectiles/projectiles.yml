@@ -84,6 +84,10 @@
             - LowImpassable
           hard: False
     - type: Projectile
+      #PARADISE EDIT START - Add aiming
+      penetrationDamageTypeRequirement:
+        - Piercing
+      #PARADISE EDIT END
       impactEffect: BulletImpactEffect
       damage:
         types:

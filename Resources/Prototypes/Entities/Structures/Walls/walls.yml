@@ -30,6 +30,7 @@
       key: walls
     - type: Damageable
       damageModifierSet: StructuralMetallic
+      penetrationThreshold: 20 # PARADISE EDIT - Add structure piercing
     - type: Injurable
       damageContainer: StructuralInorganic
     - type: Physics
@@ -77,6 +78,11 @@
       airBlockedDirection:
         - South
         - East
+    - type: Occluder
+      polygon:
+        - "-0.5,-0.5"
+        - "0.5,0.5"
+        - "0.5,-0.5"
     - type: Fixtures
       fixtures:
         fix1:

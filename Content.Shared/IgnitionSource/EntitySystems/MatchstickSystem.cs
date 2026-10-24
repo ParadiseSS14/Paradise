@@ -95,8 +95,17 @@ public sealed partial class MatchstickSystem : EntitySystem
                 continue;
 
             // Check if the match has expired.
-            if (_timing.CurTime > match.TimeMatchWillBurnOut)
-                SetState((uid, match), SmokableState.Burnt);
+            if (_timing.CurTime <= match.TimeMatchWillBurnOut)
+                continue;
+
+            // Conjured flames burn out to nothing rather than leaving a spent stick.
+            if (match.DeleteOnBurnout)
+            {
+                PredictedQueueDel(uid);
+                continue;
+            }
+
+            SetState((uid, match), SmokableState.Burnt);
         }
     }
 }

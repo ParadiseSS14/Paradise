@@ -1,5 +1,4 @@
-using System.Linq;
-using System.Numerics;
+using Content.Client._Paradise.Weapons;
 using Content.Client.Animations;
 using Content.Client.Clickable;
 using Content.Client.Items;
@@ -31,6 +30,8 @@ using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using System.Linq;
+using System.Numerics;
 using SharedGunSystem = Content.Shared.Weapons.Ranged.Systems.SharedGunSystem;
 using TimedDespawnComponent = Robust.Shared.Spawners.TimedDespawnComponent;
 
@@ -85,6 +86,38 @@ public sealed partial class GunSystem : SharedGunSystem
     }
 
     private bool _spreadOverlay;
+
+    // PARADISE EDIT START - Add aiming
+    public bool SpreadOverlayInGame
+    {
+        get => _SpreadOverlayInGame;
+        set
+        {
+            if (_SpreadOverlayInGame == value)
+                return;
+
+            _SpreadOverlayInGame = value;
+
+            if (_SpreadOverlayInGame)
+            {
+                _overlayManager.AddOverlay(new GunTargetingOverlay(
+                    EntityManager,
+                    _eyeManager,
+                    Timing,
+                    _inputManager,
+                    _player,
+                    this,
+                    TransformSystem));
+            }
+            else
+            {
+                _overlayManager.RemoveOverlay<GunTargetingOverlay>();
+            }
+        }
+    }
+
+    private bool _SpreadOverlayInGame;
+    // PARADISE EDIT END
 
     public override void Initialize()
     {

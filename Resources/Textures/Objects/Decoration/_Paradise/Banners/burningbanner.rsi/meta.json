@@ -1,0 +1,25 @@
+﻿{
+    "version": 1,
+    "size":
+    {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Ported from Paradise SS13, sprites by McRamon at commit 0deaf46e1a080baabf1753662051c8f3fbf1be0a",
+    "states":
+    [
+        {
+            "name": "burningbanner",
+            "delays": [
+                [0.2, 0.2, 0.2]
+            ]
+        },
+        {
+            "name": "burningbanner-rolled",
+            "delays": [
+                [0.2, 0.2, 0.2]
+            ]
+        }
+    ]
+}

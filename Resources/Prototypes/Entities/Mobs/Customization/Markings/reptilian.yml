@@ -384,3 +384,220 @@
   sprites:
     - sprite: Mobs/Customization/reptilian_parts.rsi
       state: tail_aquatic_wagging
+
+# region Paradise Unathi port
+
+- type: marking
+  id: LizardHeadBanded
+  bodyPart: Head
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: head_banded
+
+- type: marking
+  id: LizardHeadNarrow
+  bodyPart: Head
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: head_narrow
+
+- type: marking
+  id: LizardHeadSharp
+  bodyPart: Head
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: head_sharp
+
+- type: marking
+  id: LizardHeadPoints
+  bodyPart: Head
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: head_points
+
+- type: marking
+  id: LizardHeadTigerSharp
+  bodyPart: Head
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: head_tiger_sharp
+
+- type: marking
+  id: LizardHeadTigerFace
+  bodyPart: Head
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: head_tiger_face
+
+# Body markings - ported from unathi_body_markings.dmi
+
+- type: marking
+  id: LizardChestPoints
+  bodyPart: Chest
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: body_points
+
+- type: marking
+  id: LizardChestStripe
+  bodyPart: Chest
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: body_stripe
+
+# Horns - ported from unathi_hair.dmi
+
+- type: marking
+  id: LizardHornsAdorns
+  bodyPart: HeadTop
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: horns_adorns
+
+- type: marking
+  id: LizardHornsBig
+  bodyPart: HeadTop
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: horns_big_s
+
+- type: marking
+  id: LizardHornsChin
+  bodyPart: HeadTop
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: horns_chin
+
+- type: marking
+  id: LizardHornsDraconic
+  bodyPart: HeadTop
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: horns_drac
+
+- type: marking
+  id: LizardHornsSmall
+  bodyPart: HeadTop
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: horns_small
+
+- type: marking
+  id: LizardHornsSpikes
+  bodyPart: HeadTop
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: horns_spikes
+
+- type: marking
+  id: LizardBraid
+  bodyPart: HeadTop
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: hipbraid_s
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: hipbraid_beads_s
+
+# Frills - ported from unathi_facial_hair.dmi
+
+- type: marking
+  id: LizardFrillsCobraHood
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: cobrahood_s
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: cobrahood_webbing_s
+
+- type: marking
+  id: LizardFrillsLongSpines
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: longspines_s
+
+- type: marking
+  id: LizardFrillsShortSpines
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: shortspines_s
+
+- type: marking
+  id: LizardFrillsDraconic
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: dracfrills_s
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: dracfrills_webbing_s
+
+- type: marking
+  id: LizardFrillsDorsal
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: dorsalfrills_s
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: dorsalfrills_webbing_s
+
+- type: marking
+  id: LizardFrillsSide
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: sidefrills_s
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: sidefrills_webbing_s
+
+- type: marking
+  id: LizardFrillsAquaticWebbed
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_aquatic
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: aquaticfrills_webbing_s
+
+- type: marking
+  id: LizardFrillsBigWebbed
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_big
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: longfrills_webbing_s
+
+- type: marking
+  id: LizardFrillsShortWebbed
+  bodyPart: HeadSide
+  groupWhitelist: [Reptilian]
+  sprites:
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_short
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: shortfrills_webbing_s
+# endregion Paradise Unathi port

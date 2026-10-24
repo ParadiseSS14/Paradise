@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Client.Stylesheets;
 using Content.Shared.Atmos;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
@@ -92,11 +93,12 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
         TemperatureLabel.Text = !float.IsNaN(state.Temperature)
             ? $"{state.Temperature - Atmospherics.T0C:F1} °C ({state.Temperature:F1} K)"
             : Loc.GetString("health-analyzer-window-entity-unknown-value-text");
+        TemperatureProgressPercentage.Value = state.Temperature / 4500f;
 
         BloodLabel.Text = !float.IsNaN(state.BloodLevel)
             ? $"{state.BloodLevel * 100:F1} %"
             : Loc.GetString("health-analyzer-window-entity-unknown-value-text");
-
+        BloodProgressPercentage.Value = state.BloodLevel;
         StatusLabel.Text =
             _entityManager.TryGetComponent<MobStateComponent>(target.Value, out var mobStateComponent)
                 ? GetStatus(mobStateComponent.CurrentState)
@@ -104,7 +106,9 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
 
         // Total Damage
 
-        DamageLabel.Text = _damageable.GetTotalDamage(target.Value).ToString();
+        var totalDamage = _damageable.GetTotalDamage(target.Value);
+        DamageLabel.Text = totalDamage.ToString();
+        DamageProgressPercentage.Value = totalDamage.Float() / 200f;
 
         // Alerts
 
@@ -166,19 +170,24 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
             if (damageAmount == 0)
                 continue;
 
-            var groupTitleText = $"{Loc.GetString(
-                "health-analyzer-window-damage-group-text",
-                ("damageGroup", _prototypes.Index<DamageGroupPrototype>(damageGroupId).LocalizedName),
-                ("amount", damageAmount)
-            )}";
+            var damageGroupName = _prototypes
+                .Index<DamageGroupPrototype>(damageGroupId)
+                .LocalizedName;
+
+            // lazy
+            var groupTitleText = damageGroupName + ":";
+
+            var amountText = damageAmount.ToString();
 
             var groupContainer = new BoxContainer
             {
-                Align = AlignMode.Begin,
+                HorizontalExpand = true,
                 Orientation = LayoutOrientation.Vertical,
+                StyleClasses = { "ListView" } ,
+                Margin = new Thickness(2),
             };
 
-            groupContainer.AddChild(CreateDiagnosticGroupTitle(groupTitleText, damageGroupId));
+            groupContainer.AddChild(CreateDiagnosticGroupTitle(groupTitleText, amountText, damageGroupId));
 
             GroupsContainer.AddChild(groupContainer);
 
@@ -201,29 +210,17 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
         }
     }
 
-    private Texture GetTexture(string texture)
-    {
-        var rsiPath = new ResPath("/Textures/Objects/Devices/health_analyzer.rsi");
-        var rsiSprite = new SpriteSpecifier.Rsi(rsiPath, texture);
-
-        var rsi = _cache.GetResource<RSIResource>(rsiSprite.RsiPath).RSI;
-        if (!rsi.TryGetState(rsiSprite.RsiState, out var state))
-        {
-            rsiSprite = new SpriteSpecifier.Rsi(rsiPath, "unknown");
-        }
-
-        return _spriteSystem.Frame0(rsiSprite);
-    }
-
     private static Label CreateDiagnosticItemLabel(string text)
     {
         return new Label
         {
             Text = text,
+            MinWidth = 75,
+            StyleClasses = {"LabelSubText"},
         };
     }
 
-    private BoxContainer CreateDiagnosticGroupTitle(string text, string id)
+    private BoxContainer CreateDiagnosticGroupTitle(string type, string value, string id)
     {
         var rootContainer = new BoxContainer
         {
@@ -232,13 +229,26 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
             Orientation = LayoutOrientation.Horizontal,
         };
 
-        rootContainer.AddChild(new TextureRect
+        var valueLabel = new Label()
         {
-            SetSize = new Vector2(30, 30),
-            Texture = GetTexture(id.ToLower())
-        });
+            Text = value,
+            Margin = new Thickness(4, 0, 0, 0),
+            StyleClasses = {"LabelSubText"},
+        };
 
-        rootContainer.AddChild(CreateDiagnosticItemLabel(text));
+        var progressBar = new ProgressBar
+        {
+            HorizontalExpand = true,
+            VerticalAlignment = VAlignment.Center,
+            MaxValue = 200,
+            MinValue = 0,
+            StyleClasses = { "TguiProgressBar" },
+            Children = { valueLabel },
+            Value = float.Parse(value),
+        };
+
+        rootContainer.AddChild(CreateDiagnosticItemLabel(type));
+        rootContainer.AddChild(progressBar);
 
         return rootContainer;
     }

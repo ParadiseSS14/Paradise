@@ -109,6 +109,7 @@ stack-biomass = biomass
 stack-pyrotton = pyrotton
 stack-sharkminnow-tooth = sharkminnow tooth
 stack-goliath-hide = goliath hide
+stack-lizard-hide = lizard skin
 stack-telecrystal = telecrystal
 stack-gold-ore = gold ore
 stack-rough-diamond = rough diamond

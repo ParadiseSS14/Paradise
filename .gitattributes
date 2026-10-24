@@ -3,6 +3,10 @@
 ###############################################################################
 * text=auto
 
+# Keep YAML formatting consistent across platforms.
+*.yml  text eol=lf
+*.yaml text eol=lf
+
 ###############################################################################
 # Set default behavior for command prompt diff.
 #

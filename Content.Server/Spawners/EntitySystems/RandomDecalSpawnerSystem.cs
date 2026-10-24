@@ -94,7 +94,7 @@ public sealed partial class RandomDecalSpawnerSystem : EntitySystem
                 position = position.WithPosition(tileRef.GridIndices * grid.TileSize);
             }
 
-            var cleanable = comp.Cleanable ?? decalProto.DefaultCleanable;
+            var cleanable = comp.CleaningType ?? decalProto.CleaningType; // Paradise Change - Cleaning
 
             var rotation = Angle.Zero;
             if (comp.RandomRotation)

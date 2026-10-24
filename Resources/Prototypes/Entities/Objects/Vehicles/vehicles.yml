@@ -63,6 +63,7 @@
     - type: GravityAffected
     - type: Strap
       buckleOffset: "0,-0.05"
+      modifyBuckleDrawDepth: false
     - type: Fixtures
       fixtures:
         fix1:
@@ -76,6 +77,9 @@
             - TableLayer
     - type: StaticPrice
       price: 70
+    - type: ChairArmrest
+      armrestOverlay: wheelchair_overlay
+      armrestNoRot: true
 
 - type: entity
   id: VehicleJanicart

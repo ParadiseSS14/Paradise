@@ -16,6 +16,10 @@
       fillBaseName: soap-
       changeColor: false
     - type: Appearance
+    - type: Cleaning
+      cleaningStrength: Scrub
+      cleaningDuration: 0.5
+      playsSound: false
     - type: Item
       sprite: Objects/Specific/Janitorial/soap.rsi
       storedRotation: -90
@@ -98,6 +102,9 @@
       fillBaseName: nt-
     - type: Item
       heldPrefix: nt
+    - type: Cleaning
+      cleaningStrength: Wash
+      cleaningDuration: 2.8
     - type: Solution
       solution:
         reagents:
@@ -123,6 +130,9 @@
       heldPrefix: deluxe
     - type: Residue
       residueColor: residue-brown
+    - type: Cleaning
+      cleaningStrength: Wash
+      cleaningDuration: 2
 
 - type: entity
   parent: [Soap, BaseSyndicateContraband]
@@ -150,6 +160,9 @@
       cleanDelay: 8.0
     - type: Residue
       residueColor: residue-red
+    - type: Cleaning
+      cleaningStrength: Scrub
+      cleaningDuration: 0.5
     - type: StaticPrice
       price: 500
 
@@ -169,6 +182,9 @@
             Quantity: 2
     - type: SolutionContainerVisuals
       maxFillLevels: 0
+    - type: Cleaning
+      cleaningStrength: Scrub
+      cleaningDuration: 1
     - type: Sprite
       layers:
         - state: syndie-soaplet

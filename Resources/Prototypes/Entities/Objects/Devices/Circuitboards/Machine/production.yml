@@ -1382,3 +1382,19 @@
         GlassBeaker:
           amount: 2
           defaultPrototype: Beaker
+
+# Paradise Content Start - Washing Machine
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: WashingMachineCircuitboard
+  name: washing machine board
+  description: A machine printed circuit board for a washing machine.
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: WashingMachine
+      stackRequirements:
+        Glass: 2
+        Manipulator: 1
+# Paradise Content End

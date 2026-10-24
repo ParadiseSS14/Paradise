@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from https://github.com/ParadiseSS13/Paradise/blob/master/icons/effects/effects.dmi, https://github.com/ParadiseSS13/Paradise/blob/394c3b0108b3995bc446f3365a0d4c80d87faede/icons/effects/effects.dmi",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "tailwhip"
+        }
+    ]
+}

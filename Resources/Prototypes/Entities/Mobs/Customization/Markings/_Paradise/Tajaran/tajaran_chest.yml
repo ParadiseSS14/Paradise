@@ -1,0 +1,40 @@
+# Chest Markings
+- type: marking
+  id: TajaranBelly
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: belly_s
+
+- type: marking
+  id: TajaranCrest
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: crest_s
+
+- type: marking
+  id: TajaranFullBelly
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: fullbelly_s
+
+- type: marking
+  id: TajaranPatchChest
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_s
+
+- type: marking
+  id: TajaranPointsChest
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_s

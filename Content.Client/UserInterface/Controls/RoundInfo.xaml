@@ -1,0 +1,15 @@
+<BoxContainer
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Orientation="Vertical">
+    <PanelContainer StyleClasses="SurfacePrimary" HorizontalExpand="True">
+    <GridContainer Columns="2" HorizontalExpand="True" Margin="8">
+        <Label Name="MapName" StyleClasses="LabelSubText" Text="{Loc 'round-info-map-name'}"/>
+        <Label Name="MapNameValue" />
+        <Label Name="RoundTimer" StyleClasses="LabelSubText" Text="{Loc 'round-info-station-time'}"/>
+        <Label Name="RoundTimerValue" />
+        <Label Name="PlayerCount" StyleClasses="LabelSubText" Text="{Loc 'round-info-player-count'}"/>
+        <Label Name="PlayerCountValue" />
+    </GridContainer>
+    </PanelContainer>
+</BoxContainer>

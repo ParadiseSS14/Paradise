@@ -138,7 +138,7 @@
     - AppearanceMoth
     - BaseSpeciesMobOrganic
   id: MobMoth
-  name: Urist McFluff
+  name: Urist of the McFluff System
   components:
     - type: Damageable
       damageModifierSet: Moth
@@ -174,24 +174,6 @@
       baseWeightlessAcceleration: 1.5 # Move around more easily in space.
       baseWeightlessFriction: 1
       baseWeightlessModifier: 1
-    - type: Flammable
-      damage:
-        types:
-          Heat: 2.5 # moths burn more easily
-    - type: TemperatureDamage # Moths hate the heat and thrive in the cold.
-      heatDamageThreshold: 320
-      coldDamageThreshold: 230
-      coldDamage:
-        types:
-          Cold: 0.05 # per second, scales with temperature & other constants
-      heatDamage:
-        types:
-          Heat: 3 # per second, scales with temperature & other constants
-    - type: TemperatureSpeed
-      thresholds:
-        289: 0.9
-        275: 0.8
-        250: 0.7
 
 - type: entity
   parent: OrganBaseOrganic

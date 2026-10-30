@@ -205,10 +205,10 @@
     Shock: 1.2
 
 - type: damageModifierSet
-  id: Moth # Slightly worse at everything but cold
+  id: Moth # Vulnerable to toxins and electricity
   coefficients:
-    Cold: 0.7
-    Heat: 1.2
+    Poison: 1.5
+    Shock: 1.5
 
 - type: damageModifierSet
   id: Vox

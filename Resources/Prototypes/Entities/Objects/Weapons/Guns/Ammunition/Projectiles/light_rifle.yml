@@ -2,18 +2,19 @@
   parent: BaseBullet
   id: BulletLightRifle
   categories: [HideSpawnMenu]
-  name: bullet (.30 rifle)
+  name: bullet (7,62x41 rifle) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
-          Piercing: 19
+          Piercing: 27 #PARADISE EDIT - Weapon overhaul
+        armorPenetration: 15 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBulletPractice
   id: BulletLightRiflePractice
   categories: [HideSpawnMenu]
-  name: bullet (.30 rifle practice)
+  name: bullet (7,62x41 rifle practice) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
@@ -24,22 +25,30 @@
   parent: BaseBulletIncendiary
   id: BulletLightRifleIncendiary
   categories: [HideSpawnMenu]
-  name: bullet (.30 rifle incendiary)
+  name: bullet (7,62x41 rifle incendiary) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
-          Piercing: 14
-          Heat: 5
+          #PARADISE EDIT - Weapon overhaul
+          Piercing: 16
+          Heat: 3
+        armorPenetration: 7
+        #PARADISE EDIT END
+    #PARADISE EDIT START - Weapon overhaul
+    - type: IgniteOnCollide
+      fireStacks: 0.14
+    #PARADISE EDIT END
 
 - type: entity
   parent: BaseBulletUranium
   id: BulletLightRifleUranium
   categories: [HideSpawnMenu]
-  name: bullet (.30 rifle uranium)
+  name: bullet (7,62x41 rifle uranium) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
           Radiation: 9
-          Piercing: 10
+          Piercing: 14 #PARADISE EDIT - Weapon overhaul
+        armorPenetration: 16 #PARADISE EDIT - Weapon overhaul

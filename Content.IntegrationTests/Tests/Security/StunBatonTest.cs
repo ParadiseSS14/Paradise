@@ -16,7 +16,7 @@ namespace Content.IntegrationTests.Tests.Security;
 [TestOf(typeof(StunbatonSystem))]
 public sealed class StunBatonTests : InteractionTest
 {
-    private static readonly EntProtoId StunBatonProtoId = "Stunbaton";
+    private static readonly EntProtoId StunBatonProtoId = "StunbatonTest"; //PARADISE EDIT - Stun Overhaul
     private static readonly EntProtoId HumanProtoId = "MobHuman";
 
     // If you are rebalancing stun batons you will have to change this number.

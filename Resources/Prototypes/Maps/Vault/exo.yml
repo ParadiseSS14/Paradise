@@ -1,7 +1,7 @@
 - type: gameMap
   id: Exo
   mapName: "Exo"
-  mapPath: /Maps/exo.yml
+  mapPath: /Maps/Vault/exo.yml
   minPlayers: 40
   maxPlayers: 80
   stations:

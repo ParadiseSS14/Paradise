@@ -78,7 +78,7 @@ public sealed partial class IdCardConsoleSystem : SharedIdCardConsoleSystem
         List<ProtoId<AccessLevelPrototype>>? possibleAccess = null;
         if (component.PrivilegedIdSlot.Item is { Valid: true } item)
         {
-            privilegedIdName = Comp<MetaDataComponent>(item).EntityName;
+            privilegedIdName = Comp<IdCardComponent>(item).FullName ??  string.Empty;
             possibleAccess = _accessReader.FindAccessTags(item).ToList();
         }
 
@@ -95,8 +95,9 @@ public sealed partial class IdCardConsoleSystem : SharedIdCardConsoleSystem
                 null,
                 possibleAccess,
                 string.Empty,
+                string.Empty,
                 privilegedIdName,
-                string.Empty);
+                "Unnamed");
         }
         else
         {
@@ -120,8 +121,9 @@ public sealed partial class IdCardConsoleSystem : SharedIdCardConsoleSystem
                 targetAccessComponent.Tags.ToList(),
                 possibleAccess,
                 jobProto,
+                "Unnamed",
                 privilegedIdName,
-                Name(targetId));
+                targetIdComponent.FullName ?? "Unnamed");
         }
 
         _userInterface.SetUiState(uid, IdCardConsoleUiKey.Key, newState);

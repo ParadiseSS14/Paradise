@@ -19,6 +19,7 @@
         - Belt
     - type: AccessOverrider
       accessLevels:
+        - IDConsole
         - Armory
         - Atmospherics
         - Bar
@@ -92,6 +93,7 @@
       sprite: Objects/Tools/universal_access_configurator.rsi
     - type: AccessOverrider
       accessLevels:
+        - IDConsole
         - Armory
         - Atmospherics
         - Bar

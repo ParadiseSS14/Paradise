@@ -25,6 +25,7 @@
   supervisors: job-supervisors-captain
   access:
     - Command
+    - IDConsole
     - HeadOfPersonnel
     - Bar
     - Service

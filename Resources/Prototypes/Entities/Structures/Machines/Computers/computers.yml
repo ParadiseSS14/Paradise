@@ -671,6 +671,8 @@
   name: ID card computer
   description: Terminal for programming Nanotrasen employee ID cards to access parts of the station.
   components:
+    - type: AccessReader
+      access: [["IDConsole"]]
     - type: IdCardConsole
       privilegedIdSlot:
         name: id-card-console-privileged-id

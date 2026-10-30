@@ -1,8 +1,8 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
                       xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-                      MinSize="500 700"
-                      MaxHeight="900"
-                      MaxWidth="900">
+                      MinSize="650 700"
+                      MaxHeight="1000"
+                      MaxWidth="1000">
     <BoxContainer Orientation="Vertical" Margin="8 8">
         <PanelContainer StyleClasses="SurfacePrimary">
             <BoxContainer Orientation="Vertical">
@@ -97,9 +97,7 @@
                         </ScrollContainer>
                         <ScrollContainer HorizontalExpand="True" VerticalExpand="True" SizeFlagsStretchRatio="1">
                             <BoxContainer Name="DepartmentMenuHolder" Orientation="Vertical" HorizontalExpand="True"
-                                          VerticalExpand="True" SizeFlagsStretchRatio="1">
-
-                            </BoxContainer>
+                                          VerticalExpand="True" SizeFlagsStretchRatio="1"/>
                         </ScrollContainer>
                     </BoxContainer>
                     <Label Name="LoginText" Text="{Loc 'id-card-console-window-login-text'}"

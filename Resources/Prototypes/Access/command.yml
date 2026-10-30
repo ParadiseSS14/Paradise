@@ -10,9 +10,14 @@
   id: HeadOfPersonnel
   name: id-card-access-level-head-of-personnel
 
+- type: accessLevel
+  id: IDConsole
+  name: id-card-access-level-Id-Console
+
 - type: accessGroup
   id: Command
   tags:
+    - IDConsole
     - Captain
     - Command
     - ChiefEngineer

@@ -670,4 +670,4 @@
     - type: Sprite
       sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
       layers:
-        - state: tajtail_s
+        - state: tail-wag-icon

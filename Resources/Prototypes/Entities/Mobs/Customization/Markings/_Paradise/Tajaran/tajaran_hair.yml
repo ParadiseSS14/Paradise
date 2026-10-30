@@ -264,7 +264,7 @@
       state: straight_s
 
 - type: marking
-  id: TajaranTail
+  id: TajaranTailHair
   bodyPart: Hair
   groupWhitelist: [Tajaran]
   sprites:

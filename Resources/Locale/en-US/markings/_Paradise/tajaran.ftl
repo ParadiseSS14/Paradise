@@ -98,6 +98,9 @@ marking-TajaranSpikey = Spikey
 marking-TajaranStraight-straight_s = Straight
 marking-TajaranStraight = Straight
 
+marking-TajaranTailHair-tail_s = Tail
+marking-TajaranTailHair = Tail
+
 marking-TajaranTailedBangs-tailedbangs_s = Tailed Bangs
 marking-TajaranTailedBangs = Tailed Bangs
 
@@ -182,8 +185,11 @@ marking-TajaranPointsChest-points_s = Points
 marking-TajaranPointsChest = Points
 
 # Tail
-marking-TajaranTail-tajtail_s = Tajaran Tail
-marking-TajaranTail = Tajaran Tail
+marking-TajaranTailStriped-tajtail_s = Striped Tail
+marking-TajaranTailStriped = Striped Tail
 
-marking-TajaranTailWingler-default_wingler_s = Wingler
-marking-TajaranTailWingler = Wingler
+marking-TajaranTailShort-short_s = Short Tail
+marking-TajaranTailShort = Short Tail
+
+marking-TajaranTailTiny-tiny_s = Tiny Tail
+marking-TajaranTailTiny = Tiny Tail

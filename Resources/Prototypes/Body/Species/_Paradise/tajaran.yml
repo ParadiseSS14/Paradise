@@ -27,7 +27,7 @@
     enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: true
-      default: [TajaranTail]
+      default: [TajaranTailStriped]
     enum.HumanoidVisualLayers.TailOverlay:
       limit: 1
       required: false
@@ -124,9 +124,6 @@
         types:
           Piercing: 2
           Slash: 3
-    - type: NightVision
-      prioritized: false
-      lightingColor: "#FFFFFF05" # Darkened from the base color
     - type: TemperatureDamage
       heatDamageThreshold: 320
       coldDamageThreshold: 240
@@ -242,6 +239,13 @@
 - type: entity
   parent: [OrganTajaranVisual, OrganBaseEyes, OrganTajaranInternal]
   id: OrganTajaranEyes
+  components:
+    - type: NightVision # let NVGs override organe based night vision
+      relayOverlay: true
+      prioritized: false
+      lightingColor: "#FFFFFF22"
+    - type: BlindedByFlashing
+      eyeDamage: 3
 
 - type: entity
   parent: [OrganBaseTongue, OrganTajaranInternal]
@@ -270,11 +274,7 @@
     - type: Stomach
       specialDigestible:
         tags:
-          - Mouse
-          - Butterfly
-          - Parrot
-          - Bee
-          - Hamster
+          - SmallAnimal
 
 - type: entity
   parent: [OrganBaseLiver, OrganTajaranInternal, OrganTajaranMetabolizer]

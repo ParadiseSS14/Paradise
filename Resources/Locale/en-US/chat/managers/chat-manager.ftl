@@ -183,5 +183,6 @@ chat-speech-verb-wawa-3 = declares
 chat-speech-verb-wawa-4 = ponders
 
 # Paradise Content
+chat-speech-verb-name-tajaran = Tajaran
 chat-speech-verb-tajaran-1 = mrowls
 chat-speech-verb-tajaran-2 = yowls

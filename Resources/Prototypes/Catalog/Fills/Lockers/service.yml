@@ -102,6 +102,7 @@
           - id: SoapNT
           - id: FlashlightLantern
           - id: Plunger
+          - id: PushBroom
       - id: PlushieLizardJobJanitor
         prob: 0.02
 

@@ -16,7 +16,7 @@ public sealed partial class HumanoidProfileEditor
 {
     public event Action<List<ProtoId<GuideEntryPrototype>>>? OnOpenGuidebook;
 
-    private ColorSelectorSliders _rgbSkinColorSelector;
+    private Button _rgbSkinColorSelector;
     private List<SpeciesPrototype> _species = new();
     private List<EmoteSoundsPrototype> _voices = new();
     private static readonly ProtoId<GuideEntryPrototype> DefaultSpeciesGuidebook = "Species";
@@ -97,7 +97,6 @@ public sealed partial class HumanoidProfileEditor
         }
 
         _markingsModel.SetOrganEyeColor(Profile.Appearance.EyeColor);
-        EyeColorPicker.SetData(Profile.Appearance.EyeColor);
     }
 
     private void UpdateVoiceControls()
@@ -139,29 +138,27 @@ public sealed partial class HumanoidProfileEditor
         switch (strategy.InputType)
         {
             case SkinColorationStrategyInput.Unary:
+            {
+                if (!Skin.Visible)
                 {
-                    if (!Skin.Visible)
-                    {
-                        Skin.Visible = true;
-                        RgbSkinColorContainer.Visible = false;
-                    }
-
-                    Skin.Value = strategy.ToUnary(Profile.Appearance.SkinColor);
-
-                    break;
+                    Skin.Visible = true;
+                    RgbSkinColorContainer.Visible = false;
                 }
+
+                Skin.Value = strategy.ToUnary(Profile.Appearance.SkinColor);
+
+                break;
+            }
             case SkinColorationStrategyInput.Color:
+            {
+                if (!RgbSkinColorContainer.Visible)
                 {
-                    if (!RgbSkinColorContainer.Visible)
-                    {
-                        Skin.Visible = false;
-                        RgbSkinColorContainer.Visible = true;
-                    }
-
-                    _rgbSkinColorSelector.Color = strategy.ClosestSkinColor(Profile.Appearance.SkinColor);
-
-                    break;
+                    Skin.Visible = false;
+                    RgbSkinColorContainer.Visible = true;
                 }
+
+                break;
+            }
         }
     }
 
@@ -298,7 +295,8 @@ public sealed partial class HumanoidProfileEditor
 
     private void OnSkinColorOnValueChanged()
     {
-        if (Profile is null) return;
+        if (Profile is null)
+            return;
 
         var skin = _prototypeManager.Index<SpeciesPrototype>(Profile.Species).SkinColoration;
         var strategy = _prototypeManager.Index(skin).Strategy;
@@ -306,35 +304,32 @@ public sealed partial class HumanoidProfileEditor
         switch (strategy.InputType)
         {
             case SkinColorationStrategyInput.Unary:
+            {
+                if (!Skin.Visible)
                 {
-                    if (!Skin.Visible)
-                    {
-                        Skin.Visible = true;
-                        RgbSkinColorContainer.Visible = false;
-                    }
-
-                    var color = strategy.FromUnary(Skin.Value);
-
-                    _markingsModel.SetOrganSkinColor(color);
-                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
-
-                    break;
+                    Skin.Visible = true;
+                    RgbSkinColorContainer.Visible = false;
                 }
+
+                var color = strategy.FromUnary(Skin.Value);
+
+                _markingsModel.SetOrganSkinColor(color);
+                Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+
+                break;
+            }
             case SkinColorationStrategyInput.Color:
+            {
+                if (!RgbSkinColorContainer.Visible)
                 {
-                    if (!RgbSkinColorContainer.Visible)
-                    {
-                        Skin.Visible = false;
-                        RgbSkinColorContainer.Visible = true;
-                    }
-
-                    var color = strategy.ClosestSkinColor(_rgbSkinColorSelector.Color);
-
-                    _markingsModel.SetOrganSkinColor(color);
-                    Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
-
-                    break;
+                    Skin.Visible = false;
+                    RgbSkinColorContainer.Visible = true;
                 }
+
+                _markingsModel.SetOrganSkinColor(Profile.Appearance.SkinColor);
+
+                break;
+            }
         }
 
         ReloadProfilePreview();

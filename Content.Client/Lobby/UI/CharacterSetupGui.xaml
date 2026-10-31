@@ -7,11 +7,23 @@
     <Control>
         <PanelContainer Name="BackgroundPanel" />
         <BoxContainer Orientation="Vertical" SeparationOverride="0">
-            <BoxContainer Orientation="Horizontal" MinSize="0 40">
+            <BoxContainer Orientation="Horizontal" MinSize="0 40" SeparationOverride="4">
                 <Label Text="{Loc 'character-setup-gui-character-setup-label'}"
                        Margin="8 0 0 0" VAlign="Center"
-                       StyleClasses="LabelHeadingBigger" />
+                       StyleClasses="LabelHeadingBigger"  />
 
+                <TextureRect Name="LowQualityWarning"
+                             VerticalAlignment="Center"
+                             SetSize="16 16"
+                             Stretch="KeepAspectCentered"
+                             MouseFilter="Stop"
+                             Modulate="Orange"
+                             TexturePath="/Textures/Interface/info.svg.192dpi.png"
+                             ToolTip="{Loc 'character-setup-gui-character-setup-low-quality-disclaimer'}">
+                    <RichTextLabel Name="HighTemperatureWarningText"
+                                   Visible="False"
+                                   Text="Temperature too high." />
+                </TextureRect>
                 <Button Name="StatsButton" HorizontalExpand="True"
                         Text="{Loc 'character-setup-gui-character-setup-stats-button'}"
                         StyleClasses="ButtonBig"
@@ -28,12 +40,12 @@
                         Text="{Loc 'character-setup-gui-character-setup-close-button'}"
                         StyleClasses="ButtonBig"/>
             </BoxContainer>
-            <PanelContainer StyleClasses="highlight" MinHeight="2" />
+            <PanelContainer StyleClasses="SeperatorAccented" MinHeight="2" />
             <BoxContainer Orientation="Horizontal" VerticalExpand="True" SeparationOverride="0">
-                <ScrollContainer MinSize="325 0" Margin="5 5 0 0">
+                <ScrollContainer MinSize="325 0" Margin="8">
                     <BoxContainer Name="Characters" Orientation="Vertical" />
                 </ScrollContainer>
-                <PanelContainer MinSize="2 0" StyleClasses="highlight">
+                <PanelContainer MinSize="2 0" StyleClasses="SeperatorAccented">
                 </PanelContainer>
                 <BoxContainer Name="CharEditor" HorizontalExpand="True" />
             </BoxContainer>

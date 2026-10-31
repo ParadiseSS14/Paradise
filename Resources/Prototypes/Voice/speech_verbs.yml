@@ -201,14 +201,14 @@
 # Paradise Content
 - type: speechVerb
   id: Tajaran
-  name: chat-speech-verb-tajaran
+  name: chat-speech-verb-name-tajaran
   speechVerbStrings:
     - chat-speech-verb-tajaran-1
     - chat-speech-verb-tajaran-2
 
 - type: speechVerb
   id: TajaranQuestion
-  name: chat-speech-verb-name-exclamation
+  name: chat-speech-verb-name-question
   speechVerbStrings:
     - chat-speech-verb-tajaran-1
 

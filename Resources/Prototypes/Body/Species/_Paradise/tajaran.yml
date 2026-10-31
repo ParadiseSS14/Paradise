@@ -273,11 +273,6 @@
 - type: entity
   parent: [OrganBaseStomach, OrganTajaranInternal, OrganTajaranMetabolizer]
   id: OrganTajaranStomach
-  components:
-    - type: Stomach
-      specialDigestible:
-        tags:
-          - SmallAnimal
 
 - type: entity
   parent: [OrganBaseLiver, OrganTajaranInternal, OrganTajaranMetabolizer]

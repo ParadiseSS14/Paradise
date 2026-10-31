@@ -6,9 +6,9 @@
   defaultSkinTone: "#b5a69b"
   dollPrototype: AppearanceTajaran
   skinColoration: TajaranColors
-  #maleFirstNames: names_tajaran_male # TODO: Make names
-  #femaleFirstNames: names_tajaran_female
-  #lastNames: names_tajaran_last
+  maleFirstNames: NamesTajaranFirst
+  femaleFirstNames: NamesTajaranFirst
+  lastNames: NamesTajaranLast
   defaultSoundsBySex:
     - MaleTajaran
     - FemaleTajaran

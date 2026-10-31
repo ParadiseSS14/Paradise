@@ -120,8 +120,15 @@ def check_path_for_git():
         print("git not found in PATH. Ensure git is installed and in PATH and run this program again!")
         exit(1)
 
+def enable_ignore_revs_file():
+    """
+    Add the .git-blame-ignore-revs file to the gitconfig.
+    """
+    run_command(["git", "config", "blame.ignoreRevsFile", ".git-blame-ignore-revs"])
+
 if __name__ == '__main__':
     check_path_for_git()
     check_for_zip_download()
     install_hooks()
+    enable_ignore_revs_file()
     update_submodules()

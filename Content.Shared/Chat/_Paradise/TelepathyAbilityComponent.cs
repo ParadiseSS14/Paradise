@@ -1,15 +1,14 @@
 using Content.Shared.Actions;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization;
 
 namespace Content.Shared.Chat._Paradise;
 
 /// <summary>
-///   Telepathic chat component
+///   Telepathy ability component
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-public sealed partial class TelepathicChatComponent : Component
+public sealed partial class TelepathyAbilityComponent : Component
 {
     /// <summary>
     /// String message to use when the sender is obscured
@@ -91,7 +90,7 @@ public sealed partial class TelepathyState
 /// </summary>
 public sealed partial class TelepathyUiState
 {
-    public TelepathicChatUiKey? UiKey;
+    public TelepathyAbilityUiKey? UiKey;
     public NetEntity? Actor;
     public Guid SessionID;
 }

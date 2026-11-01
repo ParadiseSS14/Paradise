@@ -6,12 +6,12 @@ using Robust.Shared.Console;
 namespace Content.Server.Chat.Commands._Paradise;
 
 [AnyCommand]
-internal sealed partial class TelepathicChatReplyCommand : LocalizedEntityCommands
+internal sealed partial class TelepathyReplyCommand : LocalizedEntityCommands
 {
-    public const string CommandName = "telepathic_chat_reply";
+    public const string CommandName = "telepathy_reply";
 
     [Dependency] private EntityManager _entMan = default!;
-    [Dependency] private TelepathicChatSystem _telepathic = default!;
+    [Dependency] private TelepathyAbilitySystem _telepathy = default!;
 
     public override string Command => CommandName;
 
@@ -25,18 +25,18 @@ internal sealed partial class TelepathicChatReplyCommand : LocalizedEntityComman
 
         var sender = _entMan.GetEntity(senderNet);
 
-        if (!_entMan.HasComponent<TelepathicChatComponent>(sender))
+        if (!_entMan.HasComponent<TelepathyAbilityComponent>(sender))
         {
-            _telepathic.LogInvalidReply(receiver, args[0]);
+            _telepathy.LogInvalidReply(receiver, args[0]);
             return;
         }
 
         // Using a simple token to prevent command spam
-        if (!_telepathic.CheckOfferValid(sender, receiver))
+        if (!_telepathy.CheckOfferValid(sender, receiver))
         {
             return;
         }
 
-        _telepathic.OpenComposeFor(receiver, sender);
+        _telepathy.OpenComposeFor(receiver, sender);
     }
 }

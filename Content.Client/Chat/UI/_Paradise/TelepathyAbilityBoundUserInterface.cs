@@ -4,12 +4,12 @@ using Robust.Client.UserInterface;
 
 namespace Content.Client.Chat.UI._Paradise;
 [UsedImplicitly]
-public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
+public sealed partial class TelepathyAbilityBoundUserInterface(EntityUid owner, Enum uiKey) : BoundUserInterface(owner, uiKey)
 {
     [ViewVariables]
     private readonly Enum _uiKey = uiKey;
-    private TelepathicChatMenu? _menu;
-    private TelepathicChatComposeWindow? _composeWindow;
+    private TelepathyAbilityMenu? _menu;
+    private TelepathyAbilityComposeWindow? _composeWindow;
     private NetEntity? _targetEntity;
     private List<(NetEntity Uid, string Name)>? _targetsList;
 
@@ -17,13 +17,13 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
     {
         base.Open();
 
-        if (UiKey.Equals(TelepathicChatUiKey.Send) || UiKey.Equals(TelepathicChatUiKey.Offer))
+        if (UiKey.Equals(TelepathyAbilityUiKey.Send) || UiKey.Equals(TelepathyAbilityUiKey.Offer))
         {
-            _menu = this.CreateWindow<TelepathicChatMenu>();
+            _menu = this.CreateWindow<TelepathyAbilityMenu>();
         }
 
-        if (UiKey.Equals(TelepathicChatUiKey.Compose))
-            _composeWindow = this.CreateWindow<TelepathicChatComposeWindow>();
+        if (UiKey.Equals(TelepathyAbilityUiKey.Compose))
+            _composeWindow = this.CreateWindow<TelepathyAbilityComposeWindow>();
 
         _menu?.OnSelectPressed += OnPressedSelect;
         _menu?.OnTargetSelected += OnSelectTarget;
@@ -35,7 +35,7 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
     {
         base.UpdateState(state);
 
-        if (state is not TelepathicTargetUIState targetState)
+        if (state is not TelepathyTargetUIState targetState)
             return;
 
         _targetsList = targetState.TargetsList;
@@ -47,7 +47,7 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
         if (_targetEntity is not { } targetEntity)
             return;
 
-        SendPredictedMessage(new TelepathicTargetSelectedMsg(targetEntity));
+        SendPredictedMessage(new TelepathyTargetSelectedMsg(targetEntity));
         _menu?.Close();
     }
 
@@ -63,13 +63,13 @@ public sealed partial class TelepathicChatBoundUserInterface(EntityUid owner, En
 
     private void OnEnteredText(string message)
     {
-        SendPredictedMessage(new TelepathicTextEnteredMsg(message));
+        SendPredictedMessage(new TelepathyTextEnteredMsg(message));
         _composeWindow?.Close();
     }
 
     public void Reload()
     {
-        if (_uiKey is not TelepathicChatUiKey)
+        if (_uiKey is not TelepathyAbilityUiKey)
             return;
 
         if (_targetsList is not { } targets || targets.Count == 0)

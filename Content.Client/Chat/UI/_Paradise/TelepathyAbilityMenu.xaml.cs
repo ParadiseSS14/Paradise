@@ -6,13 +6,13 @@ using Robust.Client.UserInterface.XAML;
 namespace Content.Client.Chat.UI._Paradise;
 
 [GenerateTypedNameReferences]
-public sealed partial class TelepathicChatMenu : FancyWindow
+public sealed partial class TelepathyAbilityMenu : FancyWindow
 {
     public event Action? OnSelectPressed;
     public event Action<NetEntity>? OnTargetSelected;
     public event Action? OnTargetDeselected;
 
-    public TelepathicChatMenu()
+    public TelepathyAbilityMenu()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);

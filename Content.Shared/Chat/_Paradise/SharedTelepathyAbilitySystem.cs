@@ -4,19 +4,19 @@ using Content.Shared.Cloning.Events;
 
 namespace Content.Shared.Chat._Paradise;
 
-public sealed partial class SharedTelepathicChatSystem : EntitySystem
+public sealed partial class SharedTelepathyAbilitySystem : EntitySystem
 {
     [Dependency] private SharedActionsSystem _actions = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        SubscribeLocalEvent<TelepathicChatComponent, MapInitEvent>(OnInit);
-        SubscribeLocalEvent<TelepathicChatComponent, ComponentShutdown>(OnShutdown);
-        SubscribeLocalEvent<TelepathicChatComponent, CloningEvent>(OnClone);
+        SubscribeLocalEvent<TelepathyAbilityComponent, MapInitEvent>(OnInit);
+        SubscribeLocalEvent<TelepathyAbilityComponent, ComponentShutdown>(OnShutdown);
+        SubscribeLocalEvent<TelepathyAbilityComponent, CloningEvent>(OnClone);
     }
 
-    private void OnInit(Entity<TelepathicChatComponent> entity, ref MapInitEvent args)
+    private void OnInit(Entity<TelepathyAbilityComponent> entity, ref MapInitEvent args)
     {
         if (!TryComp(entity, out ActionsComponent? comp))
             return;
@@ -25,19 +25,19 @@ public sealed partial class SharedTelepathicChatSystem : EntitySystem
         _actions.AddAction(entity, ref entity.Comp.OfferActionEntity, entity.Comp.OfferAction, component: comp);
     }
 
-    private void OnShutdown(Entity<TelepathicChatComponent> entity, ref ComponentShutdown args)
+    private void OnShutdown(Entity<TelepathyAbilityComponent> entity, ref ComponentShutdown args)
     {
         _actions.RemoveAction(entity.Owner, entity.Comp.SendActionEntity);
         _actions.RemoveAction(entity.Owner, entity.Comp.OfferActionEntity);
     }
 
-    private void OnClone(Entity<TelepathicChatComponent> ent, ref CloningEvent args)
+    private void OnClone(Entity<TelepathyAbilityComponent> ent, ref CloningEvent args)
     {
         if (!args.Settings.EventComponents.Contains(Factory.GetRegistration(ent.Comp.GetType()).Name))
             return;
 
         // Make sure to set the datafields before adding the component so that the correct action gets spawned on map init.
-        var targetComp = Factory.GetComponent<TelepathicChatComponent>();
+        var targetComp = Factory.GetComponent<TelepathyAbilityComponent>();
         targetComp.SendAction = ent.Comp.SendAction;
         targetComp.OfferAction = ent.Comp.OfferAction;
         AddComp(args.CloneUid, targetComp, true);

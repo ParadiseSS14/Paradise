@@ -2,40 +2,40 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared.Chat._Paradise;
 [Serializable, NetSerializable]
-public sealed class TelepathicTargetSelectedMsg : BoundUserInterfaceMessage
+public sealed class TelepathyTargetSelectedMsg : BoundUserInterfaceMessage
 {
     public readonly NetEntity? Target;
 
-    public TelepathicTargetSelectedMsg(NetEntity target)
+    public TelepathyTargetSelectedMsg(NetEntity target)
     {
         Target = target;
     }
 }
 
 [Serializable, NetSerializable]
-public sealed class TelepathicTextEnteredMsg : BoundUserInterfaceMessage
+public sealed class TelepathyTextEnteredMsg : BoundUserInterfaceMessage
 {
     public readonly string Message;
 
-    public TelepathicTextEnteredMsg(string message)
+    public TelepathyTextEnteredMsg(string message)
     {
         Message = message;
     }
 }
 
 [Serializable, NetSerializable]
-public sealed class TelepathicTargetUIState : BoundUserInterfaceState
+public sealed class TelepathyTargetUIState : BoundUserInterfaceState
 {
     public readonly List<(NetEntity Uid, string Name)> TargetsList;
 
-    public TelepathicTargetUIState(List<(NetEntity Uid, string Name)> targetsList)
+    public TelepathyTargetUIState(List<(NetEntity Uid, string Name)> targetsList)
     {
         TargetsList = targetsList;
     }
 }
 
 [Serializable, NetSerializable]
-public enum TelepathicChatUiKey : byte
+public enum TelepathyAbilityUiKey : byte
 {
     Send,
     Offer,

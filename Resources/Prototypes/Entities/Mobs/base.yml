@@ -281,20 +281,20 @@
       lightingColor: "#FFFFFF15" # Basically makes it impossible for things to be "Pitch black" but can still be dark.
 
 # Paradise Change
-# Used for mobs that can use Telepathy
+# Used for mobs that can use the Telepathy Ability
 - type: entity
   save: false
   id: MobTelepathic
   abstract: true
   components:
-    - type: TelepathicChat
+    - type: TelepathyAbility
     - type: UserInterface
       interfaces:
-        enum.TelepathicChatUiKey.Send:
-          type: TelepathicChatBoundUserInterface
-        enum.TelepathicChatUiKey.Offer:
-          type: TelepathicChatBoundUserInterface
-        enum.TelepathicChatUiKey.Compose:
-          type: TelepathicChatBoundUserInterface
+        enum.TelepathyAbilityUiKey.Send:
+          type: TelepathyAbilityBoundUserInterface
+        enum.TelepathyAbilityUiKey.Offer:
+          type: TelepathyAbilityBoundUserInterface
+        enum.TelepathyAbilityUiKey.Compose:
+          type: TelepathyAbilityBoundUserInterface
           interactionRange: 0 # Disables BUI range check
 

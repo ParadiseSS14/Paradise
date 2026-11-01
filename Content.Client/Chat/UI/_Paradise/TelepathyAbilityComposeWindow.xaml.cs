@@ -6,11 +6,11 @@ using Robust.Client.UserInterface.XAML;
 namespace Content.Client.Chat.UI._Paradise;
 
 [GenerateTypedNameReferences]
-public sealed partial class TelepathicChatComposeWindow : FancyWindow
+public sealed partial class TelepathyAbilityComposeWindow : FancyWindow
 {
     public event Action<string>? OnTextEntered;
 
-    public TelepathicChatComposeWindow()
+    public TelepathyAbilityComposeWindow()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);

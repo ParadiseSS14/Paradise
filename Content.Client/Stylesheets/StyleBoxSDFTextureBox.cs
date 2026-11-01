@@ -3,6 +3,7 @@ using Content.Client.Guidebook.Richtext;
 using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Client.Stylesheets;
 
@@ -10,6 +11,7 @@ namespace Content.Client.Stylesheets;
 public sealed partial class StyleBoxSDFTextureBox : StyleBox
 {
     [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
 
     public Texture? Texture { get; set; }
@@ -19,13 +21,20 @@ public sealed partial class StyleBoxSDFTextureBox : StyleBox
 
     public Vector4 CornerRadius { get; set; } = new(0f, 0f, 0f, 0f);
 
-    private ShaderInstance? _shaderInstance;
+    private FrameShaderInstancePool<DrawParams>? _shaders;
     public ProtoId<ShaderPrototype>? Shader
     {
-        set => _shaderInstance = _prototype.TryIndex(value, out var proto)
-            ? proto.InstanceUnique()
+        set => _shaders = _prototype.TryIndex(value, out var proto)
+            ? new FrameShaderInstancePool<DrawParams>(proto)
             : null;
     }
+
+    private readonly record struct DrawParams(
+        Vector2 Size,
+        float Tiling,
+        Vector4 Radius,
+        Texture? Texture,
+        Color Modulate);
 
     private readonly ProtoId<ShaderPrototype> _UISDFShaderName = "UIShaderSDFTexture";
 
@@ -60,18 +69,26 @@ public sealed partial class StyleBoxSDFTextureBox : StyleBox
 
     protected override void DoDraw(DrawingHandleScreen handle, UIBox2 box, float uiScale)
     {
-        Shader = _UISDFShaderName; // Fixes a shared data between instances bug, but I'm uncomfortable with it too.
-
-        handle.UseShader(_shaderInstance);
-        _shaderInstance?.SetParameter("size", new Vector2(box.Width, box.Height));
-        _shaderInstance?.SetParameter("tiling", UiTiling);
-        _shaderInstance?.SetParameter("radius", CornerRadius);
-        if (Texture != null)
+        if (_shaders != null)
         {
-            _shaderInstance?.SetParameter("mainTex", Texture);
-            _shaderInstance?.SetParameter("texSize", new Vector2(Texture.Width, Texture.Height));
+            var p = new DrawParams(new Vector2(box.Width, box.Height), UiTiling, CornerRadius, Texture, Modulate);
+
+            if (_shaders.Next(_timing.CurFrame, p, out var shader))
+            {
+                shader.SetParameter("size", p.Size);
+                shader.SetParameter("tiling", p.Tiling);
+                shader.SetParameter("radius", p.Radius);
+                if (p.Texture != null)
+                {
+                    shader.SetParameter("mainTex", p.Texture);
+                    shader.SetParameter("texSize", new Vector2(p.Texture.Width, p.Texture.Height));
+                }
+                shader.SetParameter("colMod", p.Modulate);
+            }
+
+            handle.UseShader(shader);
         }
-        _shaderInstance?.SetParameter("colMod", Modulate);
+
         handle.DrawRect(box, Color.White);
         handle.UseShader(null);
 

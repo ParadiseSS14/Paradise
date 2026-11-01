@@ -4,6 +4,7 @@ using Content.Client.Stylesheets.Colorspace;
 using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Client.Stylesheets;
 
@@ -11,6 +12,7 @@ namespace Content.Client.Stylesheets;
 public sealed partial class StyleBoxIconBox : StyleBox
 {
     [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public Color HighlightColor { get; set; }
     public Color UnhighlitColor { get; set; }
@@ -18,7 +20,15 @@ public sealed partial class StyleBoxIconBox : StyleBox
 
     public float BorderThickness { get; set; }
 
-    private ShaderInstance? _shaderInstance;
+    private FrameShaderInstancePool<DrawParams>? _shaders;
+
+    private readonly record struct DrawParams(
+        Vector2 Size,
+        Color HighlightColor,
+        Color UnhighlitColor,
+        Color BackgroundColor,
+        Texture IconTex,
+        float HighlightProgress);
 
     private bool _isHovered;
 
@@ -29,8 +39,8 @@ public sealed partial class StyleBoxIconBox : StyleBox
 
     public ProtoId<ShaderPrototype>? Shader
     {
-        set => _shaderInstance = _prototype.TryIndex(value, out var proto)
-            ? proto.InstanceUnique()
+        set => _shaders = _prototype.TryIndex(value, out var proto)
+            ? new FrameShaderInstancePool<DrawParams>(proto)
             : null;
     }
 
@@ -60,16 +70,32 @@ public sealed partial class StyleBoxIconBox : StyleBox
 
     protected override void DoDraw(DrawingHandleScreen handle, UIBox2 box, float uiScale)
     {
-        Shader = _IconBoxShader; // Fixes a shared data between instances bug, but I'm uncomfortable with it too.
+        if (_textureRef == null)
+            return;
 
-        handle.UseShader(_shaderInstance);
-        if(_textureRef == null) return;
-        _shaderInstance?.SetParameter("size", new Vector2(box.Width, box.Height));
-        _shaderInstance?.SetParameter("highlightColor", HighlightColor);
-        _shaderInstance?.SetParameter("unhighlitColor", UnhighlitColor);
-        _shaderInstance?.SetParameter("backgroundColor", BackgroundColor.NudgeLightness(0.5f));
-        _shaderInstance?.SetParameter("iconTex", _textureRef);
-        _shaderInstance?.SetParameter("highlightProgress", _isHovered ? 1.0f : 0.0f);
+        if (_shaders != null)
+        {
+            var p = new DrawParams(
+                new Vector2(box.Width, box.Height),
+                HighlightColor,
+                UnhighlitColor,
+                BackgroundColor,
+                _textureRef,
+                _isHovered ? 1.0f : 0.0f);
+
+            if (_shaders.Next(_timing.CurFrame, p, out var shader))
+            {
+                shader.SetParameter("size", p.Size);
+                shader.SetParameter("highlightColor", p.HighlightColor);
+                shader.SetParameter("unhighlitColor", p.UnhighlitColor);
+                shader.SetParameter("backgroundColor", p.BackgroundColor.NudgeLightness(0.5f));
+                shader.SetParameter("iconTex", p.IconTex);
+                shader.SetParameter("highlightProgress", p.HighlightProgress);
+            }
+
+            handle.UseShader(shader);
+        }
+
         handle.DrawRect(box, Color.White);
         handle.UseShader(null);
 

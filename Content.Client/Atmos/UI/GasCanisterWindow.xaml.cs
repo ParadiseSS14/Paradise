@@ -62,11 +62,11 @@ namespace Content.Client.Atmos.UI
         {
             if (status)
             {
-                PortStatusLabel.TexturePath = "/Textures/Interface/check mark.png";
+                PortStatusLabel.TexturePath = "/Textures/Interface/checkmark.png";
             }
             else
             {
-                PortStatusLabel.TexturePath = "/Textures/Interface/x mark.png";
+                PortStatusLabel.TexturePath = "/Textures/Interface/xmark.png";
             }
         }
 

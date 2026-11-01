@@ -28,6 +28,6 @@ public sealed partial class NanoTaskItemControl : Control
         DoneButton.OnPressed += _ => OnDonePressed?.Invoke(item.Id);
 
         MainButton.Disabled = item.Data.IsTaskDone;
-        DoneButton.Text = item.Data.IsTaskDone ? Loc.GetString("nano-task-ui-revert-done") : Loc.GetString("nano-task-ui-done");
+        DoneButton.ToolTip = item.Data.IsTaskDone ? Loc.GetString("nano-task-ui-revert-done") : Loc.GetString("nano-task-ui-done");
     }
 }

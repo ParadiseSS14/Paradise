@@ -33,8 +33,8 @@
 
             <BoxContainer Orientation="Vertical" HorizontalExpand="True" SeparationOverride="10" Margin="10">
                 <menuBar:GameTopMenuBar Name="TopBar" HorizontalExpand="True" Access="Public" />
-                <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" SizeFlagsStretchRatio="0.35">
-                    <Label Text="TOJO: Please Add Round Info here. UI exists for a reason. Not everything should be diagetic." MaxWidth="100" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+                    <controls:RoundInfo Name="RoundInfo"/>
                 </BoxContainer>
                 <chat:ChatBox VerticalExpand="True" HorizontalExpand="True" Name="Chat" Access="Protected" MinSize="0 0"/>
             </BoxContainer>

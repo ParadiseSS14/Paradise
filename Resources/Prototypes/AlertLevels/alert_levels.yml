@@ -3,7 +3,7 @@
   name: alert-level-green
   announcement: alert-level-green-announcement
   instructions: alert-level-green-instructions
-  color: Green
+  color: LawnGreen
   emergencyLightColor: LawnGreen
   shuttleTime: 600
 

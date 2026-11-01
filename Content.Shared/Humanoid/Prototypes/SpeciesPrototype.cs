@@ -77,6 +77,9 @@ public sealed partial class SpeciesPrototype : IPrototype
     public ProtoId<LocalizedDatasetPrototype> LastNames { get; private set; } = "NamesLast";
 
     [DataField]
+    public ProtoId<LocalizedDatasetPrototype> MiddleNames { get; private set; } = "NamesMiddle";
+
+    [DataField]
     public SpeciesNaming Naming { get; private set; } = SpeciesNaming.FirstLast;
 
     [DataField]
@@ -126,4 +129,5 @@ public enum SpeciesNaming : byte
     FirstLast,
     FirstDashFirst,
     TheFirstofLast,
+    NianNames,
 }

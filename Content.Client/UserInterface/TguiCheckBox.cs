@@ -46,6 +46,19 @@ namespace Content.Client.UserInterface
             }
         }
 
+        private bool _styled;
+
+        protected override void StylePropertiesChanged()
+        {
+            base.StylePropertiesChanged();
+
+            if (_styled || !TryGetStyleProperty(StyleClassCheckedColor, out Color _))
+                return;
+
+            _styled = true;
+            TextureRect.ModulateSelfOverride = Pressed ? CheckedColor : UncheckedColor;
+        }
+
         /// <summary>
         /// Should the checkbox be to the left or the right of the label.
         /// </summary>
@@ -148,6 +161,8 @@ namespace Content.Client.UserInterface
 
         private void TryTween(Color oldColor, Color newColor)
         {
+            if (!_styled)
+                return;
             var tween = TweenExtensions.Tween(
                     oldColor,
                     newColor,

@@ -35,6 +35,16 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
             ContentMarginRightOverride = 4,
         };
 
+        var roundedButtonThin = new StyleBoxSDFBox()
+        {
+            CornerRadius = new Vector4(2f),
+            BackgroundColor = sheet.PrimaryPalette.Base,
+            ContentMarginTopOverride = 2,
+            ContentMarginBottomOverride = 2,
+            ContentMarginLeftOverride = 2,
+            ContentMarginRightOverride = 2,
+        };
+
         var transparentButton = new StyleBoxSDFBox()
         {
             CornerRadius = new Vector4(5f),
@@ -56,7 +66,7 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
                 .Box(roundedButton),
             CButton()
                 .Class(StyleClass.ButtonSmall)
-                .Box(StyleBoxHelpers.SmallStyleBox(sheet)),
+                .Box(roundedButtonThin),
             CButton()
                 .Class(StyleClass.ButtonSmall)
                 .ParentOf(E<Label>())
@@ -83,10 +93,18 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
             CButton().Class("transparentButton").PseudoHovered().Box(roundedButton),
 
             E<CloseContainerButton>().Class("closeButton").ForkedBox(closeButtonStyleBox),
-            E<CloseContainerButton>().Class("closeButton").Pseudo(ContainerButton.StylePseudoClassNormal)
+            E<CloseContainerButton>()
+                .Class("closeButton")
+                .Pseudo(ContainerButton.StylePseudoClassNormal)
                 .Prop(Control.StylePropertyModulateSelf, Color.White),
-            E<CloseContainerButton>().Class("closeButton").Pseudo(ContainerButton.StylePseudoClassHover)
+            E<CloseContainerButton>()
+                .Class("closeButton")
+                .Pseudo(ContainerButton.StylePseudoClassHover)
                 .Prop(Control.StylePropertyModulateSelf, Color.White),
+
+            E<TextureButton>()
+                .Class(StyleClass.SubColored)
+                .Prop(Control.StylePropertyModulateSelf, sheet.PanelPalette.Text),
 
             // Have disabled button's text be faded
             CButton().PseudoDisabled().ParentOf(E<Label>()).FontColor(Color.FromHex("#E5E5E581")),
@@ -99,6 +117,31 @@ public sealed class ButtonSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet
         MakeButtonRules(rules, sheet.PrimaryPalette, null);
         MakeButtonRules(rules, sheet.PrimaryPalette, StyleClass.Positive);
         MakeButtonRules(rules, sheet.PrimaryPalette, StyleClass.Negative);
+
+        var subColor = sheet.PanelPalette.Text;
+
+        rules.AddRange([
+            E<TextureButton>()
+                .Class(StyleClass.SubColored)
+                .PseudoNormal()
+                .Modulate(subColor),
+
+            E<TextureButton>()
+                .Class(StyleClass.SubColored)
+                .PseudoHovered()
+                .Modulate(subColor.NudgeLightness(0.125f)),
+
+            E<TextureButton>()
+                .Class(StyleClass.SubColored)
+                .PseudoPressed()
+                .Modulate(subColor.NudgeLightness(-0.2f)),
+
+            E<TextureButton>()
+                .Class(StyleClass.SubColored)
+                .PseudoDisabled()
+                .Modulate(subColor.NudgeLightness(-0.35f)),
+        ]);
+
 
         return rules.ToArray();
     }

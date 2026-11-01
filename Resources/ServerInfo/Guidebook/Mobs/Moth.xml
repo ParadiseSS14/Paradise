@@ -1,15 +1,19 @@
 <Document>
-  # Moth People
+  # Nian
 
   <Box>
     <GuideEntityEmbed Entity="AppearanceMoth" Caption=""/>
   </Box>
 
-  They can eat cotton, fabrics and clothing, but virtually none of the food that others would consider "edible". They prefer a somewhat lower temperature range than humans.
+  Nianae are large bipedal invertebrates that come from an unknown homeworld. Known for spendthrift behavior, the Nian civilization has been pressed to the fore of developed
+  space in an effort to resolve material shortages in homeworld sectors.
+
+  Unlike most species in the galactic fold, Nian do not recognize the authority of the Trans-Solar Federation: having instead established close diplomatic relationships with
+  their splinter faction, the USSP.
+
+  They can eat cotton, fabrics and clothing, but virtually none of the food that others would consider "edible". They are more vulnerable to poisons and electricution.
   Their Insect Blood can't be metabolised from Iron like normal blood.
 
   Their wings give them better acceleration if there is no gravity on the station, but they still can't move without equipment when floating out in space.
-
-  They take [color=#1e90ff]30% less Cold damage[/color] but [color=#ffa500]30% more Heat damage, and catch on fire more easily[/color].
 
 </Document>

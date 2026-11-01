@@ -87,6 +87,7 @@ public sealed class LabelSheetlet : Sheetlet<PalettedStylesheet>
                 .Prop(Label.StylePropertyFont, robotoMonoBold14),
 
             E<Label>().Class("InspectionUILabel").Prop(Label.StylePropertyFont, pixellari32),
+            E<OutputPanel>().Font(sheet.BaseFont.GetFont(12, FontKind.Bold)),
         ];
     }
 }

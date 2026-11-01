@@ -79,12 +79,13 @@ public sealed partial class IdCardConsoleComponent : Component
     [Serializable, NetSerializable]
     public sealed class IdCardConsoleBoundUserInterfaceState : BoundUserInterfaceState
     {
+        public readonly string PrivilegedIdNameWithSuffix;
         public readonly string PrivilegedIdName;
         public readonly bool IsPrivilegedIdPresent;
         public readonly bool IsPrivilegedIdAuthorized;
         public readonly bool IsTargetIdPresent;
         public string TargetIdName;
-        public readonly string? TargetIdFullName;
+        public readonly string? TargetIdNameWithSuffix;
         public string? TargetIdJobTitle;
         public readonly List<ProtoId<AccessLevelPrototype>>? TargetIdAccessList;
         public readonly List<ProtoId<AccessLevelPrototype>>? AllowedModifyAccessList;
@@ -93,22 +94,24 @@ public sealed partial class IdCardConsoleComponent : Component
         public IdCardConsoleBoundUserInterfaceState(bool isPrivilegedIdPresent,
             bool isPrivilegedIdAuthorized,
             bool isTargetIdPresent,
-            string? targetIdFullName,
+            string? targetIdNameWithSuffix,
             string? targetIdJobTitle,
             List<ProtoId<AccessLevelPrototype>>? targetIdAccessList,
             List<ProtoId<AccessLevelPrototype>>? allowedModifyAccessList,
             ProtoId<JobPrototype> targetIdJobPrototype,
+            string privilegedIdNameWithSuffix,
             string privilegedIdName,
             string targetIdName)
         {
             IsPrivilegedIdPresent = isPrivilegedIdPresent;
             IsPrivilegedIdAuthorized = isPrivilegedIdAuthorized;
             IsTargetIdPresent = isTargetIdPresent;
-            TargetIdFullName = targetIdFullName;
+            TargetIdNameWithSuffix = targetIdNameWithSuffix;
             TargetIdJobTitle = targetIdJobTitle;
             TargetIdAccessList = targetIdAccessList;
             AllowedModifyAccessList = allowedModifyAccessList;
             TargetIdJobPrototype = targetIdJobPrototype;
+            PrivilegedIdNameWithSuffix = privilegedIdNameWithSuffix;
             PrivilegedIdName = privilegedIdName;
             TargetIdName = targetIdName;
         }

@@ -41,7 +41,9 @@ namespace Content.Client.PDA
 
 
         private int _currentView;
+
         private TweenManager? _tweenManager;
+        private TweenInstance? _tweenInstance;
 
         public event Action<EntityUid>? OnProgramItemPressed;
         public event Action<EntityUid>? OnUninstallButtonPressed;
@@ -72,7 +74,6 @@ namespace Content.Client.PDA
                 // ProgramListButton.IsCurrent = false;
                 // SettingsButton.IsCurrent = true;
                 // ProgramTitle.IsCurrent = false;
-
                 PlayTransition(SettingsView);
             };
 
@@ -314,17 +315,19 @@ namespace Content.Client.PDA
 
         private void PlayTransition(int showScreen)
         {
+            _tweenInstance = SequentialTweenInstanceBuilder.New()
+                .Append(Fade(Color.White, Color.Transparent))
+                .AppendCallback(() =>
+                {
+                    ChangeView(showScreen);
+                })
+                .AppendTime(0.25f)
+                .Append(Fade(Color.Transparent, Color.White))
+                .AppendTime(0.25f)
+                .Build();
+
             _tweenManager?.Play(
-                SequentialTweenInstanceBuilder.New()
-                    .Append(Fade(Color.White, Color.Transparent))
-                    .AppendCallback(() =>
-                    {
-                        ChangeView(showScreen);
-                    })
-                    .AppendTime(0.25f)
-                    .Append(Fade(Color.Transparent, Color.White))
-                    .AppendTime(0.25f)
-                    .Build()
+                _tweenInstance
             );
         }
     }

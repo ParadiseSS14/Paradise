@@ -32,9 +32,9 @@ public sealed partial class NanoTaskUiFragment : BoxContainer
         MediumContainer.RemoveAllChildren();
         LowContainer.RemoveAllChildren();
 
-        HighPriority.Text = Loc.GetString("nano-task-ui-heading-high-priority-tasks", ("amount", tasks.Count(task => task.Data.Priority == NanoTaskPriority.High)));
-        MediumPriority.Text = Loc.GetString("nano-task-ui-heading-medium-priority-tasks", ("amount", tasks.Count(task => task.Data.Priority == NanoTaskPriority.Medium)));
-        LowPriority.Text = Loc.GetString("nano-task-ui-heading-low-priority-tasks", ("amount", tasks.Count(task => task.Data.Priority == NanoTaskPriority.Low)));
+        HighPriority.HeaderText = Loc.GetString("nano-task-ui-heading-high-priority-tasks", ("amount", tasks.Count(task => task.Data.Priority == NanoTaskPriority.High)));
+        MediumPriority.HeaderText = Loc.GetString("nano-task-ui-heading-medium-priority-tasks", ("amount", tasks.Count(task => task.Data.Priority == NanoTaskPriority.Medium)));
+        LowPriority.HeaderText = Loc.GetString("nano-task-ui-heading-low-priority-tasks", ("amount", tasks.Count(task => task.Data.Priority == NanoTaskPriority.Low)));
 
         foreach (var task in tasks)
         {

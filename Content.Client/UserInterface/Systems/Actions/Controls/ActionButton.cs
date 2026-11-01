@@ -8,7 +8,9 @@ using Content.Shared.Actions.Components;
 using Content.Shared.Charges.Systems;
 using Content.Shared.Examine;
 using Robust.Client.GameObjects;
+using Robust.Client.Graphics;
 using Robust.Client.Player;
+using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Input;
@@ -25,6 +27,7 @@ public sealed class ActionButton : Control, IEntityControl
 
     private IEntityManager _entities;
     private IPlayerManager _player;
+    private IResourceCache _cache;
     private ActionsSystem? _actionsSys;
     private ActionUIController? _controller;
     private bool _beingHovered;
@@ -67,7 +70,10 @@ public sealed class ActionButton : Control, IEntityControl
 
         _entities = entities;
         _player = IoCManager.Resolve<IPlayerManager>();
+        _cache = IoCManager.Resolve<IResourceCache>();
         _controller = controller;
+
+        var pixelFont = new VectorFont(_cache.GetResource<FontResource>("/Fonts/Pixellari.ttf"), 12);
 
         MouseFilter = MouseFilterMode.Pass;
         Button = new TextureRect
@@ -104,7 +110,10 @@ public sealed class ActionButton : Control, IEntityControl
             Name = "Label",
             HorizontalAlignment = HAlignment.Left,
             VerticalAlignment = VAlignment.Top,
-            Margin = new Thickness(5, 0, 0, 0)
+            Margin = new Thickness(8, 8, 0, 0),
+            FontOverride = pixelFont,
+            OutlineColorOverride = Color.Black,
+            OutlineThicknessOverride = 1f,
         };
         _bigItemSpriteView = new SpriteView
         {
@@ -144,7 +153,7 @@ public sealed class ActionButton : Control, IEntityControl
                 _smallItemSpriteView
             }
         });
-        Cooldown = new CooldownGraphic {Visible = false};
+        Cooldown = new CooldownGraphic { Visible = false };
 
         AddChild(Button);
         AddChild(_bigActionIcon);
@@ -218,7 +227,7 @@ public sealed class ActionButton : Control, IEntityControl
 
     private void UpdateItemIcon()
     {
-        if (Action?.Comp is not {EntityIcon: { } entity} ||
+        if (Action?.Comp is not { EntityIcon: { } entity } ||
             !_entities.HasComponent<SpriteComponent>(entity))
         {
             _bigItemSpriteView.Visible = false;
@@ -254,7 +263,7 @@ public sealed class ActionButton : Control, IEntityControl
 
     private void UpdateActionIcon()
     {
-        if (Action?.Comp is not {} action || !_entities.HasComponent<SpriteComponent>(Action.Value.Owner))
+        if (Action?.Comp is not { } action || !_entities.HasComponent<SpriteComponent>(Action.Value.Owner))
         {
             _bigActionIcon.Visible = false;
             _bigActionIcon.SetEntity(null);
@@ -331,10 +340,10 @@ public sealed class ActionButton : Control, IEntityControl
         UpdateBackground();
 
         Cooldown.Visible = Action?.Comp.Cooldown != null;
-        if (Action?.Comp is not {} action)
+        if (Action?.Comp is not { } action)
             return;
 
-        if (action.Cooldown is {} cooldown)
+        if (action.Cooldown is { } cooldown)
             Cooldown.FromTime(cooldown.Start, cooldown.End);
 
         if (_toggled != action.Toggled)
@@ -365,7 +374,7 @@ public sealed class ActionButton : Control, IEntityControl
     public void Depress(GUIBoundKeyEventArgs args, bool depress)
     {
         // action can still be toggled if it's allowed to stay selected
-        if (Action?.Comp is not {Enabled: true})
+        if (Action?.Comp is not { Enabled: true })
             return;
 
         _depressed = depress;
@@ -378,7 +387,7 @@ public sealed class ActionButton : Control, IEntityControl
         HighlightRect.Visible = _beingHovered && (Action != null || _controller.IsDragging);
 
         // always show the normal empty button style if no action in this slot
-        if (Action?.Comp is not {} action)
+        if (Action?.Comp is not { } action)
         {
             SetOnlyStylePseudoClass(ContainerButton.StylePseudoClassNormal);
             return;

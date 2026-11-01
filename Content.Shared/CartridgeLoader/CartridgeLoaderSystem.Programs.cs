@@ -88,7 +88,7 @@ public sealed partial class CartridgeLoaderSystem
         UpdateUiState(ent.AsNullable());
     }
 
-    public void DeactivateProgram(Entity<CartridgeLoaderComponent> ent, EntityUid program)
+    public void DeactivateProgram(Entity<CartridgeLoaderComponent> ent, EntityUid program,  bool updateUiState = true)
     {
         if (!HasProgram(ent, program) || ent.Comp.ActiveProgram != program)
             return;
@@ -97,7 +97,8 @@ public sealed partial class CartridgeLoaderSystem
         RaiseLocalEvent(program, ref evt);
         ent.Comp.ActiveProgram = null;
         Dirty(ent);
-        UpdateUiState(ent.AsNullable());
+        if(updateUiState)
+            UpdateUiState(ent.AsNullable());
     }
 
     /// <summary>

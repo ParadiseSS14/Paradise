@@ -5,6 +5,9 @@ notekeeper-program-name = Notekeeper
 nano-task-program-name = NanoTask
 news-read-program-name = Station news
 
+notekeeper-placeholder-text = Type to add note
+notekeeper-no-notes = Type your first note to see it here!
+
 crew-manifest-program-name = Crew manifest
 crew-manifest-cartridge-loading = Loading ...
 crew-manifest-cartridge-loading-failed = Failed to load crew manifest!

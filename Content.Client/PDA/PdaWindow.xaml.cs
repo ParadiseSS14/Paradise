@@ -9,9 +9,6 @@ namespace Content.Client.PDA;
 [GenerateTypedNameReferences]
 public partial class PdaWindow : BaseWindow
 {
-
-
-
     public PdaWindow()
     {
         RobustXamlLoader.Load(this);

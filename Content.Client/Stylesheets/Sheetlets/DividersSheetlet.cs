@@ -19,7 +19,7 @@ public sealed class DividersSheetlet : Sheetlet<PalettedStylesheet>
         };
 
         var boxLowDivider = new StyleBoxFlat(sheet.PrimaryPalette.Base);
-        var boxLowDividerLowAlpha = new StyleBoxFlat(Color.Black.WithAlpha(0.5f));
+        var boxLowDividerLowAlpha = new StyleBoxFlat(Color.White.WithAlpha(0.075f));
 
         // high divider and low divider styles are VERY inconsistent but its too much of a pain to change right now (also HighDivider has its own Control ???)
         // i dont think theres a good resolution to this besides just deleting HighDivider. HighDivider is barely used but LowDivider is used everywhere.

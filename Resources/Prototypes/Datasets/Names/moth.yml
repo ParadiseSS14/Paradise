@@ -1,17 +1,17 @@
 - type: localizedDataset
-  id: NamesMothFirstMale
+  id: NamesNianFirst
   values:
-    prefix: names-moth-first-male-dataset-
-    count: 39
+    prefix: names-nian-first-dataset-
+    count: 51
 
 - type: localizedDataset
-  id: NamesMothFirstFemale
+  id: NamesNianMiddle
   values:
-    prefix: names-moth-first-female-dataset-
-    count: 38
+    prefix: names-nian-middle-dataset-
+    count: 7
 
 - type: localizedDataset
-  id: NamesMothLast
+  id: NamesNianLast
   values:
-    prefix: names-moth-last-dataset-
-    count: 28
+    prefix: names-nian-last-dataset-
+    count: 50

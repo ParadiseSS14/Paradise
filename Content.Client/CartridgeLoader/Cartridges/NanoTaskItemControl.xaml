@@ -1,17 +1,14 @@
-<Control xmlns="https://spacestation14.io" xmlns:system="clr-namespace:System;assembly=System.Runtime">
-    <BoxContainer Name="MainContainer"
-                  Orientation="Horizontal"
-                  SetWidth="250">
-        <Button Name="MainButton"
-                HorizontalExpand="True"
-                VerticalExpand="True"
-                StyleClasses="ButtonSquare"
-                Margin="-1 0 0 0">
-            <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+<Control xmlns="https://spacestation14.io" xmlns:system="clr-namespace:System;assembly=System.Runtime"
+         HorizontalExpand="True">
+    <PanelContainer StyleClasses="ListView" HorizontalExpand="True">
+        <BoxContainer Name="MainContainer"
+                      Orientation="Horizontal"
+                      Margin="4">
+            <BoxContainer Orientation="Horizontal" HorizontalExpand="True" Margin="12 0 0 0">
                 <BoxContainer Orientation="Vertical"
                               VerticalExpand="True"
                               HorizontalExpand="True"
-                              Margin="-5 0 0 0">
+                              VerticalAlignment="Center">
                     <Label Name="TaskLabel"
                            StyleClasses="LabelSubText" />
                     <Label Name="TaskForLabel"
@@ -19,10 +16,23 @@
                            Margin="0 -5 0 0" />
                 </BoxContainer>
             </BoxContainer>
-        </Button>
-        <Button Name="DoneButton"
-                VerticalExpand="True"
-                Text="{Loc 'nano-task-ui-done'}"
-                StyleClasses="ButtonSmall OpenLeft" />
-    </BoxContainer>
+
+            <PanelContainer StyleClasses="LowDividerLowAlpha" Margin="4 0" VerticalExpand="True" />
+
+            <TextureButton Name="MainButton"
+                           VerticalExpand="True"
+                           TexturePath="/Textures/Interface/Default/edit.png"
+                           ToolTip="{Loc 'nano-task-ui-done'}"
+                           StyleClasses="SubColored"
+                           MaxSize="19 19"
+                           Margin="2" />
+            <TextureButton Name="DoneButton"
+                           VerticalExpand="True"
+                           TexturePath="/Textures/Interface/checkmark.png"
+                           ToolTip="{Loc 'nano-task-ui-done'}"
+                           StyleClasses="SubColored"
+                           MaxSize="19 19"
+                           Margin="2"/>
+        </BoxContainer>
+    </PanelContainer>
 </Control>

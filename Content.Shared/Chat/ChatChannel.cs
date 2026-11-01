@@ -86,9 +86,14 @@ namespace Content.Shared.Chat
         Unspecified = 1 << 14,
 
         /// <summary>
+        ///     Telepathy chat
+        /// </summary>
+        Hivemind = 1 << 15, // Paradise Content
+
+        /// <summary>
         ///     Channels considered to be IC.
         /// </summary>
-        IC = Local | Whisper | Radio | Dead | Emotes | Damage | Visual | Notifications,
+        IC = Local | Whisper | Radio | Dead | Emotes | Damage | Visual | Notifications | Hivemind, // Paradise Change: Added Hivemind
 
         AdminRelated = Admin | AdminAlert | AdminChat,
     }

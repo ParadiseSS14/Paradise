@@ -87,7 +87,7 @@ namespace Content.IntegrationTests.Tests
             testSystem.Enabled = false;
         }
 
-        private new const string TestMap = "Maps/bagel.yml";
+        private new const string TestMap = "Maps/Vault/bagel.yml";
 
         /// <summary>
         ///     Loads the default map, runs it for 5 ticks, then assert that it did not change.

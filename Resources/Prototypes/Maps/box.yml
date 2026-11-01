@@ -13,6 +13,8 @@
             prefixCreator: "TG"
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/Shuttles/emergency_box.yml
+        - type: StationCargoShuttle
+          path: /Maps/Shuttles/cargo_elkridge.yml
         - type: StationJobs
           availableJobs: # 63 jobs total w/o latejoins & interns, 82 jobs total w/ latejoins & interns
             #Command (7)

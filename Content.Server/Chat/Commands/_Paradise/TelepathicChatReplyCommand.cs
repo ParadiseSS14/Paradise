@@ -26,12 +26,14 @@ internal sealed partial class TelepathicChatReplyCommand : LocalizedEntityComman
         var sender = _entMan.GetEntity(senderNet);
 
         if (!_entMan.HasComponent<TelepathicChatComponent>(sender))
+        {
+            _telepathic.LogInvalidReply(receiver, args[0]);
             return;
+        }
 
         // Using a simple token to prevent command spam
         if (!_telepathic.CheckOfferValid(sender, receiver))
         {
-            shell.WriteLine($"{receiver}: {Loc.GetString("telepathic-chat-token-invalid")}");
             return;
         }
 

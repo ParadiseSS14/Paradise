@@ -392,6 +392,14 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     }
 
     /// <summary>
+    /// Sends reply sender and argument to the admin log
+    /// </summary>
+    public void LogInvalidReply(EntityUid sender, string rawArg)
+    {
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Invalid telepathic_chat_reply from {ToPrettyString(sender):Player} with argument ({rawArg})");
+    }
+
+    /// <summary>
     /// Conditional build for message wraps
     /// </summary>
     private (string messageWrap, string sendMessage, string adminMessageWrap) BuildMessageWraps(

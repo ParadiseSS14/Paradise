@@ -13,7 +13,6 @@ chat-manager-telepathic-chat-telepath = You feel {$sender} request a response fr
 telepathic-chat-no-targets = No suitable target found
 telepathic-chat-target-left-range = Target left range
 telepathic-chat-target-unreachable = Target unreachable
-telepathic-chat-token-invalid = Telepathy offer reply token invalid
 
 telepathic-chat-ui-compose-window-title = Send Message
 telepathic-chat-ui-select-target = Select

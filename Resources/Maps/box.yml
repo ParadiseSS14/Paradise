@@ -4,8 +4,8 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/01/2026 19:57:26
-  entityCount: 38454
+  time: 11/01/2026 20:44:10
+  entityCount: 38464
 maps:
 - 1
 grids:
@@ -7891,16 +7891,16 @@ entities:
         - temperature: 293.15
           volume: 2500
           moles:
-            Oxygen: 1400.0662
-            Nitrogen: 5266.916
-        - temperature: 293.15
-          volume: 2500
-          moles:
             Nitrogen: 6666.982
         - temperature: 293.15
           volume: 2500
           moles:
             Oxygen: 6666.982
+        - temperature: 293.15
+          volume: 2500
+          moles:
+            Oxygen: 1400.0662
+            Nitrogen: 5266.916
         - temperature: 293.15
           volume: 2500
           moles:
@@ -9779,7 +9779,7 @@ entities:
             0: 50380
           7,-15:
             2: 3840
-            4: 7
+            6: 7
           8,-14:
             0: 6143
           7,-14:
@@ -10345,8 +10345,8 @@ entities:
             2: 240
             0: 61440
           4,-21:
-            5: 4368
-            6: 52416
+            4: 4368
+            5: 52416
           3,-20:
             2: 224
             0: 57344
@@ -10370,8 +10370,8 @@ entities:
           5,-17:
             0: 65535
           5,-21:
-            6: 4368
-            4: 52416
+            5: 4368
+            6: 52416
           5,-16:
             0: 65295
           6,-20:
@@ -10387,7 +10387,7 @@ entities:
             0: 4369
             2: 17476
           6,-21:
-            4: 4368
+            6: 4368
             2: 19524
           6,-16:
             0: 4353
@@ -10400,7 +10400,7 @@ entities:
             3: 30464
           7,-16:
             3: 7
-            4: 30464
+            6: 30464
           7,-21:
             2: 36744
           5,-15:
@@ -10503,7 +10503,7 @@ entities:
           -6,-18:
             0: 61166
           -12,-15:
-            0: 64427
+            0: 64426
           -12,-14:
             0: 65535
           -13,-15:
@@ -10513,7 +10513,7 @@ entities:
           -13,-13:
             0: 20479
           -11,-15:
-            0: 61697
+            0: 61696
           -11,-14:
             0: 65535
           -10,-15:
@@ -10566,7 +10566,7 @@ entities:
             3: 4369
             0: 52428
           3,-21:
-            5: 52416
+            4: 52416
           0,-24:
             3: 61440
           -1,-24:
@@ -15456,7 +15456,7 @@ entities:
       - - Engineering
     - type: Door
       state: Opening
-      secondsUntilStateChange: -298448.8
+      secondsUntilStateChange: -299064.53
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16011,7 +16011,7 @@ entities:
       pos: 14.5,-85.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -160691
+      secondsUntilStateChange: -161306.72
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16422,7 +16422,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -121760.3
+      secondsUntilStateChange: -122376.016
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16450,7 +16450,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -121759.23
+      secondsUntilStateChange: -122374.945
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16542,7 +16542,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -72846.19
+      secondsUntilStateChange: -73461.91
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16772,7 +16772,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -321768.72
+      secondsUntilStateChange: -322384.44
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16785,7 +16785,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -321766.7
+      secondsUntilStateChange: -322382.4
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18744,7 +18744,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -327226.94
+      secondsUntilStateChange: -327842.66
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19036,7 +19036,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -142213.62
+      secondsUntilStateChange: -142829.34
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -21656,8 +21656,8 @@ entities:
     components:
     - type: Transform
       parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 79.5,3.5
+      rot: 3.141592653589793 rad
+      pos: -22.5,44.5
   - uid: 1027
     components:
     - type: Transform
@@ -21912,6 +21912,36 @@ entities:
       parent: 28952
       rot: -1.5707963267948966 rad
       pos: -1.5,2.5
+  - uid: 38201
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -18.5,44.5
+  - uid: 38202
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -2.5,48.5
+  - uid: 38203
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -64.5,-31.5
+  - uid: 38204
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-10.5
+  - uid: 38205
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-8.5
   - uid: 38425
     components:
     - type: Transform
@@ -21939,6 +21969,52 @@ entities:
     - type: Transform
       parent: 2
       pos: -46.5,-59.5
+  - uid: 38455
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-16.5
+  - uid: 38456
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-18.5
+  - uid: 38457
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 97.5,-41.5
+  - uid: 38458
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 100.5,-57.5
+  - uid: 38459
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 100.5,-59.5
+  - uid: 38460
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -73.5,-51.5
+  - uid: 38461
+    components:
+    - type: Transform
+      parent: 2
+      pos: -71.5,-25.5
+  - uid: 38462
+    components:
+    - type: Transform
+      parent: 2
+      pos: -72.5,-25.5
 - proto: AtmosFixAirMarker
   entities:
   - uid: 1051
@@ -57451,37 +57527,6 @@ entities:
         behaviors:
         - !type:DoActsBehavior
           acts: Destruction
-  - uid: 38201
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 28952
-      pos: 0.5,-2.5
-    - type: Destructible
-      thresholds:
-      - triggersOnce: False
-        triggered: False
-        trigger: !type:DamageTrigger
-          damage: 50
-        behaviors:
-        - !type:SpawnEntitiesBehavior
-          spawnInContainer: False
-          spawn:
-            CableHVStack1:
-              min: 1
-              max: 1
-          offset: 0.5
-          transferForensics: False
-        - !type:DoActsBehavior
-          acts: Destruction
-      - triggersOnce: False
-        triggered: False
-        trigger: !type:DamageTrigger
-          damage: 100
-        behaviors:
-        - !type:DoActsBehavior
-          acts: Destruction
   - uid: 38322
     components:
     - type: Transform
@@ -57529,20 +57574,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -8.484375,-46.53125
-- proto: CableHVStack1
-  entities:
-  - uid: 38203
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 38202
-    - type: Stack
-      count: 5
-    - type: EmitSoundOnCollide
-      nextSound: -7129.8933053
-    - type: Physics
-      canCollide: False
 - proto: CableMV
   entities:
   - uid: 2696
@@ -72190,6 +72221,11 @@ entities:
       parent: 38012
       rot: -1.5707963267948966 rad
       pos: -1.5,-6.5
+  - uid: 38463
+    components:
+    - type: Transform
+      parent: 28952
+      pos: 0.5,-1.5
 - proto: CableTerminalUncuttable
   entities:
   - uid: 38174
@@ -164094,6 +164130,11 @@ entities:
     - type: Transform
       parent: 37832
       pos: -2.5,-3.5
+  - uid: 38464
+    components:
+    - type: Transform
+      parent: 28952
+      pos: 0.5,-2.5
 - proto: GeneratorWallmountBasic
   entities:
   - uid: 38452
@@ -177056,16 +177097,6 @@ entities:
       pos: 89.5,-12.5
 - proto: MicroManipulatorStockPart
   entities:
-  - uid: 38204
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 38202
-    - type: EmitSoundOnCollide
-      nextSound: -7129.8933053
-    - type: Physics
-      canCollide: False
   - uid: 38241
     mapInit: true
     paused: true
@@ -179517,77 +179548,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 90.5,-43.5
-  - uid: 38202
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 28952
-      pos: 0.5,-2.5
-    - type: UseDelay
-      delays:
-        default:
-          startTime: 0
-          length: 1
-          endTime: 187.314485
-    - type: Destructible
-      thresholds:
-      - triggersOnce: False
-        triggered: False
-        trigger: !type:DamageTrigger
-          damage: 100
-        behaviors:
-        - !type:PlaySoundBehavior
-          sound: !type:SoundCollectionSpecifier
-            collection: MetalBreak
-            params:
-              volume: 0
-              variation: null
-              rolloffFactor: 1
-              referenceDistance: 1
-              playOffsetSeconds: 0
-              pitch: 1
-              maxDistance: 15
-              loop: False
-        - !type:ChangeConstructionNodeBehavior
-          node: machineFrame
-        - !type:DoActsBehavior
-          acts: Destruction
-      - triggersOnce: False
-        triggered: False
-        trigger: !type:DamageTrigger
-          damage: 200
-        behaviors:
-        - !type:DoActsBehavior
-          acts: Destruction
-    - type: DeviceNetwork
-      receiveFrequency: 1280
-      address: 6B78-D9F1
-    - type: ContainerContainer
-      containers:
-        machine_board: !type:Container
-          ents:
-          - 38205
-          showEnts: False
-          occludes: True
-        machine_parts: !type:Container
-          ents:
-          - 38204
-          - 38203
-          showEnts: False
-          occludes: True
-- proto: PortableGeneratorPacmanMachineCircuitboard
-  entities:
-  - uid: 38205
-    mapInit: true
-    paused: true
-    components:
-    - type: Transform
-      parent: 38202
-    - type: EmitSoundOnCollide
-      nextSound: -7129.8933053
-    - type: Physics
-      canCollide: False
 - proto: PortableScrubber
   entities:
   - uid: 26462
@@ -195295,28 +195255,71 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 10.5,26.5
+    - type: DeviceLinkSource
+      linkedPorts:
+        38428:
+        - - Start
+          - Close
+        - - Timer
+          - Open
+        - - Timer
+          - AutoClose
   - uid: 29168
     components:
     - type: Transform
       parent: 2
       rot: 3.141592653589793 rad
       pos: 6.5,27.5
+    - type: DeviceLinkSource
+      linkedPorts:
+        32072:
+        - - Start
+          - Close
+        - - Timer
+          - Open
+        - - Timer
+          - AutoClose
   - uid: 29169
     components:
     - type: Transform
       parent: 2
       rot: 3.141592653589793 rad
       pos: 4.5,27.5
+    - type: DeviceLinkSource
+      linkedPorts:
+        32071:
+        - - Start
+          - Close
+        - - Timer
+          - Open
+        - - Timer
+          - AutoClose
   - uid: 29170
     components:
     - type: Transform
       parent: 2
       pos: 4.5,30.5
+    - type: DeviceLinkSource
+      linkedPorts:
+        32073:
+        - - Start
+          - DoorBolt
+        - - Timer
+          - Open
   - uid: 29171
     components:
     - type: Transform
       parent: 2
       pos: 6.5,30.5
+    - type: DeviceLinkSource
+      linkedPorts:
+        32075:
+        - - Start
+          - Close
+        - - Timer
+          - Open
+        - - Timer
+          - AutoClose
 - proto: Screwdriver
   entities:
   - uid: 29172

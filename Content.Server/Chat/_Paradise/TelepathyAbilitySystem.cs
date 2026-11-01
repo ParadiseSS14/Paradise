@@ -7,6 +7,7 @@ using Content.Shared.Actions.Components;
 using Content.Shared.Chat;
 using Content.Shared.Chat._Paradise;
 using Content.Shared.Database;
+using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Popups;
@@ -66,7 +67,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
 
         while (query.MoveNext(out var uid, out var telepathComp))
         {
-            var dirty = false;
             // Clearing out ReplyTokens after 10 seconds
             if (telepathComp.ReplyTokens.Count > 0)
             {
@@ -77,7 +77,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
                         continue;
 
                     telepathComp.ReplyTokens.RemoveAt(i);
-                    dirty = true;
                     if (GetClient(entity) is { } session)
                         _chatManager.ChatMessageToOne(ChatChannel.Hivemind, expiryMessage, expiryMessage, entity, false, session);
                 }
@@ -89,14 +88,13 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
                 if (uiSession.UiKey is not { } key)
                     continue;
 
-                if (GetEntity(uiSession.Actor) is not { } actor)
+                if (uiSession.Actor == NetEntity.Invalid)
                     continue;
 
-                if (_ui.IsUiOpen(uid, uiSession.UiKey, actor))
+                if (_ui.IsUiOpen(uid, uiSession.UiKey, GetEntity(uiSession.Actor)))
                     continue;
 
                 telepathComp.UiKeySession.Remove(uiSession);
-                dirty = true;
             }
 
             // Clearing stale Sessions after 30 seconds
@@ -107,11 +105,7 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
 
                 telepathComp.Sessions.Remove(sessionID);
                 telepathComp.UiKeySession.RemoveAll(x => x.SessionID == sessionID);
-                dirty = true;
             }
-
-            if (dirty)
-                Dirty(uid, telepathComp);
         }
     }
 
@@ -124,8 +118,8 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         var validTargets = ChooseTargets(telepath.Owner, telepath.Comp.Range);
         telepath.Comp.Sessions[sessionID] = new TelepathyState
         {
-            Sender = null,
-            Receiver = null,
+            Sender = NetEntity.Invalid,
+            Receiver = NetEntity.Invalid,
             IsOffer = false,
             Timeout = _timing.CurTime + TimeSpan.FromSeconds(30)
         };
@@ -134,7 +128,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         {
             _popup.PopupEntity(Loc.GetString("telepathy-no-targets"), telepath.Owner, telepath.Owner);
             telepath.Comp.Sessions.Remove(sessionID);
-            Dirty(telepath);
             return;
         }
 
@@ -154,8 +147,7 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         };
 
         telepath.Comp.UiKeySession.Add(uiKeySession);
-        Dirty(telepath);
-
+        telepath.Comp.Sessions[sessionID].ValidTargets = validTargets;
         var targetsList = new TelepathyTargetUIState(validTargets);
 
         _ui.OpenUi((telepath, userInterfaceComp), uiKey, performer);
@@ -199,7 +191,7 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         if (args.UiKey is not TelepathyAbilityUiKey key)
             return;
 
-        if (args.Target is not { } target)
+        if (args.Target is not { } target || args.Name is not { } name)
             return;
 
         if (!TryGetUiSession(telepath.Comp, key, GetNetEntity(args.Actor), out var session))
@@ -210,10 +202,14 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         if (!telepath.Comp.Sessions.TryGetValue(sessionID, out var compSession))
             return;
 
+        // Make sure the returned name and Uid pair existed in the original list
+        if (!compSession.ValidTargets.Any(entry => entry.Uid == target && entry.Name == name))
+            return;
+
         compSession.Sender = GetNetEntity(telepath.Owner);
         compSession.Receiver = target;
+        compSession.TargetName = name;
         compSession.Timeout = _timing.CurTime + TimeSpan.FromSeconds(30);
-        Dirty(telepath);
 
         if (compSession.IsOffer)
         {
@@ -224,7 +220,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         if (!CheckRange(telepath.Owner, GetEntity(target)))
         {
             telepath.Comp.Sessions.Remove(sessionID);
-            Dirty(telepath);
             return;
         }
 
@@ -252,7 +247,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         if (telepath.Comp.LifeStage == ComponentLifeStage.Deleted)
         {
             telepath.Comp.Sessions.Remove(sessionID);
-            Dirty(telepath);
             return;
         }
 
@@ -282,14 +276,14 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         var sessionID = Guid.NewGuid();
         senderComp.Sessions[sessionID] = new TelepathyState
         {
-            Sender = null,
-            Receiver = null,
+            Sender = NetEntity.Invalid,
+            Receiver = NetEntity.Invalid,
             IsOffer = false,
+            IsOfferReply = true,
             Timeout = _timing.CurTime + TimeSpan.FromSeconds(30)
         };
         senderComp.Sessions[sessionID].Sender = GetNetEntity(receiver);
         senderComp.Sessions[sessionID].Receiver = GetNetEntity(sender);
-        Dirty(sender, senderComp);
 
         var uiKeySession = new TelepathyUiState
         {
@@ -299,7 +293,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         };
 
         senderComp.UiKeySession.Add(uiKeySession);
-        Dirty(sender, senderComp);
         _ui.OpenUi((sender, userInterfaceComp), TelepathyAbilityUiKey.Compose, receiver);
     }
 
@@ -318,7 +311,7 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
                 continue;
 
             if (_interaction.InRangeUnobstructed(telepath, entity.Owner, range + 0.1f))
-                mobName = Name(entity.Owner);
+                mobName = Identity.Name(entity.Owner, EntityManager);
             else
                 mobName = "Unknown entity";
 
@@ -387,7 +380,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
             return false;
 
         telepathComp.ReplyTokens.RemoveAll(t => t.entity == target);
-        Dirty(telepath, telepathComp);
         return true;
     }
 
@@ -403,22 +395,25 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
     /// Conditional build for message wraps
     /// </summary>
     private (string messageWrap, string sendMessage, string adminMessageWrap) BuildMessageWraps(
-        TelepathyAbilityComponent telepathComp,
-        EntityUid sender,
-        EntityUid receiver,
-        string rawMessage,
-        bool isOffer)
+        TelepathyState session,
+        string obscuredMessage,
+        string rawMessage)
     {
+        var sender = GetEntity(session.Sender);
+        var receiver = GetEntity(session.Receiver);
+        var targetName = session.TargetName;
+        var isOffer = session.IsOffer;
+        var isOfferReply = session.IsOfferReply;
         var message = FormattedMessage.EscapeText(rawMessage);
 
         // default wraps
-        var messageWrap = $"{telepathComp.ObscuredMessage} \"{message}\"";
+        var messageWrap = $"{obscuredMessage} \"{message}\"";
         var sendMessage = Loc.GetString("chat-manager-send-telepathy-message", ("receiver", receiver));
         var offerMessageWrap = $"{Loc.GetString("chat-manager-telepathy-offer")}";
         var adminMessageWrap = Loc.GetString("chat-manager-receive-telepathy-wrap-message-admin", ("sender", sender), ("message", message));
 
         if (HasComp<TelepathyAbilityComponent>(sender)) // wraps for a telepath sender
-            sendMessage = Loc.GetString("chat-manager-send-telepathy-message-telepath", ("receiver", receiver));
+            sendMessage = Loc.GetString("chat-manager-send-telepathy-message-telepath", ("receiver", targetName));
 
         if (HasComp<TelepathyAbilityComponent>(receiver)) // wraps for a telepath receiver
         {
@@ -428,9 +423,12 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
 
         if (isOffer) // wraps for an offer message
         {
-            sendMessage = Loc.GetString("chat-manager-send-telepathy-message-offer", ("receiver", receiver));
+            sendMessage = Loc.GetString("chat-manager-send-telepathy-message-offer", ("receiver", targetName));
             messageWrap = $"{offerMessageWrap} [cmdlink=\"{Loc.GetString("chat-manager-telepathy-link")}\" command=\"{TelepathyReplyCommand.CommandName} {GetNetEntity(sender)}\" /] ";
         }
+
+        if (isOfferReply && HasComp<TelepathyAbilityComponent>(sender)) // Offer reply from telepath?
+            sendMessage = Loc.GetString("chat-manager-send-telepathy-message-telepath", ("receiver", receiver));
 
         return (messageWrap, sendMessage, adminMessageWrap);
     }
@@ -438,11 +436,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
     /// <summary>
     /// Send Telepathy messages to the Hivemind channel, logs, active admins
     /// </summary>
-    /// <remarks>
-    /// Much of this has been sourced/referenced from Simple-Station/Einstein-Engine
-    /// Commit: 10d41858d88d3ba9d36fdd9c98595d89701f1cbb
-    /// Content.Server/Chat/TelepathyAbilitySystem.cs
-    /// </remarks>
     public void SendTelepathyMessage(Entity<TelepathyAbilityComponent> telepath, Guid sessionID, string message, bool hideChat)
     {
         if (!TryComp<TelepathyAbilityComponent>(telepath, out var telepathComp))
@@ -451,20 +444,18 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         if (!telepathComp.Sessions.TryGetValue(sessionID, out var compSession))
             return;
 
-        var isOffer = compSession.IsOffer;
-
-        if (GetEntity(compSession.Sender) is not { } sender || GetEntity(compSession.Receiver) is not { } receiver)
+        var sender = GetEntity(compSession.Sender);
+        var receiver = GetEntity(compSession.Receiver);
+        if (sender == EntityUid.Invalid || receiver == EntityUid.Invalid)
         {
             telepathComp.Sessions.Remove(sessionID);
-            Dirty(telepath);
             return;
         }
 
-        if (TryComp<MimePowersComponent>(sender, out var mime) && mime.VowBroken == false) // Mime Check
+        if (TryComp<MimePowersComponent>(sender, out var mime) && !mime.VowBroken) // Mime Check
         {
             _popup.PopupEntity(Loc.GetString("mime-cant-speak"), sender, sender);
             telepathComp.Sessions.Remove(sessionID);
-            Dirty(telepath);
             return;
         }
 
@@ -472,7 +463,6 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         {
             _popup.PopupEntity(Loc.GetString("telepathy-target-left-range"), sender, sender);
             telepathComp.Sessions.Remove(sessionID);
-            Dirty(telepath);
             return;
         }
 
@@ -490,9 +480,9 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         if (TryComp<ActorComponent>(sender, out var actor) && _chatManager.MessageCharacterLimit(actor.PlayerSession, message))
             return;
 
-        var (messageWrap, sendMessage, adminMessageWrap) = BuildMessageWraps(telepathComp, sender, receiver, message, isOffer);
+        var (messageWrap, sendMessage, adminMessageWrap) = BuildMessageWraps(compSession, telepathComp.ObscuredMessage, message);
 
-        if (isOffer)
+        if (compSession.IsOffer)
             telepathComp.ReplyTokens.Add((receiver, _timing.CurTime + TimeSpan.FromSeconds(10))); // Receiver and expiry of 10 seconds
         else //Not logging the linksend
         {
@@ -504,6 +494,5 @@ public sealed partial class TelepathyAbilitySystem : EntitySystem
         _chatManager.ChatMessageToOne(ChatChannel.Hivemind, sendMessage, sendMessage, sender, hideChat, txClient); // message to sender
 
         telepath.Comp.Sessions.Remove(sessionID);
-        Dirty(telepath);
     }
 }

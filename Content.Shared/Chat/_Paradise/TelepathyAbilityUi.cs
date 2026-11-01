@@ -5,10 +5,12 @@ namespace Content.Shared.Chat._Paradise;
 public sealed class TelepathyTargetSelectedMsg : BoundUserInterfaceMessage
 {
     public readonly NetEntity? Target;
+    public readonly string? Name;
 
-    public TelepathyTargetSelectedMsg(NetEntity target)
+    public TelepathyTargetSelectedMsg(NetEntity target, string name)
     {
         Target = target;
+        Name = name;
     }
 }
 

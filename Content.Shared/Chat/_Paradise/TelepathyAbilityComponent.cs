@@ -79,9 +79,12 @@ public sealed partial class OfferTelepathyEvent : InstantActionEvent
 /// </summary>
 public sealed partial class TelepathyState
 {
-    public NetEntity? Sender;
-    public NetEntity? Receiver;
+    public NetEntity Sender;
+    public NetEntity Receiver;
+    public List<(NetEntity Uid, string Name)> ValidTargets = new();
+    public string TargetName = "Unknown entity";
     public bool IsOffer;
+    public bool IsOfferReply;
     public TimeSpan Timeout;
 }
 
@@ -91,6 +94,6 @@ public sealed partial class TelepathyState
 public sealed partial class TelepathyUiState
 {
     public TelepathyAbilityUiKey? UiKey;
-    public NetEntity? Actor;
+    public NetEntity Actor;
     public Guid SessionID;
 }

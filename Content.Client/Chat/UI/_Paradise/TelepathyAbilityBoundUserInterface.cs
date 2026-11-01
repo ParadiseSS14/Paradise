@@ -11,6 +11,7 @@ public sealed partial class TelepathyAbilityBoundUserInterface(EntityUid owner, 
     private TelepathyAbilityMenu? _menu;
     private TelepathyAbilityComposeWindow? _composeWindow;
     private NetEntity? _targetEntity;
+    private string? _targetName;
     private List<(NetEntity Uid, string Name)>? _targetsList;
 
     protected override void Open()
@@ -44,21 +45,23 @@ public sealed partial class TelepathyAbilityBoundUserInterface(EntityUid owner, 
 
     private void OnPressedSelect()
     {
-        if (_targetEntity is not { } targetEntity)
+        if (_targetEntity is not { } targetEntity || _targetName is not { } targetName)
             return;
 
-        SendPredictedMessage(new TelepathyTargetSelectedMsg(targetEntity));
+        SendPredictedMessage(new TelepathyTargetSelectedMsg(targetEntity, targetName));
         _menu?.Close();
     }
 
-    private void OnSelectTarget(NetEntity netEntity)
+    private void OnSelectTarget(NetEntity netEntity, string name)
     {
         _targetEntity = netEntity;
+        _targetName = name;
     }
 
     private void OnDeselectTarget()
     {
         _targetEntity = null;
+        _targetName = null;
     }
 
     private void OnEnteredText(string message)

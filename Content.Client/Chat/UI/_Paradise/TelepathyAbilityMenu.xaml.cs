@@ -9,7 +9,7 @@ namespace Content.Client.Chat.UI._Paradise;
 public sealed partial class TelepathyAbilityMenu : FancyWindow
 {
     public event Action? OnSelectPressed;
-    public event Action<NetEntity>? OnTargetSelected;
+    public event Action<NetEntity, string>? OnTargetSelected;
     public event Action? OnTargetDeselected;
 
     public TelepathyAbilityMenu()
@@ -25,9 +25,10 @@ public sealed partial class TelepathyAbilityMenu : FancyWindow
     private void OnItemSelected(ItemList.ItemListSelectedEventArgs obj)
     {
         var item = TargetsList[obj.ItemIndex].Metadata;
+        var itemName = TargetsList[obj.ItemIndex].Text;
 
-        if (item is NetEntity netEntity)
-            OnTargetSelected?.Invoke(netEntity);
+        if (item is NetEntity netEntity && itemName is string name)
+            OnTargetSelected?.Invoke(netEntity, name);
     }
 
     private void OnItemDeselected(ItemList.ItemListDeselectedEventArgs obj)

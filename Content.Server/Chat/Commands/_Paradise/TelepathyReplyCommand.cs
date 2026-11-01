@@ -8,7 +8,7 @@ namespace Content.Server.Chat.Commands._Paradise;
 [AnyCommand]
 internal sealed partial class TelepathyReplyCommand : LocalizedEntityCommands
 {
-    public const string CommandName = "telepathy_reply";
+    public const string CommandName = "_telepathy_reply";
 
     [Dependency] private EntityManager _entMan = default!;
     [Dependency] private TelepathyAbilitySystem _telepathy = default!;

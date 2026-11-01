@@ -1,4 +1,5 @@
-﻿using Content.Client.Stylesheets.SheetletConfigs;
+﻿using System.Numerics;
+using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
@@ -14,34 +15,33 @@ public sealed class SliderSheetlet<T> : Sheetlet<T> where T: PalettedStylesheet,
     {
         ISliderConfig sliderCfg = sheet;
 
-        var sliderFillTex = sheet.GetTextureOr(sliderCfg.SliderFillPath, NanotrasenStylesheet.TextureRoot);
+        var cornerRounding = 4f;
 
-        var sliderFillBox = new StyleBoxTexture
+        var sliderFillBox = new StyleBoxSDFBox
         {
-            Texture = sliderFillTex,
-            Modulate = sheet.PositivePalette.TextDark,
+            CornerRadius = new Vector4(cornerRounding),
+            BackgroundColor = sheet.PanelPalette.Text,
         };
 
-        var sliderBackBox = new StyleBoxTexture
+        var sliderBackBox = new StyleBoxSDFBox()
         {
-            Texture = sliderFillTex,
-            Modulate = sheet.SecondaryPalette.BackgroundDark,
+            CornerRadius = new Vector4(cornerRounding),
+            BackgroundColor = sheet.PanelPalette.PanelSunken,
         };
 
-        var sliderForeBox = new StyleBoxTexture
+        var sliderForeBox = new StyleBoxSDFBox
         {
-            Texture = sheet.GetTextureOr(sliderCfg.SliderOutlinePath, NanotrasenStylesheet.TextureRoot),
-            Modulate = Color.FromHex("#494949") // TODO: Unhardcode.
+            CornerRadius = new Vector4(cornerRounding),
+            BackgroundColor = Color.Transparent,
+            BorderColor = sheet.PanelPalette.PanelBorderColor,
+            BorderThickness = sheet.PanelPalette.PanelBorderThickness,
         };
 
         var sliderGrabBox = new StyleBoxTexture
         {
             Texture = sheet.GetTextureOr(sliderCfg.SliderGrabber, NanotrasenStylesheet.TextureRoot),
         };
-
-        sliderFillBox.SetPatchMargin(StyleBox.Margin.All, 12);
-        sliderBackBox.SetPatchMargin(StyleBox.Margin.All, 12);
-        sliderForeBox.SetPatchMargin(StyleBox.Margin.All, 12);
+        
         sliderGrabBox.SetPatchMargin(StyleBox.Margin.All, 12);
 
         // var sliderFillGreen = new StyleBoxTexture(sliderFillBox) { Modulate = Color.LimeGreen };

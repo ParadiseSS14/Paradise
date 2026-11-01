@@ -7,6 +7,8 @@ character-setup-gui-create-new-character-button = Create new slot...
 character-setup-gui-create-new-character-button-tooltip = A maximum of {$maxCharacters} characters are allowed.
 character-setup-gui-character-picker-button-delete-button = Delete
 character-setup-gui-character-picker-button-confirm-delete-button = Confirm
+character-setup-gui-character-setup-low-quality-disclaimer = We are aware this UI is low quality. Please excuse it's current state. It will be updated in the future.
+character-setup-gui-color-picker = Color Picker
 
 character-setup-gui-save-panel-title = Unsaved character changes
 character-setup-gui-save-panel-save = Save

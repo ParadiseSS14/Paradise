@@ -69,25 +69,25 @@ public sealed class CheckboxSheetlet<T> : Sheetlet<T> where T : PalettedStyleshe
             E<TextureRect>()
                 .Class(CheckBox.StyleClassCheckBox)
                 .Prop(TextureRect.StylePropertyTexture, uncheckedTex)
-                .Prop(TextureRect.StylePropertyModulateSelf, sheet.PanelPalette.PanelBorderColor),
+                .Prop(TextureRect.StylePropertyModulateSelf, sheet.PanelPalette.Text),
             E<TextureRect>()
                 .Class(CheckBox.StyleClassCheckBox)
                 .Class(CheckBox.StyleClassCheckBoxChecked)
                 .Prop(TextureRect.StylePropertyTexture, checkedTex)
                 .Prop(TextureRect.StylePropertyTexture, uncheckedTex)
-                .Prop(TextureRect.StylePropertyModulateSelf, sheet.PanelPalette.PanelBorderColor),
+                .Prop(TextureRect.StylePropertyModulateSelf, sheet.PanelPalette.Text),
             E<TguiCheckBox>()
                 .Class("TguiCheckbox")
                 .Prop(BoxContainer.StylePropertySeparation, 10)
                 .Prop(ContainerButton.StylePropertyStyleBox, uncheckedBoxBackground)
                 .Prop(TguiCheckBox.StyleClassUncheckedColor, sheet.PanelPalette.PanelBorderColor)
-                .Prop(TguiCheckBox.StyleClassCheckedColor, sheet.PositivePalette.Element),
+                .Prop(TguiCheckBox.StyleClassCheckedColor, sheet.PanelPalette.Text),
             E<TguiCheckBox>()
                 .Class("TguiCheckbox")
                 .Class("checked")
                 .Prop(ContainerButton.StylePropertyStyleBox, checkedBoxBackground)
                 .Prop(TguiCheckBox.StyleClassUncheckedColor, sheet.PanelPalette.PanelBorderColor)
-                .Prop(TguiCheckBox.StyleClassCheckedColor, sheet.PositivePalette.Element),
+                .Prop(TguiCheckBox.StyleClassCheckedColor, sheet.PanelPalette.Text),
             E<BoxContainer>().Class("TguiCheckbox").Prop(BoxContainer.StylePropertySeparation, 10),
             E<PanelContainer>().Class("selectionHandle").Prop(PanelContainer.StylePropertyPanel,selectedHandleBox),
             E<TguiTabButton>().Prop(ContainerButton.StylePropertyStyleBox,tabContainerBoxInactive),

@@ -26,6 +26,8 @@
     - type: Tag
       tags:
         - TrashBag
+    - type: SweepingReceptacle
+      priority: 10 # makes this the highest priority to sweep into
     - type: Appearance
     - type: StorageFillVisualizer
       maxFillLevels: 4

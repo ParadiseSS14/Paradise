@@ -4,7 +4,7 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/01/2026 16:09:32
+  time: 11/01/2026 16:42:26
   entityCount: 38337
 maps:
 - 1
@@ -7891,16 +7891,16 @@ entities:
         - temperature: 293.15
           volume: 2500
           moles:
+            Oxygen: 1400.0662
+            Nitrogen: 5266.916
+        - temperature: 293.15
+          volume: 2500
+          moles:
             Nitrogen: 6666.982
         - temperature: 293.15
           volume: 2500
           moles:
             Oxygen: 6666.982
-        - temperature: 293.15
-          volume: 2500
-          moles:
-            Oxygen: 1400.0662
-            Nitrogen: 5266.916
         - temperature: 293.15
           volume: 2500
           moles:
@@ -9779,7 +9779,7 @@ entities:
             0: 50380
           7,-15:
             2: 3840
-            6: 7
+            4: 7
           8,-14:
             0: 6143
           7,-14:
@@ -10345,8 +10345,8 @@ entities:
             2: 240
             0: 61440
           4,-21:
-            4: 4368
-            5: 52416
+            5: 4368
+            6: 52416
           3,-20:
             2: 224
             0: 57344
@@ -10370,8 +10370,8 @@ entities:
           5,-17:
             0: 65535
           5,-21:
-            5: 4368
-            6: 52416
+            6: 4368
+            4: 52416
           5,-16:
             0: 65295
           6,-20:
@@ -10387,7 +10387,7 @@ entities:
             0: 4369
             2: 17476
           6,-21:
-            6: 4368
+            4: 4368
             2: 19524
           6,-16:
             0: 4353
@@ -10400,7 +10400,7 @@ entities:
             3: 30464
           7,-16:
             3: 7
-            6: 30464
+            4: 30464
           7,-21:
             2: 36744
           5,-15:
@@ -10566,7 +10566,7 @@ entities:
             3: 4369
             0: 52428
           3,-21:
-            4: 52416
+            5: 52416
           0,-24:
             3: 61440
           -1,-24:
@@ -14670,7 +14670,7 @@ entities:
       - - Engineering
     - type: Door
       state: Opening
-      secondsUntilStateChange: -293158.88
+      secondsUntilStateChange: -293298.72
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15225,7 +15225,7 @@ entities:
       pos: 14.5,-85.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -155401.06
+      secondsUntilStateChange: -155540.92
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15591,36 +15591,28 @@ entities:
   entities:
   - uid: 437
     components:
-    - type: MetaData
-      name: Escape Airlock
     - type: Transform
       parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-18.5
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-8.5
   - uid: 438
     components:
-    - type: MetaData
-      name: Escape Airlock
     - type: Transform
       parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-8.5
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-18.5
   - uid: 439
     components:
-    - type: MetaData
-      name: Escape Airlock
     - type: Transform
       parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-16.5
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-10.5
   - uid: 440
     components:
-    - type: MetaData
-      name: Escape Airlock
     - type: Transform
       parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-10.5
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-16.5
 - proto: AirlockExternalLocked
   entities:
   - uid: 441
@@ -15636,7 +15628,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -116470.36
+      secondsUntilStateChange: -116610.21
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15664,7 +15656,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -116469.29
+      secondsUntilStateChange: -116609.14
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15756,7 +15748,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -67556.25
+      secondsUntilStateChange: -67696.1
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15986,7 +15978,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -316478.78
+      secondsUntilStateChange: -316618.62
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15999,7 +15991,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -316476.75
+      secondsUntilStateChange: -316616.6
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -17970,7 +17962,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -321937
+      secondsUntilStateChange: -322076.84
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18262,7 +18254,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -136923.69
+      secondsUntilStateChange: -137063.55
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -103494,7 +103486,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 23.5,3.5
-    - type: DeviceNetwork
   - uid: 16294
     components:
     - type: Transform
@@ -104872,13 +104863,11 @@ entities:
     - type: Transform
       parent: 2
       pos: 22.5,-11.5
-    - type: DeviceNetwork
   - uid: 16529
     components:
     - type: Transform
       parent: 2
       pos: 24.5,-11.5
-    - type: DeviceNetwork
   - uid: 16530
     components:
     - type: Transform

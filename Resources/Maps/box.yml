@@ -4,8 +4,8 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/01/2026 16:42:26
-  entityCount: 38337
+  time: 11/01/2026 18:13:20
+  entityCount: 38339
 maps:
 - 1
 grids:
@@ -126,7 +126,7 @@ entities:
           version: 7
         1,-1:
           ind: 1,-1
-          tiles: WQAAAAABAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAgBZAAAAAAEAWQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAgBZAAAAAAMAWQAAAAADAFkAAAAAAABZAAAAAAAAWQAAAAADAFkAAAAAAwBZAAAAAAIAWQAAAAADAFkAAAAAAgBZAAAAAAIAWQAAAAADAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAIAWQAAAAAAAFkAAAAAAQBZAAAAAAEAWQAAAAADAFkAAAAAAABZAAAAAAAAWQAAAAADAFkAAAAAAgBZAAAAAAAAWQAAAAADAFkAAAAAAgBZAAAAAAAAWQAAAAACAFkAAAAAAABZAAAAAAIAWQAAAAABAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAQBZAAAAAAEAWQAAAAAAAFkAAAAAAQB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAB0AAAAAAgB5AAAAAAAAHQAAAAACAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAABZAAAAAAIAeQAAAAAAAHYAAAAAAAB2AAAAAAMAdgAAAAABAHYAAAAAAQB2AAAAAAEAdgAAAAADAHYAAAAAAgB2AAAAAAIAdgAAAAAAAHYAAAAAAgB2AAAAAAMAdgAAAAADAHYAAAAAAQBcAAAAAAEAWQAAAAACAHkAAAAAAAB2AAAAAAEAdgAAAAADAHYAAAAAAQB2AAAAAAIAdgAAAAABAHYAAAAAAQB2AAAAAAEAdgAAAAACAHYAAAAAAwB2AAAAAAMACwAAAAAAAHYAAAAAAgA8AAAAAAAAPAAAAAAAAFkAAAAAAgB5AAAAAAAAdgAAAAAAAHYAAAAAAwB2AAAAAAMAdgAAAAABAHYAAAAAAQB2AAAAAAMAdgAAAAABAHYAAAAAAwB2AAAAAAMAdgAAAAADAHYAAAAAAwB2AAAAAAAAPAAAAAAAADwAAAAAAABZAAAAAAAAeQAAAAAAAHYAAAAAAwB2AAAAAAIAdgAAAAACAHYAAAAAAgB2AAAAAAMAdgAAAAADAHYAAAAAAwB2AAAAAAIAdgAAAAADAHYAAAAAAQB2AAAAAAAAdgAAAAAAADwAAAAAAAA8AAAAAAAAWQAAAAAAAHkAAAAAAAB2AAAAAAEAdgAAAAADAHYAAAAAAQB2AAAAAAEAdgAAAAADAHYAAAAAAwB2AAAAAAEAdgAAAAADAHYAAAAAAAB2AAAAAAMAdgAAAAABAHYAAAAAAAA8AAAAAAAAPAAAAAAAAFkAAAAAAwB5AAAAAAAAdgAAAAADAHYAAAAAAgB2AAAAAAMAdgAAAAACAHYAAAAAAAB2AAAAAAIAdgAAAAABAHYAAAAAAgB2AAAAAAIAdgAAAAAAAHYAAAAAAgB2AAAAAAAAPAAAAAAAADwAAAAAAABZAAAAAAMAeQAAAAAAAHYAAAAAAQB2AAAAAAIACwAAAAAAAHYAAAAAAwB2AAAAAAEAdgAAAAADAHYAAAAAAgB2AAAAAAIAdgAAAAAAAHYAAAAAAwB2AAAAAAMAdgAAAAAAADwAAAAAAAA8AAAAAAAAWQAAAAADAHkAAAAAAAB2AAAAAAAAdgAAAAAAAHYAAAAAAQB2AAAAAAIAdgAAAAAAAHYAAAAAAgB2AAAAAAEAdgAAAAAAAHYAAAAAAQB2AAAAAAIAdgAAAAAAAHYAAAAAAAA8AAAAAAAAPAAAAAAAAFkAAAAAAwB5AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAHYAAAAAAgB2AAAAAAAAdgAAAAAAAHkAAAAAAAB5AAAAAAAAdgAAAAADAHkAAAAAAABZAAAAAAIAeQAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAB2AAAAAAMAdgAAAAADAHYAAAAAAAB5AAAAAAAAUAAAAAAAAFAAAAAAAABQAAAAAAAAWQAAAAABAHkAAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAdgAAAAACAHYAAAAAAQB2AAAAAAIAeQAAAAAAAFAAAAAAAABQAAAAAAAAUAAAAAAAAA==
+          tiles: WQAAAAABAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAgBZAAAAAAEAWQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAgBZAAAAAAMAWQAAAAADAFkAAAAAAABZAAAAAAAAWQAAAAADAFkAAAAAAwBZAAAAAAIAWQAAAAADAFkAAAAAAgBZAAAAAAIAWQAAAAADAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAIAWQAAAAAAAFkAAAAAAQBZAAAAAAEAWQAAAAADAFkAAAAAAABZAAAAAAAAWQAAAAADAFkAAAAAAgBZAAAAAAAAWQAAAAADAFkAAAAAAgBZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAIAWQAAAAABAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAQBZAAAAAAEAWQAAAAAAAFkAAAAAAQB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAAsAAAAAAAB5AAAAAAAACwAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAABZAAAAAAIAeQAAAAAAAHYAAAAAAAB2AAAAAAMAdgAAAAABAHYAAAAAAQB2AAAAAAEAdgAAAAADAHYAAAAAAgB2AAAAAAIAdgAAAAAAAHYAAAAAAgB2AAAAAAMAdgAAAAADAHYAAAAAAQBcAAAAAAEAWQAAAAACAHkAAAAAAAB2AAAAAAEAdgAAAAADAHYAAAAAAQB2AAAAAAIAdgAAAAABAHYAAAAAAQB2AAAAAAEAdgAAAAACAHYAAAAAAwB2AAAAAAMACwAAAAAAAHYAAAAAAgA8AAAAAAAAPAAAAAAAAFkAAAAAAgB5AAAAAAAAdgAAAAAAAHYAAAAAAwB2AAAAAAMAdgAAAAABAHYAAAAAAQB2AAAAAAMAdgAAAAABAHYAAAAAAwB2AAAAAAMAdgAAAAADAHYAAAAAAwB2AAAAAAAAPAAAAAAAADwAAAAAAABZAAAAAAAAeQAAAAAAAHYAAAAAAwB2AAAAAAIAdgAAAAACAHYAAAAAAgB2AAAAAAMAdgAAAAADAHYAAAAAAwB2AAAAAAIAdgAAAAADAHYAAAAAAQB2AAAAAAAAdgAAAAAAADwAAAAAAAA8AAAAAAAAWQAAAAAAAHkAAAAAAAB2AAAAAAEAdgAAAAADAHYAAAAAAQB2AAAAAAEAdgAAAAADAHYAAAAAAwB2AAAAAAEAdgAAAAADAHYAAAAAAAB2AAAAAAMAdgAAAAABAHYAAAAAAAA8AAAAAAAAPAAAAAAAAFkAAAAAAwB5AAAAAAAAdgAAAAADAHYAAAAAAgB2AAAAAAMAdgAAAAACAHYAAAAAAAB2AAAAAAIAdgAAAAABAHYAAAAAAgB2AAAAAAIAdgAAAAAAAHYAAAAAAgB2AAAAAAAAPAAAAAAAADwAAAAAAABZAAAAAAMAeQAAAAAAAHYAAAAAAQB2AAAAAAIACwAAAAAAAHYAAAAAAwB2AAAAAAEAdgAAAAADAHYAAAAAAgB2AAAAAAIAdgAAAAAAAHYAAAAAAwB2AAAAAAMAdgAAAAAAADwAAAAAAAA8AAAAAAAAWQAAAAADAHkAAAAAAAB2AAAAAAAAdgAAAAAAAHYAAAAAAQB2AAAAAAIAdgAAAAAAAHYAAAAAAgB2AAAAAAEAdgAAAAAAAHYAAAAAAQB2AAAAAAIAdgAAAAAAAHYAAAAAAAA8AAAAAAAAPAAAAAAAAFkAAAAAAwB5AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAHYAAAAAAgB2AAAAAAAAdgAAAAAAAHkAAAAAAAB5AAAAAAAAdgAAAAADAHkAAAAAAABZAAAAAAIAeQAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAB2AAAAAAMAdgAAAAADAHYAAAAAAAB5AAAAAAAAUAAAAAAAAFAAAAAAAABQAAAAAAAAWQAAAAABAHkAAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAPgAAAAAAAD4AAAAAAAA+AAAAAAAAdgAAAAACAHYAAAAAAQB2AAAAAAIAeQAAAAAAAFAAAAAAAABQAAAAAAAAUAAAAAAAAA==
           version: 7
         -2,-1:
           ind: -2,-1
@@ -14670,7 +14670,7 @@ entities:
       - - Engineering
     - type: Door
       state: Opening
-      secondsUntilStateChange: -293298.72
+      secondsUntilStateChange: -293750.78
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15225,7 +15225,7 @@ entities:
       pos: 14.5,-85.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -155540.92
+      secondsUntilStateChange: -155992.97
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15354,6 +15354,41 @@ entities:
       accessListsOriginal: []
       access:
       - - Cargo
+  - uid: 433
+    components:
+    - type: Transform
+      parent: 2
+      pos: -79.5,7.5
+  - uid: 434
+    components:
+    - type: Transform
+      parent: 2
+      pos: -72.5,7.5
+  - uid: 436
+    components:
+    - type: Transform
+      parent: 2
+      pos: -79.5,6.5
+  - uid: 513
+    components:
+    - type: Transform
+      parent: 2
+      pos: -72.5,-1.5
+  - uid: 514
+    components:
+    - type: Transform
+      parent: 2
+      pos: -79.5,-2.5
+  - uid: 515
+    components:
+    - type: Transform
+      parent: 2
+      pos: -72.5,-2.5
+  - uid: 516
+    components:
+    - type: Transform
+      parent: 2
+      pos: -72.5,6.5
   - uid: 38016
     components:
     - type: Transform
@@ -15364,6 +15399,11 @@ entities:
     - type: Transform
       parent: 38012
       pos: -0.5,1.5
+  - uid: 38321
+    components:
+    - type: Transform
+      parent: 2
+      pos: -79.5,-1.5
 - proto: AirlockExternalGlass
   entities:
   - uid: 412
@@ -15547,46 +15587,6 @@ entities:
       accessListsOriginal: []
       access:
       - - External
-- proto: AirlockExternalGlassShuttleArrivals
-  entities:
-  - uid: 433
-    components:
-    - type: MetaData
-      name: Arrival Shuttle Hallway
-    - type: Transform
-      parent: 2
-      pos: -72.5,7.5
-  - uid: 434
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -72.5,6.5
-  - uid: 435
-    components:
-    - type: MetaData
-      name: Arrival Shuttle Hallway
-    - type: Transform
-      parent: 2
-      pos: -79.5,7.5
-  - uid: 436
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -79.5,6.5
-  - uid: 513
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -72.5,-2.5
-  - uid: 516
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -79.5,-2.5
 - proto: AirlockExternalGlassShuttleEmergencyLocked
   entities:
   - uid: 437
@@ -15628,7 +15628,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -116610.21
+      secondsUntilStateChange: -117062.266
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15656,7 +15656,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -116609.14
+      secondsUntilStateChange: -117061.195
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15748,7 +15748,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -67696.1
+      secondsUntilStateChange: -68148.16
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15978,7 +15978,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -316618.62
+      secondsUntilStateChange: -317070.7
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -15991,7 +15991,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -316616.6
+      secondsUntilStateChange: -317068.66
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16216,18 +16216,6 @@ entities:
       pos: 8.5,-31.5
 - proto: AirlockGlassShuttle
   entities:
-  - uid: 514
-    components:
-    - type: Transform
-      parent: 2
-      pos: -79.5,-1.5
-    - type: Godmode
-  - uid: 515
-    components:
-    - type: Transform
-      parent: 2
-      pos: -72.5,-1.5
-    - type: Godmode
   - uid: 37834
     components:
     - type: Transform
@@ -17962,7 +17950,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -322076.84
+      secondsUntilStateChange: -322528.9
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18254,7 +18242,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -137063.55
+      secondsUntilStateChange: -137515.6
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19859,6 +19847,8 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: -15.5,42.5
+    - type: Battery
+      lastCharge: 50000
   - uid: 887
     components:
     - type: Transform
@@ -20699,12 +20689,16 @@ entities:
       parent: 38012
       rot: 3.141592653589793 rad
       pos: -0.5,-5.5
+    - type: Battery
+      lastCharge: 50000
   - uid: 38021
     components:
     - type: Transform
       parent: 38012
       rot: 1.5707963267948966 rad
       pos: -4.5,3.5
+    - type: Battery
+      lastCharge: 50000
 - proto: APCElectronics
   entities:
   - uid: 995
@@ -20817,6 +20811,8 @@ entities:
       parent: 37832
       rot: -1.5707963267948966 rad
       pos: -0.5,6.5
+    - type: Battery
+      lastCharge: 200000
 - proto: ArmoryAccessWindoorHelper
   entities:
   - uid: 1005
@@ -20924,6 +20920,11 @@ entities:
       pos: -10.636288,7.693468
 - proto: AtmosDeviceFanDirectional
   entities:
+  - uid: 435
+    components:
+    - type: Transform
+      parent: 2
+      pos: -79.5,-1.5
   - uid: 1024
     components:
     - type: Transform
@@ -21200,11 +21201,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -72.5,-1.5
-  - uid: 38428
-    components:
-    - type: Transform
-      parent: 2
-      pos: -79.5,-1.5
 - proto: AtmosFixAirMarker
   entities:
   - uid: 1051
@@ -90845,6 +90841,13 @@ entities:
     - type: Transform
       parent: 2
       pos: -12.5,-71.5
+- proto: CrateEngineeringSingularityGenerator
+  entities:
+  - uid: 38319
+    components:
+    - type: Transform
+      parent: 2
+      pos: 1.5,-78.5
 - proto: CrateEngineeringSolar
   entities:
   - uid: 14135
@@ -90852,6 +90855,13 @@ entities:
     - type: Transform
       parent: 2
       pos: -12.5,-72.5
+- proto: CrateEngineeringTeslaGenerator
+  entities:
+  - uid: 38320
+    components:
+    - type: Transform
+      parent: 2
+      pos: -2.5,-78.5
 - proto: CrateFilledSpawner
   entities:
   - uid: 14136
@@ -200095,11 +200105,15 @@ entities:
     - type: Transform
       parent: 37832
       pos: -2.5,-2.5
+    - type: Battery
+      lastCharge: 8000000
   - uid: 38113
     components:
     - type: Transform
       parent: 38012
       pos: -2.5,-6.5
+    - type: Battery
+      lastCharge: 8000000
 - proto: SmokingPipe
   entities:
   - uid: 29917
@@ -204780,6 +204794,8 @@ entities:
     - type: Transform
       parent: 37832
       pos: -1.5,-2.5
+    - type: Battery
+      lastCharge: 2500000
 - proto: SubstationWallBasic
   entities:
   - uid: 38114
@@ -204788,6 +204804,8 @@ entities:
       parent: 38012
       rot: 1.5707963267948966 rad
       pos: -4.5,-5.5
+    - type: Battery
+      lastCharge: 2000000
   - uid: 38240
     mapInit: true
     paused: true
@@ -211713,7 +211731,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 124.5,-38.5
-- proto: TelecomServer
+- proto: TelecomServerFilled
   entities:
   - uid: 31926
     components:
@@ -243212,6 +243230,8 @@ entities:
     - type: Transform
       parent: 2
       pos: 2.328125,47.724968
+    - type: Battery
+      lastCharge: 1000
   - uid: 37398
     components:
     - type: Transform
@@ -243238,11 +243258,15 @@ entities:
     - type: Transform
       parent: 2
       pos: 2.296875,47.506218
+    - type: Battery
+      lastCharge: 1000
   - uid: 38302
     components:
     - type: Transform
       parent: 2
       pos: 2.390625,47.271843
+    - type: Battery
+      lastCharge: 1000
 - proto: WeaponLaserCarbinePractice
   entities:
   - uid: 37401

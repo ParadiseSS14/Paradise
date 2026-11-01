@@ -4,8 +4,8 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/01/2026 19:48:58
-  entityCount: 38452
+  time: 11/01/2026 19:57:26
+  entityCount: 38454
 maps:
 - 1
 grids:
@@ -15456,7 +15456,7 @@ entities:
       - - Engineering
     - type: Door
       state: Opening
-      secondsUntilStateChange: -297954
+      secondsUntilStateChange: -298448.8
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16011,7 +16011,7 @@ entities:
       pos: 14.5,-85.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -160196.17
+      secondsUntilStateChange: -160691
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16422,7 +16422,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -121265.48
+      secondsUntilStateChange: -121760.3
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16450,7 +16450,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -121264.41
+      secondsUntilStateChange: -121759.23
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16542,7 +16542,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -72351.37
+      secondsUntilStateChange: -72846.19
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16772,7 +16772,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -321273.9
+      secondsUntilStateChange: -321768.72
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16785,7 +16785,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -321271.88
+      secondsUntilStateChange: -321766.7
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18744,7 +18744,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -326732.12
+      secondsUntilStateChange: -327226.94
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19036,7 +19036,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -141718.8
+      secondsUntilStateChange: -142213.62
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19799,25 +19799,25 @@ entities:
       parent: 38012
       rot: 1.5707963267948966 rad
       pos: 1.5,1.5
-  - uid: 38443
+  - uid: 38445
     components:
     - type: Transform
       parent: 28952
       rot: 1.5707963267948966 rad
       pos: 2.5,2.5
-  - uid: 38444
+  - uid: 38446
     components:
     - type: Transform
       parent: 28952
       rot: 1.5707963267948966 rad
       pos: 2.5,-0.5
-  - uid: 38445
+  - uid: 38447
     components:
     - type: Transform
       parent: 28952
       rot: -1.5707963267948966 rad
       pos: -1.5,-0.5
-  - uid: 38446
+  - uid: 38448
     components:
     - type: Transform
       parent: 28952
@@ -21929,6 +21929,16 @@ entities:
     - type: Transform
       parent: 2
       pos: -72.5,-1.5
+  - uid: 38443
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-59.5
+  - uid: 38444
+    components:
+    - type: Transform
+      parent: 2
+      pos: -46.5,-59.5
 - proto: AtmosFixAirMarker
   entities:
   - uid: 1051
@@ -57492,7 +57502,7 @@ entities:
     - type: Transform
       parent: 2
       pos: 8.5,-73.5
-  - uid: 38451
+  - uid: 38453
     components:
     - type: Transform
       parent: 37832
@@ -164079,14 +164089,14 @@ entities:
     - type: Transform
       parent: 38012
       pos: -1.5,-6.5
-  - uid: 38448
+  - uid: 38450
     components:
     - type: Transform
       parent: 37832
       pos: -2.5,-3.5
 - proto: GeneratorWallmountBasic
   entities:
-  - uid: 38450
+  - uid: 38452
     components:
     - type: Transform
       parent: 37832
@@ -179291,18 +179301,18 @@ entities:
     - type: Transform
       parent: 2
       pos: -43.5,-38.5
-- proto: PlasticFlapsClear
-  entities:
   - uid: 26424
     components:
     - type: Transform
       parent: 2
-      pos: -47.5,-59.5
+      pos: -43.5,-59.5
   - uid: 26425
     components:
     - type: Transform
       parent: 2
-      pos: -43.5,-59.5
+      pos: -47.5,-59.5
+- proto: PlasticFlapsClear
+  entities:
   - uid: 26426
     components:
     - type: Transform
@@ -244942,7 +244952,7 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 34.5,41.5
-  - uid: 38447
+  - uid: 38449
     components:
     - type: MetaData
       name: Security Pod
@@ -244950,7 +244960,7 @@ entities:
       parent: 28952
       rot: -1.5707963267948966 rad
       pos: 0.5,2.5
-  - uid: 38449
+  - uid: 38451
     components:
     - type: MetaData
       name: Cargo Shuttle
@@ -244958,7 +244968,7 @@ entities:
       parent: 37832
       rot: -1.5707963267948966 rad
       pos: -2.5,2.5
-  - uid: 38452
+  - uid: 38454
     components:
     - type: MetaData
       name: Salvage Shuttle

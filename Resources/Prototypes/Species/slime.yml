@@ -5,6 +5,9 @@
   prototype: MobSlimePerson
   defaultSkinTone: "#b8b8b8"
   dollPrototype: AppearanceSlimePerson
+  maleFirstNames: NamesMaleSlimeFirst
+  femaleFirstNames: NamesFemaleSlimeFirst
+  lastNames: NamesSlimeLast
   skinColoration: Hues
   defaultSoundsBySex:
     - MaleSlime

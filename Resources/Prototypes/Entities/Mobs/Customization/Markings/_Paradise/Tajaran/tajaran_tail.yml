@@ -1,0 +1,49 @@
+# Tails
+- type: marking
+  id: TajaranTailStriped
+  bodyPart: Tail
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: tajtail_s
+
+- type: marking
+  id: TajaranTailShort
+  bodyPart: Tail
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: short_s
+
+- type: marking
+  id: TajaranTailTiny
+  bodyPart: Tail
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: tiny_s
+
+# Tails Animated
+- type: marking
+  id: TajaranTailStripedAnimated
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: tajtailw_s
+
+- type: marking
+  id: TajaranTailShortAnimated
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: shortw_s
+
+- type: marking
+  id: TajaranTailTinyAnimated
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_tail_markings.rsi
+      state: tinyw_s

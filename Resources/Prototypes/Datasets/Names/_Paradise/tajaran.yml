@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesTajaranFirst
+  values:
+    prefix: names-tajaran-first-dataset-
+    count: 40
+
+- type: localizedDataset
+  id: NamesTajaranLast
+  values:
+    prefix: names-tajaran-last-dataset-
+    count: 25

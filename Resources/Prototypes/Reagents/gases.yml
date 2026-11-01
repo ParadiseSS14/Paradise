@@ -352,6 +352,17 @@
           time: 15
         - !type:Drunk
           boozePower: 15
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
+              inverted: true
+          # Skrell are much more prone to getting drunk
+        - !type:Drunk
+          boozePower: 60
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
+
         - !type:PopupMessage
           type: Local
           messages: ["frezon-lungs-cold"]
@@ -380,6 +391,16 @@
         - !type:Drunk
           boozePower: 500
           minScale: 1
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
+              inverted: true
+          # Skrell are much more prone to getting drunk
+        - !type:Drunk
+          boozePower: 3000
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
         - !type:PopupMessage
           type: Local
           messages: ["frezon-lungs-cold"]

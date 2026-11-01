@@ -93,6 +93,11 @@
     - /Audio/Voice/Slime/slime_squish.ogg
 
 - type: soundCollection
+  id: Warbles
+  files:
+    - /Audio/Voice/Skrell/skrell_warble.ogg
+
+- type: soundCollection
   id: Weh
   files:
     - /Audio/Items/Toys/weh.ogg

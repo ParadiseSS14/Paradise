@@ -187,6 +187,16 @@
               inverted: true
         - !type:Drunk
           boozePower: 2
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
+              inverted: true
+          # Skrell are much more prone to getting drunk
+        - !type:Drunk
+          boozePower: 10
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
 
 - type: reagent
   id: Gin
@@ -2263,6 +2273,16 @@
           factor: 3
         - !type:Drunk
           boozePower: 10
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
+              inverted: true
+          # Skrell are much more prone to getting drunk
+        - !type:Drunk
+          boozePower: 50
+          conditions:
+            - !type:MetabolizerTypeCondition
+              type: [Skrell]
         - !type:HealthChange
           conditions:
             - !type:ReagentCondition

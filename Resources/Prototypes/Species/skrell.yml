@@ -1,0 +1,11 @@
+- type: species
+  id: Skrell
+  name: species-name-skrell
+  roundStart: true
+  prototype: MobSkrell
+  dollPrototype: AppearanceSkrell
+  defaultSkinTone: "#38b661"
+  maleFirstNames: NamesSkrell
+  femaleFirstNames: NamesSkrell
+  lastNames: NamesSkrell
+  skinColoration: TintedHues

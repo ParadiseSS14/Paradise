@@ -1,0 +1,17 @@
+- type: localizedDataset
+  id: NamesMaleSlimeFirst
+  values:
+    prefix: names-male-slime-first-dataset-
+    count: 177
+
+- type: localizedDataset
+  id: NamesFemaleSlimeFirst
+  values:
+    prefix: names-female-slime-first-dataset-
+    count: 73
+
+- type: localizedDataset
+  id: NamesSlimeLast
+  values:
+    prefix: names-slime-last-dataset-
+    count: 129

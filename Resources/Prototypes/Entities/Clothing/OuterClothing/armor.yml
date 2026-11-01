@@ -20,6 +20,7 @@
           Slash: 0.70
           Piercing: 0.70 #Can save you, but bullets will still hurt. Will take about 10 shots from a Viper before critting, as opposed to 7 while unarmored and 16~ with a bulletproof vest.
           Heat: 0.80
+          Shock: 0.65 #PARADISE EDIT - Stun overhaul
     - type: ExplosionResistance
       damageCoefficient: 0.90
 
@@ -62,6 +63,7 @@
           Slash: 0.9
           Piercing: 0.4
           Heat: 0.9
+          Shock: 0.65 #PARADISE EDIT - Stun overhaul
     - type: ExplosionResistance
       damageCoefficient: 0.80
 
@@ -82,6 +84,7 @@
           Slash: 0.9
           Piercing: 0.9
           Heat: 0.4 # this technically means it protects against fires pretty well? -heat is just for lasers and stuff, not atmos temperature
+          Shock: 0.65 #PARADISE EDIT - Stun overhaul
     - type: Reflect
       reflectProb: 1
       reflects:
@@ -113,6 +116,7 @@
           Piercing: 0.6
           Heat: 0.5
           Caustic: 0.9
+          Shock: 0.6 #PARADISE EDIT - Stun overhaul
     - type: GroupExamine
 
 - type: entity
@@ -158,6 +162,7 @@
           Slash: 0.6
           Piercing: 0.3
           Heat: 0.9
+          Shock: 0.5 #PARADISE EDIT - Stun overhaul
     - type: StaticPrice
       price: 1500
 
@@ -204,6 +209,7 @@
           Slash: 0.7
           Piercing: 0.5
           Heat: 0.9
+          Shock: 0.5 #PARADISE EDIT - Stun overhaul
 
 # Armor covering multiple body parts including limbs
 - type: entity
@@ -229,8 +235,7 @@
           Piercing: 0.35
           Heat: 0.35
           Caustic: 0.5
-    - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
-      damageCoefficient: 0.45
+          Shock: 0.4 #PARADISE EDIT - Stun overhaul
     - type: ClothingSpeedModifier
       walkModifier: 0.9
       sprintModifier: 0.9
@@ -301,6 +306,7 @@
           Piercing: 0.7
           Heat: 0.9
           Caustic: 0.9
+          Shock: 0.7 #PARADISE EDIT - Stun overhaul
     - type: ExplosionResistance
       damageCoefficient: 0.9
     - type: GroupExamine
@@ -343,6 +349,7 @@
           Heat: 0.5
           Radiation: 0
           Caustic: 0.75
+          Shock: 0.3 #PARADISE EDIT - Stun overhaul
     - type: GroupExamine
     - type: ProtectedFromStepTriggers
       slots: WITHOUT_POCKET

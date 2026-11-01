@@ -4,8 +4,8 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/01/2026 19:45:25
-  entityCount: 38450
+  time: 11/01/2026 19:48:58
+  entityCount: 38452
 maps:
 - 1
 grids:
@@ -15456,7 +15456,7 @@ entities:
       - - Engineering
     - type: Door
       state: Opening
-      secondsUntilStateChange: -297754.94
+      secondsUntilStateChange: -297954
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16011,7 +16011,7 @@ entities:
       pos: 14.5,-85.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -159997.11
+      secondsUntilStateChange: -160196.17
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16422,7 +16422,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -121066.41
+      secondsUntilStateChange: -121265.48
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16450,7 +16450,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -121065.336
+      secondsUntilStateChange: -121264.41
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16542,7 +16542,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -72152.3
+      secondsUntilStateChange: -72351.37
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16772,7 +16772,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -321074.84
+      secondsUntilStateChange: -321273.9
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16785,7 +16785,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -321072.8
+      secondsUntilStateChange: -321271.88
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18744,7 +18744,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -326533.06
+      secondsUntilStateChange: -326732.12
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19036,7 +19036,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -141519.73
+      secondsUntilStateChange: -141718.8
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -57492,6 +57492,11 @@ entities:
     - type: Transform
       parent: 2
       pos: 8.5,-73.5
+  - uid: 38451
+    components:
+    - type: Transform
+      parent: 37832
+      pos: -2.5,-4.5
 - proto: CableHVStack
   entities:
   - uid: 7835
@@ -164079,6 +164084,13 @@ entities:
     - type: Transform
       parent: 37832
       pos: -2.5,-3.5
+- proto: GeneratorWallmountBasic
+  entities:
+  - uid: 38450
+    components:
+    - type: Transform
+      parent: 37832
+      pos: -2.5,-4.5
 - proto: Girder
   entities:
   - uid: 23709
@@ -244946,7 +244958,7 @@ entities:
       parent: 37832
       rot: -1.5707963267948966 rad
       pos: -2.5,2.5
-  - uid: 38450
+  - uid: 38452
     components:
     - type: MetaData
       name: Salvage Shuttle

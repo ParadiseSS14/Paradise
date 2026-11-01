@@ -37,29 +37,38 @@ namespace Content.Client.Atmos.UI
             ToggleStatusButton.OnPressed += _ => SetMixerStatus(!MixerState.Enabled);
             ToggleStatusButton.OnPressed += _ => ToggleStatusButtonPressed?.Invoke();
 
+            MixerPressureOutputInput.OnTextEntered += args =>
+            {
+                ExportData();
+            };
+
             SetMaxPressureButton.OnPressed += _ =>
             {
                 MixerPressureOutputInput.Text = Atmospherics.MaxOutputPressure.ToString(CultureInfo.CurrentCulture);
+                ExportData();
             };
 
             MixerNodeOneInput.OnTextEntered += _ =>
             {
                 UserInputParser.TryFloat(MixerNodeOneInput.Text, out var result);
                 SetNodePercentages(result);
+                ExportData();
             };
             MixerNodeTwoInput.OnTextEntered += _ =>
             {
                 UserInputParser.TryFloat(MixerNodeTwoInput.Text, out var result2);
                 result2 = 1 - result2;
                 SetNodePercentages(result2);
+                ExportData();
             };
         }
 
         private void ExportData()
         {
-            MixerState.OutputPressure = UserInputParser.TryFloat(MixerPressureOutputInput.Text, out var parsed) ? parsed : 1.0f;
+            MixerState.OutputPressure =
+                UserInputParser.TryFloat(MixerPressureOutputInput.Text, out var parsed) ? parsed : 1.0f;
             MixerState.MixerOneNodePercentage =
-                (UserInputParser.TryFloat(MixerNodeOneInput.Text, out var result) ? result : 1.0f) / 100;
+                (UserInputParser.TryFloat(MixerNodeOneInput.Text, out var result) ? result : 1.0f) * 100;
             MixerNodeDataSet?.Invoke(MixerState);
         }
 
@@ -70,7 +79,7 @@ namespace Content.Client.Atmos.UI
 
         public void SetNodePercentages(float nodeOne)
         {
-            nodeOne = float.Clamp(nodeOne, 0,1);
+            nodeOne = float.Clamp(nodeOne, 0, 1);
             MixerNodeOneInput.Text = nodeOne.ToString("0.##", CultureInfo.CurrentCulture);
 
 
@@ -82,14 +91,8 @@ namespace Content.Client.Atmos.UI
         {
             MixerState.Enabled = enabled;
             ToggleStatusButton.Pressed = enabled;
-            if (enabled)
-            {
-                ToggleStatusLabel.Text = Loc.GetString("comp-gas-mixer-ui-status-enabled");
-            }
-            else
-            {
-                ToggleStatusLabel.Text = Loc.GetString("comp-gas-mixer-ui-status-disabled");
-            }
+            ToggleStatusLabel.Text =
+                Loc.GetString(enabled ? "comp-gas-mixer-ui-status-enabled" : "comp-gas-mixer-ui-status-disabled");
         }
     }
 }

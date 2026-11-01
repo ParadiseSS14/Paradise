@@ -1,35 +1,33 @@
 <PanelContainer xmlns="https://spacestation14.io"
-              xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
-              Margin="5 5 5 5">
-    <PanelContainer.PanelOverride>
-        <gfx:StyleBoxFlat BorderThickness="1" BorderColor="#777777"/>
-    </PanelContainer.PanelOverride>
+                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                Margin="5 5 5 5" StyleClasses="SurfaceRoundedModal">
 
     <BoxContainer Orientation="Vertical">
-        <PanelContainer HorizontalExpand="True">
+        <PanelContainer HorizontalExpand="True" StyleClasses="SurfaceRoundedTopModal">
             <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center">
-                <BoxContainer Name="IconContainer"/>
-                <RichTextLabel Name="ResultName"/>
+                <BoxContainer Name="IconContainer" />
+                <RichTextLabel Name="ResultName" />
             </BoxContainer>
-            <PanelContainer.PanelOverride>
-                <gfx:StyleBoxFlat BackgroundColor="#393c3f"/>
-            </PanelContainer.PanelOverride>
         </PanelContainer>
 
         <GridContainer Columns="2" Margin="10">
-            <BoxContainer Orientation="Vertical" HorizontalExpand="True">
-                <Label Text="{Loc 'guidebook-microwave-ingredients-header'}"/>
-                <GridContainer Columns="3" Name="IngredientsGrid"/>
-            </BoxContainer>
+            <Control HorizontalExpand="True">
+                <PanelContainer StyleClasses="SurfacePrimary" Margin="0 0 40 0">
+                    <BoxContainer Orientation="Vertical" HorizontalExpand="True" Margin="8">
+                        <Label Text="{Loc 'guidebook-microwave-ingredients-header'}" StyleClasses="LabelSubText" Margin="0 0 0 8" />
+                        <GridContainer Columns="3" Name="IngredientsGrid" />
+                    </BoxContainer>
+                </PanelContainer>
+            </Control>
 
             <BoxContainer Orientation="Vertical" HorizontalExpand="True">
-                <Label Text="{Loc 'guidebook-microwave-cook-time-header'}"/>
-                <RichTextLabel Name="CookTimeLabel"/>
+                <Label Text="{Loc 'guidebook-microwave-cook-time-header'}" StyleClasses="LabelSubText"/>
+                <RichTextLabel Name="CookTimeLabel" />
             </BoxContainer>
         </GridContainer>
 
         <BoxContainer Margin="10">
-            <RichTextLabel Name="ResultDescription" HorizontalAlignment="Left"/>
+            <RichTextLabel Name="ResultDescription" HorizontalAlignment="Left" StyleClasses="LabelSubText" />
         </BoxContainer>
     </BoxContainer>
 </PanelContainer>

@@ -66,6 +66,22 @@ public sealed class PanelSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet,
             CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius),
         };
 
+        var panelRoundedModal = new StyleBoxSDFBox()
+        {
+            BackgroundColor = sheet.PanelPalette.PanelTertiary,
+            BorderColor = sheet.PanelPalette.PanelBorderColor,
+            BorderThickness = sheet.PanelPalette.PanelBorderThickness,
+            CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius * 3),
+        };
+
+        var panelRoundedTop = new StyleBoxSDFBox(panelRoundedModal)
+        {
+            CornerRadius = new Vector4(sheet.PanelPalette.PanelCornerRadius * 3,
+                0,
+                sheet.PanelPalette.PanelCornerRadius * 3,
+                0),
+        };
+
         var listViewPanel = new StyleBoxSDFBox()
         {
             BackgroundColor = ModalPalette.Shift(sheet.PanelPalette.PanelPrimary, 0.06f, 0.00f, -20).WithAlpha(0.30f),
@@ -114,8 +130,12 @@ public sealed class PanelSheetlet<T> : Sheetlet<T> where T : PalettedStylesheet,
                 .Panel(panelTertiary),
 
             E<PanelContainer>()
-                .Class(StyleClass.SurfaceTertiary)
-                .Panel(panelTertiary),
+                .Class(StyleClass.SurfaceRoundedModal)
+                .Panel(panelRoundedModal),
+
+            E<PanelContainer>()
+                .Class(StyleClass.SurfaceRoundedTopModal)
+                .Panel(panelRoundedTop),
 
             E<PanelContainer>()
                 .Class(StyleClass.SurfaceBackground)

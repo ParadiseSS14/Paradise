@@ -30,6 +30,8 @@ namespace Content.Client.Atmos.UI
 
             _window.ToggleStatusButtonPressed += OnToggleStatusButtonPressed;
             _window.MixerNodeDataSet += RecieveMixerState;
+
+            Update();
         }
 
         private void RecieveMixerState(GasMixerState obj)
@@ -64,16 +66,16 @@ namespace Content.Client.Atmos.UI
         /// Update the UI state based on server-sent info
         /// </summary>
         /// <param name="state"></param>
-        protected override void UpdateState(BoundUserInterfaceState state)
+        public override void Update()
         {
-            base.UpdateState(state);
-            if (_window == null || state is not GasMixerBoundUserInterfaceState cast)
+            base.Update();
+            if (_window == null || !EntMan.TryGetComponent<GasMixerComponent>(Owner, out var mixer))
                 return;
 
-            _window.Title = (cast.MixerLabel);
-            _window.SetMixerStatus(cast.Enabled);
-            _window.SetOutputPressure(cast.OutputPressure);
-            _window.SetNodePercentages(cast.NodeOne);
+            // _window.Title = (mixer.MixerLabel);
+            _window.SetMixerStatus(mixer.Enabled);
+            _window.SetOutputPressure(mixer.TargetPressure);
+            _window.SetNodePercentages(mixer.InletOneConcentration);
         }
     }
 

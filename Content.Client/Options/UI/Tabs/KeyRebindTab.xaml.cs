@@ -185,6 +185,7 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(EngineKeyFunctions.UseSecondary);
             AddButton(ContentKeyFunctions.UseItemInHand);
             AddButton(ContentKeyFunctions.AltUseItemInHand);
+            AddButton(ContentKeyFunctions.UseGunInHand); //PARADISE EDIT - Weapon Overhaul
             AddButton(ContentKeyFunctions.ActivateItemInWorld);
             AddButton(ContentKeyFunctions.AltActivateItemInWorld);
             AddButton(ContentKeyFunctions.Drop);

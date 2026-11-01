@@ -6,27 +6,27 @@
          xmlns:profile="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls"
          HorizontalExpand="True">
         <!-- Left side -->
-        <BoxContainer Orientation="Vertical" Margin="10 10 10 10" HorizontalExpand="True">
+        <BoxContainer Orientation="Vertical" Margin="8" HorizontalExpand="True">
             <!-- Middle container -->
             <BoxContainer Orientation="Horizontal" SeparationOverride="10" HorizontalExpand="True">
                 <!-- Name box-->
                 <BoxContainer Orientation="Vertical">
-                    <ui:HighlightedContainer>
-                        <BoxContainer Orientation="Vertical">
+                    <PanelContainer StyleClasses="SurfacePrimary">
+                        <BoxContainer Orientation="Vertical" Margin="8">
                             <BoxContainer Orientation="Horizontal" VerticalExpand="True">
                                 <Label Text="{Loc 'humanoid-profile-editor-name-label'}" />
-                                <LineEdit Name="NameEdit" MinSize="270 0" VerticalAlignment="Center" Margin="5 0 0 0" />
+                                <LineEdit Name="NameEdit" MinSize="270 0" VerticalAlignment="Center" Margin="5 0 0 8" />
                             </BoxContainer>
                             <RichTextLabel Name="WarningLabel" HorizontalExpand="False"
                                             VerticalExpand="True" MaxWidth="425"
                                             HorizontalAlignment="Left" />
                         </BoxContainer>
-                    </ui:HighlightedContainer>
+                    </PanelContainer>
                 </BoxContainer>
                 <!-- Randomizer -->
                 <BoxContainer Orientation="Vertical">
-                    <ui:HighlightedContainer>
-                        <BoxContainer Orientation="Vertical">
+                    <PanelContainer StyleClasses="SurfacePrimary">
+                        <BoxContainer Orientation="Vertical" Margin="8">
                             <Label Text="{Loc 'humanoid-profile-editor-randomize'}" HorizontalAlignment="Center"/>
                             <PanelContainer StyleClasses="LowDivider" Margin="0 10"/>
                             <GridContainer Columns="2" MinWidth="250" HorizontalExpand="True">
@@ -43,12 +43,12 @@
                                 MaxWidth="256"
                                 Text="{Loc 'humanoid-profile-editor-randomize-unlocked-button'}"/>
                         </BoxContainer>
-                    </ui:HighlightedContainer>
+                    </PanelContainer>
                 </BoxContainer>
                 <!-- Import/Export -->
                 <BoxContainer Orientation="Vertical" MinSize="60 0" HorizontalExpand="True" HorizontalAlignment="Right">
-                    <ui:HighlightedContainer Name="ProfileHighlight">
-                        <BoxContainer Orientation="Vertical">
+                    <PanelContainer StyleClasses="SurfacePrimary" Name="ProfileHighlight">
+                        <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="8">
                             <Button Name="SaveButton" Text="{Loc 'humanoid-profile-editor-save-button'}"/>
                             <Button Name="ResetButton" Disabled="True" Text="{Loc 'humanoid-profile-editor-reset-button'}"/>
                             <Button Name="ImportButton" Text="{Loc 'humanoid-profile-editor-import-button'}"/>
@@ -56,7 +56,7 @@
                             <Button Name="ExportImageButton" Text="{Loc 'humanoid-profile-editor-export-image-button'}"/>
                             <Button Name="OpenImagesButton" Text="{Loc 'humanoid-profile-editor-open-image-button'}"/>
                         </BoxContainer>
-                    </ui:HighlightedContainer>
+                    </PanelContainer>
                 </BoxContainer>
             </BoxContainer>
             <Control MinHeight="10" />
@@ -122,7 +122,7 @@
                             <!-- Eyes -->
                             <BoxContainer Margin="10" Orientation="Vertical">
                                 <Label Text="{Loc 'humanoid-profile-editor-eyes-label'}" />
-                                <humanoid:EyeColorPicker Name="EyeColorPicker" />
+                                <Button Text="{Loc 'character-setup-gui-color-picker'}" Name="EyeColorPicker"/>
                             </BoxContainer>
                         </BoxContainer>
                     </ScrollContainer>

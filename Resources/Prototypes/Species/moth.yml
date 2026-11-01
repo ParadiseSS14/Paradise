@@ -6,9 +6,11 @@
   defaultSkinTone: "#ffda93"
   dollPrototype: AppearanceMoth
   skinColoration: Hues
-  maleFirstNames: NamesMothFirstMale
-  femaleFirstNames: NamesMothFirstFemale
-  lastNames: NamesMothLast
+  maleFirstNames: NamesNianFirst
+  femaleFirstNames: NamesNianFirst
+  lastNames: NamesNianLast
+  middleNames: NamesNianMiddle
+  naming: niannames
   defaultSoundsBySex:
     - UnisexMoth
     - UnisexMoth

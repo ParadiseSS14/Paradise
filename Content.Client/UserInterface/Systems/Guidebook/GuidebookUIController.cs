@@ -210,7 +210,7 @@ public sealed partial class GuidebookUIController : UIController, IOnStateEntere
         if (changed)
         {
             _guideWindow.Tree.SetAllExpanded(false);
-            _guideWindow.Tree.SetAllExpanded(true, 1);
+            _guideWindow.Tree.SetAllExpanded(false, 1);
         }
 
         _guideWindow.OpenCenteredRight();

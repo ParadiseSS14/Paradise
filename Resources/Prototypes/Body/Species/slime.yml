@@ -5,7 +5,6 @@
     enum.HumanoidVisualLayers.Hair:
       limit: 1
       required: false
-      weight: 1
     enum.HumanoidVisualLayers.FacialHair:
       limit: 1
       required: false
@@ -80,7 +79,7 @@
     - AppearanceSlimePerson
     - BaseSpeciesMobOrganic
   id: MobSlimePerson
-  name: Urist McWobble
+  name: Urist McSquish
   components:
     - type: Storage
       clickInsert: false
@@ -215,6 +214,11 @@
 - type: entity
   parent: [OrganBaseHead, OrganSlimePersonExternal]
   id: OrganSlimePersonHead
+  components:
+    - type: VisualOrganMarkings
+      hideableLayers:
+        - enum.HumanoidVisualLayers.Hair
+        - enum.HumanoidVisualLayers.FacialHair
 
 - type: entity
   parent: [OrganBaseArmLeft, OrganSlimePersonExternal]

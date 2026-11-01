@@ -3,6 +3,7 @@ using System.Linq;
 using Content.Client.Chemistry.EntitySystems;
 using Content.Client.Guidebook.Richtext;
 using Content.Client.Message;
+using Content.Client.Stylesheets.Colorspace;
 using Content.Client.UserInterface.ControlExtensions;
 using Content.Shared.CCVar;
 using Content.Shared.Chemistry.Reaction;
@@ -96,19 +97,11 @@ public sealed partial class GuideReagentEmbed : BoxContainer, IDocumentTag, ISea
 
         NameBackground.PanelOverride = new StyleBoxFlat
         {
-            BackgroundColor = reagent.SubstanceColor
+            BackgroundColor = reagent.SubstanceColor.NudgeChroma(-0.01f),
         };
 
-        var r = reagent.SubstanceColor.R;
-        var g = reagent.SubstanceColor.G;
-        var b = reagent.SubstanceColor.B;
-
-        var textColor = 0.2126f * r + 0.7152f * g + 0.0722f * b > 0.5
-            ? Color.Black
-            : Color.White;
-
         ReagentName.SetMarkup(Loc.GetString("guidebook-reagent-name",
-            ("color", textColor), ("name", reagent.LocalizedName)));
+            ("color", Color.White), ("name", reagent.LocalizedName)));
 
         #region Recipe
         var reactions = _prototype.EnumeratePrototypes<ReactionPrototype>()
@@ -127,6 +120,7 @@ public sealed partial class GuideReagentEmbed : BoxContainer, IDocumentTag, ISea
         else
         {
             RecipesContainer.Visible = false;
+            RecipesContainer.Parent?.Visible = false;
         }
         #endregion
 
@@ -180,6 +174,7 @@ public sealed partial class GuideReagentEmbed : BoxContainer, IDocumentTag, ISea
         else
         {
             EffectsContainer.Visible = false;
+            EffectsContainer.Parent?.Visible = false;
         }
         #endregion
 
@@ -213,6 +208,7 @@ public sealed partial class GuideReagentEmbed : BoxContainer, IDocumentTag, ISea
         else
         {
             PlantMetabolismsContainer.Visible = false;
+            PlantMetabolismsContainer.Parent?.Visible = false;
         }
         #endregion
 
@@ -251,6 +247,7 @@ public sealed partial class GuideReagentEmbed : BoxContainer, IDocumentTag, ISea
         if (sources.Count == 0)
         {
             SourcesContainer.Visible = false;
+            SourcesContainer.Parent?.Visible = false;
             return;
         }
         SourcesContainer.Visible = true;

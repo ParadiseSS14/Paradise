@@ -62,7 +62,7 @@ public sealed partial class ColorPicker : FancyWindow
     private void LineEditLinesChanged(LineEdit.LineEditEventArgs obj)
     {
 
-        if (Color.TryFromHex(HexEdit.Text, out var hexCol))
+        if (!Color.TryFromHex(HexEdit.Text, out var hexCol))
             return;
         currentColor = hexCol;
         currentHsva = Color.ToHsv(hexCol);

@@ -263,7 +263,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
     /// <summary>
     /// This method handles the response of Offer targets
     /// </summary>
-    public void OpenComposeFor(EntityUid receiver, NetEntity senderNet, EntityUid sender)
+    public void OpenComposeFor(EntityUid receiver, EntityUid sender)
     {
         if (!TryComp<TelepathicChatComponent>(sender, out var senderComp))
             return;
@@ -288,7 +288,7 @@ public sealed partial class TelepathicChatSystem : EntitySystem
             Timeout = _timing.CurTime + TimeSpan.FromSeconds(30)
         };
         senderComp.Sessions[sessionID].Sender = GetNetEntity(receiver);
-        senderComp.Sessions[sessionID].Receiver = senderNet;
+        senderComp.Sessions[sessionID].Receiver = GetNetEntity(sender);
         Dirty(sender, senderComp);
 
         var uiKeySession = new TelepathyUiState

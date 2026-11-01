@@ -18995,8 +18995,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 16128
-      configurators:
-      - invalid
   - uid: 807
     components:
     - type: Transform
@@ -101659,8 +101657,6 @@ entities:
       deviceLists:
       - 16128
       - 16129
-      configurators:
-      - invalid
   - uid: 16255
     components:
     - type: Transform
@@ -101709,8 +101705,6 @@ entities:
       deviceLists:
       - 16128
       - 16129
-      configurators:
-      - invalid
   - uid: 16262
     components:
     - type: Transform
@@ -101776,8 +101770,6 @@ entities:
       deviceLists:
       - 16128
       - 16129
-      configurators:
-      - invalid
   - uid: 16273
     components:
     - type: Transform
@@ -101855,8 +101847,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 16128
-      configurators:
-      - invalid
   - uid: 16283
     components:
     - type: Transform
@@ -101866,8 +101856,6 @@ entities:
       deviceLists:
       - 16128
       - 16129
-      configurators:
-      - invalid
   - uid: 16284
     components:
     - type: Transform
@@ -101943,8 +101931,6 @@ entities:
       parent: 2
       pos: 23.5,3.5
     - type: DeviceNetwork
-      configurators:
-      - invalid
   - uid: 16294
     components:
     - type: Transform
@@ -101959,8 +101945,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 16128
-      configurators:
-      - invalid
   - uid: 16296
     components:
     - type: Transform
@@ -102012,8 +101996,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 16128
-      configurators:
-      - invalid
   - uid: 16305
     components:
     - type: Transform
@@ -102023,8 +102005,6 @@ entities:
       deviceLists:
       - 16128
       - 16129
-      configurators:
-      - invalid
   - uid: 16306
     components:
     - type: Transform
@@ -103311,8 +103291,6 @@ entities:
       deviceLists:
       - 15989
       - 173
-      configurators:
-      - invalid
   - uid: 16526
     components:
     - type: Transform
@@ -103331,16 +103309,12 @@ entities:
       parent: 2
       pos: 22.5,-11.5
     - type: DeviceNetwork
-      configurators:
-      - invalid
   - uid: 16529
     components:
     - type: Transform
       parent: 2
       pos: 24.5,-11.5
     - type: DeviceNetwork
-      configurators:
-      - invalid
   - uid: 16530
     components:
     - type: Transform
@@ -103659,8 +103633,6 @@ entities:
       deviceLists:
       - 15989
       - 173
-      configurators:
-      - invalid
   - uid: 16578
     components:
     - type: Transform

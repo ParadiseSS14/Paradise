@@ -443,23 +443,23 @@
           factor: 4
         - !type:HealthChange
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
           damage:
             types:
               Caustic: 0.4 # Matches Sulfuric Acid damage without the higher Metabolism Rate
         - !type:PopupMessage
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
           type: Local
           visualType: Large
-          messages: [ "generic-reagent-effect-burning-insides" ]
+          messages: ["generic-reagent-effect-burning-insides"]
           probability: 0.33
         - !type:Emote
           conditions:
-          - !type:MetabolizerTypeCondition
-            type: [ Grey ]
+            - !type:MetabolizerTypeCondition
+              type: [Grey]
           emote: Scream
           probability: 0.25
     Respiration:

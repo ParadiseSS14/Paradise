@@ -119,7 +119,7 @@
 - type: radioChannel
   id: Greymind
   name: chat-radio-greymind
-  keycode: '^'
+  keycode: "^"
   frequency: 1002
   color: "#800080"
   longRange: true

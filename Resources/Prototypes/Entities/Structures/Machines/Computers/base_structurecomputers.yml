@@ -56,6 +56,7 @@
       autoRot: true
       offset: "0, 0.4" # shine from the top, not bottom of the computer
       castShadows: false
+    - type: ComputerLighting
     - type: EmitSoundOnUIOpen
       sound:
         collection: Keyboard

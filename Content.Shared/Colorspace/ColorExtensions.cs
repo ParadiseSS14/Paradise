@@ -2,7 +2,7 @@
 using JetBrains.Annotations;
 using Robust.Shared.Utility;
 
-namespace Content.Client.Stylesheets.Colorspace;
+namespace Content.Shared.Colorspace;
 
 [PublicAPI]
 public static class ColorExtensions

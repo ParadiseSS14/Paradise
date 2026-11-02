@@ -1,5 +1,5 @@
 using Content.Client.Resources;
-using Content.Client.Stylesheets.Colorspace;
+using Content.Shared.Colorspace;
 using Content.Client.Stylesheets.Fonts;
 using Content.Client.Stylesheets.Palette;
 using Robust.Client.UserInterface;

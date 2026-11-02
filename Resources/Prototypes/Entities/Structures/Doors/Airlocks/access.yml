@@ -1232,8 +1232,8 @@
       containers:
         board: [DoorElectronicsExternal]
     - type: Docking
-      radarColor: "#B22222"
-      highlightedRadarColor: Red
+      radarColor: "#2222B2"
+      highlightedRadarColor: Blue
       dockLegendCategory: Arrivals
 
 - type: entity
@@ -1249,6 +1249,20 @@
       radarColor: "#FFFF9F"
       highlightedRadarColor: LightYellow
       dockLegendCategory: Cargo
+
+- type: entity
+  name: security airlock
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleSecurity
+  suffix: External, Security, Glass, Docking
+  components:
+    - type: ContainerFill
+      containers:
+        board: [DoorElectronicsExternal]
+    - type: Docking
+      radarColor: "#B22222"
+      highlightedRadarColor: Red
+      dockLegendCategory: Security
 
 - type: entity
   parent: AirlockGlassShuttle

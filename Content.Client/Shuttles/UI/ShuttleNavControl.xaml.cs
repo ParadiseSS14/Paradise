@@ -42,6 +42,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     public bool ShowDocks { get; set; } = true;
     public bool RotateWithEntity { get; set; } = true;
     public bool ShowCargoDocks { get; set; } = true;
+    public bool ShowSecurityDocks { get; set; } = true;
     public bool ShowArrivalDocks { get; set; } = true;
 
     /// <summary>
@@ -300,7 +301,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     /// </summary>
     private void DrawDocks(DrawingHandleScreen handle, EntityUid uid, Matrix3x2 gridToView)
     {
-        if (!ShowDocks && !ShowCargoDocks && !ShowArrivalDocks)
+        if (!ShowDocks && !ShowCargoDocks && !ShowArrivalDocks && !ShowSecurityDocks)
             return;
 
         const float dockScale = 0.6f;
@@ -343,6 +344,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
                 switch (state.Category)
                 {
                     case LegendCategory.Cargo when !ShowCargoDocks:
+                    case LegendCategory.Security when !ShowSecurityDocks:
                     case LegendCategory.Arrivals when !ShowArrivalDocks:
                     case LegendCategory.General when !ShowDocks:
                         continue;

@@ -41,5 +41,6 @@ public enum LegendCategory
 {
     General,
     Cargo,
+    Security,
     Arrivals
 }

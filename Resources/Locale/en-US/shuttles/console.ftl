@@ -26,6 +26,7 @@ shuttle-console-nav-settings = Settings
 shuttle-console-nav-legend = Legend
 shuttle-console-nav-other-dock = External Docks
 shuttle-console-nav-cargo-dock = Cargo Docks
+shuttle-console-nav-security-dock = Security Docks
 shuttle-console-nav-arrivals-dock = Arrivals Docks
 shuttle-console-iff-toggle = Show IFF
 

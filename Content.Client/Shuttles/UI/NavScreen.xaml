@@ -88,11 +88,29 @@
                 <TextureRect
                     Stretch="KeepAspectCentered"
                     TexturePath="/Textures/Interface/NavMap/beveled_square.png"
-                    Modulate="Red"
+                    Modulate="Blue"
                     SetSize="20 20"
                     Margin="10 0 5 0"/>
                 <Label
                     Text="{Loc 'shuttle-console-nav-arrivals-dock'}"
+                    VerticalExpand="True"
+                    HorizontalAlignment="Center" />
+            </BoxContainer>
+        </Button>
+
+        <!-- Security Dock Toggle -->
+        <Button Name="SecurityDockToggle"
+            HorizontalAlignment="Stretch"
+            ToggleMode="True">
+            <BoxContainer Orientation="Horizontal" Margin="0 2">
+                <TextureRect
+                    Stretch="KeepAspectCentered"
+                    TexturePath="/Textures/Interface/NavMap/beveled_square.png"
+                    Modulate="Red"
+                    SetSize="20 20"
+                    Margin="10 0 5 0"/>
+                <Label
+                    Text="{Loc 'shuttle-console-nav-security-dock'}"
                     VerticalExpand="True"
                     HorizontalAlignment="Center" />
             </BoxContainer>

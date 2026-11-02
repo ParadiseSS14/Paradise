@@ -10,7 +10,7 @@
   <GuideEntityEmbed Entity="AppearanceHuman" Caption="Human"/>
   </Box>
   <Box>
-  <GuideEntityEmbed Entity="AppearanceMoth" Caption="Moth Person"/>
+  <GuideEntityEmbed Entity="AppearanceMoth" Caption="Nian"/>
   <GuideEntityEmbed Entity="AppearanceReptilian" Caption="Unathi"/>
   <GuideEntityEmbed Entity="AppearanceSlimePerson" Caption="Slime Person"/>
   <GuideEntityEmbed Entity="AppearanceVox" Caption="Vox"/>

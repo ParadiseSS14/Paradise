@@ -213,7 +213,7 @@ public sealed partial class GuidebookWindow : FancyWindow, ILinkClickHandler, IA
         }
 
         // Expand all entries, but collapse the first one
-        TableOfContents.SetAllExpanded(true);
+        TableOfContents.SetAllExpanded(false);
         firstEntry.SetExpanded(false);
     }
 
@@ -293,7 +293,7 @@ public sealed partial class GuidebookWindow : FancyWindow, ILinkClickHandler, IA
             AddEntry(entry.Id, parent, addedEntries);
         }
 
-        Tree.SetAllExpanded(true);
+        Tree.SetAllExpanded(false);
     }
 
     private TreeItem? AddEntry(ProtoId<GuideEntryPrototype> id,

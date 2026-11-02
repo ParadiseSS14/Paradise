@@ -7,8 +7,8 @@ uniform highp vec4 backgroundColor;
 uniform highp vec4 knobColor;
 uniform highp vec4 knobHighlightColor;
 
-uniform highp float minRange = 0.1;
-uniform highp float maxRange = 0.9;
+uniform highp float minRange;
+uniform highp float maxRange;
 
 const highp float aa = 0.0075;
 const highp float aa2 = 0.0075;
@@ -22,7 +22,7 @@ void fragment()
     highp vec2 polarUV = UV;
     polarUV = polarUV - 0.5;
     highp float angle = atan(polarUV.x, polarUV.y) / PI;
-    angle = (angle + 1) / 2;
+    angle = (angle + 1.0) / 2.0;
 
     angle = (angle - minRange) / (maxRange - minRange);
 
@@ -33,8 +33,8 @@ void fragment()
 
     highp vec4 ringTexure = texture(ringTex, UV);
     highp vec4 radialColor = mix(backgroundColor, fillColor, antiAliasedProgressFill);
-    highp float knoblighting = clamp((1-clamp(pow(length(UV - vec2(0.5, 0.6)), 1) / 0.6 + 0.45,0,1) * 1),0,1);
-    highp vec4 knobCol = mix(knobColor, knobHighlightColor * 2, knoblighting);
+    highp float knoblighting = clamp((1.0-clamp(pow(length(UV - vec2(0.5, 0.6)), 1.0) / 0.6 + 0.45,0.0,1.0) * 1.0),0.0,1.0);
+    highp vec4 knobCol = mix(knobColor, knobHighlightColor * 2.0, knoblighting);
 
     highp float handRot = (progressNormalized * (maxRange - minRange) + minRange) * 2.0 - 1.0;
     handRot *= PI;
@@ -44,7 +44,7 @@ void fragment()
     highp float handDist = length(polarUV - handDir * handProj);
     highp float handMask = smoothstep(handThickness + aa2, handThickness - aa2, handDist);
 
-    knobCol.rgb = mix(knobCol.rgb * 0.5, knobHighlightColor.rgb * 2, handMask).rgb;
+    knobCol.rgb = mix(knobCol.rgb * 0.5, knobHighlightColor.rgb * 2.0, handMask).rgb;
 
     highp vec3 colOut = mix(radialColor.rgb, knobCol.rgb, smoothstep(radius + 0.015 + aa2, radius + 0.015 - aa2, SDFCircle)).rgb;
 

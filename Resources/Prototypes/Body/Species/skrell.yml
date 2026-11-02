@@ -188,6 +188,14 @@
 - type: entity
   parent: [OrganBaseStomach, OrganSkrellInternal, OrganSkrellMetabolizer]
   id: OrganSkrellStomach
+  components:
+    - type: Stomach
+      specialDigestible:
+        tags:
+          - Bread
+          - Fruit
+          - Vegetable
+          - Pill
 
 - type: entity
   parent: [OrganBaseLiver, OrganSkrellInternal, OrganSkrellMetabolizer]

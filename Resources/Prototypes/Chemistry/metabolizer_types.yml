@@ -42,5 +42,9 @@
   name: metabolizer-type-moth
 
 - type: metabolizerType
+  id: Skrell
+  name: metabolizer-type-skrell
+
+- type: metabolizerType
   id: Arachnid
   name: metabolizer-type-arachnid

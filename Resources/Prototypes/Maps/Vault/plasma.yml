@@ -1,7 +1,7 @@
 - type: gameMap
   id: Plasma
   mapName: "Plasma"
-  mapPath: /Maps/plasma.yml
+  mapPath: /Maps/Vault/plasma.yml
   minPlayers: 30
   maxPlayers: 80
   stations:

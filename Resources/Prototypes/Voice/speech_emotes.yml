@@ -206,16 +206,16 @@
   icon: Interface/Emotes/hiss.png
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: [chat-emote-msg-hiss]
   chatTriggers:
-  - hiss
-  - hisses
-  - hissed
-  - hissing
+    - hiss
+    - hisses
+    - hissed
+    - hissing
 
 # Vulpkanin
 - type: emote
@@ -317,16 +317,16 @@
   available: false
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: [chat-emote-msg-caw]
   chatTriggers:
-  - caw
-  - caws
-  - cawed
-  - cawing
+    - caw
+    - caws
+    - cawed
+    - cawing
 
 # hand emotes
 - type: emote

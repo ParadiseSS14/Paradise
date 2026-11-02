@@ -13,7 +13,7 @@
   blacklist:
     tags:
     - SiliconEmotes
-  chatMessages: [chat-emote-msg-crow]
+  chatMessages: ["chat-emote-msg-crow"]
   chatTriggers:
    - crow
    - crows

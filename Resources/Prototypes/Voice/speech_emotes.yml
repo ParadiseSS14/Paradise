@@ -210,7 +210,7 @@
   blacklist:
     tags:
       - SiliconEmotes
-  chatMessages: [chat-emote-msg-hiss]
+  chatMessages: ["chat-emote-msg-hiss"]
   chatTriggers:
     - hiss
     - hisses
@@ -321,7 +321,7 @@
   blacklist:
     tags:
       - SiliconEmotes
-  chatMessages: [chat-emote-msg-caw]
+  chatMessages: ["chat-emote-msg-caw"]
   chatTriggers:
     - caw
     - caws

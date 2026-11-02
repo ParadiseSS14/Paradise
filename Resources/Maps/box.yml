@@ -4,7 +4,7 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/02/2026 20:32:24
+  time: 11/02/2026 21:33:42
   entityCount: 38611
 maps:
 - 1
@@ -11309,6 +11309,25 @@ entities:
     - type: SurveillanceCameraMap
     - type: ChunkContainer
       chunkEntities: []
+    - type: Joint
+      joints:
+        docking5371: !type:WeldJoint
+          stiffness: 14142599
+          damping: 1575605.1
+          localAnchorB: 2,2.5
+          localAnchorA: -74,-51.5
+          id: docking5371
+          bodyB: 38012
+          bodyA: 2
+        docking5113: !type:WeldJoint
+          stiffness: 12570925
+          referenceAngle: -1.5707964
+          damping: 1400507.4
+          localAnchorB: -46.5,-60
+          localAnchorA: 1,3.5
+          id: docking5113
+          bodyB: 2
+          bodyA: 37832
   - uid: 28952
     mapInit: true
     paused: true
@@ -11533,6 +11552,17 @@ entities:
       chunkHistory: {}
     - type: ImplicitRoof
     - type: ExplosionAirtightGrid
+    - type: Joint
+      joints:
+        docking5113: !type:WeldJoint
+          stiffness: 12570925
+          referenceAngle: -1.5707964
+          damping: 1400507.4
+          localAnchorB: -46.5,-60
+          localAnchorA: 1,3.5
+          id: docking5113
+          bodyB: 2
+          bodyA: 37832
   - uid: 38012
     components:
     - type: MetaData
@@ -11987,6 +12017,16 @@ entities:
     - type: ExplosionAirtightGrid
     - type: ChunkContainer
       chunkEntities: []
+    - type: Joint
+      joints:
+        docking5371: !type:WeldJoint
+          stiffness: 14142599
+          damping: 1575605.1
+          localAnchorB: 2,2.5
+          localAnchorA: -74,-51.5
+          id: docking5371
+          bodyB: 38012
+          bodyA: 2
 - proto: ActionSleep
   entities:
   - uid: 38165
@@ -15468,7 +15508,7 @@ entities:
       - - Engineering
     - type: Door
       state: Opening
-      secondsUntilStateChange: -313077.38
+      secondsUntilStateChange: -313341.72
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16596,7 +16636,7 @@ entities:
       - - External
     - type: Door
       state: Opening
-      secondsUntilStateChange: -87474.74
+      secondsUntilStateChange: -87739.08
     - type: DeviceLinkSource
       linkedPorts:
         452:
@@ -16813,7 +16853,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -336397.28
+      secondsUntilStateChange: -336661.62
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16826,7 +16866,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -336395.25
+      secondsUntilStateChange: -336659.6
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -17054,6 +17094,15 @@ entities:
       parent: 37832
       rot: 1.5707963267948966 rad
       pos: 0.5,3.5
+    - type: Door
+      changeAirtight: False
+    - type: Docking
+      dockJointId: docking5113
+      dockedWith: 784
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: False
+        DockStatus: True
   - uid: 37835
     components:
     - type: Transform
@@ -18584,7 +18633,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -341855.5
+      secondsUntilStateChange: -342119.84
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18824,7 +18873,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -156842.17
+      secondsUntilStateChange: -157106.5
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19422,6 +19471,15 @@ entities:
     - type: Transform
       parent: 2
       pos: -46.5,-59.5
+    - type: Docking
+      dockJointId: docking5113
+      dockedWith: 37834
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: False
+        DockStatus: True
+    - type: Door
+      changeAirtight: False
   - uid: 785
     components:
     - type: MetaData
@@ -19444,6 +19502,15 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: -73.5,-51.5
+    - type: Docking
+      dockJointId: docking5371
+      dockedWith: 38018
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: False
+        DockStatus: True
+    - type: Door
+      changeAirtight: False
     - type: AccessReader
       accessListsOriginal: []
       access:
@@ -19478,6 +19545,15 @@ entities:
       parent: 38012
       rot: 1.5707963267948966 rad
       pos: 1.5,2.5
+    - type: Docking
+      dockJointId: docking5371
+      dockedWith: 789
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: False
+        DockStatus: True
+    - type: Door
+      changeAirtight: False
   - uid: 38019
     components:
     - type: Transform
@@ -215198,6 +215274,8 @@ entities:
       parent: 38012
       rot: -1.5707963267948966 rad
       pos: 1.5,-0.5
+    - type: Thruster
+      enabled: False
   - uid: 38118
     components:
     - type: Transform

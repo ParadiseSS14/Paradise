@@ -16508,60 +16508,31 @@ entities:
     - type: PriorityDock
   - uid: 437
     components:
+    - type: MetaData
+      name: Escape Airlock
     - type: Transform
       parent: 2
       rot: 1.5707963267948966 rad
-<<<<<<< HEAD
-      pos: 105.5,-8.5
-||||||| 88acdbb7e99
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-18.5
-=======
       pos: 105.5,-10.5
     - type: PriorityDock
->>>>>>> ff6ac1006de4b449667fe31910ad1d72014f3038
   - uid: 438
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-<<<<<<< HEAD
-      pos: 105.5,-18.5
-||||||| 88acdbb7e99
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-8.5
-=======
-      pos: 105.5,-16.5
-    - type: PriorityDock
->>>>>>> ff6ac1006de4b449667fe31910ad1d72014f3038
-  - uid: 439
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-<<<<<<< HEAD
-      pos: 105.5,-10.5
-  - uid: 440
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 105.5,-16.5
-||||||| 88acdbb7e99
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-16.5
-  - uid: 440
     components:
     - type: MetaData
       name: Escape Airlock
     - type: Transform
       parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 105.5,-10.5
-=======
+      rot: 1.5707963267948966 rad
+      pos: 105.5,-16.5
+    - type: PriorityDock
+  - uid: 439
+    components:
+    - type: MetaData
+      name: Escape Airlock
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
       pos: 105.5,-8.5
     - type: PriorityDock
->>>>>>> ff6ac1006de4b449667fe31910ad1d72014f3038
 - proto: AirlockExternalLocked
   entities:
   - uid: 448

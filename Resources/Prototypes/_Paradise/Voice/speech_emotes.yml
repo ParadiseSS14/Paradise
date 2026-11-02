@@ -12,7 +12,7 @@
       - Vocal
   blacklist:
     tags:
-    - SiliconEmotes
+      - SiliconEmotes
   chatMessages: ["chat-emote-msg-crow"]
   chatTriggers:
    - crow

@@ -15,7 +15,7 @@
       - SiliconEmotes
   chatMessages: ["chat-emote-msg-crow"]
   chatTriggers:
-   - crow
-   - crows
-   - crowed
-   - crowing
+    - crow
+    - crows
+    - crowed
+    - crowing

@@ -9,7 +9,7 @@
   available: false
   whitelist:
     components:
-    - Vocal
+      - Vocal
   blacklist:
     tags:
     - SiliconEmotes

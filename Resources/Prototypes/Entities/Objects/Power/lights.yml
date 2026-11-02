@@ -100,7 +100,7 @@
     - type: LightBulb
       bulb: Bulb
       color: "#FFD1A3" # 4000K color temp
-      lightEnergy: 1.0
+      lightEnergy: 0.9
       lightRadius: 6
       lightSoftness: 1.1
     - type: Tag
@@ -210,9 +210,9 @@
   components:
     - type: LightBulb
       color: "#FFE4CE" # 5000K color temp
-      lightEnergy: 0.8
-      lightRadius: 10
-      lightSoftness: 1
+      lightEnergy: 0.9
+      lightRadius: 11
+      lightSoftness: 2
       PowerUse: 25
 
 - type: entity
@@ -224,7 +224,7 @@
     - type: LightBulb
       color: "#FFDABB" # old fluorescents are yellower-4500K temp
       lightEnergy: 0.5
-      lightRadius: 10
+      lightRadius: 11
       lightSoftness: 1
       PowerUse: 10
 
@@ -247,8 +247,8 @@
     - type: LightBulb
       color: "#EEEEFF"
       lightEnergy: 1
-      lightRadius: 15
-      lightSoftness: 0.9
+      lightRadius: 16
+      lightSoftness: 3
       BurningTemperature: 350
       PowerUse: 12
 

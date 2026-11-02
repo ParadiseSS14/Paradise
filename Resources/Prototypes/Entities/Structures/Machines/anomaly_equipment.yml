@@ -31,10 +31,6 @@
           type: ResearchClientBoundUserInterface
     - type: Machine
       board: AnomalyVesselCircuitboard
-    - type: PointLight
-      radius: 1.2
-      energy: 2
-      color: "#fca3c0"
     - type: Appearance
     - type: WiresPanel
     - type: WiresVisuals
@@ -230,6 +226,14 @@
     - type: StationAiWhitelist
     - type: SpriteFade
       alwaysFade: true
+    - type: PointLight
+      enabled: false
+      castShadows: false
+      color: "#d695e8"
+      radius: 2
+      falloff: 9
+      energy: 1
+    - type: LitOnPowered
     - type: Sprite
       sprite: Structures/Machines/Anomaly/anomaly_generator.rsi
       offset: 0,1

@@ -89,7 +89,10 @@
     - type: PointLight
       enabled: false
       castShadows: false
-      radius: 1.5
+      color: "#66c9f0"
+      radius: 1.6
+      falloff: 2
+      energy: 3
     - type: LitOnPowered
     - type: ApcPowerReceiver
       powerLoad: 200

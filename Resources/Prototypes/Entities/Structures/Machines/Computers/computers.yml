@@ -73,6 +73,14 @@
     - type: AtmosMonitoringConsole
       navMapTileColor: "#1a1a1a"
       navMapWallColor: "#404040"
+    - type: PointLight
+      enabled: false
+      castShadows: false
+      color: "#66c9f0"
+      radius: 1.6
+      falloff: 2
+      energy: 3
+    - type: LitOnPowered
     - type: ActivatableUI
       singleUser: true
       key: enum.AtmosMonitoringConsoleUiKey.Key

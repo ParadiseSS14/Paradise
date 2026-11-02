@@ -1,4 +1,4 @@
-using Content.Client.Stylesheets.Colorspace;
+using Content.Shared.Colorspace;
 
 // ReSharper disable MemberCanBePrivate.Global
 

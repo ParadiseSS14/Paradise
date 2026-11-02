@@ -2,7 +2,7 @@ using System.Numerics;
 using Content.Client.PDA;
 using Content.Client.Resources;
 using Content.Client.Stylesheets;
-using Content.Client.Stylesheets.Colorspace;
+using Content.Shared.Colorspace;
 using Content.Client.Stylesheets.Sheetlets;
 using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;

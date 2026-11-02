@@ -1,5 +1,5 @@
 ﻿using System.Numerics;
-using Content.Client.Stylesheets.Colorspace;
+using Content.Shared.Colorspace;
 using Content.Client.UserInterface.Controls.FancyTree;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;

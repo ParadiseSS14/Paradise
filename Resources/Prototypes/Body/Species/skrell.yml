@@ -4,9 +4,11 @@
   limits:
     enum.HumanoidVisualLayers.Hair:
       limit: 1
-      required: false
-      weight: 1
+      required: true
     enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
       limit: 1
       required: false
     enum.HumanoidVisualLayers.Chest:

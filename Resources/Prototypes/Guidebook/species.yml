@@ -44,6 +44,11 @@
   text: "/ServerInfo/Guidebook/Mobs/Unathi.xml"
 
 - type: guideEntry
+  id: Skrell
+  name: species-name-skrell
+  text: "/ServerInfo/Guidebook/Mobs/Skrell.xml"
+
+- type: guideEntry
   id: SlimePerson
   name: species-name-slime
   text: "/ServerInfo/Guidebook/Mobs/SlimePerson.xml"

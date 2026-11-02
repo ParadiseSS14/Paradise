@@ -95,7 +95,7 @@
 - type: soundCollection
   id: Warbles
   files:
-    - /Audio/Voice/Skrell/skrell_warble.ogg
+    - /Audio/Voice/Skrell/warble.ogg
 
 - type: soundCollection
   id: Weh

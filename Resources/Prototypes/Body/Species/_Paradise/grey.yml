@@ -110,22 +110,6 @@
             - !type:Emote
               emote: Scream
               probability: 0.2
-    - type: TelepathicChat # Send/Project Mind
-      range: 14.0
-    - type: UserInterface
-      interfaces:
-        enum.TelepathicChatUiKey.Send:
-          type: TelepathicChatBoundUserInterface
-        enum.TelepathicChatUiKey.Receive:
-          type: TelepathicChatBoundUserInterface
-        enum.TelepathicChatUiKey.Compose:
-          type: TelepathicChatBoundUserInterface
-          interactionRange: 0 # TelepathicChatSystem has own range checks, and this blocks obstruction
-    - type: NightVision
-      prioritized: false
-      lightingColor: "#FFFFFF05" # Darkened from the base color
-    - type: BlindedByFlashing
-      eyeDamage: 3 # 3 flashes will blind a Grey (maxDamage is 9)
     - type: IntrinsicRadioReceiver
     - type: IntrinsicRadioTransmitter
       channels:
@@ -221,6 +205,13 @@
 - type: entity
   parent: [OrganGreyVisual, OrganBaseEyes, OrganGreyInternal]
   id: OrganGreyEyes
+  components:
+    - type: NightVision
+      relayOverlay: true
+      prioritized: false
+      lightingColor: "#FFFFFF22"
+    - type: BlindedByFlashing
+      eyeDamage: 3 # 3 flashes will blind a Grey (maxDamage is 9)
 
 - type: entity
   parent: [OrganBaseTongue, OrganGreyInternal]

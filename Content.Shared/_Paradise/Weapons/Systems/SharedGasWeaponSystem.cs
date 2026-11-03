@@ -1,0 +1,47 @@
+using Content.Shared.Examine;
+using Content.Shared.Popups;
+using Content.Shared._Paradise.Weapons.Components;
+using Content.Shared.Weapons.Ranged.Events;
+using Robust.Shared.Containers;
+
+namespace Content.Shared._Paradise.Weapons.Ranged.Systems;
+
+public abstract partial class SharedGasWeaponSystem : EntitySystem
+{
+    [Dependency] protected SharedContainerSystem _container = default!;
+    [Dependency] protected SharedPopupSystem _popup = default!;
+
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        SubscribeLocalEvent<GasWeaponComponent, ShotAttemptedEvent>(OnShootAttempt);
+        SubscribeLocalEvent<GasWeaponComponent, ExaminedEvent>(OnBatteryExamine);
+    }
+
+    protected virtual void OnBatteryExamine(Entity<GasWeaponComponent> ent, ref ExaminedEvent args)
+    {
+        args.PushMarkup(Loc.GetString("gas-gun-examine",
+                                ("stateText", Loc.GetString(ent.Comp.CanShoot
+                                    ? "gas-gun-examine-ready"
+                                    : "gas-gun-examine-unready"))));
+    }
+
+    protected virtual void OnShootAttempt(Entity<GasWeaponComponent>ent, ref ShotAttemptedEvent args)
+    {
+        if (!ent.Comp.CanShoot)
+        {
+            args.Cancel();
+            _popup.PopupCursor(Loc.GetString("gas-gun-fired-empty"), args.User);
+            return;
+        }
+
+        if (ent.Comp.GasUsage == 0f)
+            return;
+
+        if ((!_container.TryGetContainer(ent.Owner, ent.Comp.TankSlotId, out var container) ||
+            container is not ContainerSlot slot || slot.ContainedEntity is null) && !ent.Comp.InternalTank)
+            args.Cancel();
+    }
+
+}

@@ -74,6 +74,7 @@
     - type: Stamina
     - type: StunVisuals
     - type: MobState
+    - type: StaminaDamageConversion #PARADISE EDIT - Stun Overhaul
     - type: MobThresholds
       thresholds:
         0: Alive

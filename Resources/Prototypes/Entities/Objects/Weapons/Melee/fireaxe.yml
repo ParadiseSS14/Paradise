@@ -20,7 +20,7 @@
         types:
           # axes are kinda like sharp hammers, you know?
           Blunt: 5
-          Slash: 10
+          Slash: 15 #PARADISE EDIT - weapon overhaul
           Structural: 10
       soundHit:
         collection: MetalThud

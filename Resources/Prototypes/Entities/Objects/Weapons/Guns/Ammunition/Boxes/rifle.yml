@@ -9,7 +9,7 @@
         tags:
           - CartridgeRifle
       proto: CartridgeRifle
-      capacity: 50
+      capacity: 60 #PARADISE EDIT - Weapon overhaul
     - type: Item
       size: Small
     - type: ContainerContainer
@@ -27,7 +27,7 @@
 - type: entity
   parent: BaseMagazineBoxRifle
   id: MagazineBoxRifleBig
-  name: ammunition box (.20 rifle)
+  name: ammunition box (6,3x47 rifle) #PARADISE EDIT - Weapon overhaul
   suffix: Big
   components:
     - type: BallisticAmmoProvider
@@ -48,8 +48,8 @@
 - type: entity
   parent: BaseMagazineBoxRifle
   id: MagazineBoxRifle
-  name: ammunition box (.20 rifle)
-  description: A cardboard box of .20 rifle rounds. Intended to hold general-purpose kinetic ammunition.
+  name: ammunition box (6,3x47 rifle) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 6,3x47 rifle rounds. Intended to hold general-purpose kinetic ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeRifle
@@ -63,8 +63,8 @@
 - type: entity
   parent: BaseMagazineBoxRifle
   id: MagazineBoxRiflePractice
-  name: ammunition box (.20 rifle practice)
-  description: A cardboard box of .20 rifle rounds. Intended to hold harmless practice ammunition.
+  name: ammunition box (6,3x47 rifle practice) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 6,3x47 rifle rounds. Intended to hold harmless practice ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeRiflePractice
@@ -79,8 +79,8 @@
 - type: entity
   id: MagazineBoxRifleIncendiary
   parent: BaseMagazineBoxRifle
-  name: ammunition box (.20 rifle incendiary)
-  description: A cardboard box of .20 rifle rounds. Intended to hold self-igniting incendiary ammunition.
+  name: ammunition box (6,3x47 rifle incendiary) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 6,3x47 rifle rounds. Intended to hold self-igniting incendiary ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeRifleIncendiary
@@ -95,8 +95,8 @@
 - type: entity
   id: MagazineBoxRifleUranium
   parent: BaseMagazineBoxRifle
-  name: ammunition box (.20 rifle uranium)
-  description: A cardboard box of .20 rifle rounds. Intended to hold exotic uranium-core ammunition.
+  name: ammunition box (6,3x47 rifle uranium) #PARADISE EDIT - Weapon overhaul
+  description: A cardboard box of 6,3x47 rifle rounds. Intended to hold exotic uranium-core ammunition. #PARADISE EDIT - Weapon overhaul
   components:
     - type: BallisticAmmoProvider
       proto: CartridgeRifleUranium

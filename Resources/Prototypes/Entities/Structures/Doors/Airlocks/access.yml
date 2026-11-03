@@ -1221,6 +1221,7 @@
         board: [DoorElectronicsExternal]
 
 - type: entity
+  name: arrivals airlock
   parent: AirlockGlassShuttle
   id: AirlockExternalGlassShuttleArrivals
   suffix: External, Arrivals, Glass, Docking
@@ -1230,6 +1231,38 @@
     - type: ContainerFill
       containers:
         board: [DoorElectronicsExternal]
+    - type: Docking
+      radarColor: "#2222B2"
+      highlightedRadarColor: Blue
+      dockLegendCategory: Arrivals
+
+- type: entity
+  name: cargo airlock
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleCargo
+  suffix: External, Cargo, Glass, Docking
+  components:
+    - type: ContainerFill
+      containers:
+        board: [DoorElectronicsExternal]
+    - type: Docking
+      radarColor: "#FFFF9F"
+      highlightedRadarColor: LightYellow
+      dockLegendCategory: Cargo
+
+- type: entity
+  name: security airlock
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassShuttleSecurity
+  suffix: External, Security, Glass, Docking
+  components:
+    - type: ContainerFill
+      containers:
+        board: [DoorElectronicsExternal]
+    - type: Docking
+      radarColor: "#B22222"
+      highlightedRadarColor: Red
+      dockLegendCategory: Security
 
 - type: entity
   parent: AirlockGlassShuttle

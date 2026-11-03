@@ -261,3 +261,15 @@
           damage:
             types:
               Cellular: 2
+
+  # Paradise Content
+- type: reagent
+  parent: Blood
+  id: ExoticBlood
+  name: reagent-name-exotic-blood
+  group: Biological
+  desc: reagent-desc-exotic-blood
+  flavor: metallic
+  color: "#a200ff"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-metallic

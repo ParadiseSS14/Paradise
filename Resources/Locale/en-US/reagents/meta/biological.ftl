@@ -33,3 +33,7 @@ reagent-desc-vomit = You can see a few chunks of someone's last meal in it.
 
 reagent-name-grey-matter = grey matter
 reagent-desc-grey-matter = Thought juice, the stuff that leaks out of your ears.
+
+# Paradise Content
+reagent-name-exotic-blood = exotic blood
+reagent-desc-exotic-blood = It stings your fingers, leaving a dull tingle behind.

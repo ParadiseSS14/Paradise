@@ -44,3 +44,8 @@
 - type: metabolizerType
   id: Arachnid
   name: metabolizer-type-arachnid
+
+# Paradise Content
+- type: metabolizerType
+  id: Grey
+  name: metabolizer-type-grey

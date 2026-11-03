@@ -7,7 +7,9 @@
   description: survival-description
   rules:
     - MeteorSwarmScheduler
-    - RampingStationEventScheduler
+    - RampingStationMundaneEventScheduler
+    - RampingStationModerateEventScheduler
+    - RampingStationMajorEventScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
 
@@ -22,7 +24,9 @@
   description: kessler-syndrome-description
   rules:
     - KesslerSyndromeScheduler
-    - RampingStationEventScheduler
+    - RampingStationMundaneEventScheduler
+    - RampingStationModerateEventScheduler
+    - RampingStationMajorEventScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
 
@@ -41,7 +45,9 @@
     - Wizard
     - Xenoborgs
     - KesslerSyndromeScheduler
-    - RampingStationEventScheduler
+    - RampingStationMundaneEventScheduler
+    - RampingStationModerateEventScheduler
+    - RampingStationMajorEventScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
 
@@ -62,11 +68,15 @@
     - Zombie
     - Wizard
     - Xenoborgs
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - KesslerSyndromeScheduler
     - MeteorSwarmMildScheduler
     - MeteorSwarmScheduler
-    - RampingStationEventScheduler
+    - RampingStationMundaneEventScheduler
+    - RampingStationModerateEventScheduler
+    - RampingStationMajorEventScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
 
@@ -79,7 +89,9 @@
   showInVote: false #2boring2vote
   description: extended-description
   rules:
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
@@ -146,7 +158,9 @@
     - DummyNonAntagChance
     - Traitor
     - SubGamemodesRuleNoWizard
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
@@ -175,7 +189,9 @@
     - Nukeops
     - DummyNonAntagChance
     - SubGamemodesRuleNoWizard
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
@@ -193,7 +209,9 @@
     - DummyNonAntagChance
     - Revolutionary
     - SubGamemodesRuleNoWizard
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
@@ -209,7 +227,9 @@
     - Wizard
     - DummyNonAntagChance
     - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
@@ -225,7 +245,9 @@
     - Xenoborgs
     - DummyNonAntagChance
     - SubGamemodesRuleNoWizardNoXenoborg # no two motherships
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
@@ -243,7 +265,9 @@
   showInVote: false
   rules:
     - Zombie
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation
@@ -259,7 +283,9 @@
   showInVote: false
   rules:
     - Zombie
-    - BasicStationEventScheduler
+    - BasicStationMundaneEventScheduler
+    - BasicStationModerateEventScheduler
+    - BasicStationMajorEventScheduler
     - KesslerSyndromeScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation

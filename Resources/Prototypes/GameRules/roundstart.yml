@@ -414,28 +414,103 @@
     tableId: UnknownShuttlesHostileTable
 
 - type: entity
-  id: BasicStationEventScheduler
+  id: BasicStationMundaneEventScheduler
   parent: BaseGameRule
   components:
     - type: BasicStationEventScheduler
       scheduledGameRules: !type:NestedSelector
-        tableId: BasicGameRulesTable
+        tableId: MundaneEventsTable
+      minMaxEventTiming:
+        min: 300 # 5 min
+        max: 600 # 10 min
 
 - type: entity
-  id: DynamicStationEventScheduler # this isn't the dynamic mode, but rather the station event scheduler used for dynamic
+  id: BasicStationModerateEventScheduler # this isn't the dynamic mode, but rather the station event scheduler used for dynamic
   parent: BaseGameRule
   components:
     - type: BasicStationEventScheduler
       scheduledGameRules: !type:NestedSelector
-        tableId: DynamicGameRulesTable
+        tableId: ModerateEventsTable
+      minMaxEventTiming:
+        min: 900 # 15 min
+        max: 1800 # 30 min
 
 - type: entity
-  id: RampingStationEventScheduler
+  id: BasicStationMajorEventScheduler # this isn't the dynamic mode, but rather the station event scheduler used for dynamic
+  parent: BaseGameRule
+  components:
+    - type: BasicStationEventScheduler
+      scheduledGameRules: !type:NestedSelector
+        tableId: MajorEventsTable
+      minMaxEventTiming:
+        min: 2100 # 35 min
+        max: 3600 # 1 hour
+
+- type: entity
+  id: DynamicStationMundaneEventScheduler # this isn't the dynamic mode, but rather the station event scheduler used for dynamic
+  parent: BaseGameRule
+  components:
+    - type: BasicStationEventScheduler
+      scheduledGameRules: !type:NestedSelector
+        tableId: MundaneEventsTable
+      minMaxEventTiming:
+        min: 300 # 5 min
+        max: 600 # 10 min
+
+- type: entity
+  id: DynamicStationModerateEventScheduler # this isn't the dynamic mode, but rather the station event scheduler used for dynamic
+  parent: BaseGameRule
+  components:
+    - type: BasicStationEventScheduler
+      scheduledGameRules: !type:NestedSelector
+        tableId: ModerateEventsTable
+      minMaxEventTiming:
+        min: 900 # 15 min
+        max: 1800 # 30 min
+
+- type: entity
+  id: DynamicStationMajorEventScheduler # this isn't the dynamic mode, but rather the station event scheduler used for dynamic
+  parent: BaseGameRule
+  components:
+    - type: BasicStationEventScheduler
+      scheduledGameRules: !type:NestedSelector
+        tableId: MajorEventsTable
+      minMaxEventTiming:
+        min: 2100 # 35 min
+        max: 3600 # 1 hour
+
+- type: entity
+  id: RampingStationMundaneEventScheduler
   parent: BaseGameRule
   components:
     - type: RampingStationEventScheduler
       scheduledGameRules: !type:NestedSelector
-        tableId: BasicGameRulesTable
+        tableId: MundaneEventsTable
+      minMaxEventTiming:
+        min: 300 # 5 min
+        max: 600 # 10 min
+
+- type: entity
+  id: RampingStationModerateEventScheduler
+  parent: BaseGameRule
+  components:
+    - type: RampingStationEventScheduler
+      scheduledGameRules: !type:NestedSelector
+        tableId: ModerateEventsTable
+      minMaxEventTiming:
+        min: 900 # 15 min
+        max: 1800 # 30 min
+
+- type: entity
+  id: RampingStationMajorEventScheduler
+  parent: BaseGameRule
+  components:
+    - type: RampingStationEventScheduler
+      scheduledGameRules: !type:NestedSelector
+        tableId: MajorEventsTable
+      minMaxEventTiming:
+        min: 2100 # 35 min
+        max: 3600 # 1 hour
 
 - type: entity
   id: SpaceTrafficControlEventScheduler # iff we make a selector for EntityTables that can respect StationEventComp restrictions, or somehow impliment them otherwise in said tables,

@@ -23,7 +23,7 @@ public sealed partial class BasicStationEventSchedulerComponent : Component
     /// The minimum and maximum time between rule starts in seconds.
     /// </summary>
     [DataField]
-    public MinMax MinMaxEventTiming = new(3 * 60, 10 * 60);
+    public MinMax MinMaxEventTiming = new(8 * 60, 20 * 60);
 
     /// <summary>
     /// How long until the next check for an event runs, is initially set based on MinimumTimeUntilFirstEvent & MinMaxEventTiming.
@@ -34,8 +34,6 @@ public sealed partial class BasicStationEventSchedulerComponent : Component
     /// <summary>
     /// The gamerules that the scheduler can choose from
     /// </summary>
-    /// Reminder that though we could do all selection via the EntityTableSelector, we also need to consider various <see cref="StationEventComponent"/> restrictions.
-    /// As such, we want to pass a list of acceptable game rules, which are then parsed for restrictions by the <see cref="EventManagerSystem"/>.
     [DataField(required: true)]
     public EntityTableSelector ScheduledGameRules = default!;
 }

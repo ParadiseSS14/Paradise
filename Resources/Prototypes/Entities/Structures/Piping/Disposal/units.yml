@@ -140,6 +140,7 @@
       table: !type:NestedSelector
         tableId: RatKingLoot
     - type: RequireProjectileTarget
+    - type: SweepingReceptacle
 
 - type: entity
   id: MailingUnit

@@ -1194,6 +1194,9 @@
 - type: Tag
   id: ProximitySensor # This tag is used as a common ingredient in the construction of various machines and bots.
 
+- type: Tag
+  id: PushBroom # Used by PushBroomSystem. Intended as a Storage whitelist / ItemMapper for JanitorialTrolley.
+
 ## Q ##
 
 - type: Tag

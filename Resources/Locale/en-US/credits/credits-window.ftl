@@ -1,9 +1,7 @@
 credits-window-title = Credits
-credits-window-patrons-tab = Patrons
 credits-window-ss14contributorslist-tab = Credits
 credits-window-licenses-tab = Open Source Licenses
 credits-window-attributions-tab = Attributions
-credits-window-become-patron-button = Become a Patron
 credits-window-contributor-encouragement-label = Want to get on this list?
 credits-window-contribute-button = Contribute!
 credits-window-contributors-section-title = Space Station 14 Contributors

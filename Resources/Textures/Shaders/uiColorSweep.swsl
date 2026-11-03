@@ -6,9 +6,9 @@ uniform highp float val;
 uniform lowp int lockedAxis;
 
 highp vec3 hsv_to_rgb(highp vec4 c) {
-	vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+	highp vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
 	highp vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
-    vec3 o = c.a < 0.5 ? c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y) : vec3(c.rgb);
+    highp vec3 o = c.a < 0.5 ? c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y) : vec3(c.rgb);
 	return o;
 }
 

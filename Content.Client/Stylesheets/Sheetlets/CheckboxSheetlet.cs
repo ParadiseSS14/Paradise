@@ -1,5 +1,5 @@
 ﻿using System.Numerics;
-using Content.Client.Stylesheets.Colorspace;
+using Content.Shared.Colorspace;
 using Content.Client.Stylesheets.SheetletConfigs;
 using Content.Client.Stylesheets.Stylesheets;
 using Content.Client.UserInterface;

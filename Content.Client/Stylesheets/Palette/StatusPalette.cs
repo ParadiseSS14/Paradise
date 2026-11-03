@@ -1,4 +1,4 @@
-using Content.Client.Stylesheets.Colorspace;
+using Content.Shared.Colorspace;
 using Robust.Shared.Utility;
 
 namespace Content.Client.Stylesheets.Palette;

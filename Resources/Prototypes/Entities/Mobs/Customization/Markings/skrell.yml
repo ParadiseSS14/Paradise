@@ -1,0 +1,390 @@
+# MARK: Hairstyles
+- type: marking
+  id: SkrellHairMaleTentacles
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellHairAdornedMaleTentacles
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairMaleTentaclesCloth
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairMaleTentaclesSplotchced
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairMaleTentaclesHeaddressSmall
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairMaleTentaclesHeaddress
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairMaleTentaclesHeaddressLarge
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairMaleTentaclesHeaddressOrnate
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairFemaleTentacles
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellHairAdornedFemaleTentacles
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairFemaleTentaclesCloth
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairFemaleTentaclesSplotched
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairFemaleTentaclesHeaddressSmall
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairFemaleTentaclesHeaddress
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairFemaleTentaclesHeaddressLarge
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairFemaleTentaclesHeaddressOrnate
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+    - sprite: Mobs/Customization/reptilian_parts.rsi
+      state: frills_hood_secondary
+
+- type: marking
+  id: SkrellHairLongTentacles
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellHairShortTentacles
+  bodyPart: Hair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_hairs.rsi
+      state: horns_adorns
+
+# MARK: Facial Hair
+- type: marking
+  id: SkrellFacialhairPatch
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairGoatee
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairTriPoint
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairStrap
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairFullBeard
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairChops
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairThickChops
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairMonotail
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairLongMonotail
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairAdornments
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairHandlebar
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairFuManChu
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairMustache
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairOvergrown
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairBraided
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairLongBraided
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairDoubleBraided
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairWhiskers
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellFacialhairChinWhiskers
+  bodyPart: FacialHair
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_facial_hairs.rsi
+      state: horns_adorns
+
+# MARK: Tails
+- type: marking
+  id: SkrellTail
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellTailLong
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellExtraLongTail
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellTailShort
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellTailShortFringed
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellTailFringed
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellTailLongFringed
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns
+
+- type: marking
+  id: SkrellTailExtraLongFringed
+  bodyPart: Tail
+  groupWhitelist: [Skrell]
+  sprites:
+    - sprite: Mobs/Customization/skrell_tails.rsi
+      state: horns_adorns

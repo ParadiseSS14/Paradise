@@ -128,6 +128,23 @@
     - sobbing
 
 - type: emote
+  id: Warble
+  name: chat-emote-name-warble
+  category: Vocal
+  available: false
+  whitelist:
+    components:
+      - Vocal
+  blacklist:
+    tags:
+      - SiliconEmotes
+  chatMessages: ["chat-emote-msg-warble"]
+  chatTriggers:
+    - warble
+    - warbling
+    - warbles
+
+- type: emote
   id: Squish
   name: chat-emote-name-squish
   category: Vocal

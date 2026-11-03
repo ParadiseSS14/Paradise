@@ -97,6 +97,11 @@ chat-speech-verb-slime-1 = sloshes
 chat-speech-verb-slime-2 = burbles
 chat-speech-verb-slime-3 = oozes
 
+chat-speech-verb-name-skrell = Skrell
+chat-speech-verb-slime-1 = warbles
+chat-speech-verb-slime-2 = croaks
+chat-speech-verb-slime-3 = trills
+
 chat-speech-verb-name-plant = Diona
 chat-speech-verb-plant-1 = rustles
 chat-speech-verb-plant-2 = sways

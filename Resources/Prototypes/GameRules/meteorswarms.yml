@@ -91,6 +91,9 @@
   components:
     - type: GameRule
     - type: RampingStationEventScheduler
+      minMaxEventTiming:
+        min: 750 # 12.5 min
+        max: 930 # 17.5 min
       scheduledGameRules: !type:NestedSelector
         tableId: BasicMeteorSwarmEventsTable
 

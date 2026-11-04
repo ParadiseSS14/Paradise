@@ -1,5 +1,5 @@
 using Content.Shared.EntityTable.EntitySelectors;
-
+using Content.Shared.Destructible.Thresholds;
 namespace Content.Server.StationEvents.Components;
 
 [RegisterComponent, Access(typeof(RampingStationEventSchedulerSystem))]
@@ -10,14 +10,14 @@ public sealed partial class RampingStationEventSchedulerComponent : Component
     ///     Max chaos chosen for a round will deviate from this
     /// </summary>
     [DataField]
-    public float AverageChaos = 12f;
+    public float AverageChaos = 10f;
 
     /// <summary>
     ///     Average time (in minutes) for when the ramping event scheduler should stop increasing the chaos modifier.
-    ///     Close to how long you expect a round to last, so you'll probably have to tweak this on downstreams.
+    ///     Close to how long you expect a round to last. On Paradise, our rounds last around 2 hours.
     /// </summary>
     [DataField]
-    public float AverageEndTime = 90f;
+    public float AverageEndTime = 120f;
 
     [DataField]
     public float EndTime;
@@ -30,6 +30,9 @@ public sealed partial class RampingStationEventSchedulerComponent : Component
 
     [DataField]
     public float TimeUntilNextEvent;
+
+    [DataField]
+    public MinMax MinMaxEventTiming = new(8 * 60, 20 * 60);
 
     /// <summary>
     /// The gamerules that the scheduler can choose from

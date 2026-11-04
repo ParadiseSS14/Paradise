@@ -68,6 +68,55 @@
         children:
           - id: DerelictSyndicateAssaultCyborgSpawn
 
+- type: entityTable
+  id: MundaneEventsTable
+  table:
+    !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+      - !type:NestedSelector
+        tableId: CargoGiftsTable
+      - !type:NestedSelector
+        tableId: CalmPestEventsTable
+      - id: BreakerFlip
+      - id: BureaucraticError
+      - id: ClericalError
+      - id: CockroachMigration
+      - id: MouseMigration
+      - id: RandomSentience
+
+- type: entityTable
+  id: ModerateEventsTable
+  table:
+    !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+      - !type:NestedSelector
+        tableId: BasicAntagEventsTable
+      - !type:NestedSelector
+        tableId: SpicyPestEventsTable
+      - id: AnomalySpawn
+      - id: BluespaceArtifact
+      - id: BluespaceLocker
+      - id: GasLeak
+      - id: GreytideVirus
+      - id: IonStorm # its calm like 90% of the time smh
+      - id: KudzuGrowth
+      - id: MassHallucinations
+      - id: PowerGridCheck
+      - id: SlimesSpawnHorde
+      - id: SolarFlare
+      - id: SnakeSpawnHorde
+      - id: SpiderClownSpawnHorde
+      - id: SpiderSpawnHorde
+      - id: VentClog
+
+- type: entityTable
+  id: MajorEventsTable
+  table:
+    !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+      - !type:NestedSelector
+        tableId: ModerateAntagEventsTable
+
 - type: entity
   abstract: true
   parent: BaseGameRule

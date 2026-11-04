@@ -279,3 +279,22 @@
       prioritized: false
       relayOverlay: false # In case default value ever changes
       lightingColor: "#FFFFFF15" # Basically makes it impossible for things to be "Pitch black" but can still be dark.
+
+# Paradise Change
+# Used for mobs that can use the Telepathy Ability
+- type: entity
+  save: false
+  id: MobTelepathic
+  abstract: true
+  components:
+    - type: TelepathyAbility
+    - type: UserInterface
+      interfaces:
+        enum.TelepathyAbilityUiKey.Send:
+          type: TelepathyAbilityBoundUserInterface
+        enum.TelepathyAbilityUiKey.Offer:
+          type: TelepathyAbilityBoundUserInterface
+        enum.TelepathyAbilityUiKey.Compose:
+          type: TelepathyAbilityBoundUserInterface
+          interactionRange: 0 # Disables BUI range check
+

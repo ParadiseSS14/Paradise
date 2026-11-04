@@ -4,8 +4,8 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/03/2026 02:40:22
-  entityCount: 38594
+  time: 11/04/2026 03:20:06
+  entityCount: 38596
 maps:
 - 1
 grids:
@@ -262,7 +262,7 @@ entities:
           version: 7
         2,-1:
           ind: 2,-1
-          tiles: eQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAAdAAAAAAEAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAwBZAAAAAAMAWQAAAAADAFkAAAAAAQBZAAAAAAMAWQAAAAADAFkAAAAAAABZAAAAAAIAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAwBZAAAAAAIAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAACAFkAAAAAAQBZAAAAAAEAWQAAAAAAAFkAAAAAAgBZAAAAAAEAWQAAAAADAFkAAAAAAQBZAAAAAAIAWQAAAAADAFkAAAAAAgBZAAAAAAIAWQAAAAACAFkAAAAAAQBZAAAAAAEAWQAAAAAAAFkAAAAAAABZAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAEAWQAAAAABAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAHkAAAAAAABZAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAHkAAAAAAAB5AAAAAAAAWQAAAAABAHkAAAAAAABZAAAAAAEAWQAAAAACAHkAAAAAAABcAAAAAAEAeQAAAAAAAHkAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAHQAAAAABAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAeQAAAAAAAB0AAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAAHkAAAAAAAAdAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAB5AAAAAAAAHQAAAAABAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAWQAAAAAAAB0AAAAAAgBZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAAFkAAAAAAgAdAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAB5AAAAAAAAHQAAAAACAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAPAAAAAAAADwAAAAAAAB5AAAAAAAAeQAAAAAAAFwAAAAAAQB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAB0AAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAHkAAAAAAABQAAAAAAAAeQAAAAAAAFkAAAAAAAAJAAAAAAAACQAAAAADAAkAAAAAAgAJAAAAAAMACQAAAAAAAHkAAAAAAAAdAAAAAAAAHQAAAAAAAB0AAAAAAwAdAAAAAAIAHQAAAAACAB0AAAAAAABQAAAAAAAAUAAAAAAAAHkAAAAAAABZAAAAAAAACQAAAAAAAAkAAAAAAQAJAAAAAAMACQAAAAAAAAkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAUAAAAAAAAFAAAAAAAAB5AAAAAAAAWQAAAAAAAAkAAAAAAAAJAAAAAAAACQAAAAADAAkAAAAAAwAJAAAAAAIAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAABAFkAAAAAAABZAAAAAAMAWQAAAAADAA==
+          tiles: eQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAAdAAAAAAEAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAwBZAAAAAAMAWQAAAAADAFkAAAAAAQBZAAAAAAMAWQAAAAADAFkAAAAAAABZAAAAAAIAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAwBZAAAAAAIAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAACAFkAAAAAAQBZAAAAAAEAWQAAAAAAAFkAAAAAAgBZAAAAAAEAWQAAAAADAFkAAAAAAQBZAAAAAAIAWQAAAAADAFkAAAAAAgBZAAAAAAIAWQAAAAACAFkAAAAAAQBZAAAAAAEAWQAAAAAAAFkAAAAAAABZAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAEAWQAAAAABAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAHkAAAAAAABZAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAHkAAAAAAAB5AAAAAAAAWQAAAAABAHkAAAAAAABZAAAAAAEAWQAAAAACAHkAAAAAAABcAAAAAAEAeQAAAAAAAHkAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAHQAAAAABAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAeQAAAAAAAB0AAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAAHkAAAAAAAAdAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAB5AAAAAAAAHQAAAAABAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAWQAAAAAAAB0AAAAAAgBZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAAFkAAAAAAgAdAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAA8AAAAAAAAPAAAAAAAADwAAAAAAAB5AAAAAAAAHQAAAAACAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAPAAAAAAAADwAAAAAAAB5AAAAAAAAeQAAAAAAAFwAAAAAAQB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAB0AAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAHkAAAAAAABQAAAAAAAAeQAAAAAAAFkAAAAAAAAJAAAAAAAACQAAAAADAAkAAAAAAgAJAAAAAAMACQAAAAAAAHkAAAAAAAAdAAAAAAAAHQAAAAAAAB0AAAAAAwAdAAAAAAIAHQAAAAACAB0AAAAAAABQAAAAAAAAUAAAAAAAAHkAAAAAAABZAAAAAAAACQAAAAAAAAkAAAAAAQAJAAAAAAMACQAAAAAAAAkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAUAAAAAAAAFAAAAAAAAB5AAAAAAAAWQAAAAAAAAkAAAAAAAAJAAAAAAAACQAAAAADAAkAAAAAAwAJAAAAAAIAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAABAFkAAAAAAABZAAAAAAMAWQAAAAADAA==
           version: 7
         3,1:
           ind: 3,1
@@ -14379,6 +14379,13 @@ entities:
     - type: Transform
       parent: 2
       pos: -21.5,-20.5
+  - uid: 745
+    components:
+    - type: MetaData
+      name: Garden
+    - type: Transform
+      parent: 2
+      pos: -47.5,4.5
   - uid: 746
     components:
     - type: MetaData
@@ -15507,74 +15514,6 @@ entities:
       - - Detective
 - proto: AirlockEngineering
   entities:
-  - uid: 349
-    components:
-    - type: MetaData
-      name: Fore Port Electrical Maintenance
-    - type: Transform
-      parent: 2
-      pos: -50.5,14.5
-    - type: AccessReader
-      accessListsOriginal: []
-      access:
-      - - Engineering
-    - type: Door
-      state: Opening
-      secondsUntilStateChange: -313946.72
-    - type: DeviceLinkSource
-      lastSignals:
-        DoorStatus: True
-  - uid: 350
-    components:
-    - type: MetaData
-      name: Fore-Port Secondary Atmospheric Maintenance
-    - type: Transform
-      parent: 2
-      pos: -45.5,19.5
-  - uid: 351
-    components:
-    - type: MetaData
-      name: Fore Port Electrical Maintenance
-    - type: Transform
-      parent: 2
-      pos: -50.5,10.5
-    - type: AccessReader
-      accessListsOriginal: []
-      access:
-      - - Engineering
-  - uid: 357
-    components:
-    - type: MetaData
-      name: Fore Port Solar Access
-    - type: Transform
-      parent: 2
-      pos: -58.5,19.5
-    - type: AccessReader
-      accessListsOriginal: []
-      access:
-      - - Engineering
-  - uid: 358
-    components:
-    - type: MetaData
-      name: Service Power
-    - type: Transform
-      parent: 2
-      pos: 50.5,3.5
-    - type: AccessReader
-      accessListsOriginal: []
-      access:
-      - - Engineering
-  - uid: 359
-    components:
-    - type: MetaData
-      name: Service Power
-    - type: Transform
-      parent: 2
-      pos: 47.5,3.5
-    - type: AccessReader
-      accessListsOriginal: []
-      access:
-      - - Engineering
   - uid: 360
     components:
     - type: MetaData
@@ -15835,6 +15774,27 @@ entities:
       - - Engineering
 - proto: AirlockEngineeringLocked
   entities:
+  - uid: 349
+    components:
+    - type: MetaData
+      name: Fore Port Electrical Maintenance
+    - type: Transform
+      parent: 2
+      pos: -50.5,10.5
+  - uid: 350
+    components:
+    - type: MetaData
+      name: Fore-Port Solar Secondary Maintenance
+    - type: Transform
+      parent: 2
+      pos: -45.5,19.5
+  - uid: 351
+    components:
+    - type: MetaData
+      name: Fore Port Electrical Maintenance
+    - type: Transform
+      parent: 2
+      pos: -50.5,14.5
   - uid: 352
     components:
     - type: MetaData
@@ -15867,6 +15827,13 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: -32.5,-55.5
+  - uid: 357
+    components:
+    - type: MetaData
+      name: Fore Port Solar Access
+    - type: Transform
+      parent: 2
+      pos: -58.5,19.5
   - uid: 384
     components:
     - type: MetaData
@@ -15934,6 +15901,20 @@ entities:
       accessListsOriginal: []
       access:
       - - Engineering
+  - uid: 1045
+    components:
+    - type: MetaData
+      name: Service Substation
+    - type: Transform
+      parent: 2
+      pos: 50.5,3.5
+  - uid: 33030
+    components:
+    - type: MetaData
+      name: Service Substation
+    - type: Transform
+      parent: 2
+      pos: 47.5,3.5
 - proto: AirlockExternal
   entities:
   - uid: 390
@@ -16300,6 +16281,34 @@ entities:
         442:
         - - DoorStatus
           - DoorBolt
+  - uid: 452
+    components:
+    - type: MetaData
+      name: External Access
+    - type: Transform
+      parent: 2
+      pos: -58.5,25.5
+    - type: DeviceLinkSink
+      invokeCounter: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        453:
+        - - DoorStatus
+          - DoorBolt
+  - uid: 453
+    components:
+    - type: MetaData
+      name: External Access
+    - type: Transform
+      parent: 2
+      pos: -58.5,23.5
+    - type: DeviceLinkSink
+      invokeCounter: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        452:
+        - - DoorStatus
+          - DoorBolt
   - uid: 775
     components:
     - type: Transform
@@ -16629,47 +16638,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -43.5,18.5
-  - uid: 452
-    components:
-    - type: MetaData
-      name: External Access
-    - type: Transform
-      parent: 2
-      pos: -58.5,25.5
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        453:
-        - - DoorStatus
-          - DoorBolt
-    - type: AccessReader
-      accessListsOriginal: []
-      access:
-      - - External
-  - uid: 453
-    components:
-    - type: MetaData
-      name: External Access
-    - type: Transform
-      parent: 2
-      pos: -58.5,23.5
-    - type: DeviceLinkSink
-      invokeCounter: 1
-    - type: AccessReader
-      accessListsOriginal: []
-      access:
-      - - External
-    - type: Door
-      state: Opening
-      secondsUntilStateChange: -88344.09
-    - type: DeviceLinkSource
-      linkedPorts:
-        452:
-        - - DoorStatus
-          - DoorBolt
-      lastSignals:
-        DoorStatus: True
   - uid: 454
     components:
     - type: MetaData
@@ -16747,10 +16715,7 @@ entities:
       name: Central Access
     - type: Transform
       parent: 2
-      pos: -1.5,3.5
-      anchored: False
-    - type: Physics
-      bodyType: Dynamic
+      pos: 0.5,3.5
   - uid: 462
     components:
     - type: MetaData
@@ -16879,7 +16844,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -337266.62
+      secondsUntilStateChange: -337767.44
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16892,7 +16857,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -337264.6
+      secondsUntilStateChange: -337765.4
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -17014,10 +16979,7 @@ entities:
       name: Central Access
     - type: Transform
       parent: 2
-      pos: 0.5,3.5
-      anchored: False
-    - type: Physics
-      bodyType: Dynamic
+      pos: -1.5,3.5
   - uid: 500
     components:
     - type: Transform
@@ -18659,7 +18621,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -342724.84
+      secondsUntilStateChange: -343225.66
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18899,7 +18861,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -157711.52
+      secondsUntilStateChange: -158212.33
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19347,13 +19309,6 @@ entities:
       parent: 2
       rot: 1.5707963267948966 rad
       pos: 35.5,8.5
-  - uid: 745
-    components:
-    - type: MetaData
-      name: Garden
-    - type: Transform
-      parent: 2
-      pos: -47.5,4.5
   - uid: 751
     components:
     - type: MetaData
@@ -21501,12 +21456,6 @@ entities:
       parent: 2
       rot: 3.141592653589793 rad
       pos: -43.5,21.5
-  - uid: 1045
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -58.5,25.5
   - uid: 1047
     components:
     - type: Transform
@@ -74810,6 +74759,16 @@ entities:
       pos: 8.5,21.5
 - proto: Catwalk
   entities:
+  - uid: 358
+    components:
+    - type: Transform
+      parent: 2
+      pos: 47.5,3.5
+  - uid: 359
+    components:
+    - type: Transform
+      parent: 2
+      pos: 50.5,3.5
   - uid: 445
     components:
     - type: Transform
@@ -216720,11 +216679,11 @@ entities:
     - type: Transform
       parent: 2
       pos: 17.5,20.5
-  - uid: 32122
+  - uid: 34062
     components:
     - type: Transform
       parent: 2
-      pos: -44.5,-33.5
+      pos: -4.5,-19.5
 - proto: VendingMachineChang
   entities:
   - uid: 32123
@@ -217034,6 +216993,11 @@ entities:
       pos: 13.5,-90.5
 - proto: VendingMachineGames
   entities:
+  - uid: 32122
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-33.5
   - uid: 32178
     components:
     - type: Transform
@@ -217413,12 +217377,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 31.5,-25.5
-  - uid: 32238
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 1.5,39.5
   - uid: 32239
     components:
     - type: Transform
@@ -217432,6 +217390,12 @@ entities:
       pos: 54.5,-82.5
 - proto: VendingMachineWallMedicalCivilian
   entities:
+  - uid: 32238
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 1.5,39.5
   - uid: 32241
     components:
     - type: Transform

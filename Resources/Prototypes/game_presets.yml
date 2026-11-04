@@ -119,7 +119,9 @@
   rules:
     - DynamicRule
     - DummyNonAntag
-    - DynamicStationEventScheduler
+    - DynamicStationMundaneEventScheduler
+    - DynamicStationModerateEventScheduler
+    - DynamicStationMajorEventScheduler
     - MeteorSwarmScheduler
     - SpaceTrafficControlEventScheduler
     - BasicRoundstartVariation

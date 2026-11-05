@@ -39,7 +39,7 @@ public sealed partial class GameMapPrototype : IPrototype
     public string MapName { get; private set; } = default!;
 
     /// <summary>
-    /// Relative directory path to the given map, i.e. `/Maps/saltern.yml`
+    /// Relative directory path to the given map, i.e. `/Maps/Vault/saltern.yml`
     /// </summary>
     [DataField(required: true)]
     public ResPath MapPath { get; private set; } = default!;

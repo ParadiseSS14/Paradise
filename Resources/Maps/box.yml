@@ -4,8 +4,8 @@ meta:
   engineVersion: 288.1.0
   forkId: ""
   forkVersion: ""
-  time: 11/04/2026 03:20:06
-  entityCount: 38596
+  time: 11/05/2026 05:26:03
+  entityCount: 38635
 maps:
 - 1
 grids:
@@ -402,7 +402,7 @@ entities:
           version: 7
         -3,-4:
           ind: -3,-4
-          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5AAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAAAAAGAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHkAAAAAAAAvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5AAAAAAAAaAAAAAAAAGgAAAAAAABoAAAAAAAAaAAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAGgAAAAAAABoAAAAAAAAaAAAAAAAAGgAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAwBZAAAAAAIAWQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAEAWQAAAAABAFkAAAAAAAB5AAAAAAAAaAAAAAAAAGgAAAAAAABoAAAAAAAAaAAAAAAAAHkAAAAAAAB5AAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAABAFkAAAAAAwBZAAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAADAHkAAAAAAABZAAAAAAAAWQAAAAADAFkAAAAAAgBZAAAAAAAAWQAAAAACAHkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAB5AAAAAAAAWQAAAAACAFkAAAAAAABZAAAAAAMAWQAAAAADAFkAAAAAAAB5AAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAMAWQAAAAABAFkAAAAAAABZAAAAAAMAeQAAAAAAAFkAAAAAAgBZAAAAAAIAWQAAAAAAAFkAAAAAAgBZAAAAAAAAeQAAAAAAAFkAAAAAAABZAAAAAAEAWQAAAAAAAFkAAAAAAgBZAAAAAAAAWQAAAAABAFkAAAAAAQBZAAAAAAMAWQAAAAADAFkAAAAAAgBZAAAAAAEAWQAAAAACAFkAAAAAAABZAAAAAAAAWQAAAAADAHkAAAAAAABZAAAAAAEAWQAAAAABAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAACAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAgBZAAAAAAEAWQAAAAABAFkAAAAAAQBZAAAAAAMAWQAAAAABAFkAAAAAAgBZAAAAAAMAeQAAAAAAAFkAAAAAAQBZAAAAAAIAWQAAAAAAAFkAAAAAAwBZAAAAAAEAeQAAAAAAAA==
+          tiles: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5AAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeQAAAAAAAGAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHkAAAAAAAAvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB5AAAAAAAAaAAAAAAAAGgAAAAAAAB5AAAAAAAAaAAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAGgAAAAAAABoAAAAAAAAaAAAAAAAAGgAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAwBZAAAAAAIAWQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAEAWQAAAAABAFkAAAAAAAB5AAAAAAAAaAAAAAAAAGgAAAAAAABoAAAAAAAAaAAAAAAAAHkAAAAAAAB5AAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAABAFkAAAAAAwBZAAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAHkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAADAHkAAAAAAABZAAAAAAAAWQAAAAADAFkAAAAAAgBZAAAAAAAAWQAAAAACAHkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAB5AAAAAAAAWQAAAAACAFkAAAAAAABZAAAAAAMAWQAAAAADAFkAAAAAAAB5AAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAABZAAAAAAMAWQAAAAABAFkAAAAAAABZAAAAAAMAeQAAAAAAAFkAAAAAAgBZAAAAAAIAWQAAAAAAAFkAAAAAAgBZAAAAAAAAeQAAAAAAAFkAAAAAAABZAAAAAAEAWQAAAAAAAFkAAAAAAgBZAAAAAAAAWQAAAAABAFkAAAAAAQBZAAAAAAMAWQAAAAADAFkAAAAAAgBZAAAAAAEAWQAAAAACAFkAAAAAAABZAAAAAAAAWQAAAAADAHkAAAAAAABZAAAAAAEAWQAAAAABAFkAAAAAAQBZAAAAAAAAWQAAAAAAAFkAAAAAAQBZAAAAAAMAWQAAAAAAAFkAAAAAAQBZAAAAAAAAWQAAAAACAFkAAAAAAABZAAAAAAAAWQAAAAAAAFkAAAAAAAB5AAAAAAAAeQAAAAAAAFkAAAAAAgBZAAAAAAEAWQAAAAABAFkAAAAAAQBZAAAAAAMAWQAAAAABAFkAAAAAAgBZAAAAAAMAeQAAAAAAAFkAAAAAAQBZAAAAAAIAWQAAAAAAAFkAAAAAAwBZAAAAAAEAeQAAAAAAAA==
           version: 7
         -4,-4:
           ind: -4,-4
@@ -16844,7 +16844,7 @@ entities:
       pos: 20.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -337767.44
+      secondsUntilStateChange: -341701.03
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -16857,7 +16857,7 @@ entities:
       pos: 19.5,14.5
     - type: Door
       state: Opening
-      secondsUntilStateChange: -337765.4
+      secondsUntilStateChange: -341699
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18377,6 +18377,13 @@ entities:
       accessListsOriginal: []
       access:
       - - Medical
+  - uid: 26396
+    components:
+    - type: MetaData
+      name: Psych Office Maintenance
+    - type: Transform
+      parent: 2
+      pos: 13.5,-37.5
 - proto: AirlockMaintRnDLocked
   entities:
   - uid: 589
@@ -18621,7 +18628,7 @@ entities:
       - - Medical
     - type: Door
       state: Opening
-      secondsUntilStateChange: -343225.66
+      secondsUntilStateChange: -347159.25
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -18861,7 +18868,7 @@ entities:
       - - BasicSilicon
     - type: Door
       state: Opening
-      secondsUntilStateChange: -158212.33
+      secondsUntilStateChange: -162145.95
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -19826,686 +19833,11 @@ entities:
       pos: 76.83017,-41.213455
 - proto: APCBasic
   entities:
-  - uid: 825
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -23.5,-9.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 826
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 38.5,6.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 827
-    components:
-    - type: Transform
-      parent: 2
-      pos: 49.5,16.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 828
-    components:
-    - type: Transform
-      parent: 2
-      pos: 69.5,16.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 829
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -66.5,8.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 830
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 18.5,2.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 831
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -14.5,-11.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 832
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -45.5,-16.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 833
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 17.5,-44.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 834
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -20.5,24.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 835
-    components:
-    - type: Transform
-      parent: 2
-      pos: 28.5,21.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 836
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 30.5,-51.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 837
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -18.5,0.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 838
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -6.5,-25.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 839
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 43.5,-38.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 840
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -53.5,-32.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 841
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 52.5,-31.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 842
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 30.5,-35.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 843
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 3.5,12.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 844
-    components:
-    - type: Transform
-      parent: 2
-      pos: 20.5,-56.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 845
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 17.5,-22.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 846
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 11.5,-34.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 847
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 17.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 848
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 6.5,-36.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 849
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -8.5,20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 850
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -54.5,-8.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 851
-    components:
-    - type: Transform
-      parent: 2
-      pos: 4.5,23.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 852
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 75.5,-30.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 853
-    components:
-    - type: Transform
-      parent: 2
-      pos: 7.5,-10.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 854
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 1.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 855
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -16.5,26.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 856
-    components:
-    - type: Transform
-      parent: 2
-      pos: 2.5,1.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 857
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 21.5,5.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 858
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 23.5,19.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 859
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 2.5,-24.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 860
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 39.5,-10.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 861
-    components:
-    - type: Transform
-      parent: 2
-      pos: -12.5,-10.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 862
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -2.5,4.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 863
-    components:
-    - type: Transform
-      parent: 2
-      pos: 62.5,12.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 864
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 45.5,18.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 865
-    components:
-    - type: Transform
-      parent: 2
-      pos: 16.5,-37.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 866
-    components:
-    - type: Transform
-      parent: 2
-      pos: 25.5,1.5
-    - type: Battery
-      lastCharge: 50000
   - uid: 867
     components:
     - type: Transform
       parent: 2
       pos: 67.5,26.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 868
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 19.5,-42.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 869
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 13.5,25.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 870
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -8.5,-35.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 871
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -18.5,18.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 872
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 54.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 873
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 62.5,-0.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 874
-    components:
-    - type: Transform
-      parent: 2
-      pos: 76.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 876
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 65.5,1.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 877
-    components:
-    - type: Transform
-      parent: 2
-      pos: 98.5,-8.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 878
-    components:
-    - type: Transform
-      parent: 2
-      pos: 46.5,1.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 879
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -2.5,20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 880
-    components:
-    - type: MetaData
-      name: Vault APC
-    - type: Transform
-      parent: 2
-      pos: -31.5,7.5
-    - type: Battery
-      lastCharge: 50000
-    - type: PowerNetworkBattery
-      supplyRampPosition: 1.142588
-      loadingNetworkDemand: 15
-  - uid: 881
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 5.5,0.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 882
-    components:
-    - type: Transform
-      parent: 2
-      pos: -38.5,6.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 883
-    components:
-    - type: Transform
-      parent: 2
-      pos: 65.5,-11.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 884
-    components:
-    - type: Transform
-      parent: 2
-      pos: -48.5,0.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 885
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -62.5,4.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 886
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -15.5,42.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 887
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 18.5,30.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 888
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 24.5,38.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 889
-    components:
-    - type: Transform
-      parent: 2
-      pos: -24.5,33.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 890
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 69.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 891
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -35.5,-9.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 892
-    components:
-    - type: Transform
-      parent: 2
-      pos: -39.5,-12.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 893
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -22.5,-6.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 894
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -26.5,-17.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 895
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -27.5,-28.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 896
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -20.5,-27.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 897
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -23.5,-28.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 898
-    components:
-    - type: Transform
-      parent: 2
-      pos: -12.5,-28.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 899
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -23.5,-3.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 900
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 1.5,-56.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 901
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 8.5,-42.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 902
-    components:
-    - type: Transform
-      parent: 2
-      pos: 12.5,-49.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 903
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 1.5,-59.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 904
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 1.5,-64.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 905
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 70.5,-65.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 906
-    components:
-    - type: Transform
-      parent: 2
-      pos: -11.5,-60.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 907
-    components:
-    - type: Transform
-      parent: 2
-      pos: -14.5,-67.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 909
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 12.5,-72.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 910
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 7.5,-69.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 911
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -1.5,-72.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 912
-    components:
-    - type: Transform
-      parent: 2
-      pos: 16.5,-86.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 913
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -29.5,-66.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 914
-    components:
-    - type: Transform
-      parent: 2
-      pos: 18.5,-25.5
     - type: Battery
       lastCharge: 50000
   - uid: 915
@@ -20523,615 +19855,12 @@ entities:
       pos: -6.5,-40.5
     - type: Battery
       lastCharge: 50000
-  - uid: 917
-    components:
-    - type: Transform
-      parent: 2
-      pos: 33.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 918
-    components:
-    - type: Transform
-      parent: 2
-      pos: -42.5,-28.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 919
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 5.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 920
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 36.5,39.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 921
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 29.5,-20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 922
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -52.5,2.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 923
-    components:
-    - type: Transform
-      parent: 2
-      pos: 14.5,-94.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 924
-    components:
-    - type: Transform
-      parent: 2
-      pos: 16.5,-89.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 925
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 22.5,-100.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 926
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 36.5,-100.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 927
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 25.5,-96.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 928
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 32.5,-96.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 929
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 48.5,-54.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 930
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -55.5,4.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 931
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 43.5,6.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 932
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 17.5,-2.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 933
-    components:
-    - type: Transform
-      parent: 2
-      pos: 38.5,-25.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 934
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 37.5,-16.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 935
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -7.5,40.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 936
-    components:
-    - type: Transform
-      parent: 2
-      pos: 2.5,38.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 937
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 5.5,38.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 938
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 5.5,49.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 939
-    components:
-    - type: Transform
-      parent: 2
-      pos: 16.5,46.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 940
-    components:
-    - type: Transform
-      parent: 2
-      pos: 23.5,29.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 941
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -47.5,13.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 942
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 10.5,30.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 943
-    components:
-    - type: Transform
-      parent: 2
-      pos: -26.5,-53.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 944
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -60.5,20.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 945
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 78.5,-28.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 946
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 62.5,-33.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 947
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 30.5,-33.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 948
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 42.5,-31.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 949
-    components:
-    - type: Transform
-      parent: 2
-      pos: 46.5,-31.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 950
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 23.5,-53.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 951
-    components:
-    - type: Transform
-      parent: 2
-      pos: 35.5,-75.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 952
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 85.5,-61.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 953
-    components:
-    - type: Transform
-      parent: 2
-      pos: 87.5,-42.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 954
-    components:
-    - type: Transform
-      parent: 2
-      pos: 23.5,-42.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 955
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 81.5,-80.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 956
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -57.5,-29.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 957
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -62.5,-14.5
-    - type: Battery
-      lastCharge: 50000
   - uid: 958
     components:
     - type: Transform
       parent: 2
       rot: 1.5707963267948966 rad
       pos: -23.5,-41.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 959
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -29.5,-64.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 960
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -2.5,-21.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 961
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -32.5,-57.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 962
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -60.5,-25.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 963
-    components:
-    - type: Transform
-      parent: 2
-      pos: 2.5,-39.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 964
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -53.5,-48.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 965
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -63.5,-53.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 966
-    components:
-    - type: Transform
-      parent: 2
-      pos: -65.5,-34.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 967
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -44.5,-38.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 968
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -61.5,-47.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 969
-    components:
-    - type: Transform
-      parent: 2
-      pos: -64.5,-39.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 970
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: -35.5,-54.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 971
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -38.5,-44.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 972
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 45.5,-15.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 973
-    components:
-    - type: Transform
-      parent: 2
-      pos: -46.5,19.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 974
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -57.5,-16.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 975
-    components:
-    - type: Transform
-      parent: 2
-      pos: 49.5,-78.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 976
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 49.5,-25.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 977
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 32.5,-108.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 978
-    components:
-    - type: Transform
-      parent: 2
-      pos: -6.5,-28.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 979
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 23.5,-37.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 980
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 37.5,-47.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 981
-    components:
-    - type: Transform
-      parent: 2
-      pos: -14.5,0.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 982
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 92.5,-46.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 983
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 36.5,-40.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 984
-    components:
-    - type: MetaData
-      name: Engine Controll APC
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: 2.5,-76.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 985
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: -54.5,-37.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 986
-    components:
-    - type: Transform
-      parent: 2
-      pos: 67.5,-46.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 987
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 63.5,-44.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 988
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 62.5,-38.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 989
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 75.5,-45.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 990
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 68.5,-58.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 991
-    components:
-    - type: Transform
-      parent: 2
-      pos: 80.5,-45.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 992
-    components:
-    - type: Transform
-      parent: 2
-      pos: 94.5,-36.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 993
-    components:
-    - type: Transform
-      parent: 2
-      rot: 3.141592653589793 rad
-      pos: 68.5,-40.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 994
-    components:
-    - type: Transform
-      parent: 2
-      rot: -1.5707963267948966 rad
-      pos: -9.5,2.5
-    - type: Battery
-      lastCharge: 50000
-  - uid: 2771
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 41.5,-3.5
     - type: Battery
       lastCharge: 50000
   - uid: 38020
@@ -21204,64 +19933,943 @@ entities:
     - type: Transform
       parent: 2
       rot: 1.5707963267948966 rad
+      pos: -22.5,-6.5
+  - uid: 825
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 43.5,6.5
+  - uid: 826
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 45.5,18.5
+  - uid: 827
+    components:
+    - type: Transform
+      parent: 2
+      pos: 69.5,16.5
+  - uid: 828
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -55.5,4.5
+  - uid: 829
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 18.5,2.5
+  - uid: 830
+    components:
+    - type: Transform
+      parent: 2
+      pos: -12.5,-10.5
+  - uid: 831
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -45.5,-16.5
+  - uid: 832
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 17.5,-44.5
+  - uid: 833
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -20.5,24.5
+  - uid: 834
+    components:
+    - type: Transform
+      parent: 2
+      pos: 28.5,21.5
+  - uid: 835
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 37.5,-47.5
+  - uid: 836
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -2.5,4.5
+  - uid: 837
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -6.5,-25.5
+  - uid: 838
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 43.5,-38.5
+  - uid: 839
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -57.5,-29.5
+  - uid: 840
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 49.5,-25.5
+  - uid: 841
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 23.5,-37.5
+  - uid: 842
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 3.5,12.5
+  - uid: 843
+    components:
+    - type: Transform
+      parent: 2
+      pos: 20.5,-56.5
+  - uid: 844
+    components:
+    - type: Transform
+      parent: 2
+      pos: 33.5,-20.5
+  - uid: 845
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 11.5,-34.5
+  - uid: 846
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 17.5,-22.5
+  - uid: 847
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 6.5,-36.5
+  - uid: 848
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -8.5,20.5
+  - uid: 849
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -62.5,-14.5
+  - uid: 850
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 13.5,25.5
+  - uid: 852
+    components:
+    - type: Transform
+      parent: 2
+      pos: 7.5,-10.5
+  - uid: 853
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 2.5,-24.5
+  - uid: 854
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -16.5,26.5
+  - uid: 855
+    components:
+    - type: Transform
+      parent: 2
+      pos: 2.5,1.5
+  - uid: 856
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 21.5,5.5
+  - uid: 857
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 23.5,19.5
+  - uid: 858
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 1.5,-20.5
+  - uid: 859
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 39.5,-10.5
+  - uid: 860
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -14.5,-11.5
+  - uid: 861
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -18.5,0.5
+  - uid: 863
+    components:
+    - type: Transform
+      parent: 2
+      pos: 49.5,16.5
+  - uid: 864
+    components:
+    - type: Transform
+      parent: 2
+      pos: 16.5,-37.5
+  - uid: 865
+    components:
+    - type: Transform
+      parent: 2
+      pos: 25.5,1.5
+  - uid: 866
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 19.5,-42.5
+  - uid: 868
+    components:
+    - type: Transform
+      parent: 2
+      pos: 4.5,23.5
+  - uid: 869
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -8.5,-35.5
+  - uid: 870
+    components:
+    - type: Transform
+      parent: 2
+      pos: -18.5,18.5
+  - uid: 871
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 54.5,-20.5
+  - uid: 872
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 78.5,-28.5
+  - uid: 873
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 65.5,1.5
+  - uid: 874
+    components:
+    - type: Transform
+      parent: 2
+      pos: 98.5,-8.5
+  - uid: 876
+    components:
+    - type: Transform
+      parent: 2
+      pos: 46.5,1.5
+  - uid: 877
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -2.5,20.5
+  - uid: 878
+    components:
+    - type: Transform
+      parent: 2
+      pos: -31.5,7.5
+  - uid: 879
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 5.5,0.5
+  - uid: 880
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -62.5,4.5
+  - uid: 881
+    components:
+    - type: Transform
+      parent: 2
+      pos: 65.5,-11.5
+  - uid: 882
+    components:
+    - type: Transform
+      parent: 2
+      pos: -48.5,0.5
+  - uid: 883
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -52.5,2.5
+  - uid: 884
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -15.5,42.5
+  - uid: 885
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 18.5,30.5
+  - uid: 886
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 24.5,38.5
+  - uid: 887
+    components:
+    - type: Transform
+      parent: 2
+      pos: -24.5,33.5
+  - uid: 888
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 69.5,-20.5
+  - uid: 889
+    components:
+    - type: Transform
+      parent: 2
+      pos: -39.5,-12.5
+  - uid: 890
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -35.5,-9.5
+  - uid: 891
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -23.5,-9.5
+  - uid: 892
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -26.5,-17.5
+  - uid: 893
+    components:
+    - type: Transform
+      parent: 2
+      pos: -12.5,-28.5
+  - uid: 894
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -27.5,-28.5
+  - uid: 895
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -20.5,-27.5
+  - uid: 896
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -23.5,-28.5
+  - uid: 897
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -23.5,-3.5
+  - uid: 898
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 1.5,-59.5
+  - uid: 899
+    components:
+    - type: Transform
+      parent: 2
+      pos: 2.5,-39.5
+  - uid: 900
+    components:
+    - type: Transform
+      parent: 2
+      pos: 12.5,-49.5
+  - uid: 901
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 1.5,-56.5
+  - uid: 902
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 1.5,-64.5
+  - uid: 903
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 70.5,-65.5
+  - uid: 904
+    components:
+    - type: Transform
+      parent: 2
+      pos: -11.5,-60.5
+  - uid: 905
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
       pos: -23.5,-69.5
-  - uid: 38177
-    mapInit: true
-    paused: true
+  - uid: 906
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 12.5,-72.5
+  - uid: 907
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 7.5,-69.5
+  - uid: 910
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -29.5,-66.5
+  - uid: 911
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 30.5,-35.5
+  - uid: 912
+    components:
+    - type: Transform
+      parent: 2
+      pos: 16.5,-86.5
+  - uid: 913
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 29.5,-20.5
+  - uid: 914
+    components:
+    - type: Transform
+      parent: 2
+      pos: -42.5,-28.5
+  - uid: 917
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 5.5,-20.5
+  - uid: 918
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 36.5,39.5
+  - uid: 919
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 17.5,-20.5
+  - uid: 920
+    components:
+    - type: Transform
+      parent: 2
+      pos: -38.5,6.5
+  - uid: 921
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 48.5,-54.5
+  - uid: 922
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -66.5,8.5
+  - uid: 923
+    components:
+    - type: Transform
+      parent: 2
+      pos: 14.5,-94.5
+  - uid: 924
+    components:
+    - type: Transform
+      parent: 2
+      pos: 16.5,-89.5
+  - uid: 925
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 22.5,-100.5
+  - uid: 926
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 36.5,-100.5
+  - uid: 927
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 32.5,-96.5
+  - uid: 928
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 25.5,-96.5
+  - uid: 929
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 38.5,6.5
+  - uid: 930
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 17.5,-2.5
+  - uid: 931
+    components:
+    - type: Transform
+      parent: 2
+      pos: 38.5,-25.5
+  - uid: 932
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 37.5,-16.5
+  - uid: 933
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 5.5,49.5
+  - uid: 934
+    components:
+    - type: Transform
+      parent: 2
+      pos: 2.5,38.5
+  - uid: 935
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 5.5,38.5
+  - uid: 936
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -7.5,40.5
+  - uid: 937
+    components:
+    - type: Transform
+      parent: 2
+      pos: 16.5,46.5
+  - uid: 938
+    components:
+    - type: Transform
+      parent: 2
+      pos: 23.5,29.5
+  - uid: 939
+    components:
+    - type: Transform
+      parent: 2
+      pos: -46.5,19.5
+  - uid: 940
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 10.5,30.5
+  - uid: 941
+    components:
+    - type: Transform
+      parent: 2
+      pos: -26.5,-53.5
+  - uid: 942
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -60.5,20.5
+  - uid: 943
+    components:
+    - type: Transform
+      parent: 2
+      pos: 76.5,-20.5
+  - uid: 944
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 62.5,-33.5
+  - uid: 945
+    components:
+    - type: Transform
+      parent: 2
+      pos: 18.5,-25.5
+  - uid: 946
+    components:
+    - type: Transform
+      parent: 2
+      pos: 46.5,-31.5
+  - uid: 947
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 42.5,-31.5
+  - uid: 948
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 30.5,-51.5
+  - uid: 949
+    components:
+    - type: Transform
+      parent: 2
+      pos: 35.5,-75.5
+  - uid: 950
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 85.5,-61.5
+  - uid: 951
+    components:
+    - type: Transform
+      parent: 2
+      pos: 87.5,-42.5
+  - uid: 952
+    components:
+    - type: Transform
+      parent: 2
+      pos: 23.5,-42.5
+  - uid: 953
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 81.5,-80.5
+  - uid: 954
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -53.5,-32.5
+  - uid: 955
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -57.5,-16.5
+  - uid: 956
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -29.5,-64.5
+  - uid: 957
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -2.5,-21.5
+  - uid: 959
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -32.5,-57.5
+  - uid: 960
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -60.5,-25.5
+  - uid: 961
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 8.5,-42.5
+  - uid: 962
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -53.5,-48.5
+  - uid: 963
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -61.5,-47.5
+  - uid: 964
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: -54.5,-37.5
+  - uid: 965
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -38.5,-44.5
+  - uid: 966
+    components:
+    - type: Transform
+      parent: 2
+      pos: -65.5,-34.5
+  - uid: 967
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -63.5,-53.5
+  - uid: 968
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -35.5,-54.5
+  - uid: 969
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -44.5,-38.5
+  - uid: 970
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 45.5,-15.5
+  - uid: 971
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -47.5,13.5
+  - uid: 972
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -54.5,-8.5
+  - uid: 973
+    components:
+    - type: Transform
+      parent: 2
+      pos: 49.5,-78.5
+  - uid: 974
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 52.5,-31.5
+  - uid: 975
+    components:
+    - type: Transform
+      parent: 2
+      pos: -6.5,-28.5
+  - uid: 976
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 30.5,-33.5
+  - uid: 977
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 32.5,-108.5
+  - uid: 978
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 23.5,-53.5
+  - uid: 979
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -9.5,2.5
+  - uid: 980
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 92.5,-46.5
+  - uid: 981
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 36.5,-40.5
+  - uid: 982
+    components:
+    - type: Transform
+      parent: 2
+      pos: -64.5,-39.5
+  - uid: 983
+    components:
+    - type: Transform
+      parent: 2
+      pos: 67.5,-46.5
+  - uid: 984
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 63.5,-44.5
+  - uid: 985
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 68.5,-40.5
+  - uid: 986
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 75.5,-45.5
+  - uid: 987
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: 68.5,-58.5
+  - uid: 988
+    components:
+    - type: Transform
+      parent: 2
+      pos: 80.5,-45.5
+  - uid: 989
+    components:
+    - type: Transform
+      parent: 2
+      pos: 94.5,-36.5
+  - uid: 990
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 62.5,-38.5
+  - uid: 991
+    components:
+    - type: Transform
+      parent: 2
+      pos: -14.5,0.5
+  - uid: 992
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 41.5,-3.5
+  - uid: 993
+    components:
+    - type: Transform
+      parent: 2
+      pos: -14.5,-67.5
+  - uid: 29915
+    components:
+    - type: Transform
+      parent: 2
+      pos: 62.5,12.5
+  - uid: 38634
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 62.5,-0.5
+  - uid: 38635
     components:
     - type: Transform
       parent: 28952
       rot: 1.5707963267948966 rad
       pos: -1.5,-1.5
-    - type: Battery
-      lastUpdate: 159.5477529
-      lastCharge: 100000
-    - type: AccessReader
-      accessListsOriginal:
-      - - Engineering
-    - type: PowerNetworkBattery
-      supplyRampPosition: 0.015991211
-      loadingNetworkDemand: 1575.2518
-      currentSupply: 1575.2518
-      currentReceiving: 1575.2358
-    - type: Destructible
-      thresholds:
-      - triggersOnce: False
-        triggered: False
-        trigger: !type:DamageTrigger
-          damage: 50
-        behaviors:
-        - !type:SpawnEntitiesBehavior
-          spawnInContainer: False
-          spawn:
-            SheetSteel1:
-              min: 1
-              max: 1
-          offset: 0.5
-          transferForensics: False
-        - !type:DoActsBehavior
-          acts: Destruction
-        - !type:PlaySoundBehavior
-          sound: !type:SoundCollectionSpecifier
-            collection: MetalGlassBreak
-            params:
-              volume: 0
-              variation: null
-              rolloffFactor: 1
-              referenceDistance: 1
-              playOffsetSeconds: 0
-              pitch: 1
-              maxDistance: 15
-              loop: False
-      - triggersOnce: False
-        triggered: False
-        trigger: !type:DamageTrigger
-          damage: 100
-        behaviors:
-        - !type:DoActsBehavior
-          acts: Destruction
 - proto: APCHyperCapacity
   entities:
+  - uid: 851
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 75.5,-30.5
   - uid: 37838
     components:
     - type: Transform
@@ -21270,6 +20878,20 @@ entities:
       pos: -0.5,6.5
     - type: Battery
       lastCharge: 200000
+- proto: APCSuperCapacity
+  entities:
+  - uid: 909
+    components:
+    - type: Transform
+      parent: 2
+      rot: 3.141592653589793 rad
+      pos: -1.5,-72.5
+  - uid: 994
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: 2.5,-76.5
 - proto: ArmoryAccessWindoorHelper
   entities:
   - uid: 1005
@@ -48197,6 +47819,26 @@ entities:
     - type: Transform
       parent: 2
       pos: -18.5,41.5
+  - uid: 8240
+    components:
+    - type: Transform
+      parent: 2
+      pos: -41.5,-55.5
+  - uid: 8241
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-55.5
+  - uid: 8242
+    components:
+    - type: Transform
+      parent: 2
+      pos: -41.5,-54.5
+  - uid: 8244
+    components:
+    - type: Transform
+      parent: 2
+      pos: -34.5,-50.5
   - uid: 9158
     components:
     - type: Transform
@@ -49186,6 +48828,12 @@ entities:
     - type: Transform
       parent: 2
       pos: -52.5,-45.5
+  - uid: 34063
+    components:
+    - type: Transform
+      parent: 2
+      rot: -1.5707963267948966 rad
+      pos: -1.5,-75.5
 - proto: Cablecuffs
   entities:
   - uid: 6244
@@ -49235,6 +48883,11 @@ entities:
       pos: 51.5,-65.5
 - proto: CableHV
   entities:
+  - uid: 2771
+    components:
+    - type: Transform
+      parent: 2
+      pos: 70.5,17.5
   - uid: 6252
     components:
     - type: Transform
@@ -57045,6 +56698,16 @@ entities:
     - type: Transform
       parent: 2
       pos: 17.5,-53.5
+  - uid: 8243
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-33.5
+  - uid: 8245
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-31.5
   - uid: 13705
     components:
     - type: Transform
@@ -57055,6 +56718,61 @@ entities:
     - type: Transform
       parent: 2
       pos: -6.5,-72.5
+  - uid: 34064
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-34.5
+  - uid: 34065
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-35.5
+  - uid: 34066
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-36.5
+  - uid: 34067
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-32.5
+  - uid: 34068
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-37.5
+  - uid: 34069
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-38.5
+  - uid: 34070
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-39.5
+  - uid: 34071
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-40.5
+  - uid: 34072
+    components:
+    - type: Transform
+      parent: 2
+      pos: -41.5,-40.5
+  - uid: 34073
+    components:
+    - type: Transform
+      parent: 2
+      pos: -43.5,-40.5
+  - uid: 34426
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-40.5
   - uid: 37885
     components:
     - type: Transform
@@ -57105,6 +56823,11 @@ entities:
     - type: Transform
       parent: 2
       pos: 8.5,-72.5
+  - uid: 38177
+    components:
+    - type: Transform
+      parent: 2
+      pos: -42.5,-40.5
   - uid: 38198
     mapInit: true
     paused: true
@@ -57198,6 +56921,21 @@ entities:
         behaviors:
         - !type:DoActsBehavior
           acts: Destruction
+  - uid: 38203
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-41.5
+  - uid: 38204
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-43.5
+  - uid: 38205
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-42.5
   - uid: 38322
     components:
     - type: Transform
@@ -57223,6 +56961,21 @@ entities:
     - type: Transform
       parent: 37832
       pos: -2.5,-4.5
+  - uid: 38455
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-44.5
+  - uid: 38480
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-46.5
+  - uid: 38481
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-47.5
   - uid: 38486
     components:
     - type: Transform
@@ -57458,6 +57211,106 @@ entities:
     - type: Transform
       parent: 28952
       pos: 0.5,-2.5
+  - uid: 38614
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-45.5
+  - uid: 38615
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-48.5
+  - uid: 38616
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-49.5
+  - uid: 38617
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-50.5
+  - uid: 38618
+    components:
+    - type: Transform
+      parent: 2
+      pos: -44.5,-51.5
+  - uid: 38619
+    components:
+    - type: Transform
+      parent: 2
+      pos: -43.5,-51.5
+  - uid: 38620
+    components:
+    - type: Transform
+      parent: 2
+      pos: -41.5,-51.5
+  - uid: 38621
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-51.5
+  - uid: 38622
+    components:
+    - type: Transform
+      parent: 2
+      pos: -42.5,-51.5
+  - uid: 38623
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-52.5
+  - uid: 38624
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-54.5
+  - uid: 38625
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-55.5
+  - uid: 38626
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-56.5
+  - uid: 38627
+    components:
+    - type: Transform
+      parent: 2
+      pos: -40.5,-53.5
+  - uid: 38628
+    components:
+    - type: Transform
+      parent: 2
+      pos: -39.5,-56.5
+  - uid: 38629
+    components:
+    - type: Transform
+      parent: 2
+      pos: -37.5,-56.5
+  - uid: 38630
+    components:
+    - type: Transform
+      parent: 2
+      pos: -36.5,-56.5
+  - uid: 38631
+    components:
+    - type: Transform
+      parent: 2
+      pos: -38.5,-56.5
+  - uid: 38632
+    components:
+    - type: Transform
+      parent: 2
+      pos: -35.5,-56.5
+  - uid: 38633
+    components:
+    - type: Transform
+      parent: 2
+      pos: -35.5,-57.5
 - proto: CableHVStack
   entities:
   - uid: 7835
@@ -59547,41 +59400,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -40.5,-38.5
-  - uid: 8240
-    components:
-    - type: Transform
-      parent: 2
-      pos: 68.5,0.5
-  - uid: 8241
-    components:
-    - type: Transform
-      parent: 2
-      pos: 68.5,-1.5
-  - uid: 8242
-    components:
-    - type: Transform
-      parent: 2
-      pos: 68.5,-2.5
-  - uid: 8243
-    components:
-    - type: Transform
-      parent: 2
-      pos: 68.5,-0.5
-  - uid: 8244
-    components:
-    - type: Transform
-      parent: 2
-      pos: 69.5,-3.5
-  - uid: 8245
-    components:
-    - type: Transform
-      parent: 2
-      pos: 69.5,-4.5
-  - uid: 8246
-    components:
-    - type: Transform
-      parent: 2
-      pos: 69.5,-2.5
   - uid: 8247
     components:
     - type: Transform
@@ -145930,6 +145748,8 @@ entities:
     - type: Transform
       parent: 2
       pos: -0.5,-37.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 21685
     components:
     - type: Transform
@@ -151055,48 +150875,64 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 77.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22348
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 76.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22349
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 75.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22350
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 74.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22351
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 72.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22352
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 73.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22353
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 71.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22354
     components:
     - type: Transform
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 70.5,-77.5
+    - type: AtmosPipeColor
+      color: '#990000FF'
   - uid: 22355
     components:
     - type: Transform
@@ -176316,14 +176152,6 @@ entities:
     - type: Transform
       parent: 2
       pos: 69.5,-62.5
-  - uid: 25890
-    components:
-    - type: Transform
-      parent: 2
-      pos: 70.5,17.5
-      anchored: False
-    - type: Physics
-      bodyType: Dynamic
   - uid: 25891
     components:
     - type: Transform
@@ -179326,14 +179154,6 @@ entities:
     - type: Transform
       parent: 2
       pos: -5.125,24.7575
-  - uid: 26396
-    components:
-    - type: MetaData
-      name: Starline Phone
-      desc: Huh, isn't working
-    - type: Transform
-      parent: 2
-      pos: -0.5,-4.5
   - uid: 26398
     components:
     - type: Transform
@@ -203063,11 +202883,21 @@ entities:
       pos: 20.5,-25.5
 - proto: SMESAdvanced
   entities:
+  - uid: 8246
+    components:
+    - type: Transform
+      parent: 2
+      pos: 70.5,17.5
   - uid: 9127
     components:
     - type: Transform
       parent: 2
       pos: 70.5,11.5
+  - uid: 25890
+    components:
+    - type: Transform
+      parent: 2
+      pos: -32.5,-64.5
   - uid: 26461
     components:
     - type: Transform
@@ -203080,6 +202910,11 @@ entities:
       pos: 11.5,-70.5
     - type: Battery
       lastCharge: 16000000
+  - uid: 29913
+    components:
+    - type: Transform
+      parent: 2
+      pos: -22.5,-65.5
   - uid: 38172
     components:
     - type: Transform
@@ -203135,25 +202970,11 @@ entities:
       pos: 48.5,18.5
     - type: Battery
       lastCharge: 8000000
-  - uid: 29913
-    components:
-    - type: Transform
-      parent: 2
-      pos: -22.5,-65.5
-    - type: Battery
-      lastCharge: 8000000
   - uid: 29914
     components:
     - type: Transform
       parent: 2
       pos: 84.5,-80.5
-    - type: Battery
-      lastCharge: 8000000
-  - uid: 29915
-    components:
-    - type: Transform
-      parent: 2
-      pos: -32.5,-64.5
     - type: Battery
       lastCharge: 8000000
   - uid: 29916
@@ -228240,6 +228061,12 @@ entities:
       pos: -1.5,-3.5
 - proto: WallSolid
   entities:
+  - uid: 862
+    components:
+    - type: Transform
+      parent: 2
+      rot: 1.5707963267948966 rad
+      pos: 62.5,12.5
   - uid: 34108
     components:
     - type: Transform
@@ -229868,12 +229695,6 @@ entities:
       parent: 2
       rot: -1.5707963267948966 rad
       pos: 28.5,22.5
-  - uid: 34426
-    components:
-    - type: Transform
-      parent: 2
-      rot: 1.5707963267948966 rad
-      pos: 62.5,12.5
   - uid: 34427
     components:
     - type: Transform

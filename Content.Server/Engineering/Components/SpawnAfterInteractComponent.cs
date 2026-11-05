@@ -1,5 +1,4 @@
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Server.Engineering.Components
 {
@@ -12,8 +11,8 @@ namespace Content.Server.Engineering.Components
         /// <summary>
         /// The prototype id of the entity to be spawned in.
         /// </summary>
-        [DataField("prototype", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-        public string? Prototype { get; private set; }
+        [DataField(required: true)]
+        public EntProtoId Prototype;
 
         /// <summary>
         /// Stops the spawn if the target space is no longer in reach, unless true.

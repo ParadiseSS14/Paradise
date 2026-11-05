@@ -1,24 +1,45 @@
 using Content.Shared.DeviceLinking;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.DeviceLinking.Components
 {
     [RegisterComponent]
     public sealed partial class DoorSignalControlComponent : Component
     {
-        [DataField("openPort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))]
-        public string OpenPort = "Open";
+        /// <summary>
+        /// Input port that opens the door.
+        /// </summary>
+        [DataField]
+        public ProtoId<SinkPortPrototype> OpenPort = "Open";
 
-        [DataField("closePort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))]
-        public string ClosePort = "Close";
+        /// <summary>
+        /// Input port that closes the door.
+        /// </summary>
+        [DataField]
+        public ProtoId<SinkPortPrototype> ClosePort = "Close";
 
-        [DataField("togglePort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))]
-        public string TogglePort = "Toggle";
+        /// <summary>
+        /// Input port that toggles the door's open state.
+        /// </summary>
+        [DataField]
+        public ProtoId<SinkPortPrototype> TogglePort = "Toggle";
 
-        [DataField("boltPort", customTypeSerializer: typeof(PrototypeIdSerializer<SinkPortPrototype>))]
-        public string InBolt = "DoorBolt";
+        /// <summary>
+        /// Input port that controls the door bolt.
+        /// </summary>
+        [DataField("boltPort")]
+        public ProtoId<SinkPortPrototype> InBolt = "DoorBolt";
 
-        [DataField("onOpenPort", customTypeSerializer: typeof(PrototypeIdSerializer<SourcePortPrototype>))]
-        public string OutOpen = "DoorStatus";
+        /// <summary>
+        /// Output port that reports the door's open state.
+        /// </summary>
+        [DataField("onOpenPort")]
+        public ProtoId<SourcePortPrototype> OutOpen = "DoorStatus";
+
+        /// <summary>
+        /// Output port that reports the door bolt state.
+        /// </summary>
+        [DataField("onBoltPort")]
+        public ProtoId<SourcePortPrototype> OutBolt = "DoorBoltStatus";
     }
 }

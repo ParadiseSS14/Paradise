@@ -16,5 +16,5 @@ public sealed partial class NukeOperativeComponent : Component
     ///
     /// </summary>
     [DataField]
-    public ProtoId<StatusIconPrototype> SyndStatusIcon = "SyndicateFaction";
+    public string SyndStatusIcon = "SyndicateFaction";
 }

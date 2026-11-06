@@ -20,11 +20,75 @@
             "directions": 4
         },
         {
-            "name": "points_s",
+            "name": "patch_torso_s",
             "directions": 4
         },
         {
-            "name": "patch_s",
+            "name": "patch_l_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_l_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_l_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_l_leg_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_leg_s",
+            "directions": 4
+        },
+        {
+            "name": "points_torso_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_leg_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_leg_s",
             "directions": 4
         }
     ]

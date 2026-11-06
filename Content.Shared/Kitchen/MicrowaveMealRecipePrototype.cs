@@ -20,13 +20,13 @@ namespace Content.Shared.Kitchen
         [DataField]
         public string Group = "Other";
 
-        [DataField]
+        [DataField("reagents")]
         private Dictionary<string, FixedPoint2> _ingsReagents = new();
 
-        [DataField]
-        private Dictionary<string, FixedPoint2> _ingsSolids = new ();
+        [DataField("solids")]
+        private Dictionary<string, FixedPoint2> _ingsSolids = new();
 
-        [DataField]
+        [DataField("result")]
         public EntProtoId Result { get; private set; } = string.Empty;
 
         [DataField("time")]

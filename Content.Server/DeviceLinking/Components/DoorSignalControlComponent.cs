@@ -35,11 +35,5 @@ namespace Content.Server.DeviceLinking.Components
         /// </summary>
         [DataField("onOpenPort")]
         public ProtoId<SourcePortPrototype> OutOpen = "DoorStatus";
-
-        /// <summary>
-        /// Output port that reports the door bolt state.
-        /// </summary>
-        [DataField("onBoltPort")]
-        public ProtoId<SourcePortPrototype> OutBolt = "DoorBoltStatus";
     }
 }

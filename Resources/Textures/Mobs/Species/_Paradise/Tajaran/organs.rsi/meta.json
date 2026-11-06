@@ -1,0 +1,88 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Organs from https://github.com/ParadiseSS13/Paradise/commit/6a2067f9c482c742013d3aced628627ec8e3cbf2,  mmi_dead from bhttps://github.com/ParadiseSS13/Paradise/commit/f5168e599b041b77ebd80191b7de758b5146095b",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "brain2"
+        },
+        {
+            "name": "heart-off"
+        },
+        {
+            "name": "heart-on",
+            "delays": [
+                [
+                    0.6,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "kidneys"
+        },
+        {
+            "name": "liver"
+        },
+        {
+            "name": "lungs"
+        },
+        {
+            "name": "eyes"
+        },
+        {
+            "name": "mmi_full",
+            "delays": [
+                [
+                    3,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "mmi_sdd"
+        },
+        {
+            "name": "mmi_dead"
+        },
+        {
+            "name": "ears"
+        },
+        {
+            "name": "eyeball-l"
+        },
+        {
+            "name": "eyeball-r"
+        },
+        {
+            "name": "kidney-l"
+        },
+        {
+            "name": "kidney-r"
+        },
+        {
+            "name": "lung-l"
+        },
+        {
+            "name": "lung-r"
+        },
+        {
+            "name": "stomach"
+        },
+        {
+            "name": "tongue"
+        },
+        {
+            "name": "appendix"
+        }
+    ]
+}

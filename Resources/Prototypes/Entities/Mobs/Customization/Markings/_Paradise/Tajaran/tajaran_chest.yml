@@ -1,0 +1,168 @@
+# Chest Markings
+- type: marking
+  id: TajaranBelly
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: belly_s
+
+- type: marking
+  id: TajaranCrest
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: crest_s
+
+- type: marking
+  id: TajaranFullBelly
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: fullbelly_s
+
+- type: marking
+  id: TajaranPatchChest
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_torso_s
+
+- type: marking
+  id: TajaranPatchLArm
+  bodyPart: LArm
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_l_arm_s
+
+- type: marking
+  id: TajaranPatchLFoot
+  bodyPart: LFoot
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_l_foot_s
+
+- type: marking
+  id: TajaranPatchLHand
+  bodyPart: LHand
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_l_hand_s
+
+- type: marking
+  id: TajaranPatchLLeg
+  bodyPart: LLeg
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_l_leg_s
+
+- type: marking
+  id: TajaranPatchRArm
+  bodyPart: RArm
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_r_arm_s
+
+- type: marking
+  id: TajaranPatchRFoot
+  bodyPart: RFoot
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_r_foot_s
+
+- type: marking
+  id: TajaranPatchRHand
+  bodyPart: RHand
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_r_hand_s
+
+- type: marking
+  id: TajaranPatchRLeg
+  bodyPart: RLeg
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: patch_r_leg_s
+
+- type: marking
+  id: TajaranPointsChest
+  bodyPart: Chest
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_torso_s
+
+- type: marking
+  id: TajaranPointsLArm
+  bodyPart: LArm
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_l_arm_s
+
+- type: marking
+  id: TajaranPointsLFoot
+  bodyPart: LFoot
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_l_foot_s
+
+- type: marking
+  id: TajaranPointsLHand
+  bodyPart: LHand
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_l_hand_s
+
+- type: marking
+  id: TajaranPointsLLeg
+  bodyPart: LLeg
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_l_leg_s
+
+- type: marking
+  id: TajaranPointsRArm
+  bodyPart: RArm
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_r_arm_s
+
+- type: marking
+  id: TajaranPointsRFoot
+  bodyPart: RFoot
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_r_foot_s
+
+- type: marking
+  id: TajaranPointsRHand
+  bodyPart: RHand
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_r_hand_s
+
+- type: marking
+  id: TajaranPointsRLeg
+  bodyPart: RLeg
+  groupWhitelist: [Tajaran]
+  sprites:
+    - sprite: Mobs/Customization/_Paradise/Tajaran/tajaran_body_markings.rsi
+      state: points_r_leg_s

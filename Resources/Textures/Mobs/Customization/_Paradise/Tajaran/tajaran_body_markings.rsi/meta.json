@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "Sprites from: https://github.com/ParadiseSS13/Paradise/pull/31373, Designs from https://github.com/Baystation12/Baystation12/blob/0ae9a43b497d46861f30fc5904cc0512e0521734",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "belly_s",
+            "directions": 4
+        },
+        {
+            "name": "crest_s",
+            "directions": 4
+        },
+        {
+            "name": "fullbelly_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_torso_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_l_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_l_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_l_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_l_leg_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "patch_r_leg_s",
+            "directions": 4
+        },
+        {
+            "name": "points_torso_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "points_l_leg_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_arm_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_foot_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_hand_s",
+            "directions": 4
+        },
+        {
+            "name": "points_r_leg_s",
+            "directions": 4
+        }
+    ]
+}

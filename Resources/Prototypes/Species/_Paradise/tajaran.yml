@@ -1,0 +1,18 @@
+- type: species
+  id: Tajaran
+  name: species-name-tajaran
+  roundStart: true
+  prototype: MobTajaran
+  defaultSkinTone: "#b5a69b"
+  dollPrototype: AppearanceTajaran
+  skinColoration: TajaranColors
+  maleFirstNames: NamesTajaranFirst
+  femaleFirstNames: NamesTajaranFirst
+  lastNames: NamesTajaranLast
+  defaultSoundsBySex:
+    - MaleTajaran
+    - FemaleTajaran
+    - MaleTajaran
+  voices:
+    - MaleTajaran
+    - FemaleTajaran

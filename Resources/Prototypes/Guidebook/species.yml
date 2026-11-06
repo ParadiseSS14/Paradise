@@ -9,6 +9,7 @@
     - Human
     - Moth
     - SlimePerson
+    - Tajaran
     - Reptilian # displays as "Unathi"
     - Vox
     - Vulpkanin
@@ -47,6 +48,12 @@
   id: SlimePerson
   name: species-name-slime
   text: "/ServerInfo/Guidebook/Mobs/SlimePerson.xml"
+
+# Paradise Content
+- type: guideEntry
+  id: Tajaran
+  name: species-name-tajaran
+  text: "/ServerInfo/Guidebook/Mobs/_Paradise/Tajaran.xml"
 
 - type: guideEntry
   id: Vox

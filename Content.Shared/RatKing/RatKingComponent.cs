@@ -1,7 +1,7 @@
+using Content.Shared.Dataset;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared.RatKing;
 
@@ -9,8 +9,8 @@ namespace Content.Shared.RatKing;
 [AutoGenerateComponentState]
 public sealed partial class RatKingComponent : Component
 {
-    [DataField("actionRaiseArmy", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionRaiseArmy = "ActionRatKingRaiseArmy";
+    [DataField]
+    public EntProtoId ActionRaiseArmy = "ActionRatKingRaiseArmy";
 
     /// <summary>
     ///     The action for the Raise Army ability
@@ -27,11 +27,11 @@ public sealed partial class RatKingComponent : Component
     /// <summary>
     ///     The entity prototype of the mob that Raise Army summons
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("armyMobSpawnId", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ArmyMobSpawnId = "MobRatServant";
+    [DataField]
+    public EntProtoId ArmyMobSpawnId = "MobRatServant";
 
-    [DataField("actionDomain", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionDomain = "ActionRatKingDomain";
+    [DataField]
+    public EntProtoId ActionDomain = "ActionRatKingDomain";
 
     /// <summary>
     ///     The action for the Domain ability
@@ -64,28 +64,28 @@ public sealed partial class RatKingComponent : Component
     [DataField("servants")]
     public HashSet<EntityUid> Servants = new();
 
-    [DataField("actionOrderStay", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionOrderStay = "ActionRatKingOrderStay";
+    [DataField]
+    public EntProtoId ActionOrderStay = "ActionRatKingOrderStay";
 
-    [DataField("actionOrderStayEntity")]
+    [DataField]
     public EntityUid? ActionOrderStayEntity;
 
-    [DataField("actionOrderFollow", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionOrderFollow = "ActionRatKingOrderFollow";
+    [DataField]
+    public EntProtoId ActionOrderFollow = "ActionRatKingOrderFollow";
 
-    [DataField("actionOrderFollowEntity")]
+    [DataField]
     public EntityUid? ActionOrderFollowEntity;
 
-    [DataField("actionOrderCheeseEm", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionOrderCheeseEm = "ActionRatKingOrderCheeseEm";
+    [DataField]
+    public EntProtoId ActionOrderCheeseEm = "ActionRatKingOrderCheeseEm";
 
-    [DataField("actionOrderCheeseEmEntity")]
+    [DataField]
     public EntityUid? ActionOrderCheeseEmEntity;
 
-    [DataField("actionOrderLoose", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string ActionOrderLoose = "ActionRatKingOrderLoose";
+    [DataField]
+    public EntProtoId ActionOrderLoose = "ActionRatKingOrderLoose";
 
-    [DataField("actionOrderLooseEntity")]
+    [DataField]
     public EntityUid? ActionOrderLooseEntity;
 
     /// <summary>

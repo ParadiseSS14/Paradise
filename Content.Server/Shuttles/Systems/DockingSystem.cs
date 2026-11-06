@@ -98,23 +98,6 @@ public sealed partial class DockingSystem : SharedDockingSystem
     }
 
     [SubscribeLocalEvent]
-    private void OnDockingReAnchor(Entity<DockingComponent> entity, ref ReAnchorEvent args)
-    {
-        var uid = entity.Owner;
-        var component = entity.Comp;
-
-        if (!component.Docked)
-            return;
-
-        var otherDock = component.DockedWith;
-        var other = Comp<DockingComponent>(otherDock!.Value);
-
-        Undock(entity);
-        Dock((uid, component), (otherDock.Value, other));
-        _console.RefreshShuttleConsoles();
-    }
-
-    [SubscribeLocalEvent]
     private void OnRequestUndock(EntityUid uid, ShuttleConsoleComponent component, UndockRequestMessage args)
     {
         if (!TryGetEntity(args.DockEntity, out var dockEnt) ||

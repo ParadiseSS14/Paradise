@@ -93,7 +93,16 @@
             "name": "tongue"
         },
         {
-            "name": "brain"
+            "name": "brain",
+            "delays": [
+                [
+                    0.2,
+                    0.2,
+                    0.12,
+                    0.12,
+                    1
+                ]
+            ]
         },
         {
             "name": "appendix"

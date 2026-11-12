@@ -127,7 +127,7 @@
       attributes:
         gender: male
     - type: Tool
-      qualities: Slicing
+      qualities: [Slicing]
 
 - type: entity
   id: MobRatKingBuff

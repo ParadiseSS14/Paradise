@@ -3,6 +3,7 @@ using Content.Client.Guidebook.Richtext;
 using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Client.Stylesheets;
 
@@ -10,6 +11,7 @@ namespace Content.Client.Stylesheets;
 public sealed partial class StyleBoxSDFBox : StyleBox
 {
     [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public Color BackgroundColor { get; set; }
     public Color GradientBottomColor { get; set; }
@@ -20,13 +22,22 @@ public sealed partial class StyleBoxSDFBox : StyleBox
     public Vector4 CornerRadius { get; set; } = new(0f, 0f, 0f, 0f);
     public bool DoGradient { get; set; } = false;
 
-    private ShaderInstance? _shaderInstance;
+    private FrameShaderInstancePool<DrawParams>? _shaders;
     public ProtoId<ShaderPrototype>? Shader
     {
-        set => _shaderInstance = _prototype.TryIndex(value, out var proto)
-            ? proto.InstanceUnique()
+        set => _shaders = _prototype.TryIndex(value, out var proto)
+            ? new FrameShaderInstancePool<DrawParams>(proto)
             : null;
     }
+
+    private readonly record struct DrawParams(
+        Vector2 Size,
+        Vector4 Radius,
+        Color Color,
+        Color BorderColor,
+        float BorderWidth,
+        bool DoGradient,
+        Color GradientBottomColor);
 
     private readonly ProtoId<ShaderPrototype> _UISDFShaderName = "UIShaderSDF";
 
@@ -70,18 +81,30 @@ public sealed partial class StyleBoxSDFBox : StyleBox
 
     protected override void DoDraw(DrawingHandleScreen handle, UIBox2 box, float uiScale)
     {
-        Shader = _UISDFShaderName; // Fixes a shared data between instances bug, but I'm uncomfortable with it too.
-
-        handle.UseShader(_shaderInstance);
-        _shaderInstance?.SetParameter("size", new Vector2(box.Width, box.Height));
-        _shaderInstance?.SetParameter("radius", CornerRadius);
-        _shaderInstance?.SetParameter("color", BackgroundColor);
-        _shaderInstance?.SetParameter("borderColor", BorderColor);
-        _shaderInstance?.SetParameter("borderWidth", BorderThickness);
-        _shaderInstance?.SetParameter("doGradient", DoGradient);
-        if (DoGradient)
+        if (_shaders != null)
         {
-            _shaderInstance?.SetParameter("gradientBottomColor", GradientBottomColor);
+            var p = new DrawParams(
+                new Vector2(box.Width, box.Height),
+                CornerRadius,
+                BackgroundColor,
+                BorderColor,
+                BorderThickness,
+                DoGradient,
+                GradientBottomColor);
+
+            if (_shaders.Next(_timing.CurFrame, p, out var shader))
+            {
+                shader.SetParameter("size", p.Size);
+                shader.SetParameter("radius", p.Radius);
+                shader.SetParameter("color", p.Color);
+                shader.SetParameter("borderColor", p.BorderColor);
+                shader.SetParameter("borderWidth", p.BorderWidth);
+                shader.SetParameter("doGradient", p.DoGradient);
+                if (p.DoGradient)
+                    shader.SetParameter("gradientBottomColor", p.GradientBottomColor);
+            }
+
+            handle.UseShader(shader);
         }
 
         handle.DrawRect(box, Color.White);

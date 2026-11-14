@@ -1,0 +1,40 @@
+- type: technology
+  id: HollowPointAmmunition
+  name: research-technology-hollow-point-ammunition
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+    state: incendiarydisplay
+  discipline: Arsenal
+  tier: 1
+  cost: 9000
+  recipeUnlocks:
+    - MagazineBoxAntiMaterielHP
+    - MagazineBoxLightRifleHP
+    - MagazineBoxMagnumHP
+    - MagazineBoxPistolHP
+    - MagazineBoxRifleHP
+    - MagazineLightRifleHP
+    - MagazinePistolHP
+    - MagazinePistolSubMachineGunHP
+    - MagazineRifleHP
+    - SpeedLoaderMagnumHP
+    - BoxShotgunHP
+    - MagazineShotgunHP
+    - MagazineFullRifleHP
+    - MagazineAntiMaterialHP
+    - MagazineBoxFullRifleHP
+
+- type: technology
+  id: ExplosiveAmmunition
+  name: research-technology-explosive-ammunition
+  icon:
+    sprite: Objects/Weapons/Guns/Ammunition/Boxes/pistol.rsi
+    state: incendiarydisplay
+  discipline: Arsenal
+  tier: 3
+  cost: 12000
+  recipeUnlocks:
+    - BoxShotgunHE
+    - MagazineBoxAntiMaterielHE
+    - MagazineAntiMaterialExplosive
+    - MagazineShotgunExplosive

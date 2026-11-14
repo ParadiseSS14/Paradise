@@ -2,7 +2,7 @@
   parent: BaseBullet
   id: PelletShotgunSlug
   categories: [HideSpawnMenu]
-  name: pellet (.50 slug)
+  name: pellet (18,5x72 slug) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Sprite
       sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
@@ -12,12 +12,13 @@
         types:
           Piercing: 40
           Structural: 15
+        armorPenetration: 15 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBullet
   id: PelletShotgunBeanbag
   categories: [HideSpawnMenu]
-  name: beanbag (.50)
+  name: beanbag (18,5x72) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Sprite
       sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
@@ -26,21 +27,21 @@
     - type: Projectile
       damage:
         types:
-          Blunt: 10
-    - type: StaminaDamageOnCollide
-      damage: 40 # 3 hits to stun
+          Blunt: 25
+        armorPenetration: -10 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBullet
   id: PelletShotgun
   categories: [HideSpawnMenu]
-  name: pellet (.50)
+  name: pellet (18,5x72) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
-          Piercing: 10
+          Piercing: 15 #PARADISE EDIT - Weapon overhaul
           Structural: 15
+        armorPenetration: -5 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: PelletShotgun
@@ -50,21 +51,25 @@
     - type: ProjectileSpread
       proto: PelletShotgun
       count: 6
-      spread: 15
+      spread: 6 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBulletIncendiary
   id: PelletShotgunIncendiary
   categories: [HideSpawnMenu]
-  name: pellet (.50 incendiary)
+  name: pellet (18,5x72 incendiary) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
           Piercing: 7
-          Heat: 3
+        armorPenetration: -30 #PARADISE EDIT - Weapon overhaul
     - type: IgnitionSource
       ignited: true
+    #PARADISE EDIT START - Weapon overhaul
+    - type: IgniteOnCollide
+      fireStacks: 0.4
+    #PARADISE EDIT END
 
 - type: entity
   parent: PelletShotgunIncendiary
@@ -74,13 +79,13 @@
     - type: ProjectileSpread
       proto: PelletShotgunIncendiary
       count: 6
-      spread: 15
+      spread: 6 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBulletPractice
   id: PelletShotgunPractice
   categories: [HideSpawnMenu]
-  name: pellet (.50 practice)
+  name: pellet (18,5x72 practice) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
@@ -95,7 +100,7 @@
     - type: ProjectileSpread
       proto: PelletShotgunPractice
       count: 6
-      spread: 15
+      spread: 6 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBullet
@@ -111,8 +116,7 @@
     - type: Projectile
       damage:
         types:
-          Piercing: 3
-          Slash: 3
+          Slash: 5 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: PelletShotgunImprovised
@@ -128,7 +132,7 @@
   parent: [SolutionAmmo, SolutionToolVeryTiny, BaseBulletPractice]
   id: PelletShotgunTranquilizer
   categories: [HideSpawnMenu]
-  name: pellet (.50 tranquilizer)
+  name: pellet (18,5x72 tranquilizer) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
@@ -141,7 +145,7 @@
 - type: entity
   id: PelletShotgunFlare
   categories: [HideSpawnMenu]
-  name: pellet (.50 flare)
+  name: pellet (18,5x72 flare) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Physics
       bodyType: Dynamic
@@ -188,7 +192,7 @@
   parent: BaseBulletUranium
   id: PelletShotgunUranium
   categories: [HideSpawnMenu]
-  name: pellet (.50 uranium)
+  name: pellet (18,5x72 uranium) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:

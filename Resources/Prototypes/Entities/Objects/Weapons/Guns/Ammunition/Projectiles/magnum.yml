@@ -2,18 +2,18 @@
   parent: BaseBullet
   id: BulletMagnum
   categories: [HideSpawnMenu]
-  name: bullet (.45 magnum)
+  name: bullet (11,5x32 magnum) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
-          Piercing: 35
+          Piercing: 40 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBulletPractice
   id: BulletMagnumPractice
   categories: [HideSpawnMenu]
-  name: bullet (.45 magnum practice)
+  name: bullet (11,5x32 magnum practice) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
@@ -24,34 +24,34 @@
   parent: BaseBulletIncendiary
   id: BulletMagnumIncendiary
   categories: [HideSpawnMenu]
-  name: bullet (.45 magnum incendiary)
+  name: bullet (11,5x32 magnum incendiary) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
-          Piercing: 26
-          Heat: 9
+          Piercing: 34 #PARADISE EDIT - Weapon overhaul
+          Heat: 3 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBulletAP
   id: BulletMagnumAP
   categories: [HideSpawnMenu]
-  name: bullet (.45 magnum armor-piercing)
+  name: bullet (11,5x32 magnum armor-piercing) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
-          Piercing: 26 # 20% decrease
-      ignoreResistances: true
+          Piercing: 40 #PARADISE EDIT - Weapon overhaul
+      armorPenetration: 10 #PARADISE EDIT - Weapon overhaul
 
 - type: entity
   parent: BaseBulletUranium
   id: BulletMagnumUranium
   categories: [HideSpawnMenu]
-  name: bullet (.45 magnum uranium)
+  name: bullet (11,5x32 magnum uranium) #PARADISE EDIT - Weapon overhaul
   components:
     - type: Projectile
       damage:
         types:
           Radiation: 15
-          Piercing: 20
+          Piercing: 26 #PARADISE EDIT - Weapon overhaul
